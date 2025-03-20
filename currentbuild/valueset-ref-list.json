@@ -1,0 +1,72 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "LokalLegemiddelkatalogValues",
+      "title" : "Lokal Legemiddelkatalog Values",
+      "description" : "Gyldige verdier for medlemskapsstatus",
+      "systems" : [
+        "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-lokal-legemiddelkatalog-extension.html" : "Lokal Legemiddelkatalog"
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "LegemiddeladministreringStatus",
+      "title" : "Status for legemiddeladministrering",
+      "description" : "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
+      "systems" : ["http://hl7.org/fhir/ValueSet/medication-admin-status"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/address-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AddressUse",
+      "title" : "AddressUse",
+      "description" : "The use of an address.",
+      "systems" : ["http://hl7.org/fhir/address-use"],
+      "oids" : ["2.16.840.1.113883.4.642.3.67"],
+      "sources" : ["2.16.840.1.113883.4.642.3.67"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationrequest Status",
+      "title" : "Medicationrequest  status",
+      "description" : "MedicationRequest Status Codes",
+      "systems" : ["http://hl7.org/fhir/CodeSystem/medicationrequest-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1320"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1320"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/route-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTRouteCodes",
+      "title" : "SNOMED CT Route Codes",
+      "description" : "This value set includes all Route codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.98"],
+      "sources" : ["2.16.840.1.113883.4.642.3.98"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering"
+    }
+  ]
+}

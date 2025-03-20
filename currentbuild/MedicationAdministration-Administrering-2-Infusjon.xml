@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-2-Infusjon"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationAdministration Administrering-2-Infusjon</b></p><a name="Administrering-2-Infusjon"> </a><a name="hcAdministrering-2-Infusjon"> </a><a name="Administrering-2-Infusjon-no"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href="https://fhir.legemidler.example.com/legemidler/0987654321">https://fhir.legemidler.example.com/legemidler/0987654321</a></p><p><b>subject</b>: <a href="https://fhi.no/fhir/lmdi/pasient/12345678">https://fhi.no/fhir/lmdi/pasient/12345678</a></p><p><b>context</b>: <a href="https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3">https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3</a></p><p><b>effective</b>: 2024-06-13 14:26:01+0200 --&gt; 2024-06-13 14:48:47+0200</p><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Route</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 47625008}">Intravenous route (qualifier value)</span></td><td>4500 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span></td><td>8 ml<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeml = 'ml')</span>/1 min<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemin = 'min')</span></td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="https://fhir.legemidler.example.com/legemidler/0987654321"/>
+  </medicationReference>
+  <subject>
+    <reference value="https://fhi.no/fhir/lmdi/pasient/12345678"/>
+  </subject>
+  <context>
+    <reference value="https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3"/>
+  </context>
+  <effectivePeriod>
+    <start value="2024-06-13T14:26:01+02:00"/>
+    <end value="2024-06-13T14:48:47+02:00"/>
+  </effectivePeriod>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="Intravenous route (qualifier value)"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="4500"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+    <rateRatio>
+      <numerator>
+        <value value="8"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="ml"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="min"/>
+      </denominator>
+    </rateRatio>
+  </dosage>
+</MedicationAdministration>
