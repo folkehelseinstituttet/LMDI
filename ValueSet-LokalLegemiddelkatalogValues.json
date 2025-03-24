@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "LokalLegemiddelkatalogValues",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet LokalLegemiddelkatalogValues</b></p><a name=\"LokalLegemiddelkatalogValues\"> </a><a name=\"hcLokalLegemiddelkatalogValues\"> </a><a name=\"LokalLegemiddelkatalogValues-no\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-LokalLegemiddelkatalogCodeSystem.html\"><code>http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem</code></a></li></ul></div>"
+  },
+  "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
+  "version" : "1.0.0",
+  "name" : "LokalLegemiddelkatalogValues",
+  "title" : "Lokal Legemiddelkatalog Values",
+  "status" : "draft",
+  "date" : "2025-03-24T12:30:17+00:00",
+  "publisher" : "Folkehelseinstituttet",
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
+  "description" : "Gyldige verdier for medlemskapsstatus",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
+    }]
+  }
+}
