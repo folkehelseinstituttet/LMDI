@@ -37,9 +37,8 @@ For å bygge en samling med data som skal overføres må det lages en [Legemidde
 Vet overføring av data skal det lages en `SignertKryptertBundle`, som sikrer både kryptering og signering av innholdet. Denne prosessen innebærer å komprimere, kryptere og signere en FHIR-basert `LegemiddelregisterBundle` før den sendes til API-et. Les mer om hvordan du oppretter en `SignertKryptertBundle` i [denne veiledningen](SignertKryptertBundle.html).
 
 URL til Legemiddelregisterets API:
-  - TEST-miljø: [https://test-fhirmottak.lmr.fhi.no/api/v1](https://test-fhirmottak.lmr.fhi.no/api/v1)
-  - PROD-miljø: [https://fhirmottak.lmr.fhi.no/api/v1](https://fhirmottak.lmr.fhi.no/api/v1)
-
+  - TEST-miljø: [https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1](https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1)
+  - PROD-miljø: [https://fhirmottak.lmr.fhi.no/fhirmottak/v1](https://fhirmottak.lmr.fhi.no/fhirmottak/v1)
 
 Responskoder
 200 OK
