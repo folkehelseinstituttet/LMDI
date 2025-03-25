@@ -24,7 +24,7 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 * entry.request 1..1 MS
 * entry.request.method 1..1 MS
 * entry.request.method = #POST (exactly)
-* entry.request.method ^short = "Må være Transaction"
+* entry.request.method ^short = "Må være POST"
 * entry.request.method ^definition = "Angir at alle forespørsler i bundle må være av type POST"
 
 * entry.resource 1..1 MS
