@@ -2,15 +2,15 @@ Profile: LegemiddelregisterBundle
 Parent: Bundle
 Id: lmdi-bundle
 Title: "LegemiddelregisterBundle"
-Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare batch-type og POST-operasjoner, med begrensninger på tillatte ressurstyper."
+Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper."
 
 // Påkrevde felter
 * identifier 1..1 MS
 * timestamp 1..1 MS
 * type 1..1 MS
-* type = #batch (exactly)
-* type ^short = "Må være av type batch"
-* type ^definition = "Angir at bundle må være av type batch"
+* type = #transaction (exactly)
+* type ^short = "Må være av type transaction"
+* type ^definition = "Angir at bundle må være av type transaction"
 
 // Deaktiverte elementer
 * total 0..0
@@ -24,7 +24,7 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare batch-typ
 * entry.request 1..1 MS
 * entry.request.method 1..1 MS
 * entry.request.method = #POST (exactly)
-* entry.request.method ^short = "Må være POST"
+* entry.request.method ^short = "Må være Transaction"
 * entry.request.method ^definition = "Angir at alle forespørsler i bundle må være av type POST"
 
 * entry.resource 1..1 MS
@@ -56,7 +56,7 @@ Description: "Eksempel på en batch-bundle som inneholder to legemiddeladministr
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
 * identifier.value = "bundle-001"
 * timestamp = "2024-02-07T13:28:17.239+02:00"
-* type = #batch
+* type = #transaction
 
 // Ressurser i bundle
 * entry[0].resource = Pasient-20
