@@ -10,53 +10,48 @@ Accept: application/fhir+json; fhirVersion=4.0
 User-Agent: fhir/publisher
 
 
-Response (00:00:00.67): 
+Response (00:00:00.24): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
 access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
-cache-control:public, max-age=600
 connection:keep-alive
 content-length:2123
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:30:48 GMT
-pragma:no-cache
+date:Tue, 25 Mar 2025 12:34:35 GMT
 server:nginx
-x-request-id:197-3335885
+x-request-id:197-3722195
 
-{"resourceType" : "CapabilityStatement","id" : "FhirServer","meta" : {"tag" : [{"system" : "http://hl7.org/fhir/v3/ObservationValue","code" : "SUBSETTED","display" : "Subsetted"}]},"url" : "http://tx.fhir.org/r4/CapabilityStatement/tx","version" : "4.0.1-3.7.0","name" : "FHIRReferenceServer","title" : "FHIR Reference Server Conformance Statement","status" : "active","date" : "2025-03-24T12:30:48.701Z","contact" : [{"telecom" : [{"system" : "other","value" : "http://healthintersections.com.au/"}]}],"kind" : "instance","instantiates" : ["http://hl7.org/fhir/CapabilityStatement/terminology-server","http://hl7.org/fhir/CapabilityStatement/terminology-server"],"software" : {"name" : "Reference Server","version" : "3.7.0","releaseDate" : "2025-03-04T01:02:21.454Z"},"implementation" : {"description" : "FHIR Server running at http://tx.fhir.org/r4","url" : "http://tx.fhir.org/r4"},"fhirVersion" : "4.0.1","format" : ["application/fhir+xml","application/fhir+json"],"rest" : [{"mode" : "server","security" : {"cors" : true},"resource" : [{"type" : "CodeSystem","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"}]},{"type" : "ValueSet","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"},{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"}]}],"operation" : [{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"},{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/Resource-validate"},{"name" : "translate","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"},{"name" : "closure","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"},{"name" : "versions","definition" : "http://tx.fhir.org/r4/OperationDefinition/fso-versions"}]}]}
+{"resourceType" : "CapabilityStatement","id" : "FhirServer","meta" : {"tag" : [{"system" : "http://hl7.org/fhir/v3/ObservationValue","code" : "SUBSETTED","display" : "Subsetted"}]},"url" : "http://tx.fhir.org/r4/CapabilityStatement/tx","version" : "4.0.1-3.7.0","name" : "FHIRReferenceServer","title" : "FHIR Reference Server Conformance Statement","status" : "active","date" : "2025-03-24T16:48:08.187Z","contact" : [{"telecom" : [{"system" : "other","value" : "http://healthintersections.com.au/"}]}],"kind" : "instance","instantiates" : ["http://hl7.org/fhir/CapabilityStatement/terminology-server","http://hl7.org/fhir/CapabilityStatement/terminology-server"],"software" : {"name" : "Reference Server","version" : "3.7.0","releaseDate" : "2025-03-04T01:02:21.454Z"},"implementation" : {"description" : "FHIR Server running at http://tx.fhir.org/r4","url" : "http://tx.fhir.org/r4"},"fhirVersion" : "4.0.1","format" : ["application/fhir+xml","application/fhir+json"],"rest" : [{"mode" : "server","security" : {"cors" : true},"resource" : [{"type" : "CodeSystem","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup"}]},{"type" : "ValueSet","operation" : [{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code"},{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"}]}],"operation" : [{"name" : "expand","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"},{"name" : "lookup","definition" : "http://hl7.org/fhir/OperationDefinition/ValueSet-lookup"},{"name" : "validate-code","definition" : "http://hl7.org/fhir/OperationDefinition/Resource-validate"},{"name" : "translate","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-translate"},{"name" : "closure","definition" : "http://hl7.org/fhir/OperationDefinition/ConceptMap-closure"},{"name" : "versions","definition" : "http://tx.fhir.org/r4/OperationDefinition/fso-versions"}]}]}
 
 </pre><hr/>
 <a name="l2"> </a><h3>2</h3>
 <pre>
 Request: 
 
-POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+POST http://tx.fhir.org/r4/ValueSet/$expand HTTP/1.0
 Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://hl7.org/fhir/fhir-types","code":"ImplementationGuide"}},{"name":"displayLanguage","valueString":"en, en-US, no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"7cb849cf-d125-4157-8776-8d9d853f5a33"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"displayLanguage","valueCode":"no"},{"name":"_limit","valueInteger":10000},{"name":"_incomplete","valueBoolean":true},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"excludeNested","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"valueSet","resource":{"resourceType":"ValueSet","id":"lmdi-medicationadministrationstatus","url":"http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus","version":"1.0.1","name":"LegemiddeladministreringStatus","title":"Status for legemiddeladministrering","status":"draft","experimental":true,"date":"2025-03-10","publisher":"Folkehelseinstituttet","contact":[{"name":"Folkehelseinstituttet","telecom":[{"system":"url","value":"https://www.fhi.no"}]},{"name":"Legemiddelregisteret","telecom":[{"system":"email","value":"legemiddelregisteret@fhi.no"}]}],"description":"Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.","jurisdiction":[{"coding":[{"system":"urn:iso:std:iso:3166","code":"NO","display":"Norway"}]}],"compose":{"include":[{"system":"http://hl7.org/fhir/ValueSet/medication-admin-status","concept":[{"code":"completed","display":"Gjennomført"},{"code":"entered-in-error","display":"Feilregistrert"}]}]}}}]}
 
 
-Response (00:00:00.68): 
+Response (00:00:00.40): 
 
-200
+422
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
 access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
-cache-control:public, max-age=600
 connection:keep-alive
-content-length:1588
+content-length:413
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:31:09 GMT
-last-modified:Mon, 24 Mar 2025 12:31:09 GMT
-pragma:no-cache
+date:Tue, 25 Mar 2025 12:34:42 GMT
 server:nginx
-x-request-id:197-3335969
+x-request-id:197-3722229
 
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://hl7.org/fhir/fhir-types"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://hl7.org/fhir/fhir-types"},{"name" : "code","valueCode" : "ImplementationGuide"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n16 16: tx-op\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=en, en-US, no, default-to-latest\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://hl7.org/fhir/fhir-types#ImplementationGuide (\"\")]\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://hl7.org/fhir/fhir-types#ImplementationGuide\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://hl7.org/fhir/fhir-types\"\r\n"}]}
+{"resourceType" : "OperationOutcome","text" : {"status" : "generated","div" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;p>Unable to provide support for code system http://hl7.org/fhir/ValueSet/medication-admin-status&lt;/p>&lt;/div>"},"issue" : [{"severity" : "error","code" : "not-supported","details" : {"text" : "Unable to provide support for code system http://hl7.org/fhir/ValueSet/medication-admin-status"}}]}
 
 </pre><hr/>
 <a name="l3"> </a><h3>3</h3>
@@ -68,10 +63,10 @@ Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelDose","code":"ID_48BD33D2-2838-4B81-8225-02391B7A4516","display":"Oxycodone Orifarm mikst oppl 1 mg/ml"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"7cb849cf-d125-4157-8776-8d9d853f5a33"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://hl7.org/fhir/fhir-types","code":"ImplementationGuide"}},{"name":"displayLanguage","valueString":"en, en-US, no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.65): 
+Response (00:00:00.31): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -79,15 +74,15 @@ access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
 cache-control:public, max-age=600
 connection:keep-alive
-content-length:1813
+content-length:1581
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:31:17 GMT
-last-modified:Mon, 24 Mar 2025 12:31:17 GMT
+date:Tue, 25 Mar 2025 12:34:44 GMT
+last-modified:Tue, 25 Mar 2025 12:34:44 GMT
 pragma:no-cache
 server:nginx
-x-request-id:197-3336005
+x-request-id:197-3722257
 
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"},{"name" : "code","valueCode" : "ID_48BD33D2-2838-4B81-8225-02391B7A4516"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n15 15: tx-op\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_48BD33D2-2838-4B81-8225-02391B7A4516 (\"Oxycodone Orifarm mikst oppl 1 mg/ml\")]\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_48BD33D2-2838-4B81-8225-02391B7A4516\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelDose\"\r\n"}]}
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://hl7.org/fhir/fhir-types"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://hl7.org/fhir/fhir-types"},{"name" : "code","valueCode" : "ImplementationGuide"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://hl7.org/fhir/fhir-types' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=en, en-US, no, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://hl7.org/fhir/fhir-types#ImplementationGuide (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://hl7.org/fhir/fhir-types#ImplementationGuide\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://hl7.org/fhir/fhir-types\"\r\n"}]}
 
 </pre><hr/>
 <a name="l4"> </a><h3>4</h3>
@@ -99,10 +94,10 @@ Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"urn:oid:2.16.578.1.12.4.1.1.7110","code":"R63.3","display":"Vanskeligheter med inntak og tilførsel av mat"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"7cb849cf-d125-4157-8776-8d9d853f5a33"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelDose","code":"ID_48BD33D2-2838-4B81-8225-02391B7A4516","display":"Oxycodone Orifarm mikst oppl 1 mg/ml"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.63): 
+Response (00:00:00.31): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -110,30 +105,30 @@ access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
 cache-control:public, max-age=600
 connection:keep-alive
-content-length:1588
+content-length:1806
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:31:18 GMT
-last-modified:Mon, 24 Mar 2025 12:31:18 GMT
+date:Tue, 25 Mar 2025 12:34:53 GMT
+last-modified:Tue, 25 Mar 2025 12:34:53 GMT
 pragma:no-cache
 server:nginx
-x-request-id:197-3336007
+x-request-id:197-3722380
 
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "urn:oid:2.16.578.1.12.4.1.1.7110"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "urn:oid:2.16.578.1.12.4.1.1.7110"},{"name" : "code","valueCode" : "R63.3"},{"name" : "message","valueString" : "A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[urn:oid:2.16.578.1.12.4.1.1.7110#R63.3 (\"Vanskeligheter med inntak og tilførsel av mat\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"urn:oid:2.16.578.1.12.4.1.1.7110#R63.3\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"urn:oid:2.16.578.1.12.4.1.1.7110\"\r\n"}]}
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"},{"name" : "code","valueCode" : "ID_48BD33D2-2838-4B81-8225-02391B7A4516"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_48BD33D2-2838-4B81-8225-02391B7A4516 (\"Oxycodone Orifarm mikst oppl 1 mg/ml\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_48BD33D2-2838-4B81-8225-02391B7A4516\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelDose\"\r\n"}]}
 
 </pre><hr/>
 <a name="l5"> </a><h3>5</h3>
 <pre>
 Request: 
 
-POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
 Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff","code":"C31AF94A-5D5A-4C91-9B99-BB221E26E4C9","display":"Oksykodon"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"7cb849cf-d125-4157-8776-8d9d853f5a33"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"inferSystem","valueBoolean":true},{"name":"code","valueCode":"completed"},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","id":"lmdi-medicationadministrationstatus","text":{"status":"generated","div":"&lt;div>!-- Narrative removed -->&lt;/div>"},"url":"http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus","version":"1.0.1","name":"LegemiddeladministreringStatus","title":"Status for legemiddeladministrering","status":"draft","experimental":true,"date":"2025-03-10","publisher":"Folkehelseinstituttet","contact":[{"name":"Folkehelseinstituttet","telecom":[{"system":"url","value":"https://www.fhi.no"}]},{"name":"Legemiddelregisteret","telecom":[{"system":"email","value":"legemiddelregisteret@fhi.no"}]}],"description":"Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.","jurisdiction":[{"coding":[{"system":"urn:iso:std:iso:3166","code":"NO","display":"Norway"}]}],"compose":{"include":[{"system":"http://hl7.org/fhir/ValueSet/medication-admin-status","concept":[{"code":"completed","display":"Gjennomført"},{"code":"entered-in-error","display":"Feilregistrert"}]}]}}},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.69): 
+Response (00:00:00.36): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -141,15 +136,15 @@ access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
 cache-control:public, max-age=600
 connection:keep-alive
-content-length:1819
+content-length:2343
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:31:18 GMT
-last-modified:Mon, 24 Mar 2025 12:31:18 GMT
+date:Tue, 25 Mar 2025 12:34:53 GMT
+last-modified:Tue, 25 Mar 2025 12:34:53 GMT
 pragma:no-cache
 server:nginx
-x-request-id:197-3336009
+x-request-id:197-3722383
 
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"},{"name" : "code","valueCode" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n16 16: tx-op\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff#C31AF94A-5D5A-4C91-9B99-BB221E26E4C9 (\"Oksykodon\")]\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff#C31AF94A-5D5A-4C91-9B99-BB221E26E4C9\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff\"\r\n"}]}
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "code","valueCode" : "completed"},{"name" : "message","valueString" : "The provided code '#completed' was not found in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1'; The System URI could not be determined for the code 'completed' in the ValueSet 'http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1'"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNABLE_TO_INFER_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "cannot-infer"}],"text" : "The System URI could not be determined for the code 'completed' in the ValueSet 'http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1'"},"location" : ["code"],"expression" : ["code"]},{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"}],"severity" : "error","code" : "code-invalid","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-in-vs"}],"text" : "The provided code '#completed' was not found in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1'"},"location" : ["code"],"expression" : ["code"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n15 15: tx-op\r\n15 0: 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1: Analysing\r\n15 0: 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1: Parameters: disp-lang=no, default-to-latest\r\n15 0: 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1: CodeSystem not found: \"http://hl7.org/fhir/ValueSet/medication-admin-status\"\r\n15 0: 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1: Validate \"[#completed (\"\")]\" and infer system\r\n15 0: 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1: Check \"#completed\"\r\n"}]}
 
 </pre><hr/>
 <a name="l6"> </a><h3>6</h3>
@@ -161,10 +156,10 @@ Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare","code":"2ABAC272-0BCF-43F0-84BE-984074D92E15","display":"Paracetamol"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"7cb849cf-d125-4157-8776-8d9d853f5a33"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"urn:oid:2.16.578.1.12.4.1.1.7110","code":"R63.3","display":"Vanskeligheter med inntak og tilførsel av mat"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.68): 
+Response (00:00:00.35): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -172,15 +167,15 @@ access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
 cache-control:public, max-age=600
 connection:keep-alive
-content-length:1807
+content-length:1595
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:31:18 GMT
-last-modified:Mon, 24 Mar 2025 12:31:18 GMT
+date:Tue, 25 Mar 2025 12:34:53 GMT
+last-modified:Tue, 25 Mar 2025 12:34:53 GMT
 pragma:no-cache
 server:nginx
-x-request-id:197-3336013
+x-request-id:197-3722386
 
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"},{"name" : "code","valueCode" : "2ABAC272-0BCF-43F0-84BE-984074D92E15"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#2ABAC272-0BCF-43F0-84BE-984074D92E15 (\"Paracetamol\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#2ABAC272-0BCF-43F0-84BE-984074D92E15\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare\"\r\n"}]}
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "urn:oid:2.16.578.1.12.4.1.1.7110"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "urn:oid:2.16.578.1.12.4.1.1.7110"},{"name" : "code","valueCode" : "R63.3"},{"name" : "message","valueString" : "A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n16 16: tx-op\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[urn:oid:2.16.578.1.12.4.1.1.7110#R63.3 (\"Vanskeligheter med inntak og tilførsel av mat\")]\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"urn:oid:2.16.578.1.12.4.1.1.7110#R63.3\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"urn:oid:2.16.578.1.12.4.1.1.7110\"\r\n"}]}
 
 </pre><hr/>
 <a name="l7"> </a><h3>7</h3>
@@ -192,10 +187,10 @@ Accept: application/fhir+json; fhirVersion=4.0
 Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
 User-Agent: fhir/publisher
 
-{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelPakning","code":"0003602E-315E-4CDE-9EB0-6756BE9CD120","display":"Monoket"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"7cb849cf-d125-4157-8776-8d9d853f5a33"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff","code":"C31AF94A-5D5A-4C91-9B99-BB221E26E4C9","display":"Oksykodon"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
 
 
-Response (00:00:00.64): 
+Response (00:00:00.34): 
 
 200
 access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
@@ -203,13 +198,103 @@ access-control-allow-origin:*
 access-control-expose-headers:Content-Location, Location
 cache-control:public, max-age=600
 connection:keep-alive
-content-length:1796
+content-length:1819
 content-type:application/fhir+json
-date:Mon, 24 Mar 2025 12:31:18 GMT
-last-modified:Mon, 24 Mar 2025 12:31:18 GMT
+date:Tue, 25 Mar 2025 12:34:53 GMT
+last-modified:Tue, 25 Mar 2025 12:34:53 GMT
 pragma:no-cache
 server:nginx
-x-request-id:197-3336017
+x-request-id:197-3722390
 
-{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"},{"name" : "code","valueCode" : "0003602E-315E-4CDE-9EB0-6756BE9CD120"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n16 16: tx-op\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#0003602E-315E-4CDE-9EB0-6756BE9CD120 (\"Monoket\")]\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#0003602E-315E-4CDE-9EB0-6756BE9CD120\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelPakning\"\r\n"}]}
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"},{"name" : "code","valueCode" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n16 16: tx-op\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff#C31AF94A-5D5A-4C91-9B99-BB221E26E4C9 (\"Oksykodon\")]\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff#C31AF94A-5D5A-4C91-9B99-BB221E26E4C9\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff\"\r\n"}]}
+
+</pre><hr/>
+<a name="l8"> </a><h3>8</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare","code":"2ABAC272-0BCF-43F0-84BE-984074D92E15","display":"Paracetamol"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+
+
+Response (00:00:00.33): 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:1807
+content-type:application/fhir+json
+date:Tue, 25 Mar 2025 12:34:53 GMT
+last-modified:Tue, 25 Mar 2025 12:34:53 GMT
+pragma:no-cache
+server:nginx
+x-request-id:197-3722393
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"},{"name" : "code","valueCode" : "2ABAC272-0BCF-43F0-84BE-984074D92E15"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#2ABAC272-0BCF-43F0-84BE-984074D92E15 (\"Paracetamol\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#2ABAC272-0BCF-43F0-84BE-984074D92E15\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare\"\r\n"}]}
+
+</pre><hr/>
+<a name="l9"> </a><h3>9</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://dmp.no/fhir/NamingSystem/festLegemiddelPakning","code":"0003602E-315E-4CDE-9EB0-6756BE9CD120","display":"Monoket"}},{"name":"displayLanguage","valueString":"no"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+
+
+Response (00:00:00.30): 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:1789
+content-type:application/fhir+json
+date:Tue, 25 Mar 2025 12:34:53 GMT
+last-modified:Tue, 25 Mar 2025 12:34:53 GMT
+pragma:no-cache
+server:nginx
+x-request-id:197-3722396
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "system","valueUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"},{"name" : "code","valueCode" : "0003602E-315E-4CDE-9EB0-6756BE9CD120"},{"name" : "message","valueString" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"extension" : [{"url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id","valueString" : "UNKNOWN_CODESYSTEM"}],"severity" : "error","code" : "not-found","details" : {"coding" : [{"system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type","code" : "not-found"}],"text" : "A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated"},"location" : ["Coding.system"],"expression" : ["Coding.system"]}]}},{"name" : "diagnostics","valueString" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Parameters: disp-lang=no, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Validate \"[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#0003602E-315E-4CDE-9EB0-6756BE9CD120 (\"Monoket\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Check \"http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#0003602E-315E-4CDE-9EB0-6756BE9CD120\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/@all: Didn't find CodeSystem \"http://dmp.no/fhir/NamingSystem/festLegemiddelPakning\"\r\n"}]}
+
+</pre><hr/>
+<a name="l10"> </a><h3>10</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$expand HTTP/1.0
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"displayLanguage","valueCode":"no"},{"name":"_limit","valueInteger":10000},{"name":"_incomplete","valueBoolean":true},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"excludeNested","valueBoolean":false},{"name":"incomplete-ok","valueBoolean":true},{"name":"cache-id","valueId":"8fa6846b-5cd0-4dff-867b-476793d47d56"},{"name":"valueSet","resource":{"resourceType":"ValueSet","id":"lmdi-medicationadministrationstatus","text":{"status":"generated","div":"&lt;div>!-- Narrative removed -->&lt;/div>"},"url":"http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus","version":"1.0.1","name":"LegemiddeladministreringStatus","title":"Status for legemiddeladministrering","status":"draft","experimental":true,"date":"2025-03-10","publisher":"Folkehelseinstituttet","contact":[{"name":"Folkehelseinstituttet","telecom":[{"system":"url","value":"https://www.fhi.no"}]},{"name":"Legemiddelregisteret","telecom":[{"system":"email","value":"legemiddelregisteret@fhi.no"}]}],"description":"Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.","jurisdiction":[{"coding":[{"system":"urn:iso:std:iso:3166","code":"NO","display":"Norway"}]}],"compose":{"include":[{"system":"http://hl7.org/fhir/ValueSet/medication-admin-status","concept":[{"code":"completed","display":"Gjennomført"},{"code":"entered-in-error","display":"Feilregistrert"}]}]}}}]}
+
+
+Response (00:00:00.44): 
+
+422
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+connection:keep-alive
+content-length:413
+content-type:application/fhir+json
+date:Tue, 25 Mar 2025 12:35:03 GMT
+server:nginx
+x-request-id:197-3722448
+
+{"resourceType" : "OperationOutcome","text" : {"status" : "generated","div" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\">&lt;p>Unable to provide support for code system http://hl7.org/fhir/ValueSet/medication-admin-status&lt;/p>&lt;/div>"},"issue" : [{"severity" : "error","code" : "not-supported","details" : {"text" : "Unable to provide support for code system http://hl7.org/fhir/ValueSet/medication-admin-status"}}]}
 </pre></head></html>

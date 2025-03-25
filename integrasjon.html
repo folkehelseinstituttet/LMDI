@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Integrasjon - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.0</title>
+        v1.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.0 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.1 - ci-build
                             
                             
                             
@@ -179,7 +179,7 @@
 
 <p>Institusjoner som skal overføre data til Legemiddelregisteret, må følge den definerte protokollen. Protokollen beskriver krav til overføringsfrekvens, datastruktur og sikkerhet. Du finner mer informasjon her: <a href="protokoll.html">Protokoll for overføring av data</a>.</p>
 
-<p>For å bygge en samling med data som skal overføres må det lages en <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a>. Dette er en spesialisert FHIR Bundle-profil utviklet for innsending av data til Legemiddelregisteret. Den er begrenset til batch-type bundles og tillater kun POST-operasjoner, noe som sikrer konsistent datahåndtering og sporbarhet. Bundlen kan kun inneholde spesifikke ressurstyper som er relevante for legemiddelregistrering: Pasient, Helsepersonell, Legemiddel, LegemiddelAdministrasjon, Diagnose, Institusjonsopphold, Legemiddelrekvirering, Organisasjon.</p>
+<p>For å bygge en samling med data som skal overføres må det lages en <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a>. Dette er en spesialisert FHIR Bundle-profil utviklet for innsending av data til Legemiddelregisteret. Den er begrenset til transaction-type bundles og tillater kun POST-operasjoner, noe som sikrer konsistent datahåndtering og sporbarhet. Bundlen kan kun inneholde spesifikke ressurstyper som er relevante for legemiddelregistrering: Pasient, Helsepersonell, Legemiddel, LegemiddelAdministrasjon, Diagnose, Institusjonsopphold, Legemiddelrekvirering, Organisasjon.</p>
 
 <p>Vet overføring av data skal det lages en <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>, som sikrer både kryptering og signering av innholdet. Denne prosessen innebærer å komprimere, kryptere og signere en FHIR-basert <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code> før den sendes til API-et. Les mer om hvordan du oppretter en <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> i <a href="SignertKryptertBundle.html">denne veiledningen</a>.</p>
 
@@ -218,10 +218,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.0 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.1 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, Mar 24, 2025 12:30+0000">2025-03-24</span>
+                        title="Tue, Mar 25, 2025 12:34+0000">2025-03-25</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
