@@ -43,7 +43,7 @@ Instance: Episode-2-Sykehjem
 InstanceOf: Episode
 Description: "Eksempel på Episode"
 Usage: #inline
-* status = #active
+* status = #finished
 * serviceProvider = Reference(Organisasjon-2-Eldrehjem)
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 
