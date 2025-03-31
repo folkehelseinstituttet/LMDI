@@ -6,7 +6,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 
 // Metadata
 * ^status = #draft
-* ^date = "2025-03-31"
+* ^date = "2025-04-01"
 * ^publisher = "Folkehelseinstituttet"
 
 
