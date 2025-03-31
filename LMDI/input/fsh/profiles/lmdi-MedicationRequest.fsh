@@ -6,8 +6,23 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 
 // Metadata
 * ^status = #draft
-* ^date = "2025-03-10"
+* ^date = "2025-04-01"
 * ^publisher = "Folkehelseinstituttet"
+
+
+// Extensions for Legemiddelrekvirering
+* extension contains ProsentvisDoseendring named prosentvisDoseendring 0..1
+* extension[prosentvisDoseendring] ^short = "Doseendring i prosent"
+* extension[prosentvisDoseendring] ^definition = "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. Kan ha verdier fra 0. Ved vanlig dose uten endring er doseendring 100 (%). Enhet skal være prosent."
+
+* extension contains DelAvBehandlingsregime named delAvBehandlingsregime 0..1
+* extension[delAvBehandlingsregime] ^short = "Del av behandlingsregime"
+* extension[delAvBehandlingsregime] ^definition = "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi."
+
+* extension contains KliniskStudie named kliniskStudie 0..1
+* extension[kliniskStudie] ^short = "Legemiddel i klinisk studie"
+* extension[kliniskStudie] ^definition = "Angir om legemidlet gis som en del av en klinisk studie."
+
 
 // Deaktiverte elementer
 * text 0..0

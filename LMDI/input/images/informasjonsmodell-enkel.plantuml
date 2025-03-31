@@ -7,15 +7,15 @@ skinparam class {
     BorderColor Black
 }
 
-class Diagnose <<Condition>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-condition.html Diagnose _blank]]
-class Episode <<Encounter>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-encounter.html Episode _blank]]
-class Helsepersonell <<Practitioner>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-practitioner.html Helsepersonell _blank]]
-class Legemiddel <<Medication>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-medication.html Legemiddel _blank]]
-class Legemiddeladministrering <<MedicationAdministration>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-medicationadministration.html Legemiddeladministrering _blank]]
-class Legemiddelrekvirering <<MedicationRequest>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-medicationrequest.html Legemiddelrekvirering _blank]]
-class Organisasjon <<Organization>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-organization.html Organisasjon _blank]]
-class Pasient <<Patient>> [[https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-lmdi-patient.html Pasient _blank]]
-class Substance [[https://hl7.org/fhir/R4/substance.html Substance _blank]]
+class Diagnose <<Condition>> [[StructureDefinition-lmdi-condition.html Diagnose _blank]]
+class Episode <<Encounter>> [[StructureDefinition-lmdi-encounter.html Episode _blank]]
+class Helsepersonell <<Practitioner>> [[StructureDefinition-lmdi-practitioner.html Helsepersonell _blank]]
+class Legemiddel <<Medication>> [[StructureDefinition-lmdi-medication.html Legemiddel _blank]]
+class Legemiddeladministrering <<MedicationAdministration>> [[StructureDefinition-lmdi-medicationadministration.html Legemiddeladministrering _blank]]
+class Legemiddelrekvirering <<MedicationRequest>> [[StructureDefinition-lmdi-medicationrequest.html Legemiddelrekvirering _blank]]
+class Organisasjon <<Organization>> [[StructureDefinition-lmdi-organization.html Organisasjon _blank]]
+class Pasient <<Patient>> [[StructureDefinition-lmdi-patient.html Pasient _blank]]
+class Substance [[substance.html Substance _blank]]
 
 Diagnose "1..1" --> Pasient : "subject"
 Episode "0..1" --> Organisasjon : "serviceProvider"
