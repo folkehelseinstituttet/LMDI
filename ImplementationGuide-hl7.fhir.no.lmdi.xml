@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.0.1"/>
+  <version value="1.0.2"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="draft"/>
-  <date value="2025-02-04"/>
+  <date value="2025-04-01"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -532,6 +532,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/lmdi-del-av-behandlingsregime"/>
+      </reference>
+      <name value="Del av behandlingsregime"/>
+      <description value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -617,6 +628,17 @@
       <name value="Helsepersonell-1-HPR-nummer"/>
       <description value="Eksempel på helsepersonell med HPR-nummer"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/lmdi-klinisk-studie"/>
+      </reference>
+      <name value="Klinisk studie"/>
+      <description value="Angir om legemidlet gis som en del av en klinisk studie."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -881,6 +903,17 @@
       <name value="Pasient-2-FNR"/>
       <description value="Eksempel på pasient med fødselsnummer"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/lmdi-prosentvis-doseendring"/>
+      </reference>
+      <name value="Prosentvis doseendring"/>
+      <description value="Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

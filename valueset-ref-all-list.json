@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
-      "version" : "1.0.1",
+      "version" : "1.0.2",
       "status" : "draft",
       "name" : "LokalLegemiddelkatalogValues",
       "title" : "Lokal Legemiddelkatalog Values",
@@ -16,7 +16,7 @@
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
-      "version" : "1.0.1",
+      "version" : "1.0.2",
       "status" : "draft",
       "name" : "LegemiddeladministreringStatus",
       "title" : "Status for legemiddeladministrering",
@@ -52,8 +52,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.69"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
-      "StructureDefinition-lmdi-organization.html" : "Organisasjon"
+      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/address-use",
@@ -67,8 +67,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.67"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
-      "StructureDefinition-lmdi-organization.html" : "Organisasjon"
+      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
@@ -97,8 +97,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
@@ -460,9 +460,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.45"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
       "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -476,9 +476,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
       "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -492,15 +492,15 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
+      "StructureDefinition-lmdi-medication.html" : "Legemiddel",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
       "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+      "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
+      "StructureDefinition-lmdi-encounter.html" : "Episode",
       "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
       "StructureDefinition-lmdi-condition.html" : "Diagnose",
-      "StructureDefinition-lmdi-encounter.html" : "Episode",
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-      "StructureDefinition-lmdi-medication.html" : "Legemiddel",
-      "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle"
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -754,6 +754,20 @@
       "uses" : {
       },
       "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-prosentvis-doseendring.html" : "Prosentvis doseendring"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/reason-medication-given-codes",

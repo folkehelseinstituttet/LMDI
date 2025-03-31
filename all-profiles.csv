@@ -435,6 +435,21 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "lmdi-condition","Condition.note","Condition.note","","","",0,0,"","","","Annotation {[]} {[]}
 ","Additional information about the Condition","Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.","","","","","","","","","",,,,,"",,,,"Condition.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"lmdi-del-av-behandlingsregime","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Del av behandlingsregime","Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-del-av-behandlingsregime","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"lmdi-del-av-behandlingsregime","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-del-av-behandlingsregime","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"lmdi-del-av-behandlingsregime","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","string {[]} {[]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
 "lmdi-encounter","Encounter","Encounter","","Visit
 ","",0,*,"","","","null {[]} {[]}
 ","An interaction during which services are provided to the patient","An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.","","","","","","","","","",,,,,"",,,,"Encounter",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
@@ -683,6 +698,21 @@ There may be many levels in the hierachy, and this may only pic specific levels 
 "
 "lmdi-encounter","Encounter.partOf","Encounter.partOf","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
 ","Another Encounter this encounter is part of","Another Encounter of which this encounter is a part of (administratively or in time).","This is also used for associating a child's encounter back to the mother's encounter.Refer to the Notes section in the Patient resource for further details.","","","","","","","","",,,,,"",,,,"Encounter.partOf",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-klinisk-studie","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Klinisk studie","Angir om legemidlet gis som en del av en klinisk studie.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-klinisk-studie","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"lmdi-klinisk-studie","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-klinisk-studie","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"lmdi-klinisk-studie","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","boolean {[]} {[]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "lmdi-medication","Medication","Medication","","","",0,*,"","","","null {[]} {[]}
 ","Definition of a Medication","This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.","","","","","","","","","",,,,,"",,,,"Medication",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
@@ -1254,9 +1284,21 @@ htmlxhtmldisplay","",0,0,"","","","Narrative {[]} {[]}
 "lmdi-medicationrequest","MedicationRequest.contained","MedicationRequest.contained","","inline resources
 anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"",""
-"lmdi-medicationrequest","MedicationRequest.extension","MedicationRequest.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"lmdi-medicationrequest","MedicationRequest.extension","MedicationRequest.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-medicationrequest","MedicationRequest.extension:prosentvisDoseendring","MedicationRequest.extension","prosentvisDoseendring","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring]]} {[]}
+","Doseendring i prosent","Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. Kan ha verdier fra 0. Ved vanlig dose uten endring er doseendring 100 (%). Enhet skal være prosent.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-medicationrequest","MedicationRequest.extension:delAvBehandlingsregime","MedicationRequest.extension","delAvBehandlingsregime","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime]]} {[]}
+","Del av behandlingsregime","Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-medicationrequest","MedicationRequest.extension:kliniskStudie","MedicationRequest.extension","kliniskStudie","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie]]} {[]}
+","Legemiddel i klinisk studie","Angir om legemidlet gis som en del av en klinisk studie.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "lmdi-medicationrequest","MedicationRequest.modifierExtension","MedicationRequest.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
@@ -2139,6 +2181,44 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "lmdi-practitioner","Practitioner.communication","Practitioner.communication","","","",0,0,"","","","CodeableConcept {[]} {[]}
 ","A language the practitioner can use in patient communication","A language the practitioner can use in patient communication.","The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.","Knowing which language a practitioner speaks can help in facilitating communication with patients.","","","","","","","",,"preferred","A human language.","http://hl7.org/fhir/ValueSet/languages","",,,,"Practitioner.communication",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-prosentvis-doseendring","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Prosentvis doseendring","Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-prosentvis-doseendring","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"lmdi-prosentvis-doseendring","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-prosentvis-doseendring","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"lmdi-prosentvis-doseendring","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","Quantity {[]} {[]}
+","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-prosentvis-doseendring","Extension.value[x].id","Extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"lmdi-prosentvis-doseendring","Extension.value[x].extension","Extension.value[x].extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-prosentvis-doseendring","Extension.value[x].value","Extension.value[x].value","","","",0,1,"","","Y","decimal {[]} {[]}
+","Numerical value (with implicit precision)","The value of the measured amount. The value includes an implicit precision in the presentation of the value.","The implicit precision in the value should always be honored. Monetary values have their own rules for handling precision (refer to standard accounting text books).","Precision is handled implicitly in almost all cases of measurement.","","","","","","","",,,,,"",,,,"Quantity.value",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-prosentvis-doseendring","Extension.value[x].comparator","Extension.value[x].comparator","","","",0,1,"","Y","Y","code {[]} {[]}
+","< | <= | >= | > - how to understand the value","How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is ""<"" , then the real value is < stated value.","","Need a framework for handling measures where the value is <5ug/L or >400mg/L due to the limitations of measuring methodology.","","If there is no comparator, then there is no modification of the value","","","","","",,"required","How the Quantity should be understood and represented.","http://hl7.org/fhir/ValueSet/quantity-comparator|4.0.1","",,,,"Quantity.comparator",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-prosentvis-doseendring","Extension.value[x].unit","Extension.value[x].unit","","","",0,1,"","","Y","string {[]} {[]}
+","Unit representation","A human-readable form of the unit.","","There are many representations for units of measure and in many contexts, particular representations are fixed and required. I.e. mcg for micrograms.","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""%""/>","","","",,,,,"",,,,"Quantity.unit",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-prosentvis-doseendring","Extension.value[x].system","Extension.value[x].system","","","",0,1,"","","Y","uri {[]} {[]}
+","System that defines coded unit form","The identification of the system that provides the coded form of the unit.","","Need to know the system that defines the coded form of the unit.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://unitsofmeasure.org""/>","","","",,,,,"",,,,"Quantity.system",0,1,"qty-3
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-prosentvis-doseendring","Extension.value[x].code","Extension.value[x].code","","","",0,1,"","","Y","code {[]} {[]}
+","Coded form of the unit","A computer processable form of the unit in some unit representation system.","The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.","Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""%""/>","","","",,,,,"",,,,"Quantity.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "lmdi-urban-district","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","lmdi-urban-district","Information about Norwegian urban district (bydel)","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1

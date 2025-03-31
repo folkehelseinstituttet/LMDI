@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -9,6 +9,20 @@
       "title": "Lokal Legemiddelkatalog",
       "types": [
         "Coding"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime",
+      "title": "Del av behandlingsregime",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
+      "title": "Klinisk studie",
+      "types": [
+        "boolean"
       ]
     },
     {
@@ -23,6 +37,20 @@
         "code",
         "string",
         "boolean"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
+      "title": "Prosentvis doseendring",
+      "types": [
+        "Quantity",
+        "string",
+        "Extension",
+        "decimal",
+        "code",
+        "string",
+        "uri",
+        "code"
       ]
     },
     {
@@ -100,9 +128,18 @@
     "http://fhi.no/fhir/lmr/lokal-legemiddel-katalog": [
       "Medication.code.coding"
     ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
+      "MedicationRequest"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie": [
+      "MedicationRequest"
+    ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-municipalitycode": [
       "Organization.address.district",
       "Patient.address.district"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring": [
+      "MedicationRequest"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-urban-district": [
       "Organization.address"

@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for Lmdi</h1>
- <p>Generated Tue Mar 25 12:48:48 UTC 2025, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.1 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>))</p>
+ <p>Generated Mon Mar 31 14:09:30 UTC 2025, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.2 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -49,7 +49,7 @@
   <tr>
     <td>System not handled by any servers. Using primary server</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.2</td>
     <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
     <td>auth = , candidates=</td>
   </tr>
@@ -84,7 +84,7 @@
   <tr>
     <td>System not handled by any servers. Using primary server</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.2</td>
     <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
     <td>auth = , candidates=</td>
   </tr>
@@ -147,14 +147,28 @@
   <tr>
     <td>System not handled by any servers. Using primary server</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.1</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/CodeSystem/medication-admin-status</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/CodeSystem/medication-admin-status</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.2</td>
     <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
     <td>auth = , candidates=</td>
   </tr>
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 9. Code Systems used: </p>
+<p>Use Count: 10. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -190,6 +204,12 @@
   </tr>
   <tr>
     <td>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/CodeSystem/medication-admin-status</td>
     <td>0</td>
     <td>1</td>
     <td></td>

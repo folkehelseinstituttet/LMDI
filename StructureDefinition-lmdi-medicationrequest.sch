@@ -13,6 +13,9 @@
     <sch:title>f:MedicationRequest</sch:title>
     <sch:rule context="f:MedicationRequest">
       <sch:assert test="count(f:text) &lt;= 0">text: maximum cardinality of 'text' is 0</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:supportingInformation) &lt;= 0">supportingInformation: maximum cardinality of 'supportingInformation' is 0</sch:assert>
       <sch:assert test="count(f:requester) &gt;= 1">requester: minimum cardinality of 'requester' is 1</sch:assert>
       <sch:assert test="count(f:performer) &lt;= 0">performer: maximum cardinality of 'performer' is 0</sch:assert>

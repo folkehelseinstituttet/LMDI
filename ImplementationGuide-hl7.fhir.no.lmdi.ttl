@@ -15,11 +15,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"no\" lang=\"no\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.lmdi</b></p><a name=\"hl7.fhir.no.lmdi\"> </a><a name=\"hchl7.fhir.no.lmdi\"> </a><a name=\"hl7.fhir.no.lmdi-no\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: no</p></div><h2>Lmdi</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi</pre><div><p>Denne implementasjongguiden beskriver hvordan institusjoner skal overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.0.1"] ; # 
+  fhir:version [ fhir:v "1.0.2"] ; # 
   fhir:name [ fhir:v "Lmdi"] ; # 
   fhir:title [ fhir:v "Legemiddeldata fra institusjon til Legemiddelregisteret"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-02-04"^^xsd:date] ; # 
+  fhir:date [ fhir:v "2025-04-01"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -962,6 +962,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime> ;
+         fhir:reference [ fhir:v "StructureDefinition/lmdi-del-av-behandlingsregime" ]
+       ] ;
+       fhir:name [ fhir:v "Del av behandlingsregime" ] ;
+       fhir:description [ fhir:v "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "StructureDefinition:resource"
          ]
        ] ) ;
@@ -1104,6 +1122,24 @@
          a fhir:canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"^^xsd:anyURI ;
          fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie> ;
+         fhir:reference [ fhir:v "StructureDefinition/lmdi-klinisk-studie" ]
+       ] ;
+       fhir:name [ fhir:v "Klinisk studie" ] ;
+       fhir:description [ fhir:v "Angir om legemidlet gis som en del av en klinisk studie." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
@@ -1544,6 +1580,24 @@
          a fhir:canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;
          fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring> ;
+         fhir:reference [ fhir:v "StructureDefinition/lmdi-prosentvis-doseendring" ]
+       ] ;
+       fhir:name [ fhir:v "Prosentvis doseendring" ] ;
+       fhir:description [ fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [
