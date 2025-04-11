@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>SignertKryptertBundle - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.2</title>
+        v1.0.3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.2 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.3 - ci-build
                             
                             
                             
@@ -155,17 +155,14 @@
 
 <p>Her beskrives hvordan du må gå frem for å lage en <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> som skal sendes til Legemiddelregisterets API. Implementasjonsdetaljer (språk, biblioteker osv.) står du fritt til å velge, så lenge resultatet samsvarer med spesifikasjonen under.</p>
 
+<p>Eksempel-kode for å generere en SignertKryptertBundle:  <a href="eksempelkode_cs.html">Eksempel i C#</a></p>
+
 <p><img src="signertkryptertbundle.svg" width="50%" />
 <br clear="all" /></p>
 
 <h3 id="1-opprett-fhir-ressurs">1. Opprett FHIR-ressurs</h3>
 
-<p>Først lages en JSON-representasjon av FHIR-ressursen <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>. Dette krever at følgende er satt:</p>
-
-<ul>
-  <li><strong>Status</strong> (obligatorisk, f.eks. <code class="language-plaintext highlighter-rouge">completed</code>, <code class="language-plaintext highlighter-rouge">in-progress</code> etc.)</li>
-  <li><strong>Medication</strong> (kan være en referanse, ID eller en <code class="language-plaintext highlighter-rouge">Medication</code>-ressurs)</li>
-</ul>
+<p>Først lages en JSON-representasjon av FHIR-ressursen <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>.</p>
 
 <p>Bruk standardbiblioteker eller tredjepartsbiblioteker for FHIR hvis ønskelig. Viktig at JSON-strukturen er korrekt for FHIR-standarden slik at validering i Legemiddelregisterets API ikke feiler. Valider gjerne FHIR-ressursen lokalt før kryptering for å unngå at meldinger feiler i serveren.</p>
 
@@ -345,10 +342,10 @@ Resultatet blir en byte-array av komprimerte data. GZip benytter DEFLATE-algorit
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.2 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.3 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, Mar 31, 2025 14:08+0000">2025-03-31</span>
+                        title="Fri, Apr 11, 2025 07:26+0000">2025-04-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

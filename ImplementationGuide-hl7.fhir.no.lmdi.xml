@@ -8,7 +8,7 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.0.2"/>
+  <version value="1.0.3"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="draft"/>
@@ -532,6 +532,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/atc-valueset"/>
+      </reference>
+      <name value="ATC Kodesystem ValueSet"/>
+      <description value="ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -649,6 +660,17 @@
       </reference>
       <name value="Legemiddel"/>
       <description value="Beskrivelse av legemiddel."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/legemiddel-classification"/>
+      </reference>
+      <name value="Legemiddel Classification"/>
+      <description value="Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -981,6 +1003,22 @@
           </extension>
           <nameUrl value="protokoll.html"/>
           <title value="Protokoll"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="eksempelkode_cs.html"/>
+          </extension>
+          <nameUrl value="eksempelkode_cs.html"/>
+          <title value="C# eksempelkode"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="eksempelkode_ps1.html"/>
+          </extension>
+          <nameUrl value="eksempelkode_ps1.html"/>
+          <title value="Powershell eksempelkode"/>
           <generation value="markdown"/>
         </page>
       </page>

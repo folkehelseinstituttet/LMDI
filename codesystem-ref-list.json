@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem",
-      "version" : "1.0.2",
+      "version" : "1.0.3",
       "status" : "draft",
       "name" : "LokalLegemiddelkatalogCodeSystem",
       "title" : "Lokal Legemiddelkatalog Codes",
@@ -46,6 +46,18 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes"
+    },
+    {
+      "url" : "http://www.whocc.no/atc",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "WC",
+      "title" : "WHO ATC",
+      "description" : "WHO ATC",
+      "oids" : ["2.16.840.1.113883.6.73"],
+      "uses" : {
+      },
+      "ValueSet-atc-valueset.html" : "ATC Kodesystem ValueSet"
     }
   ]
 }

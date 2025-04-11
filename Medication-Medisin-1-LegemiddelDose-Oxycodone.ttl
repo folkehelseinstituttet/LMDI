@@ -16,9 +16,20 @@
      ] )
   ] ; # 
   fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication Medisin-1-LegemiddelDose-Oxycodone</b></p><a name=\"Medisin-1-LegemiddelDose-Oxycodone\"> </a><a name=\"hcMedisin-1-LegemiddelDose-Oxycodone\"> </a><a name=\"Medisin-1-LegemiddelDose-Oxycodone-no\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medication.html\">Legemiddel</a></p></div><p><b>identifier</b>: <a href=\"NamingSystem-no-basis-fest-legemiddelvirkestoff.html\" title=\"FEST-id for virkestoff. Benyttes ved virkestoffrekvirering\">festLegemiddelVirkestoff</a>/C31AF94A-5D5A-4C91-9B99-BB221E26E4C9</p><p><b>code</b>: <span title=\"Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff C31AF94A-5D5A-4C91-9B99-BB221E26E4C9}\">Oksykodon</span></p></div>"^^rdf:XMLLiteral
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication Medisin-1-LegemiddelDose-Oxycodone</b></p><a name=\"Medisin-1-LegemiddelDose-Oxycodone\"> </a><a name=\"hcMedisin-1-LegemiddelDose-Oxycodone\"> </a><a name=\"Medisin-1-LegemiddelDose-Oxycodone-no\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medication.html\">Legemiddel</a></p></div><p><b>Legemiddel Classification</b>: <span title=\"Codes:{http://www.whocc.no/atc N02AA05}\">Oksykodon</span></p><p><b>identifier</b>: <a href=\"NamingSystem-no-basis-fest-legemiddelvirkestoff.html\" title=\"FEST-id for virkestoff. Benyttes ved virkestoffrekvirering\">festLegemiddelVirkestoff</a>/C31AF94A-5D5A-4C91-9B99-BB221E26E4C9</p><p><b>code</b>: <span title=\"Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff C31AF94A-5D5A-4C91-9B99-BB221E26E4C9}\">Oksykodon</span></p></div>"^^rdf:XMLLiteral
   ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "N02AA05" ] ;
+         fhir:display [ fhir:v "Oksykodon" ]
+       ] )
+     ]
+  ] ) ; # 
   fhir:identifier ( [
      fhir:system [ fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9" ]

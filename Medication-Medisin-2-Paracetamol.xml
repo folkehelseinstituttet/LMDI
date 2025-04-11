@@ -6,8 +6,17 @@
     <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication Medisin-2-Paracetamol</b></p><a name="Medisin-2-Paracetamol"> </a><a name="hcMedisin-2-Paracetamol"> </a><a name="Medisin-2-Paracetamol-no"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></p></div><p><b>identifier</b>: <a href="NamingSystem-no-basis-fest-legemiddelmerkevare.html" title="FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare.">festLegemiddelMerkevare</a>/2ABAC272-0BCF-43F0-84BE-984074D92E15</p><p><b>code</b>: <span title="Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare 2ABAC272-0BCF-43F0-84BE-984074D92E15}">Paracetamol</span></p></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication Medisin-2-Paracetamol</b></p><a name="Medisin-2-Paracetamol"> </a><a name="hcMedisin-2-Paracetamol"> </a><a name="Medisin-2-Paracetamol-no"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></p></div><p><b>Legemiddel Classification</b>: <span title="Codes:{http://www.whocc.no/atc N02BE01}">Paracetamol</span></p><p><b>identifier</b>: <a href="NamingSystem-no-basis-fest-legemiddelmerkevare.html" title="FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare.">festLegemiddelMerkevare</a>/2ABAC272-0BCF-43F0-84BE-984074D92E15</p><p><b>code</b>: <span title="Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare 2ABAC272-0BCF-43F0-84BE-984074D92E15}">Paracetamol</span></p></div>
   </text>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="N02BE01"/>
+        <display value="Paracetamol"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
   <identifier>
     <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"/>
     <value value="2ABAC272-0BCF-43F0-84BE-984074D92E15"/>

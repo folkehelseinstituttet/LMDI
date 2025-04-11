@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -9,6 +9,13 @@
       "title": "Lokal Legemiddelkatalog",
       "types": [
         "Coding"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "title": "Legemiddel Classification",
+      "types": [
+        "CodeableConcept"
       ]
     },
     {
@@ -127,6 +134,9 @@
   "usage": {
     "http://fhi.no/fhir/lmr/lokal-legemiddel-katalog": [
       "Medication.code.coding"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification": [
+      "Medication"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
       "MedicationRequest"
