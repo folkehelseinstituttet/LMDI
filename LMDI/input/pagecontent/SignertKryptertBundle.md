@@ -2,16 +2,15 @@ Når data skal leveres fra institusjoner til Legemiddelregisteret skal dette sen
 
 Her beskrives hvordan du må gå frem for å lage en `SignertKryptertBundle` som skal sendes til Legemiddelregisterets API. Implementasjonsdetaljer (språk, biblioteker osv.) står du fritt til å velge, så lenge resultatet samsvarer med spesifikasjonen under.
 
+Eksempel-kode for å generere en SignertKryptertBundle:  [Eksempel i C#](eksempelkode_cs.html)
+
 <img src="signertkryptertbundle.svg" width="50%" />
 <br clear="all"/>
 
 
 ### 1. Opprett FHIR-ressurs
 
-Først lages en JSON-representasjon av FHIR-ressursen `LegemiddelregisterBundle`. Dette krever at følgende er satt:
-
-- **Status** (obligatorisk, f.eks. `completed`, `in-progress` etc.)  
-- **Medication** (kan være en referanse, ID eller en `Medication`-ressurs)
+Først lages en JSON-representasjon av FHIR-ressursen `LegemiddelregisterBundle`.
 
 Bruk standardbiblioteker eller tredjepartsbiblioteker for FHIR hvis ønskelig. Viktig at JSON-strukturen er korrekt for FHIR-standarden slik at validering i Legemiddelregisterets API ikke feiler. Valider gjerne FHIR-ressursen lokalt før kryptering for å unngå at meldinger feiler i serveren.
 

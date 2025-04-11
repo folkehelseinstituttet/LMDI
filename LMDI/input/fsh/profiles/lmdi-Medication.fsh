@@ -4,10 +4,11 @@ Id:       lmdi-medication
 Title:    "Legemiddel"
 Description: "Beskrivelse av legemiddel."
 * ^status = #draft
-* ^date = "2025-03-10"
+* ^date = "2025-04-11"
 * ^publisher = "Folkehelseinstituttet"
 
 * manufacturer 0..0
+* text 0..0
 
 * code.text 0..0
 * code ^short = "Identifikator fra FEST eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi."
@@ -48,6 +49,11 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[LokaltLegemiddel].display 1..1
 * code.coding[LokaltLegemiddel].display ^short = "Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"
 
+* extension contains LegemiddelClassification named classification 0..*
+* extension[classification] ^short = "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
+* extension[classification] ^definition = "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
+* extension[classification] ^comment = "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO."
+
 * form.text 0..0
 * form ^short = "Legemiddelform"
 * form.coding 1..*
@@ -78,6 +84,7 @@ Description: "Beskrivelse av legemiddel."
 
 
 // EKSEMPLER
+Alias: $ATC = http://www.whocc.no/atc
 
 Instance: Medisin-1-LegemiddelDose-Oxycodone
 InstanceOf: Legemiddel
@@ -85,6 +92,7 @@ Description: "Eksempel på legemiddel"
 // "Oxycodone Orifarm mikst oppl 1 mg/ml"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 * identifier.value = "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
+* extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"
 * code.coding[FestVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 * code.coding[FestVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
 * code.coding[FestVirkestoff].display = "Oksykodon"
@@ -94,6 +102,7 @@ InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel - Paracetamol - UTKAST"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * identifier.value = "2ABAC272-0BCF-43F0-84BE-984074D92E15"
+* extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
 * code.coding[FestMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * code.coding[FestMerkevare].code = #2ABAC272-0BCF-43F0-84BE-984074D92E15
 * code.coding[FestMerkevare].display = "Paracetamol"
@@ -103,6 +112,7 @@ InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel - paking"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * identifier.value = "0003602E-315E-4CDE-9EB0-6756BE9CD120"
+* extension[classification].valueCodeableConcept = $ATC#C01DA14 "Isosorbid mononitrat"
 * code.coding[FestPakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * code.coding[FestPakning].code = #0003602E-315E-4CDE-9EB0-6756BE9CD120
 * code.coding[FestPakning].display = "Monoket"
