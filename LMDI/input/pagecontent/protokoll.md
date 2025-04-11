@@ -22,7 +22,7 @@ Formålet med denne protokollen er å sikre daglig overføring av legemiddeladmi
 
 ### 3.1 Kommunikasjonsfeil
 - Dersom API-et er utilgjengelig, eller det oppstår en feil i kommunikasjonen, regnes overføringen som mislykket.
-- Data inkluderes i neste planlagte overføring.
+- Dataene må da overføres på nytt.
 - Avsender kan gjøre opptil **3 nye forsøk** med ca. **1 times mellomrom**.
 
 ### 3.2 Valideringsfeil
