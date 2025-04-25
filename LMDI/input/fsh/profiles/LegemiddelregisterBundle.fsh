@@ -27,6 +27,10 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 * entry.request.method ^short = "Må være POST"
 * entry.request.method ^definition = "Angir at alle forespørsler i bundle må være av type POST"
 
+* entry.request.url 1..1
+* entry.request.url ^short = "URL for requesten (påkrevd, men verdien har ingen betydning)"
+* entry.request.url ^definition = "Representerer addressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."
+
 * entry.resource 1..1 MS
 
 // Invariant for tillatte ressurstyper
