@@ -4,6 +4,10 @@ Id: lmdi-encounter
 Title: "Episode"
 Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."
 
+* extension contains
+    NprEpisodeID named nprEpisodeID 1..1 and
+    NprEpisodeGUID named nprEpisodeGUID 0..1
+    
 * statusHistory 0..0 
 * classHistory 0..0
 * type 0..0

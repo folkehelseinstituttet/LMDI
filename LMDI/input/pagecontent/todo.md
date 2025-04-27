@@ -1,5 +1,3 @@
-[done] Legge til SNOMED CT slicing på  Legemiddel.code.coding
-Lage profil av Substance - Legemiddel har referanse til Substance
 
 
 
@@ -11,11 +9,12 @@ Logical reference – unik identifikator:
 Dette er entry.fullUrl i bundlen
 
 
-
-Ny profil:  Virkestoff
-category: obligatorisk
-description: fjernes
-ingredient: fjernes
+[done] Legge til SNOMED CT slicing på  Legemiddel.code.coding
+[done]Lage profil av Substance - Legemiddel har referanse til Substance
+        Ny profil:  Virkestoff
+        category: obligatorisk
+        description: fjernes
+        ingredient: fjernes
 
 
 Nye extension felt i Episode med id som vi kan knytte oss til NPR?

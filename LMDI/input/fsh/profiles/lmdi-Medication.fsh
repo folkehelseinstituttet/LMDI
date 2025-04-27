@@ -89,7 +89,7 @@ Description: "Beskrivelse av legemiddel."
 * batch ^short = "Batch-nummer for legemiddelet"
 
 * ingredient.item[x] only Reference(Substance or Legemiddel) or CodeableConcept
-* ingredient.item[x] ^type.targetProfile[0] = "http://hl7.org/fhir/StructureDefinition/Substance"
+* ingredient.item[x] ^type.targetProfile[0] = "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
 * ingredient.item[x] ^type.targetProfile[1] = "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
 
 
