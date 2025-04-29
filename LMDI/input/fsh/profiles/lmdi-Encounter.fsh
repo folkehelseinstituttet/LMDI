@@ -6,7 +6,19 @@ Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i 
 
 * extension contains
     NprEpisodeID named nprEpisodeID 1..1 and
-    NprEpisodeGUID named nprEpisodeGUID 0..1
+    NprEpisodeGUID named nprEpisodeGUID 0..1 MS
+
+* extension[nprEpisodeGUID] ^short = "GUID for episode. Tilsvarende NPR episodeGUID."
+* extension[nprEpisodeGUID] ^definition = """
+Veiledning:
+Rapporteringsenhetene bør forberede overgang til episodeGUID som identifikator for episode.
+
+Bruk:
+En GUID som er generert iht. standardmetode vil gi et tall som med tilnærmet 100 prosent sannsynlighet er unikt, uten sentral samordning på tvers av rapporteringsenheter. GUID-er muliggjør derfor kombinasjon av informasjon fra uavhengige parter uten vesentlig risiko for duplisering av identifikatorer.
+
+Rapporteringsplikt:
+episodeGUID skal rapporteres dersom en slik identifikator finnes.
+"""
     
 * statusHistory 0..0 
 * classHistory 0..0

@@ -1,6 +1,7 @@
 
 
-
+Fjerne krav om Legemidde SCT
+Short for coding:SCT: Enten Legemiddel eller Substance kode
 
 
 Beskriv hvordan referanser skal være i LegemiddelregisterBundle.
