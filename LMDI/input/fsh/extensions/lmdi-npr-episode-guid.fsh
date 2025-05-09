@@ -5,7 +5,7 @@ Description: "UUID identifier for an episode in the National Patient Registry (N
 
 * value[x] ^short = "GUID for episode. Tilsvarende NPR episodeGUID."
 * value[x] ^definition = """
-Veiledning:
+XXXXXXXXXXxVeiledning:
 Rapporteringsenhetene bør forberede overgang til episodeGUID som identifikator for episode.
 
 Bruk:

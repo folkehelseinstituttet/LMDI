@@ -38,7 +38,7 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[FestMerkevare].code ^short = "Identifikator fra FEST"
 * code.coding[FestPakning].code ^short = "Identifikator fra FEST"
 * code.coding[FestVirkestoff].code ^short = "Identifikator fra FEST"
-* code.coding[SCT].code ^short = "Identifikator fra SNOMED CT"
+* code.coding[SCT].code ^short = "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."
 * code.coding[LokaltLegemiddel].code ^short = "Identifikator fra lokal legemiddelkatalog/legemiddelregister"
 * code.coding[FestDose].code 1..1
 * code.coding[FestMerkevare].code 1..1
@@ -50,7 +50,7 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[FestMerkevare] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestPakning] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestVirkestoff] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
-* code.coding[SCT] ^comment = "Standardisert SNOMED CT-kode for legemidler. Bruker det internasjonale SNOMED CT-kodesystemet."
+* code.coding[SCT] ^comment = "Standardisert SNOMED CT-kode for legemidler. Koden skal være et underbegrep (descendant) av enten 'Medicinal product (product)' [763158003] eller 'Substance (substance)' [105590001]."
 * code.coding[LokaltLegemiddel] ^comment = ""
 * code.coding[LokaltLegemiddel].extension contains LokalLegemiddelkatalogExtension named lokalLegemiddelkatalog 0..1
 * code.coding[LokaltLegemiddel].display 1..1

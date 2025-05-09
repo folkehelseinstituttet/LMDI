@@ -10,7 +10,7 @@ Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i 
 
 * extension[nprEpisodeGUID] ^short = "GUID for episode. Tilsvarende NPR episodeGUID."
 * extension[nprEpisodeGUID] ^definition = """
-Veiledning:
+YYYYYYYYVeiledning:
 Rapporteringsenhetene bør forberede overgang til episodeGUID som identifikator for episode.
 
 Bruk:

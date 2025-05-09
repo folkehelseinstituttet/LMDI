@@ -1,7 +1,7 @@
 
 
-Fjerne krav om Legemidde SCT
-Short for coding:SCT: Enten Legemiddel eller Substance kode
+[done] Fjerne krav om Legemidde SCT
+[done] Short for coding:SCT: Enten Legemiddel eller Substance kode
 
 
 Beskriv hvordan referanser skal være i LegemiddelregisterBundle.
@@ -11,7 +11,7 @@ Dette er entry.fullUrl i bundlen
 
 
 [done] Legge til SNOMED CT slicing på  Legemiddel.code.coding
-[done]Lage profil av Substance - Legemiddel har referanse til Substance
+[done] Lage profil av Substance - Legemiddel har referanse til Substance
         Ny profil:  Virkestoff
         category: obligatorisk
         description: fjernes
