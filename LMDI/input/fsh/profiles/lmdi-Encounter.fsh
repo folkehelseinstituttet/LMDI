@@ -4,22 +4,10 @@ Id: lmdi-encounter
 Title: "Episode"
 Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."
 
-* extension contains
-    NprEpisodeID named nprEpisodeID 1..1 and
-    NprEpisodeGUID named nprEpisodeGUID 0..1 MS
+* extension contains NprEpisodeIdentifier named nprEpisodeIdentifier 0..1 MS
+* extension[nprEpisodeIdentifier] ^short = "Unik identifikator for episoden, som brukes ved rapportering til NPR"
+* extension[nprEpisodeIdentifier] ^definition = "En lokal eller globalt unik identifikator (string eller UUID) som identifiserer episoden entydig i helseinstitusjonens systemer. Som brukes ved rapportering til Norsk pasientregister (NPR)."
 
-* extension[nprEpisodeGUID] ^short = "GUID for episode. Tilsvarende NPR episodeGUID."
-* extension[nprEpisodeGUID] ^definition = """
-YYYYYYYYVeiledning:
-Rapporteringsenhetene bør forberede overgang til episodeGUID som identifikator for episode.
-
-Bruk:
-En GUID som er generert iht. standardmetode vil gi et tall som med tilnærmet 100 prosent sannsynlighet er unikt, uten sentral samordning på tvers av rapporteringsenheter. GUID-er muliggjør derfor kombinasjon av informasjon fra uavhengige parter uten vesentlig risiko for duplisering av identifikatorer.
-
-Rapporteringsplikt:
-episodeGUID skal rapporteres dersom en slik identifikator finnes.
-"""
-    
 * statusHistory 0..0 
 * classHistory 0..0
 * type 0..0

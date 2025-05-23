@@ -15,11 +15,11 @@ class Legemiddeladministrering <<MedicationAdministration>> [[StructureDefinitio
 class Legemiddelrekvirering <<MedicationRequest>> [[StructureDefinition-lmdi-medicationrequest.html Legemiddelrekvirering _blank]]
 class Organisasjon <<Organization>> [[StructureDefinition-lmdi-organization.html Organisasjon _blank]]
 class Pasient <<Patient>> [[StructureDefinition-lmdi-patient.html Pasient _blank]]
-class Substance [[https://hl7.org/fhir/R4/substance.html Substance _blank]]
+class Virkestoff <<Encounter>> [[StructureDefinition-lmdi-substance.html Virkestoff _blank]]
 
 Diagnose "1..1" --> Pasient : "subject"
 Episode "0..1" --> Organisasjon : "serviceProvider"
-Legemiddel "0..*" --> Substance : "ingredient.itemReference"
+Legemiddel "0..*" --> Virkestoff : "ingredient.itemReference"
 Legemiddel "0..*" --> Legemiddel : "ingredient.itemReference"
 Legemiddeladministrering "1..1" --> Legemiddel : "medicationReference"
 Legemiddeladministrering "1..1" --> Pasient : "subject"

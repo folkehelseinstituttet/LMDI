@@ -46,7 +46,7 @@ Usage: #inline
 * status = #finished
 * serviceProvider = Reference(Organisasjon-2-Eldrehjem)
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
-* extension[nprEpisodeID].valueString = "NPR123456789"
+* extension[NprEpisodeIdentifier].valueString = "NPR123456789"
 
 Instance: Organisasjon-2-Eldrehjem
 InstanceOf: Organisasjon
