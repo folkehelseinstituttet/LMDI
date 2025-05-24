@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://fhir.no/ValueSet/atc-valueset",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "active",
       "name" : "ATCValueSet",
       "title" : "ATC Kodesystem ValueSet",
@@ -14,7 +14,7 @@
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "draft",
       "name" : "LokalLegemiddelkatalogValues",
       "title" : "Lokal Legemiddelkatalog Values",
@@ -28,7 +28,7 @@
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "active",
       "name" : "KommunenummerValueSet",
       "title" : "Kommunenummer ValueSet",
@@ -40,7 +40,7 @@
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "draft",
       "name" : "LegemiddelKoder",
       "title" : "Gyldige legemiddelkoder",
@@ -58,7 +58,7 @@
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "draft",
       "name" : "LegemiddeladministreringStatus",
       "title" : "Status for legemiddeladministrering",
@@ -124,8 +124,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.97"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering"
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
@@ -139,8 +139,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-      "StructureDefinition-lmdi-patient.html" : "Pasient"
+      "StructureDefinition-lmdi-patient.html" : "Pasient",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
@@ -154,8 +154,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.346"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering"
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/body-site",
@@ -502,9 +502,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.45"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
       "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-      "StructureDefinition-lmdi-patient.html" : "Pasient"
+      "StructureDefinition-lmdi-patient.html" : "Pasient",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -518,9 +518,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.57"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
       "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-      "StructureDefinition-lmdi-patient.html" : "Pasient"
+      "StructureDefinition-lmdi-patient.html" : "Pasient",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -534,16 +534,16 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-      "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
-      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-      "StructureDefinition-lmdi-condition.html" : "Diagnose",
-      "StructureDefinition-lmdi-medication.html" : "Legemiddel",
-      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
       "StructureDefinition-lmdi-substance.html" : "Virkestoff",
+      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
       "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+      "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
+      "StructureDefinition-lmdi-medication.html" : "Legemiddel",
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
+      "StructureDefinition-lmdi-patient.html" : "Pasient",
       "StructureDefinition-lmdi-encounter.html" : "Episode",
-      "StructureDefinition-lmdi-patient.html" : "Pasient"
+      "StructureDefinition-lmdi-condition.html" : "Diagnose",
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -854,8 +854,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.98"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering"
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
