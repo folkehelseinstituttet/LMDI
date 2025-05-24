@@ -11,8 +11,9 @@ Description: "Beskrivelse av legemiddel."
 * text 0..0
 
 * code.text 0..0
+* code from LegemiddelKoder (extensible)
 * code ^short = "Identifikator fra FEST eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi."
-* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains FestDose 0..1 
@@ -20,35 +21,44 @@ Description: "Beskrivelse av legemiddel."
     and FestPakning 0..1
     and FestVirkestoff 0..1
     and LokaltLegemiddel 0..1
+    and SCT 0..1
 * code.coding[FestDose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
 * code.coding[FestMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * code.coding[FestPakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * code.coding[FestVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+* code.coding[SCT].system = "http://snomed.info/sct" 
 * code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
 * code.coding[FestDose] ^short = "FEST-id for legemiddel DOSE"
 * code.coding[FestMerkevare] ^short = "FEST-id for legemiddel MERKEVARE"
 * code.coding[FestPakning] ^short = "FEST-id for legemiddel PAKNING"
 * code.coding[FestVirkestoff] ^short = "FEST-id for legemiddel VIRKESTOFF"
+* code.coding[SCT] ^short = "SNOMED CT-kode for legemiddel"
 * code.coding[LokaltLegemiddel] ^short = "Legemiddel fra lokal katalog"
 * code.coding[FestDose].code ^short = "Identifikator fra FEST"
 * code.coding[FestMerkevare].code ^short = "Identifikator fra FEST"
 * code.coding[FestPakning].code ^short = "Identifikator fra FEST"
 * code.coding[FestVirkestoff].code ^short = "Identifikator fra FEST"
+* code.coding[SCT].code ^short = "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."
 * code.coding[LokaltLegemiddel].code ^short = "Identifikator fra lokal legemiddelkatalog/legemiddelregister"
 * code.coding[FestDose].code 1..1
 * code.coding[FestMerkevare].code 1..1
 * code.coding[FestPakning].code 1..1
 * code.coding[FestVirkestoff].code 1..1
+* code.coding[SCT].code 1..1
 * code.coding[LokaltLegemiddel].code 1..1
 * code.coding[FestDose] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestMerkevare] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestPakning] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestVirkestoff] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
+* code.coding[SCT] ^comment = "Standardisert SNOMED CT-kode for legemidler. Koden skal være et underbegrep (descendant) av enten 'Medicinal product (product)' [763158003] eller 'Substance (substance)' [105590001]."
 * code.coding[LokaltLegemiddel] ^comment = ""
 * code.coding[LokaltLegemiddel].extension contains LokalLegemiddelkatalogExtension named lokalLegemiddelkatalog 0..1
 * code.coding[LokaltLegemiddel].display 1..1
 * code.coding[LokaltLegemiddel].display ^short = "Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"
 
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #closed
 * extension contains LegemiddelClassification named classification 0..*
 * extension[classification] ^short = "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
 * extension[classification] ^definition = "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
@@ -60,7 +70,7 @@ Description: "Beskrivelse av legemiddel."
 * form.coding.system 1..1
 * form.coding.code 1..1
 * form.coding.display MS
-* form.coding ^slicing.discriminator.type = #pattern
+* form.coding ^slicing.discriminator.type = #value
 * form.coding ^slicing.discriminator.path = "system"
 * form.coding ^slicing.rules = #closed
 * form.coding contains 7448 0..1 and SCT 0..1
@@ -78,8 +88,8 @@ Description: "Beskrivelse av legemiddel."
 * batch MS
 * batch ^short = "Batch-nummer for legemiddelet"
 
-* ingredient.item[x] only Reference(Substance or Legemiddel) or CodeableConcept
-* ingredient.item[x] ^type.targetProfile[0] = "http://hl7.org/fhir/StructureDefinition/Substance"
+* ingredient.item[x] only Reference(Virkestoff or Legemiddel) or CodeableConcept
+* ingredient.item[x] ^type.targetProfile[0] = "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
 * ingredient.item[x] ^type.targetProfile[1] = "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
 
 

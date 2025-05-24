@@ -31,10 +31,10 @@ APIet er beskyttet av HelseID og krever at klienter autentiserer seg med Client 
 
 For å få tilgang:
 
-1. Registrer klient i HelseID selvbetjeningsportal
-2. Søk om tilgang til API-et fhi:lmr.fhirmottak med scopefhi:lmr.fhirmottak/api
-3. Implementer OAuth 2.0 client credentials flow
-4. Inkluder access token som Bearer token i Authorization-header for API-kall
+1. Registrer nytt klientsystem og ny klient i HelseID selvbetjeningsportal
+    - Skal ha tilgang til API-et fhi:lmr.fhirmottak med scope fhi:lmr.fhirmottak/api
+2. Implementer OAuth 2.0 client credentials flow
+3. Inkluder access token som DPoP token i Authorization-headeren og legg til en DPoP-header med et signert bevis (proof JWT).
 
 
 ### Overføring av data til Legemiddelregisteret

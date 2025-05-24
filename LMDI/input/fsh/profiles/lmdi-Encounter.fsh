@@ -4,6 +4,10 @@ Id: lmdi-encounter
 Title: "Episode"
 Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."
 
+* extension contains NprEpisodeIdentifier named nprEpisodeIdentifier 0..1 MS
+* extension[nprEpisodeIdentifier] ^short = "Unik identifikator for episoden, som brukes ved rapportering til NPR"
+* extension[nprEpisodeIdentifier] ^definition = "En lokal eller globalt unik identifikator (string eller UUID) som identifiserer episoden entydig i helseinstitusjonens systemer. Som brukes ved rapportering til Norsk pasientregister (NPR)."
+
 * statusHistory 0..0 
 * classHistory 0..0
 * type 0..0
