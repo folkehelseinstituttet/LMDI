@@ -15,18 +15,18 @@ class Legemiddeladministrering <<MedicationAdministration>> [[StructureDefinitio
 class Legemiddelrekvirering <<MedicationRequest>> [[StructureDefinition-lmdi-medicationrequest.html Legemiddelrekvirering _blank]]
 class Organisasjon <<Organization>> [[StructureDefinition-lmdi-organization.html Organisasjon _blank]]
 class Pasient <<Patient>> [[StructureDefinition-lmdi-patient.html Pasient _blank]]
-class Substance [[substance.html Substance _blank]]
+class Virkestoff <<Substance>> [[StructureDefinition-lmdi-substance.html Virkestoff _blank]]
 
 Diagnose "1..1" --> Pasient : "subject"
 Episode "0..1" --> Organisasjon : "serviceProvider"
-Legemiddel "0..*" --> Substance : "ingredient.item"
-Legemiddel "0..*" --> Legemiddel : "ingredient.item"
-Legemiddeladministrering "1..1" --> Legemiddel : "medication"
+Legemiddel "0..*" --> Virkestoff : "ingredient.itemReference"
+Legemiddel "0..*" --> Legemiddel : "ingredient.itemReference"
+Legemiddeladministrering "1..1" --> Legemiddel : "medicationReference"
 Legemiddeladministrering "1..1" --> Pasient : "subject"
 Legemiddeladministrering "0..1" --> Episode : "context"
 Legemiddeladministrering "0..*" --> Diagnose : "reasonReference"
 Legemiddeladministrering "0..1" --> Legemiddelrekvirering : "request"
-Legemiddelrekvirering "1..1" --> Legemiddel : "medication"
+Legemiddelrekvirering "1..1" --> Legemiddel : "medicationReference"
 Legemiddelrekvirering "1..1" --> Pasient : "subject"
 Legemiddelrekvirering "0..1" --> Episode : "encounter"
 Legemiddelrekvirering "1..1" --> Helsepersonell : "requester"

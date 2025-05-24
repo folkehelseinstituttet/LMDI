@@ -1,5 +1,19 @@
 ### Powershell Kodeeksempler
 
+- [Powershell Kodeeksempler](#powershell-kodeeksempler)
+  - [1. Lage komprimert, kryptert og signert bundle (`SignertKryptertBundle`)](#1-lage-komprimert-kryptert-og-signert-bundle-signertkryptertbundle)
+    - [Slik bruker du scriptet:](#slik-bruker-du-scriptet)
+  - [2. Send `SignertKryptertBundle` til Legemiddelregisteret](#2-send-signertkryptertbundle-til-legemiddelregisteret)
+    - [Slik bruker du scriptet:](#slik-bruker-du-scriptet-1)
+    - [Upload.ps1](#uploadps1)
+    - [ClientCredentials.ps1](#clientcredentialsps1)
+    - [GenerateClientAssertion.ps1](#generateclientassertionps1)
+    - [GenerateDPoPToken.ps1](#generatedpoptokenps1)
+
+---
+
+
+
 #### 1. Lage komprimert, kryptert og signert bundle (`SignertKryptertBundle`)
 
 Dette scriptet lager en `SignertKryptertBundle` ved hjelp av PowerShell 7+. Det utfører komprimering med GZip, kryptering med AES-GCM og signering med X.509-sertifikater.

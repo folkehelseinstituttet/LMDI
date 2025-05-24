@@ -22,6 +22,7 @@ Legemiddelregisteret inneholder allerede data om utleverte legemidler fra apotek
 
 | Versjon | Dato | Beskrivelse |
 |---------|------|-------------|
+| 1.0.4 | 2025-05-30 | Legemiddel.code kan nå være en SNOMED CT kode.<br/> Ny profil Virkestoff som skal brukes for Substance.<br/>Ny extension (Must Support) Episode.nprEpisodeIdentifier. <br/> Ny C# eksempelkode for autorisering med HelseID.  |
 | 1.0.3 | 2025-04-11 | Fjernet Legemiddelrekvirering.dosageInstruction.patientInstruction og Legemiddel.text fra profilen. <br/> Ny extension: Legemiddel.classification. <br/> La til eksempelkode i C# og Powershell   |
 | 1.0.2 | 2025-04-01 | Nye extensions lagt til i profilen Legemiddelrekvirering: ProsentvisDoseendring, DelAvBehandlingsregime, KliniskStudie   |
 | 1.0.1 | 2025-02-04 | Endret LegemiddelregisterBundle. Bundle-type ble endret fra Batch til Transaction  |
