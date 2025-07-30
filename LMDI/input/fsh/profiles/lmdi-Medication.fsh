@@ -16,42 +16,56 @@ Description: "Beskrivelse av legemiddel."
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
-* code.coding contains FestDose 0..1 
+* code.coding contains FestDose 0..1
+    and LmrLopenummer 0..1
     and FestMerkevare 0..1
     and FestPakning 0..1
+    and FestVarenummer 0..1
     and FestVirkestoff 0..1
     and LokaltLegemiddel 0..1
     and SCT 0..1
 * code.coding[FestDose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* code.coding[LmrLopenummer].system = "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
 * code.coding[FestMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * code.coding[FestPakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+* code.coding[FestVarenummer].system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
 * code.coding[FestVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-* code.coding[SCT].system = "http://snomed.info/sct" 
+* code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
 * code.coding[FestDose] ^short = "FEST-id for legemiddel DOSE"
+* code.coding[LmrLopenummer] ^short = "LMR‑løpenummer (7 siffer)"
+* code.coding[LmrLopenummer] ^definition = "LMR‑løpenummeret er en 7‑sifret identifikator fra sykehusapotekenes LMR‑register som i FEST brukes til å identifisere én bestemt legemiddeldose."
 * code.coding[FestMerkevare] ^short = "FEST-id for legemiddel MERKEVARE"
 * code.coding[FestPakning] ^short = "FEST-id for legemiddel PAKNING"
+* code.coding[FestVarenummer] ^short = "FEST-varenummer - Unikt produktnummer for legemiddelpakninger"
+* code.coding[FestVarenummer] ^definition = "Unikt identifikator for fysiske legemiddelpakninger i DMPs FEST-system."
 * code.coding[FestVirkestoff] ^short = "FEST-id for legemiddel VIRKESTOFF"
 * code.coding[SCT] ^short = "SNOMED CT-kode for legemiddel"
 * code.coding[LokaltLegemiddel] ^short = "Legemiddel fra lokal katalog"
 * code.coding[FestDose].code ^short = "Identifikator fra FEST"
+* code.coding[LmrLopenummer].code ^short = "7‑sifret nummer"
 * code.coding[FestMerkevare].code ^short = "Identifikator fra FEST"
 * code.coding[FestPakning].code ^short = "Identifikator fra FEST"
+* code.coding[FestVarenummer].code ^short = "Varenummer"
 * code.coding[FestVirkestoff].code ^short = "Identifikator fra FEST"
 * code.coding[SCT].code ^short = "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."
 * code.coding[LokaltLegemiddel].code ^short = "Identifikator fra lokal legemiddelkatalog/legemiddelregister"
 * code.coding[FestDose].code 1..1
+* code.coding[LmrLopenummer].code 1..1
 * code.coding[FestMerkevare].code 1..1
 * code.coding[FestPakning].code 1..1
+* code.coding[FestVarenummer].code 1..1
 * code.coding[FestVirkestoff].code 1..1
 * code.coding[SCT].code 1..1
 * code.coding[LokaltLegemiddel].code 1..1
 * code.coding[FestDose] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestMerkevare] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[FestPakning] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
+* code.coding[FestVarenummer] ^comment = "Administreres av Direktoratet for medisinske produkter i FEST-databasen. Identifiserer spesifikke handelspakninger."
 * code.coding[FestVirkestoff] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
 * code.coding[SCT] ^comment = "Standardisert SNOMED CT-kode for legemidler. Koden skal være et underbegrep (descendant) av enten 'Medicinal product (product)' [763158003] eller 'Substance (substance)' [105590001]."
 * code.coding[LokaltLegemiddel] ^comment = ""
+* code.coding[LmrLopenummer] ^comment = "Feltet forekommer kun på LegemiddelDose‑oppføringer i FEST."
 * code.coding[LokaltLegemiddel].extension contains LokalLegemiddelkatalogExtension named lokalLegemiddelkatalog 0..1
 * code.coding[LokaltLegemiddel].display 1..1
 * code.coding[LokaltLegemiddel].display ^short = "Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"
