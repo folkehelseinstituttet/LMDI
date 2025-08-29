@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.3</title>
+        v1.0.4</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.3 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.4 - ci-build
                             
                             
                             
@@ -252,6 +252,15 @@
 <p>Pasienten som har fått rekvirert eller administrert legemiddel</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-lmdi-substance.html"
+                  title="StructureDefinition/lmdi-substance">Virkestoff</a>
+            </td>
+            <td>
+<p>En tilpasset profil av Substance for å representere virkestoff.</p>
+</td>
+         </tr>
       </tbody>
    </table>
    <a name="2"> </a>
@@ -289,11 +298,11 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-lokal-legemiddelkatalog-extension.html"
-                  title="StructureDefinition/lokal-legemiddelkatalog-extension">Lokal Legemiddelkatalog</a>
+               <a href="StructureDefinition-npr-episode-identifier.html"
+                  title="StructureDefinition/npr-episode-identifier">NPR Episode Identifier</a>
             </td>
             <td>
-<p>Informasjon om hvilken lokal legemiddelkatalog koden kommer fra.</p>
+<p>Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.</p>
 </td>
          </tr>
          <tr>
@@ -341,6 +350,23 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-legemiddel-koder.html" title="ValueSet/legemiddel-koder">Gyldige legemiddelkoder</a>
+            </td>
+            <td>
+<p>ValueSet som inneholder koder fra SNOMED CT og FEST</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-kommunenummer-alle.html"
+                  title="ValueSet/kommunenummer-alle">Kommunenummer ValueSet</a>
+            </td>
+            <td>
+<p>Komplett kodeverk for norske kommunenummer (Volven 3402)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-LokalLegemiddelkatalogValues.html"
                   title="ValueSet/LokalLegemiddelkatalogValues">Lokal Legemiddelkatalog Values</a>
             </td>
@@ -365,6 +391,15 @@
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-kommunenummer-codesystem.html"
+                  title="CodeSystem/kommunenummer-codesystem">Kommunenummer CodeSystem</a>
+            </td>
+            <td>
+<p>Kodesystem for norske kommunenummer (Volven 3402)</p>
+</td>
+         </tr>
          <tr>
             <td style="column-width:30%">
                <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html"
@@ -629,10 +664,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.3 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.4 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Apr 11, 2025 07:26+0000">2025-04-11</span>
+                        title="Fri, Aug 29, 2025 09:13+0000">2025-08-29</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

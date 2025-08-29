@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://fhir.no/ValueSet/atc-valueset",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "active",
       "name" : "ATCValueSet",
       "title" : "ATC Kodesystem ValueSet",
@@ -14,21 +14,48 @@
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "draft",
       "name" : "LokalLegemiddelkatalogValues",
       "title" : "Lokal Legemiddelkatalog Values",
       "description" : "Gyldige verdier for medlemskapsstatus",
       "systems" : [
         "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
+      ]
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle",
+      "version" : "1.0.4",
+      "status" : "active",
+      "name" : "KommunenummerValueSet",
+      "title" : "Kommunenummer ValueSet",
+      "description" : "Komplett kodeverk for norske kommunenummer (Volven 3402)",
+      "systems" : ["urn:oid:2.16.578.1.12.4.1.1.3402"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-municipalitycode.html" : "lmdi-municipalitycode"
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
+      "version" : "1.0.4",
+      "status" : "draft",
+      "name" : "LegemiddelKoder",
+      "title" : "Gyldige legemiddelkoder",
+      "description" : "ValueSet som inneholder koder fra SNOMED CT og FEST",
+      "systems" : [
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+        "http://snomed.info/sct",
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
       ],
       "uses" : {
       },
-      "StructureDefinition-lokal-legemiddelkatalog-extension.html" : "Lokal Legemiddelkatalog"
+      "StructureDefinition-lmdi-medication.html" : "Legemiddel"
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
-      "version" : "1.0.3",
+      "version" : "1.0.4",
       "status" : "draft",
       "name" : "LegemiddeladministreringStatus",
       "title" : "Status for legemiddeladministrering",
@@ -64,8 +91,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.69"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
-      "StructureDefinition-lmdi-organization.html" : "Organisasjon"
+      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/address-use",
@@ -195,8 +222,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.161"],
       "uses" : {
       },
-      "StructureDefinition-lmdi-condition.html" : "Diagnose",
-      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
+      "StructureDefinition-lmdi-condition.html" : "Diagnose"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -473,8 +500,8 @@
       "uses" : {
       },
       "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
-      "StructureDefinition-lmdi-organization.html" : "Organisasjon"
+      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -489,8 +516,8 @@
       "uses" : {
       },
       "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
-      "StructureDefinition-lmdi-organization.html" : "Organisasjon"
+      "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -504,15 +531,16 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
+      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
+      "StructureDefinition-lmdi-substance.html" : "Virkestoff",
+      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
+      "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
+      "StructureDefinition-lmdi-encounter.html" : "Episode",
       "StructureDefinition-lmdi-medication.html" : "Legemiddel",
       "StructureDefinition-lmdi-condition.html" : "Diagnose",
-      "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
-      "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-      "StructureDefinition-lmdi-patient.html" : "Pasient",
       "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-      "StructureDefinition-lmdi-encounter.html" : "Episode",
-      "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
-      "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -620,20 +648,6 @@
       "uses" : {
       },
       "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "SNOMEDCTMedicationCodes",
-      "title" : "SNOMED CT Medication Codes",
-      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.375"],
-      "sources" : ["2.16.840.1.113883.4.642.3.375"],
-      "uses" : {
-      },
-      "StructureDefinition-lmdi-medication.html" : "Legemiddel"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-form-codes",
@@ -867,6 +881,48 @@
       "uses" : {
       },
       "StructureDefinition-lmdi-encounter.html" : "Episode"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubstanceCategoryCodes",
+      "title" : "Substance Category Codes",
+      "description" : "Substance category codes",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/substance-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.476"],
+      "sources" : ["2.16.840.1.113883.4.642.3.476"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-substance.html" : "Virkestoff"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SubstanceCode",
+      "title" : "Substance Code",
+      "description" : "This value set contains concept codes for specific substances. It includes codes from [SNOMED](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical / biologic product (product))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.473"],
+      "sources" : ["2.16.840.1.113883.4.642.3.473"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-substance.html" : "Virkestoff"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/substance-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRSubstanceStatus",
+      "title" : "FHIRSubstanceStatus",
+      "description" : "A code to indicate if the substance is actively used.",
+      "systems" : ["http://hl7.org/fhir/substance-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.474"],
+      "sources" : ["2.16.840.1.113883.4.642.3.474"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-substance.html" : "Virkestoff"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v2-0092",

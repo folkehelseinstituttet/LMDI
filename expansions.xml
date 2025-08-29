@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="78e609b6-9785-4f15-947c-98d94e304d78"/>
+  <id value="4d6fcfd8-b56e-4551-a255-020589741383"/>
   <meta>
-    <lastUpdated value="2025-04-11T07:26:39.577+00:00"/>
+    <lastUpdated value="2025-08-29T09:13:56.579+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -13,11 +13,9 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html">codesystem Lokal Legemiddelkatalog Codes v1.0.3 (CodeSystem)</a>
+              <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html">codesystem Lokal Legemiddelkatalog Codes v1.0.4 (CodeSystem)</a>
             </p>
             <p>This value set contains 2 concepts</p>
             <table class="codes">
@@ -29,7 +27,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display (no)</b>
+                  <b>Display</b>
                 </td>
                 <td>
                   <b>Definition</b>
@@ -41,13 +39,8 @@
                   <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html#LokalLegemiddelkatalogCodeSystem-metavisionkatalogFraHso">metavisionkatalogFraHso</a>
                 </td>
                 <td>http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem</td>
-                <td/>
-                <td>
-                  <div>
-                    <p>Metavisionkatalog fra Helse Sør-Øst</p>
-
-                  </div>
-                </td>
+                <td>MetavisionkatalogFraHso</td>
+                <td>Metavisionkatalog fra Helse Sør-Øst</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -55,23 +48,18 @@
                   <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html#LokalLegemiddelkatalogCodeSystem-metavisionkatalogFraHN">metavisionkatalogFraHN</a>
                 </td>
                 <td>http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem</td>
-                <td/>
-                <td>
-                  <div>
-                    <p>Metavisionkatalog fra Helse Nord</p>
-
-                  </div>
-                </td>
+                <td>MetavisionkatalogFraHN</td>
+                <td>Metavisionkatalog fra Helse Nord</td>
               </tr>
             </table>
           </div>
         </text>
         <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues"/>
-        <version value="1.0.3"/>
+        <version value="1.0.4"/>
         <name value="LokalLegemiddelkatalogValues"/>
         <title value="Lokal Legemiddelkatalog Values"/>
         <status value="draft"/>
-        <date value="2025-04-11T07:26:01+00:00"/>
+        <date value="2025-08-29T09:13:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -80,14 +68,10 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d6b6d697-cec8-4c13-a9a6-7e659889fdd2"/>
-          <timestamp value="2025-04-11T07:27:28+00:00"/>
+          <identifier value="urn:uuid:016a48a4-7119-49ac-b684-8b295c7286a4"/>
+          <timestamp value="2025-08-29T09:14:21+00:00"/>
           <total value="2"/>
           <offset value="0"/>
-          <parameter>
-            <name value="displayLanguage"/>
-            <valueCode value="no"/>
-          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -102,15 +86,17 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem|1.0.3"/>
+            <valueUri value="http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem|1.0.4"/>
           </parameter>
           <contains>
             <system value="http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"/>
             <code value="metavisionkatalogFraHso"/>
+            <display value="MetavisionkatalogFraHso"/>
           </contains>
           <contains>
             <system value="http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"/>
             <code value="metavisionkatalogFraHN"/>
+            <display value="MetavisionkatalogFraHN"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -123,11 +109,9 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on codesystem WHO ATC version2020-05</p>
-            <p>This value set contains 1,000 concepts</p>
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on codesystem WHO ATC version2025</p>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set has 6,897 codes in it. In order to keep the publication size manageable, only a selection (1,000 codes) of the whole set of codes is shown.</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -137,7 +121,7 @@
                   <b>System</b>
                 </td>
                 <td>
-                  <b>Display (no)</b>
+                  <b>Display</b>
                 </td>
               </tr>
               <tr>
@@ -366,6 +350,27 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A01AB24"> </a>  A01AB24
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>octenidine</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A01AB25"> </a>  A01AB25
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>oxytetracycline</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A01AB53"> </a>  A01AB53
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>chlorhexidine and cetylpyridinium</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A01AC"> </a>  A01AC
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -391,6 +396,13 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>hydrocortisone</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A01AC04"> </a>  A01AC04
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>prednisolone</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -863,6 +875,34 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BC09"> </a>  A02BC09
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>tegoprazan</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BC10"> </a>  A02BC10
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>fexuprazan</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BC11"> </a>  A02BC11
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>ilaprazole</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BC51"> </a>  A02BC51
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>omeprazole, combinations</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A02BC53"> </a>  A02BC53
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -989,6 +1029,20 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BD16"> </a>  A02BD16
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>omeprazole, amoxicillin and rifabutin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BD17"> </a>  A02BD17
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>vonoprazan and amoxicillin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A02BX"> </a>  A02BX
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -1091,6 +1145,20 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>rebamipide</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BX15"> </a>  A02BX15
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>teprenone</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A02BX16"> </a>  A02BX16
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>irsogladine</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -1969,6 +2037,13 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A03FA10"> </a>  A03FA10
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>acotiamide</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A04"> </a>  A04
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -2165,6 +2240,13 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A05AA05"> </a>  A05AA05
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>ursodoxicoltaurine</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A05AB"> </a>  A05AB
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -2204,6 +2286,34 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>cyclobutyrol</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A05AX04"> </a>  A05AX04
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>maralixibat chloride</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A05AX05"> </a>  A05AX05
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>odevixibat</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A05AX06"> </a>  A05AX06
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>elafibranor</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A05AX07"> </a>  A05AX07
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>seladelpar</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -2274,6 +2384,13 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>metadoxine</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A05BA10"> </a>  A05BA10
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>phospholipids</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -2823,6 +2940,13 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A06AX09"> </a>  A06AX09
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>elobixibat</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A07"> </a>  A07
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -3341,6 +3465,13 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A07FA03"> </a>  A07FA03
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>escherichia coli</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A07FA51"> </a>  A07FA51
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -3499,6 +3630,20 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>lorcaserin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A08AA12"> </a>  A08AA12
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>setmelanotide</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A08AA51"> </a>  A08AA51
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>phentermine and topiramate</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -3863,6 +4008,13 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>insulin degludec</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10AE07"> </a>  A10AE07
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>insulin icodec</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -4237,6 +4389,34 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BD27"> </a>  A10BD27
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>metformin, linagliptin and empagliflozin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BD28"> </a>  A10BD28
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>metformin and teneligliptin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BD29"> </a>  A10BD29
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>sitagliptin and dapagliflozin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BD30"> </a>  A10BD30
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>gemigliptin and dapagliflozin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A10BF"> </a>  A10BF
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -4489,6 +4669,20 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BK08"> </a>  A10BK08
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>bexagliflozin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BK09"> </a>  A10BK09
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>enavogliflozin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A10BX"> </a>  A10BX
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -4538,6 +4732,34 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BX15"> </a>  A10BX15
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>imeglimin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BX16"> </a>  A10BX16
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>tirzepatide</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BX17"> </a>  A10BX17
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>carfloglitazar</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10BX18"> </a>  A10BX18
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>dorzagliatin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A10X"> </a>  A10X
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -4556,6 +4778,27 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>tolrestat</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10XX"> </a>  A10XX
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>Other drugs used in diabetes</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10XX01"> </a>  A10XX01
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>teplizumab</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A10XX02"> </a>  A10XX02
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>donislecel</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -5150,7 +5393,7 @@
                   <a name="x-http://www.whocc.no/atc-A12BA51"> </a>  A12BA51
                 </td>
                 <td>http://www.whocc.no/atc</td>
-                <td>potassium chloride, combinations</td>
+                <td>potassium, combinations</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -5700,6 +5943,62 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB20"> </a>  A16AB20
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>pegunigalsidase alfa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB21"> </a>  A16AB21
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>atidarsagene autotemcel</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB22"> </a>  A16AB22
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>avalglucosidase alfa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB23"> </a>  A16AB23
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>cipaglucosidase alfa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB24"> </a>  A16AB24
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>pegzilarginase</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB25"> </a>  A16AB25
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>olipudase alfa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB26"> </a>  A16AB26
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>eladocagene exuparvovec</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AB27"> </a>  A16AB27
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>pabinafusp alfa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-A16AX"> </a>  A16AX
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -5830,6 +6129,55 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>lumasiran</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX19"> </a>  A16AX19
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>fosdenopterin</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX20"> </a>  A16AX20
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>lonafarnib</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX21"> </a>  A16AX21
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>elivaldogene autotemcel</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX22"> </a>  A16AX22
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>tiomolibdic acid</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX23"> </a>  A16AX23
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>leriglitazone</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX24"> </a>  A16AX24
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>govorestat</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-A16AX25"> </a>  A16AX25
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>nedosiran</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -6204,6 +6552,13 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-B01AC28"> </a>  B01AC28
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>limaprost</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-B01AC30"> </a>  B01AC30
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -6309,6 +6664,13 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-B01AD13"> </a>  B01AD13
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>apadamtase alfa and cinaxadamtase alfa</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-B01AE"> </a>  B01AE
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -6397,6 +6759,13 @@
                 </td>
                 <td>http://www.whocc.no/atc</td>
                 <td>betrixaban</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-B01AF51"> </a>  B01AF51
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>rivaroxaban and acetylsalicylic acid</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -6715,6 +7084,27 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-B02BD15"> </a>  B02BD15
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>valoctocogene roxaparvovec</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-B02BD16"> </a>  B02BD16
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>etranacogene dezaparvovec</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://www.whocc.no/atc-B02BD17"> </a>  B02BD17
+                </td>
+                <td>http://www.whocc.no/atc</td>
+                <td>fidanacogene elaparvovec</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
                   <a name="x-http://www.whocc.no/atc-B02BD30"> </a>  B02BD30
                 </td>
                 <td>http://www.whocc.no/atc</td>
@@ -6734,417 +7124,11 @@
                 <td>http://www.whocc.no/atc</td>
                 <td>etamsylate</td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX02"> </a>  B02BX02
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>carbazochrome</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX03"> </a>  B02BX03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>batroxobin</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX04"> </a>  B02BX04
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>romiplostim</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX05"> </a>  B02BX05
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>eltrombopag</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX06"> </a>  B02BX06
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>emicizumab</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX07"> </a>  B02BX07
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>lusutrombopag</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX08"> </a>  B02BX08
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>avatrombopag</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B02BX09"> </a>  B02BX09
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>fostamatinib</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03"> </a>  B03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ANTIANEMIC PREPARATIONS</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03A"> </a>  B03A
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>IRON PREPARATIONS</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA"> </a>  B03AA
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Iron bivalent, oral preparations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA01"> </a>  B03AA01
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous glycine sulfate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA02"> </a>  B03AA02
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous fumarate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA03"> </a>  B03AA03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous gluconate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA04"> </a>  B03AA04
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous carbonate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA05"> </a>  B03AA05
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous chloride</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA06"> </a>  B03AA06
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous succinate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA07"> </a>  B03AA07
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous sulfate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA08"> </a>  B03AA08
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous tartrate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA09"> </a>  B03AA09
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous aspartate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA10"> </a>  B03AA10
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous ascorbate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA11"> </a>  B03AA11
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous iodine</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AA12"> </a>  B03AA12
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous sodium citrate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB"> </a>  B03AB
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Iron trivalent, oral preparations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB01"> </a>  B03AB01
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric sodium citrate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB02"> </a>  B03AB02
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>saccharated iron oxide</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB03"> </a>  B03AB03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>sodium feredetate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB04"> </a>  B03AB04
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric hydroxide</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB05"> </a>  B03AB05
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric oxide polymaltose complexes</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB07"> </a>  B03AB07
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>chondroitin sulfate-iron complex</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB08"> </a>  B03AB08
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric acetyl transferrin</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB09"> </a>  B03AB09
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric proteinsuccinylate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AB10"> </a>  B03AB10
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric maltol</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AC"> </a>  B03AC
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Iron, parenteral preparations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AD"> </a>  B03AD
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Iron in combination with folic acid</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AD01"> </a>  B03AD01
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous amino acid complex</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AD02"> </a>  B03AD02
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous fumarate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AD03"> </a>  B03AD03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous sulfate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AD04"> </a>  B03AD04
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferric oxide polymaltose complexes</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AD05"> </a>  B03AD05
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>ferrous gluconate</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AE"> </a>  B03AE
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Iron in other combinations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AE01"> </a>  B03AE01
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>iron, vitamin B12 and folic acid</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AE02"> </a>  B03AE02
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>iron, multivitamins and folic acid</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AE03"> </a>  B03AE03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>iron and multivitamins</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AE04"> </a>  B03AE04
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>iron, multivitamins and minerals</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03AE10"> </a>  B03AE10
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>various combinations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03B"> </a>  B03B
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>VITAMIN B12 AND FOLIC ACID</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA"> </a>  B03BA
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Vitamin B12 (cyanocobalamin and analogues)</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA01"> </a>  B03BA01
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>cyanocobalamin</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA02"> </a>  B03BA02
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>cyanocobalamin tannin complex</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA03"> </a>  B03BA03
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>hydroxocobalamin</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA04"> </a>  B03BA04
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>cobamamide</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA05"> </a>  B03BA05
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>mecobalamin</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA51"> </a>  B03BA51
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>cyanocobalamin, combinations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BA53"> </a>  B03BA53
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>hydroxocobalamin, combinations</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BB"> </a>  B03BB
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>Folic acid and derivatives</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BB01"> </a>  B03BB01
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>folic acid</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://www.whocc.no/atc-B03BB51"> </a>  B03BB51
-                </td>
-                <td>http://www.whocc.no/atc</td>
-                <td>folic acid, combinations</td>
-              </tr>
             </table>
           </div>
         </text>
         <url value="http://fhir.no/ValueSet/atc-valueset"/>
-        <version value="1.0.3"/>
+        <version value="1.0.4"/>
         <name value="ATCValueSet"/>
         <title value="ATC Kodesystem ValueSet"/>
         <status value="active"/>
@@ -7158,14 +7142,10 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:94e022e0-5e5f-4cf9-9a9d-a0a27478f8cc"/>
-          <timestamp value="2025-04-11T07:27:28+00:00"/>
-          <total value="1000"/>
+          <identifier value="urn:uuid:1a3805d0-2fd8-417f-a8c5-08e707a46eea"/>
+          <timestamp value="2025-08-29T09:14:21+00:00"/>
+          <total value="6897"/>
           <offset value="0"/>
-          <parameter>
-            <name value="displayLanguage"/>
-            <valueCode value="no"/>
-          </parameter>
           <parameter>
             <name value="count"/>
             <valueInteger value="1000"/>
@@ -7184,11 +7164,11 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://www.whocc.no/atc|2020-05"/>
+            <valueUri value="http://www.whocc.no/atc|2025"/>
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://www.whocc.no/atc|2020-05"/>
+            <valueUri value="http://www.whocc.no/atc|2025"/>
           </parameter>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -7352,6 +7332,21 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A01AB24"/>
+            <display value="octenidine"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A01AB25"/>
+            <display value="oxytetracycline"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A01AB53"/>
+            <display value="chlorhexidine and cetylpyridinium"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A01AC"/>
             <display value="Corticosteroids for local oral treatment"/>
           </contains>
@@ -7369,6 +7364,11 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A01AC03"/>
             <display value="hydrocortisone"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A01AC04"/>
+            <display value="prednisolone"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -7707,6 +7707,26 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A02BC09"/>
+            <display value="tegoprazan"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A02BC10"/>
+            <display value="fexuprazan"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A02BC11"/>
+            <display value="ilaprazole"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A02BC51"/>
+            <display value="omeprazole, combinations"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A02BC53"/>
             <display value="lansoprazole, combinations"/>
           </contains>
@@ -7797,6 +7817,16 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A02BD16"/>
+            <display value="omeprazole, amoxicillin and rifabutin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A02BD17"/>
+            <display value="vonoprazan and amoxicillin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A02BX"/>
             <display value="Other drugs for peptic ulcer and gastro-oesophageal reflux disease (GORD)"/>
           </contains>
@@ -7869,6 +7899,16 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A02BX14"/>
             <display value="rebamipide"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A02BX15"/>
+            <display value="teprenone"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A02BX16"/>
+            <display value="irsogladine"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -8497,6 +8537,11 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A03FA10"/>
+            <display value="acotiamide"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A04"/>
             <display value="ANTIEMETICS AND ANTINAUSEANTS"/>
           </contains>
@@ -8637,6 +8682,11 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A05AA05"/>
+            <display value="ursodoxicoltaurine"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A05AB"/>
             <display value="Preparations for biliary tract therapy"/>
           </contains>
@@ -8664,6 +8714,26 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A05AX03"/>
             <display value="cyclobutyrol"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A05AX04"/>
+            <display value="maralixibat chloride"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A05AX05"/>
+            <display value="odevixibat"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A05AX06"/>
+            <display value="elafibranor"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A05AX07"/>
+            <display value="seladelpar"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -8714,6 +8784,11 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A05BA09"/>
             <display value="metadoxine"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A05BA10"/>
+            <display value="phospholipids"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -9107,6 +9182,11 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A06AX09"/>
+            <display value="elobixibat"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A07"/>
             <display value="ANTIDIARRHEALS, INTESTINAL ANTIINFLAMMATORY/ANTIINFECTIVE AGENTS"/>
           </contains>
@@ -9477,6 +9557,11 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A07FA03"/>
+            <display value="escherichia coli"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A07FA51"/>
             <display value="lactic acid producing organisms, combinations"/>
           </contains>
@@ -9589,6 +9674,16 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A08AA11"/>
             <display value="lorcaserin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A08AA12"/>
+            <display value="setmelanotide"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A08AA51"/>
+            <display value="phentermine and topiramate"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -9849,6 +9944,11 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A10AE06"/>
             <display value="insulin degludec"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10AE07"/>
+            <display value="insulin icodec"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -10117,6 +10217,26 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A10BD27"/>
+            <display value="metformin, linagliptin and empagliflozin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BD28"/>
+            <display value="metformin and teneligliptin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BD29"/>
+            <display value="sitagliptin and dapagliflozin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BD30"/>
+            <display value="gemigliptin and dapagliflozin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A10BF"/>
             <display value="Alpha glucosidase inhibitors"/>
           </contains>
@@ -10297,6 +10417,16 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A10BK08"/>
+            <display value="bexagliflozin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BK09"/>
+            <display value="enavogliflozin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A10BX"/>
             <display value="Other blood glucose lowering drugs, excl. insulins"/>
           </contains>
@@ -10332,6 +10462,26 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A10BX15"/>
+            <display value="imeglimin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BX16"/>
+            <display value="tirzepatide"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BX17"/>
+            <display value="carfloglitazar"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10BX18"/>
+            <display value="dorzagliatin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A10X"/>
             <display value="OTHER DRUGS USED IN DIABETES"/>
           </contains>
@@ -10344,6 +10494,21 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A10XA01"/>
             <display value="tolrestat"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10XX"/>
+            <display value="Other drugs used in diabetes"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10XX01"/>
+            <display value="teplizumab"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A10XX02"/>
+            <display value="donislecel"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -10768,7 +10933,7 @@
           <contains>
             <system value="http://www.whocc.no/atc"/>
             <code value="A12BA51"/>
-            <display value="potassium chloride, combinations"/>
+            <display value="potassium, combinations"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -11162,6 +11327,46 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB20"/>
+            <display value="pegunigalsidase alfa"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB21"/>
+            <display value="atidarsagene autotemcel"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB22"/>
+            <display value="avalglucosidase alfa"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB23"/>
+            <display value="cipaglucosidase alfa"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB24"/>
+            <display value="pegzilarginase"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB25"/>
+            <display value="olipudase alfa"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB26"/>
+            <display value="eladocagene exuparvovec"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AB27"/>
+            <display value="pabinafusp alfa"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="A16AX"/>
             <display value="Various alimentary tract and metabolism products"/>
           </contains>
@@ -11254,6 +11459,41 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="A16AX18"/>
             <display value="lumasiran"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX19"/>
+            <display value="fosdenopterin"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX20"/>
+            <display value="lonafarnib"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX21"/>
+            <display value="elivaldogene autotemcel"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX22"/>
+            <display value="tiomolibdic acid"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX23"/>
+            <display value="leriglitazone"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX24"/>
+            <display value="govorestat"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="A16AX25"/>
+            <display value="nedosiran"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -11522,6 +11762,11 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="B01AC28"/>
+            <display value="limaprost"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="B01AC30"/>
             <display value="combinations"/>
           </contains>
@@ -11597,6 +11842,11 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="B01AD13"/>
+            <display value="apadamtase alfa and cinaxadamtase alfa"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="B01AE"/>
             <display value="Direct thrombin inhibitors"/>
           </contains>
@@ -11659,6 +11909,11 @@
             <system value="http://www.whocc.no/atc"/>
             <code value="B01AF04"/>
             <display value="betrixaban"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="B01AF51"/>
+            <display value="rivaroxaban and acetylsalicylic acid"/>
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
@@ -11887,6 +12142,21 @@
           </contains>
           <contains>
             <system value="http://www.whocc.no/atc"/>
+            <code value="B02BD15"/>
+            <display value="valoctocogene roxaparvovec"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="B02BD16"/>
+            <display value="etranacogene dezaparvovec"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="B02BD17"/>
+            <display value="fidanacogene elaparvovec"/>
+          </contains>
+          <contains>
+            <system value="http://www.whocc.no/atc"/>
             <code value="B02BD30"/>
             <display value="thrombin"/>
           </contains>
@@ -11900,296 +12170,71 @@
             <code value="B02BX01"/>
             <display value="etamsylate"/>
           </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX02"/>
-            <display value="carbazochrome"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX03"/>
-            <display value="batroxobin"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX04"/>
-            <display value="romiplostim"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX05"/>
-            <display value="eltrombopag"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX06"/>
-            <display value="emicizumab"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX07"/>
-            <display value="lusutrombopag"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX08"/>
-            <display value="avatrombopag"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B02BX09"/>
-            <display value="fostamatinib"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03"/>
-            <display value="ANTIANEMIC PREPARATIONS"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03A"/>
-            <display value="IRON PREPARATIONS"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA"/>
-            <display value="Iron bivalent, oral preparations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA01"/>
-            <display value="ferrous glycine sulfate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA02"/>
-            <display value="ferrous fumarate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA03"/>
-            <display value="ferrous gluconate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA04"/>
-            <display value="ferrous carbonate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA05"/>
-            <display value="ferrous chloride"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA06"/>
-            <display value="ferrous succinate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA07"/>
-            <display value="ferrous sulfate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA08"/>
-            <display value="ferrous tartrate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA09"/>
-            <display value="ferrous aspartate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA10"/>
-            <display value="ferrous ascorbate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA11"/>
-            <display value="ferrous iodine"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AA12"/>
-            <display value="ferrous sodium citrate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB"/>
-            <display value="Iron trivalent, oral preparations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB01"/>
-            <display value="ferric sodium citrate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB02"/>
-            <display value="saccharated iron oxide"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB03"/>
-            <display value="sodium feredetate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB04"/>
-            <display value="ferric hydroxide"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB05"/>
-            <display value="ferric oxide polymaltose complexes"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB07"/>
-            <display value="chondroitin sulfate-iron complex"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB08"/>
-            <display value="ferric acetyl transferrin"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB09"/>
-            <display value="ferric proteinsuccinylate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AB10"/>
-            <display value="ferric maltol"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AC"/>
-            <display value="Iron, parenteral preparations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AD"/>
-            <display value="Iron in combination with folic acid"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AD01"/>
-            <display value="ferrous amino acid complex"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AD02"/>
-            <display value="ferrous fumarate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AD03"/>
-            <display value="ferrous sulfate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AD04"/>
-            <display value="ferric oxide polymaltose complexes"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AD05"/>
-            <display value="ferrous gluconate"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AE"/>
-            <display value="Iron in other combinations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AE01"/>
-            <display value="iron, vitamin B12 and folic acid"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AE02"/>
-            <display value="iron, multivitamins and folic acid"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AE03"/>
-            <display value="iron and multivitamins"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AE04"/>
-            <display value="iron, multivitamins and minerals"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03AE10"/>
-            <display value="various combinations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03B"/>
-            <display value="VITAMIN B12 AND FOLIC ACID"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA"/>
-            <display value="Vitamin B12 (cyanocobalamin and analogues)"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA01"/>
-            <display value="cyanocobalamin"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA02"/>
-            <display value="cyanocobalamin tannin complex"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA03"/>
-            <display value="hydroxocobalamin"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA04"/>
-            <display value="cobamamide"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA05"/>
-            <display value="mecobalamin"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA51"/>
-            <display value="cyanocobalamin, combinations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BA53"/>
-            <display value="hydroxocobalamin, combinations"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BB"/>
-            <display value="Folic acid and derivatives"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BB01"/>
-            <display value="folic acid"/>
-          </contains>
-          <contains>
-            <system value="http://www.whocc.no/atc"/>
-            <code value="B03BB51"/>
-            <display value="folic acid, combinations"/>
-          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id"/>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set cannot be expanded because the terminology server(s) deemed it too costly to do so</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder"/>
+        <version value="1.0.4"/>
+        <name value="LegemiddelKoder"/>
+        <title value="Gyldige legemiddelkoder"/>
+        <status value="draft"/>
+        <date value="2025-08-26T11:15:59+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="NO"/>
+            <display value="Norway"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
+            <valueBoolean value="true"/>
+          </extension>
+          <identifier value="urn:uuid:eed816bc-53a5-4c85-9a59-152638532723"/>
+          <timestamp value="2025-08-26T11:17:16.240Z"/>
+          <total value="0"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="limitedExpansion"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
         </expansion>
       </ValueSet>
     </resource>

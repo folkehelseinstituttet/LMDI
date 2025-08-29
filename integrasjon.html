@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Integrasjon - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.3</title>
+        v1.0.4</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.3 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.4 - ci-build
                             
                             
                             
@@ -180,10 +180,13 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
 <p>For å få tilgang:</p>
 
 <ol>
-  <li>Registrer klient i HelseID selvbetjeningsportal</li>
-  <li>Søk om tilgang til API-et fhi:lmr.fhirmottak med scopefhi:lmr.fhirmottak/api</li>
+  <li>Registrer nytt klientsystem og ny klient i HelseID selvbetjeningsportal
+    <ul>
+      <li>Skal ha tilgang til API-et fhi:lmr.fhirmottak med scope fhi:lmr.fhirmottak/api</li>
+    </ul>
+  </li>
   <li>Implementer OAuth 2.0 client credentials flow</li>
-  <li>Inkluder access token som Bearer token i Authorization-header for API-kall</li>
+  <li>Inkluder access token som DPoP token i Authorization-headeren og legg til en DPoP-header med et signert bevis (proof JWT).</li>
 </ol>
 
 <h3 id="overføring-av-data-til-legemiddelregisteret">Overføring av data til Legemiddelregisteret</h3>
@@ -229,10 +232,10 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.3 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.4 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Apr 11, 2025 07:26+0000">2025-04-11</span>
+                        title="Fri, Aug 29, 2025 09:13+0000">2025-08-29</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

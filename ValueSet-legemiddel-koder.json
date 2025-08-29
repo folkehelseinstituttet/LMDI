@@ -1,0 +1,54 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "legemiddel-koder",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet legemiddel-koder</b></p><a name=\"legemiddel-koder\"> </a><a name=\"hclegemiddel-koder\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</code></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</code></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</code></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</code></li></ul></div>"
+  },
+  "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
+  "version" : "1.0.4",
+  "name" : "LegemiddelKoder",
+  "title" : "Gyldige legemiddelkoder",
+  "status" : "draft",
+  "date" : "2025-08-29T09:13:21+00:00",
+  "publisher" : "Folkehelseinstituttet",
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
+  "description" : "ValueSet som inneholder koder fra SNOMED CT og FEST",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+    }]
+  }
+}

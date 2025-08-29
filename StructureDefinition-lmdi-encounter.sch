@@ -13,6 +13,7 @@
     <sch:title>f:Encounter</sch:title>
     <sch:rule context="f:Encounter">
       <sch:assert test="count(f:text) &lt;= 0">text: maximum cardinality of 'text' is 0</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:statusHistory) &lt;= 0">statusHistory: maximum cardinality of 'statusHistory' is 0</sch:assert>
       <sch:assert test="count(f:classHistory) &lt;= 0">classHistory: maximum cardinality of 'classHistory' is 0</sch:assert>
       <sch:assert test="count(f:type) &lt;= 0">type: maximum cardinality of 'type' is 0</sch:assert>

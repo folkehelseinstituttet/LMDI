@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Powershell eksempelkode - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.3</title>
+        v1.0.4</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.3 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.4 - ci-build
                             
                             
                             
@@ -144,6 +144,29 @@
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
 <h3 id="powershell-kodeeksempler">Powershell Kodeeksempler</h3>
+
+<ul>
+  <li><a href="#powershell-kodeeksempler">Powershell Kodeeksempler</a>
+    <ul>
+      <li><a href="#1-lage-komprimert-kryptert-og-signert-bundle-signertkryptertbundle">1. Lage komprimert, kryptert og signert bundle (<code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>)</a>
+        <ul>
+          <li><a href="#slik-bruker-du-scriptet">Slik bruker du scriptet:</a></li>
+        </ul>
+      </li>
+      <li><a href="#2-send-signertkryptertbundle-til-legemiddelregisteret">2. Send <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> til Legemiddelregisteret</a>
+        <ul>
+          <li><a href="#slik-bruker-du-scriptet-1">Slik bruker du scriptet:</a></li>
+          <li><a href="#uploadps1">Upload.ps1</a></li>
+          <li><a href="#clientcredentialsps1">ClientCredentials.ps1</a></li>
+          <li><a href="#generateclientassertionps1">GenerateClientAssertion.ps1</a></li>
+          <li><a href="#generatedpoptokenps1">GenerateDPoPToken.ps1</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
 
 <h4 id="1-lage-komprimert-kryptert-og-signert-bundle-signertkryptertbundle">1. Lage komprimert, kryptert og signert bundle (<code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>)</h4>
 
@@ -653,10 +676,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.3 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.4 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Apr 11, 2025 07:26+0000">2025-04-11</span>
+                        title="Fri, Aug 29, 2025 09:13+0000">2025-08-29</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

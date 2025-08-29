@@ -1,16 +1,9 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
-    {
-      "url": "http://fhi.no/fhir/lmr/lokal-legemiddel-katalog",
-      "title": "Lokal Legemiddelkatalog",
-      "types": [
-        "Coding"
-      ]
-    },
     {
       "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
       "title": "Legemiddel Classification",
@@ -73,6 +66,64 @@
         "string",
         "boolean"
       ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier",
+      "title": "NPR Episode Identifier",
+      "types": [
+        "string",
+        "uuid",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
     }
   ],
   "profiles": {
@@ -129,12 +180,15 @@
         "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner",
         "title": "Helsepersonell"
       }
+    ],
+    "Substance": [
+      {
+        "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance",
+        "title": "Virkestoff"
+      }
     ]
   },
   "usage": {
-    "http://fhi.no/fhir/lmr/lokal-legemiddel-katalog": [
-      "Medication.code.coding"
-    ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification": [
       "Medication"
     ],
@@ -153,6 +207,12 @@
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-urban-district": [
       "Organization.address"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier": [
+      "Bundle.entry.resource",
+      "Bundle.entry.resource.contained",
+      "Encounter",
+      "MedicationAdministration.contained"
     ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [
       "NamingSystem"
