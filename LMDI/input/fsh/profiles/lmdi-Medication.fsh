@@ -12,47 +12,64 @@ Description: "Beskrivelse av legemiddel."
 
 * code.text 0..0
 * code from LegemiddelKoder (extensible)
-* code ^short = "Identifikator fra FEST eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi."
+* code ^short = "Identifikator fra FEST, SNOMED CT eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi."
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
-* code.coding contains FestDose 0..1 
-    and FestMerkevare 0..1
-    and FestPakning 0..1
+* code.coding contains FestLegemiddeldose 0..1
+    and FestLmrLopenr 0..1
+    and FestLegemiddelMerkevare 0..1
+    and FestLegemiddelpakning 0..1
+    and Varenummer 0..1
     and FestVirkestoff 0..1
     and LokaltLegemiddel 0..1
     and SCT 0..1
-* code.coding[FestDose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-* code.coding[FestMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-* code.coding[FestPakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+
+* code.coding[FestLegemiddeldose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* code.coding[FestLmrLopenr].system = "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+* code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+* code.coding[FestLegemiddelpakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+* code.coding[Varenummer].system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
 * code.coding[FestVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-* code.coding[SCT].system = "http://snomed.info/sct" 
+* code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
-* code.coding[FestDose] ^short = "FEST-id for legemiddel DOSE"
-* code.coding[FestMerkevare] ^short = "FEST-id for legemiddel MERKEVARE"
-* code.coding[FestPakning] ^short = "FEST-id for legemiddel PAKNING"
-* code.coding[FestVirkestoff] ^short = "FEST-id for legemiddel VIRKESTOFF"
-* code.coding[SCT] ^short = "SNOMED CT-kode for legemiddel"
+
+* code.coding[FestLegemiddeldose] ^short = "FEST-id for legemiddeldose"
+* code.coding[FestLmrLopenr] ^short = "Fest-løpenummer som identifiserer legemiddeldose"
+* code.coding[FestLegemiddelMerkevare] ^short = "FEST-id for LegemiddelMerkevare"
+* code.coding[FestLegemiddelpakning] ^short = "FEST-id for legemiddelpakning"
+* code.coding[Varenummer] ^short = "Varenummer - Unikt produktnummer for legemiddelpakninger"
+* code.coding[FestVirkestoff] ^short = "FEST-id for legemiddel virkestoff"
 * code.coding[LokaltLegemiddel] ^short = "Legemiddel fra lokal katalog"
-* code.coding[FestDose].code ^short = "Identifikator fra FEST"
-* code.coding[FestMerkevare].code ^short = "Identifikator fra FEST"
-* code.coding[FestPakning].code ^short = "Identifikator fra FEST"
+* code.coding[SCT] ^short = "SNOMED CT-kode for legemiddel"
+
+* code.coding[FestLegemiddeldose] ^definition = "Unik identifikator (legemiddeldose-id) for minste plukkbare enhet av en bestemt merkevare, f.eks. 1 tablett eller 1 ampulle."
+* code.coding[FestLmrLopenr]     ^definition = "LMR-nummer brukt til å identifisere en endose/minste enhet som kan utleveres; overtatt fra Sykehusapotekenes Legemiddelregister."
+* code.coding[FestLegemiddelMerkevare]     ^definition = "Unik identifikator for en bestemt styrke og legemiddelform av en merkevare (branded product) i FEST."
+* code.coding[FestLegemiddelpakning] ^definition = "Unik identifikator for en konkret pakning av en merkevare i katalogen LegemiddelPakningMerkevare."
+* code.coding[Varenummer]    ^definition = "Varenummeret for legemiddelpakningen; brukes som unikt produktnummer blant annet i resept- og apotekkjeden."
+* code.coding[FestVirkestoff]    ^definition = "Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST."
+* code.coding[LokaltLegemiddel]  ^definition = "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. "
+* code.coding[SCT]               ^definition = "SNOMED CT-kode for legemiddel eller substans, for semantisk klassifisering og gruppering."
+
+* code.coding[FestLegemiddeldose].code ^short = "Identifikator fra FEST"
+* code.coding[FestLmrLopenr].code ^short = "7‑sifret nummer"
+* code.coding[FestLegemiddelMerkevare].code ^short = "Identifikator fra FEST"
+* code.coding[FestLegemiddelpakning].code ^short = "Identifikator fra FEST"
+* code.coding[Varenummer].code ^short = "Varenummer"
 * code.coding[FestVirkestoff].code ^short = "Identifikator fra FEST"
-* code.coding[SCT].code ^short = "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."
 * code.coding[LokaltLegemiddel].code ^short = "Identifikator fra lokal legemiddelkatalog/legemiddelregister"
-* code.coding[FestDose].code 1..1
-* code.coding[FestMerkevare].code 1..1
-* code.coding[FestPakning].code 1..1
+* code.coding[SCT].code ^short = "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."
+
+* code.coding[FestLegemiddeldose].code 1..1
+* code.coding[FestLmrLopenr].code 1..1
+* code.coding[FestLegemiddelMerkevare].code 1..1
+* code.coding[FestLegemiddelpakning].code 1..1
+* code.coding[Varenummer].code 1..1
 * code.coding[FestVirkestoff].code 1..1
-* code.coding[SCT].code 1..1
 * code.coding[LokaltLegemiddel].code 1..1
-* code.coding[FestDose] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
-* code.coding[FestMerkevare] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
-* code.coding[FestPakning] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
-* code.coding[FestVirkestoff] ^comment = "URI for NamingSystem er midlertidig, må normeres som en del av no-basis."
-* code.coding[SCT] ^comment = "Standardisert SNOMED CT-kode for legemidler. Koden skal være et underbegrep (descendant) av enten 'Medicinal product (product)' [763158003] eller 'Substance (substance)' [105590001]."
-* code.coding[LokaltLegemiddel] ^comment = ""
-* code.coding[LokaltLegemiddel].extension contains LokalLegemiddelkatalogExtension named lokalLegemiddelkatalog 0..1
+* code.coding[SCT].code 1..1
+
 * code.coding[LokaltLegemiddel].display 1..1
 * code.coding[LokaltLegemiddel].display ^short = "Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"
 
@@ -76,8 +93,8 @@ Description: "Beskrivelse av legemiddel."
 * form.coding contains 7448 0..1 and SCT 0..1
 * form.coding 1..* 
 * form.coding ^short = "Legemiddelform"
-* form.coding ^comment = "Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (7448) og kodesetteksempel basert på SNOMED CT fra HL7."
-* form.coding[7448] ^short = "Kodeverk Legemiddelform (7448) fra FEST/eResept"
+* form.coding ^comment = "Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT."
+* form.coding[7448] ^short = "Kodeverk Legemiddelform (OID:7448) fra FEST"
 * form.coding[SCT] ^short = "SNOMED CT Form Codes"
 * form.coding[7448].code 1..1
 * form.coding[7448].code ^short = "Verdi fra kodeverket"
@@ -113,9 +130,9 @@ Description: "Eksempel på legemiddel - Paracetamol - UTKAST"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * identifier.value = "2ABAC272-0BCF-43F0-84BE-984074D92E15"
 * extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
-* code.coding[FestMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-* code.coding[FestMerkevare].code = #2ABAC272-0BCF-43F0-84BE-984074D92E15
-* code.coding[FestMerkevare].display = "Paracetamol"
+* code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+* code.coding[FestLegemiddelMerkevare].code = #2ABAC272-0BCF-43F0-84BE-984074D92E15
+* code.coding[FestLegemiddelMerkevare].display = "Paracetamol"
 
 Instance: Medisin-3-LegemiddelPakning-Monoket
 InstanceOf: Legemiddel
@@ -123,6 +140,6 @@ Description: "Eksempel på legemiddel - paking"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * identifier.value = "0003602E-315E-4CDE-9EB0-6756BE9CD120"
 * extension[classification].valueCodeableConcept = $ATC#C01DA14 "Isosorbid mononitrat"
-* code.coding[FestPakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-* code.coding[FestPakning].code = #0003602E-315E-4CDE-9EB0-6756BE9CD120
-* code.coding[FestPakning].display = "Monoket"
+* code.coding[FestLegemiddelpakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+* code.coding[FestLegemiddelpakning].code = #0003602E-315E-4CDE-9EB0-6756BE9CD120
+* code.coding[FestLegemiddelpakning].display = "Monoket"
