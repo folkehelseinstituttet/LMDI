@@ -1,11 +1,12 @@
 Profile: Virkestoff
 Id: lmdi-substance
-Parent: Substance
+Parent: NoBasisSubstance
 Title: "Virkestoff"
-Description: "En tilpasset profil av Substance for å representere virkestoff."
+Description: "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis."
 
 * ^status = #draft
-* ^date = "2025-05-01"
+* ^date = "2025-08-09"
+* ^publisher = "Folkehelseinstituttet"
 
 * description 0..0
 * ingredient 0..0

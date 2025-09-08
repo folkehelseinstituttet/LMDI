@@ -3,53 +3,55 @@ name: LMDI-gh-pages-root
 on:
   workflow_dispatch:
 
+# The short name is used to identify the IG and the folder where the IG is located
 env:
-  IG: LMDI
+  IG_SHORTNAME: LMDI
 
+# The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
+# https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
+# "Hardkodet" for no-basis 2.2.0
 jobs:
   publish:
     runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base:latest 
     steps:
-      - name: Sjekk ut koden
-        uses: actions/checkout@v4
-
-      - name: Cache FHIR-pakker
-        uses: actions/cache@v4
+      - uses: actions/checkout@v4
+      - name: 🖥️ Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          path: ~/.fhir/packages
-          key: fhir-packages
+          node-version: '16'
 
-      - name: Cache IG Publisher input-cache
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.IG }}/input-cache
-          key: ig-publisher-input-cache
-
-      - name: Installer NPM-pakke hl7.fhir.no.basis
-        run: npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@2.1.1
-
-      - name: Install SUSHI
-        run: npm install -g fsh-sushi
-
-      - name: Installer Jekyll
+      - name: Install 🔥 FHIR packages 🇳🇴
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y ruby-full build-essential zlib1g-dev
-          sudo gem install jekyll bundler
+          echo "NPM install fhir r4 core 4.0.1 from package registry"
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+          echo "NPM install hl7.fhir.no.basis-2.2.0 from https://github.com/HL7Norway/resources/"
+          curl -L -o hl7.fhir.no.basis-2.2.0-snapshots.tgz https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
+          npm install hl7.fhir.no.basis-2.2.0-snapshots.tgz
+          echo "Create .fhir packages cache directory for no-basis"
+          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
+          echo "Copy local no-basis snapshot to .fhir package cache directory"
+          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#2.2.0/package 
 
-      - name: Last ned IG Publisher
-        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
-
-      - name: Kj�r IG Publisher
-        run: java -jar publisher.jar -ig ${{ env.IG }}/ig.ini -generate
-
+      - name: Run 🔥 IG Publisher with 🍣 Sushi
+        run: |
+          cd ${{ env.IG_SHORTNAME }}
+          echo "Get latest publisher"
+          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
+          echo "Install Sushi compiler"
+          npm install -g fsh-sushi
+          echo "Run IG publisher"
+          java -jar ./input-cache/publisher.jar publisher -ig ig.ini
+          
       - name: Kopier certificates.zip til output
-        run: cp ${{ env.IG }}/input/includes/certificates.zip $GITHUB_WORKSPACE/${{ env.IG }}/output/
+        run: cp ${{ env.IG_SHORTNAME }}/input/includes/certificates.zip $GITHUB_WORKSPACE/${{ env.IG_SHORTNAME }}/output/
 
-      - name: Deploy til GitHub Pages (rotmappe)
+      # Publishes the HTML page to a seperate branch in order to host it using GitHub-Pages.
+      # This will overwrite the currently published HTML page.
+      - name: 🚀 Deploy to GitHub-Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.IG }}/output
+          publish_dir: ${{ env.IG_SHORTNAME }}/output
           exclude_assets: '**.tgz,**.pack'
-          commit_message: 'Deploy til rot: ${{ env.IG }} - ${{ github.event.head_commit.message }}'
+          commit_message: 'Deploy til rot: ${{ env.IG_SHORTNAME }} - ${{ github.event.head_commit.message }}'

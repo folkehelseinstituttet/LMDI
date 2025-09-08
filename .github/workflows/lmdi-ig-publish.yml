@@ -1,0 +1,67 @@
+name: Generate IG and publish to GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'LMDI/**'
+
+env:
+  IG_SHORTNAME: LMDI
+  NO_BASIS_VERSION: 2.2.0
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base:latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: 🖥️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16'
+
+      - name: Install 📥 FHIR packages 🇳🇴
+        run: |
+          echo "NPM install fhir r4 core 4.0.1 from package registry"
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+          
+          echo "NPM install hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }} snapshot"
+          # Sjekk for lokal fil først
+          if [ -f "no-basis-${{ env.NO_BASIS_VERSION }}.tgz" ]; then
+            echo "Using local no-basis package"
+            npm install no-basis-${{ env.NO_BASIS_VERSION }}.tgz
+          else
+            echo "Downloading from GitHub"
+            curl -L -o hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz \
+              https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
+            npm install hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
+          fi
+          
+          echo "Create .fhir packages cache directory for no-basis"
+          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
+          
+          echo "Copy local no-basis snapshot to .fhir package cache directory"
+          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
+
+      - name: Run 📥 IG Publisher with 🍣 Sushi
+        run: |
+          cd ${{ env.IG_SHORTNAME }}
+          echo "Get latest publisher"
+          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
+          echo "Install Sushi compiler"
+          npm install -g fsh-sushi
+          echo "Run IG publisher"
+          java -jar ./input-cache/publisher.jar publisher -ig ig.ini
+          
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.IG_SHORTNAME }}/output
+          destination_dir: currentbuild
+          commit_message: '${{ env.IG_SHORTNAME }}: ${{ github.event.head_commit.message }}'

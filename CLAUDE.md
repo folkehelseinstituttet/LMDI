@@ -47,8 +47,17 @@ fsh-validator *.fsh
 # Install SUSHI globally
 npm install -g fsh-sushi
 
-# Install Norwegian base profiles
-npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@2.1.1
+# Install FHIR R4 core
+npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+
+# Install Norwegian base profiles (no-basis 2.2.0 - snapshot version)
+# Download snapshot from GitHub (required for SUSHI compilation)
+curl -L -o hl7.fhir.no.basis-2.2.0-snapshots.tgz https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
+npm install hl7.fhir.no.basis-2.2.0-snapshots.tgz
+
+# Setup FHIR package cache for no-basis (required for SUSHI compilation)
+mkdir -p ~/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
+cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
 ```
 
 ## Key Files
@@ -73,3 +82,56 @@ npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@2.1.1
 4. Generated content appears in `LMDI/output/`
 
 The project follows Norwegian healthcare data standards and integrates with FEST (Norwegian drug database) identifiers.
+
+## Local Testing with no-basis
+
+When working with no-basis profiles, follow these testing steps:
+
+### 1. Setup Development Environment
+```bash
+# From project root
+cd /path/to/LMDI
+
+# Install dependencies (see Dependencies Installation above)
+npm install -g fsh-sushi
+npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+curl -L -o hl7.fhir.no.basis-2.2.0-snapshots.tgz https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
+npm install hl7.fhir.no.basis-2.2.0-snapshots.tgz
+mkdir -p ~/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
+cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
+```
+
+### 2. Test SUSHI Compilation
+```bash
+cd LMDI
+sushi .
+
+# Check for errors
+echo $?  # Should be 0 for success
+
+# Verify generated resources
+ls fsh-generated/resources/
+grep -i error fsh-generated/resources/*.json || echo "No errors found"
+```
+
+### 3. Verify no-basis Integration
+```bash
+# Check that NoBasisSubstance is available
+grep -r "NoBasisSubstance" ~/.fhir/packages/hl7.fhir.no.basis#2.2.0/package/ || echo "Profile not found"
+
+# Verify Substance profile compilation
+grep -i "no-basis-substance" fsh-generated/resources/StructureDefinition-lmdi-substance.json
+```
+
+### 4. Troubleshooting
+Common issues and solutions:
+
+**SUSHI cannot find NoBasisSubstance:**
+- Verify no-basis is installed in FHIR package cache: `ls ~/.fhir/packages/hl7.fhir.no.basis#2.2.0/package/`
+- Check version consistency in sushi-config.yaml (should be 2.2.0)
+- Clear cache and reinstall: `rm -rf ~/.fhir/packages/hl7.fhir.no.basis#2.2.0 && [reinstall]`
+- Ensure you're using snapshot version from GitHub, not the local .tgz file
+
+**Versjon conflicts:**
+- Ensure consistent version usage: 2.2.0 in sushi-config.yaml, workflows, and package installation
+- Use snapshot version: Download from https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz

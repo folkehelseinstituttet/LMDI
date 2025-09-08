@@ -2,9 +2,14 @@ name: Validate FSH Files
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'LMDI/input/fsh/**'
+      - 'LMDI/sushi-config.yaml'
 
 env:
   IG: LMDI
+  NO_BASIS_VERSION: 2.2.0  # Sentraliser versjonshåndtering
 
 jobs:
   validate:
@@ -26,18 +31,30 @@ jobs:
     - name: Install fsh-sushi
       run: npm install -g fsh-sushi
 
-    - name: Install hl7.fhir.no.basis-2.2.0-snapshots in local cache
+    - name: Install FHIR packages including no-basis
       run: |
-        echo "NPM install fhir r4 core 4.0.1 from package registry"
+        echo "📦 Installing FHIR R4 core 4.0.1"
         npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
-        echo "NPM install fhir no-basis220 from https://github.com/HL7Norway/resources/"
-        curl -L -o hl7.fhir.no.basis-2.2.0-snapshots.tgz https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-2.2.0-snapshots.tgz
-        npm install hl7.fhir.no.basis-2.2.0-snapshots.tgz
-        echo "Create .fhir packages cache directory for no-basis"
-        mkdir -p $HOME/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
-        echo "Copy local no-basis snapshot to .fhir package cache directory"
-        cp -r ./node_modules/hl7.fhir.no.basis/* $HOME/.fhir/packages/hl7.fhir.no.basis#2.2.0/package
-
+        
+        echo "📦 Installing no-basis ${{ env.NO_BASIS_VERSION }} snapshot"
+        # Sjekk om lokal fil eksisterer først
+        if [ -f "no-basis-${{ env.NO_BASIS_VERSION }}.tgz" ]; then
+          echo "Using local no-basis package"
+          npm install no-basis-${{ env.NO_BASIS_VERSION }}.tgz
+        else
+          echo "Downloading no-basis from GitHub"
+          curl -L -o hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz \
+            https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
+          npm install hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
+        fi
+        
+        echo "📁 Creating FHIR package cache directory"
+        mkdir -p $HOME/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
+        
+        echo "📋 Copying no-basis to package cache"
+        cp -r ./node_modules/hl7.fhir.no.basis/* $HOME/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
+        
+        echo "✅ Package installation complete"
 
     - name: Install fsh-validator
       run: pip install -U git+https://github.com/glichtner/fsh-validator
@@ -46,3 +63,14 @@ jobs:
       run: |
         cd ${{ env.IG }}/input/fsh/profiles/
         fsh-validator *.fsh
+        
+    - name: Run SUSHI compilation test
+      run: |
+        cd ${{ env.IG }}
+        sushi .
+        if [ $? -eq 0 ]; then
+          echo "✅ SUSHI compilation successful"
+        else
+          echo "❌ SUSHI compilation failed"
+          exit 1
+        fi

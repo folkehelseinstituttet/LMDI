@@ -1,15 +1,59 @@
-.DS_Store
-Thumbs.db
-**/fsh-generated
-**/input-cache
-**/output
-**/temp
-**/template
-**/input/fsh/old
-**/.vs/
-**/txCache
+# IG Publisher (lastes ned av build script)
+publisher/
+*.jar
+
+# No-basis pakker (lastes ned av build script hvis de ikke finnes)
+no-basis-*.tgz
+hl7.fhir.no.basis-*.tgz
+hl7.fhir.no.basis-*-snapshots.tgz
+
+# Node.js dependencies (installeres av build script)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# FHIR IG build output (genereres hver gang)
+**/fsh-generated/
+**/input-cache/
+**/output/
+**/temp/
+**/template/
+**/input/fsh/old/
+**/txCache/
+LMDI/output/
+LMDI/temp/
+LMDI/template/
+LMDI/input-cache/
+LMDI/fsh-generated/
+
+# Index filer
 .index.db
 .index.json
 **/.index.json
 **/.index.db
+
+# OS-spesifikke filer
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/IDE filer
+.vscode/
+.idea/
+**/.vs/
+*.swp
+*.swo
+*~
+
+# Backup filer
+*.bak
+*.backup
+*.old
+
+# Log filer
 *.log
+*.txt.log
+
+# Windows/WSL binærfiler
+*.exe
+*.dll

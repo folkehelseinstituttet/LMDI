@@ -22,6 +22,7 @@ Legemiddelregisteret inneholder allerede data om utleverte legemidler fra apotek
 
 | Versjon | Dato | Beskrivelse |
 |---------|------|-------------|
+| 1.0.6 | 2025-09-09 | Profilen Virkestoff er nå basert på no-basis-Substance |
 | 1.0.5 | 2025-07-28 | NPR Episode Identifier extension endret til å støtte både string og UUID samtidig. Extension er nå en kompleks struktur med sub-extensions for stringIdentifier og uuidIdentifier.<br/>Lagt til LmrLopenummer- og FestVarenummer-slicene på `Legemiddel.code.coding` |
 | 1.0.4 | 2025-05-30 | Legemiddel.code kan nå være en SNOMED CT kode.<br/> Ny profil Virkestoff som skal brukes for Substance.<br/>Ny extension (Must Support) Episode.nprEpisodeIdentifier. <br/> Ny C# eksempelkode for autorisering med HelseID.  |
 | 1.0.3 | 2025-04-11 | Fjernet Legemiddelrekvirering.dosageInstruction.patientInstruction og Legemiddel.text fra profilen. <br/> Ny extension: Legemiddel.classification. <br/> La til eksempelkode i C# og Powershell   |
