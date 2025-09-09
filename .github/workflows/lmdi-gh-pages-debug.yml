@@ -51,22 +51,46 @@ jobs:
       - name: 📦 Installer FHIR-pakker (core + no-basis snapshot)
         shell: bash
         run: |
-          echo "Installer FHIR R4 core (4.0.1)"
+          set -e
+          echo "🚀 Starter installasjon av FHIR-pakker..."
+          echo "NO_BASIS_VERSION er satt til: $NO_BASIS_VERSION"
+          
+          echo "📦 Installer FHIR R4 core (4.0.1)"
           npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+          if [ $? -eq 0 ]; then
+            echo "✅ FHIR R4 core installasjon fullført"
+          else
+            echo "❌ FHIR R4 core installasjon feilet"
+            exit 1
+          fi
 
-          echo "Last ned no-basis snapshot $NO_BASIS_VERSION"
+          echo "📥 Last ned no-basis snapshot $NO_BASIS_VERSION"
           curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
             https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
           
-          echo "Verifiser at snapshot-filen ble lastet ned"
-          ls -la hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz || (echo "Nedlasting feilet!" && exit 1)
+          echo "🔍 Verifiser at snapshot-filen ble lastet ned"
+          if [ -f "hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz" ]; then
+            ls -la hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+            echo "✅ Snapshot-fil lastet ned"
+          else
+            echo "❌ Nedlasting feilet!"
+            exit 1
+          fi
 
-          echo "npm install snapshot (lokalt)"
+          echo "📦 npm install snapshot (lokalt)"
           npm install hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+          if [ $? -eq 0 ]; then
+            echo "✅ Snapshot npm installasjon fullført"
+          else
+            echo "❌ Snapshot npm installasjon feilet"
+            exit 1
+          fi
 
-          echo "Forbered .fhir cache"
+          echo "📁 Forbered .fhir cache"
           mkdir -p ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
           cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+          echo "✅ .fhir cache opprettet og fylt"
+          echo "🎉 Alle FHIR-pakker installert!"
 
       # Downloads the newest version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher

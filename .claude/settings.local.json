@@ -2,9 +2,15 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.dmp.no)",
-      "WebFetch(domain:www.dmp.no)"
+      "WebFetch(domain:www.dmp.no)",
+      "Read(//mnt/c/dev/no-basis-mal/**)",
+      "Bash(tar:*)",
+      "Bash(cp:*)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "/mnt/c/dev/no-basis-mal/ig-mal"
+    ]
   }
 }
