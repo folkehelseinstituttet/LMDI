@@ -1,0 +1,57 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhir.no/ValueSet/atc-valueset",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "ATCValueSet",
+      "title" : "ATC Kodesystem ValueSet",
+      "description" : "ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)",
+      "systems" : ["http://www.whocc.no/atc"]
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
+      "version" : "1.0.6",
+      "status" : "draft",
+      "name" : "LokalLegemiddelkatalogValues",
+      "title" : "Lokal Legemiddelkatalog Values",
+      "description" : "Gyldige verdier for medlemskapsstatus",
+      "systems" : [
+        "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
+      ]
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "KommunenummerValueSet",
+      "title" : "Kommunenummer ValueSet",
+      "description" : "Komplett kodeverk for norske kommunenummer (Volven 3402)",
+      "systems" : ["urn:oid:2.16.578.1.12.4.1.1.3402"]
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
+      "version" : "1.0.6",
+      "status" : "draft",
+      "name" : "LegemiddelKoder",
+      "title" : "Gyldige legemiddelkoder",
+      "description" : "ValueSet som inneholder koder fra SNOMED CT og FEST",
+      "systems" : [
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+        "http://snomed.info/sct",
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+        "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+      ]
+    },
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
+      "version" : "1.0.6",
+      "status" : "draft",
+      "name" : "LegemiddeladministreringStatus",
+      "title" : "Status for legemiddeladministrering",
+      "description" : "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
+      "systems" : ["http://hl7.org/fhir/ValueSet/medication-admin-status"]
+    }
+  ]
+}
