@@ -47,9 +47,23 @@ jobs:
           echo "NO_BASIS_VERSION=$VER" >> $GITHUB_ENV
           echo "Oppdaget no-basis versjon: $VER"
 
-      # NPM and no-basis package
-      - name: NPM install no-basis
-        run: npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@$NO_BASIS_VERSION
+      # Install FHIR packages including no-basis snapshot
+      - name: 📦 Installer FHIR-pakker (core + no-basis snapshot)
+        shell: bash
+        run: |
+          echo "Installer FHIR R4 core (4.0.1)"
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+
+          echo "Last ned no-basis snapshot $NO_BASIS_VERSION"
+          curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
+            https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+
+          echo "npm install snapshot (lokalt)"
+          npm install hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+
+          echo "Forbered .fhir cache"
+          mkdir -p ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+          cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
 
       # Downloads the newest version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher
