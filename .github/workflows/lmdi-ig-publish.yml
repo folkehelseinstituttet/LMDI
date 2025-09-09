@@ -10,7 +10,6 @@ on:
 
 env:
   IG_SHORTNAME: LMDI
-  NO_BASIS_VERSION: 2.2.0
 
 jobs:
   publish:
@@ -20,45 +19,53 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: 🖥️ Setup Node.js
+      - name: 🖥️ Setup Node.js (LTS)
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'
 
-      - name: Install 📥 FHIR packages 🇳🇴
+      - name: 🔎 Les no-basis-versjon fra sushi-config.yaml
+        id: nobasis
+        shell: bash
         run: |
-          echo "NPM install fhir r4 core 4.0.1 from package registry"
-          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
-          
-          echo "NPM install hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }} snapshot"
-          # Sjekk for lokal fil først
-          if [ -f "no-basis-${{ env.NO_BASIS_VERSION }}.tgz" ]; then
-            echo "Using local no-basis package"
-            npm install no-basis-${{ env.NO_BASIS_VERSION }}.tgz
-          else
-            echo "Downloading from GitHub"
-            curl -L -o hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz \
-              https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
-            npm install hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
+          CFG="LMDI/sushi-config.yaml"
+          if [ ! -f "$CFG" ]; then
+            CFG="sushi-config.yaml"
           fi
-          
-          echo "Create .fhir packages cache directory for no-basis"
-          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
-          
-          echo "Copy local no-basis snapshot to .fhir package cache directory"
-          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
+          VER=$(grep -E "^[[:space:]]*hl7\.fhir\.no\.basis:" "$CFG" | sed -E 's/.*hl7\.fhir\.no\.basis:[[:space:]]*"?([0-9]+\.[0-9]+\.[0-9]+)"?.*/\1/')
+          if [ -z "$VER" ]; then
+            echo "Fant ikke no-basis-versjon i $CFG"; exit 1
+          fi
+          echo "NO_BASIS_VERSION=$VER" >> $GITHUB_ENV
+          echo "Oppdaget no-basis versjon: $VER"
 
-      - name: Run 📥 IG Publisher with 🍣 Sushi
+      - name: 📦 Installer FHIR-pakker (core + no-basis snapshot)
+        shell: bash
         run: |
-          cd ${{ env.IG_SHORTNAME }}
-          echo "Get latest publisher"
-          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar -o ./input-cache/publisher.jar --create-dirs
-          echo "Install Sushi compiler"
+          echo "Installer FHIR R4 core (4.0.1)"
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+
+          echo "Last ned no-basis snapshot $NO_BASIS_VERSION"
+          curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
+            https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+
+          echo "npm install snapshot (lokalt)"
+          npm install hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+
+          echo "Forbered .fhir cache"
+          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+
+      - name: 🏗️ Kjør IG Publisher med Sushi
+        shell: bash
+        run: |
+          cd "$IG_SHORTNAME"
+          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+            -o ./input-cache/publisher.jar --create-dirs
           npm install -g fsh-sushi
-          echo "Run IG publisher"
           java -jar ./input-cache/publisher.jar publisher -ig ig.ini
           
-      - name: 🚀 Deploy to GitHub Pages
+      - name: 🚀 Deploy til GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
