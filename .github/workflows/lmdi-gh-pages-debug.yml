@@ -55,16 +55,13 @@ jobs:
           echo "🚀 Starter installasjon av FHIR-pakker..."
           echo "NO_BASIS_VERSION er satt til: $NO_BASIS_VERSION"
           
-          echo "📦 Installer FHIR R4 core (4.0.1)"
-          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
-          if [ $? -eq 0 ]; then
-            echo "✅ FHIR R4 core installasjon fullført"
-          else
-            echo "❌ FHIR R4 core installasjon feilet"
-            exit 1
+          # Slett eventuell eksisterende package.json for å unngå konflikter
+          if [ -f "package.json" ]; then
+            echo "🗑️ Sletter eksisterende package.json for å unngå konflikter"
+            rm package.json
           fi
-
-          echo "📥 Last ned no-basis snapshot $NO_BASIS_VERSION"
+          
+          echo "📥 Last ned no-basis snapshot $NO_BASIS_VERSION først"
           curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
             https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
           
@@ -74,6 +71,15 @@ jobs:
             echo "✅ Snapshot-fil lastet ned"
           else
             echo "❌ Nedlasting feilet!"
+            exit 1
+          fi
+
+          echo "📦 Installer FHIR R4 core (4.0.1)"
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+          if [ $? -eq 0 ]; then
+            echo "✅ FHIR R4 core installasjon fullført"
+          else
+            echo "❌ FHIR R4 core installasjon feilet"
             exit 1
           fi
 
