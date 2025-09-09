@@ -32,9 +32,24 @@ jobs:
             ${{ env.IG }}/input-cache
           key: ig-publisher-input-cache           
       
+      - name: 🔎 Les no-basis-versjon fra sushi-config.yaml
+        id: nobasis
+        shell: bash
+        run: |
+          CFG="LMDI/sushi-config.yaml"
+          if [ ! -f "$CFG" ]; then
+            CFG="sushi-config.yaml"
+          fi
+          VER=$(grep -E "^[[:space:]]*hl7\.fhir\.no\.basis:" "$CFG" | sed -E 's/.*hl7\.fhir\.no\.basis:[[:space:]]*"?([0-9]+\.[0-9]+\.[0-9]+)"?.*/\1/')
+          if [ -z "$VER" ]; then
+            echo "Fant ikke no-basis-versjon i $CFG"; exit 1
+          fi
+          echo "NO_BASIS_VERSION=$VER" >> $GITHUB_ENV
+          echo "Oppdaget no-basis versjon: $VER"
+
       # NPM and no-basis package
       - name: NPM install no-basis
-        run: npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@2.1.1
+        run: npm --registry https://packages.simplifier.net install hl7.fhir.no.basis@$NO_BASIS_VERSION
 
       # Downloads the newest version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher
