@@ -92,10 +92,30 @@ jobs:
             exit 1
           fi
 
-          echo "📁 Forbered .fhir cache"
+          echo "📁 Forbered .fhir cache (både lokalt og for Docker)"
+          # Både ~/.fhir og /github/home/.fhir paths for Docker compatibility
           mkdir -p ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package || true
+          
+          # Kopier til begge steder
           cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
-          echo "✅ .fhir cache opprettet og fylt"
+          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package || true
+          echo "✅ .fhir cache opprettet og fylt (både lokalt og Docker)"
+          
+          echo "🔍 Verifiser at no-basis-Substance finnes i begge caches med snapshot"
+          for cache_path in ~/.fhir /github/home/.fhir; do
+            if [ -f "${cache_path}/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/no-basis-Substance.StructureDefinition.json" ]; then
+              echo "✅ no-basis-Substance.StructureDefinition.json finnes i ${cache_path}"
+              if grep -q '"snapshot"' "${cache_path}/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/no-basis-Substance.StructureDefinition.json"; then
+                echo "✅ Snapshot finnes i no-basis-Substance profil i ${cache_path}"
+              else
+                echo "❌ Mangler snapshot i no-basis-Substance profil i ${cache_path}"
+              fi
+            else
+              echo "❌ no-basis-Substance.StructureDefinition.json ikke funnet i ${cache_path}"
+            fi
+          done
+          
           echo "🎉 Alle FHIR-pakker installert!"
 
       # Downloads the newest version of the IG Publisher, this could probable be cached.
