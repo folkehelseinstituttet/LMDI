@@ -57,6 +57,9 @@ jobs:
           echo "Last ned no-basis snapshot $NO_BASIS_VERSION"
           curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
             https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+          
+          echo "Verifiser at snapshot-filen ble lastet ned"
+          ls -la hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz || (echo "Nedlasting feilet!" && exit 1)
 
           echo "npm install snapshot (lokalt)"
           npm install hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
