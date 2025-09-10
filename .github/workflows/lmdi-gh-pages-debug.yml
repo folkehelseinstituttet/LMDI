@@ -55,16 +55,13 @@ jobs:
           echo "🚀 Starter installasjon av FHIR-pakker..."
           echo "NO_BASIS_VERSION er satt til: $NO_BASIS_VERSION"
           
-          echo "📦 Installer FHIR R4 core (4.0.1)"
-          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
-          if [ $? -eq 0 ]; then
-            echo "✅ FHIR R4 core installasjon fullført"
-          else
-            echo "❌ FHIR R4 core installasjon feilet"
-            exit 1
+          # Slett eventuell eksisterende package.json for å unngå konflikter
+          if [ -f "package.json" ]; then
+            echo "🗑️ Sletter eksisterende package.json for å unngå konflikter"
+            rm package.json
           fi
-
-          echo "📥 Last ned no-basis snapshot $NO_BASIS_VERSION"
+          
+          echo "📥 Last ned no-basis snapshot $NO_BASIS_VERSION først"
           curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
             https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
           
@@ -74,6 +71,15 @@ jobs:
             echo "✅ Snapshot-fil lastet ned"
           else
             echo "❌ Nedlasting feilet!"
+            exit 1
+          fi
+
+          echo "📦 Installer FHIR R4 core (4.0.1)"
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+          if [ $? -eq 0 ]; then
+            echo "✅ FHIR R4 core installasjon fullført"
+          else
+            echo "❌ FHIR R4 core installasjon feilet"
             exit 1
           fi
 
@@ -89,18 +95,69 @@ jobs:
           echo "📁 Forbered .fhir cache"
           mkdir -p ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
           cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
-          echo "✅ .fhir cache opprettet og fylt"
+          echo "✅ Lokal .fhir cache opprettet og fylt"
+          
+          echo "🔍 Verifiser at no-basis-Substance finnes med snapshot"
+          if [ -f "~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/no-basis-Substance.StructureDefinition.json" ]; then
+            echo "✅ no-basis-Substance.StructureDefinition.json finnes"
+            if grep -q '"snapshot"' ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/no-basis-Substance.StructureDefinition.json; then
+              echo "✅ Snapshot finnes i no-basis-Substance profil"
+            else
+              echo "❌ Mangler snapshot i no-basis-Substance profil"
+            fi
+          else
+            echo "❌ no-basis-Substance.StructureDefinition.json ikke funnet"
+          fi
+          
           echo "🎉 Alle FHIR-pakker installert!"
+
+      # Inject snapshot directly into the Docker volume mount
+      - name: 🔧 Inject snapshot for Docker container  
+        shell: bash
+        run: |
+          echo "🚚 Injecting snapshot into Docker volume mount"
+          # Place the snapshot package where Docker can access it through volume mounts
+          mkdir -p /tmp/fhir-cache/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+          cp -r ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/* /tmp/fhir-cache/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/
+          
+          # Also place it in current directory for easy access
+          mkdir -p .fhir-snapshot/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+          cp -r ~/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/* .fhir-snapshot/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/
+          
+          echo "✅ Snapshot pakke klargjort for Docker"
 
       # Downloads the newest version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher
         run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 
       # Builds the HTML page for the IG.
-      - name: 🏃‍♂️ Run IG Publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: java -jar publisher.jar publisher -ig ${{ env.IG }}/ig.ini -generate
+      - name: 🏃‍♂️ Run IG Publisher with snapshot injection
+        shell: bash
+        run: |
+          echo "🚀 Starting IG Publisher with snapshot injection"
+          
+          # Run IG Publisher with volume mount for snapshot
+          docker run --rm \
+            -v "${PWD}:/github/workspace" \
+            -v "${PWD}/.fhir-snapshot:/home/publisher/.fhir" \
+            -e IG="${{ env.IG }}" \
+            -e NO_BASIS_VERSION="${{ env.NO_BASIS_VERSION }}" \
+            --workdir /github/workspace \
+            hl7fhir/ig-publisher-base:latest \
+            bash -c "
+              echo 'Docker container started'
+              echo 'Checking for snapshot in container:'
+              ls -la /home/publisher/.fhir/packages/ || echo 'No packages directory'
+              
+              if [ -f '/home/publisher/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package/no-basis-Substance.StructureDefinition.json' ]; then
+                echo '✅ Found snapshot in Docker container'
+              else 
+                echo '❌ Snapshot not found in Docker container'
+              fi
+              
+              echo 'Running IG Publisher'
+              java -jar publisher.jar publisher -ig ${{ env.IG }}/ig.ini -generate
+            "
 
       # Kopierer certificates.zip til output
       - name: Copy certificates.zip

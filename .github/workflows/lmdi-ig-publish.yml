@@ -42,28 +42,156 @@ jobs:
       - name: 📦 Installer FHIR-pakker (core + no-basis snapshot)
         shell: bash
         run: |
-          echo "Installer FHIR R4 core (4.0.1)"
-          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+          set -euo pipefail
+          
+          echo "=========================================="
+          echo "FHIR pakke-installasjon (no-basis snapshot)"
+          echo "=========================================="
+          
+          # Bruk temp katalog for å unngå package.json konflikter
+          TEMP_DIR=$(mktemp -d)
+          echo "📁 Temp katalog: $TEMP_DIR"
+          
+          pushd "$TEMP_DIR" > /dev/null
+          
+          # Steg 1: Installer FHIR R4 Core fra Simplifier
+          echo ""
+          echo "📦 Steg 1: Installerer FHIR R4 Core fra Simplifier..."
+          npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1 --no-save
+          
+          if [ ! -d "node_modules/hl7.fhir.r4.core" ]; then
+            echo "❌ FHIR R4 Core installasjon mislyktes!"
+            exit 1
+          fi
+          echo "✅ FHIR R4 Core installert"
+          
+          # Steg 2: Last ned no-basis snapshot
+          echo ""
+          echo "📦 Steg 2: Laster ned no-basis ${NO_BASIS_VERSION} snapshot..."
+          SNAPSHOT_FILE="hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz"
+          
+          curl -sSL -o "$SNAPSHOT_FILE" \
+            "https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/$SNAPSHOT_FILE"
+          
+          if [ ! -f "$SNAPSHOT_FILE" ]; then
+            echo "❌ Snapshot nedlasting mislyktes!"
+            exit 1
+          fi
+          echo "✅ Snapshot nedlastet: $(ls -lh $SNAPSHOT_FILE | awk '{print $5}')"
+          
+          # Steg 3: Installer snapshot med npm
+          echo ""
+          echo "📦 Steg 3: Installerer no-basis snapshot med npm..."
+          npm install --no-save "./$SNAPSHOT_FILE"
+          
+          if [ ! -d "node_modules/hl7.fhir.no.basis" ]; then
+            echo "❌ no-basis snapshot npm-installasjon mislyktes!"
+            exit 1
+          fi
+          echo "✅ no-basis snapshot installert med npm"
+          
+          # Steg 4: Kopier til FHIR package cache
+          echo ""
+          echo "📦 Steg 4: Kopierer til FHIR package cache..."
+          CACHE_TARGET="/github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}"
+          mkdir -p "$CACHE_TARGET/package"
+          
+          cp -r node_modules/hl7.fhir.no.basis/* "$CACHE_TARGET/package/"
+          
+          # Verifiser installasjon
+          if [ ! -f "$CACHE_TARGET/package/package.json" ]; then
+            echo "❌ Kopiering til FHIR cache mislyktes!"
+            exit 1
+          fi
+          echo "✅ no-basis kopiert til FHIR cache"
+          
+          # Verifiser snapshot data i kritiske profiler
+          echo ""
+          echo "🔍 Verifiserer snapshot data..."
+          SUBSTANCE_PROFILE="$CACHE_TARGET/package/StructureDefinition-no-basis-Substance.json"
+          
+          if [ -f "$SUBSTANCE_PROFILE" ]; then
+            if grep -q '"snapshot"' "$SUBSTANCE_PROFILE"; then
+              echo "✅ Bekreftet snapshot data i no-basis-Substance"
+            else
+              echo "⚠️ Advarsel: no-basis-Substance mangler muligens snapshot data"
+            fi
+          else
+            echo "⚠️ Advarsel: no-basis-Substance profil ikke funnet"
+          fi
+          
+          popd > /dev/null
+          rm -rf "$TEMP_DIR"
+          
+          echo ""
+          echo "✅ Alle FHIR-pakker installert og verifisert!"
 
-          echo "Last ned no-basis snapshot $NO_BASIS_VERSION"
-          curl -L -o hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz \
-            https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
+      - name: 🍣 Installer SUSHI globalt
+        shell: bash
+        run: |
+          echo "📦 Installerer SUSHI..."
+          npm install -g fsh-sushi
+          
+          if command -v sushi &> /dev/null; then
+            echo "✅ SUSHI installert:"
+            sushi --version
+          else
+            echo "❌ SUSHI installasjon mislyktes!"
+            exit 1
+          fi
 
-          echo "npm install snapshot (lokalt)"
-          npm install hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz
-
-          echo "Forbered .fhir cache"
-          mkdir -p /github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
-          cp -r ./node_modules/hl7.fhir.no.basis/* /github/home/.fhir/packages/hl7.fhir.no.basis#${NO_BASIS_VERSION}/package
+      - name: 📚 Last ned IG Publisher
+        shell: bash
+        run: |
+          echo "📦 Laster ned IG Publisher..."
+          mkdir -p "$IG_SHORTNAME/input-cache"
+          
+          curl -sSL -o "$IG_SHORTNAME/input-cache/publisher.jar" \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+          
+          if [ -f "$IG_SHORTNAME/input-cache/publisher.jar" ]; then
+            echo "✅ IG Publisher nedlastet: $(ls -lh $IG_SHORTNAME/input-cache/publisher.jar | awk '{print $5}')"
+          else
+            echo "❌ IG Publisher nedlasting mislyktes!"
+            exit 1
+          fi
 
       - name: 🏗️ Kjør IG Publisher med Sushi
         shell: bash
         run: |
+          set -euo pipefail
+          
           cd "$IG_SHORTNAME"
-          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
-            -o ./input-cache/publisher.jar --create-dirs
-          npm install -g fsh-sushi
-          java -jar ./input-cache/publisher.jar publisher -ig ig.ini
+          echo "🏗️ Kjører IG Publisher i $(pwd)..."
+          
+          # Sjekk at vi har publisher.jar
+          if [ ! -f "input-cache/publisher.jar" ]; then
+            echo "❌ publisher.jar ikke funnet!"
+            exit 1
+          fi
+          
+          # Sjekk at vi har ig.ini
+          if [ ! -f "ig.ini" ]; then
+            echo "❌ ig.ini ikke funnet!"
+            exit 1
+          fi
+          
+          # Kjør IG Publisher (med intern SUSHI)
+          java -jar input-cache/publisher.jar -ig ig.ini
+          PUBLISHER_EXIT_CODE=$?
+          
+          if [ $PUBLISHER_EXIT_CODE -eq 0 ]; then
+            echo "✅ IG Publisher fullført uten feil"
+            
+            # Sjekk at output katalog ble opprettet
+            if [ -d "output" ]; then
+              OUTPUT_SIZE=$(du -sh output 2>/dev/null | cut -f1)
+              echo "📋 Output katalog opprettet (størrelse: $OUTPUT_SIZE)"
+            fi
+          else
+            echo "❌ IG Publisher mislyktes (exit code: $PUBLISHER_EXIT_CODE)"
+            exit $PUBLISHER_EXIT_CODE
+          fi
           
       - name: 🚀 Deploy til GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
