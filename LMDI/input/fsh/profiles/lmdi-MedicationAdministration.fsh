@@ -7,7 +7,7 @@ Description: """Beskriver administrering av legemiddel til pasient på institusj
 Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering, hvem som utførte den (helsepersonell eller rolle ved institusjon) og dose med eventuell administrasjonsvei."""
 
 * ^status = #draft
-* ^date = "2025-03-10"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
 
 // Core Elements
@@ -102,10 +102,9 @@ ValueSet: LegemiddeladministreringStatus
 Id: lmdi-medicationadministrationstatus
 Title: "Status for legemiddeladministrering"
 Description: "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'."
-* ^version = "0.1.0"
+* ^version = "1.0.6"
 * ^status = #draft
-* ^experimental = true
-* ^date = "2025-03-10"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
 * http://hl7.org/fhir/ValueSet/medication-admin-status#completed "Gjennomført"
 * http://hl7.org/fhir/ValueSet/medication-admin-status#entered-in-error "Feilregistrert"

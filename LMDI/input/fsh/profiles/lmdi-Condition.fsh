@@ -6,7 +6,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 
 // Metadata
 * ^status = #draft
-* ^date = "2025-03-10"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
 
 // Deaktiverte elementer

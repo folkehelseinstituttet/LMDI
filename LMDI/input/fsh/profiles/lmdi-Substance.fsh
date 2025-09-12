@@ -5,7 +5,7 @@ Title: "Virkestoff"
 Description: "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis."
 
 * ^status = #draft
-* ^date = "2025-08-09"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
 
 * description 0..0

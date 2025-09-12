@@ -5,7 +5,7 @@ Description: "Klassifisering av legemidler, primært med ATC-koder (Anatomisk Te
 * ^context.type = #element
 * ^context.expression = "Medication"
 * ^status = #active
-* ^date = "2025-04-11"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
 * ^contact.name = "Folkehelseinstituttet"
 * ^contact.telecom.system = #url

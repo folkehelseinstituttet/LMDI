@@ -4,7 +4,7 @@ Id:       lmdi-medication
 Title:    "Legemiddel"
 Description: "Beskrivelse av legemiddel."
 * ^status = #draft
-* ^date = "2025-04-11"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
 
 * manufacturer 0..0

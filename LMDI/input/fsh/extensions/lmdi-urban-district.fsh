@@ -2,7 +2,7 @@ Extension: LmdiUrbanDistrict
 Id: lmdi-urban-district
 Title: "lmdi-urban-district"
 Description: "Information about Norwegian urban district (bydel)"
-* ^version = "2.0.16"
+* ^version = "1.0.6"
 * ^context.type = #element
 * ^context.expression = "Address"
 * value[x] only Coding

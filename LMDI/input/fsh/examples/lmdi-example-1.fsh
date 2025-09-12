@@ -36,8 +36,8 @@ Usage: #inline
 Instance: Helsepersonell-10
 InstanceOf: Helsepersonell
 Usage: #inline
-* identifier.system = "urn:oid:2.16.578.1.12.4.1.4.4"
-* identifier.value = "9144900"
+* identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
+* identifier[HPR].value = "9144900"
 
 Instance: Episode-2-Sykehjem
 InstanceOf: Episode

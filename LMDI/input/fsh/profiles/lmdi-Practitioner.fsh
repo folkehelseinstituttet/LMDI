@@ -1,37 +1,29 @@
 Profile: Helsepersonell
 Id: lmdi-practitioner
-Parent: Practitioner
+Parent: NoBasisPractitioner
 Title: "Helsepersonell"
-Description: "Helsepersonell som har rekvirert legemidlet"
+Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt)."
 
 * ^status = #draft
-* ^date = "2025-03-10"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
-* ^version = "0.1.0"
-* ^experimental = true
+* ^version = "1.0.6"
 
-// HPR-nummer
-* identifier 1..1
-* identifier ^short = "Helsepersonellnummer for helsepersonellet"
-* identifier ^definition = "Helsepersonellnummer er en unik identifikator fra Helsepersonellregisteret som tildeles alt autorisert helsepersonell i Norge."
-* identifier ^comment = """
-Helsepersonellnummer er påkrevet i denne profilen og skal alltid oppgis. 
-Andre identifikatorer som FNR/DNR støttes ikke i denne profilen da den er begrenset til kun autorisert helsepersonell med helsepersonellnummer."""
+// === IDENTIFIER HÅNDTERING ===
+// Bruker no-basis slicing med closed slicing for å begrense til kun HPR
+* identifier 0..1  // Gjør valgfri - endret fra 1..1
+* identifier ^slicing.rules = #closed  // Lukk slicing - kun HPR tillatt
+* identifier ^short = "HPR-nummer når tilgjengelig"
+* identifier ^definition = "HPR-nummer fra Helsepersonellregisteret når tilgjengelig. Kan mangle for rekvirenter uten HPR-registrering."
 
-* identifier.system 1..1
-* identifier.system = "urn:oid:2.16.578.1.12.4.1.4.4"
-* identifier.system ^short = "Identifikatortype: Helsepersonellnummer"
-* identifier.system ^definition = "URN OID for helsepersonellnummer (2.16.578.1.12.4.1.4.4) som identifiserer at dette er et nummer fra det norske Helsepersonellregisteret."
-* identifier.system ^comment = "Skal være helsepersonellnummer (2.16.578.1.12.4.1.4.4)"
+// Bruk no-basis HPR slice - system er allerede definert i no-basis
+* identifier[HPR] 0..1 MS
+* identifier[HPR] ^short = "HPR-nummer"
+* identifier[HPR] ^definition = "Helsepersonellnummer fra HPR når tilgjengelig."
 
-* identifier.value 1..1 
-* identifier.value ^short = "Helsepersonellnummeret"
-* identifier.value ^definition = """
-Det faktiske helsepersonellnummeret som er tildelt helsepersonellet. 
-Dette er et unikt nummer som tildeles ved autorisasjon."""
-* identifier.value ^comment = "Helsepersonellnummer er et heltall"
-* identifier.value ^example.label = ""
-* identifier.value ^example.valueString = ""
+// Skjul FNR og DNR slices fra no-basis
+* identifier[FNR] 0..0
+* identifier[DNR] 0..0
 
 
 // Spesialitet
@@ -57,5 +49,10 @@ Dette er et unikt nummer som tildeles ved autorisasjon."""
 Instance: Helsepersonell-1-HPR-nummer
 InstanceOf: Helsepersonell
 Description: "Eksempel på helsepersonell med HPR-nummer"
-* identifier.system = "urn:oid:2.16.578.1.12.4.1.4.4"
-* identifier.value = "9144900"
+* identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
+* identifier[HPR].value = "9144900"
+
+Instance: Helsepersonell-2-Uten-HPR
+InstanceOf: Helsepersonell
+Description: "Eksempel på rekvirent uten HPR-nummer"
+// Ingen identifier - gyldig siden identifier nå er 0..1

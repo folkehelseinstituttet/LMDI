@@ -1,19 +1,22 @@
 // Hoveddefinisjon av organisasjonsprofil
 Profile: Organisasjon
-Parent: Organization
+Parent: NoBasisOrganization
 Id: lmdi-organization
 Title: "Organisasjon"
 Description: """
-Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. 
+Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.
 
 Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).
 
-For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH) 
+For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle "organisasjonshierarki" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH) 
 """
-* ^version = "0.9.3"
+* ^version = "1.0.6"
 * ^status = #draft
-* ^date = "2025-03-10"
+* ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
+
+// Sikkerhetsinvariant: minst ENH eller RSH identifier
+* obeys lmdi-org-identifier
 
 // Deaktiverte felter
 * text 0..0
@@ -23,38 +26,25 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 * endpoint 0..0
 * address.text 0..0
 * address.line 0..0
+* address.city 0..0
 * address.postalCode 0..0
 
-// Identifikatorer - hovedregler
+// Identifikatorer - bruker no-basis sine eksisterende slices (arver slicing fra parent)
 * identifier 0..* MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #closed
 * identifier ^short = "ID fra Nasjonalt register for enheter i spesialisthelsetjenesten (RESH) eller Organisasjonsnummeret i Enhetsregister"
 * identifier ^comment = "Der aktiviteten har skjedd."
 
-// Identifikatorer - ENH og RESH
-* identifier contains
-    ENH 0..1 and
-    RESH 0..1
-
 * identifier[ENH] ^short = "Organisasjonsnummer fra Enhetsregisteret (ENH)"
 * identifier[ENH] ^comment = "Identifikatorer skal angis på laveste relevante virksomhetsnivå i henhold til SSBs retningslinjer. For kommunale tjenester betyr dette på institusjonsnivå (f.eks sykehjem) der egen organisatorisk enhet er etablert, ikke på overordnet kommunenivå."
-* identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101" (exactly)
-* identifier[ENH].value 1..1
-* identifier[ENH].value ^short = "Organisasjonsnummer"
 
-* identifier[RESH] ^short = "ID fra Register for enheter i spesialisthelsetjenesten (RESH)"
-* identifier[RESH] ^comment = "Det nivået aktiviteten har skjedd på."
-* identifier[RESH].system = "urn:oid:2.16.578.1.12.4.1.4.102" (exactly)
-* identifier[RESH].value 1..1
-* identifier[RESH].value ^short = "RESH-ID"
+* identifier[RSH] ^short = "ID fra Register for enheter i spesialisthelsetjenesten (RESH)"
+* identifier[RSH] ^comment = "Det nivået aktiviteten har skjedd på."
 
-// Organisasjonstype og navn
-* type 1..*
+// Organisasjonstype og navn - bruker no-basis slices
+* type 0..*
 * type ^short = "Organisasjonstype"
 * type ^definition = "Type organisasjon (f.eks. sykehus, avdeling, klinikk)"
-* type from $organization-type (preferred)
+// no-basis definerer slices: organisatoriskNiva og organisatoriskBetegnelse med required bindings
 
 * name 1..1 MS 
 * name ^short = "Organisasjonsnavn"
@@ -73,20 +63,15 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 * address.type = #physical
 
 * address.district ^short = "Kommune"
-* address.district.extension ^slicing.discriminator.type = #value
-* address.district.extension ^slicing.discriminator.path = "url"
-* address.district.extension ^slicing.rules = #open
-* address.district.extension contains LmdiMunicipalitycode named municipalitycode 0..1
-
+// Bruker no-basis-municipalitycode extension som allerede er definert
 * address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune"
 * address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune"
-* address.district.extension[municipalitycode] only LmdiMunicipalitycode
-* address.district.value 0..0
 
 * address.state ^short = "Fylkesnavn"
 
-* address.extension contains LmdiUrbanDistrict named urbanDistrict 0..1
-* address.extension[urbanDistrict] ^short = "Kodet verdi for bydel"
+// Beholde LMDI sin urban district extension siden det er spesifikk for LMDI
+* address.extension contains LmdiUrbanDistrict named lmdiUrbanDistrict 0..1
+* address.extension[lmdiUrbanDistrict] ^short = "Kodet verdi for bydel"
 
 // EKSEMPLER
 Instance: Organisasjon-1-Sykehjem
@@ -95,7 +80,7 @@ Description: "Eksempel på sykehjem i primærhelsetjenesten"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "1234567890"
 * name = "Lykkedalen sykehjem"
-* type = $organization-type#prov "Healthcare Provider"
+// Midlertidig fjernet type for testing - kan legges tilbake med no-basis slices
 * address.type = #physical
 * address.district = "Sigdal"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3025 "Sigdal"
@@ -103,10 +88,10 @@ Description: "Eksempel på sykehjem i primærhelsetjenesten"
 Instance: Organisasjon-2-Avdeling
 InstanceOf: Organisasjon
 Description: "Eksempel på spesialistavdeling"
-* identifier[RESH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
-* identifier[RESH].value = "4208723"
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
+* identifier[RSH].value = "4208723"
 * name = "Avdeling for epilepsi, poliklinikk"
-* type = $organization-type#dept "Hospital Department"
+// Midlertidig fjernet type for testing
 * partOf = Reference(Organisasjon-3-Sykehus)
 
 Instance: Organisasjon-3-Sykehus
@@ -114,11 +99,17 @@ InstanceOf: Organisasjon
 Description: "Eksempel på sykehusorganisasjon"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "993467049"
-* identifier[RESH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
-* identifier[RESH].value = "4001031"
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
+* identifier[RSH].value = "4001031"
 * name = "Oslo universitetssykehus HF"
-* type = $organization-type#prov "Healthcare Provider"
+// Midlertidig fjernet type for testing
 * address.type = #physical
 * address.district = "Oslo"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
-* address.extension[urbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
+* address.extension[lmdiUrbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
+
+// Invariant definisjon
+Invariant: lmdi-org-identifier
+Description: "Organisasjon skal ha minst ENH eller RSH identifier"
+Severity: #error
+Expression: "identifier.where(system='urn:oid:2.16.578.1.12.4.1.4.101' or system='urn:oid:2.16.578.1.12.4.1.4.102').exists()"
