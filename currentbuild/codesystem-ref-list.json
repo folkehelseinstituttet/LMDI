@@ -1,0 +1,76 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem",
+      "version" : "1.0.6",
+      "status" : "draft",
+      "name" : "LokalLegemiddelkatalogCodeSystem",
+      "title" : "Lokal Legemiddelkatalog Codes",
+      "description" : "Kodesystem for lokal legemiddelkatalog",
+      "uses" : {
+      },
+      "ValueSet-LokalLegemiddelkatalogValues.html" : "Lokal Legemiddelkatalog Values"
+    },
+    {
+      "url" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "medicationrequest Status",
+      "title" : "Medicationrequest  status",
+      "description" : "MedicationRequest Status Codes",
+      "oids" : ["2.16.840.1.113883.4.642.4.1377"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-medicationrequest-status.html" : "Medicationrequest  status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/address-use",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AddressUse",
+      "title" : "AddressUse",
+      "description" : "The use of an address.",
+      "oids" : ["2.16.840.1.113883.4.642.4.68"],
+      "uses" : {
+      },
+      "ValueSet-lmdi-address-use.html" : "LMDI Address Use"
+    },
+    {
+      "url" : "http://snomed.info/sct",
+      "version" : null,
+      "status" : "active",
+      "name" : "SNOMED_CT",
+      "title" : "SNOMED CT (all versions)",
+      "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+      "oids" : ["2.16.840.1.113883.6.96"],
+      "uses" : {
+      },
+      "ValueSet-legemiddel-koder.html" : "Gyldige legemiddelkoder",
+      "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes"
+    },
+    {
+      "url" : "http://www.whocc.no/atc",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "WC",
+      "title" : "WHO ATC",
+      "description" : "WHO ATC",
+      "oids" : ["2.16.840.1.113883.6.73"],
+      "uses" : {
+      },
+      "ValueSet-atc-valueset.html" : "ATC Kodesystem ValueSet"
+    },
+    {
+      "url" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "KommunenummerCodeSystem",
+      "title" : "Kommunenummer CodeSystem",
+      "description" : "Kodesystem for norske kommunenummer (Volven 3402)",
+      "oids" : ["2.16.578.1.12.4.1.1.3402"],
+      "uses" : {
+      },
+      "ValueSet-kommunenummer-alle.html" : "Kommunenummer ValueSet"
+    }
+  ]
+}

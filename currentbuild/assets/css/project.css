@@ -1,0 +1,241 @@
+@import url('https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/project.css');
+
+:root {
+  --ig-status-text-color: var(--fhi-black); /* 1. IG Title and status text color */
+  --navbar-bg-color: #7b1fad; /* 2. Header container color */
+  --footer-bg-color: #707070; /* 3. Footer background color*/
+  --footer-container-bg-color: var(--fhi-color-accent-background-subtle); /* 4. Footer container color */
+  --stripe-bg-color: #999999; /* 5. Header strip color */
+
+  --btn-hover-color: #9b2fdd;  /* 6. Menu button hover color */
+  --btn-active-color: var(--fhi-black); /* 7. Menu button active color */
+  --btn-text-color: #e6e6e6; /* 8. Menu button text color */
+  --btn-gradient-start-color: #428bca; /* 9. Menu item gradient start color */
+  --btn-gradient-end-color: #357ebd; /* 10. Menu item gradient end  color */
+  --btn-gradient-start-color-alpha: #ff428bca; /* 11. Menu item gradient start color (with alpha) */
+  --btn-gradient-end-color-alpha: #ff357ebd; /* 12. Menu item gradient end color (with alpha) */
+  --link-color: var(--fhi-color-neutral-text); /* 13. Hyperlink text color */
+  --link-hover-color: var(--fhi-color-neutral-text-subtle); /* 14. Hyperlink text hover color */
+
+  --publish-box-bg-color: var(--fhi-color-info-background-subtle); /* 15. Publish box background color */
+  --publish-box-border: 1px solid var(--fhi-color-info-border); /* 16.  Publish box border definition */
+
+  --toc-box-bg-color: var(--fhi-color-accent-background-subtle); /* 17.  TOC box background color */
+  --toc-box-border: 1px solid var(--fhi-color-accent-border); /* 18. TOC box border definition */
+
+  --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
+  --stu-note-border-left-color: #ffa0ff; /* 20. (STU) Note box border color */
+
+  --ig-header-color: #ffffff; /* 21. Header color (sides) */
+  --ig-header-container-color: #ffffff; /* 22. Header container color (center) */
+  --footer-nav-bg-color: #f5f5f5; /* 23. Footer navigation background color*/
+
+  --footer-text-color: var(--fhi-black); /* 24. Footer highlight font color */
+  --footer-hyperlink-text-color: var(--link-color); /* 25. Footer hyperlinks font color */
+  --footer-highlight-text-color: var(--fhi-color-neutral-base); /* 26. Footer highlight font color */
+
+  --breadcrumb-bg-color: var(--fhi-color-neutral-background-subtle); /* 27. Breadcrumb font color */
+  --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--fhi-font-family-roboto-flex);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#segment-content {
+  flex: 1;
+}
+
+/* Overrides */
+#family-nav {
+  line-height: 50px;
+  float: right;
+  margin-top: 4px;
+  color: #808080;
+}
+#family-logo {
+  float: right;
+  margin-left: 6px;
+}
+
+/* Product families should override the following two colors with family-specific colors */
+#segment-footer {
+  background-color: var(--fhi-color-accent-background-subtle);
+}
+.navbar-inverse {
+  background-color: #505050;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #808080;
+}
+/* Generic settings common to all HL7 IGs */
+#hl7-nav {
+  line-height: 50px;
+  float: left;
+  margin-top: 4px;
+  color: #808080;
+}
+#hl7-nav a {
+  color: inherit;
+}
+#hl7-logo {
+  float: left;
+  margin-left: 6px;
+}
+#hl7-search {
+  line-height: 50px;
+  float: right;
+  margin-top: 4px;
+  color: maroon;
+}
+#hl7-search a {
+  color: inherit;
+}
+#project-nav {
+  line-height: 50px;
+  float: left;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #808080;
+}
+#project-logo {
+  float: left;
+  margin-left: 3px;
+}
+
+
+/* ----------note-to-balloters styling------*/
+
+.note-to-balloters::before {
+  white-space: pre;
+  content: "Note To Balloters\A ";
+  /* #background-color: yellow; */
+  color: red;
+  font-weight: bold;
+}
+.note-to-balloters, .stu-note{
+    margin: 5px;
+    padding: 10px;
+    border-left-style: solid;
+    background-color: #fff2ff;
+    border-left-color: #ffa0ff;
+}
+
+.stu-note::before {
+  white-space: pre;
+  content: "STU Note\A ";
+  /* #background-color: yellow; */
+  color: red;
+  font-weight: bold;
+}
+
+/* toc boks */
+ul.markdown-toc
+{
+  margin: 4px;
+  padding: 4px;
+  float: right;
+  z-index: 10;
+  width: 30%;
+  background-color:  var(--toc-box-bg-color);
+  border: var(--toc-box-border);
+}
+
+ul.markdown-toc p
+{
+  font-size: 10px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 0px;
+}
+
+ul.markdown-toc p.link
+{
+  font-size: 10px;
+  padding-left: 8px;
+  margin: 0px;
+}
+
+div.markdown-toc
+{
+  margin: 4px;
+  padding: 4px;
+  float: right;
+  z-index: 10;
+  width: 30%;
+  background-color:  var(--toc-box-bg-color);
+  border: var(--toc-box-border);
+}
+
+div.markdown-toc p
+{
+  font-size: 10px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 0px;
+}
+
+div.markdown-toc p.link
+{
+  font-size: 10px;
+  padding-left: 8px;
+  margin: 0px;
+}
+
+.breadcrumb {
+    flex-flow: row!important;
+    padding-top: .5rem!important;
+}
+
+.breadcrumb > li + li:before {
+    content: ">\00a0";
+    padding: 0 5px;
+    color: #cccccc;
+}
+
+a:not(.nav-link) {
+  text-decoration: underline;
+}
+
+.navbar-nav {
+  margin-bottom: 0!important;
+}
+
+#publish-box {
+  display: none!important;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.btn-copy {
+  background-image: unset;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: unset;
+}
+
+.undermeny li a {
+  font-size: var(--fhi-font-size-3)!important;
+}
+
+.dropdown-menu li a {
+  font-size: var(--fhi-font-size-3)!important;
+  text-align: left!important;
+}

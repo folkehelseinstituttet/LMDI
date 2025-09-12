@@ -1,0 +1,398 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>no-basis-fest-legemiddeldose - TTL Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
+        v1.0.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/prism.css" />
+    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/project.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+
+
+    <script type="text/javascript" src="assets/js/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" sizes="32x32" href="assets/images/favicon.ico" />
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid-init.js"></script>
+    <div id="segment-header" class="segment"> <!-- segment-header -->
+        <div class="container"> <!-- container -->
+            
+            <!-- Placeholder for child template header declarations -->
+
+
+<header class="fhi-header mb-0">
+    <div class="fhi-header__brand">
+        <div class="container fhi-header__brand-container">
+            <div class="fhi-header__brand-content">
+                <a class="fhi-header__logo" href="index.html">
+                    <i class="icon-fhi-logo fhi-header__logo-icon"></i>
+                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                </a>
+                <div class="fhi-header__project">
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.6 - ci-build
+                            
+                            
+                            
+                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
+                                title="Norway" />
+                            
+                            
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+        </div> <!-- /container -->
+    </div> <!-- /segment-header -->
+
+    <div class="container fhi-header__main-menu-alt-container">
+    <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
+        <div class="container fhi-main-menu-alt__container">
+            <div [animation]="false" class="fhi-main-menu-alt__collapse">
+                <div id="menu">
+                    <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Hjem</a>
+  </li>
+  <li>
+    <a href="informasjonsmodell.html">Informasjonsmodell</a>
+  </li>
+  <li>
+    <a href="integrasjon.html">Integrasjon</a>
+  </li>
+  <li>
+    <a href="profiler.html">FHIR-profiler</a>
+  </li>
+  <li>
+    <a href="nedlastinger.html">Nedlastinger</a>
+  </li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
+        <div class="container p-0"> <!-- container -->
+            <ul class="breadcrumb p-2 mb-1">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>no-basis-fest-legemiddeldose</b></li>
+                
+            </ul>
+        </div> <!-- /container -->
+    </div> <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment"> <!-- segment-content -->
+        <div class="container"> <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+<div class="fhi-nav-tabs border-bottom">
+    <ul class="nav nav-tabs undermeny mb-0">
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="NamingSystem-no-basis-fest-legemiddeldose.html">
+        Narrative Content
+    </a>
+</li>
+
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="NamingSystem-no-basis-fest-legemiddeldose.xml.html">
+        XML
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="NamingSystem-no-basis-fest-legemiddeldose.json.html">
+        JSON
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
+        TTL
+    </a>
+</li>
+
+        
+
+        
+    </ul>
+</div>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: no-basis-fest-legemiddeldose - TTL Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2024-06-10
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="NamingSystem-no-basis-fest-legemiddeldose.ttl" no-download="true">Raw ttl</a> | <a href="NamingSystem-no-basis-fest-legemiddeldose.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" style="white-space: pre; overflow: hidden"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:NamingSystem ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;no-basis-fest-legemiddeldose&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: NamingSystem no-basis-fest-legemiddeldose&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;no-basis-fest-legemiddeldose\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcno-basis-fest-legemiddeldose\&quot;&gt; &lt;/a&gt;&lt;h3&gt;Summary&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Defining URL&lt;/td&gt;&lt;td&gt;http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Version&lt;/td&gt;&lt;td&gt;1.0.6&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;festLegemiddelDose&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Status&lt;/td&gt;&lt;td&gt;draft&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Definition&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som representerer minste plukkbare enhet, f.eks. 1 ampulle eller 1 tablett.&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Publisher&lt;/td&gt;&lt;td&gt;Folkehelseinstituttet&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Identifiers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Preferred&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;URI&lt;/td&gt;&lt;td&gt;http://dmp.no/fhir/NamingSystem/festLegemiddelDose&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.extension">fhir:extension</a> ( [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">a</a> fhir:uri ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose&quot;^^xsd:anyURI     ]
+  ] [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:string ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1.0.6&quot;     ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;festLegemiddelDose&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.kind">fhir:kind</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;identifier&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2024-06-10&quot;^^xsd:date] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Folkehelseinstituttet&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.contact">fhir:contact</a> ( [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Folkehelseinstituttet&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;https://www.fhi.no&quot; ]     ] )
+  ] [
+<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Legemiddelregisteret&quot; ] ;
+    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;email&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;legemiddelregisteret@fhi.no&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.responsible">fhir:responsible</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Direktoratet for medisinske produkter&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som representerer minste plukkbare enhet, f.eks. 1 ampulle eller 1 tablett.&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.jurisdiction">fhir:jurisdiction</a> ( [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:iso:std:iso:3166&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;NO&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Norway&quot; ]     ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.uniqueId">fhir:uniqueId</a> ( [
+<a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.uniqueId.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;uri&quot; ] ;
+<a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.uniqueId.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://dmp.no/fhir/NamingSystem/festLegemiddelDose&quot; ] ;
+<a href="http://hl7.org/fhir/R4/namingsystem.html#NamingSystem.uniqueId.preferred">fhir:preferred</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true ]
+  ] ) . # 
+
+</code></pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+</div> <!-- /inner-wrapper -->
+</div> <!-- /row -->
+</div> <!-- /container -->
+</div> <!-- /segment-content -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery.js"> </script>
+<!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
+    <div class="container"> <!-- container -->
+        <div class="container-fluid">
+            
+            <div class="inner-wrapper p-3">
+                <p class="m-0">
+                    IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
+                        href="https://www.fhi.no">Folkehelseinstituttet</a>.
+                    Package hl7.fhir.no.lmdi#1.0.6 based on <a
+                        style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span
+                        title="Fri, Sep 12, 2025 13:06+0000">2025-09-12</span>
+                    <br />
+                    <span style="color: var(--footer-highlight-text-color)">
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    </span>
+                </p>
+            </div> <!-- /inner-wrapper -->
+        </div>
+    </div><!-- /container -->
+</footer> <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden d-none"> <!-- segment-post-footer -->
+    <div class="container"> <!-- container -->
+    </div> <!-- /container -->
+</div> <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<script id="page-data" type="application/json">
+  {
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>no-basis-fest-legemiddeldose</b></li>"
+  }
+</script>
+<script type="text/javascript">
+    const pageData = JSON.parse(document.getElementById("page-data").textContent);
+
+    const secondLevel = (key) => {
+        if (pageData.breadcrumb) {
+            const liRegex = /<li>(.*?)<\/li>/g;
+            const listItems = [...pageData.breadcrumb.matchAll(liRegex)].map(match => match[1].trim());
+            return listItems[1]?.includes(key) || false;
+        }
+        return false;
+    };
+
+    // Style FHI menu
+    const classMenuNav = 'fhi-main-menu-alt__nav',
+        classMenuNavItem = 'fhi-main-menu-alt__nav-item',
+        classMenuNavLink = 'fhi-main-menu-alt__nav-link';
+    const menu = document.getElementById('menu');
+    const ul = menu.querySelector('ul');
+    ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+    ul.querySelectorAll('li').forEach(li => {
+        li.classList.add(classMenuNavItem);
+        li.querySelectorAll('a').forEach(a => {
+            a.classList.add('nav-link', classMenuNavLink);
+        });
+
+        if (li.classList.contains('dropdown')) {
+            li.addEventListener('click', () => {
+                li.classList.toggle('show');
+                li.querySelector('ul').classList.toggle('show');
+            });
+        }
+    });
+
+    // Set active class on menu item
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
+    menuItems.forEach(item => {
+        const menuLink = item.querySelector('a').getAttribute('href');
+        if (menuLink === page) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+        else if (secondLevel(menuLink)) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+    });
+
+    // Init clipboard.js
+    new ClipboardJS('.btn-copy');
+</script>
+<!-- Analytics Below
+  ================================================== -->
+</body>
+
+</html>
+
