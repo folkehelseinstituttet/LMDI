@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="atc-valueset"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet atc-valueset</b></p><a name="atc-valueset"> </a><a name="hcatc-valueset"> </a><ul><li>Include all codes defined in <a href="http://www.whocc.no/atc"><code>http://www.whocc.no/atc</code></a></li></ul></div>
+  </text>
+  <url value="http://fhir.no/ValueSet/atc-valueset"/>
+  <version value="1.0.6"/>
+  <name value="ATCValueSet"/>
+  <title value="ATC Kodesystem ValueSet"/>
+  <status value="active"/>
+  <date value="2025-09-12"/>
+  <publisher value="Folkehelseinstituttet"/>
+  <contact>
+    <name value="Folkehelseinstituttet"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.fhi.no"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Legemiddelregisteret"/>
+    <telecom>
+      <system value="email"/>
+      <value value="legemiddelregisteret@fhi.no"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NO"/>
+      <display value="Norway"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://www.whocc.no/atc"/>
+    </include>
+  </compose>
+</ValueSet>
