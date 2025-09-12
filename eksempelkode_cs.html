@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>C# eksempelkode - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.4</title>
+        v1.0.6</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.4 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.6 - ci-build
                             
                             
                             
@@ -412,25 +412,25 @@
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">sealed</span> <span class="k">class</span> <span class="nc">SignertKryptertBundle</span>
 <span class="p">{</span>
     <span class="c1">// Metadata (ukryptert)</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">MessageId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="n">DateTime</span> <span class="n">GeneratedAt</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">SenderOrganizationIdentifier</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">MessageFormatVersion</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">MessageId</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="n">DateTime</span> <span class="n">GeneratedAt</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">SenderOrganizationIdentifier</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">MessageFormatVersion</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
 
     <span class="c1">// Sikkerhetsinformasjon</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">EncryptionCertificateThumbprint</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">EncryptedKey</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">Nonce</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">AuthenticationTag</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">EncryptionCertificateThumbprint</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">EncryptedKey</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">Nonce</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">AuthenticationTag</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
 
     <span class="c1">// Payload</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="n">DateTime</span> <span class="n">RapporteringFra</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="n">DateTime</span> <span class="n">RapporteringTil</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">EncryptedContent</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="n">DateTime</span> <span class="n">RapporteringFra</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="n">DateTime</span> <span class="n">RapporteringTil</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">EncryptedContent</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
 
     <span class="c1">// Integritetssikring</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">SignatureCertificateThumbprint</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">Signature</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="n">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">string</span> <span class="n">SignatureCertificateThumbprint</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="n">required</span> <span class="kt">byte</span><span class="p">[]</span> <span class="n">Signature</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">init</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -835,10 +835,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.4 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.6 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Aug 29, 2025 09:13+0000">2025-08-29</span>
+                        title="Fri, Sep 12, 2025 12:55+0000">2025-09-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.0.4"/>
+  <version value="1.0.6"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="draft"/>
-  <date value="2025-05-30"/>
+  <date value="2025-09-12"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -51,6 +51,11 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_no_basis">
+    <uri value="http://fhir.org/packages/hl7.fhir.no.basis/ImplementationGuide/hl7.fhir.no.basis"/>
+    <packageId value="hl7.fhir.no.basis"/>
+    <version value="2.2.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -262,7 +267,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.7.1"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.8.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -634,7 +639,7 @@
         <reference value="StructureDefinition/lmdi-practitioner"/>
       </reference>
       <name value="Helsepersonell"/>
-      <description value="Helsepersonell som har rekvirert legemidlet"/>
+      <description value="Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -646,6 +651,17 @@
       </reference>
       <name value="Helsepersonell-1-HPR-nummer"/>
       <description value="Eksempel på helsepersonell med HPR-nummer"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/Helsepersonell-2-Uten-HPR"/>
+      </reference>
+      <name value="Helsepersonell-2-Uten-HPR"/>
+      <description value="Eksempel på rekvirent uten HPR-nummer"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
     </resource>
     <resource>
@@ -738,6 +754,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/lmdi-address-use"/>
+      </reference>
+      <name value="LMDI Address Use"/>
+      <description value="Tillatte verdier for address.use i LMDI: home, temp, old"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="NamingSystem"/>
       </extension>
       <reference>
@@ -745,17 +772,6 @@
       </reference>
       <name value="lmdi-lokaltLegemiddel"/>
       <description value="Id for angivelse av legemiddel fra lokal legemiddelkatalog"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/lmdi-municipalitycode"/>
-      </reference>
-      <name value="lmdi-municipalitycode"/>
-      <description value="Kodet verdi for kommune"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -887,7 +903,7 @@
         <reference value="StructureDefinition/lmdi-organization"/>
       </reference>
       <name value="Organisasjon"/>
-      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. &#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).&#xA;&#xA;For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)"/>
+      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.&#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).&#xA;&#xA;For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle &quot;organisasjonshierarki&quot; skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -931,7 +947,7 @@
         <reference value="StructureDefinition/lmdi-patient"/>
       </reference>
       <name value="Pasient"/>
-      <description value="Pasienten som har fått rekvirert eller administrert legemiddel"/>
+      <description value="Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -997,7 +1013,7 @@
         <reference value="StructureDefinition/lmdi-substance"/>
       </reference>
       <name value="Virkestoff"/>
-      <description value="En tilpasset profil av Substance for å representere virkestoff."/>
+      <description value="En tilpasset profil av Substance for å representere virkestoff, basert på no-basis."/>
       <exampleBoolean value="false"/>
     </resource>
     <page>
