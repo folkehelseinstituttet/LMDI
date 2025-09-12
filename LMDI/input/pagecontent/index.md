@@ -9,6 +9,14 @@ Samle inn legemiddeldata på individnivå fra polikliniske og innlagte pasienter
 
 Legemiddelregisteret inneholder allerede data om utleverte legemidler fra apotek på individnivå. LMDI-prosjektet fokuserer nå spesifikt på å utvide dette med data om administrerte legemidler fra sykehus og andre institusjoner, noe som vil gi et mer komplett bilde av legemiddelbruk på tvers av hele helsetjenesten. Dette er en viktig utvidelse som vil styrke grunnlaget for bedre pasientsikkerhet, kunnskapsproduksjon og helseovervåking.
 
+<figure>
+    <img src="lmdi-2.png" width="49%" style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;">
+    <figcaption style="font-style: italic; font-size: 14px; margin-top: 5px;">
+        Figur: LMDI-prosjektet skal implementere mottak av data om administrerte legemidler.
+    </figcaption>
+</figure>
+<br clear="all"/>
+
 #### no-basis-avhengigheter
 
 LMDI-profilene bygger på [no-basis](https://hl7.no/fhir/no-basis/) – de norske basisprofilene for FHIR. no-basis tilbyr standardiserte profiler tilpasset norske forhold, blant annet for identifikatorer, adresser og kodeverk.
@@ -20,16 +28,6 @@ Følgende LMDI-profiler arver fra no-basis:
 - **Virkestoff** bygger på no-basis-Substance (virkestoff i norsk kontekst)
 
 Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tvers av helsesektoren. For å bruke LMDI-profilene må no-basis (versjon 2.2.0) være installert som en avhengighet.
-
-
-<figure>
-    <img src="lmdi-2.png" width="49%" style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;">
-    <figcaption style="font-style: italic; font-size: 14px; margin-top: 5px;">
-        Figur: LMDI-prosjektet skal implementere mottak av data om administrerte legemidler.
-    </figcaption>
-</figure>
-<br clear="all"/>
-
 
 #### Versjoner av implementasjonsguiden
 
