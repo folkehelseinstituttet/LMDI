@@ -30,10 +30,7 @@
       "name" : "KommunenummerValueSet",
       "title" : "Kommunenummer ValueSet",
       "description" : "Komplett kodeverk for norske kommunenummer (Volven 3402)",
-      "systems" : ["urn:oid:2.16.578.1.12.4.1.1.3402"],
-      "uses" : {
-      },
-      "StructureDefinition-lmdi-municipalitycode.html" : "lmdi-municipalitycode"
+      "systems" : ["urn:oid:2.16.578.1.12.4.1.1.3402"]
     },
     {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
@@ -54,6 +51,18 @@
       "StructureDefinition-lmdi-medication.html" : "Legemiddel"
     },
     {
+      "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use",
+      "version" : "1.0.6",
+      "status" : "active",
+      "name" : "LmdiAddressUse",
+      "title" : "LMDI Address Use",
+      "description" : "Tillatte verdier for address.use i LMDI: home, temp, old",
+      "systems" : ["http://hl7.org/fhir/address-use"],
+      "uses" : {
+      },
+      "StructureDefinition-lmdi-patient.html" : "Pasient"
+    },
+    {
       "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
       "version" : "1.0.6",
       "status" : "draft",
@@ -64,20 +73,6 @@
       "uses" : {
       },
       "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/address-use",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "AddressUse",
-      "title" : "AddressUse",
-      "description" : "The use of an address.",
-      "systems" : ["http://hl7.org/fhir/address-use"],
-      "oids" : ["2.16.840.1.113883.4.642.3.67"],
-      "sources" : ["2.16.840.1.113883.4.642.3.67"],
-      "uses" : {
-      },
-      "StructureDefinition-lmdi-patient.html" : "Pasient"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medicationrequest-status",

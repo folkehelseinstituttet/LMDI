@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="09348920-4b76-48a3-96fe-00e3d7628847"/>
+  <id value="e204f297-8172-48d0-a165-fc3c07ffdda6"/>
   <meta>
-    <lastUpdated value="2025-09-10T11:46:32.797+00:00"/>
+    <lastUpdated value="2025-09-12T12:36:11.907+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -59,7 +59,7 @@
         <name value="LokalLegemiddelkatalogValues"/>
         <title value="Lokal Legemiddelkatalog Values"/>
         <status value="draft"/>
-        <date value="2025-09-10T11:45:52+00:00"/>
+        <date value="2025-09-12T12:35:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -68,8 +68,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:34b8154a-bcab-4731-bcae-b88b1fc499de"/>
-          <timestamp value="2025-09-10T11:47:01+00:00"/>
+          <identifier value="urn:uuid:776a4c1c-2ecf-4037-a8ef-315e6ed1915a"/>
+          <timestamp value="2025-09-12T12:37:01+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -7132,8 +7132,7 @@
         <name value="ATCValueSet"/>
         <title value="ATC Kodesystem ValueSet"/>
         <status value="active"/>
-        <experimental value="false"/>
-        <date value="2025-04-11"/>
+        <date value="2025-09-12"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -7142,8 +7141,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9b6ef1e6-a999-4b2d-a7ac-cb6267091bd2"/>
-          <timestamp value="2025-09-10T11:47:01+00:00"/>
+          <identifier value="urn:uuid:69bc29d7-bf68-410a-8760-e6ba58ded8f5"/>
+          <timestamp value="2025-09-12T12:37:01+00:00"/>
           <total value="6897"/>
           <offset value="0"/>
           <parameter>
@@ -12203,7 +12202,7 @@
         <name value="LegemiddelKoder"/>
         <title value="Gyldige legemiddelkoder"/>
         <status value="draft"/>
-        <date value="2025-09-09T11:44:24+00:00"/>
+        <date value="2025-09-12T12:35:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -12215,8 +12214,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:58167140-07c6-4d5f-885c-aa4269b0513b"/>
-          <timestamp value="2025-09-09T11:45:43.509Z"/>
+          <identifier value="urn:uuid:c725a3bd-e34a-4ee8-87ba-54d638b25988"/>
+          <timestamp value="2025-09-12T12:37:05.945Z"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -12235,6 +12234,116 @@
             <name value="count"/>
             <valueInteger value="1000"/>
           </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-address-use.html">codesystem AddressUse v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 3 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/address-use-home"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-home">home</a>
+                </td>
+                <td>http://hl7.org/fhir/address-use</td>
+                <td>Home</td>
+                <td>A communication address at a home.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/address-use-temp"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-temp">temp</a>
+                </td>
+                <td>http://hl7.org/fhir/address-use</td>
+                <td>Temporary</td>
+                <td>A temporary address. The period can provide more detailed information.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/address-use-old"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-address-use.html#address-use-old">old</a>
+                </td>
+                <td>http://hl7.org/fhir/address-use</td>
+                <td>Old / Incorrect</td>
+                <td>This address is no longer in use (or was never correct but retained for records).</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use"/>
+        <version value="1.0.6"/>
+        <name value="LmdiAddressUse"/>
+        <title value="LMDI Address Use"/>
+        <status value="active"/>
+        <date value="2025-09-12T12:35:23+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="NO"/>
+            <display value="Norway"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:73b717fe-ea4c-44e5-9627-488c6ba44c77"/>
+          <timestamp value="2025-09-12T12:37:05+00:00"/>
+          <total value="3"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/address-use|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/address-use"/>
+            <code value="home"/>
+            <display value="Home"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/address-use"/>
+            <code value="temp"/>
+            <display value="Temporary"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/address-use"/>
+            <code value="old"/>
+            <display value="Old / Incorrect"/>
+          </contains>
         </expansion>
       </ValueSet>
     </resource>

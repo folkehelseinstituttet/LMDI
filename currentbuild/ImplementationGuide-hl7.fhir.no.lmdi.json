@@ -11,7 +11,7 @@
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "draft",
-  "date" : "2025-09-08",
+  "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -814,7 +814,7 @@
         "reference" : "StructureDefinition/lmdi-practitioner"
       },
       "name" : "Helsepersonell",
-      "description" : "Helsepersonell som har rekvirert legemidlet",
+      "description" : "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt).",
       "exampleBoolean" : false
     },
     {
@@ -827,6 +827,18 @@
       },
       "name" : "Helsepersonell-1-HPR-nummer",
       "description" : "Eksempel på helsepersonell med HPR-nummer",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/Helsepersonell-2-Uten-HPR"
+      },
+      "name" : "Helsepersonell-2-Uten-HPR",
+      "description" : "Eksempel på rekvirent uten HPR-nummer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
     },
     {
@@ -928,6 +940,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lmdi-address-use"
+      },
+      "name" : "LMDI Address Use",
+      "description" : "Tillatte verdier for address.use i LMDI: home, temp, old",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "NamingSystem"
       }],
       "reference" : {
@@ -935,18 +959,6 @@
       },
       "name" : "lmdi-lokaltLegemiddel",
       "description" : "Id for angivelse av legemiddel fra lokal legemiddelkatalog",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/lmdi-municipalitycode"
-      },
-      "name" : "lmdi-municipalitycode",
-      "description" : "Kodet verdi for kommune",
       "exampleBoolean" : false
     },
     {
@@ -1090,7 +1102,7 @@
         "reference" : "StructureDefinition/lmdi-organization"
       },
       "name" : "Organisasjon",
-      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. \n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).\n\nFor organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)",
+      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).\n\nFor organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle \"organisasjonshierarki\" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)",
       "exampleBoolean" : false
     },
     {
@@ -1138,7 +1150,7 @@
         "reference" : "StructureDefinition/lmdi-patient"
       },
       "name" : "Pasient",
-      "description" : "Pasienten som har fått rekvirert eller administrert legemiddel",
+      "description" : "Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient",
       "exampleBoolean" : false
     },
     {

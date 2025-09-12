@@ -189,7 +189,7 @@
                   title="StructureDefinition/lmdi-practitioner">Helsepersonell</a>
             </td>
             <td>
-<p>Helsepersonell som har rekvirert legemidlet</p>
+<p>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt).</p>
 </td>
          </tr>
          <tr>
@@ -236,7 +236,7 @@
                   title="StructureDefinition/lmdi-organization">Organisasjon</a>
             </td>
             <td>
-<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem.</p>
+<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.</p>
 
 <p>Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).</p>
 
@@ -249,7 +249,7 @@
                   title="StructureDefinition/lmdi-patient">Pasient</a>
             </td>
             <td>
-<p>Pasienten som har fått rekvirert eller administrert legemiddel</p>
+<p>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient</p>
 </td>
          </tr>
          <tr>
@@ -316,15 +316,6 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-lmdi-municipalitycode.html"
-                  title="StructureDefinition/lmdi-municipalitycode">lmdi-municipalitycode</a>
-            </td>
-            <td>
-<p>Kodet verdi for kommune</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-lmdi-urban-district.html"
                   title="StructureDefinition/lmdi-urban-district">lmdi-urban-district</a>
             </td>
@@ -363,6 +354,14 @@
             </td>
             <td>
 <p>Komplett kodeverk for norske kommunenummer (Volven 3402)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-lmdi-address-use.html" title="ValueSet/lmdi-address-use">LMDI Address Use</a>
+            </td>
+            <td>
+<p>Tillatte verdier for address.use i LMDI: home, temp, old</p>
 </td>
          </tr>
          <tr>
@@ -553,6 +552,15 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Practitioner-Helsepersonell-2-Uten-HPR.html"
+                  title="Practitioner/Helsepersonell-2-Uten-HPR">Helsepersonell-2-Uten-HPR</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirent uten HPR-nummer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Medication-Medisin-1-LegemiddelDose-Oxycodone.html"
                   title="Medication/Medisin-1-LegemiddelDose-Oxycodone">Medisin-1-LegemiddelDose-Oxycodone</a>
             </td>
@@ -667,7 +675,7 @@
                     Package hl7.fhir.no.lmdi#1.0.6 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Sep 10, 2025 11:46+0000">2025-09-10</span>
+                        title="Fri, Sep 12, 2025 12:36+0000">2025-09-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
