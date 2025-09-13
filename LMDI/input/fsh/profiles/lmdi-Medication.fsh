@@ -105,9 +105,10 @@ Description: "Beskrivelse av legemiddel."
 * batch MS
 * batch ^short = "Batch-nummer for legemiddelet"
 
-* ingredient.item[x] only Reference(Virkestoff or Legemiddel) or CodeableConcept
-* ingredient.item[x] ^type.targetProfile[0] = "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
-* ingredient.item[x] ^type.targetProfile[1] = "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+// Fix for targetProfile constraint error: Use type-specific constraints instead
+* ingredient.item[x] only Reference or CodeableConcept
+* ingredient.itemReference only Reference($LMDISubstance or $LMDIMedication)
+* ingredient.itemCodeableConcept from LegemiddelKoder (preferred)
 
 
 // EKSEMPLER

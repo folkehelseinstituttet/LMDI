@@ -11,7 +11,6 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 
 // === IDENTIFIER HÅNDTERING ===
 // Bruker no-basis slicing med closed slicing for å begrense til kun HPR
-* identifier 0..1  // Gjør valgfri - endret fra 1..1
 * identifier ^slicing.rules = #closed  // Lukk slicing - kun HPR tillatt
 * identifier ^short = "HPR-nummer når tilgjengelig"
 * identifier ^definition = "HPR-nummer fra Helsepersonellregisteret når tilgjengelig. Kan mangle for rekvirenter uten HPR-registrering."
@@ -24,7 +23,6 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 // Skjul FNR og DNR slices fra no-basis
 * identifier[FNR] 0..0
 * identifier[DNR] 0..0
-
 
 // Spesialitet
 // * qualification ^short = "Spesialitet"
@@ -55,4 +53,4 @@ Description: "Eksempel på helsepersonell med HPR-nummer"
 Instance: Helsepersonell-2-Uten-HPR
 InstanceOf: Helsepersonell
 Description: "Eksempel på rekvirent uten HPR-nummer"
-// Ingen identifier - gyldig siden identifier nå er 0..1
+// Ingen identifier - gyldig da identifier er valgfri (0..*)
