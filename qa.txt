@@ -1,9 +1,9 @@
 Lmdi : Validation Results
 =========================================
 
-err = 279, warn = 68, info = 46
+err = 275, warn = 68, info = 46
 IG Publisher Version: 2.0.17
-Generated Fri Sep 12 13:08:06 UTC 2025. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.6 (canonical = http://hl7.no/fhir/ig/lmdi)
+Generated Sat Sep 13 17:42:20 UTC 2025. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.6 (canonical = http://hl7.no/fhir/ig/lmdi)
  Build Errors : 327 / 7 / 0
  /github/workspace/LMDI/fsh-generated/resources/Bundle-LegemiddelregisterBundle-1 : 15 / 7 / 31
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 2
@@ -39,7 +39,7 @@ Generated Fri Sep 12 13:08:06 UTC 2025. FHIR version 4.0.1 for hl7.fhir.no.lmdi#
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-del-av-behandlingsregime : 3 / 2 / 1
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-encounter : 4 / 0 / 2
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-klinisk-studie : 3 / 2 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication : 50 / 0 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication : 46 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationadministration : 29 / 1 / 3
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationrequest : 17 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-organization : 13 / 4 / 5
@@ -612,12 +612,6 @@ ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-klinisk
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-klinisk-studie-definitions.html#Extension.url' at 'div/table/tr/td/a' for 'url' does not resolve
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-klinisk-studie-definitions.html#Extension.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-medication.json ==
-ERROR: StructureDefinition/lmdi-medication: StructureDefinition.snapshot.element[115].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical ((code='Reference' or code = 'canonical') or targetProfile.empty())'
-ERROR: StructureDefinition/lmdi-medication: StructureDefinition.differential.element[45].type[0]: Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical ((code='Reference' or code = 'canonical') or targetProfile.empty())'
-ERROR: StructureDefinition/lmdi-medication: StructureDefinition.differential.element[45]: This element has a targetProfile but the types CodeableConcept do not make this kind of constraint relevant
-ERROR: StructureDefinition/lmdi-medication: StructureDefinition.differential.element[45].type[0].targetProfile[0]: Type CodeableConcept does not allow for target Profiles
-ERROR: StructureDefinition/lmdi-medication: StructureDefinition.snapshot.element[115]: This element has a targetProfile but the types CodeableConcept do not make this kind of constraint relevant
-ERROR: StructureDefinition/lmdi-medication: StructureDefinition.snapshot.element[115].type[0].targetProfile[0]: Type CodeableConcept does not allow for target Profiles
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication' at 'div/table/tr/td/a' for 'Medication' does not resolve
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.extension' at 'div/table/tr/td/a' for 'Slices for extension' does not resolve
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.extension:classification' at 'div/table/tr/td/a' for 'extension:classification' does not resolve
@@ -660,7 +654,9 @@ ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicat
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:SCT' at 'div/table/tr/td/a' for 'coding:SCT' does not resolve
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:SCT.system' at 'div/table/tr/td/a' for 'system' does not resolve
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient' at 'div/table/tr/td/a' for 'ingredient' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]' at 'div/table/tr/td/a' for 'item[x]' does not resolve
+ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]' at 'div/table/tr/td/a' for 'Slices for item[x]' does not resolve
+ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]:itemReference' at 'div/table/tr/td/a' for 'item[x]:itemReference' does not resolve
+ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]:itemCodeableConcept' at 'div/table/tr/td/a' for 'item[x]:itemCodeableConcept' does not resolve
 ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.batch' at 'div/table/tr/td/a' for 'batch' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-medicationadministration.json ==
 WARNING: Legemiddeladministrering.MedicationAdministration.status: Binding http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus could not be expanded

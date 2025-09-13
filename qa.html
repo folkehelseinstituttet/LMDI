@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 327, errors = 279, warn = 68, info = 46-->
+<!-- broken links = 327, errors = 275, warn = 68, info = 46-->
 <head>
   <title>Lmdi : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Lmdi</h1>
- <p>Generated Fri Sep 12 13:08:06 UTC 2025, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.6 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Sat Sep 13 17:42:20 UTC 2025, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.6 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.0.17</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.no.lmdi, Canonical = http://hl7.no/fhir/ig/lmdi</td></tr>
@@ -116,9 +116,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-location-status.html">EncounterLocationStatus</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-physical-type.html">LocationType</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/medication.html">Medication</a>
- (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-status.html">Medication Status Codes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-status.html">Medication Status Codes</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-form-codes.html">SNOMEDCTFormCodes</a>
- (1 uses),     <a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/substance.html">Substance</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a>
  (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html">SNOMEDCTReasonMedicationNotGivenCodes</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html">MedicationAdministration Category Codes</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html">MedicationAdministration Performer Function Codes</a>
@@ -150,8 +151,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-substance-status.html">FHIRSubstanceStatus</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-substance-category.html">SubstanceCategoryCodes</a>
  (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-substance-code.html">SubstanceCode</a>
- (2 uses),     <a href="http://hl7.org/fhir/R4/substance.html">Substance</a>
- (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-admin-status.html">MedicationAdministration Status Codes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-admin-status.html">MedicationAdministration Status Codes</a>
  (1 uses)
   </li>
 </ul>
@@ -161,7 +161,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
- <tr><td>Summary:</td><td> errors = 279, warn = 68, info = 46, broken links = 327, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+ <tr><td>Summary:</td><td> errors = 275, warn = 68, info = 46, broken links = 327, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -273,7 +273,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><a href="#_github_workspace_LMDI_fsh-generated_resources_StructureDefinition-lmdi-klinisk-studie"><b>/github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-klinisk-studie</b></a></td><td><b>3</b></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_LMDI_fsh-generated_resources_StructureDefinition-lmdi-medication"><b>/github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication</b></a></td><td><b>50</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_github_workspace_LMDI_fsh-generated_resources_StructureDefinition-lmdi-medication"><b>/github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication</b></a></td><td><b>46</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_LMDI_fsh-generated_resources_StructureDefinition-lmdi-medicationadministration"><b>/github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationadministration</b></a></td><td><b>29</b></td><td><b>1</b></td><td><b>2</b></td>
@@ -1555,10 +1555,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.display (l12&#8203;/c8)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Oksykodon' for http://www.whocc.no/atc#N02AA05. Valid display is 'oxycodone' (for the language(s) 'no')</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Display_Name_for__should_be_one_of__instead_of</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l4">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l5">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication.code (l23/c4)</b></td><td><b>warning</b></td><td><b>Unable to check whether the code is in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.6' because the code system http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff| was not found</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l4">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_CS</span></td>
+     <td><b>Medication.code (l23/c4)</b></td><td><b>warning</b></td><td><b>Unable to check whether the code is in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.6' because the code system http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff| was not found</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l5">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_CS</span></td>
    </tr>
 </table>
 <hr/>
@@ -1574,10 +1574,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication (l1/c2)</b></td><td><b>error</b></td><td><b>Medication.text: max allowed = 0, but found 1 (from http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication|1.0.6)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Validation_VAL_Profile_Maximum</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l5">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l6">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication.code (l23/c4)</b></td><td><b>warning</b></td><td><b>Unable to check whether the code is in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.6' because the code system http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare| was not found</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l5">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_CS</span></td>
+     <td><b>Medication.code (l23/c4)</b></td><td><b>warning</b></td><td><b>Unable to check whether the code is in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.6' because the code system http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare| was not found</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l6">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_CS</span></td>
    </tr>
 </table>
 <hr/>
@@ -1596,10 +1596,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.display (l12&#8203;/c8)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Isosorbid mononitrat' for http://www.whocc.no/atc#C01DA14. Valid display is 'isosorbide mononitrate' (for the language(s) 'no')</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Display_Name_for__should_be_one_of__instead_of</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l6">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l7">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication.code (l23/c4)</b></td><td><b>warning</b></td><td><b>Unable to check whether the code is in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.6' because the code system http://dmp.no/fhir/NamingSystem/festLegemiddelPakning| was not found</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l6">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_CS</span></td>
+     <td><b>Medication.code (l23/c4)</b></td><td><b>warning</b></td><td><b>Unable to check whether the code is in the value set 'http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.6' because the code system http://dmp.no/fhir/NamingSystem/festLegemiddelPakning| was not found</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l7">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_CHECK_IF_THE_PROVIDED_CODES_ARE_IN_THE_VALUE_SET_CS</span></td>
    </tr>
 </table>
 <hr/>
@@ -2237,24 +2237,6 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[115]&#8203;.type[0] (l1&#8203;/c257121)</b></td><td><b>error</b></td><td><b>Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical ((code='Reference' or code = 'canonical') or targetProfile.empty())'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/ElementDefinition#eld-17</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[45]&#8203;.type[0] (l1&#8203;/c275924)</b></td><td><b>error</b></td><td><b>Constraint failed: eld-17: 'targetProfile is only allowed if the type is Reference or canonical ((code='Reference' or code = 'canonical') or targetProfile.empty())'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/ElementDefinition#eld-17</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[45]</b></td><td><b>error</b></td><td><b>This element has a targetProfile but the types CodeableConcept do not make this kind of constraint relevant</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ILLEGAL_CHARACTERISTICS</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.differential&#8203;.element[45]&#8203;.type[0]&#8203;.targetProfile[0]</b></td><td><b>error</b></td><td><b>Type CodeableConcept does not allow for target Profiles</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_TYPE_NO_TARGET_PROFILE</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[115]</b></td><td><b>error</b></td><td><b>This element has a targetProfile but the types CodeableConcept do not make this kind of constraint relevant</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ILLEGAL_CHARACTERISTICS</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[115]&#8203;.type[0]&#8203;.targetProfile[0]</b></td><td><b>error</b></td><td><b>Type CodeableConcept does not allow for target Profiles</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_ED_TYPE_NO_TARGET_PROFILE</span></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication' at 'div/table/tr/td/a' for 'Medication' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
@@ -2381,7 +2363,13 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient' at 'div/table/tr/td/a' for 'ingredient' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]' at 'div/table/tr/td/a' for 'item[x]' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]' at 'div/table/tr/td/a' for 'Slices for item[x]' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]:itemReference' at 'div/table/tr/td/a' for 'item[x]:itemReference' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]:itemCodeableConcept' at 'div/table/tr/td/a' for 'item[x]:itemCodeableConcept' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.batch' at 'div/table/tr/td/a' for 'batch' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -2743,25 +2731,25 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[17]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c59956)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[17]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c59984)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[26]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c73421)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[26]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c73449)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[35]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c86686)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[35]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c86714)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[53]&#8203;.binding&#8203;.valueSet (l1&#8203;/c113274)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.9060'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[53]&#8203;.binding&#8203;.valueSet (l1&#8203;/c113302)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.9060'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[61]&#8203;.binding&#8203;.valueSet (l1&#8203;/c124712)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7704'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[61]&#8203;.binding&#8203;.valueSet (l1&#8203;/c124740)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7704'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[69]&#8203;.binding&#8203;.valueSet (l1&#8203;/c136129)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7426'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[69]&#8203;.binding&#8203;.valueSet (l1&#8203;/c136157)</b></td><td><b>warning</b></td><td><b>A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7426'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</span></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[78]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c149203)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[78]&#8203;.mapping[2]&#8203;.map (l1&#8203;/c149231)</b></td><td><b>information</b></td><td><b>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SECURITY_STRING_CONTENT_WARNING</span></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td><b>Hyperlink 'StructureDefinition-lmdi-practitioner-definitions.html#Practitioner' at 'div/table/tr/td/a' for 'Practitioner' does not resolve</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
@@ -2939,7 +2927,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>ValueSet (l1/c1128)</b></td><td><b>error</b></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_SHAREABLE_MISSING_HL7</span></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet&#8203;.where(id = 'kommunenummer-alle')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Unable to provide support for code system urn:oid:2.16.578.1.12.4.1.1.3402</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l10">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+     <td><b>ValueSet&#8203;.where(id = 'kommunenummer-alle')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Unable to provide support for code system urn:oid:2.16.578.1.12.4.1.1.3402</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l11">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
    </tr>
 </table>
 <hr/>
@@ -3254,28 +3242,6 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  <table class="grid">
    <tr style="background-color: #ffeeee">
      <td><a href="StructureDefinition-lmdi-patient.html">fsh-generated/resources/StructureDefinition-lmdi-patient.json</a></td><td><b>The element Patient.extension.extension has a binding, but no bindable types are present [Extension]</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="SD_ED_TYPE_NO_TARGET_PROFILE"> </a>
-<h2>SD_ED_TYPE_NO_TARGET_PROFILE</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-lmdi-medication.html">fsh-generated/resources/StructureDefinition-lmdi-medication.json</a></td><td><b>Type CodeableConcept does not allow for target Profiles</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-lmdi-medication.html">fsh-generated/resources/StructureDefinition-lmdi-medication.json</a></td><td><b>Type CodeableConcept does not allow for target Profiles</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="SD_ILLEGAL_CHARACTERISTICS"> </a>
-<h2>SD_ILLEGAL_CHARACTERISTICS</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-lmdi-medication.html">fsh-generated/resources/StructureDefinition-lmdi-medication.json</a></td><td><b>This element has a targetProfile but the types CodeableConcept do not make this kind of constraint relevant</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-lmdi-medication.html">fsh-generated/resources/StructureDefinition-lmdi-medication.json</a></td><td><b>This element has a targetProfile but the types CodeableConcept do not make this kind of constraint relevant</b></td>
    </tr>
 </table>
 <hr/>
