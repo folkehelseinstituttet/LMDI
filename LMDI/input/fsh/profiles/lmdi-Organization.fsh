@@ -8,11 +8,11 @@ Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, s
 
 Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).
 
-For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle "organisasjonshierarki" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH) 
+For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle "organisasjonshierarki" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)
 """
-* ^version = "1.0.6"
+* ^version = "1.0.7"
 * ^status = #draft
-* ^date = "2025-09-12"
+* ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
 
 // Sikkerhetsinvariant: minst ENH eller RSH identifier
@@ -60,18 +60,19 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 // Adresse
 * address MS
 * address ^short = "Gjeldende fysisk adresse"
+* address.extension[official] 0..0
 * address.type = #physical
 
 * address.district ^short = "Kommune"
 // Bruker no-basis-municipalitycode extension som allerede er definert
-* address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune"
-* address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune"
+* address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune. Kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402)"
+* address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune. Koder fra kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402) skal benyttes"
 
 * address.state ^short = "Fylkesnavn"
+* address.country 0..0
 
-// Beholde LMDI sin urban district extension siden det er spesifikk for LMDI
-* address.extension contains LmdiUrbanDistrict named lmdiUrbanDistrict 0..1
-* address.extension[lmdiUrbanDistrict] ^short = "Kodet verdi for bydel"
+* address.extension[urbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
+* address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 
 // EKSEMPLER
 Instance: Organisasjon-1-Sykehjem
@@ -106,7 +107,7 @@ Description: "Eksempel på sykehusorganisasjon"
 * address.type = #physical
 * address.district = "Oslo"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
-* address.extension[lmdiUrbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
+* address.extension[urbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
 
 // Invariant definisjon
 Invariant: lmdi-org-identifier
