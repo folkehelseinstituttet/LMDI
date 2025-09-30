@@ -34,15 +34,15 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 // Adresse - bruker no-basis-Address
 * address MS
 * address only NoBasisAddress
+* address.extension[official] 0..0
 * address.type = #physical
 * address.city 0..0
 * address.text 0..0
 * address.line 0..0
 * address.district ^short = "Kommune"
-// Bruker no-basis propertyinformation for kommune
-* address.extension contains NoBasisPropertyInformation named propertyinformation 0..1
-* address.extension[propertyinformation].extension[municipality].valueCoding.system = "urn:oid:2.16.578.1.12.4.1.1.3402" (exactly)
-* address.extension[propertyinformation].extension[municipality].valueCoding.code 1..1
+// Bruker no-basis-municipalitycode extension
+* address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune. Kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402)"
+* address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune. Koder fra kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402) skal benyttes"
 * address.use from LmdiAddressUse (required)
 * address.use ^binding.description = "Tillatte verdier er home, temp eller old"
 * address.use ^short = "home | temp | old"
@@ -92,7 +92,7 @@ Description: "Eksempel på pasient med kjønn og fødselsdato"
 * gender = #female
 * birthDate = "1958-09-19"
 * address.district = "Bærum"
-* address.extension[propertyinformation].extension[municipality].valueCoding = $kommunenummer-alle#3024 "Bærum"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3024 "Bærum"
 
 Instance: Pasient-2-FNR
 InstanceOf: Pasient
@@ -100,7 +100,7 @@ Description: "Eksempel på pasient med fødselsnummer"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier[FNR].value = "13031353453"
 * address.district = "Bærum"
-* address.extension[propertyinformation].extension[municipality].valueCoding = $kommunenummer-alle#3024 "Bærum"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3024 "Bærum"
 
 
 Invariant: address-use-constraint
