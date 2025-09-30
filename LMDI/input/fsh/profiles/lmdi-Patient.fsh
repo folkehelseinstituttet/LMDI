@@ -30,6 +30,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * photo 0..0
 * telecom 0..0
 * text 0..0
+* extension[citizenship] 0..0
 
 // Adresse - bruker no-basis-Address
 * address MS
