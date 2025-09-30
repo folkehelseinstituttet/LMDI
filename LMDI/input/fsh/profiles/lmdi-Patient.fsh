@@ -13,7 +13,7 @@ Parent: NoBasisPatient
 Title: "Pasient"
 Description: "Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient"
 * ^status = #draft
-* ^date = "2025-09-12"
+* ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
 
 // Deaktiverte felter
