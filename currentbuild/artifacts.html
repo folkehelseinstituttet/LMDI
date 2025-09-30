@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.4</title>
+        v1.0.7</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.4 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.7 - ci-build
                             
                             
                             
@@ -189,7 +189,7 @@
                   title="StructureDefinition/lmdi-practitioner">Helsepersonell</a>
             </td>
             <td>
-<p>Helsepersonell som har rekvirert legemidlet</p>
+<p>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.</p>
 </td>
          </tr>
          <tr>
@@ -236,7 +236,7 @@
                   title="StructureDefinition/lmdi-organization">Organisasjon</a>
             </td>
             <td>
-<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem.</p>
+<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.</p>
 
 <p>Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).</p>
 
@@ -249,7 +249,7 @@
                   title="StructureDefinition/lmdi-patient">Pasient</a>
             </td>
             <td>
-<p>Pasienten som har fått rekvirert eller administrert legemiddel</p>
+<p>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient</p>
 </td>
          </tr>
          <tr>
@@ -258,7 +258,7 @@
                   title="StructureDefinition/lmdi-substance">Virkestoff</a>
             </td>
             <td>
-<p>En tilpasset profil av Substance for å representere virkestoff.</p>
+<p>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.</p>
 </td>
          </tr>
       </tbody>
@@ -314,24 +314,6 @@
 <p>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.</p>
 </td>
          </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-lmdi-municipalitycode.html"
-                  title="StructureDefinition/lmdi-municipalitycode">lmdi-municipalitycode</a>
-            </td>
-            <td>
-<p>Kodet verdi for kommune</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-lmdi-urban-district.html"
-                  title="StructureDefinition/lmdi-urban-district">lmdi-urban-district</a>
-            </td>
-            <td>
-<p>Information about Norwegian urban district (bydel)</p>
-</td>
-         </tr>
       </tbody>
    </table>
    <a name="3"> </a>
@@ -363,6 +345,14 @@
             </td>
             <td>
 <p>Komplett kodeverk for norske kommunenummer (Volven 3402)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-lmdi-address-use.html" title="ValueSet/lmdi-address-use">LMDI Address Use</a>
+            </td>
+            <td>
+<p>Tillatte verdier for address.use i LMDI: home, temp, old</p>
 </td>
          </tr>
          <tr>
@@ -553,6 +543,15 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Practitioner-Helsepersonell-2-Uten-HPR.html"
+                  title="Practitioner/Helsepersonell-2-Uten-HPR">Helsepersonell-2-Uten-HPR</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirent uten HPR-nummer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Medication-Medisin-1-LegemiddelDose-Oxycodone.html"
                   title="Medication/Medisin-1-LegemiddelDose-Oxycodone">Medisin-1-LegemiddelDose-Oxycodone</a>
             </td>
@@ -664,10 +663,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.4 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, Sep 18, 2025 12:16+0000">2025-09-18</span>
+                        title="Tue, Sep 30, 2025 09:53+0000">2025-09-30</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

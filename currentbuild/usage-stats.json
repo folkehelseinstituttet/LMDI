@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -26,20 +26,6 @@
       ]
     },
     {
-      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-municipalitycode",
-      "title": "lmdi-municipalitycode",
-      "types": [
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean"
-      ]
-    },
-    {
       "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
       "title": "Prosentvis doseendring",
       "types": [
@@ -51,20 +37,6 @@
         "string",
         "uri",
         "code"
-      ]
-    },
-    {
-      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-urban-district",
-      "title": "lmdi-urban-district",
-      "types": [
-        "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean"
       ]
     },
     {
@@ -189,6 +161,22 @@
     ]
   },
   "usage": {
+    "http://hl7.no/fhir/StructureDefinition/no-basis-address-official": [
+      "Organization.address",
+      "Patient.address"
+    ],
+    "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode": [
+      "Organization.address.district",
+      "Patient.address.district"
+    ],
+    "http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation": [
+      "Organization.address",
+      "Patient.address"
+    ],
+    "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district": [
+      "Organization.address",
+      "Patient.address"
+    ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification": [
       "Medication"
     ],
@@ -198,15 +186,8 @@
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie": [
       "MedicationRequest"
     ],
-    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-municipalitycode": [
-      "Organization.address.district",
-      "Patient.address.district"
-    ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring": [
       "MedicationRequest"
-    ],
-    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-urban-district": [
-      "Organization.address"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier": [
       "Bundle.entry.resource",
@@ -234,6 +215,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
       "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-citizenship": [
+      "Patient"
     ],
     "http://hl7.org/fhir/StructureDefinition/regex": [
       "StructureDefinition.snapshot.element.type"

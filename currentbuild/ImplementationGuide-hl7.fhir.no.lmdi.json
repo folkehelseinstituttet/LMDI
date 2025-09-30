@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"no\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"no\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.lmdi</b></p><a name=\"hl7.fhir.no.lmdi\"> </a><a name=\"hchl7.fhir.no.lmdi\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: no</p></div><h2>Lmdi</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi</pre><div><p>Denne implementasjongguiden beskriver hvordan institusjoner skal overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret</p>\n</div></div>"
   },
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.0.4",
+  "version" : "1.0.7",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "draft",
-  "date" : "2025-05-30",
+  "date" : "2025-09-30",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -53,6 +53,12 @@
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
     "version" : "5.2.0"
+  },
+  {
+    "id" : "hl7_fhir_no_basis",
+    "uri" : "http://fhir.org/packages/hl7.fhir.no.basis/ImplementationGuide/hl7.fhir.no.basis",
+    "packageId" : "hl7.fhir.no.basis",
+    "version" : "2.2.0"
   }],
   "definition" : {
     "extension" : [{
@@ -808,7 +814,7 @@
         "reference" : "StructureDefinition/lmdi-practitioner"
       },
       "name" : "Helsepersonell",
-      "description" : "Helsepersonell som har rekvirert legemidlet",
+      "description" : "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.",
       "exampleBoolean" : false
     },
     {
@@ -821,6 +827,18 @@
       },
       "name" : "Helsepersonell-1-HPR-nummer",
       "description" : "Eksempel på helsepersonell med HPR-nummer",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/Helsepersonell-2-Uten-HPR"
+      },
+      "name" : "Helsepersonell-2-Uten-HPR",
+      "description" : "Eksempel på rekvirent uten HPR-nummer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
     },
     {
@@ -922,6 +940,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/lmdi-address-use"
+      },
+      "name" : "LMDI Address Use",
+      "description" : "Tillatte verdier for address.use i LMDI: home, temp, old",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "NamingSystem"
       }],
       "reference" : {
@@ -929,30 +959,6 @@
       },
       "name" : "lmdi-lokaltLegemiddel",
       "description" : "Id for angivelse av legemiddel fra lokal legemiddelkatalog",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/lmdi-municipalitycode"
-      },
-      "name" : "lmdi-municipalitycode",
-      "description" : "Kodet verdi for kommune",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/lmdi-urban-district"
-      },
-      "name" : "lmdi-urban-district",
-      "description" : "Information about Norwegian urban district (bydel)",
       "exampleBoolean" : false
     },
     {
@@ -1084,7 +1090,7 @@
         "reference" : "StructureDefinition/lmdi-organization"
       },
       "name" : "Organisasjon",
-      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. \n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).\n\nFor organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)",
+      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).\n\nFor organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle \"organisasjonshierarki\" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)",
       "exampleBoolean" : false
     },
     {
@@ -1132,7 +1138,7 @@
         "reference" : "StructureDefinition/lmdi-patient"
       },
       "name" : "Pasient",
-      "description" : "Pasienten som har fått rekvirert eller administrert legemiddel",
+      "description" : "Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient",
       "exampleBoolean" : false
     },
     {
@@ -1204,7 +1210,7 @@
         "reference" : "StructureDefinition/lmdi-substance"
       },
       "name" : "Virkestoff",
-      "description" : "En tilpasset profil av Substance for å representere virkestoff.",
+      "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.",
       "exampleBoolean" : false
     }],
     "page" : {
