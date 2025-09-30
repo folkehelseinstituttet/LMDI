@@ -71,8 +71,8 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 * address.state ^short = "Fylkesnavn"
 * address.country 0..0
 
-* address.extension contains LmdiUrbanDistrict named lmdiUrbanDistrict 0..1
-* address.extension[lmdiUrbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
+* address.extension[urbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
+* address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 
 // EKSEMPLER
 Instance: Organisasjon-1-Sykehjem
@@ -107,7 +107,7 @@ Description: "Eksempel på sykehusorganisasjon"
 * address.type = #physical
 * address.district = "Oslo"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
-* address.extension[lmdiUrbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
+* address.extension[urbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
 
 // Invariant definisjon
 Invariant: lmdi-org-identifier

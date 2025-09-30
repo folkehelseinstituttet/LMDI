@@ -33,7 +33,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | Versjon | Dato | Beskrivelse |
 |---------|------|-------------|
-| 1.0.7 | 2025-09-30 | Fjernet country-feltet fra adresse i Pasient og Organisasjon<br/>address.type satt til physical i Pasient (kun fysiske adresser)<br/>Endret kommune-extension fra propertyInformation til municipalitycode i Pasient<br/>Fjernet citizenship-extension fra Pasient |
+| 1.0.7 | 2025-09-30 | Fjernet country-feltet fra adresse i Pasient og Organisasjon<br/>address.type satt til physical i Pasient (kun fysiske adresser)<br/>Endret kommune-extension fra propertyInformation til municipalitycode i Pasient<br/>Fjernet citizenship-extension fra Pasient<br/>Endret bydel-extension fra lmdi-urban-district til no-basis urbanDistrict i Organisasjon |
 | 1.0.6 | 2025-09-12 | Helsepersonell, Organisasjon, Pasient og Virkestoff er nå basert på no-basis<br/> |
 | 1.0.5 | 2025-07-28 | NPR Episode Identifier extension endret til å støtte både string og UUID samtidig. Extension er nå en kompleks struktur med sub-extensions for stringIdentifier og uuidIdentifier.<br/>Lagt til LmrLopenummer- og FestVarenummer-slicene på `Legemiddel.code.coding` |
 | 1.0.4 | 2025-05-30 | Legemiddel.code kan nå være en SNOMED CT kode.<br/> Ny profil Virkestoff som skal brukes for Substance.<br/>Ny extension (Must Support) Episode.nprEpisodeIdentifier. <br/> Ny C# eksempelkode for autorisering med HelseID.  |
