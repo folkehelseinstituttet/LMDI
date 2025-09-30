@@ -3,6 +3,7 @@ Her kan du laste ned ulike deler av implementasjonsguiden.
 
 #### Komplett pakke
 * [Fullstendig implementasjonsguide (ZIP)](full-ig.zip) - Inneholder hele implementasjonsguiden med all dokumentasjon og alle ressurser
+* [FHIR Package (TGZ)](package.tgz) - NPM-pakke med alle profiler inkludert snapshots (kan brukes med SUSHI og andre FHIR-verktøy)
 
 #### JSON-format
 * [Definisjoner (JSON)](definitions.json.zip) - Inneholder alle ressursdefinisjoner i JSON-format
