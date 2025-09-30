@@ -64,14 +64,14 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 
 * address.district ^short = "Kommune"
 // Bruker no-basis-municipalitycode extension som allerede er definert
-* address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune"
-* address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune"
+* address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune. Kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402)"
+* address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune. Koder fra kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402) skal benyttes"
 
 * address.state ^short = "Fylkesnavn"
+* address.country 0..0
 
-// Beholde LMDI sin urban district extension siden det er spesifikk for LMDI
 * address.extension contains LmdiUrbanDistrict named lmdiUrbanDistrict 0..1
-* address.extension[lmdiUrbanDistrict] ^short = "Kodet verdi for bydel"
+* address.extension[lmdiUrbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
 
 // EKSEMPLER
 Instance: Organisasjon-1-Sykehjem

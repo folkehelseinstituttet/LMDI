@@ -48,6 +48,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.use ^definition = "Adressetype begrenset til home, temp eller old"
 * address.use obeys address-use-constraint
 * address.state ^short = "Fylkesnavn"
+* address.country 0..0
 * address.postalCode 0..0
 // Fødselsdato
 * birthDate MS

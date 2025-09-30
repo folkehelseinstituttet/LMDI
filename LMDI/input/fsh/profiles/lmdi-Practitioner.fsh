@@ -2,7 +2,7 @@ Profile: Helsepersonell
 Id: lmdi-practitioner
 Parent: NoBasisPractitioner
 Title: "Helsepersonell"
-Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt)."
+Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig."
 
 * ^status = #draft
 * ^date = "2025-09-12"
@@ -12,13 +12,13 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 // === IDENTIFIER HÅNDTERING ===
 // Bruker no-basis slicing med closed slicing for å begrense til kun HPR
 * identifier ^slicing.rules = #closed  // Lukk slicing - kun HPR tillatt
-* identifier ^short = "HPR-nummer når tilgjengelig"
-* identifier ^definition = "HPR-nummer fra Helsepersonellregisteret når tilgjengelig. Kan mangle for rekvirenter uten HPR-registrering."
+* identifier ^short = "Helsepersonellnummer (HPR-nummer)"
+* identifier ^definition = "Helsepersonellnummer (HPR-nummer) fra Helsepersonellregisteret. Skal registreres når tilgjengelig."
 
 // Bruk no-basis HPR slice - system er allerede definert i no-basis
 * identifier[HPR] 0..1 MS
 * identifier[HPR] ^short = "HPR-nummer"
-* identifier[HPR] ^definition = "Helsepersonellnummer fra HPR når tilgjengelig."
+* identifier[HPR] ^definition = "Helsepersonellnummer fra Helsepersonellregisteret."
 
 // Skjul FNR og DNR slices fra no-basis
 * identifier[FNR] 0..0
