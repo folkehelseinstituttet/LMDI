@@ -34,6 +34,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 // Adresse - bruker no-basis-Address
 * address MS
 * address only NoBasisAddress
+* address.type = #physical
 * address.city 0..0
 * address.text 0..0
 * address.line 0..0
