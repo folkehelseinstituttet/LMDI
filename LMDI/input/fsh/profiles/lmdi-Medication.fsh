@@ -4,7 +4,7 @@ Id:       lmdi-medication
 Title:    "Legemiddel"
 Description: "Beskrivelse av legemiddel."
 * ^status = #draft
-* ^date = "2025-09-12"
+* ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
 
 * manufacturer 0..0
@@ -106,6 +106,9 @@ Description: "Beskrivelse av legemiddel."
 * batch ^short = "Batch-nummer for legemiddelet"
 
 // Fix for targetProfile constraint error: Use type-specific constraints instead
+* ingredient ^short = "Virkestoff(er) i legemiddelet"
+* ingredient ^definition = "Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi."
+* ingredient ^comment = "For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."
 * ingredient.item[x] only Reference or CodeableConcept
 * ingredient.itemReference only Reference($LMDISubstance or $LMDIMedication)
 * ingredient.itemCodeableConcept from LegemiddelKoder (preferred)
