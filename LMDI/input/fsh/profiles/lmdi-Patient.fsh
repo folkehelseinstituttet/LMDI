@@ -72,15 +72,15 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * identifier[FNR] ^short = "Fødselsnummer"
 * identifier[FNR].value 1..1
 * identifier[FNR].value ^short = "Fødselsnummeret (11 siffer)"
-* identifier[FNR].value ^example.label = "Fødselsnummer"
-* identifier[FNR].value ^example.valueString = "12345678901"
+* identifier[FNR].value ^example[0].label = "Fødselsnummer"
+* identifier[FNR].value ^example[0].valueString = "12345678901"
 
 * identifier[DNR] 0..1 MS
 * identifier[DNR] ^short = "D-nummer"
 * identifier[DNR].value 1..1
 * identifier[DNR].value ^short = "D-nummer (11 siffer)"
-* identifier[DNR].value ^example.label = "D-nummer"
-* identifier[DNR].value ^example.valueString = "12345678901"
+* identifier[DNR].value ^example[0].label = "D-nummer"
+* identifier[DNR].value ^example[0].valueString = "12345678901"
 
 // Skjul no-basis slices som LMDI ikke bruker
 * identifier[FHN] 0..0
