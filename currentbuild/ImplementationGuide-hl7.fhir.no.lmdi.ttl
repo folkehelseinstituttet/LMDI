@@ -1332,6 +1332,24 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type> ;
+         fhir:reference [ fhir:v "ValueSet/lmdi-address-type" ]
+       ] ;
+       fhir:name [ fhir:v "LMDI Address Type" ] ;
+       fhir:description [ fhir:v "Tillatt verdi for address.type i LMDI: physical" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use> ;
          fhir:reference [ fhir:v "ValueSet/lmdi-address-use" ]
        ] ;

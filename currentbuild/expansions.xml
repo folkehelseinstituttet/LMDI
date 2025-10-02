@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="a28e4379-a9af-4ed3-b022-b8cb12b96382"/>
+  <id value="969a967b-81ac-4803-a5bc-d57230d5e60f"/>
   <meta>
-    <lastUpdated value="2025-10-02T08:46:05.467+00:00"/>
+    <lastUpdated value="2025-10-02T11:15:23.574+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -59,7 +59,7 @@
         <name value="LokalLegemiddelkatalogValues"/>
         <title value="Lokal Legemiddelkatalog Values"/>
         <status value="draft"/>
-        <date value="2025-10-02T08:45:20+00:00"/>
+        <date value="2025-10-02T11:14:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -68,8 +68,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5b1e8a44-07dc-4a0e-aaf1-9a6950b56bf1"/>
-          <timestamp value="2025-10-02T08:46:57+00:00"/>
+          <identifier value="urn:uuid:c82c76dc-2c70-48ec-9413-e39061849b23"/>
+          <timestamp value="2025-10-02T11:16:09+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -7141,8 +7141,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:41d4abef-30c0-469f-846e-826e3cdcfece"/>
-          <timestamp value="2025-10-02T08:46:57+00:00"/>
+          <identifier value="urn:uuid:b15c23b0-75f9-4e7d-b29e-59ecdabd664a"/>
+          <timestamp value="2025-10-02T11:16:09+00:00"/>
           <total value="6897"/>
           <offset value="0"/>
           <parameter>
@@ -12202,7 +12202,7 @@
         <name value="LegemiddelKoder"/>
         <title value="Gyldige legemiddelkoder"/>
         <status value="draft"/>
-        <date value="2025-10-02T08:45:20+00:00"/>
+        <date value="2025-10-02T11:14:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -12214,8 +12214,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:bed0c7d1-86b2-461b-91f1-2baf1bac0267"/>
-          <timestamp value="2025-10-02T08:47:02.033Z"/>
+          <identifier value="urn:uuid:eaf80c6a-0742-450a-ac63-d2383d01308b"/>
+          <timestamp value="2025-10-02T11:16:14.011Z"/>
           <total value="0"/>
           <offset value="0"/>
           <parameter>
@@ -12234,6 +12234,88 @@
             <name value="count"/>
             <valueInteger value="1000"/>
           </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://hl7.org/fhir/R4/codesystem-address-type.html">codesystem AddressType v4.0.1 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/address-type-physical"> </a>  
+                  <a href="http://hl7.org/fhir/R4/codesystem-address-type.html#address-type-physical">physical</a>
+                </td>
+                <td>http://hl7.org/fhir/address-type</td>
+                <td>Physical</td>
+                <td>A physical address that can be visited.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type"/>
+        <version value="1.0.7"/>
+        <name value="LmdiAddressType"/>
+        <title value="LMDI Address Type"/>
+        <status value="active"/>
+        <date value="2025-10-02T11:14:42+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="NO"/>
+            <display value="Norway"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:030ca256-7380-4300-bd05-de21b7257d75"/>
+          <timestamp value="2025-10-02T11:16:14+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/address-type|4.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/address-type"/>
+            <code value="physical"/>
+            <display value="Physical"/>
+          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -12300,7 +12382,7 @@
         <name value="LmdiAddressUse"/>
         <title value="LMDI Address Use"/>
         <status value="active"/>
-        <date value="2025-10-02T08:45:20+00:00"/>
+        <date value="2025-10-02T11:14:42+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -12309,8 +12391,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:196a1d72-5dcd-4068-b1a7-26e5f7bf65f1"/>
-          <timestamp value="2025-10-02T08:47:02+00:00"/>
+          <identifier value="urn:uuid:01547ce2-1f1c-4b61-85c6-086b4a747cbc"/>
+          <timestamp value="2025-10-02T11:16:14+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
