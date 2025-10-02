@@ -37,6 +37,8 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address only NoBasisAddress
 * address.extension[official] 0..0
 * address.type = #physical
+* address.type ^short = "physical"
+* address.type ^definition = "Adressetypen er begrenset til physical (fysisk adresse)"
 * address.city 0..0
 * address.text 0..0
 * address.line 0..0
