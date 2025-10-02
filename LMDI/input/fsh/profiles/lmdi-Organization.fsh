@@ -61,6 +61,7 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 * address MS
 * address ^short = "Gjeldende fysisk adresse"
 * address.extension[official] 0..0
+* address.extension[propertyInformation] 0..0
 * address.type = #physical
 
 * address.district ^short = "Kommune"

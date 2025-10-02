@@ -27,6 +27,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address MS
 * address only NoBasisAddress
 * address.extension[official] 0..0
+* address.extension[propertyInformation] 0..0
 * address.type = #physical
 * address.type from LmdiAddressType (required)
 * address.city 0..0
