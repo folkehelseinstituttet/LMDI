@@ -52,6 +52,9 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.state ^short = "Fylkesnavn"
 * address.country 0..0
 * address.postalCode 0..0
+
+* address.extension[urbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
+* address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 // Fødselsdato
 * birthDate MS
 * birthDate ^short = "Fødselsdato"
