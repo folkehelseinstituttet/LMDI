@@ -63,6 +63,8 @@ For organisasjonen som er del av en større organisasjon, skal dette angis ved h
 * address.extension[official] 0..0
 * address.extension[propertyInformation] 0..0
 * address.type = #physical
+* address.type from LmdiAddressType (required)
+* address.type ^short = "physical"
 
 * address.district ^short = "Kommune"
 // Bruker no-basis-municipalitycode extension som allerede er definert
