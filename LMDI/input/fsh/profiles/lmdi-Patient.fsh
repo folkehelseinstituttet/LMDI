@@ -1,12 +1,3 @@
-ValueSet: LmdiAddressUse
-Id: lmdi-address-use
-Title: "LMDI Address Use"
-Description: "Tillatte verdier for address.use i LMDI: home, temp, old"
-* ^status = #active
-* include http://hl7.org/fhir/address-use#home
-* include http://hl7.org/fhir/address-use#temp
-* include http://hl7.org/fhir/address-use#old
-
 Profile: Pasient
 Id: lmdi-patient
 Parent: NoBasisPatient
@@ -37,8 +28,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address only NoBasisAddress
 * address.extension[official] 0..0
 * address.type = #physical
-* address.type ^short = "physical"
-* address.type ^definition = "Adressetypen er begrenset til physical (fysisk adresse)"
+* address.type from LmdiAddressType (required)
 * address.city 0..0
 * address.text 0..0
 * address.line 0..0
