@@ -42,6 +42,10 @@ Versjon 1.0 våren 2025.
 - 2024-05-28: Versjon 0.5 klar for teknisk gjennomgang og kommentering fra torsdag 30.5.2025
 - 2024-05-23: Versjon 0.2
 
+## Lisens
+
+Innholdet i dette repositoriet er lisensiert under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). Se `LICENSE` for full lisensinformasjon.
+
 ## Kontaktpersoner
 
 - Kari Jansdotter Husabø (legemiddelregisteret@fhi.no)
