@@ -49,7 +49,10 @@ pilotering og innføring hos institusjonene.
 | 1.0.1 | 2025-02-04 | Endret LegemiddelregisterBundle til Transaction |
 | 1.0.0 | 2025-01-15 | Første offisielle versjon |
 
-Se [GitHub Pages for full historikk](https://hl7norway.github.io/LMDI/currentbuild/index.html#versjoner-av-implementasjonsguiden).
+## Lisens
+
+Innholdet i dette repositoriet er lisensiert under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). Se `LICENSE` for full lisensinformasjon.
+
 
 ## Kontakt
 
