@@ -33,14 +33,23 @@ Inntil videre er profilene og implementasjonsguiden ([se siste build](https://hl
 
 ## Plan
 
-Versjon 1.0 våren 2025.
+Implementasjonsguiden i 1.0.x-serien er publisert og oppdateres fortløpende med forbedringer basert på tilbakemeldinger fra
+pilotering og innføring hos institusjonene.
 
 ## Status og historikk
 
-- 2024-06-27: Versjon 0.9 klar for test
-- 2024-06-13: Versjon 0.8
-- 2024-05-28: Versjon 0.5 klar for teknisk gjennomgang og kommentering fra torsdag 30.5.2025
-- 2024-05-23: Versjon 0.2
+| Versjon | Dato | Kort beskrivelse |
+|---------|------|------------------|
+| 1.0.7 | 2025-09-30 | Oppdateringer av adresser og extensions i Pasient og Organisasjon |
+| 1.0.6 | 2025-09-12 | Helsepersonell, Organisasjon, Pasient og Virkestoff basert på no-basis |
+| 1.0.5 | 2025-07-28 | Støtte for både string og UUID i NPR-episoder; nye kodeslicer for Legemiddel |
+| 1.0.4 | 2025-05-30 | SNOMED CT-støtte for Legemiddel og ny Virkestoff-profil |
+| 1.0.3 | 2025-04-11 | Justeringer i Legemiddelrekvirering og nye extensions |
+| 1.0.2 | 2025-04-01 | Nye extensions for Legemiddelrekvirering |
+| 1.0.1 | 2025-02-04 | Endret LegemiddelregisterBundle til Transaction |
+| 1.0.0 | 2025-01-15 | Første offisielle versjon |
+
+Se [GitHub Pages for full historikk](https://hl7norway.github.io/LMDI/currentbuild/index.html#versjoner-av-implementasjonsguiden).
 
 ## Kontaktpersoner
 
