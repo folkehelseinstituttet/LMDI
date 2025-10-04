@@ -42,11 +42,9 @@ Versjon 1.0 våren 2025.
 - 2024-05-28: Versjon 0.5 klar for teknisk gjennomgang og kommentering fra torsdag 30.5.2025
 - 2024-05-23: Versjon 0.2
 
-## Kontaktpersoner
+## Kontakt
 
-- Kari Jansdotter Husabø (legemiddelregisteret@fhi.no)
-- Line A. Sæle ([FHI](https://www.fhi.no/))
-- Roar Andersen (team-a@fhi.no)
+Har du spørsmål om implementasjonsguiden eller innsending av data til Legemiddelregisteret, ta kontakt med Legemiddelregisteret på [legemiddelregisteret@fhi.no](mailto:legemiddelregisteret@fhi.no).
 
 <img src="LMDI/input/images/logo-norsk-hele-navnet.svg" height="120px" />
 <br clear="all"/>
