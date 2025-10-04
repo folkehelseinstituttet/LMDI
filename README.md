@@ -51,11 +51,9 @@ pilotering og innføring hos institusjonene.
 
 Se [GitHub Pages for full historikk](https://hl7norway.github.io/LMDI/currentbuild/index.html#versjoner-av-implementasjonsguiden).
 
-## Kontaktpersoner
+## Kontakt
 
-- Kari Jansdotter Husabø (legemiddelregisteret@fhi.no)
-- Line A. Sæle ([FHI](https://www.fhi.no/))
-- Roar Andersen (team-a@fhi.no)
+Har du spørsmål om implementasjonsguiden eller innsending av data til Legemiddelregisteret, ta kontakt med Legemiddelregisteret på [legemiddelregisteret@fhi.no](mailto:legemiddelregisteret@fhi.no).
 
 <img src="LMDI/input/images/logo-norsk-hele-navnet.svg" height="120px" />
 <br clear="all"/>
