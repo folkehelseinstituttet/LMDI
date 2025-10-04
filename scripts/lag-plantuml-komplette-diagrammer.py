@@ -31,7 +31,7 @@ STANDARD_ELEMENTS = {
     'extension', 'modifierExtension', 'resourceType'
 }
 
-LMDI_DOCS_BASE_URL = "https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-"
+LMDI_DOCS_BASE_URL = "https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-"
 FHIR_DOCS_BASE_URL = "https://hl7.org/fhir/R4/"
 FHIR_R4_BASE_URL = "http://hl7.org/fhir/R4/"
 

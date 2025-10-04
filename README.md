@@ -27,30 +27,36 @@ Er HL7 FHIR nytt for deg anbefaler vi å ta en titt på [HL7 Norge sin side med 
 
 Hovedmålet er datadeling ved hjelp av RESTful API i henhold til [HL7 FHIR sin spesifikasjon](https://hl7.org/fhir/R4/http.html), og etter [anbefaling fra Helsedirektoratet](https://www.ehelse.no/standardisering/standarder/anbefaling-om-bruk-av-hl7-fhir-for-datadeling). 
 
-Inntil videre er profilene og implementasjonsguiden ([se siste build](https://hl7norway.github.io/LMDI/currentbuild/)) agnostiske til om det skal genereres dokumenter eller forskjellig mønster for REST API (f.eks. *reference* vs *logical id*). 
+Inntil videre er profilene og implementasjonsguiden ([se siste build](https://folkehelseinstituttet.github.io/LMDI/)) agnostiske til om det skal genereres dokumenter eller forskjellig mønster for REST API (f.eks. *reference* vs *logical id*).
 
 <img src="LMDI/input/images/flyt-enkel-1.svg" width="60%" />
 
 ## Plan
 
-Versjon 1.0 våren 2025.
+Implementasjonsguiden i 1.0.x-serien er publisert og oppdateres fortløpende med forbedringer basert på tilbakemeldinger fra
+pilotering og innføring hos institusjonene.
 
 ## Status og historikk
 
-- 2024-06-27: Versjon 0.9 klar for test
-- 2024-06-13: Versjon 0.8
-- 2024-05-28: Versjon 0.5 klar for teknisk gjennomgang og kommentering fra torsdag 30.5.2025
-- 2024-05-23: Versjon 0.2
+| Versjon | Dato | Kort beskrivelse |
+|---------|------|------------------|
+| 1.0.7 | 2025-09-30 | Oppdateringer av adresser og extensions i Pasient og Organisasjon |
+| 1.0.6 | 2025-09-12 | Helsepersonell, Organisasjon, Pasient og Virkestoff basert på no-basis |
+| 1.0.5 | 2025-07-28 | Støtte for både string og UUID i NPR-episoder; nye kodeslicer for Legemiddel |
+| 1.0.4 | 2025-05-30 | SNOMED CT-støtte for Legemiddel og ny Virkestoff-profil |
+| 1.0.3 | 2025-04-11 | Justeringer i Legemiddelrekvirering og nye extensions |
+| 1.0.2 | 2025-04-01 | Nye extensions for Legemiddelrekvirering |
+| 1.0.1 | 2025-02-04 | Endret LegemiddelregisterBundle til Transaction |
+| 1.0.0 | 2025-01-15 | Første offisielle versjon |
 
 ## Lisens
 
 Innholdet i dette repositoriet er lisensiert under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). Se `LICENSE` for full lisensinformasjon.
 
-## Kontaktpersoner
 
-- Kari Jansdotter Husabø (legemiddelregisteret@fhi.no)
-- Line A. Sæle ([FHI](https://www.fhi.no/))
-- Roar Andersen (team-a@fhi.no)
+## Kontakt
+
+Har du spørsmål om implementasjonsguiden eller innsending av data til Legemiddelregisteret, ta kontakt med Legemiddelregisteret på [legemiddelregisteret@fhi.no](mailto:legemiddelregisteret@fhi.no).
 
 <img src="LMDI/input/images/logo-norsk-hele-navnet.svg" height="120px" />
 <br clear="all"/>
