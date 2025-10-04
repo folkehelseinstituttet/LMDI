@@ -340,7 +340,7 @@ def generate_plantuml(structures: List[FHIRStructure]) -> str:
         if resource_id:
             # This is a profile class with a StructureDefinition file
             # Use the original resource ID for the link, not the display name
-            link = f"https://hl7norway.github.io/LMDI/currentbuild/StructureDefinition-{resource_id}.html"
+            link = f"https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-{resource_id}.html"
         else:
             # This is a FHIR base resource
             # Convert to lowercase for FHIR base resource URLs

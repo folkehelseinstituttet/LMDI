@@ -27,7 +27,7 @@ Er HL7 FHIR nytt for deg anbefaler vi å ta en titt på [HL7 Norge sin side med 
 
 Hovedmålet er datadeling ved hjelp av RESTful API i henhold til [HL7 FHIR sin spesifikasjon](https://hl7.org/fhir/R4/http.html), og etter [anbefaling fra Helsedirektoratet](https://www.ehelse.no/standardisering/standarder/anbefaling-om-bruk-av-hl7-fhir-for-datadeling). 
 
-Inntil videre er profilene og implementasjonsguiden ([se siste build](https://hl7norway.github.io/LMDI/currentbuild/)) agnostiske til om det skal genereres dokumenter eller forskjellig mønster for REST API (f.eks. *reference* vs *logical id*). 
+Inntil videre er profilene og implementasjonsguiden ([se siste build](https://folkehelseinstituttet.github.io/LMDI/)) agnostiske til om det skal genereres dokumenter eller forskjellig mønster for REST API (f.eks. *reference* vs *logical id*).
 
 <img src="LMDI/input/images/flyt-enkel-1.svg" width="60%" />
 
