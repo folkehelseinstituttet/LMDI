@@ -23,13 +23,11 @@ I første omgang utvikles implementasjonsguiden for [FHIR R4](https://www.hl7.or
 
 Er HL7 FHIR nytt for deg anbefaler vi å ta en titt på [HL7 Norge sin side med ressurser](https://hl7norway.github.io/best-practice/docs/resources.html), f.eks. introduksjon for henholdsvis [klinikere](https://www.hl7.org/fhir/overview-clinical.html), [arkitekter](https://www.hl7.org/fhir/overview-arch.html) og [utviklere](https://www.hl7.org/fhir/overview-dev.html).
 
-## Samhandlingsarkitektur
+## Implementasjonsguide og dokumentasjon
 
-Hovedmålet er datadeling ved hjelp av RESTful API i henhold til [HL7 FHIR sin spesifikasjon](https://hl7.org/fhir/R4/http.html), og etter [anbefaling fra Helsedirektoratet](https://www.ehelse.no/standardisering/standarder/anbefaling-om-bruk-av-hl7-fhir-for-datadeling). 
+Implementasjonsguiden for LMDI er tilgjengelig på [folkehelseinstituttet.github.io/LMDI](https://folkehelseinstituttet.github.io/LMDI/) og oppdateres løpende i takt med utviklingen av profilene. Her finner du en helhetlig oversikt over informasjonsmodellen, eksempelkode og anbefalinger for hvordan løsninger kan integreres mot LMDI ved bruk av HL7 FHIR.
 
-Inntil videre er profilene og implementasjonsguiden ([se siste build](https://folkehelseinstituttet.github.io/LMDI/)) agnostiske til om det skal genereres dokumenter eller forskjellig mønster for REST API (f.eks. *reference* vs *logical id*).
-
-<img src="LMDI/input/images/flyt-enkel-1.svg" width="60%" />
+Implementasjonsguiden inneholder detaljert dokumentasjon for alle FHIR-profilene som inngår i implementasjonen, inkludert beskrivelser av obligatoriske og valgfrie elementer, eksempelscenarier og referanser til gjeldende kodeverk. I tillegg kan du laste ned profiler, eksempelfiler og andre relevante artefakter som JSON- eller XML-pakker for bruk i egne utviklings- og testmiljøer.
 
 ## Plan
 
