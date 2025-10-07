@@ -15,11 +15,11 @@
      fhir:div "<div xml:lang=\"no\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"no\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.lmdi</b></p><a name=\"hl7.fhir.no.lmdi\"> </a><a name=\"hchl7.fhir.no.lmdi\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: no</p></div><h2>Lmdi</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi</pre><div><p>Denne implementasjongguiden beskriver hvordan institusjoner skal overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.0.6"] ; # 
+  fhir:version [ fhir:v "1.0.7"] ; # 
   fhir:name [ fhir:v "Lmdi"] ; # 
   fhir:title [ fhir:v "Legemiddeldata fra institusjon til Legemiddelregisteret"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-09-12"^^xsd:date] ; # 
+  fhir:date [ fhir:v "2025-09-30"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -1136,7 +1136,7 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-practitioner" ]
        ] ;
        fhir:name [ fhir:v "Helsepersonell" ] ;
-       fhir:description [ fhir:v "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt)." ] ;
+       fhir:description [ fhir:v "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1332,6 +1332,24 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type> ;
+         fhir:reference [ fhir:v "ValueSet/lmdi-address-type" ]
+       ] ;
+       fhir:name [ fhir:v "LMDI Address Type" ] ;
+       fhir:description [ fhir:v "Tillatt verdi for address.type i LMDI: physical" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use> ;
          fhir:reference [ fhir:v "ValueSet/lmdi-address-use" ]
        ] ;
@@ -1355,24 +1373,6 @@
        ] ;
        fhir:name [ fhir:v "lmdi-lokaltLegemiddel" ] ;
        fhir:description [ fhir:v "Id for angivelse av legemiddel fra lokal legemiddelkatalog" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-urban-district> ;
-         fhir:reference [ fhir:v "StructureDefinition/lmdi-urban-district" ]
-       ] ;
-       fhir:name [ fhir:v "lmdi-urban-district" ] ;
-       fhir:description [ fhir:v "Information about Norwegian urban district (bydel)" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1573,7 +1573,7 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-organization" ]
        ] ;
        fhir:name [ fhir:v "Organisasjon" ] ;
-       fhir:description [ fhir:v "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).\n\nFor organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle \"organisasjonshierarki\" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)" ] ;
+       fhir:description [ fhir:v "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).\n\nFor organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

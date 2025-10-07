@@ -265,23 +265,17 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.address.extension:official","Organization.address.extension","official","extensions
-user contentoffisiell adresse","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-address-official]]} {[]}
-","The concept of an officially registered address","Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in ""Folkeregisteret"" for persons or ""Enhetsregisteret"" for organizations.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Organization.address.extension:official","Organization.address.extension","official","","",0,0,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-address-official]]} {[]}
+","The concept of an officially registered address","Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in ""Folkeregisteret"" for persons or ""Enhetsregisteret"" for organizations.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.address.extension:urbanDistrict","Organization.address.extension","urbanDistrict","extensions
-user contentbydelurban district","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-urban-district]]} {[]}
-","urban district information","The name and number of the of the urban district of this address.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Organization.address.extension:urbanDistrict","Organization.address.extension","urbanDistrict","bydel
+urban district","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-urban-district]]} {[]}
+","Kodet verdi for bydel. Kodeverk ""Bydelsnummer"" (OID 3403)","Kodet verdi for bydel. Koder fra kodeverk ""Bydelsnummer"" (OID 3403) skal benyttes","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.address.extension:propertyInformation","Organization.address.extension","propertyInformation","extensions
-user content","",0,*,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation]]} {[]}
-","Real property identification","Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Organization.address.extension:lmdiUrbanDistrict","Organization.address.extension","lmdiUrbanDistrict","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-urban-district]]} {[]}
-","Kodet verdi for bydel","Information about Norwegian urban district (bydel)","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Organization.address.extension:propertyInformation","Organization.address.extension","propertyInformation","","",0,0,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation]]} {[]}
+","real property identification","Additional information identifying norwegian real property.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Organization.address.use","Organization.address.use","","","",0,1,"","Y","Y","code {[]} {[]}
@@ -291,9 +285,9 @@ Mapping of values to other Norwegian CodeSystems is documented in the implementa
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Organization.address.type","Organization.address.type","","","",0,1,"","","Y","code {[]} {[]}
-","postal | physical | both","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+","physical","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
 
-Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use ""home"" and type ""physical"" or ""both"". The ""official"" flag can be either true or false.","The definition of Address states that ""address is intended to describe postal addresses, not physical locations"". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""physical""/>","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","The type of an address (physical / postal).","http://hl7.org/fhir/ValueSet/address-type|4.0.1","",,,,"Address.type",0,1,"ele-1
+Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use ""home"" and type ""physical"" or ""both"". The ""official"" flag can be either true or false.","The definition of Address states that ""address is intended to describe postal addresses, not physical locations"". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""physical""/>","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","","http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type","",,,,"Address.type",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Organization.address.text","Organization.address.text","","","",0,0,"","","Y","string {[]} {[]}
@@ -327,7 +321,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Organization.address.district.extension:municipalitycode","Organization.address.district.extension","municipalitycode","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode]]} {[]}
-","Kodet verdi for kommune","Kodet verdi for kommune","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","Kodet verdi for kommune. Kodeverk ""Kommunenummer og regionale spesialkoder"" (OID 3402)","Kodet verdi for kommune. Koder fra kodeverk ""Kommunenummer og regionale spesialkoder"" (OID 3402) skal benyttes","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Organization.address.district.value","Organization.address.district.value","","","",0,1,"","","","string {[]} {[]}
@@ -346,7 +340,7 @@ postnummer","",0,0,"","","Y","string {[]} {[]}
 In Norway this is af four digit number defined by the norwegian postal service.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""9132""/>","","",,,,,"",,,,"Address.postalCode",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Organization.address.country","Organization.address.country","","","",0,1,"","","Y","string {[]} {[]}
+"Organization.address.country","Organization.address.country","","","",0,0,"","","Y","string {[]} {[]}
 ","Country (e.g. can be ISO 3166 2 or 3 letter code)","Country - a nation as commonly understood or generally accepted.","ISO 3166 3 letter codes can be used in place of a human readable country name.","","","","","","","","",,,,,"",,,,"Address.country",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "

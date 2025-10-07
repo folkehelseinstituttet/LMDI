@@ -39,12 +39,12 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Practitioner.identifier","Practitioner.identifier","","","",0,*,"","","Y","Identifier {[]} {[]}
-","HPR-nummer når tilgjengelig","HPR-nummer fra Helsepersonellregisteret når tilgjengelig. Kan mangle for rekvirenter uten HPR-registrering.","","Often, specific identities are assigned for the agent.","","","","","","","",,,,,"","value:system}
+","Helsepersonellnummer (HPR-nummer)","Helsepersonellnummer (HPR-nummer) fra Helsepersonellregisteret. Skal registreres når tilgjengelig.","","Often, specific identities are assigned for the agent.","","","","","","","",,,,,"","value:system}
 ","",,"closed","Practitioner.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Practitioner.identifier:HPR","Practitioner.identifier","HPR","","",0,1,"Y","","Y","Identifier {[]} {[]}
-","HPR-nummer","Helsepersonellnummer fra HPR når tilgjengelig.","","Often, specific identities are assigned for the agent.","","","","","","","",,,,,"",,,,"Practitioner.identifier",0,*,"ele-1
+","HPR-nummer","Helsepersonellnummer fra Helsepersonellregisteret.","","Often, specific identities are assigned for the agent.","","","","","","","",,,,,"",,,,"Practitioner.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Practitioner.identifier:HPR.id","Practitioner.identifier.id","","","",0,1,"","","","string {[]} {[]}

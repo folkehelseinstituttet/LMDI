@@ -11,17 +11,16 @@
   "gender" : "female",
   "birthDate" : "1958-09-19",
   "address" : [{
-    "extension" : [{
+    "district" : "Bærum",
+    "_district" : {
       "extension" : [{
-        "url" : "municipality",
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
         "valueCoding" : {
           "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
           "code" : "3024",
           "display" : "Bærum"
         }
-      }],
-      "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation"
-    }],
-    "district" : "Bærum"
+      }]
+    }
   }]
 }

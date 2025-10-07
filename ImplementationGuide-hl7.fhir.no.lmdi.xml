@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.0.6"/>
+  <version value="1.0.7"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="draft"/>
-  <date value="2025-09-12"/>
+  <date value="2025-09-30"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -639,7 +639,7 @@
         <reference value="StructureDefinition/lmdi-practitioner"/>
       </reference>
       <name value="Helsepersonell"/>
-      <description value="Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt)."/>
+      <description value="Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -757,6 +757,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/lmdi-address-type"/>
+      </reference>
+      <name value="LMDI Address Type"/>
+      <description value="Tillatt verdi for address.type i LMDI: physical"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/lmdi-address-use"/>
       </reference>
       <name value="LMDI Address Use"/>
@@ -772,17 +783,6 @@
       </reference>
       <name value="lmdi-lokaltLegemiddel"/>
       <description value="Id for angivelse av legemiddel fra lokal legemiddelkatalog"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/lmdi-urban-district"/>
-      </reference>
-      <name value="lmdi-urban-district"/>
-      <description value="Information about Norwegian urban district (bydel)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -903,7 +903,7 @@
         <reference value="StructureDefinition/lmdi-organization"/>
       </reference>
       <name value="Organisasjon"/>
-      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.&#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).&#xA;&#xA;For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle &quot;organisasjonshierarki&quot; skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)"/>
+      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.&#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).&#xA;&#xA;For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

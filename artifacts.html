@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.6</title>
+        v1.0.7</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.6 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.7 - ci-build
                             
                             
                             
@@ -189,7 +189,7 @@
                   title="StructureDefinition/lmdi-practitioner">Helsepersonell</a>
             </td>
             <td>
-<p>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. Profilen tillater manglende HPR for rekvirenter uten HPR-registrering (f.eks. forskning eller systemer uten HPR-kontrakt).</p>
+<p>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.</p>
 </td>
          </tr>
          <tr>
@@ -240,7 +240,7 @@
 
 <p>Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).</p>
 
-<p>For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)</p>
+<p>For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH).</p>
 </td>
          </tr>
          <tr>
@@ -314,15 +314,6 @@
 <p>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.</p>
 </td>
          </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-lmdi-urban-district.html"
-                  title="StructureDefinition/lmdi-urban-district">lmdi-urban-district</a>
-            </td>
-            <td>
-<p>Information about Norwegian urban district (bydel)</p>
-</td>
-         </tr>
       </tbody>
    </table>
    <a name="3"> </a>
@@ -354,6 +345,15 @@
             </td>
             <td>
 <p>Komplett kodeverk for norske kommunenummer (Volven 3402)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-lmdi-address-type.html"
+                  title="ValueSet/lmdi-address-type">LMDI Address Type</a>
+            </td>
+            <td>
+<p>Tillatt verdi for address.type i LMDI: physical</p>
 </td>
          </tr>
          <tr>
@@ -672,10 +672,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.6 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Sat, Sep 13, 2025 17:41+0000">2025-09-13</span>
+                        title="Tue, Oct 7, 2025 11:55+0000">2025-10-07</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

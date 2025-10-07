@@ -22,19 +22,18 @@
   fhir:gender [ fhir:v "female"] ; # 
   fhir:birthDate [ fhir:v "1958-09-19"^^xsd:date] ; # 
   fhir:address ( [
-     fhir:extension ( [
+     fhir:district [
+       fhir:v "Bærum" ;
        fhir:extension ( [
-         fhir:url [ fhir:v "municipality"^^xsd:anyURI ] ;
+         fhir:url [ fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:Coding ;
            fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ] ;
            fhir:code [ fhir:v "3024" ] ;
            fhir:display [ fhir:v "Bærum" ]
          ]
-       ] ) ;
-       fhir:url [ fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation"^^xsd:anyURI ]
-     ] ) ;
-     fhir:district [ fhir:v "Bærum" ]
+       ] )
+     ]
   ] ) . # 
 
 # -------------------------------------------------------------------------------------

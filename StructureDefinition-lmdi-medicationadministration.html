@@ -9,7 +9,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.6</title>
+        v1.0.7</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -64,7 +64,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.6 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.7 - ci-build
                             
                             
                             
@@ -252,12 +252,12 @@
                 </span>
         </td>
         <td><i>Version</i>:
-            <span class="copy-text">1.0.6
+            <span class="copy-text">1.0.7
                     <i
                     title="Click to copy versioned URL"
                     class="bi bi-copy btn-copy"
                     role="button"
-                    data-clipboard-text="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration|1.0.6"
+                    data-clipboard-text="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration|1.0.7"
                     ></i>
                 </span>
         </td>
@@ -533,7 +533,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d825fe19-7ff4-4090-8298-dedf1a2f3762
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
 document.getElementById('cblmdi-medicationadministrationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationD'), 'binding', document.getElementById('cblmdi-medicationadministrationD-binding').checked, document.getElementById('pplmdi-medicationadministrationD'));
 document.getElementById('cblmdi-medicationadministrationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -544,10 +544,55 @@ filterDesc(document.getElementById('lmdi-medicationadministrationD'), 'obligatio
           <a name="tx"> </a>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>MedicationAdministration.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a><div><code>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"></button></div><div>From this IG</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route.coding:SCT.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​status</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="0.5">Status for legemiddeladministrering</a>
+      <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="0.5">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -557,9 +602,33 @@ filterDesc(document.getElementById('lmdi-medicationadministrationD'), 'obligatio
             <a name="inv-diff"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>time-required</td><td>error</td><td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td><td>Må inneholde tidspunkt for administrering.<br/>: $this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>time-required</td>
+    <td>error</td>
+    <td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td>
+    <td>Må inneholde tidspunkt for administrering.</td>
+    <td>
+      <code>$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -740,7 +809,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d825fe19-7ff4-4090-8298-dedf1a2f3762
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
 document.getElementById('cblmdi-medicationadministrationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'binding', document.getElementById('cblmdi-medicationadministrationK-binding').checked, document.getElementById('pplmdi-medicationadministrationK'));
 document.getElementById('cblmdi-medicationadministrationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -750,12 +819,85 @@ filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'obligatio
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>MedicationAdministration.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a><div><code>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"></button></div><div>From this IG</div></td></tr>
-<tr><td>MedicationAdministration.reasonCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A set of codes indicating the reason why the MedicationAdministration was made."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">ReasonMedicationGivenCodes</a><div><code>http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route.coding:SCT.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​status</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​reasonCode</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
+      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -765,17 +907,109 @@ filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'obligatio
             <a name="inv-key"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>dom-2</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>MedicationAdministration</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>mad-1</td><td>error</td><td>MedicationAdministration.dosage</td><td>SHALL have at least one of dosage.dose or dosage.rate[x]<br/>: dose.exists() or rate.exists()</td><td></td></tr>
-<tr><td>time-required</td><td>error</td><td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td><td>Må inneholde tidspunkt for administrering.<br/>: $this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>MedicationAdministration</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>mad-1</td>
+    <td>error</td>
+    <td>MedicationAdministration.dosage</td>
+    <td>SHALL have at least one of dosage.dose or dosage.rate[x]</td>
+    <td>
+      <code>dose.exists() or rate.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>time-required</td>
+    <td>error</td>
+    <td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td>
+    <td>Må inneholde tidspunkt for administrering.</td>
+    <td>
+      <code>$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -1089,7 +1323,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d825fe19-7ff4-4090-8298-dedf1a2f3762
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
 document.getElementById('cblmdi-medicationadministrationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'binding', document.getElementById('cblmdi-medicationadministrationS-binding').checked, document.getElementById('pplmdi-medicationadministrationS'));
 document.getElementById('cblmdi-medicationadministrationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1099,34 +1333,175 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>MedicationAdministration.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1"></button></div><div>From the FHIR Standard</div><table class="grid">
+<table class="list" data-fhir="generated-heirarchy">
   <tr>
-    <td style="font-size: 11px">
-      <b>Additional Bindings</b>
+    <td>
+      <b>Path</b>
     </td>
-    <td style="font-size: 11px">Purpose</td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
   </tr>
   <tr>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    <td>MedicationAdministration.​language</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
     </td>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    <td title="A human language.">
+      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
-</table>
-</td></tr>
-<tr><td>MedicationAdministration.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a><div><code>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"></button></div><div>From this IG</div></td></tr>
-<tr><td>MedicationAdministration.statusReason</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A set of codes indicating the reason why the MedicationAdministration is negated."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html">SNOMEDCTReasonMedicationNotGivenCodes</a><div><code>http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A coded concept describing where the medication administered is expected to occur."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html">MedicationAdministration Category Codes</a><div><code>http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.performer.function</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A code describing the role an individual played in administering the medication."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html">MedicationAdministration Performer Function Codes</a><div><code>http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.reasonCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A set of codes indicating the reason why the MedicationAdministration was made."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">ReasonMedicationGivenCodes</a><div><code>http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.site</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the site location the medicine enters into or onto the body."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html">SNOMEDCTAnatomicalStructureForAdministrationSiteCodes</a><div><code>http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route.coding:SCT.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.method</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the technique by which the medicine is administered."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMEDCTAdministrationMethodCodes</a><div><code>http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+  <tr>
+    <td>MedicationAdministration.​status</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​statusReason</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A set of codes indicating the reason why the MedicationAdministration is negated.">
+      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" opacity="1.0">SNOMED CT Reason Medication Not Given Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​category</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+    </td>
+    <td title="A coded concept describing where the medication administered is expected to occur.">
+      <a href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html" opacity="1.0">Medication administration  category  codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​performer.function</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A code describing the role an individual played in administering the medication.">
+      <a href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html" opacity="1.0">Medication administration  performer  function  codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​reasonCode</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
+      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.site</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the site location the medicine enters into or onto the body.">
+      <a href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html" opacity="1.0">SNOMED CT Anatomical Structure for Administration Site Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.method</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the technique by which the medicine is administered.">
+      <a href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html" opacity="1.0">SNOMED CT Administration Method Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -1136,17 +1511,109 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
             <a name="inv-snap"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>dom-2</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>MedicationAdministration</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>mad-1</td><td>error</td><td>MedicationAdministration.dosage</td><td>SHALL have at least one of dosage.dose or dosage.rate[x]<br/>: dose.exists() or rate.exists()</td><td></td></tr>
-<tr><td>time-required</td><td>error</td><td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td><td>Må inneholde tidspunkt for administrering.<br/>: $this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>MedicationAdministration</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>mad-1</td>
+    <td>error</td>
+    <td>MedicationAdministration.dosage</td>
+    <td>SHALL have at least one of dosage.dose or dosage.rate[x]</td>
+    <td>
+      <code>dose.exists() or rate.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>time-required</td>
+    <td>error</td>
+    <td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td>
+    <td>Må inneholde tidspunkt for administrering.</td>
+    <td>
+      <code>$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -1474,7 +1941,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d825fe19-7ff4-4090-8298-dedf1a2f3762
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
 document.getElementById('cblmdi-medicationadministrationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationDA'), 'binding', document.getElementById('cblmdi-medicationadministrationDA-binding').checked, document.getElementById('pplmdi-medicationadministrationDA'));
 document.getElementById('cblmdi-medicationadministrationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1484,10 +1951,55 @@ filterDesc(document.getElementById('lmdi-medicationadministrationDA'), 'obligati
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings (Differential)</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>MedicationAdministration.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a><div><code>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"></button></div><div>From this IG</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route.coding:SCT.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​status</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="0.5">Status for legemiddeladministrering</a>
+      <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="0.5">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -1497,9 +2009,33 @@ filterDesc(document.getElementById('lmdi-medicationadministrationDA'), 'obligati
             <a name="inv-all-diff"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>time-required</td><td>error</td><td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td><td>Må inneholde tidspunkt for administrering.<br/>: $this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>time-required</td>
+    <td>error</td>
+    <td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td>
+    <td>Må inneholde tidspunkt for administrering.</td>
+    <td>
+      <code>$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -1680,7 +2216,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d825fe19-7ff4-4090-8298-dedf1a2f3762
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
 document.getElementById('cblmdi-medicationadministrationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'binding', document.getElementById('cblmdi-medicationadministrationKA-binding').checked, document.getElementById('pplmdi-medicationadministrationKA'));
 document.getElementById('cblmdi-medicationadministrationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1690,12 +2226,85 @@ filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'obligati
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>MedicationAdministration.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a><div><code>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"></button></div><div>From this IG</div></td></tr>
-<tr><td>MedicationAdministration.reasonCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A set of codes indicating the reason why the MedicationAdministration was made."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">ReasonMedicationGivenCodes</a><div><code>http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route.coding:SCT.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes"></button></div><div>From the FHIR Standard</div></td></tr>
+<table class="list" data-fhir="generated-heirarchy">
+  <tr>
+    <td>
+      <b>Path</b>
+    </td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​status</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​reasonCode</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
+      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -1705,17 +2314,109 @@ filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'obligati
             <a name="inv-all-key"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>dom-2</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>MedicationAdministration</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>mad-1</td><td>error</td><td>MedicationAdministration.dosage</td><td>SHALL have at least one of dosage.dose or dosage.rate[x]<br/>: dose.exists() or rate.exists()</td><td></td></tr>
-<tr><td>time-required</td><td>error</td><td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td><td>Må inneholde tidspunkt for administrering.<br/>: $this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>MedicationAdministration</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>mad-1</td>
+    <td>error</td>
+    <td>MedicationAdministration.dosage</td>
+    <td>SHALL have at least one of dosage.dose or dosage.rate[x]</td>
+    <td>
+      <code>dose.exists() or rate.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>time-required</td>
+    <td>error</td>
+    <td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td>
+    <td>Må inneholde tidspunkt for administrering.</td>
+    <td>
+      <code>$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2029,7 +2730,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d825fe19-7ff4-4090-8298-dedf1a2f3762
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
 document.getElementById('cblmdi-medicationadministrationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'binding', document.getElementById('cblmdi-medicationadministrationSA-binding').checked, document.getElementById('pplmdi-medicationadministrationSA'));
 document.getElementById('cblmdi-medicationadministrationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2039,34 +2740,175 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
 </script></table>
           <!--Terminology Bindings heading in the fragment -->
           <h4>Terminology Bindings</h4>
-<table class="list">
-<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td><td><b>URI</b></td></tr>
-<tr><td>MedicationAdministration.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><div><code>http://hl7.org/fhir/ValueSet/languages|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1"></button></div><div>From the FHIR Standard</div><table class="grid">
+<table class="list" data-fhir="generated-heirarchy">
   <tr>
-    <td style="font-size: 11px">
-      <b>Additional Bindings</b>
+    <td>
+      <b>Path</b>
     </td>
-    <td style="font-size: 11px">Purpose</td>
+    <td>
+      <b>Status</b>
+    </td>
+    <td>
+      <b>Usage</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Version</b>
+    </td>
+    <td>
+      <b>Source</b>
+    </td>
   </tr>
   <tr>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    <td>MedicationAdministration.​language</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
     </td>
-    <td style="font-size: 11px">
-      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    <td title="A human language.">
+      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
-</table>
-</td></tr>
-<tr><td>MedicationAdministration.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a><div><code>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"></button></div><div>From this IG</div></td></tr>
-<tr><td>MedicationAdministration.statusReason</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A set of codes indicating the reason why the MedicationAdministration is negated."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html">SNOMEDCTReasonMedicationNotGivenCodes</a><div><code>http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A coded concept describing where the medication administered is expected to occur."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html">MedicationAdministration Category Codes</a><div><code>http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.performer.function</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A code describing the role an individual played in administering the medication."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html">MedicationAdministration Performer Function Codes</a><div><code>http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.reasonCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A set of codes indicating the reason why the MedicationAdministration was made."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">ReasonMedicationGivenCodes</a><div><code>http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.site</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the site location the medicine enters into or onto the body."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html">SNOMEDCTAnatomicalStructureForAdministrationSiteCodes</a><div><code>http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.route.coding:SCT.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a><div><code>http://hl7.org/fhir/ValueSet/route-codes</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes"></button></div><div>From the FHIR Standard</div></td></tr>
-<tr><td>MedicationAdministration.dosage.method</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the technique by which the medicine is administered."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMEDCTAdministrationMethodCodes</a><div><code>http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1</code><button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1"></button></div><div>From the FHIR Standard</div></td></tr>
+  <tr>
+    <td>MedicationAdministration.​status</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
+    <td>This IG</td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​statusReason</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A set of codes indicating the reason why the MedicationAdministration is negated.">
+      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" opacity="1.0">SNOMED CT Reason Medication Not Given Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​category</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+    </td>
+    <td title="A coded concept describing where the medication administered is expected to occur.">
+      <a href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html" opacity="1.0">Medication administration  category  codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​performer.function</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A code describing the role an individual played in administering the medication.">
+      <a href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html" opacity="1.0">Medication administration  performer  function  codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​reasonCode</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
+      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.site</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the site location the medicine enters into or onto the body.">
+      <a href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html" opacity="1.0">SNOMED CT Anatomical Structure for Administration Site Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
+  <tr>
+    <td>MedicationAdministration.​dosage.method</td>
+    <td>Base</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+    </td>
+    <td title="A coded concept describing the technique by which the medicine is administered.">
+      <a href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html" opacity="1.0">SNOMED CT Administration Method Codes</a>
+      <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
+    </td>
+    <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
+    <td>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
+    </td>
+  </tr>
 </table>
 
         
@@ -2076,17 +2918,109 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
             <a name="inv-all-snap"> </a>
             <!--Constraints  heading in the fragment -->
             <h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>dom-2</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>MedicationAdministration</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>MedicationAdministration</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>best practice</td><td>MedicationAdministration</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td><b>**ALL** elements</b></td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td><b>**ALL** extensions</b></td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>mad-1</td><td>error</td><td>MedicationAdministration.dosage</td><td>SHALL have at least one of dosage.dose or dosage.rate[x]<br/>: dose.exists() or rate.exists()</td><td></td></tr>
-<tr><td>time-required</td><td>error</td><td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td><td>Må inneholde tidspunkt for administrering.<br/>: $this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</td><td></td></tr>
+<table class="list presentation" data-fhir="generated-heirarchy">
+  <tr>
+    <td width="60">
+      <b>Id</b>
+    </td>
+    <td>
+      <b>Grade</b>
+    </td>
+    <td>
+      <b>Path(s)</b>
+    </td>
+    <td>
+      <b>Description</b>
+    </td>
+    <td>
+      <b>Expression</b>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-2</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL NOT contain nested Resources</td>
+    <td>
+      <code>contained.contained.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-3</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource</td>
+    <td>
+      <code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-4</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated</td>
+    <td>
+      <code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-5</td>
+    <td>error</td>
+    <td>MedicationAdministration</td>
+    <td>If a resource is contained in another resource, it SHALL NOT have a security label</td>
+    <td>
+      <code>contained.meta.security.empty()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>dom-6</td>
+    <td>best practice</td>
+    <td>MedicationAdministration</td>
+    <td>A resource should have narrative for robust management</td>
+    <td>
+      <code>text.`div`.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ele-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** elements</b>
+    </td>
+    <td>All FHIR elements must have a @value or children</td>
+    <td>
+      <code>hasValue() or (children().count() &gt; id.count())</code>
+    </td>
+  </tr>
+  <tr>
+    <td>ext-1</td>
+    <td>error</td>
+    <td>
+      <b>**ALL** extensions</b>
+    </td>
+    <td>Must have either extensions or value[x], not both</td>
+    <td>
+      <code>extension.exists() != value.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>mad-1</td>
+    <td>error</td>
+    <td>MedicationAdministration.dosage</td>
+    <td>SHALL have at least one of dosage.dose or dosage.rate[x]</td>
+    <td>
+      <code>dose.exists() or rate.exists()</code>
+    </td>
+  </tr>
+  <tr>
+    <td>time-required</td>
+    <td>error</td>
+    <td>MedicationAdministration.effective[x]:effectiveDateTime, MedicationAdministration.effective[x]:effectivePeriod.start, MedicationAdministration.effective[x]:effectivePeriod.end</td>
+    <td>Må inneholde tidspunkt for administrering.</td>
+    <td>
+      <code>$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')</code>
+    </td>
+  </tr>
 </table>
 
           
@@ -2261,10 +3195,10 @@ Summary
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.6 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Sat, Sep 13, 2025 17:41+0000">2025-09-13</span>
+                        title="Tue, Oct 7, 2025 11:55+0000">2025-10-07</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

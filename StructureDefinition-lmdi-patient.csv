@@ -31,9 +31,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.extension:citizenship","Patient.extension","citizenship","extensions
-user contentstatsborgerskap","",0,*,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/patient-citizenship]]} {[]}
-","The citizenship of the patient","The citizenship of the patient. should be a country code from ISO 3166 code system","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"Patient.extension:citizenship","Patient.extension","citizenship","","",0,0,"","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/patient-citizenship]]} {[]}
+","Nation(s) where the patient claims citizenship","The patient's legal status as citizen of a country.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.extension:citizenship.id","Patient.extension.id","","","",0,1,"","","","string {[]} {[]}
@@ -350,163 +349,27 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:official","Patient.address.extension","official","extensions
-user contentoffisiell adresse","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-address-official]]} {[]}
-","The concept of an officially registered address","Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in ""Folkeregisteret"" for persons or ""Enhetsregisteret"" for organizations.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Patient.address.extension:official","Patient.address.extension","official","","",0,0,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-address-official]]} {[]}
+","The concept of an officially registered address","Defines the concept of an officially registered address in Norway. Usually this will be the adress registered in ""Folkeregisteret"" for persons or ""Enhetsregisteret"" for organizations.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:urbanDistrict","Patient.address.extension","urbanDistrict","extensions
-user contentbydelurban district","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-urban-district]]} {[]}
-","urban district information","The name and number of the of the urban district of this address.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Patient.address.extension:urbanDistrict","Patient.address.extension","urbanDistrict","bydel
+urban district","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-urban-district]]} {[]}
+","Kodet verdi for bydel. Kodeverk ""Bydelsnummer"" (OID 3403)","Kodet verdi for bydel. Koder fra kodeverk ""Bydelsnummer"" (OID 3403) skal benyttes","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyInformation","Patient.address.extension","propertyInformation","extensions
-user content","",0,*,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation]]} {[]}
-","Real property identification","Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation","Patient.address.extension","propertyinformation","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation]]} {[]}
+"Patient.address.extension:propertyInformation","Patient.address.extension","propertyInformation","","",0,0,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation]]} {[]}
 ","real property identification","Additional information identifying norwegian real property.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.id","Patient.address.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension","Patient.address.extension.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:cadastralUnitNumber","Patient.address.extension.extension","cadastralUnitNumber","extensions
-user contentcadastral unit numbergårdsnummer","",0,1,"","","","Extension {[]} {[]}
-","cadastral unit number","Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. Gårdsnummer is called Cadastral unit number in English.","Gårdsnummer","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:cadastralUnitNumber.id","Patient.address.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension:cadastralUnitNumber.extension","Patient.address.extension.extension.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:cadastralUnitNumber.url","Patient.address.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""cadastralUnitNumber""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"Patient.address.extension:propertyinformation.extension:cadastralUnitNumber.value[x]","Patient.address.extension.extension.value[x]","","","",0,1,"","","","integer {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:propertyUnitNumber","Patient.address.extension.extension","propertyUnitNumber","extensions
-user contentProperty unit numberbruksnummer","",0,1,"","","","Extension {[]} {[]}
-","Property unit number","Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. In addition some real property is split into sections identified by its seksjonsnummer. Bruksnummer is called Property unit number in English.","bruksnummer","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:propertyUnitNumber.id","Patient.address.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension:propertyUnitNumber.extension","Patient.address.extension.extension.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:propertyUnitNumber.url","Patient.address.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""propertyUnitNumber""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"Patient.address.extension:propertyinformation.extension:propertyUnitNumber.value[x]","Patient.address.extension.extension.value[x]","","","",0,1,"","","","integer {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:leaseholdNumber","Patient.address.extension.extension","leaseholdNumber","extensions
-user contentLeasehold numberFestenummer","",0,*,"","","","Extension {[]} {[]}
-","Leasehold number","Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition real property can be rented out, the area of the real property that is rented is measured and is further identified by its festenummer. Festenummer is called Leasehold number in english.","Festenummer","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:leaseholdNumber.id","Patient.address.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension:leaseholdNumber.extension","Patient.address.extension.extension.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:leaseholdNumber.url","Patient.address.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""leaseholdNumber""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"Patient.address.extension:propertyinformation.extension:leaseholdNumber.value[x]","Patient.address.extension.extension.value[x]","","","",0,1,"","","","integer {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:condominiumUnitNumber","Patient.address.extension.extension","condominiumUnitNumber","extensions
-user contentCondominium unit numberseksjonsnummer","",0,*,"","","","Extension {[]} {[]}
-","Condominium unit number","Identification of a real property in Norway is defined using gårdsnummer, bruksnummer and kommunenummer. In addition some real property is split into sections identified by its seksjonsnummer. Seksjonsnummer is called Condominium unit number in English.","Seksjonsnummer","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:condominiumUnitNumber.id","Patient.address.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension:condominiumUnitNumber.extension","Patient.address.extension.extension.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:condominiumUnitNumber.url","Patient.address.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""condominiumUnitNumber""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"Patient.address.extension:propertyinformation.extension:condominiumUnitNumber.value[x]","Patient.address.extension.extension.value[x]","","","",0,1,"","","","integer {[]} {[]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:municipality","Patient.address.extension.extension","municipality","","",0,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:municipality.id","Patient.address.extension.extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension:municipality.extension","Patient.address.extension.extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:municipality.url","Patient.address.extension.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""municipality""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"Patient.address.extension:propertyinformation.extension:municipality.value[x]","Patient.address.extension.extension.value[x]","","kommunenummer
-","",0,1,"","","","Coding {[]} {[]}
-","Kommunenummer according to CodeSystem","The norwegian kommunenummer identifies an administrative geographic unit in Norway called kommune by a predefined number. The number should be coded according to CodeSystem Kommunenummer og regionale spesialkoder (OID=3402).","","","","","","","","","",,"required","Kommunenummer according to CodeSystem","urn:oid:2.16.578.1.12.4.1.1.3402","",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].id","Patient.address.extension.extension.value[x].id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].extension","Patient.address.extension.extension.value[x].extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].system","Patient.address.extension.extension.value[x].system","","","",0,1,"","","Y","uri {[]} {[]}
-","Identity of the terminology system","The identification of the code system that defines the meaning of the symbol in the code.","The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.","Need to be unambiguous about the source of the definition of the symbol.","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""urn:oid:2.16.578.1.12.4.1.1.3402""/>","","","","",,,,,"",,,,"Coding.system",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].version","Patient.address.extension.extension.value[x].version","","","",0,1,"","","Y","string {[]} {[]}
-","Version of the system - if relevant","The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.","Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.","","","","","","","","",,,,,"",,,,"Coding.version",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].code","Patient.address.extension.extension.value[x].code","","","",1,1,"","","Y","code {[]} {[]}
-","Symbol in syntax defined by the system","A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).","","Need to refer to a particular code in the system.","","","","","","","",,,,,"",,,,"Coding.code",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].display","Patient.address.extension.extension.value[x].display","","","",0,1,"","","Y","string {[]} {[]}
-","Representation defined by the system","A representation of the meaning of the code in the system, following the rules of the system.","","Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.","","","","","","","",,,,,"",,,,"Coding.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.extension:municipality.value[x].userSelected","Patient.address.extension.extension.value[x].userSelected","","","",0,1,"","","Y","boolean {[]} {[]}
-","If this coding was chosen directly by the user","Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).","Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.","This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.","","","","","","","",,,,,"",,,,"Coding.userSelected",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"Patient.address.extension:propertyinformation.url","Patient.address.extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"Patient.address.extension:propertyinformation.value[x]","Patient.address.extension.value[x]","","","",0,0,"","","","base64Binary {[]} {[]}
-boolean {[]} {[]}canonical {[]} {[]}code {[]} {[]}date {[]} {[]}dateTime {[]} {[]}decimal {[]} {[]}id {[]} {[]}instant {[]} {[]}integer {[]} {[]}markdown {[]} {[]}oid {[]} {[]}positiveInt {[]} {[]}string {[]} {[]}time {[]} {[]}unsignedInt {[]} {[]}uri {[]} {[]}url {[]} {[]}uuid {[]} {[]}Address {[]} {[]}Age {[]} {[]}Annotation {[]} {[]}Attachment {[]} {[]}CodeableConcept {[]} {[]}Coding {[]} {[]}ContactPoint {[]} {[]}Count {[]} {[]}Distance {[]} {[]}Duration {[]} {[]}HumanName {[]} {[]}Identifier {[]} {[]}Money {[]} {[]}Period {[]} {[]}Quantity {[]} {[]}Range {[]} {[]}Ratio {[]} {[]}Reference {[]} {[]}SampledData {[]} {[]}Signature {[]} {[]}Timing {[]} {[]}ContactDetail {[]} {[]}Contributor {[]} {[]}DataRequirement {[]} {[]}Expression {[]} {[]}ParameterDefinition {[]} {[]}RelatedArtifact {[]} {[]}TriggerDefinition {[]} {[]}UsageContext {[]} {[]}Dosage {[]} {[]}Meta {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
 "Patient.address.use","Patient.address.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","home | temp | old","Adressetype begrenset til home, temp eller old","Applications can assume that an address is current unless it explicitly says that it is temporary or old.","Allows an appropriate address to be chosen from a list of many.","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""home""/>","","",,"required","Tillatte verdier er home, temp eller old","http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use","",,,,"Address.use",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 address-use-constraint:Kun home, temp eller old er tillatt for address.use {address.use.empty() or address.use in ('home' | 'temp' | 'old')}"
 "Patient.address.type","Patient.address.type","","","",0,1,"","","Y","code {[]} {[]}
-","postal | physical | both","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
+","physical","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
 
-Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use ""home"" and type ""physical"" or ""both"". The ""official"" flag can be either true or false.","The definition of Address states that ""address is intended to describe postal addresses, not physical locations"". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","The type of an address (physical / postal).","http://hl7.org/fhir/ValueSet/address-type|4.0.1","",,,,"Address.type",0,1,"ele-1
+Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use ""home"" and type ""physical"" or ""both"". The ""official"" flag can be either true or false.","The definition of Address states that ""address is intended to describe postal addresses, not physical locations"". However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource).","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""physical""/>","<valueCode xmlns=""http://hl7.org/fhir"" value=""both""/>","","",,"required","","http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type","",,,,"Address.type",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Patient.address.text","Patient.address.text","","","",0,0,"","","Y","string {[]} {[]}
@@ -539,9 +402,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"Patient.address.district.extension:municipalitycode","Patient.address.district.extension","municipalitycode","extensions
-user content","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode]]} {[]}
-","Coded value for municipality/county Norwegian kommune","Coded value for municipality/county Norwegian kommune","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+"Patient.address.district.extension:municipalitycode","Patient.address.district.extension","municipalitycode","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode]]} {[]}
+","Kodet verdi for kommune. Kodeverk ""Kommunenummer og regionale spesialkoder"" (OID 3402)","Kodet verdi for kommune. Koder fra kodeverk ""Kommunenummer og regionale spesialkoder"" (OID 3402) skal benyttes","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.address.district.value","Patient.address.district.value","","","",0,1,"","","","string {[]} {[]}
@@ -560,7 +422,7 @@ postnummer","",0,0,"","","Y","string {[]} {[]}
 In Norway this is af four digit number defined by the norwegian postal service.","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""9132""/>","","",,,,,"",,,,"Address.postalCode",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Patient.address.country","Patient.address.country","","","",0,1,"","","Y","string {[]} {[]}
+"Patient.address.country","Patient.address.country","","","",0,0,"","","Y","string {[]} {[]}
 ","Country (e.g. can be ISO 3166 2 or 3 letter code)","Country - a nation as commonly understood or generally accepted.","ISO 3166 3 letter codes can be used in place of a human readable country name.","","","","","","","","",,,,,"",,,,"Address.country",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
