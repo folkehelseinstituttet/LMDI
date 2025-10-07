@@ -8,7 +8,9 @@ Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, s
 
 Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post).
 
-For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle "organisasjonshierarki" skal inkludere minst et organisasjonsnummer fra Enhetsregisteret (identifier:ENH)
+For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Alle “organisasjonshierarki” skal inkludere minst et organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH).
+
+
 """
 * ^version = "1.0.7"
 * ^status = #draft
