@@ -143,11 +143,11 @@ jobs:
       - name: 📚 Last ned IG Publisher
         shell: bash
         run: |
-          echo "📦 Laster ned IG Publisher 2.0.16 (pinned versjon)..."
+          echo "📦 Laster ned nyeste versjon av IG Publisher..."
           mkdir -p "$IG_SHORTNAME/input-cache"
 
           curl -sSL -o "$IG_SHORTNAME/input-cache/publisher.jar" \
-            https://github.com/HL7/fhir-ig-publisher/releases/download/2.0.16/publisher.jar
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 
           if [ -f "$IG_SHORTNAME/input-cache/publisher.jar" ]; then
             echo "✅ IG Publisher nedlastet: $(ls -lh $IG_SHORTNAME/input-cache/publisher.jar | awk '{print $5}')"
