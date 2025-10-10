@@ -53,6 +53,16 @@ Responskoder
 200 OK
 400 BadRequest
 
+#### Testendepunkter
+
+For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data.
+
+**Validering av kryptert og signert bundle:**
+- `/fhirmottak/v1/validateLegemiddelregisterBundle` - Validerer at kryptering og signering er utført korrekt, samt at innholdet i FHIR-bundelen er i henhold til spesifikasjonen. Returnerer valideringsresultat.
+
+**Validering av FHIR-bundle:**
+- `/fhirmottak/v1/validate` - Validerer innholdet i en ukryptert FHIR-bundle. Tar FHIR JSON som input og returnerer valideringsresultat.
+
 #### Håndter respons fra API-et
 
 
