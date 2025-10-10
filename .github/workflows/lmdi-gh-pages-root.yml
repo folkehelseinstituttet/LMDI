@@ -173,5 +173,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ env.IG }}/output
-          exclude_assets: '**.tgz,**.pack'
+          exclude_assets: '**.pack'
           commit_message: '${{ env.IG }}: ${{ github.event.head_commit.message }}'

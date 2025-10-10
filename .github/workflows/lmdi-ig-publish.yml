@@ -199,4 +199,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ env.IG_SHORTNAME }}/output
           destination_dir: currentbuild
+          exclude_assets: '**.pack'
           commit_message: '${{ env.IG_SHORTNAME }}: ${{ github.event.head_commit.message }}'
