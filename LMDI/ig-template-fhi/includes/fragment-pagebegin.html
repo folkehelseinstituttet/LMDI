@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
 
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/css/jquery-ui.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/css/pygments-manni.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/css/prism.css" />
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/css/cqf.css" rel="stylesheet" />
+    <link type="text/css" href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{{site.data.info.assets}}assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="{{site.data.info.assets}}assets/css/prism.css" />
+    <link type="text/css" href="{{site.data.info.assets}}assets/css/cqf.css" rel="stylesheet" />
     {% include fragment-css.html %}
 
     <script type="text/javascript" src="{{site.data.info.assets}}assets/js/fhir-table-scripts.js"> </script>
@@ -29,9 +29,9 @@
 
 <body onload="document.body.style.opacity='1'">
     {% assign label = {{site.data.pages[page.path].label}} | split: '.0' %}
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/js/prism.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@0.8.1/content/assets/js/mermaid-init.js"></script>
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/prism.js"></script>
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid-init.js"></script>
     <div id="segment-header" class="segment"> <!-- segment-header -->
         <div class="container"> <!-- container -->
             {% if site.data.info.fcpspec == 'true' %}

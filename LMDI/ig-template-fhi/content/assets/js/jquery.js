@@ -1,0 +1,1 @@
+Failed to fetch HL7/ig-template-base@0.8.1 from GitHub.
