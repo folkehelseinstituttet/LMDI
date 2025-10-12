@@ -9,7 +9,15 @@
       "Read(//home/roan/.fhir/packages/hl7.fhir.no.basis#2.2.0/package/**)",
       "Bash(sushi:*)",
       "Read(//c/Users/roan/.fhir/packages/**)",
-      "Bash(jq:*)"
+      "Bash(jq:*)",
+      "WebFetch(domain:folkehelseinstituttet.github.io)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nPubliser package.tgz til GitHub Pages\n\nFjernet .tgz fra exclude_assets i GitHub Actions workflows slik at \npackage.tgz-filene nå blir publisert sammen med resten av IG-en.\n\nEndringer:\n- lmdi-gh-pages-root.yml: Fjernet **.tgz fra exclude_assets\n- lmdi-ig-publish.yml: Lagt til exclude_assets med kun **.pack\nEOF\n)\")",
+      "Bash(git push:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(curl:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nLøs CDN-avhengighet ved å bruke lokale asset-filer\n\nI stedet for å avhenge av eksterne CDN-lenker (jsdelivr), laster vi nå \nned alle nødvendige CSS og JS-filer fra ig-template-base og lagrer dem \nlokalt i FHI-templaten. Dette løser kompatibilitetsproblemer med nyere \nversjoner av IG Publisher som validerer CDN-lenker strengt.\n\nEndringer:\n- Lastet ned 11 asset-filer fra ig-template-base@master (4 CSS + 7 JS)\n- Oppdatert fragment-pagebegin.html til å bruke lokale filer\n- Tilbakestilt begge workflows til latest IG Publisher\n\nFordeler:\n- Ingen avhengighet av eksterne CDN-tjenester\n- Fungerer med alle versjoner av IG Publisher\n- Raskere lasting siden filene serveres lokalt\n- Mer pålitelig bygging i CI/CD\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": [],
