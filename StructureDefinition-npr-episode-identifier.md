@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2025-10-12T08:57:38+00:00",
+  "date" : "2025-10-12T09:19:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

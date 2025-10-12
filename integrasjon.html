@@ -203,25 +203,53 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
   <li>PROD-miljø: <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">https://fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
 </ul>
 
-<p>Responskoder
-200 OK
-400 BadRequest</p>
-
 <h4 id="testendepunkter">Testendepunkter</h4>
 
-<p>For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data.</p>
+<p>For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data og er kun tilgjengelig i testmiljøet.</p>
 
 <p><strong>Validering av kryptert og signert bundle:</strong></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code> - Validerer at kryptering og signering er utført korrekt, samt at innholdet i FHIR-bundelen er i henhold til spesifikasjonen. Returnerer valideringsresultat.</li>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code> - Validerer at kryptering og signering er utført korrekt, samt at innholdet i FHIR-bundelen er i henhold til spesifikasjonen. Krever ikke autentisering. Returnerer valideringsresultat som OperationOutcome.</li>
 </ul>
 
 <p><strong>Validering av FHIR-bundle:</strong></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> - Validerer innholdet i en ukryptert FHIR-bundle. Tar FHIR JSON som input og returnerer valideringsresultat.</li>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever HelseID-autentisering. Returnerer valideringsresultat.</li>
 </ul>
 
 <h4 id="håndter-respons-fra-api-et">Håndter respons fra API-et</h4>
+
+<p>API-et returnerer følgende HTTP-statuskoder:</p>
+
+<p><strong>200 OK</strong></p>
+<ul>
+  <li>Meldingen ble mottatt og validert uten feil</li>
+  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1</code>: Meldingen er lagret i databasen</li>
+  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>: Meldingen er kun validert, ikke lagret</li>
+  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Returnerer OperationOutcome med valideringsresultat</li>
+</ul>
+
+<p><strong>400 Bad Request</strong></p>
+<ul>
+  <li>Returneres ved valideringsfeil eller forretningslogikkfeil</li>
+  <li>Mulige årsaker:
+    <ul>
+      <li>Ukjent eller inaktiv avsender</li>
+      <li>Organisasjonsnummer i melding stemmer ikke med registrert avsender</li>
+      <li>Signaturvalidering feilet</li>
+      <li>FHIR bundle validering feilet (ikke i henhold til LMDI-spesifikasjonen)</li>
+      <li>Ugyldig JSON-format</li>
+      <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Returnerer OperationOutcome med detaljert feilinformasjon</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>500 Internal Server Error</strong></p>
+<ul>
+  <li>En uventet feil oppstod ved behandling av meldingen</li>
+  <li>Dette er en generell serverfeil som bør undersøkes med FHI</li>
+  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Kan returneres ved teknisk feil i FHIR-validering eller manglende FHIR R4 core specifications</li>
+</ul>
 
 
 
@@ -249,7 +277,7 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Sun, Oct 12, 2025 08:58+0000">2025-10-12</span>
+                        title="Sun, Oct 12, 2025 09:20+0000">2025-10-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
