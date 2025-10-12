@@ -49,21 +49,40 @@ URL til Legemiddelregisterets API:
   - TEST-miljø: [https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1](https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1)
   - PROD-miljø: [https://fhirmottak.lmr.fhi.no/fhirmottak/v1](https://fhirmottak.lmr.fhi.no/fhirmottak/v1)
 
-Responskoder
-200 OK
-400 BadRequest
-
 #### Testendepunkter
 
-For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data.
+For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data og er kun tilgjengelig i testmiljøet.
 
 **Validering av kryptert og signert bundle:**
-- `/fhirmottak/v1/validateLegemiddelregisterBundle` - Validerer at kryptering og signering er utført korrekt, samt at innholdet i FHIR-bundelen er i henhold til spesifikasjonen. Returnerer valideringsresultat.
+- `/fhirmottak/v1/validateLegemiddelregisterBundle` - Validerer at kryptering og signering er utført korrekt, samt at innholdet i FHIR-bundelen er i henhold til spesifikasjonen. Krever ikke autentisering. Returnerer valideringsresultat som OperationOutcome.
 
 **Validering av FHIR-bundle:**
-- `/fhirmottak/v1/validate` - Validerer innholdet i en ukryptert FHIR-bundle. Tar FHIR JSON som input og returnerer valideringsresultat.
+- `/fhirmottak/v1/validate` - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever HelseID-autentisering. Returnerer valideringsresultat.
 
 #### Håndter respons fra API-et
+
+API-et returnerer følgende HTTP-statuskoder:
+
+**200 OK**
+- Meldingen ble mottatt og validert uten feil
+- Ved `/fhirmottak/v1`: Meldingen er lagret i databasen
+- Ved `/fhirmottak/v1/validate`: Meldingen er kun validert, ikke lagret
+- Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer OperationOutcome med valideringsresultat
+
+**400 Bad Request**
+- Returneres ved valideringsfeil eller forretningslogikkfeil
+- Mulige årsaker:
+  - Ukjent eller inaktiv avsender
+  - Organisasjonsnummer i melding stemmer ikke med registrert avsender
+  - Signaturvalidering feilet
+  - FHIR bundle validering feilet (ikke i henhold til LMDI-spesifikasjonen)
+  - Ugyldig JSON-format
+  - Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer OperationOutcome med detaljert feilinformasjon
+
+**500 Internal Server Error**
+- En uventet feil oppstod ved behandling av meldingen
+- Dette er en generell serverfeil som bør undersøkes med FHI
+- Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Kan returneres ved teknisk feil i FHIR-validering eller manglende FHIR R4 core specifications
 
 
 
