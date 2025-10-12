@@ -1,0 +1,439 @@
+<!-- get modelType -->
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>Legemiddel Classification - Definitions - Legemiddeldata fra institusjon til Legemiddelregisteret
+        v1.0.7</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/project.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+
+
+    <script type="text/javascript" src="assets/js/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" sizes="32x32" href="assets/images/favicon.ico" />
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <div id="segment-header" class="segment"> <!-- segment-header -->
+        <div class="container"> <!-- container -->
+            
+            <!-- Placeholder for child template header declarations -->
+
+
+<header class="fhi-header mb-0">
+    <div class="fhi-header__brand">
+        <div class="container fhi-header__brand-container">
+            <div class="fhi-header__brand-content">
+                <a class="fhi-header__logo" href="index.html">
+                    <i class="icon-fhi-logo fhi-header__logo-icon"></i>
+                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                </a>
+                <div class="fhi-header__project">
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.7 - ci-build
+                            
+                            
+                            
+                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
+                                title="Norway" />
+                            
+                            
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+        </div> <!-- /container -->
+    </div> <!-- /segment-header -->
+
+    <div class="container fhi-header__main-menu-alt-container">
+    <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
+        <div class="container fhi-main-menu-alt__container">
+            <div class="fhi-main-menu-alt__collapse">
+                <div id="menu">
+                    <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Hjem</a>
+  </li>
+  <li>
+    <a href="informasjonsmodell.html">Informasjonsmodell</a>
+  </li>
+  <li>
+    <a href="integrasjon.html">Integrasjon</a>
+  </li>
+  <li>
+    <a href="profiler.html">FHIR-profiler</a>
+  </li>
+  <li>
+    <a href="nedlastinger.html">Nedlastinger</a>
+  </li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
+        <div class="container p-0"> <!-- container -->
+            <ul class="breadcrumb p-2 mb-1">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel Classification</b></li>
+                
+            </ul>
+        </div> <!-- /container -->
+    </div> <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment"> <!-- segment-content -->
+        <div class="container"> <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+
+<div style="counter-reset: section 4" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="fhi-nav-tabs border-bottom">
+    <ul class="nav nav-tabs undermeny mb-0">
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="StructureDefinition-legemiddel-classification.html">
+        Content
+    </a>
+</li>
+
+
+        
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
+        Detailed Descriptions
+    </a>
+</li>
+
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="StructureDefinition-legemiddel-classification-mappings.html">
+        Mappings
+    </a>
+</li>
+
+        
+
+        
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="StructureDefinition-legemiddel-classification.profile.xml.html">
+        XML
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="StructureDefinition-legemiddel-classification.profile.json.html">
+        JSON
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="StructureDefinition-legemiddel-classification.profile.ttl.html">
+        TTL
+    </a>
+</li>
+
+        
+
+        
+    </ul>
+</div>
+
+
+<a name="root"> </a>
+<h2 id="root">Extension: LegemiddelClassification - Detailed Descriptions</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2025-09-12
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p>Definitions for the legemiddel-classification extension.</p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div id="tabs">
+    <ul>
+      <li>
+        <a href="#tabs-diff">Differential Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-key">Key Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-snap">Snapshot Elements Table</a>
+      </li>
+    </ul>
+    <a name="tabs-diff"> </a>
+    <div id="tabs-diff">
+      <p>Guidance on how to interpret the contents of this table can be found<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#data-dictionaries">here</a></p><table class="dict" data-fhir="generated"><tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_Extension">  </a><span style="color: grey">0</span><b>. Extension</b><a href="#diff_Extension" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Legemiddel Classification</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_Extension.extension">  </a><span style="color: grey">2</span><b>. Extension.extension</b><a href="#diff_Extension.extension" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_Extension.url">  </a><span style="color: grey">4</span><b>. Extension.url</b><a href="#diff_Extension.url" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Fixed Value</td><td><code>http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification</code></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="diff_Extension.value[x]">  </a><a name="diff_Extension.valueCodeableConcept">  </a><a name="diff_Extension.value[x]:valueCodeableConcept">  </a><a name="diff_Extension.valueCodeableConcept:valueCodeableConcept">  </a><span style="color: grey">6</span><b>. Extension.value[x]</b><a href="#diff_Extension.value[x]" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..?</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td><span>The codes SHOULD be taken from  <a href="ValueSet-atc-valueset.html">ATC Kodesystem ValueSet</a><br/>(<a href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> to <span class="copy-text-inline"><code>http://fhir.no/ValueSet/atc-valueset</code><button data-clipboard-text="http://fhir.no/ValueSet/atc-valueset" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p style="font-size: 11px">ATC kode fra WHO ATC kodesystem</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Meta">Meta</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Attachment">Attachment</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Count">Count</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement">DataRequirement</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Dosage">Dosage</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#uuid">uuid</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#SampledData">SampledData</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#positiveInt">positiveInt</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Distance">Distance</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Duration">Duration</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#canonical">canonical</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Range">Range</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact">RelatedArtifact</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">base64Binary</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#UsageContext">UsageContext</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Timing">Timing</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#decimal">decimal</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition">ParameterDefinition</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#Contributor">Contributor</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#oid">oid</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#instant">instant</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#HumanName">HumanName</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Money">Money</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#markdown">markdown</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Age">Age</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#TriggerDefinition">TriggerDefinition</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#url">url</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail">ContactDetail</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Expression">Expression</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">unsignedInt</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#time">time</a></span></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/R4/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
+
+</table>
+    </div>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <p>Guidance on how to interpret the contents of this table can be found<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#data-dictionaries">here</a></p><table class="dict" data-fhir="generated"><tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Extension">  </a><span style="color: grey">0</span><b>. Extension</b><a href="#key_Extension" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p>Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</p>
+<br/><div style="color:DarkGray;text-decoration:line-through"><p>Optional Extension Element - found in all resources.</p>
+</div></td></tr><tr><td style="white-space: nowrap">Short</td><td>Legemiddel Classification<span style="color:DarkGray;text-decoration:line-through">Optional Extensions Element</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..<span style="color:DarkGray">*</span><br/>This element is affected by the following invariants: <span style="color:DarkGray">ele-1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">false</span></td></tr><tr><td style="white-space: nowrap">Invariants</td><td><span style="color:DarkGray"><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (hasValue() or (children().count() &gt; id.count()))</span><br/><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (<code>extension.exists() != value.exists()</code>)<br/><span style="color:DarkGray;text-decoration:line-through"><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (extension.exists() != value.exists())</span></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Extension.extension">  </a><span style="color: grey">2</span><b>. Extension.extension</b><a href="#key_Extension.extension" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p>An Extension</p>
+<br/><div style="color:DarkGray;text-decoration:line-through"><p>May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div></td></tr><tr><td style="white-space: nowrap">Short</td><td>Extension<span style="color:DarkGray;text-decoration:line-through">Additional content defined by implementations</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><br/><div style="color:DarkGray;text-decoration:line-through"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">0</span>..0<span style="color:DarkGray;text-decoration:line-through">*</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">false</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Alternate Names</td><td><span style="color:DarkGray;text-decoration:line-through">extensions</span>, <span style="color:DarkGray;text-decoration:line-through">user content</span></td></tr><tr><td style="white-space: nowrap">Invariants</td><td><span style="color:DarkGray"><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (hasValue() or (children().count() &gt; id.count()))</span><br/><span style="color:DarkGray"><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (extension.exists() != value.exists())</span></td></tr>
+<tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices on <code>Extension.extension</code>. The slices are<span style="color:DarkGray">Unordered</span> and <span style="color:DarkGray">Open</span>, and can be differentiated using the following discriminators:<ul></ul><li><span style="color:DarkGray">value @ url</span></li></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Extension.url">  </a><span style="color: grey">4</span><b>. Extension.url</b><a href="#key_Extension.url" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Source of the definition for the extension code - a logical name or a URL.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">identifies the meaning of the extension</span></td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="color:DarkGray">The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td><span style="color:DarkGray">1</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">false</span></td></tr><tr><td style="white-space: nowrap">XML Format</td><td>In the XML format, this property is represented as an attribute.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Fixed Value</td><td><code>http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification</code></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="key_Extension.value[x]">  </a><a name="key_Extension.valueCodeableConcept">  </a><a name="key_Extension.value[x]:valueCodeableConcept">  </a><a name="key_Extension.valueCodeableConcept:valueCodeableConcept">  </a><span style="color: grey">6</span><b>. Extension.value[x]</b><a href="#key_Extension.value[x]" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="color:DarkGray">Value of extension - must be one of a constrained set of the data types (see <a href="http://hl7.org/fhir/R4/extensibility.html">Extensibility</a> for a list).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td><span style="color:DarkGray">Value of extension</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1<span style="color:DarkGray;text-decoration:line-through">0</span>..<span style="color:DarkGray">1</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td><span>The codes SHOULD be taken from <span style="color:DarkGray;text-decoration:line-through">For codes, see </span> <a href="ValueSet-atc-valueset.html">ATC Kodesystem ValueSet</a><br/>(<a href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> to <span class="copy-text-inline"><code>http://fhir.no/ValueSet/atc-valueset</code><button data-clipboard-text="http://fhir.no/ValueSet/atc-valueset" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p style="font-size: 11px">ATC kode fra WHO ATC kodesystem</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><span style="color:DarkGray"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Meta">Meta</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Address">Address</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Attachment">Attachment</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#integer">integer</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Count">Count</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement">DataRequirement</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Dosage">Dosage</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#uuid">uuid</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Identifier">Identifier</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#SampledData">SampledData</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#id">id</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#positiveInt">positiveInt</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Distance">Distance</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Duration">Duration</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#canonical">canonical</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Range">Range</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact">RelatedArtifact</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">base64Binary</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#UsageContext">UsageContext</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Timing">Timing</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#decimal">decimal</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition">ParameterDefinition</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#Contributor">Contributor</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#oid">oid</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#instant">instant</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint">ContactPoint</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#HumanName">HumanName</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Money">Money</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#markdown">markdown</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Age">Age</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#TriggerDefinition">TriggerDefinition</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Quantity">Quantity</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#url">url</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Annotation">Annotation</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail">ContactDetail</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Expression">Expression</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">unsignedInt</a></span>, <span style="color:DarkGray;text-decoration:line-through"><a href="http://hl7.org/fhir/R4/datatypes.html#time">time</a></span></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/R4/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td><span style="color:DarkGray">false</span></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><span style="color:DarkGray"><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (hasValue() or (children().count() &gt; id.count()))</span></td></tr>
+
+</table>
+    </div>
+    <a name="tabs-snap"> </a>
+    <div id="tabs-snap">
+      <p>Guidance on how to interpret the contents of this table can be found<a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#data-dictionaries">here</a></p><table class="dict" data-fhir="generated"><tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Extension">  </a><span style="color: grey">0</span><b>. Extension</b><a href="#Extension" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Legemiddel Classification</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..*<br/>This element is affected by the following invariants: ele-1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() or (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (<code>extension.exists() != value.exists()</code>)</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Extension.id">  </a><span style="color: grey">2</span><b>. Extension.id</b><a href="#Extension.id" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Unique id for inter-element referencing</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap">XML Format</td><td>In the XML format, this property is represented as an attribute.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Extension.extension">  </a><span style="color: grey">4</span><b>. Extension.extension</b><a href="#Extension.extension" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">An Extension</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..0</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() or (children().count() &gt; id.count())</code>)<br/><b title="Formal Invariant Identifier">ext-1</b>: Must have either extensions or value[x], not both (<code>extension.exists() != value.exists()</code>)</td></tr>
+<tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/profiling.html#slicing">Slicing</a></td><td>This element introduces a set of slices on <code>Extension.extension</code>. The slices areUnordered and Open, and can be differentiated using the following discriminators:<ul></ul><li>value @ url</li></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Extension.url">  </a><span style="color: grey">6</span><b>. Extension.url</b><a href="#Extension.url" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Source of the definition for the extension code - a logical name or a URL.</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>identifies the meaning of the extension</td></tr><tr><td style="white-space: nowrap">Comments</td><td><p style="font-size: 11px">The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap">XML Format</td><td>In the XML format, this property is represented as an attribute.</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Fixed Value</td><td><code>http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification</code></td></tr>
+
+<tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="Extension.value[x]">  </a><a name="Extension.valueCodeableConcept">  </a><a name="Extension.value[x]:valueCodeableConcept">  </a><a name="Extension.valueCodeableConcept:valueCodeableConcept">  </a><span style="color: grey">8</span><b>. Extension.value[x]</b><a href="#Extension.value[x]" title="link to here" class="self-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path></svg></a></span></td></tr><tr><td style="white-space: nowrap">Definition</td><td><p style="font-size: 11px">Value of extension - must be one of a constrained set of the data types (see <a href="http://hl7.org/fhir/R4/extensibility.html">Extensibility</a> for a list).</p>
+</td></tr><tr><td style="white-space: nowrap">Short</td><td>Value of extension</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td><span>The codes SHOULD be taken from  <a href="ValueSet-atc-valueset.html">ATC Kodesystem ValueSet</a><br/>(<a href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a> to <span class="copy-text-inline"><code>http://fhir.no/ValueSet/atc-valueset</code><button data-clipboard-text="http://fhir.no/ValueSet/atc-valueset" title="Click to Copy URL" class="btn-copy"></button></span>)</span><br/><p>ATC kode fra WHO ATC kodesystem</p>
+</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr><tr><td style="white-space: nowrap">[x] Note</td><td>See<a href="http://hl7.org/fhir/R4/formats.html#choice">Choice of Data Types</a>for further information about how to use [x]</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#ismodifier">Is Modifier</a></td><td>false</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr><tr><td style="white-space: nowrap"><a href="http://hl7.org/fhir/R4/search.html#summary">Summary</a></td><td>false</td></tr><tr><td style="white-space: nowrap">Invariants</td><td><b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (<code>hasValue() or (children().count() &gt; id.count())</code>)</td></tr>
+
+</table>
+    </div>
+  </div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+</div> <!-- /inner-wrapper -->
+</div> <!-- /row -->
+</div> <!-- /container -->
+</div> <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
+<!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
+    <div class="container"> <!-- container -->
+        <div class="container-fluid">
+            
+            <div class="inner-wrapper p-3">
+                <p class="m-0">
+                    IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
+                        href="https://www.fhi.no">Folkehelseinstituttet</a>.
+                    Package hl7.fhir.no.lmdi#1.0.7 based on <a
+                        style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span
+                        title="Sun, Oct 12, 2025 08:52+0000">2025-10-12</span>
+                    <br />
+                    <span style="color: var(--footer-highlight-text-color)">
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    </span>
+                </p>
+            </div> <!-- /inner-wrapper -->
+        </div>
+    </div><!-- /container -->
+</footer> <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden d-none"> <!-- segment-post-footer -->
+    <div class="container"> <!-- container -->
+    </div> <!-- /container -->
+</div> <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<script id="page-data" type="application/json">
+  {
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel Classification</b></li>"
+  }
+</script>
+<script type="text/javascript">
+    const pageData = JSON.parse(document.getElementById("page-data").textContent);
+
+    const secondLevel = (key) => {
+        if (pageData.breadcrumb) {
+            const liRegex = /<li>(.*?)<\/li>/g;
+            const listItems = [...pageData.breadcrumb.matchAll(liRegex)].map(match => match[1].trim());
+            return listItems[1]?.includes(key) || false;
+        }
+        return false;
+    };
+
+    // Style FHI menu
+    const classMenuNav = 'fhi-main-menu-alt__nav',
+        classMenuNavItem = 'fhi-main-menu-alt__nav-item',
+        classMenuNavLink = 'fhi-main-menu-alt__nav-link';
+    const menu = document.getElementById('menu');
+    const ul = menu.querySelector('ul');
+    ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+    ul.querySelectorAll('li').forEach(li => {
+        li.classList.add(classMenuNavItem);
+        li.querySelectorAll('a').forEach(a => {
+            a.classList.add('nav-link', classMenuNavLink);
+        });
+
+        if (li.classList.contains('dropdown')) {
+            li.addEventListener('click', () => {
+                li.classList.toggle('show');
+                li.querySelector('ul').classList.toggle('show');
+            });
+        }
+    });
+
+    // Set active class on menu item
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
+    menuItems.forEach(item => {
+        const menuLink = item.querySelector('a').getAttribute('href');
+        if (menuLink === page) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+        else if (secondLevel(menuLink)) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+    });
+
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
+</script>
+<!-- Analytics Below
+  ================================================== -->
+</body>
+
+</html>
+
