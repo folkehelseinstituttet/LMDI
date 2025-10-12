@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/CodeSystem/kommunenummer-codesystem> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "kommunenummer-codesystem"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem kommunenummer-codesystem</b></p><a name=\"kommunenummer-codesystem\"> </a><a name=\"hckommunenummer-codesystem\"> </a><p>This  code system <code>urn:oid:2.16.578.1.12.4.1.1.3402</code> defines codes, but no codes are represented here</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.7"] ; # 
+  fhir:name [ fhir:v "KommunenummerCodeSystem"] ; # 
+  fhir:title [ fhir:v "Kommunenummer CodeSystem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-10-12T09:15:18+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.fhi.no" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Legemiddelregisteret" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "legemiddelregisteret@fhi.no" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Kodesystem for norske kommunenummer (Volven 3402)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NO" ] ;
+       fhir:display [ fhir:v "Norway" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "not-present"] . # 
+
+# -------------------------------------------------------------------------------------
+
