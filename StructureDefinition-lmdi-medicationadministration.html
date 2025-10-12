@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
 
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/jquery-ui.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/pygments-manni.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/prism.css" />
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/cqf.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
@@ -46,9 +46,9 @@
 
 <body onload="document.body.style.opacity='1'">
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/prism.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid-init.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <div id="segment-header" class="segment"> <!-- segment-header -->
         <div class="container"> <!-- container -->
             
@@ -87,7 +87,7 @@
     <div class="container fhi-header__main-menu-alt-container">
     <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
         <div class="container fhi-main-menu-alt__container">
-            <div [animation]="false" class="fhi-main-menu-alt__collapse">
+            <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
                     <!-- menu.xml  -->
 
@@ -130,7 +130,7 @@
                 <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -533,7 +533,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-medicationadministrationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationD'), 'binding', document.getElementById('cblmdi-medicationadministrationD-binding').checked, document.getElementById('pplmdi-medicationadministrationD'));
 document.getElementById('cblmdi-medicationadministrationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -569,10 +569,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationD'), 'obligatio
     <td>MedicationAdministration.​status</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="0.5">Status for legemiddeladministrering</a>
+      <a style="opacity: 0.5" href="ValueSet-lmdi-medicationadministrationstatus.html">Status for legemiddeladministrering</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -582,10 +582,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationD'), 'obligatio
     <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="0.5">SNOMED CT Route Codes</a>
+      <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -809,7 +809,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-medicationadministrationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'binding', document.getElementById('cblmdi-medicationadministrationK-binding').checked, document.getElementById('pplmdi-medicationadministrationK'));
 document.getElementById('cblmdi-medicationadministrationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -844,10 +844,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'obligatio
     <td>MedicationAdministration.​status</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">Status for legemiddeladministrering</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -857,10 +857,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'obligatio
     <td>MedicationAdministration.​reasonCode</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
-      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">Reason Medication Given Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -872,10 +872,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'obligatio
     <td>MedicationAdministration.​dosage.route</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -887,10 +887,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationK'), 'obligatio
     <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1323,7 +1323,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-medicationadministrationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'binding', document.getElementById('cblmdi-medicationadministrationS-binding').checked, document.getElementById('pplmdi-medicationadministrationS'));
 document.getElementById('cblmdi-medicationadministrationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1358,10 +1358,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1373,10 +1373,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​status</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">Status for legemiddeladministrering</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -1386,10 +1386,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​statusReason</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A set of codes indicating the reason why the MedicationAdministration is negated.">
-      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" opacity="1.0">SNOMED CT Reason Medication Not Given Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html">SNOMED CT Reason Medication Not Given Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1401,10 +1401,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​category</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A coded concept describing where the medication administered is expected to occur.">
-      <a href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html" opacity="1.0">Medication administration  category  codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html">Medication administration  category  codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1416,10 +1416,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​performer.function</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A code describing the role an individual played in administering the medication.">
-      <a href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html" opacity="1.0">Medication administration  performer  function  codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html">Medication administration  performer  function  codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1431,10 +1431,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​reasonCode</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
-      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">Reason Medication Given Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1446,10 +1446,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​dosage.site</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the site location the medicine enters into or onto the body.">
-      <a href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html" opacity="1.0">SNOMED CT Anatomical Structure for Administration Site Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html">SNOMED CT Anatomical Structure for Administration Site Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1461,10 +1461,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​dosage.route</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1476,10 +1476,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1491,10 +1491,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationS'), 'obligatio
     <td>MedicationAdministration.​dosage.method</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the technique by which the medicine is administered.">
-      <a href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html" opacity="1.0">SNOMED CT Administration Method Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMED CT Administration Method Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1941,7 +1941,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-medicationadministrationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationDA'), 'binding', document.getElementById('cblmdi-medicationadministrationDA-binding').checked, document.getElementById('pplmdi-medicationadministrationDA'));
 document.getElementById('cblmdi-medicationadministrationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1976,10 +1976,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationDA'), 'obligati
     <td>MedicationAdministration.​status</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="0.5">Status for legemiddeladministrering</a>
+      <a style="opacity: 0.5" href="ValueSet-lmdi-medicationadministrationstatus.html">Status for legemiddeladministrering</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -1989,10 +1989,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationDA'), 'obligati
     <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="0.5">SNOMED CT Route Codes</a>
+      <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -2216,7 +2216,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-medicationadministrationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'binding', document.getElementById('cblmdi-medicationadministrationKA-binding').checked, document.getElementById('pplmdi-medicationadministrationKA'));
 document.getElementById('cblmdi-medicationadministrationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2251,10 +2251,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'obligati
     <td>MedicationAdministration.​status</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">Status for legemiddeladministrering</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -2264,10 +2264,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'obligati
     <td>MedicationAdministration.​reasonCode</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
-      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">Reason Medication Given Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2279,10 +2279,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'obligati
     <td>MedicationAdministration.​dosage.route</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2294,10 +2294,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationKA'), 'obligati
     <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -2730,7 +2730,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">Ratio</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Dose quantity per unit of time</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-medicationadministrationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'binding', document.getElementById('cblmdi-medicationadministrationSA-binding').checked, document.getElementById('pplmdi-medicationadministrationSA'));
 document.getElementById('cblmdi-medicationadministrationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2765,10 +2765,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2780,10 +2780,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​status</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-medicationadministrationstatus.html" opacity="1.0">Status for legemiddeladministrering</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-medicationadministrationstatus.html">Status for legemiddeladministrering</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -2793,10 +2793,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​statusReason</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A set of codes indicating the reason why the MedicationAdministration is negated.">
-      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" opacity="1.0">SNOMED CT Reason Medication Not Given Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html">SNOMED CT Reason Medication Not Given Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2808,10 +2808,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​category</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A coded concept describing where the medication administered is expected to occur.">
-      <a href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html" opacity="1.0">Medication administration  category  codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html">Medication administration  category  codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/medication-admin-category|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2823,10 +2823,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​performer.function</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A code describing the role an individual played in administering the medication.">
-      <a href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html" opacity="1.0">Medication administration  performer  function  codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html">Medication administration  performer  function  codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/med-admin-perform-function|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2838,10 +2838,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​reasonCode</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A set of codes indicating the reason why the MedicationAdministration was made.">
-      <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" opacity="1.0">Reason Medication Given Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">Reason Medication Given Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/reason-medication-given-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2853,10 +2853,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​dosage.site</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the site location the medicine enters into or onto the body.">
-      <a href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html" opacity="1.0">SNOMED CT Anatomical Structure for Administration Site Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html">SNOMED CT Anatomical Structure for Administration Site Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/approach-site-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2868,10 +2868,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​dosage.route</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.">
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2883,10 +2883,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​dosage.route.coding:SCT.​code</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="http://hl7.org/fhir/R4/valueset-route-codes.html" opacity="1.0">SNOMED CT Route Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMED CT Route Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/route-codes" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -2898,10 +2898,10 @@ filterDesc(document.getElementById('lmdi-medicationadministrationSA'), 'obligati
     <td>MedicationAdministration.​dosage.method</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="A coded concept describing the technique by which the medicine is administered.">
-      <a href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html" opacity="1.0">SNOMED CT Administration Method Codes</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMED CT Administration Method Codes</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administration-method-codes|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -3179,13 +3179,13 @@ Summary
 </div> <!-- /container -->
 </div> <!-- /segment-content -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery.js"> </script>
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery-ui.min.js"> </script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/tabs.js"> </script>
+<script type="text/javascript" src="assets/js/tabs.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/window-hash.js"> </script>
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
 <footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
     <div class="container"> <!-- container -->
@@ -3198,7 +3198,7 @@ Summary
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, Oct 7, 2025 11:55+0000">2025-10-07</span>
+                        title="Sun, Oct 12, 2025 08:58+0000">2025-10-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -3221,10 +3221,11 @@ Summary
 <!-- Bootstrap core JavaScript
   ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
 <script type="text/javascript" src="assets/js/respond.min.js"> </script>
 <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
@@ -3280,8 +3281,8 @@ Summary
         }
     });
 
-    // Init clipboard.js
-    new ClipboardJS('.btn-copy');
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
 </script>
 <!-- Analytics Below
   ================================================== -->

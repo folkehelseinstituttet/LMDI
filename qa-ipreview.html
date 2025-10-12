@@ -163,10 +163,33 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
     <ul>
       <li>
 
+                    IG &copy; 2024+ Folkehelseinstituttet.
+                    Package hl7.fhir.no.lmdi#1.0.7 based on FHIR
+                        4.0.1. Generated 2025-10-12 
+                    
+                    
+                                  Links: Table of Contents |
+                 QA Report
+                 
+                
+                     
+                 (        <a href="toc.html">src</a>
+)
+      </li>
+      <li>
+
           hl7.fhir.us.hai: Healthcare Associated Infection Implementation Guide   &reg;&copy; HL7 |
              
                 CC0
          (        <a href="searchform.html">src</a>
+)
+      </li>
+      <li>
+Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="ValueSet-lmdi-medicationadministrationstatus.xml.html">src</a>
+)
+      </li>
+      <li>
+There are examples where a medication request may include the option of an oral dose or an Intravenous or Intramuscular dose.  For example, "Ondansetron 8mg orally or IV twice a day as needed for nausea" or "Compazine&reg; (prochlorperazine) 5-10mg PO or 25mg PR bid prn nausea or vomiting".  In these cases, two medication requests would be created that could be grouped together.  The decision on which dose and route of administration to use is based on the patient's condition at the time the dose is needed. (        <a href="StructureDefinition-lmdi-medicationrequest-definitions.html">src</a>
 )
       </li>
     </ul>
@@ -194,6 +217,79 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 Include all codes defined in           <a href="http://www.whocc.no/atc">
 <code>http://www.whocc.no/atc</code>          </a>
  version           <span title="Version is not explicity stated. No matching Code System found">Not Stated (use latest from terminology server)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="Bundle-LegemiddelregisterBundle-1.change.history.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.fhi.no">www.fhi.no</a>
+        </td>
+        <td>
+
+                    IG &copy; 2024+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>
+.
+                    Package hl7.fhir.no.lmdi#1.0.7 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>
+. Generated           <span title="Sun, Oct 12, 2025 08:58+0000">2025-10-12</span>
+
+                              <br/>
+
+                              <span style="color: var(--footer-highlight-text-color)">
+
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    
+          </span>
+
+                
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="StructureDefinition-lmdi-bundle-definitions.html">web</a>
+        </td>
+        <td>
+          <a href="http://en.wikipedia.org/wiki/HATEOAS">en.wikipedia.org</a>
+        </td>
+        <td>
+Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g.           <a href="http://en.wikipedia.org/wiki/HATEOAS">HATEOAS</a>
+).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="StructureDefinition-lmdi-organization.html">web</a>
+        </td>
+        <td>
+          <a href="https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle">register.geonorge.no</a>
+        </td>
+        <td>
+Kodet verdi for kommune. Kodeverk "Kommunenummer og regionale spesialkoder" (OID 3402)          <br/>
+          <span style="font-weight:bold">URL: </span>
+          <a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode</a>
+          <br class="binding"/>
+          <span style="font-weight:bold" title="null" class="binding">Binding: </span>
+          <a href="https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle" class="binding">https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle</a>
+          <span title="null" class="binding"> (</span>
+          <a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a>
+          <span title="null" class="binding">)</span>
+          <br/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://hl7.no/fhir/no-basis/">hl7.no</a>
+        </td>
+        <td>
+LMDI-profilene bygger på           <a href="https://hl7.no/fhir/no-basis/">no-basis</a>
+ – de norske basisprofilene for FHIR. no-basis tilbyr standardiserte profiler tilpasset norske forhold, blant annet for identifikatorer, adresser og kodeverk.
         </td>
       </tr>
       <tr>
@@ -292,8 +388,49 @@ Include all codes defined in           <a href="http://www.whocc.no/atc">
 <rect rx="2.5" ry="2.5" width="193.6035" x="766.82" y="713.69" style="stroke:#000000;stroke-width:0.5;" fill="#FFFFFF" height="80.8594"></rect><ellipse cx="808.0483" cy="733.8228" rx="11" ry="11" style="stroke:#181818;stroke-width:1;" fill="#ADD1B2"></ellipse><path d="M811.0171,739.4634 Q810.4389,739.7603 809.7983,739.9009 Q809.1577,740.0572 808.4546,740.0572 Q805.9546,740.0572 804.6264,738.4166 Q803.3139,736.7603 803.3139,733.6353 Q803.3139,730.5103 804.6264,728.8541 Q805.9546,727.1978 808.4546,727.1978 Q809.1577,727.1978 809.7983,727.3541 Q810.4546,727.5103 811.0171,727.8072 L811.0171,730.5259 Q810.3921,729.9478 809.7983,729.6822 Q809.2046,729.4009 808.5796,729.4009 Q807.2358,729.4009 806.5483,730.4791 Q805.8608,731.5416 805.8608,733.6353 Q805.8608,735.7291 806.5483,736.8072 Q807.2358,737.8697 808.5796,737.8697 Q809.2046,737.8697 809.7983,737.6041 Q810.3921,737.3228 811.0171,736.7447 L811.0171,739.4634 Z " fill="#000000"></path><text lengthAdjust="spacing" x="837.4628" font-size="12" textLength="84.1465" y="729.8287" font-family="sans-serif" font-style="italic" fill="#000000">«Practitioner»</text><text lengthAdjust="spacing" x="827.8768" font-size="14" textLength="103.3184" y="745.6539" font-family="sans-serif" fill="#000000">Helsepersonell</text><line y1="753.9556" x1="767.82" y2="753.9556" style="stroke:#000000;stroke-width:0.5;" x2="959.4235"></line><text lengthAdjust="spacing" x="772.82" font-size="14" textLength="154.2324" y="770.9507" font-family="sans-serif" fill="#000000">active : boolean [0..1]</text><text lengthAdjust="spacing" x="772.82" font-size="14" textLength="181.6035" y="787.2476" font-family="sans-serif" fill="#000000">identifier : Identifier [1..1]</text>          </a>
         </td>
       </tr>
+      <tr>
+        <td>
+          <a href="integrasjon.html">web</a>
+        </td>
+        <td>
+          <a href="https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1">test-fhirmottak.lmr.fhi.no</a>
+        </td>
+        <td>
+TEST-miljø:           <a href="https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1">https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="integrasjon.html">web</a>
+        </td>
+        <td>
+          <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">fhirmottak.lmr.fhi.no</a>
+        </td>
+        <td>
+PROD-miljø:           <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">https://fhirmottak.lmr.fhi.no/fhirmottak/v1</a>
+        </td>
+      </tr>
     </table>
     <h2>Internal Images</h2>
-    <table class="grid"></table>
+    <table class="grid">
+      <tr>
+        <td>
+lmdi-2.png          <br/>
+          <img src="lmdi-2.png" alt="lmdi-2.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+signertkryptertbundle.svg          <br/>
+          <img src="signertkryptertbundle.svg" alt="signertkryptertbundle.svg" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+tree-filter.png          <br/>
+          <img src="tree-filter.png" alt="tree-filter.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>

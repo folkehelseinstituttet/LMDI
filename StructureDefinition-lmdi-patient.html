@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
 
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/jquery-ui.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/pygments-manni.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/prism.css" />
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/cqf.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
@@ -46,9 +46,9 @@
 
 <body onload="document.body.style.opacity='1'">
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/prism.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid-init.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <div id="segment-header" class="segment"> <!-- segment-header -->
         <div class="container"> <!-- container -->
             
@@ -87,7 +87,7 @@
     <div class="container fhi-header__main-menu-alt-container">
     <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
         <div class="container fhi-main-menu-alt__container">
-            <div [animation]="false" class="fhi-main-menu-alt__collapse">
+            <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
                     <!-- menu.xml  -->
 
@@ -130,7 +130,7 @@
                 <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -567,7 +567,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-patientD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-patientD'), 'binding', document.getElementById('cblmdi-patientD-binding').checked, document.getElementById('pplmdi-patientD'));
 document.getElementById('cblmdi-patientD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -603,10 +603,10 @@ filterDesc(document.getElementById('lmdi-patientD'), 'obligation', document.getE
     <td>Patient.address.use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Tillatte verdier er home, temp eller old">
-      <a href="ValueSet-lmdi-address-use.html" opacity="0.5">LMDI Address Use</a>
+      <a style="opacity: 0.5" href="ValueSet-lmdi-address-use.html">LMDI Address Use</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -616,10 +616,10 @@ filterDesc(document.getElementById('lmdi-patientD'), 'obligation', document.getE
     <td>Patient.address.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-address-type.html" opacity="0.5">LMDI Address Type</a>
+      <a style="opacity: 0.5" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -802,7 +802,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Fylkesnavn</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-patientK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-patientK'), 'binding', document.getElementById('cblmdi-patientK-binding').checked, document.getElementById('pplmdi-patientK'));
 document.getElementById('cblmdi-patientK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -837,7 +837,7 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.extension:citizenship.​extension:code&lt;br/&gt;[]</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td>
       <div>
@@ -853,10 +853,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.identifier:FNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -868,10 +868,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.identifier:FHN.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -883,10 +883,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.identifier:DNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -898,10 +898,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.identifier:HNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -913,10 +913,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.gender</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The gender of a person used for administrative purposes.">
-      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -928,10 +928,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.address.use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Tillatte verdier er home, temp eller old">
-      <a href="ValueSet-lmdi-address-use.html" opacity="1.0">LMDI Address Use</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-use.html">LMDI Address Use</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -941,10 +941,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.address.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-address-type.html" opacity="1.0">LMDI Address Type</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -954,10 +954,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.communication.​language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -969,10 +969,10 @@ filterDesc(document.getElementById('lmdi-patientK'), 'obligation', document.getE
     <td>Patient.link.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The type of link between this patient resource and another patient resource.">
-      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1326,7 +1326,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Time period when address was/is in use<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If present, start SHALL have a lower value than end" class="constraint">per-1</span><br/><span style="font-weight:bold">Example General: </span><span style="color: darkgreen">{"start":"2010-03-23","end":"2010-07-01"}</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-patientS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-patientS'), 'binding', document.getElementById('cblmdi-patientS-binding').checked, document.getElementById('pplmdi-patientS'));
 document.getElementById('cblmdi-patientS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1361,10 +1361,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1376,7 +1376,7 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.extension:citizenship.​extension:code&lt;br/&gt;[]</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td>
       <div>
@@ -1392,10 +1392,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:FNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1407,10 +1407,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:FNR.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1422,10 +1422,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:FHN.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1437,10 +1437,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:FHN.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1452,10 +1452,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:DNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1467,10 +1467,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:DNR.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1482,10 +1482,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:HNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1497,10 +1497,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.identifier:HNR.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1512,10 +1512,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.gender</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The gender of a person used for administrative purposes.">
-      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1527,10 +1527,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.address.use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Tillatte verdier er home, temp eller old">
-      <a href="ValueSet-lmdi-address-use.html" opacity="1.0">LMDI Address Use</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-use.html">LMDI Address Use</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -1540,10 +1540,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.address.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-address-type.html" opacity="1.0">LMDI Address Type</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -1553,10 +1553,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.contact.relationship</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="The nature of the relationship between a patient and a contact person for that patient.">
-      <a href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" opacity="1.0">Patient Contact Relationship </a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html">Patient Contact Relationship </a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/patient-contactrelationship" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1568,10 +1568,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.contact.gender</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The gender of a person used for administrative purposes.">
-      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1583,10 +1583,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.communication.​language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -1598,10 +1598,10 @@ filterDesc(document.getElementById('lmdi-patientS'), 'obligation', document.getE
     <td>Patient.link.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The type of link between this patient resource and another patient resource.">
-      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2126,7 +2126,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-patientDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-patientDA'), 'binding', document.getElementById('cblmdi-patientDA-binding').checked, document.getElementById('pplmdi-patientDA'));
 document.getElementById('cblmdi-patientDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2161,10 +2161,10 @@ filterDesc(document.getElementById('lmdi-patientDA'), 'obligation', document.get
     <td>Patient.address.use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Tillatte verdier er home, temp eller old">
-      <a href="ValueSet-lmdi-address-use.html" opacity="0.5">LMDI Address Use</a>
+      <a style="opacity: 0.5" href="ValueSet-lmdi-address-use.html">LMDI Address Use</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -2174,10 +2174,10 @@ filterDesc(document.getElementById('lmdi-patientDA'), 'obligation', document.get
     <td>Patient.address.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-address-type.html" opacity="0.5">LMDI Address Type</a>
+      <a style="opacity: 0.5" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -2360,7 +2360,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Fylkesnavn</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-patientKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-patientKA'), 'binding', document.getElementById('cblmdi-patientKA-binding').checked, document.getElementById('pplmdi-patientKA'));
 document.getElementById('cblmdi-patientKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2395,7 +2395,7 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.extension:citizenship.​extension:code&lt;br/&gt;[]</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td>
       <div>
@@ -2411,10 +2411,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.identifier:FNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2426,10 +2426,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.identifier:FHN.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2441,10 +2441,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.identifier:DNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2456,10 +2456,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.identifier:HNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2471,10 +2471,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.gender</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The gender of a person used for administrative purposes.">
-      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2486,10 +2486,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.address.use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Tillatte verdier er home, temp eller old">
-      <a href="ValueSet-lmdi-address-use.html" opacity="1.0">LMDI Address Use</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-use.html">LMDI Address Use</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -2499,10 +2499,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.address.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-address-type.html" opacity="1.0">LMDI Address Type</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -2512,10 +2512,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.communication.​language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -2527,10 +2527,10 @@ filterDesc(document.getElementById('lmdi-patientKA'), 'obligation', document.get
     <td>Patient.link.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The type of link between this patient resource and another patient resource.">
-      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2884,7 +2884,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Period">Period</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Time period when address was/is in use<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If present, start SHALL have a lower value than end" class="constraint">per-1</span><br/><span style="font-weight:bold">Example General: </span><span style="color: darkgreen">{"start":"2010-03-23","end":"2010-07-01"}</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-patientSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-patientSA'), 'binding', document.getElementById('cblmdi-patientSA-binding').checked, document.getElementById('pplmdi-patientSA'));
 document.getElementById('cblmdi-patientSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2919,10 +2919,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -2934,7 +2934,7 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.extension:citizenship.​extension:code&lt;br/&gt;[]</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]" opacity="1.0">example</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td>
       <div>
@@ -2950,10 +2950,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:FNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2965,10 +2965,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:FNR.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -2980,10 +2980,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:FHN.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2995,10 +2995,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:FHN.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -3010,10 +3010,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:DNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -3025,10 +3025,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:DNR.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -3040,10 +3040,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:HNR.​use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Identifies the purpose for this identifier, if known .">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-use.html" opacity="1.0">IdentifierUse</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-use.html">IdentifierUse</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-use|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -3055,10 +3055,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.identifier:HNR.​type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.">
-      <a href="http://hl7.org/fhir/R4/valueset-identifier-type.html" opacity="1.0">IdentifierType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-identifier-type.html">IdentifierType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/identifier-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -3070,10 +3070,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.gender</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The gender of a person used for administrative purposes.">
-      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -3085,10 +3085,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.address.use</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Tillatte verdier er home, temp eller old">
-      <a href="ValueSet-lmdi-address-use.html" opacity="1.0">LMDI Address Use</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-use.html">LMDI Address Use</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -3098,10 +3098,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.address.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td>
-      <a href="ValueSet-lmdi-address-type.html" opacity="1.0">LMDI Address Type</a>
+      <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.0.7</td>
@@ -3111,10 +3111,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.contact.relationship</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]" opacity="1.0">extensible</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="The nature of the relationship between a patient and a contact person for that patient.">
-      <a href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html" opacity="1.0">Patient Contact Relationship </a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-patient-contactrelationship.html">Patient Contact Relationship </a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/patient-contactrelationship" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -3126,10 +3126,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.contact.gender</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The gender of a person used for administrative purposes.">
-      <a href="http://hl7.org/fhir/R4/valueset-administrative-gender.html" opacity="1.0">AdministrativeGender</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-administrative-gender.html">AdministrativeGender</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -3141,10 +3141,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.communication.​language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references">&#x1F4E6;4.0.1</td>
@@ -3156,10 +3156,10 @@ filterDesc(document.getElementById('lmdi-patientSA'), 'obligation', document.get
     <td>Patient.link.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="The type of link between this patient resource and another patient resource.">
-      <a href="http://hl7.org/fhir/R4/valueset-link-type.html" opacity="1.0">LinkType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-link-type.html">LinkType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/link-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -3480,13 +3480,13 @@ Summary
 </div> <!-- /container -->
 </div> <!-- /segment-content -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery.js"> </script>
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery-ui.min.js"> </script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/tabs.js"> </script>
+<script type="text/javascript" src="assets/js/tabs.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/window-hash.js"> </script>
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
 <footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
     <div class="container"> <!-- container -->
@@ -3499,7 +3499,7 @@ Summary
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, Oct 7, 2025 11:55+0000">2025-10-07</span>
+                        title="Sun, Oct 12, 2025 08:58+0000">2025-10-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -3522,10 +3522,11 @@ Summary
 <!-- Bootstrap core JavaScript
   ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
 <script type="text/javascript" src="assets/js/respond.min.js"> </script>
 <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
@@ -3581,8 +3582,8 @@ Summary
         }
     });
 
-    // Init clipboard.js
-    new ClipboardJS('.btn-copy');
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
 </script>
 <!-- Analytics Below
   ================================================== -->

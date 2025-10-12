@@ -14,10 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
 
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/jquery-ui.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/pygments-manni.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/prism.css" />
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/cqf.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
@@ -46,9 +46,9 @@
 
 <body onload="document.body.style.opacity='1'">
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/prism.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid-init.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <div id="segment-header" class="segment"> <!-- segment-header -->
         <div class="container"> <!-- container -->
             
@@ -87,7 +87,7 @@
     <div class="container fhi-header__main-menu-alt-container">
     <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
         <div class="container fhi-main-menu-alt__container">
-            <div [animation]="false" class="fhi-main-menu-alt__collapse">
+            <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
                     <!-- menu.xml  -->
 
@@ -130,7 +130,7 @@
                 <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -275,7 +275,7 @@
             
             Draft
             
-            as of 2025-10-07
+            as of 2025-10-12
             
             
         </td>
@@ -411,7 +411,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">URL for requesten (påkrevd, men verdien har ingen betydning)</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-bundleD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-bundleD'), 'binding', document.getElementById('cblmdi-bundleD-binding').checked, document.getElementById('pplmdi-bundleD'));
 document.getElementById('cblmdi-bundleD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -540,7 +540,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">URL for requesten (påkrevd, men verdien har ingen betydning)</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-bundleK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-bundleK'), 'binding', document.getElementById('cblmdi-bundleK-binding').checked, document.getElementById('pplmdi-bundleK'));
 document.getElementById('cblmdi-bundleK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -575,10 +575,10 @@ filterDesc(document.getElementById('lmdi-bundleK'), 'obligation', document.getEl
     <td>Bundle.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Indicates the purpose of a bundle - how it is intended to be used.">
-      <a href="http://hl7.org/fhir/R4/valueset-bundle-type.html" opacity="1.0">BundleType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-bundle-type.html">BundleType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/bundle-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -590,10 +590,10 @@ filterDesc(document.getElementById('lmdi-bundleK'), 'obligation', document.getEl
     <td>Bundle.entry.request.​method</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.">
-      <a href="http://hl7.org/fhir/R4/valueset-http-verb.html" opacity="1.0">HTTPVerb</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-http-verb.html">HTTPVerb</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/http-verb|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -996,7 +996,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Digital Signature</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-bundleS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-bundleS'), 'binding', document.getElementById('cblmdi-bundleS-binding').checked, document.getElementById('pplmdi-bundleS'));
 document.getElementById('cblmdi-bundleS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1031,10 +1031,10 @@ filterDesc(document.getElementById('lmdi-bundleS'), 'obligation', document.getEl
     <td>Bundle.language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1046,10 +1046,10 @@ filterDesc(document.getElementById('lmdi-bundleS'), 'obligation', document.getEl
     <td>Bundle.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Indicates the purpose of a bundle - how it is intended to be used.">
-      <a href="http://hl7.org/fhir/R4/valueset-bundle-type.html" opacity="1.0">BundleType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-bundle-type.html">BundleType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/bundle-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1061,10 +1061,10 @@ filterDesc(document.getElementById('lmdi-bundleS'), 'obligation', document.getEl
     <td>Bundle.entry.search.​mode</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.">
-      <a href="http://hl7.org/fhir/R4/valueset-search-entry-mode.html" opacity="1.0">SearchEntryMode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-search-entry-mode.html">SearchEntryMode</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/search-entry-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1076,10 +1076,10 @@ filterDesc(document.getElementById('lmdi-bundleS'), 'obligation', document.getEl
     <td>Bundle.entry.request.​method</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.">
-      <a href="http://hl7.org/fhir/R4/valueset-http-verb.html" opacity="1.0">HTTPVerb</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-http-verb.html">HTTPVerb</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/http-verb|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1418,7 +1418,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">URL for requesten (påkrevd, men verdien har ingen betydning)</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-bundleDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-bundleDA'), 'binding', document.getElementById('cblmdi-bundleDA-binding').checked, document.getElementById('pplmdi-bundleDA'));
 document.getElementById('cblmdi-bundleDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1546,7 +1546,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">URL for requesten (påkrevd, men verdien har ingen betydning)</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-bundleKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-bundleKA'), 'binding', document.getElementById('cblmdi-bundleKA-binding').checked, document.getElementById('pplmdi-bundleKA'));
 document.getElementById('cblmdi-bundleKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1581,10 +1581,10 @@ filterDesc(document.getElementById('lmdi-bundleKA'), 'obligation', document.getE
     <td>Bundle.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Indicates the purpose of a bundle - how it is intended to be used.">
-      <a href="http://hl7.org/fhir/R4/valueset-bundle-type.html" opacity="1.0">BundleType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-bundle-type.html">BundleType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/bundle-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -1596,10 +1596,10 @@ filterDesc(document.getElementById('lmdi-bundleKA'), 'obligation', document.getE
     <td>Bundle.entry.request.​method</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.">
-      <a href="http://hl7.org/fhir/R4/valueset-http-verb.html" opacity="1.0">HTTPVerb</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-http-verb.html">HTTPVerb</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/http-verb|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2002,7 +2002,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Signature">Signature</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Digital Signature</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 77ea9a5c-f3b9-4266-93db-56d907b5947c
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 0d229fcf-ca67-4844-bb62-4e81553d29e6
 document.getElementById('cblmdi-bundleSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-bundleSA'), 'binding', document.getElementById('cblmdi-bundleSA-binding').checked, document.getElementById('pplmdi-bundleSA'));
 document.getElementById('cblmdi-bundleSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2037,10 +2037,10 @@ filterDesc(document.getElementById('lmdi-bundleSA'), 'obligation', document.getE
     <td>Bundle.language</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]" opacity="1.0">preferred</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[preferred]">preferred</a>
     </td>
     <td title="A human language.">
-      <a href="http://hl7.org/fhir/R4/valueset-languages.html" opacity="1.0">Common Languages</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">Common Languages</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/languages|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2052,10 +2052,10 @@ filterDesc(document.getElementById('lmdi-bundleSA'), 'obligation', document.getE
     <td>Bundle.type</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Indicates the purpose of a bundle - how it is intended to be used.">
-      <a href="http://hl7.org/fhir/R4/valueset-bundle-type.html" opacity="1.0">BundleType</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-bundle-type.html">BundleType</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/bundle-type|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2067,10 +2067,10 @@ filterDesc(document.getElementById('lmdi-bundleSA'), 'obligation', document.getE
     <td>Bundle.entry.search.​mode</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.">
-      <a href="http://hl7.org/fhir/R4/valueset-search-entry-mode.html" opacity="1.0">SearchEntryMode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-search-entry-mode.html">SearchEntryMode</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/search-entry-mode|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2082,10 +2082,10 @@ filterDesc(document.getElementById('lmdi-bundleSA'), 'obligation', document.getE
     <td>Bundle.entry.request.​method</td>
     <td>Base</td>
     <td>
-      <a href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]" opacity="1.0">required</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[required]">required</a>
     </td>
     <td title="HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.">
-      <a href="http://hl7.org/fhir/R4/valueset-http-verb.html" opacity="1.0">HTTPVerb</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-http-verb.html">HTTPVerb</a>
       <button data-clipboard-text="http://hl7.org/fhir/ValueSet/http-verb|4.0.1" title="Click to copy URL" class="btn-copy"></button>
     </td>
     <td title="Version is explicitly stated to be 4.0.1">&#x1F4CD;4.0.1</td>
@@ -2375,13 +2375,13 @@ Summary
 </div> <!-- /container -->
 </div> <!-- /segment-content -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery.js"> </script>
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery-ui.min.js"> </script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/tabs.js"> </script>
+<script type="text/javascript" src="assets/js/tabs.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/window-hash.js"> </script>
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
 <footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
     <div class="container"> <!-- container -->
@@ -2394,7 +2394,7 @@ Summary
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, Oct 7, 2025 11:55+0000">2025-10-07</span>
+                        title="Sun, Oct 12, 2025 08:58+0000">2025-10-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -2417,10 +2417,11 @@ Summary
 <!-- Bootstrap core JavaScript
   ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
 <script type="text/javascript" src="assets/js/respond.min.js"> </script>
 <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
@@ -2476,8 +2477,8 @@ Summary
         }
     });
 
-    // Init clipboard.js
-    new ClipboardJS('.btn-copy');
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
 </script>
 <!-- Analytics Below
   ================================================== -->

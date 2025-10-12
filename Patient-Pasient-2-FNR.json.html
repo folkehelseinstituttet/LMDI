@@ -12,10 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
 
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/jquery-ui.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/pygments-manni.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/prism.css" />
-    <link type="text/css" href="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/css/cqf.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
     <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
@@ -44,9 +44,9 @@
 
 <body onload="document.body.style.opacity='1'">
     
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/prism.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/mermaid-init.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <div id="segment-header" class="segment"> <!-- segment-header -->
         <div class="container"> <!-- container -->
             
@@ -85,7 +85,7 @@
     <div class="container fhi-header__main-menu-alt-container">
     <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
         <div class="container fhi-main-menu-alt__container">
-            <div [animation]="false" class="fhi-main-menu-alt__collapse">
+            <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
                     <!-- menu.xml  -->
 
@@ -128,7 +128,7 @@
                 <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -250,11 +250,11 @@
 </div> <!-- /container -->
 </div> <!-- /segment-content -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery.js"> </script>
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/jquery-ui.min.js"> </script>
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/HL7/ig-template-base@master/content/assets/js/window-hash.js"> </script>
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
 <footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
     <div class="container"> <!-- container -->
@@ -267,7 +267,7 @@
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, Oct 7, 2025 11:55+0000">2025-10-07</span>
+                        title="Sun, Oct 12, 2025 08:58+0000">2025-10-12</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -290,10 +290,11 @@
 <!-- Bootstrap core JavaScript
   ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script>
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
 <script type="text/javascript" src="assets/js/respond.min.js"> </script>
 <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
@@ -349,8 +350,8 @@
         }
     });
 
-    // Init clipboard.js
-    new ClipboardJS('.btn-copy');
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
 </script>
 <!-- Analytics Below
   ================================================== -->

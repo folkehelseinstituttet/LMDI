@@ -1,10 +1,10 @@
 Lmdi : Validation Results
 =========================================
 
-err = 262, warn = 68, info = 45
+err = 95, warn = 130, info = 45
 $--
 Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7.no/fhir/ig/lmdi)
- Build Errors : 325 / 5 / 0
+ Build Errors : 12 / 67 / 0
  /github/workspace/LMDI/fsh-generated/resources/Bundle-LegemiddelregisterBundle-1 : 15 / 7 / 31
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 2
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-kommunenummer-codesystem : 2 / 2 / 2
@@ -33,21 +33,21 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
  /github/workspace/LMDI/fsh-generated/resources/Patient-eksempel-pasient-1234567890 : 0 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/Practitioner-Helsepersonell-1-HPR-nummer : 1 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/Practitioner-Helsepersonell-2-Uten-HPR : 1 / 0 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-legemiddel-classification : 3 / 0 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-bundle : 9 / 0 / 2
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-condition : 20 / 1 / 4
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-del-av-behandlingsregime : 3 / 2 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-encounter : 4 / 0 / 2
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-klinisk-studie : 3 / 2 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication : 46 / 0 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationadministration : 29 / 1 / 3
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationrequest : 17 / 0 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-organization : 13 / 4 / 5
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-patient : 19 / 3 / 7
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-practitioner : 3 / 3 / 5
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring : 6 / 2 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-substance : 2 / 1 / 1
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-npr-episode-identifier : 8 / 0 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-legemiddel-classification : 0 / 0 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-bundle : 0 / 0 / 2
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-condition : 0 / 1 / 4
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-del-av-behandlingsregime : 0 / 2 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-encounter : 0 / 0 / 2
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-klinisk-studie : 0 / 2 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication : 0 / 0 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationadministration : 3 / 1 / 3
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationrequest : 0 / 0 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-organization : 0 / 4 / 5
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-patient : 4 / 3 / 7
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-practitioner : 0 / 3 / 5
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring : 0 / 2 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-substance : 0 / 1 / 1
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-npr-episode-identifier : 0 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/ValueSet-LokalLegemiddelkatalogValues : 1 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/ValueSet-atc-valueset : 2 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/ValueSet-kommunenummer-alle : 1 / 2 / 1
@@ -60,331 +60,80 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
 WARNING: Organization.type: The reference urn:oid:2.16.578.1.12.4.1.1.8628 could not be resolved
 WARNING: Organization.type: The reference urn:oid:2.16.578.1.12.4.1.1.8624 could not be resolved
 WARNING: Organization.address.extension: The reference urn:oid:2.16.578.1.12.4.1.1.3403 could not be resolved
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-1-HPR-nummer.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-2-FNR.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-atc-valueset.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationRequest-Rekvirering-1.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-1-LegemiddelDose-Oxycodone.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-1-Sykehjem.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-2-Uten-HPR.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-3-Sykehus.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-legemiddel-koder.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-20.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-type.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-type.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-1-Sykehjem.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-2-FNR.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-1-LegemiddelDose-Oxycodone.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-10.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-legemiddel-koder.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-10.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-10.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-10.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-30.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-2-Avdeling.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-type.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-3-LegemiddelPakning-Monoket.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-20.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-legemiddel-koder.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-use.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-20.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-10.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/index.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/informasjonsmodell.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-atc-valueset.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-eksempel-pasient-1234567890.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/eksempelkode_cs.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/eksempelkode_ps1.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-2-SNOMED-CT.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-2-Paracetamol.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-1-Oralt.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-atc-valueset.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationRequest-Rekvirering-1.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-1-HPR-nummer.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-2-Uten-HPR.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-3-Sykehus.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-20.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-30.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-1-HPR-nummer.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-2-Infusjon.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-30.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationRequest-Rekvirering-1.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-2-Paracetamol.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-2-Infusjon.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-1-HPR-nummer.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-atc-valueset.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-2-Avdeling.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-1-Uten-FNR.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-type-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-30.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-2-SNOMED-CT.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationRequest-Rekvirering-1.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/artifacts.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/nedlastinger.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-30.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-1-Sykehjem.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-2-Uten-HPR.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-1-LegemiddelDose-Oxycodone.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-2-Infusjon.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Patient-eksempel-pasient-1234567890.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-legemiddel-koder.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-eksempel-pasient-1234567890.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-1-Oralt.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-atc-valueset-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-2-FNR.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-1-Uten-FNR.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-1-LegemiddelDose-Oxycodone.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-1-ICD10-OID.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-2-Infusjon.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-2-Paracetamol.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-3-LegemiddelPakning-Monoket.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/SignertKryptertBundle.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-2-Uten-HPR.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-3-LegemiddelPakning-Monoket.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-3-LegemiddelPakning-Monoket.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-atc-valueset.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-legemiddel-koder.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-eksempel-pasient-1234567890.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/toc.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-2-FNR.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-1-Uten-FNR.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-2-Paracetamol.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-1-ICD10-OID.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-use-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-1-Uten-FNR.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-2-Avdeling.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/integrasjon.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-use.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-type.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-1-LegemiddelDose-Oxycodone.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-1-Sykehjem.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-1-ICD10-OID.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication-definitions.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-eksempel-pasient-1234567890.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-2-Avdeling.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-2-SNOMED-CT.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-3-Sykehus.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-use.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-2-Paracetamol.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-1-ICD10-OID.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-2-SNOMED-CT.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-2-Uten-HPR.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/protokoll.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-3-Sykehus.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-use.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-type.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-2-Infusjon.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-2-SNOMED-CT.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-1-Uten-FNR.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-2-Avdeling.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Medication-Medisin-3-LegemiddelPakning-Monoket.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-address-use.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-1-Oralt.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Practitioner-Helsepersonell-1-HPR-nummer.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-3-Sykehus.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Condition-Diagnose-1-ICD10-OID.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose.change.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/Patient-Pasient-2-FNR.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-1-Oralt.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/profiler.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter-examples.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem.xml.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/Organization-Organisasjon-1-Sykehjem.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter.profile.xml.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-legemiddel-koder-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication.profile.history.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-20.ttl.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare-testing.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/MedicationRequest-Rekvirering-1.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/MedicationAdministration-Administrering-1-Oralt.html: Unable to read attribute on <div> at line 86 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring-mappings.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning.json.html: Unable to read attribute on <div> at line 88 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie.profile.ttl.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition.profile.json.html: Unable to read attribute on <div> at line 94 column 18
-ERROR: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier-testing.html: Unable to read attribute on <div> at line 90 column 18
-ERROR: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues.html: Unable to read attribute on <div> at line 86 column 18
+WARNING: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.change.history.html#/html/body/script at Line 255, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 50 other files)
+WARNING: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.change.history.html#/html/body/script at Line 260, column 2: The <script> containing the javascript 'const pageData = JSO'... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 324 other files)
+WARNING: /github/workspace/LMDI/output/Bundle-LegemiddelregisterBundle-1.html#/html/body/script at Line 270, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/CodeSystem-kommunenummer-codesystem-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/Condition-Diagnose-1-ICD10-OID.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Condition-Diagnose-2-SNOMED-CT.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Medication-Medisin-1-LegemiddelDose-Oxycodone.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Medication-Medisin-2-Paracetamol.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Medication-Medisin-3-LegemiddelPakning-Monoket.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/MedicationAdministration-Administrering-1-Oralt.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/MedicationAdministration-Administrering-10.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/MedicationAdministration-Administrering-2-Infusjon.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/MedicationAdministration-Administrering-20.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/MedicationAdministration-Administrering-30.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/MedicationRequest-Rekvirering-1.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelmerkevare-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelpakning-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/NamingSystem-no-basis-fest-legemiddelvirkestoff-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/Organization-Organisasjon-1-Sykehjem.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Organization-Organisasjon-2-Avdeling.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Organization-Organisasjon-3-Sykehus.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Patient-Pasient-1-Uten-FNR.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Patient-Pasient-2-FNR.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Patient-eksempel-pasient-1234567890.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Practitioner-Helsepersonell-1-HPR-nummer.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /github/workspace/LMDI/output/Practitioner-Helsepersonell-2-Uten-HPR.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+ERROR: /github/workspace/LMDI/output/SignertKryptertBundle.html: The html source does not contain the publish box <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader--> (see note at https://confluence.hl7.org/spaces/FHIR/pages/66930646/FHIR+Implementation+Guide+Publishing+Requirements#FHIRImplementationGuidePublishingRequirements-PublishBox)
+WARNING: /github/workspace/LMDI/output/SignertKryptertBundle.html#/html/body/script at Line 377, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-legemiddel-classification-definitions.html#/html/body/script at Line 377, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-bundle-definitions.html#/html/body/script at Line 661, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-condition-definitions.html#/html/body/script at Line 888, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-del-av-behandlingsregime-definitions.html#/html/body/script at Line 374, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-encounter-definitions.html#/html/body/script at Line 675, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-klinisk-studie-definitions.html#/html/body/script at Line 374, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-medication-definitions.html#/html/body/script at Line 1278, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationadministration-definitions.html#/html/body/script at Line 855, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-medicationrequest-definitions.html#/html/body/script at Line 834, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-organization-definitions.html#/html/body/script at Line 992, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-patient-definitions.html#/html/body/script at Line 1068, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-practitioner-definitions.html#/html/body/script at Line 702, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 7 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#/html/body/script at Line 429, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-lmdi-substance-definitions.html#/html/body/script at Line 569, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/StructureDefinition-npr-episode-identifier-definitions.html#/html/body/script at Line 451, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 6 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-LokalLegemiddelkatalogValues-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-atc-valueset-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-kommunenummer-alle-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-legemiddel-koder-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-lmdi-address-type-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-lmdi-address-use-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+ERROR: /github/workspace/LMDI/output/artifacts.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/artifacts.html#/html/body/script at Line 707, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/eksempelkode_cs.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/eksempelkode_cs.html#/html/body/script at Line 870, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/eksempelkode_ps1.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/eksempelkode_ps1.html#/html/body/script at Line 711, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/index.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/index.html#/html/body/script at Line 342, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/informasjonsmodell.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/informasjonsmodell.html#/html/body/script at Line 208, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/integrasjon.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/integrasjon.html#/html/body/script at Line 281, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/nedlastinger.html: The html source does not contain the publish box
+ERROR: nedlastinger.html#/html/body/div/div/div/div/div/ul/li/a at Line 164, column 8: The link 'certificates.zip' for "Sertifikater for TEST- og PRODUKSJONSMILJØET" cannot be resolved
+WARNING: /github/workspace/LMDI/output/nedlastinger.html#/html/body/script at Line 222, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/profiler.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/profiler.html#/html/body/script at Line 273, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/protokoll.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/protokoll.html#/html/body/script at Line 271, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+ERROR: /github/workspace/LMDI/output/toc.html: The html source does not contain the publish box
+WARNING: /github/workspace/LMDI/output/toc.html#/html/body/script at Line 185, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: IG: The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
 == fsh-generated/resources/Bundle-LegemiddelregisterBundle-1.json ==
@@ -547,110 +296,22 @@ ERROR: Practitioner/Helsepersonell-1-HPR-nummer: Practitioner: Practitioner.text
 == fsh-generated/resources/Practitioner-Helsepersonell-2-Uten-HPR.json ==
 ERROR: Practitioner/Helsepersonell-2-Uten-HPR: Practitioner: Practitioner.text: max allowed = 0, but found 1 (from http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner|1.0.7)
 == fsh-generated/resources/StructureDefinition-legemiddel-classification.json ==
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-legemiddel-classification-definitions.html#Extension' at 'div/table/tr/td/a' for 'Extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-legemiddel-classification-definitions.html#Extension.url' at 'div/table/tr/td/a' for 'url' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-legemiddel-classification-definitions.html#Extension.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-bundle.json ==
 INFORMATION: StructureDefinition/lmdi-bundle: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle' at 'div/table/tr/td/a' for 'Bundle' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.identifier' at 'div/table/tr/td/a' for 'identifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.type' at 'div/table/tr/td/a' for 'type' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.timestamp' at 'div/table/tr/td/a' for 'timestamp' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.entry' at 'div/table/tr/td/a' for 'entry' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.entry.resource' at 'div/table/tr/td/a' for 'resource' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.entry.request' at 'div/table/tr/td/a' for 'request' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.entry.request.method' at 'div/table/tr/td/a' for 'method' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-bundle-definitions.html#Bundle.entry.request.url' at 'div/table/tr/td/a' for 'url' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-condition.json ==
 WARNING: StructureDefinition/lmdi-condition: StructureDefinition.differential.element[29].constraint[0]: Constraint failed: eld-21: 'Constraints should have an expression or else validators will not be able to enforce them (expression.exists())'
 INFORMATION: StructureDefinition/lmdi-condition: StructureDefinition.differential.element[5].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/lmdi-condition: StructureDefinition.differential.element[29].constraint[0]: The constraint 'con-1' has no computable expression, so validators will not be able to check it
 INFORMATION: StructureDefinition/lmdi-condition: StructureDefinition.snapshot.element[17].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition' at 'div/table/tr/td/a' for 'Condition' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding' at 'div/table/tr/td/a' for 'Slices for coding' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:SCT' at 'div/table/tr/td/a' for 'coding:SCT' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:SCT.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:SCT.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD10' at 'div/table/tr/td/a' for 'coding:ICD10' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD10.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD10.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD10.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD11' at 'div/table/tr/td/a' for 'coding:ICD11' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD11.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD11.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICD11.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICPC2' at 'div/table/tr/td/a' for 'coding:ICPC2' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICPC2.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICPC2.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.code.coding:ICPC2.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.subject' at 'div/table/tr/td/a' for 'subject' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-condition-definitions.html#Condition.stage' at 'div/table/tr/td/a' for 'stage' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-del-av-behandlingsregime.json ==
 WARNING: StructureDefinition/lmdi-del-av-behandlingsregime: StructureDefinition.context[0]: Review the extension type for lmdi-del-av-behandlingsregime: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 WARNING: StructureDefinition.where(url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime'): The Implementation Guide contains no examples for this extension
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-del-av-behandlingsregime-definitions.html#Extension' at 'div/table/tr/td/a' for 'Extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-del-av-behandlingsregime-definitions.html#Extension.url' at 'div/table/tr/td/a' for 'url' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-del-av-behandlingsregime-definitions.html#Extension.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-encounter.json ==
 INFORMATION: StructureDefinition.where(url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter'): The Implementation Guide contains no explicitly linked examples for this profile
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-encounter-definitions.html#Encounter' at 'div/table/tr/td/a' for 'Encounter' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-encounter-definitions.html#Encounter.extension' at 'div/table/tr/td/a' for 'Slices for extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-encounter-definitions.html#Encounter.extension:nprEpisodeIdentifier' at 'div/table/tr/td/a' for 'extension:nprEpisodeIdentifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-encounter-definitions.html#Encounter.serviceProvider' at 'div/table/tr/td/a' for 'serviceProvider' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-klinisk-studie.json ==
 WARNING: StructureDefinition/lmdi-klinisk-studie: StructureDefinition.context[0]: Review the extension type for lmdi-klinisk-studie: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 WARNING: StructureDefinition.where(url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie'): The Implementation Guide contains no examples for this extension
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-klinisk-studie-definitions.html#Extension' at 'div/table/tr/td/a' for 'Extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-klinisk-studie-definitions.html#Extension.url' at 'div/table/tr/td/a' for 'url' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-klinisk-studie-definitions.html#Extension.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-medication.json ==
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication' at 'div/table/tr/td/a' for 'Medication' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.extension' at 'div/table/tr/td/a' for 'Slices for extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.extension:classification' at 'div/table/tr/td/a' for 'extension:classification' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding' at 'div/table/tr/td/a' for 'Slices for coding' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddeldose' at 'div/table/tr/td/a' for 'coding:FestLegemiddeldose' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddeldose.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddeldose.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLmrLopenr' at 'div/table/tr/td/a' for 'coding:FestLmrLopenr' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLmrLopenr.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLmrLopenr.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddelMerkevare' at 'div/table/tr/td/a' for 'coding:FestLegemiddelMerkevare' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddelMerkevare.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddelMerkevare.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddelpakning' at 'div/table/tr/td/a' for 'coding:FestLegemiddelpakning' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddelpakning.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestLegemiddelpakning.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:Varenummer' at 'div/table/tr/td/a' for 'coding:Varenummer' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:Varenummer.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:Varenummer.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestVirkestoff' at 'div/table/tr/td/a' for 'coding:FestVirkestoff' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestVirkestoff.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:FestVirkestoff.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:LokaltLegemiddel' at 'div/table/tr/td/a' for 'coding:LokaltLegemiddel' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:LokaltLegemiddel.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:LokaltLegemiddel.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:LokaltLegemiddel.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:SCT' at 'div/table/tr/td/a' for 'coding:SCT' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:SCT.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.code.coding:SCT.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form' at 'div/table/tr/td/a' for 'form' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding' at 'div/table/tr/td/a' for 'Slices for coding' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:7448' at 'div/table/tr/td/a' for 'coding:7448' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:7448.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:7448.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:7448.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:SCT' at 'div/table/tr/td/a' for 'coding:SCT' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.form.coding:SCT.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient' at 'div/table/tr/td/a' for 'ingredient' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]' at 'div/table/tr/td/a' for 'Slices for item[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]:itemReference' at 'div/table/tr/td/a' for 'item[x]:itemReference' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.ingredient.item[x]:itemCodeableConcept' at 'div/table/tr/td/a' for 'item[x]:itemCodeableConcept' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medication-definitions.html#Medication.batch' at 'div/table/tr/td/a' for 'batch' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-medicationadministration.json ==
 WARNING: Legemiddeladministrering.MedicationAdministration.status: Binding http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus could not be expanded
 INFORMATION: StructureDefinition/lmdi-medicationadministration: StructureDefinition.differential.element[21].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
@@ -658,50 +319,7 @@ ERROR: StructureDefinition/lmdi-medicationadministration: StructureDefinition.sn
 ERROR: StructureDefinition/lmdi-medicationadministration: StructureDefinition.snapshot.element[24].constraint[1]: Error in constraint 'time-required' with expression '$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')': Error evaluating FHIRPath expression: The function matches can only be used on string, uri, url, code, id but found [http://hl7.org/fhir/StructureDefinition/dateTime] (@char 7)
 ERROR: StructureDefinition/lmdi-medicationadministration: StructureDefinition.snapshot.element[25].constraint[1]: Error in constraint 'time-required' with expression '$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')': Error evaluating FHIRPath expression: The function matches can only be used on string, uri, url, code, id but found [http://hl7.org/fhir/StructureDefinition/dateTime] (@char 7)
 INFORMATION: StructureDefinition/lmdi-medicationadministration: StructureDefinition.snapshot.element[46].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration' at 'div/table/tr/td/a' for 'MedicationAdministration' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.status' at 'div/table/tr/td/a' for 'status' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.medication[x]' at 'div/table/tr/td/a' for 'medication[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.subject' at 'div/table/tr/td/a' for 'subject' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.context' at 'div/table/tr/td/a' for 'context' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.effective[x]' at 'div/table/tr/td/a' for 'Slices for effective[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.effective[x]:effectiveDateTime' at 'div/table/tr/td/a' for 'effective[x]:effectiveDateTime' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.effective[x]:effectivePeriod' at 'div/table/tr/td/a' for 'effective[x]:effectivePeriod' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.effective[x]:effectivePeriod.start' at 'div/table/tr/td/a' for 'start' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.effective[x]:effectivePeriod.end' at 'div/table/tr/td/a' for 'end' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.reasonCode' at 'div/table/tr/td/a' for 'reasonCode' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.reasonReference' at 'div/table/tr/td/a' for 'reasonReference' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.request' at 'div/table/tr/td/a' for 'request' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage' at 'div/table/tr/td/a' for 'dosage' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route' at 'div/table/tr/td/a' for 'route' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding' at 'div/table/tr/td/a' for 'Slices for coding' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:SCT' at 'div/table/tr/td/a' for 'coding:SCT' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:SCT.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:SCT.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:7477' at 'div/table/tr/td/a' for 'coding:7477' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:7477.system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:7477.code' at 'div/table/tr/td/a' for 'code' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.route.coding:7477.display' at 'div/table/tr/td/a' for 'display' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.dose' at 'div/table/tr/td/a' for 'dose' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.rate[x]' at 'div/table/tr/td/a' for 'Slices for rate[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationadministration-definitions.html#MedicationAdministration.dosage.rate[x]:rateRatio' at 'div/table/tr/td/a' for 'rate[x]:rateRatio' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-medicationrequest.json ==
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest' at 'div/table/tr/td/a' for 'MedicationRequest' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.extension' at 'div/table/tr/td/a' for 'Slices for extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.extension:prosentvisDoseendring' at 'div/table/tr/td/a' for 'extension:prosentvisDoseendring' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.extension:delAvBehandlingsregime' at 'div/table/tr/td/a' for 'extension:delAvBehandlingsregime' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.extension:kliniskStudie' at 'div/table/tr/td/a' for 'extension:kliniskStudie' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.identifier' at 'div/table/tr/td/a' for 'identifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.status' at 'div/table/tr/td/a' for 'status' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.intent' at 'div/table/tr/td/a' for 'intent' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.reported[x]' at 'div/table/tr/td/a' for 'reported[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.medication[x]' at 'div/table/tr/td/a' for 'medication[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.subject' at 'div/table/tr/td/a' for 'subject' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.encounter' at 'div/table/tr/td/a' for 'encounter' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.requester' at 'div/table/tr/td/a' for 'requester' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.reasonReference' at 'div/table/tr/td/a' for 'reasonReference' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.courseOfTherapyType' at 'div/table/tr/td/a' for 'courseOfTherapyType' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.dosageInstruction' at 'div/table/tr/td/a' for 'dosageInstruction' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-medicationrequest-definitions.html#MedicationRequest.priorPrescription' at 'div/table/tr/td/a' for 'priorPrescription' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-organization.json ==
 INFORMATION: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[17].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[26].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
@@ -711,19 +329,6 @@ INFORMATION: StructureDefinition/lmdi-organization: StructureDefinition.snapshot
 INFORMATION: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[76].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot: The slice 'ENH' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot: The slice 'RSH' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization' at 'div/table/tr/td/a' for 'Organization' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.identifier' at 'div/table/tr/td/a' for 'identifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.identifier:ENH' at 'div/table/tr/td/a' for 'identifier:ENH' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.identifier:RSH' at 'div/table/tr/td/a' for 'identifier:RSH' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.type' at 'div/table/tr/td/a' for 'type' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.name' at 'div/table/tr/td/a' for 'name' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.address' at 'div/table/tr/td/a' for 'address' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.address.extension:urbanDistrict' at 'div/table/tr/td/a' for 'extension:urbanDistrict' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.address.type' at 'div/table/tr/td/a' for 'type' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.address.district' at 'div/table/tr/td/a' for 'district' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.address.district.extension:municipalitycode' at 'div/table/tr/td/a' for 'extension:municipalitycode' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.address.state' at 'div/table/tr/td/a' for 'state' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-organization-definitions.html#Organization.partOf' at 'div/table/tr/td/a' for 'partOf' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-patient.json ==
 WARNING: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-citizenship'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-citizenship' to 'http://hl7.org/fhir/StructureDefinition/patient-citizenship|5.2.0'
 ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[11].binding.valueSet: Canonical URL 'urn:iso:std:iso:3166' refers to a resource that has the wrong type. Found CodeSystem expecting one of [ValueSet]
@@ -738,21 +343,6 @@ ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[11
 ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[84].constraint[1]: Error in constraint 'address-use-constraint' with expression 'address.use.empty() or address.use in ('home' | 'temp' | 'old')': Error evaluating FHIRPath expression: The name 'address' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/code] (@char 1)
 WARNING: StructureDefinition/lmdi-patient: StructureDefinition.snapshot: The slice 'FHN' on path 'Patient.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/lmdi-patient: StructureDefinition.snapshot: The slice 'HNR' on path 'Patient.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient' at 'div/table/tr/td/a' for 'Patient' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.identifier' at 'div/table/tr/td/a' for 'identifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.identifier:FNR' at 'div/table/tr/td/a' for 'identifier:FNR' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.identifier:FNR.value' at 'div/table/tr/td/a' for 'value' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.identifier:DNR' at 'div/table/tr/td/a' for 'identifier:DNR' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.identifier:DNR.value' at 'div/table/tr/td/a' for 'value' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.gender' at 'div/table/tr/td/a' for 'gender' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.birthDate' at 'div/table/tr/td/a' for 'birthDate' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address' at 'div/table/tr/td/a' for 'address' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address.extension:urbanDistrict' at 'div/table/tr/td/a' for 'extension:urbanDistrict' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address.use' at 'div/table/tr/td/a' for 'use' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address.type' at 'div/table/tr/td/a' for 'type' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address.district' at 'div/table/tr/td/a' for 'district' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address.district.extension:municipalitycode' at 'div/table/tr/td/a' for 'extension:municipalitycode' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-patient-definitions.html#Patient.address.state' at 'div/table/tr/td/a' for 'state' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-practitioner.json ==
 INFORMATION: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[17].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[26].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
@@ -761,31 +351,12 @@ WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.ele
 WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[61].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7704'
 WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[69].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7426'
 INFORMATION: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[78].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-practitioner-definitions.html#Practitioner' at 'div/table/tr/td/a' for 'Practitioner' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-practitioner-definitions.html#Practitioner.identifier' at 'div/table/tr/td/a' for 'Slices for identifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-practitioner-definitions.html#Practitioner.identifier:HPR' at 'div/table/tr/td/a' for 'identifier:HPR' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring.json ==
 WARNING: StructureDefinition/lmdi-prosentvis-doseendring: StructureDefinition.context[0]: Review the extension type for lmdi-prosentvis-doseendring: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 WARNING: StructureDefinition.where(url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring'): The Implementation Guide contains no examples for this extension
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#Extension' at 'div/table/tr/td/a' for 'Extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#Extension.url' at 'div/table/tr/td/a' for 'url' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#Extension.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#Extension.value[x].unit' at 'div/table/tr/td/a' for 'unit' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#Extension.value[x].system' at 'div/table/tr/td/a' for 'system' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-prosentvis-doseendring-definitions.html#Extension.value[x].code' at 'div/table/tr/td/a' for 'code' does not resolve
 == fsh-generated/resources/StructureDefinition-lmdi-substance.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance'): The Implementation Guide contains no examples for this profile
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-substance-definitions.html#Substance' at 'div/table/tr/td/a' for 'Substance' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-lmdi-substance-definitions.html#Substance.category' at 'div/table/tr/td/a' for 'category' does not resolve
 == fsh-generated/resources/StructureDefinition-npr-episode-identifier.json ==
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension' at 'div/table/tr/td/a' for 'Extension' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.extension:stringIdentifier' at 'div/table/tr/td/a' for 'extension:stringIdentifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.extension:stringIdentifier.url' at 'div/table/tr/td/a' for 'url' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.extension:stringIdentifier.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.extension:uuidIdentifier' at 'div/table/tr/td/a' for 'extension:uuidIdentifier' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.extension:uuidIdentifier.url' at 'div/table/tr/td/a' for 'url' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.extension:uuidIdentifier.value[x]' at 'div/table/tr/td/a' for 'value[x]' does not resolve
-ERROR: StructureDefinition.text.div: Hyperlink 'StructureDefinition-npr-episode-identifier-definitions.html#Extension.url' at 'div/table/tr/td/a' for 'url' does not resolve
 == fsh-generated/resources/ValueSet-LokalLegemiddelkatalogValues.json ==
 ERROR: ValueSet/LokalLegemiddelkatalogValues: ValueSet: Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
 == fsh-generated/resources/ValueSet-atc-valueset.json ==

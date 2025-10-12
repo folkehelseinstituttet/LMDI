@@ -12,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for Lmdi</h1>
- <p>Generated Tue Oct 07 11:56:42 UTC 2025, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.7 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>))</p>
+ <p>Generated Sun Oct 12 08:59:25 UTC 2025, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.7 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -48,25 +48,39 @@
     </td>
   </tr>
   <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus-inc-0</td>
+    <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>null</td>
     <td>urn:iso:std:iso:3166</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://nzhts.digital.health.nz/fhir</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>null</td>
     <td>http://www.whocc.no/atc|2.0.1</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://nzhts.digital.health.nz/fhir</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>null</td>
     <td>http://www.whocc.no/atc</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|https://nzhts.digital.health.nz/fhir</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -199,7 +213,7 @@
     <td>http://tx.fhir.org/r4</td>
     <td>null</td>
     <td>http://unitsofmeasure.org</td>
-    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|https://nzhts.digital.health.nz/fhir</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -237,6 +251,13 @@
     <td>auth = , candidates=</td>
   </tr>
   <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://apps.health.belgium.be/ontoserver/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4</td>
+  </tr>
+  <tr>
     <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
@@ -250,10 +271,24 @@
     <td>urn:oid:2.16.578.1.12.4.1.1.3402</td>
     <td>auth = , candidates=</td>
   </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.0.7</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare, http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff, http://snomed.info/sct, http://dmp.no/fhir/NamingSystem/festLegemiddelPakning, http://dmp.no/fhir/NamingSystem/festLegemiddelDose]</td>
+    <td>[auth = , candidates=, auth = , candidates=, auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://apps.health.belgium.be/ontoserver/fhir|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4, auth = , candidates=, auth = , candidates=]</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus|1.0.7</td>
+    <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
+    <td>auth = , candidates=</td>
+  </tr>
 </table>
 <h2>Primary Server: https://tx.fhir.org/r4</h2>
 <a href="https://tx.fhir.org/r4"></a>
-<p>Use Count: 21. Code Systems used: </p>
+<p>Use Count: 26. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -300,8 +335,14 @@
     <td></td>
   </tr>
   <tr>
-    <td>http://snomed.info/sct</td>
+    <td>http://hl7.org/fhir/ValueSet/medication-admin-status</td>
+    <td>3</td>
     <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://snomed.info/sct</td>
+    <td>1</td>
     <td>3</td>
     <td>
       <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a>

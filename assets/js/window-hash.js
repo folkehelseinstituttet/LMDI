@@ -1,5 +1,1 @@
-$(document).ready(function(){
-  if(window.location.hash != "") {
-      $('a[href="' + window.location.hash + '"]').click()
-  }
-});
+Failed to fetch HL7/ig-template-base@0.8.1 from GitHub.
