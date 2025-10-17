@@ -58,7 +58,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
   "status" : "draft",
-  "date" : "2025-10-17T18:23:46+00:00",
+  "date" : "2025-10-17T18:45:29+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {
