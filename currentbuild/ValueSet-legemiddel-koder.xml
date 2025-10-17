@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="legemiddel-koder"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet legemiddel-koder</b></p><a name="legemiddel-koder"> </a><a name="hclegemiddel-koder"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</code><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</code><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</code><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</code><span title="Version is not explicity stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
+  </text>
+  <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder"/>
+  <version value="1.0.7"/>
+  <name value="LegemiddelKoder"/>
+  <title value="Gyldige legemiddelkoder"/>
+  <status value="draft"/>
+  <date value="2025-10-17T18:08:49+00:00"/>
+  <publisher value="Folkehelseinstituttet"/>
+  <contact>
+    <name value="Folkehelseinstituttet"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.fhi.no"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Legemiddelregisteret"/>
+    <telecom>
+      <system value="email"/>
+      <value value="legemiddelregisteret@fhi.no"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet som inneholder koder fra SNOMED CT og FEST"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="NO"/>
+      <display value="Norway"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+    </include>
+    <include>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"/>
+    </include>
+    <include>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"/>
+    </include>
+    <include>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"/>
+    </include>
+    <include>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
+    </include>
+  </compose>
+</ValueSet>
