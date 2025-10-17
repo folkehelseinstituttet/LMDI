@@ -1,0 +1,87 @@
+# hl7.fhir.no.lmdi#1.0.7: Legemiddeldata fra institusjon til Legemiddelregisteret
+
+## Pages
+
+* [Hjem](index.md)
+* [Integrasjon](integrasjon.md)
+* [Protokoll](protokoll.md)
+* [SignertKryptertBundle](SignertKryptertBundle.md)
+* [Powershell eksempelkode](eksempelkode_ps1.md)
+* [Nedlastinger](nedlastinger.md)
+* [Artifacts Summary](artifacts.md)
+* [FHIR-profiler](profiler.md)
+* [C# eksempelkode](eksempelkode_cs.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+
+## Resources
+
+### CodeSystems
+
+* [Lokal Legemiddelkatalog Codes](CodeSystem-LokalLegemiddelkatalogCodeSystem.md)
+* [Kommunenummer CodeSystem](CodeSystem-kommunenummer-codesystem.md)
+
+### ValueSets
+
+* [Lokal Legemiddelkatalog Values](ValueSet-LokalLegemiddelkatalogValues.md)
+* [ATC Kodesystem ValueSet](ValueSet-atc-valueset.md)
+* [Kommunenummer ValueSet](ValueSet-kommunenummer-alle.md)
+* [Gyldige legemiddelkoder](ValueSet-legemiddel-koder.md)
+* [LMDI Address Type](ValueSet-lmdi-address-type.md)
+* [LMDI Address Use](ValueSet-lmdi-address-use.md)
+* [Status for legemiddeladministrering](ValueSet-lmdi-medicationadministrationstatus.md)
+
+### Resource Profiles
+
+* [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.md)
+* [Diagnose](StructureDefinition-lmdi-condition.md)
+* [Episode](StructureDefinition-lmdi-encounter.md)
+* [Legemiddel](StructureDefinition-lmdi-medication.md)
+* [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
+* [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
+* [Organisasjon](StructureDefinition-lmdi-organization.md)
+* [Pasient](StructureDefinition-lmdi-patient.md)
+* [Helsepersonell](StructureDefinition-lmdi-practitioner.md)
+* [Virkestoff](StructureDefinition-lmdi-substance.md)
+
+### Extensions
+
+* [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
+* [Del av behandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md)
+* [Klinisk studie](StructureDefinition-lmdi-klinisk-studie.md)
+* [Prosentvis doseendring](StructureDefinition-lmdi-prosentvis-doseendring.md)
+* [NPR Episode Identifier](StructureDefinition-npr-episode-identifier.md)
+
+### ImplementationGuides
+
+* [Legemiddeldata fra institusjon til Legemiddelregisteret](index.md)
+
+### NamingSystems
+
+* [lmdiLokaltLegemiddel](NamingSystem-lmdi-lokaltLegemiddel.md)
+* [festLegemiddelDose](NamingSystem-no-basis-fest-legemiddeldose.md)
+* [festLegemiddelMerkevare](NamingSystem-no-basis-fest-legemiddelmerkevare.md)
+* [festLegemiddelPakning](NamingSystem-no-basis-fest-legemiddelpakning.md)
+* [festLegemiddelVirkestoff](NamingSystem-no-basis-fest-legemiddelvirkestoff.md)
+
+### Examples
+
+* [LegemiddelregisterBundle-1 (Bundle)](Bundle-LegemiddelregisterBundle-1.md)
+* [Diagnose-1-ICD10-OID (Condition)](Condition-Diagnose-1-ICD10-OID.md)
+* [Diagnose-2-SNOMED-CT (Condition)](Condition-Diagnose-2-SNOMED-CT.md)
+* [Medisin-1-LegemiddelDose-Oxycodone (Medication)](Medication-Medisin-1-LegemiddelDose-Oxycodone.md)
+* [Medisin-2-Paracetamol (Medication)](Medication-Medisin-2-Paracetamol.md)
+* [Medisin-3-LegemiddelPakning-Monoket (Medication)](Medication-Medisin-3-LegemiddelPakning-Monoket.md)
+* [Administrering-1-Oralt (MedicationAdministration)](MedicationAdministration-Administrering-1-Oralt.md)
+* [Administrering-10 (MedicationAdministration)](MedicationAdministration-Administrering-10.md)
+* [Administrering-2-Infusjon (MedicationAdministration)](MedicationAdministration-Administrering-2-Infusjon.md)
+* [Administrering-20 (MedicationAdministration)](MedicationAdministration-Administrering-20.md)
+* [Administrering-30 (MedicationAdministration)](MedicationAdministration-Administrering-30.md)
+* [Rekvirering-1 (MedicationRequest)](MedicationRequest-Rekvirering-1.md)
+* [Lykkedalen sykehjem (Organization)](Organization-Organisasjon-1-Sykehjem.md)
+* [Avdeling for epilepsi, poliklinikk (Organization)](Organization-Organisasjon-2-Avdeling.md)
+* [Oslo universitetssykehus HF (Organization)](Organization-Organisasjon-3-Sykehus.md)
+* [Pasient-1-Uten-FNR (Patient)](Patient-Pasient-1-Uten-FNR.md)
+* [Pasient-2-FNR (Patient)](Patient-Pasient-2-FNR.md)
+* [eksempel-pasient-1234567890 (Patient)](Patient-eksempel-pasient-1234567890.md)
+* [Helsepersonell-1-HPR-nummer (Practitioner)](Practitioner-Helsepersonell-1-HPR-nummer.md)
+* [Helsepersonell-2-Uten-HPR (Practitioner)](Practitioner-Helsepersonell-2-Uten-HPR.md)
