@@ -26,7 +26,7 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
 
 ### Logical Definition (CLD)
 
-* Include all codes defined in [`http://www.whocc.no/atc`](http://www.whocc.no/atc) version Not Stated (use latest from terminology server)
+* Include all codes defined in [`http://www.whocc.no/atc`](http://www.whocc.no/atc)version Not Stated (use latest from terminology server)
 
  
 
