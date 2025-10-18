@@ -39,7 +39,7 @@ This code system `urn:oid:2.16.578.1.12.4.1.1.3402` defines codes, but no codes 
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "status" : "active",
-  "date" : "2025-10-18T06:27:30+00:00",
+  "date" : "2025-10-18T06:37:01+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

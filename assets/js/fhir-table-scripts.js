@@ -159,7 +159,7 @@ function filterDesc(table, prop, value, panel) {
       for (let i = 0; i < cell.children.length; i++) {
         const childElement = cell.children[i];
         let classes = childElement.getAttribute('class');
-        if (classes.includes(prop)) {
+        if (classes && classes.includes(prop)) {
           childElement.style.display = v;
         }
       }
