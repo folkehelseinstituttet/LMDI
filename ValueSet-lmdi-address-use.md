@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use** | *Version*:1.0.7** |
-| Active as of 2025-10-17 | *Computable Name*:LmdiAddressUse |
+| Active as of 2025-10-18 | *Computable Name*:LmdiAddressUse |
 
  
 Tillatte verdier for address.use i LMDI: home, temp, old 
@@ -56,7 +56,7 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
   "status" : "active",
-  "date" : "2025-10-17T18:58:39+00:00",
+  "date" : "2025-10-18T06:27:30+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {
