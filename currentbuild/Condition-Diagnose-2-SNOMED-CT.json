@@ -1,0 +1,27 @@
+{
+  "resourceType" : "Condition",
+  "id" : "Diagnose-2-SNOMED-CT",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition Diagnose-2-SNOMED-CT</b></p><a name=\"Diagnose-2-SNOMED-CT\"> </a><a name=\"hcDiagnose-2-SNOMED-CT\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-condition.html\">Diagnose</a></p></div><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 276241001}, {urn:oid:2.16.578.1.12.4.1.1.7110 F40.2}\">Høydeskrekk</span></p><p><b>subject</b>: <a href=\"Patient-eksempel-pasient-1234567890.html\">Anonymous Patient (no stated gender), DoB Unknown</a></p></div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "276241001",
+      "display" : "frykt for høyder"
+    },
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
+      "code" : "F40.2",
+      "display" : "Spesifikke (isolerte) fobier"
+    }],
+    "text" : "Høydeskrekk"
+  },
+  "subject" : {
+    "reference" : "Patient/eksempel-pasient-1234567890"
+  }
+}
