@@ -16,7 +16,7 @@ Formålet med denne protokollen er å sikre daglig overføring av legemiddeladmi
 - Data overføres via **Legemiddelregisterets FHIR-mottak API**.
 - Ressursene må følge Legemiddelregisterets **definerte FHIR-profiler**.
 - Hver overføring skal bestå av en [signert og kryptert FHIR-bundle](SignertKryptertBundle.html) for å sikre integritet og konfidensialitet.
-- API-tilgang krever autentisering via **HelseID**.
+- API-tilgang krever autentisering via **Maskinporten**.
 
 ## 3. Feilhåndtering
 
@@ -34,6 +34,6 @@ Formålet med denne protokollen er å sikre daglig overføring av legemiddeladmi
 - API-responsen gir en **statusmelding** for hver overført ressurs, inkludert detaljer om eventuelle valideringsfeil.
 
 ## 5. Sikkerhet
-- All kommunikasjon med API-et sikres ved hjelp av **HelseID**.
+- All kommunikasjon med API-et sikres ved hjelp av **Maskinporten**.
 - Overførte data må være **signerte** og **krypterte** for å beskytte mot uautorisert tilgang og sikre dataintegritet.
-- Avsender må ha gyldig **HelseID-autentisering** for å kunne kommunisere med API-et.
+- Avsender må ha gyldig **Maskinporten-autentisering** for å kunne kommunisere med API-et.
