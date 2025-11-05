@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-2-SNOMED-CT> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Diagnose-2-SNOMED-CT"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition Diagnose-2-SNOMED-CT</b></p><a name=\"Diagnose-2-SNOMED-CT\"> </a><a name=\"hcDiagnose-2-SNOMED-CT\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-condition.html\">Diagnose</a></p></div><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 276241001}, {urn:oid:2.16.578.1.12.4.1.1.7110 F40.2}\">Høydeskrekk</span></p><p><b>subject</b>: <a href=\"Patient-eksempel-pasient-1234567890.html\">Anonymous Patient (no stated gender), DoB Unknown</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:276241001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "276241001" ] ;
+       fhir:display [ fhir:v "frykt for høyder" ]
+     ] [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.1.7110"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.1.7110>
+       ] ;
+       fhir:code [ fhir:v "F40.2" ] ;
+       fhir:display [ fhir:v "Spesifikke (isolerte) fobier" ]
+     ] ) ;
+     fhir:text [ fhir:v "Høydeskrekk" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/eksempel-pasient-1234567890> ;
+     fhir:reference [ fhir:v "Patient/eksempel-pasient-1234567890" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
