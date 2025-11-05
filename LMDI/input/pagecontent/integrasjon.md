@@ -31,13 +31,15 @@ APIet er beskyttet av Maskinporten og krever at klienter autentiserer seg med ma
 
 For å få tilgang:
 
-1. Registrer integrasjon i Digdir sin Samarbeidsportal (https://sjolvbetjening.test.samarbeid.digdir.no/)
+1. Registrer integrasjon i Digdir sin samarbeidsportal (`https://sjolvbetjening.test.samarbeid.digdir.no/`)
     - Opprett en klient 
     - Be om tilgang til scopet `fhi:lmr.fhirmottak/api`
-2. Implementer OAuth 2.0 Client Credentials flow med JWT bearer token
+2. Implementer OAuth 2.0 Client Credentials flow med JWT bearer token. Det anbefales og bruke bibilioteket til Altinn: `https://github.com/Altinn/altinn-apiclient-maskinporten`
     - Generer en signeringsnøkkel direkte i selvbetjeningsportalen (PEM-format) eller lag en selv med eget virksomhetssertifikat.
-    - Generer signert JWT grant. 
-3. Inkluder access token i Authorization-headeren som Bearer token ved kall til API-et
+    - Generer signert JWT-assertion og send til maskinporten sitt token-endepunkt.
+    - Det er viktig å inkludere det valgfrie claimet `Resource` i JWT-assertion. Denne verdien skal være 'fhi:lmr/fhirmottak'.
+    - `Scope` claimet må også legges til. Denne verdien korresponderer med navnet på scopet i selvbetjeningsportalen: `fhi:lmr.fhirmottak/api`
+3. Inkluder motatt access token i Authorization-headeren som Bearer token ved kall til API-et
 
 
 ### Overføring av data til Legemiddelregisteret
