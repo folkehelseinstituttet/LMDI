@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
   "name" : "LegemiddelregisterBundle",
   "title" : "LegemiddelregisterBundle",
   "status" : "draft",
-  "date" : "2025-11-06T09:39:43+00:00",
+  "date" : "2025-11-06T09:59:39+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

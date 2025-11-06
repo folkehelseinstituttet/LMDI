@@ -66,7 +66,7 @@ This value set cannot be expanded because the terminology server(s) deemed it to
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "draft",
-  "date" : "2025-11-06T09:39:43+00:00",
+  "date" : "2025-11-06T09:59:39+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

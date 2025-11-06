@@ -183,15 +183,15 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
   <li>Registrer integrasjon i Digdir sin samarbeidsportal (<code class="language-plaintext highlighter-rouge">https://sjolvbetjening.test.samarbeid.digdir.no/</code>)
     <ul>
       <li>Opprett en klient</li>
-      <li>Be om tilgang til scopet <code class="language-plaintext highlighter-rouge">fhi:lmr.fhirmottak/api</code></li>
+      <li>Be om tilgang til scopet <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code></li>
     </ul>
   </li>
   <li>Implementer OAuth 2.0 Client Credentials flow med JWT bearer token. Det anbefales og bruke bibilioteket til Altinn: <code class="language-plaintext highlighter-rouge">https://github.com/Altinn/altinn-apiclient-maskinporten</code>
     <ul>
       <li>Generer en signeringsnøkkel direkte i selvbetjeningsportalen (PEM-format) eller lag en selv med eget virksomhetssertifikat.</li>
       <li>Generer signert JWT-assertion og send til maskinporten sitt token-endepunkt.</li>
-      <li>Det er viktig å inkludere det valgfrie claimet <code class="language-plaintext highlighter-rouge">Resource</code> i JWT-assertion. Denne verdien skal være ‘fhi:lmr/fhirmottak’.</li>
-      <li><code class="language-plaintext highlighter-rouge">Scope</code> claimet må også legges til. Denne verdien korresponderer med navnet på scopet i selvbetjeningsportalen: <code class="language-plaintext highlighter-rouge">fhi:lmr.fhirmottak/api</code></li>
+      <li>Det er viktig å inkludere det valgfrie claimet <code class="language-plaintext highlighter-rouge">Resource</code> i JWT-assertion. Denne verdien skal være <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">Scope</code> claimet må også legges til. Denne verdien korresponderer med navnet på scopet i selvbetjeningsportalen: <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code></li>
     </ul>
   </li>
   <li>Inkluder motatt access token i Authorization-headeren som Bearer token ved kall til API-et</li>
@@ -285,7 +285,7 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, Nov 6, 2025 09:39+0000">2025-11-06</span>
+                        title="Thu, Nov 6, 2025 09:59+0000">2025-11-06</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
