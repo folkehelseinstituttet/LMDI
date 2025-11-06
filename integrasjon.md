@@ -31,17 +31,23 @@ Data som overføres til API-et skal være kryptert og signert (se [SignertKrypte
 * Ved signering benyttes privat nøkkel i avsenders virksomhetssertifikat. Den offentlige delen av dette sertifikatet må sendes til Legemiddelregisteret.
 * Ved kryptering av data benyttes offentlig nøkkel i Legemiddelregisterets virksomhetssertifikat. Dette kan lastes ned [her](nedlastinger.md)
 
-#### HelseId
+#### Maskinporten
 
-APIet er beskyttet av HelseID og krever at klienter autentiserer seg med Client Credentials Grant.
+APIet er beskyttet av Maskinporten og krever at klienter autentiserer seg med maskin-til-maskin autentisering.
 
 For å få tilgang:
 
-1. Registrer nytt klientsystem og ny klient i HelseID selvbetjeningsportal
-* Skal ha tilgang til API-et fhi:lmr.fhirmottak med scope fhi:lmr.fhirmottak/api
+1. Registrer integrasjon i Digdir sin samarbeidsportal (`https://sjolvbetjening.test.samarbeid.digdir.no/`)
+* Opprett en klient
+* Be om tilgang til scopet `fhi:lmr.fhirmottak/api`
 
-1. Implementer OAuth 2.0 client credentials flow
-1. Inkluder access token som DPoP token i Authorization-headeren og legg til en DPoP-header med et signert bevis (proof JWT).
+1. Implementer OAuth 2.0 Client Credentials flow med JWT bearer token. Det anbefales og bruke bibilioteket til Altinn:`https://github.com/Altinn/altinn-apiclient-maskinporten`
+* Generer en signeringsnøkkel direkte i selvbetjeningsportalen (PEM-format) eller lag en selv med eget virksomhetssertifikat.
+* Generer signert JWT-assertion og send til maskinporten sitt token-endepunkt.
+* Det er viktig å inkludere det valgfrie claimet `Resource` i JWT-assertion. Denne verdien skal være ‘fhi:lmr/fhirmottak’.
+* `Scope` claimet må også legges til. Denne verdien korresponderer med navnet på scopet i selvbetjeningsportalen: `fhi:lmr.fhirmottak/api`
+
+1. Inkluder motatt access token i Authorization-headeren som Bearer token ved kall til API-et
 
 ### Overføring av data til Legemiddelregisteret
 
@@ -66,7 +72,7 @@ For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepun
 
 **Validering av FHIR-bundle:**
 
-* `/fhirmottak/v1/validate` - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever HelseID-autentisering. Returnerer valideringsresultat.
+* `/fhirmottak/v1/validate` - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever Maskinporten-autentisering. Returnerer valideringsresultat.
 
 #### Håndter respons fra API-et
 

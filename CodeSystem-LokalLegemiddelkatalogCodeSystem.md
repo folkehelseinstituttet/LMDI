@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem** | *Version*:1.0.7** |
-| Draft as of 2025-10-18 | *Computable Name*:LokalLegemiddelkatalogCodeSystem |
+| Draft as of 2025-11-06 | *Computable Name*:LokalLegemiddelkatalogCodeSystem |
 
  
 Kodesystem for lokal legemiddelkatalog 
@@ -37,7 +37,7 @@ Kodesystem for lokal legemiddelkatalog
   "name" : "LokalLegemiddelkatalogCodeSystem",
   "title" : "Lokal Legemiddelkatalog Codes",
   "status" : "draft",
-  "date" : "2025-10-18T06:49:50+00:00",
+  "date" : "2025-11-06T09:39:43+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

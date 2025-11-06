@@ -30,7 +30,7 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+No Expansion for this valueset (not supported by Publication Tooling)
 
 -------
 

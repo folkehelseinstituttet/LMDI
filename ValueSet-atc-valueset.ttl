@@ -11,9 +11,12 @@
   fhir:id [ fhir:v "atc-valueset"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet atc-valueset</b></p><a name=\"atc-valueset\"> </a><a name=\"hcatc-valueset\"> </a><ul><li>Include all codes defined in <a href=\"http://www.whocc.no/atc\"><code>http://www.whocc.no/atc</code></a><span title=\"Version is not explicity stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet atc-valueset</b></p><a name=\"atc-valueset\"> </a><a name=\"hcatc-valueset\"> </a><ul><li>Include all codes defined in <a href=\"http://www.whocc.no/atc\"><code>http://www.whocc.no/atc</code></a><span title=\"Version is not explicity stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:url [ fhir:v "http://fhir.no/ValueSet/atc-valueset"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://fhir.no/ValueSet/atc-valueset"^^xsd:anyURI ;
+     fhir:l <http://fhir.no/ValueSet/atc-valueset>
+  ] ; # 
   fhir:version [ fhir:v "1.0.7"] ; # 
   fhir:name [ fhir:v "ATCValueSet"] ; # 
   fhir:title [ fhir:v "ATC Kodesystem ValueSet"] ; # 
@@ -36,14 +39,20 @@
   fhir:description [ fhir:v "ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
        fhir:code [ fhir:v "NO" ] ;
        fhir:display [ fhir:v "Norway" ]
      ] )
   ] ) ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ]
+       fhir:system [
+         fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+         fhir:l <http://www.whocc.no/atc>
+       ]
      ] )
   ] . # 
 

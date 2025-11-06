@@ -12,27 +12,39 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Organisasjon-3-Sykehus</b></p><a name=\"Organisasjon-3-Sykehus\"> </a><a name=\"hcOrganisasjon-3-Sykehus\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-organization.html\">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.101</code>/993467049, <code>urn:oid:2.16.578.1.12.4.1.4.102</code>/4001031</p><p><b>name</b>: Oslo universitetssykehus HF</p><p><b>address</b>: </p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Organisasjon-3-Sykehus</b></p><a name=\"Organisasjon-3-Sykehus\"> </a><a name=\"hcOrganisasjon-3-Sykehus\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-organization.html\">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.101</code>/993467049, <code>urn:oid:2.16.578.1.12.4.1.4.102</code>/4001031</p><p><b>name</b>: Oslo universitetssykehus HF</p><p><b>address</b>: </p></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
-     fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.4.101"^^xsd:anyURI ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.578.1.12.4.1.4.101"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.578.1.12.4.1.4.101>
+     ] ;
      fhir:value [ fhir:v "993467049" ]
   ] [
-     fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.4.102"^^xsd:anyURI ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.578.1.12.4.1.4.102"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.578.1.12.4.1.4.102>
+     ] ;
      fhir:value [ fhir:v "4001031" ]
   ] ) ; # 
   fhir:name [ fhir:v "Oslo universitetssykehus HF"] ; # 
   fhir:address ( [
      fhir:extension ( [
-       fhir:url [ fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district"^^xsd:anyURI ] ;
+       fhir:url [
+         fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-urban-district>
+       ] ;
        fhir:value [
          a fhir:Coding ;
-         fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.3403"^^xsd:anyURI ] ;
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.1.3403"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.1.3403>
+         ] ;
          fhir:code [ fhir:v "01" ] ;
          fhir:display [ fhir:v "Gamle Oslo" ]
        ]
@@ -41,10 +53,16 @@
      fhir:district [
        fhir:v "Oslo" ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ] ;
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode>
+         ] ;
          fhir:value [
            a fhir:Coding ;
-           fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ] ;
+           fhir:system [
+             fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+             fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+           ] ;
            fhir:code [ fhir:v "0301" ] ;
            fhir:display [ fhir:v "Oslo" ]
          ]

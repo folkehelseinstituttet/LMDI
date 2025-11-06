@@ -11,14 +11,17 @@
   fhir:id [ fhir:v "kommunenummer-codesystem"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem kommunenummer-codesystem</b></p><a name=\"kommunenummer-codesystem\"> </a><a name=\"hckommunenummer-codesystem\"> </a><p>This  code system <code>urn:oid:2.16.578.1.12.4.1.1.3402</code> defines codes, but no codes are represented here</p></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem kommunenummer-codesystem</b></p><a name=\"kommunenummer-codesystem\"> </a><a name=\"hckommunenummer-codesystem\"> </a><p>This  code system <code>urn:oid:2.16.578.1.12.4.1.1.3402</code> defines codes, but no codes are represented here</p></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:url [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+     fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+  ] ; # 
   fhir:version [ fhir:v "1.0.7"] ; # 
   fhir:name [ fhir:v "KommunenummerCodeSystem"] ; # 
   fhir:title [ fhir:v "Kommunenummer CodeSystem"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-10-18T06:49:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-11-06T09:39:43+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -36,7 +39,10 @@
   fhir:description [ fhir:v "Kodesystem for norske kommunenummer (Volven 3402)"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
        fhir:code [ fhir:v "NO" ] ;
        fhir:display [ fhir:v "Norway" ]
      ] )

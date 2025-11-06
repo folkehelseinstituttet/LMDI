@@ -173,20 +173,28 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
   <li>Ved kryptering av data benyttes offentlig nøkkel i Legemiddelregisterets virksomhetssertifikat. Dette kan lastes ned <a href="nedlastinger.html">her</a></li>
 </ul>
 
-<h4 id="helseid">HelseId</h4>
+<h4 id="maskinporten">Maskinporten</h4>
 
-<p>APIet er beskyttet av HelseID og krever at klienter autentiserer seg med Client Credentials Grant.</p>
+<p>APIet er beskyttet av Maskinporten og krever at klienter autentiserer seg med maskin-til-maskin autentisering.</p>
 
 <p>For å få tilgang:</p>
 
 <ol>
-  <li>Registrer nytt klientsystem og ny klient i HelseID selvbetjeningsportal
+  <li>Registrer integrasjon i Digdir sin samarbeidsportal (<code class="language-plaintext highlighter-rouge">https://sjolvbetjening.test.samarbeid.digdir.no/</code>)
     <ul>
-      <li>Skal ha tilgang til API-et fhi:lmr.fhirmottak med scope fhi:lmr.fhirmottak/api</li>
+      <li>Opprett en klient</li>
+      <li>Be om tilgang til scopet <code class="language-plaintext highlighter-rouge">fhi:lmr.fhirmottak/api</code></li>
     </ul>
   </li>
-  <li>Implementer OAuth 2.0 client credentials flow</li>
-  <li>Inkluder access token som DPoP token i Authorization-headeren og legg til en DPoP-header med et signert bevis (proof JWT).</li>
+  <li>Implementer OAuth 2.0 Client Credentials flow med JWT bearer token. Det anbefales og bruke bibilioteket til Altinn: <code class="language-plaintext highlighter-rouge">https://github.com/Altinn/altinn-apiclient-maskinporten</code>
+    <ul>
+      <li>Generer en signeringsnøkkel direkte i selvbetjeningsportalen (PEM-format) eller lag en selv med eget virksomhetssertifikat.</li>
+      <li>Generer signert JWT-assertion og send til maskinporten sitt token-endepunkt.</li>
+      <li>Det er viktig å inkludere det valgfrie claimet <code class="language-plaintext highlighter-rouge">Resource</code> i JWT-assertion. Denne verdien skal være ‘fhi:lmr/fhirmottak’.</li>
+      <li><code class="language-plaintext highlighter-rouge">Scope</code> claimet må også legges til. Denne verdien korresponderer med navnet på scopet i selvbetjeningsportalen: <code class="language-plaintext highlighter-rouge">fhi:lmr.fhirmottak/api</code></li>
+    </ul>
+  </li>
+  <li>Inkluder motatt access token i Authorization-headeren som Bearer token ved kall til API-et</li>
 </ol>
 
 <h3 id="overføring-av-data-til-legemiddelregisteret">Overføring av data til Legemiddelregisteret</h3>
@@ -214,7 +222,7 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
 
 <p><strong>Validering av FHIR-bundle:</strong></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever HelseID-autentisering. Returnerer valideringsresultat.</li>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever Maskinporten-autentisering. Returnerer valideringsresultat.</li>
 </ul>
 
 <h4 id="håndter-respons-fra-api-et">Håndter respons fra API-et</h4>
@@ -277,7 +285,7 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
                     Package hl7.fhir.no.lmdi#1.0.7 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Sat, Oct 18, 2025 06:50+0000">2025-10-18</span>
+                        title="Thu, Nov 6, 2025 09:39+0000">2025-11-06</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -12,25 +12,34 @@
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;
-       fhir:link <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Pasient-2-FNR</b></p><a name=\"Pasient-2-FNR\"> </a><a name=\"hcPasient-2-FNR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-patient.html\">Pasient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"></td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient Pasient-2-FNR</b></p><a name=\"Pasient-2-FNR\"> </a><a name=\"hcPasient-2-FNR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-patient.html\">Pasient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"></td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:identifier ( [
-     fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.4.1"^^xsd:anyURI ] ;
+     fhir:system [
+       fhir:v "urn:oid:2.16.578.1.12.4.1.4.1"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.578.1.12.4.1.4.1>
+     ] ;
      fhir:value [ fhir:v "13031353453" ]
   ] ) ; # 
   fhir:address ( [
      fhir:district [
        fhir:v "Bærum" ;
        fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ] ;
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode>
+         ] ;
          fhir:value [
            a fhir:Coding ;
-           fhir:system [ fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ] ;
+           fhir:system [
+             fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+             fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+           ] ;
            fhir:code [ fhir:v "3024" ] ;
            fhir:display [ fhir:v "Bærum" ]
          ]

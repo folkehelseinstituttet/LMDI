@@ -11,18 +11,25 @@
   fhir:id [ fhir:v "no-basis-fest-legemiddelpakning"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem no-basis-fest-legemiddelpakning</b></p><a name=\"no-basis-fest-legemiddelpakning\"> </a><a name=\"hcno-basis-fest-legemiddelpakning\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning</td></tr><tr><td>Version</td><td>1.0.7</td></tr><tr><td>Name</td><td>festLegemiddelPakning</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer)</p>\n</div></td></tr><tr><td>Publisher</td><td>Folkehelseinstituttet</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td></tr><tr><td>URI</td><td>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</td><td>true</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem no-basis-fest-legemiddelpakning</b></p><a name=\"no-basis-fest-legemiddelpakning\"> </a><a name=\"hcno-basis-fest-legemiddelpakning\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning</td></tr><tr><td>Version</td><td>1.0.7</td></tr><tr><td>Name</td><td>festLegemiddelPakning</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer)</p>\n</div></td></tr><tr><td>Publisher</td><td>Folkehelseinstituttet</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td><td><b>Preferred</b></td></tr><tr><td>URI</td><td>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</td><td>true</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:extension ( [
-     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url"^^xsd:anyURI ] ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url>
+     ] ;
      fhir:value [
-       a fhir:uri ;
-       fhir:v "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning"^^xsd:anyURI
+       a fhir:Uri ;
+       fhir:v "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning>
      ]
   ] [
-     fhir:url [ fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version"^^xsd:anyURI ] ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version>
+     ] ;
      fhir:value [
-       a fhir:string ;
+       a fhir:String ;
        fhir:v "1.0.7"
      ]
   ] ) ; # 
@@ -48,7 +55,10 @@
   fhir:description [ fhir:v "FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer)"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
        fhir:code [ fhir:v "NO" ] ;
        fhir:display [ fhir:v "Norway" ]
      ] )
