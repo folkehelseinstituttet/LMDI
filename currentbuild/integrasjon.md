@@ -66,13 +66,13 @@ URL til Legemiddelregisterets API:
 
 For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data og er kun tilgjengelig i testmiljøet.
 
-**Validering av kryptert og signert bundle:**
-
-* `/fhirmottak/v1/validateLegemiddelregisterBundle` - Validerer at kryptering og signering er utført korrekt, samt at innholdet i FHIR-bundelen er i henhold til spesifikasjonen. Krever ikke autentisering. Returnerer valideringsresultat som OperationOutcome.
-
 **Validering av FHIR-bundle:**
 
-* `/fhirmottak/v1/validate` - Validerer innholdet i en kryptert og signert bundle uten å lagre den. Krever Maskinporten-autentisering. Returnerer valideringsresultat.
+* `/fhirmottak/v1/validateLegemiddelregisterBundle` - Validerer innholdet i en FHIR-bundle mot LMDI-spesifikasjonen. Endepunktet forventer å motta en usignert og ukryptert FHIR-bundle i JSON-format. Krever ikke autentisering. Returnerer valideringsresultat som OperationOutcome med status 200 (gyldig) eller 400 (ugyldig).
+
+**Validering av signert og kryptert bundle:**
+
+* `/fhirmottak/v1/validate` - Validerer at signering og kryptering er utført korrekt, samt at innholdet i den krypterte FHIR-bundelen er i henhold til LMDI-spesifikasjonen. Endepunktet forventer å motta en signert og kryptert bundle. Data valideres men lagres ikke. Krever Maskinporten-autentisering. Returnerer status 200 (gyldig) eller 400 (ugyldig).
 
 #### Håndter respons fra API-et
 
@@ -80,26 +80,31 @@ API-et returnerer følgende HTTP-statuskoder:
 
 **200 OK**
 
-* Meldingen ble mottatt og validert uten feil
-* Ved `/fhirmottak/v1`: Meldingen er lagret i databasen
-* Ved `/fhirmottak/v1/validate`: Meldingen er kun validert, ikke lagret
-* Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer OperationOutcome med valideringsresultat
+* Meldingen ble validert uten feil
+* Ved `/fhirmottak/v1`: Meldingen er validert og lagret i databasen
+* Ved `/fhirmottak/v1/validate`: Meldingen er validert men ikke lagret
+* Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer OperationOutcome som bekrefter at FHIR-bundelen er gyldig
 
 **400 Bad Request**
 
-* Returneres ved valideringsfeil eller forretningslogikkfeil
-* Mulige årsaker: 
-* Ukjent eller inaktiv avsender
-* Organisasjonsnummer i melding stemmer ikke med registrert avsender
-* Signaturvalidering feilet
+* Valideringsfeil i den innsendte meldingen
+* Mulige årsaker for alle endepunkter: 
 * FHIR bundle validering feilet (ikke i henhold til LMDI-spesifikasjonen)
 * Ugyldig JSON-format
-* Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer OperationOutcome med detaljert feilinformasjon
+ 
+* Mulige årsaker for `/fhirmottak/v1` og `/fhirmottak/v1/validate`: 
+* Ukjent eller inaktiv avsender
+* Organisasjonsnummer i melding stemmer ikke med registrert avsender
+* Signaturvalidering feilet (gjelder `/fhirmottak/v1/validate`)
+* Dekryptering feilet
  
 
 **500 Internal Server Error**
 
 * En uventet feil oppstod ved behandling av meldingen
-* Dette er en generell serverfeil som bør undersøkes med FHI
-* Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Kan returneres ved teknisk feil i FHIR-validering eller manglende FHIR R4 core specifications
+* Dette kan skyldes: 
+* Manglende FHIR R4 core specifications (validering utilgjengelig)
+* Teknisk feil i FHIR-validering
+* Serverfeil som bør undersøkes med FHI
+ 
 

@@ -26,15 +26,11 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
 
 ### Logical Definition (CLD)
 
-* Include all codes defined in [`http://www.whocc.no/atc`](http://www.whocc.no/atc)version Not Stated (use latest from terminology server)
+* Include all codes defined in [`http://www.whocc.no/atc`](http://www.whocc.no/atc)version ⏿2025
 
  
 
 ### Expansion
-
-Expansion from tx.fhir.org based on codesystem WHO ATC version 2025
-
-This value set has 6,897 codes in it. In order to keep the publication size manageable, only a selection (1,000 codes) of the whole set of codes is shown.
 
 -------
 
