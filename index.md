@@ -115,7 +115,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       ],
       "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId" : "hl7.terminology.r4",
-      "version" : "6.5.0"
+      "version" : "7.0.0"
     },
     {
       "id" : "hl7_fhir_uv_extensions_r4",

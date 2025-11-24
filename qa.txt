@@ -1,9 +1,9 @@
 Lmdi : Validation Results
 =========================================
 
-err = 97, warn = 122, info = 45
+err = 95, warn = 122, info = 45
 IG Publisher Version: 2.0.26
-Generated Thu Nov 06 10:01:15 UTC 2025. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.7 (canonical = http://hl7.no/fhir/ig/lmdi)
+Generated Mon Nov 24 09:15:40 UTC 2025. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.0.7 (canonical = http://hl7.no/fhir/ig/lmdi)
  Build Errors : 12 / 67 / 0
  /github/workspace/LMDI/fsh-generated/resources/Bundle-LegemiddelregisterBundle-1 : 15 / 5 / 31
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 2
@@ -43,7 +43,7 @@ Generated Thu Nov 06 10:01:15 UTC 2025. FHIR version 4.0.1 for hl7.fhir.no.lmdi#
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationadministration : 3 / 1 / 3
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationrequest : 0 / 0 / 1
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-organization : 0 / 4 / 5
- /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-patient : 4 / 3 / 7
+ /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-patient : 2 / 3 / 7
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-practitioner : 0 / 3 / 5
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring : 0 / 2 / 1
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-substance : 0 / 1 / 1
@@ -124,7 +124,7 @@ WARNING: /github/workspace/LMDI/output/index.html#/html/body/script at Line 342,
 ERROR: /github/workspace/LMDI/output/informasjonsmodell.html: The html source does not contain the publish box
 WARNING: /github/workspace/LMDI/output/informasjonsmodell.html#/html/body/script at Line 208, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/integrasjon.html: The html source does not contain the publish box
-WARNING: /github/workspace/LMDI/output/integrasjon.html#/html/body/script at Line 317, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /github/workspace/LMDI/output/integrasjon.html#/html/body/script at Line 326, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/nedlastinger.html: The html source does not contain the publish box
 ERROR: nedlastinger.html#/html/body/div/div/div/div/div/ul/li/a at Line 164, column 8: The link 'certificates.zip' for "Sertifikater for TEST- og PRODUKSJONSMILJØET" cannot be resolved
 WARNING: /github/workspace/LMDI/output/nedlastinger.html#/html/body/script at Line 222, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
@@ -325,7 +325,6 @@ WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot: Th
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot: The slice 'RSH' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 == fsh-generated/resources/StructureDefinition-lmdi-patient.json ==
 WARNING: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[8].type[0].profile[0]: There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-citizenship'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '5.2.0', found versions: 4.0.1, 5.2.0. Suggested fix: change the canonical reference from 'http://hl7.org/fhir/StructureDefinition/patient-citizenship' to 'http://hl7.org/fhir/StructureDefinition/patient-citizenship|5.2.0'
-ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[11].binding.valueSet: Canonical URL 'urn:iso:std:iso:3166' refers to a resource that has the wrong type. Found CodeSystem expecting one of [ValueSet]
 INFORMATION: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[32].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[41].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[50].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
@@ -333,7 +332,6 @@ INFORMATION: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.elem
 INFORMATION: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[97].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[111].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[11].binding: The element Patient.extension.extension has a binding, but no bindable types are present [Extension]
-ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[11].binding: The valueSet reference urn:iso:std:iso:3166 on element Patient.extension.extension points to something that is not a value set (CodeSystem)
 ERROR: StructureDefinition/lmdi-patient: StructureDefinition.snapshot.element[84].constraint[1]: Error in constraint 'address-use-constraint' with expression 'address.use.empty() or address.use in ('home' | 'temp' | 'old')': Error evaluating FHIRPath expression: The name 'address' is not valid for any of the possible types: [http://hl7.org/fhir/StructureDefinition/code] (@char 1)
 WARNING: StructureDefinition/lmdi-patient: StructureDefinition.snapshot: The slice 'FHN' on path 'Patient.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/lmdi-patient: StructureDefinition.snapshot: The slice 'HNR' on path 'Patient.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
