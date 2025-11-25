@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>Helsepersonell-1-HPR-nummer - Legemiddeldata fra institusjon til Legemiddelregisteret
+        v1.0.7</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/project.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+
+
+    <script type="text/javascript" src="assets/js/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" sizes="32x32" href="assets/images/favicon.ico" />
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <div id="segment-header" class="segment"> <!-- segment-header -->
+        <div class="container"> <!-- container -->
+            
+            <!-- Placeholder for child template header declarations -->
+
+
+<header class="fhi-header mb-0">
+    <div class="fhi-header__brand">
+        <div class="container fhi-header__brand-container">
+            <div class="fhi-header__brand-content">
+                <a class="fhi-header__logo" href="index.html">
+                    <i class="icon-fhi-logo fhi-header__logo-icon"></i>
+                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                </a>
+                <div class="fhi-header__project">
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.7 - ci-build
+                            
+                            
+                            
+                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
+                                title="Norway" />
+                            
+                            
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+        </div> <!-- /container -->
+    </div> <!-- /segment-header -->
+
+    <div class="container fhi-header__main-menu-alt-container">
+    <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
+        <div class="container fhi-main-menu-alt__container">
+            <div class="fhi-main-menu-alt__collapse">
+                <div id="menu">
+                    <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Hjem</a>
+  </li>
+  <li>
+    <a href="informasjonsmodell.html">Informasjonsmodell</a>
+  </li>
+  <li>
+    <a href="integrasjon.html">Integrasjon</a>
+  </li>
+  <li>
+    <a href="profiler.html">FHIR-profiler</a>
+  </li>
+  <li>
+    <a href="nedlastinger.html">Nedlastinger</a>
+  </li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
+        <div class="container p-0"> <!-- container -->
+            <ul class="breadcrumb p-2 mb-1">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Helsepersonell-1-HPR-nummer</b></li>
+                
+            </ul>
+        </div> <!-- /container -->
+    </div> <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment"> <!-- segment-content -->
+        <div class="container"> <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.7) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+  
+
+
+
+
+
+
+
+<div class="fhi-nav-tabs border-bottom">
+    <ul class="nav nav-tabs undermeny mb-0">
+        
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
+        Narrative Content
+    </a>
+</li>
+
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Practitioner-Helsepersonell-1-HPR-nummer.xml.html">
+        XML
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Practitioner-Helsepersonell-1-HPR-nummer.json.html">
+        JSON
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Practitioner-Helsepersonell-1-HPR-nummer.ttl.html">
+        TTL
+    </a>
+</li>
+
+        
+
+        
+    </ul>
+</div>
+
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">Example Practitioner: Helsepersonell-1-HPR-nummer</h2>
+
+
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><a name="Helsepersonell-1-HPR-nummer"> </a><a name="hcHelsepersonell-1-HPR-nummer"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-practitioner.html">Helsepersonell</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.4</code>/9144900</p></div>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+</div> <!-- /inner-wrapper -->
+</div> <!-- /row -->
+</div> <!-- /container -->
+</div> <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
+<!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
+    <div class="container"> <!-- container -->
+        <div class="container-fluid">
+            
+            <div class="inner-wrapper p-3">
+                <p class="m-0">
+                    IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
+                        href="https://www.fhi.no">Folkehelseinstituttet</a>.
+                    Package hl7.fhir.no.lmdi#1.0.7 based on <a
+                        style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span
+                        title="Tue, Nov 25, 2025 12:26+0000">2025-11-25</span>
+                    <br />
+                    <span style="color: var(--footer-highlight-text-color)">
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    </span>
+                </p>
+            </div> <!-- /inner-wrapper -->
+        </div>
+    </div><!-- /container -->
+</footer> <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden d-none"> <!-- segment-post-footer -->
+    <div class="container"> <!-- container -->
+    </div> <!-- /container -->
+</div> <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<script id="page-data" type="application/json">
+  {
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Helsepersonell-1-HPR-nummer</b></li>"
+  }
+</script>
+<script type="text/javascript">
+    const pageData = JSON.parse(document.getElementById("page-data").textContent);
+
+    const secondLevel = (key) => {
+        if (pageData.breadcrumb) {
+            const liRegex = /<li>(.*?)<\/li>/g;
+            const listItems = [...pageData.breadcrumb.matchAll(liRegex)].map(match => match[1].trim());
+            return listItems[1]?.includes(key) || false;
+        }
+        return false;
+    };
+
+    // Style FHI menu
+    const classMenuNav = 'fhi-main-menu-alt__nav',
+        classMenuNavItem = 'fhi-main-menu-alt__nav-item',
+        classMenuNavLink = 'fhi-main-menu-alt__nav-link';
+    const menu = document.getElementById('menu');
+    const ul = menu.querySelector('ul');
+    ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+    ul.querySelectorAll('li').forEach(li => {
+        li.classList.add(classMenuNavItem);
+        li.querySelectorAll('a').forEach(a => {
+            a.classList.add('nav-link', classMenuNavLink);
+        });
+
+        if (li.classList.contains('dropdown')) {
+            li.addEventListener('click', () => {
+                li.classList.toggle('show');
+                li.querySelector('ul').classList.toggle('show');
+            });
+        }
+    });
+
+    // Set active class on menu item
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
+    menuItems.forEach(item => {
+        const menuLink = item.querySelector('a').getAttribute('href');
+        if (menuLink === page) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+        else if (secondLevel(menuLink)) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+    });
+
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
+</script>
+<!-- Analytics Below
+  ================================================== -->
+</body>
+
+</html>
+
