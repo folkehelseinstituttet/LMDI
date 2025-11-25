@@ -93,7 +93,7 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legem
 Invariant: time-required
 Description: "Må inneholde tidspunkt for administrering."
 Severity: #error
-Expression: "$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')"
+Expression: "$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')"
 
 // =========================================
 // ValueSet Definition
