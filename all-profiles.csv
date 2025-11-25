@@ -1205,7 +1205,7 @@ Period {[]} {[]}","Tidspunktet eller periode legemidlet ble administrert","A spe
 "
 "lmdi-medicationadministration","MedicationAdministration.effective[x]:effectiveDateTime","MedicationAdministration.effective[x]","effectiveDateTime","","",0,1,"","","Y","dateTime {[]} {[]}
 ","Start and end time of administration","A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.","","","","","","","","","",,,,,"",,,,"MedicationAdministration.effective[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-time-required:Må inneholde tidspunkt for administrering. {$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')}"
+time-required:Må inneholde tidspunkt for administrering. {$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')}"
 "lmdi-medicationadministration","MedicationAdministration.effective[x]:effectivePeriod","MedicationAdministration.effective[x]","effectivePeriod","","",0,1,"","","Y","Period {[]} {[]}
 ","Start and end time of administration","A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.","","","","","","","","","",,,,,"",,,,"MedicationAdministration.effective[x]",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -1219,11 +1219,11 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "lmdi-medicationadministration","MedicationAdministration.effective[x]:effectivePeriod.start","MedicationAdministration.effective[x].start","","","",1,1,"","","Y","dateTime {[]} {[]}
 ","Starting time with inclusive boundary","The start of the period. The boundary is inclusive.","If the low element is missing, the meaning is that the low boundary is not known.","","","","","","","","",,,,,"",,,,"Period.start",0,1,"per-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-time-required:Må inneholde tidspunkt for administrering. {$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')}"
+time-required:Må inneholde tidspunkt for administrering. {$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')}"
 "lmdi-medicationadministration","MedicationAdministration.effective[x]:effectivePeriod.end","MedicationAdministration.effective[x].end","","","",1,1,"","","Y","dateTime {[]} {[]}
 ","End time with inclusive boundary, if not ongoing","The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.","The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.","","","If the end of the period is missing, it means that the period is ongoing","","","","","",,,,,"",,,,"Period.end",0,1,"per-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-time-required:Må inneholde tidspunkt for administrering. {$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')}"
+time-required:Må inneholde tidspunkt for administrering. {$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')}"
 "lmdi-medicationadministration","MedicationAdministration.performer","MedicationAdministration.performer","","","",0,0,"","","Y","BackboneElement {[]} {[]}
 ","Who performed the medication administration and what they did","Indicates who or what performed the medication administration and how they were involved.","","","","","","","","","",,,,,"",,,,"MedicationAdministration.performer",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "

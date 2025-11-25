@@ -219,7 +219,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
             "key" : "time-required",
             "severity" : "error",
             "human" : "Må inneholde tidspunkt for administrering.",
-            "expression" : "$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')",
+            "expression" : "$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')",
             "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
           }
         ]
@@ -245,7 +245,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
             "key" : "time-required",
             "severity" : "error",
             "human" : "Må inneholde tidspunkt for administrering.",
-            "expression" : "$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')",
+            "expression" : "$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')",
             "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
           }
         ]
@@ -259,7 +259,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
             "key" : "time-required",
             "severity" : "error",
             "human" : "Må inneholde tidspunkt for administrering.",
-            "expression" : "$this.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')",
+            "expression" : "$this.toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}.*$')",
             "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
           }
         ]
