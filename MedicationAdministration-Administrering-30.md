@@ -25,7 +25,7 @@
 | | | |
 | :--- | :--- | :--- |
 | - | **Route** | **Dose** |
-| * | Intravenous route (qualifier value) | 100 mg(Details: UCUM codemg = 'mg') |
+| * | Intravenous route (qualifier value) | 100 mg (Details: UCUM codemg = 'mg') |
 
 
 

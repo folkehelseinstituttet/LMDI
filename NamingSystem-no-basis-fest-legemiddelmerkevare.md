@@ -14,28 +14,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare** | *Version*:1.0.7** |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare **  | *Version*:1.0.7 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelMerkevare |
 
  
 FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare. 
-
-### Summary
-
-| | |
-| :--- | :--- |
-| Defining URL | http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare |
-| Version | 1.0.7 |
-| Name | festLegemiddelMerkevare |
-| Status | draft |
-| Definition | FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare. |
-| Publisher | Folkehelseinstituttet |
-
-### Identifiers
-
-* **Type**: URI
-  * **Value**: http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare
-  * **Preferred**: true
 
 
 

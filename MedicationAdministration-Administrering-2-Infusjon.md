@@ -29,7 +29,7 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
 | | | | |
 | :--- | :--- | :--- | :--- |
 | - | **Route** | **Dose** | **Rate[x]** |
-| * | Intravenous route (qualifier value) | 4500 mg(Details: UCUM codemg = 'mg') | 8 ml(Details: UCUM codeml = 'ml')/1 min(Details: UCUM codemin = 'min') |
+| * | Intravenous route (qualifier value) | 4500 mg (Details: UCUM codemg = 'mg') | 8 ml (Details: UCUM codeml = 'ml')/1 min (Details: UCUM codemin = 'min') |
 
 
 

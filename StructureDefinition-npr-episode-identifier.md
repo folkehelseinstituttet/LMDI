@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier** | *Version*:1.0.7** |
-| Active as of 2025-11-25 | *Computable Name*:NprEpisodeIdentifier |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.0.7 **  |
+| Active as of 2026-02-05 | *Computable Name*:NprEpisodeIdentifier |
 
 Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.
 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2025-11-25T12:27:52+00:00",
+  "date" : "2026-02-05T09:35:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

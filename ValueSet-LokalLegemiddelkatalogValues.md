@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues** | *Version*:1.0.7** |
-| Draft as of 2025-11-25 | *Computable Name*:LokalLegemiddelkatalogValues |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues **  | *Version*:1.0.7 **  |
+| Draft as of 2026-02-05 | *Computable Name*:LokalLegemiddelkatalogValues |
 
  
 Gyldige verdier for medlemskapsstatus 
@@ -25,8 +25,6 @@ Gyldige verdier for medlemskapsstatus
 This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
-
-* Include all codes defined in [`http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem`](CodeSystem-LokalLegemiddelkatalogCodeSystem.md)version 📦1.0.7
 
  
 
@@ -58,7 +56,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
   "status" : "draft",
-  "date" : "2025-11-25T12:27:52+00:00",
+  "date" : "2026-02-05T09:35:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

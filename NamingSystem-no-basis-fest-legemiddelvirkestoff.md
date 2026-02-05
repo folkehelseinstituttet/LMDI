@@ -14,28 +14,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelvirkestoff** | *Version*:1.0.7** |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelvirkestoff **  | *Version*:1.0.7 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelVirkestoff |
 
  
 FEST-id for virkestoff. Benyttes ved virkestoffrekvirering 
-
-### Summary
-
-| | |
-| :--- | :--- |
-| Defining URL | http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelvirkestoff |
-| Version | 1.0.7 |
-| Name | festLegemiddelVirkestoff |
-| Status | draft |
-| Definition | FEST-id for virkestoff. Benyttes ved virkestoffrekvirering |
-| Publisher | Folkehelseinstituttet |
-
-### Identifiers
-
-* **Type**: URI
-  * **Value**: http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff
-  * **Preferred**: true
 
 
 

@@ -14,28 +14,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning** | *Version*:1.0.7** |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning **  | *Version*:1.0.7 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelPakning |
 
  
 FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer) 
-
-### Summary
-
-| | |
-| :--- | :--- |
-| Defining URL | http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning |
-| Version | 1.0.7 |
-| Name | festLegemiddelPakning |
-| Status | draft |
-| Definition | FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer) |
-| Publisher | Folkehelseinstituttet |
-
-### Identifiers
-
-* **Type**: URI
-  * **Value**: http://dmp.no/fhir/NamingSystem/festLegemiddelPakning
-  * **Preferred**: true
 
 
 

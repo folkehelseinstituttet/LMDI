@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder** | *Version*:1.0.7** |
-| Draft as of 2025-11-25 | *Computable Name*:LegemiddelKoder |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.0.7 **  |
+| Draft as of 2026-02-05 | *Computable Name*:LegemiddelKoder |
 
  
 ValueSet som inneholder koder fra SNOMED CT og FEST 
@@ -26,19 +26,9 @@ ValueSet som inneholder koder fra SNOMED CT og FEST
 
 ### Logical Definition (CLD)
 
-This value set includes codes based on the following rules:
-
-* Include all codes defined in [`http://snomed.info/sct`](http://www.snomed.org/)version Not Stated (use latest from terminology server)
-* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare`version Not Stated (use latest from terminology server)
-* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff`version Not Stated (use latest from terminology server)
-* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelPakning`version Not Stated (use latest from terminology server)
-* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelDose`version Not Stated (use latest from terminology server)
-
  
 
 ### Expansion
-
-This value set cannot be expanded because the terminology server(s) deemed it too costly to do so
 
 -------
 
@@ -66,7 +56,7 @@ This value set cannot be expanded because the terminology server(s) deemed it to
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "draft",
-  "date" : "2025-11-25T12:27:52+00:00",
+  "date" : "2026-02-05T09:35:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

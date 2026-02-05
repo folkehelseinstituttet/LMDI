@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle** | *Version*:1.0.7** |
-| Active as of 2025-11-25 | *Computable Name*:KommunenummerValueSet |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle **  | *Version*:1.0.7 **  |
+| Active as of 2026-02-05 | *Computable Name*:KommunenummerValueSet |
 
  
 Komplett kodeverk for norske kommunenummer (Volven 3402) 
@@ -25,8 +25,6 @@ Komplett kodeverk for norske kommunenummer (Volven 3402)
 This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
-
-* Include all codes defined in [`urn:oid:2.16.578.1.12.4.1.1.3402`](CodeSystem-kommunenummer-codesystem.md)version Not Stated (use latest from terminology server)
 
  
 
@@ -60,7 +58,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "KommunenummerValueSet",
   "title" : "Kommunenummer ValueSet",
   "status" : "active",
-  "date" : "2025-11-25T12:27:52+00:00",
+  "date" : "2026-02-05T09:35:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [
     {

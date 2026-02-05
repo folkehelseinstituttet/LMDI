@@ -29,7 +29,7 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
 | | | |
 | :--- | :--- | :--- |
 | - | **Route** | **Dose** |
-| * | Swallow | 2 metric tablespoon(Details: UCUM codetsp_us = 'tsp_us') |
+| * | Swallow | 2 metric tablespoon (Details: UCUM codetsp_us = 'tsp_us') |
 
 
 

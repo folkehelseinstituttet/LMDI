@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication** | *Version*:1.0.7** |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.0.7 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  

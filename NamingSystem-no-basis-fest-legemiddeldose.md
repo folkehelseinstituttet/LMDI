@@ -14,28 +14,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose** | *Version*:1.0.7** |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose **  | *Version*:1.0.7 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelDose |
 
  
 FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som representerer minste plukkbare enhet, f.eks. 1 ampulle eller 1 tablett. 
-
-### Summary
-
-| | |
-| :--- | :--- |
-| Defining URL | http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose |
-| Version | 1.0.7 |
-| Name | festLegemiddelDose |
-| Status | draft |
-| Definition | FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som representerer minste plukkbare enhet, f.eks. 1 ampulle eller 1 tablett. |
-| Publisher | Folkehelseinstituttet |
-
-### Identifiers
-
-* **Type**: URI
-  * **Value**: http://dmp.no/fhir/NamingSystem/festLegemiddelDose
-  * **Preferred**: true
 
 
 

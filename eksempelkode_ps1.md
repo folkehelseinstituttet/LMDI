@@ -16,7 +16,7 @@
 * [1. Lage komprimert, kryptert og signert bundle (`SignertKryptertBundle`)](#1-lage-komprimert-kryptert-og-signert-bundle-signertkryptertbundle) 
 * [Slik bruker du scriptet:](#slik-bruker-du-scriptet)
  
-* [2. Send`SignertKryptertBundle`til Legemiddelregisteret](#2-send-signertkryptertbundle-til-legemiddelregisteret) 
+* [2. Send `SignertKryptertBundle` til Legemiddelregisteret](#2-send-signertkryptertbundle-til-legemiddelregisteret) 
 * [Slik bruker du scriptet:](#slik-bruker-du-scriptet-1)
 * [Upload.ps1](#uploadps1)
 * [ClientCredentials.ps1](#clientcredentialsps1)

@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://fhir.no/ValueSet/atc-valueset** | *Version*:1.0.7** |
+| *Official URL*:http://fhir.no/ValueSet/atc-valueset **  | *Version*:1.0.7 **  |
 | Active as of 2025-09-12 | *Computable Name*:ATCValueSet |
 
  
@@ -25,8 +25,6 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
 * [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
 
 ### Logical Definition (CLD)
-
-* Include all codes defined in [`http://www.whocc.no/atc`](http://www.whocc.no/atc)version ⏿2025
 
  
 

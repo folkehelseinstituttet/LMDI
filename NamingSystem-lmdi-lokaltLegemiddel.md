@@ -14,28 +14,11 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel** | *Version*:1.0.7** |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel **  | *Version*:1.0.7 **  |
 | Draft as of 2024-06-10 | *Computable Name*:lmdiLokaltLegemiddel |
 
  
 Id for angivelse av legemiddel fra lokal legemiddelkatalog 
-
-### Summary
-
-| | |
-| :--- | :--- |
-| Defining URL | http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel |
-| Version | 1.0.7 |
-| Name | lmdiLokaltLegemiddel |
-| Status | draft |
-| Definition | Id for angivelse av legemiddel fra lokal legemiddelkatalog |
-| Publisher | Folkehelseinstituttet |
-
-### Identifiers
-
-* **Type**: URI
-  * **Value**: http://fh.no/fhir/NamingSystem/lokaltVirkemiddel
-  * **Preferred**: true
 
 
 
