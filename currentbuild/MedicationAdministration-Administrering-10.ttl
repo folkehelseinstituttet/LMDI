@@ -1,0 +1,178 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-10> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Administrering-10"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration Administrering-10</b></p><a name=\"Administrering-10\"> </a><a name=\"hcAdministrering-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medicationadministration.html\">Legemiddeladministrering</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"#hcAdministrering-10/Medisin-10\">Medication Oxycodone Orifarm mikst oppl 1 mg/ml</a></p><p><b>subject</b>: <a href=\"#hcAdministrering-10/Pasient-20\">Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</a></p><p><b>context</b>: <a href=\"#hcAdministrering-10/Episode-2-Sykehjem\">Encounter: extension = ; status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-05-28 13:14:00+0000</p><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Medication #Medisin-10</b></p><a name=\"Administrering-10/Medisin-10\"> </a><a name=\"hcAdministrering-10/Medisin-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medication.html\">Legemiddel</a></p></div><p><b>code</b>: <span title=\"Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelDose ID_48BD33D2-2838-4B81-8225-02391B7A4516}, {http://snomed.info/sct 414984009}\">Oxycodone Orifarm mikst oppl 1 mg/ml</span></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Patient #Pasient-20</b></p><a name=\"Administrering-10/Pasient-20\"> </a><a name=\"hcAdministrering-10/Pasient-20\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-patient.html\">Pasient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Practitioner #Helsepersonell-10</b></p><a name=\"Administrering-10/Helsepersonell-10\"> </a><a name=\"hcAdministrering-10/Helsepersonell-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-practitioner.html\">Helsepersonell</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.4</code>/9144900</p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Encounter #Episode-2-Sykehjem</b></p><a name=\"Administrering-10/Episode-2-Sykehjem\"> </a><a name=\"hcAdministrering-10/Episode-2-Sykehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-encounter.html\">Episode</a></p></div><blockquote><p><b>NPR Episode Identifier</b></p><ul><li>stringIdentifier: NPR123456789</li><li>uuidIdentifier: 550e8400-e29b-41d4-a716-446655440000</li></ul></blockquote><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>serviceProvider</b>: <a href=\"#hcAdministrering-10/Organisasjon-2-Eldrehjem\">Organization Lykkedalen eldrehjem</a></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Organization #Organisasjon-2-Eldrehjem</b></p><a name=\"Administrering-10/Organisasjon-2-Eldrehjem\"> </a><a name=\"hcAdministrering-10/Organisasjon-2-Eldrehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-organization.html\">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.101</code>/1234567890</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Lykkedalen eldrehjem</p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "Medisin-10" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ] )
+     ] ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelDose>
+         ] ;
+         fhir:code [ fhir:v "ID_48BD33D2-2838-4B81-8225-02391B7A4516" ] ;
+         fhir:display [ fhir:v "Oxycodone Orifarm mikst oppl 1 mg/ml" ]
+       ] [
+         a sct:414984009 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "414984009" ] ;
+         fhir:display [ fhir:v "Product containing oxycodone (medicinal product)" ]
+       ] )
+     ]
+  ] [
+     a fhir:Patient ;
+     fhir:id [ fhir:v "Pasient-20" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
+       ] )
+     ] ;
+     fhir:identifier ( [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.4.1"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.4.1>
+       ] ;
+       fhir:value [ fhir:v "13031353453" ]
+     ] )
+  ] [
+     a fhir:Practitioner ;
+     fhir:id [ fhir:v "Helsepersonell-10" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner>
+       ] )
+     ] ;
+     fhir:identifier ( [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.4.4"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.4.4>
+       ] ;
+       fhir:value [ fhir:v "9144900" ]
+     ] )
+  ] [
+     a fhir:Encounter ;
+     fhir:id [ fhir:v "Episode-2-Sykehjem" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter>
+       ] )
+     ] ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "stringIdentifier"^^xsd:anyURI ;
+           fhir:l fhir:stringIdentifier
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "NPR123456789"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "uuidIdentifier"^^xsd:anyURI ;
+           fhir:l fhir:uuidIdentifier
+         ] ;
+         fhir:value [
+           a fhir:Uuid ;
+           fhir:v "550e8400-e29b-41d4-a716-446655440000"^^xsd:anyURI ;
+           fhir:l fhir:550e8400-e29b-41d4-a716-446655440000
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier>
+       ]
+     ] ) ;
+     fhir:status [ fhir:v "finished" ] ;
+     fhir:class [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "IMP" ] ;
+       fhir:display [ fhir:v "inpatient encounter" ]
+     ] ;
+     fhir:serviceProvider [
+       fhir:l <#Organisasjon-2-Eldrehjem> ;
+       fhir:reference [ fhir:v "#Organisasjon-2-Eldrehjem" ]
+     ]
+  ] [
+     a fhir:Organization ;
+     fhir:id [ fhir:v "Organisasjon-2-Eldrehjem" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       ] )
+     ] ;
+     fhir:identifier ( [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.4.101"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.4.101>
+       ] ;
+       fhir:value [ fhir:v "1234567890" ]
+     ] ) ;
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/organization-type>
+         ] ;
+         fhir:code [ fhir:v "prov" ] ;
+         fhir:display [ fhir:v "Healthcare Provider" ]
+       ] )
+     ] ) ;
+     fhir:name [ fhir:v "Lykkedalen eldrehjem" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <#Medisin-10> ;
+     fhir:reference [ fhir:v "#Medisin-10" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <#Pasient-20> ;
+     fhir:reference [ fhir:v "#Pasient-20" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <#Episode-2-Sykehjem> ;
+     fhir:reference [ fhir:v "#Episode-2-Sykehjem" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2024-05-28T13:14:00Z"^^xsd:dateTime
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
