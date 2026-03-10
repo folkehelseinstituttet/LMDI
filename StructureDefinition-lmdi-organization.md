@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
@@ -32,7 +32,7 @@ Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”:
 **Usages:**
 
 * Refer to this Profile: [Episode](StructureDefinition-lmdi-encounter.md) and [Organisasjon](StructureDefinition-lmdi-organization.md)
-* Examples for this Profile: [Lykkedalen sykehjem](Organization-Organisasjon-1-Sykehjem.md), [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-2-Avdeling.md) and [Oslo universitetssykehus HF](Organization-Organisasjon-3-Sykehus.md)
+* Examples for this Profile: [Lykkedalen sykehjem](Organization-Organisasjon-1-Sykehjem.md), [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-2-Avdeling.md), [Oslo universitetssykehus HF](Organization-Organisasjon-3-Sykehus.md), [Avdeling 2B, Soltoppen sykehjem](Organization-Scenario-A-Org-Avdeling.md)... Show 4 more, [Drammen kommune](Organization-Scenario-A-Org-Kommune.md), [Soltoppen sykehjem](Organization-Scenario-A-Org-Sykehjem.md), [Haukeland universitetssjukehus](Organization-Scenario-B-Organisasjon.md) and [Onkologisk avdeling, St. Olavs hospital](Organization-Scenario-C-Organisasjon.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-organization)
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "status" : "draft",

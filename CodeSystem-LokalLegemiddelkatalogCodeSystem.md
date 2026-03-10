@@ -1,4 +1,4 @@
-# Lokal Legemiddelkatalog Codes - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Lokal Legemiddelkatalog Codes - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem **  | *Version*:1.0.8 **  |
 | Draft as of 2026-03-10 | *Computable Name*:LokalLegemiddelkatalogCodeSystem |
 
  
@@ -33,11 +33,11 @@ Kodesystem for lokal legemiddelkatalog
   "resourceType" : "CodeSystem",
   "id" : "LokalLegemiddelkatalogCodeSystem",
   "url" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "LokalLegemiddelkatalogCodeSystem",
   "title" : "Lokal Legemiddelkatalog Codes",
   "status" : "draft",
-  "date" : "2026-03-10T12:49:22+00:00",
+  "date" : "2026-03-10T15:33:20+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

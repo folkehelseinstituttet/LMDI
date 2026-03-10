@@ -1,4 +1,4 @@
-# NPR Episode Identifier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# NPR Episode Identifier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.0.8 **  |
 | Active as of 2026-03-10 | *Computable Name*:NprEpisodeIdentifier |
 
 Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Episode](StructureDefinition-lmdi-encounter.md)
-* Examples for this Extension: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md) and [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md)
+* Examples for this Extension: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md), [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md)... Show 5 more, [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Scenario-A-Episode](Encounter-Scenario-A-Episode.md), [Encounter/Scenario-B-Episode](Encounter-Scenario-B-Episode.md), [Encounter/Scenario-C-Episode](Encounter-Scenario-C-Episode.md) and [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/npr-episode-identifier)
 
@@ -53,11 +53,11 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "resourceType" : "StructureDefinition",
   "id" : "npr-episode-identifier",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2026-03-10T12:49:22+00:00",
+  "date" : "2026-03-10T15:33:20+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

@@ -1,4 +1,4 @@
-# no-basis-fest-legemiddeldose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# no-basis-fest-legemiddeldose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddeldose **  | *Version*:1.0.8 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelDose |
 
  
@@ -34,7 +34,7 @@ FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som re
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "1.0.7"
+    "valueString" : "1.0.8"
   }],
   "name" : "festLegemiddelDose",
   "status" : "draft",

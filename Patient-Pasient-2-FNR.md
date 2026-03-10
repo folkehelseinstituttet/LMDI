@@ -1,4 +1,4 @@
-# Pasient-2-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Pasient-2-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 Profile: [Pasient](StructureDefinition-lmdi-patient.md)
 
-Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)
+Anonymous Patient Male, DoB: 1953-03-13 ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)
 
 -------
 
@@ -37,6 +37,8 @@ Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.
     "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
     "value" : "13031353453"
   }],
+  "gender" : "male",
+  "birthDate" : "1953-03-13",
   "address" : [{
     "district" : "Bærum",
     "_district" : {

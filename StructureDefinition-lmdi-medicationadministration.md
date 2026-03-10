@@ -1,4 +1,4 @@
-# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,16 +14,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddeladministrering |
 
  
 Beskriver administrering av legemiddel til pasient på institusjon. 
-Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering, hvem som utførte den (helsepersonell eller rolle ved institusjon) og dose med eventuell administrasjonsvei. 
+Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei. 
 
 **Usages:**
 
-* Examples for this Profile: [MedicationAdministration/Administrering-1-Oralt](MedicationAdministration-Administrering-1-Oralt.md), [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md) and [MedicationAdministration/Administrering-2-Infusjon](MedicationAdministration-Administrering-2-Infusjon.md)
+* Examples for this Profile: [MedicationAdministration/Administrering-1-Oralt](MedicationAdministration-Administrering-1-Oralt.md), [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md), [MedicationAdministration/Administrering-2-Infusjon](MedicationAdministration-Administrering-2-Infusjon.md), [MedicationAdministration/Administrering-20](MedicationAdministration-Administrering-20.md)... Show 5 more, [MedicationAdministration/Administrering-30](MedicationAdministration-Administrering-30.md), [MedicationAdministration/Scenario-A-Administrering-Oksykodon](MedicationAdministration-Scenario-A-Administrering-Oksykodon.md), [MedicationAdministration/Scenario-A-Administrering-Paracetamol](MedicationAdministration-Scenario-A-Administrering-Paracetamol.md), [MedicationAdministration/Scenario-B-Administrering](MedicationAdministration-Scenario-B-Administrering.md) and [MedicationAdministration/Scenario-C-Administrering](MedicationAdministration-Scenario-C-Administrering.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationadministration)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationadministration",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Legemiddeladministrering",
   "title" : "Legemiddeladministrering",
   "status" : "draft",
@@ -64,7 +64,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Beskriver administrering av legemiddel til pasient på institusjon.\n\nDette er kjerneressursen for denne implementasjonsguiden. Den peker videre legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering, hvem som utførte den (helsepersonell eller rolle ved institusjon) og dose med eventuell administrasjonsvei.",
+  "description" : "Beskriver administrering av legemiddel til pasient på institusjon.\n\nDette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -249,8 +249,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     {
       "id" : "MedicationAdministration.request",
       "path" : "MedicationAdministration.request",
-      "short" : "Referanse til rekivreringen",
-      "definition" : "Referanse til rekivreringen som denne administreringen er basert på.",
+      "short" : "Referanse til rekvireringen",
+      "definition" : "Referanse til rekvireringen som denne administreringen er basert på.",
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
@@ -277,7 +277,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "path" : "MedicationAdministration.dosage.route",
       "short" : "Administrasjonsvei",
       "definition" : "Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept.",
-      "comment" : "TODO #22 Diskuter om det bør være 0..1 hvis man ikke har registret administrasjonsvei.",
+      "comment" : "Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt.",
       "mustSupport" : true
     },
     {
@@ -315,27 +315,27 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       }
     },
     {
-      "id" : "MedicationAdministration.dosage.route.coding:7477",
+      "id" : "MedicationAdministration.dosage.route.coding:OID7477",
       "path" : "MedicationAdministration.dosage.route.coding",
-      "sliceName" : "7477",
+      "sliceName" : "OID7477",
       "short" : "Administrasjonsvei (OID=7477)",
       "definition" : "Administrasjonsvei (OID=7477) fra kodeverkssamling Resept.",
       "min" : 0,
       "max" : "1"
     },
     {
-      "id" : "MedicationAdministration.dosage.route.coding:7477.system",
+      "id" : "MedicationAdministration.dosage.route.coding:OID7477.system",
       "path" : "MedicationAdministration.dosage.route.coding.system",
       "min" : 1,
       "patternUri" : "urn:oid:2.16.578.1.12.4.1.1.7477"
     },
     {
-      "id" : "MedicationAdministration.dosage.route.coding:7477.code",
+      "id" : "MedicationAdministration.dosage.route.coding:OID7477.code",
       "path" : "MedicationAdministration.dosage.route.coding.code",
       "short" : "Verdi fra kodeverket"
     },
     {
-      "id" : "MedicationAdministration.dosage.route.coding:7477.display",
+      "id" : "MedicationAdministration.dosage.route.coding:OID7477.display",
       "path" : "MedicationAdministration.dosage.route.coding.display",
       "short" : "Beskrivelse av koden (navn) fra kodeverket"
     },

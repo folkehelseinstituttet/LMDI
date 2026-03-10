@@ -1,4 +1,4 @@
-# Gyldige legemiddelkoder - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Gyldige legemiddelkoder - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.0.8 **  |
 | Draft as of 2026-03-10 | *Computable Name*:LegemiddelKoder |
 
  
@@ -54,11 +54,11 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "legemiddel-koder",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "draft",
-  "date" : "2026-03-10T12:49:22+00:00",
+  "date" : "2026-03-10T15:33:20+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

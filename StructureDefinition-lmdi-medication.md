@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -23,7 +23,7 @@ Beskrivelse av legemiddel.
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Medication/Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md), [Medication/Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md) and [Medication/Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md)
+* Examples for this Profile: [Medication/Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md), [Medication/Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md), [Medication/Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md), [Medication/Medisin-4-LokaltLegemiddel](Medication-Medisin-4-LokaltLegemiddel.md)... Show 4 more, [Medication/Scenario-A-Medisin-Oksykodon](Medication-Scenario-A-Medisin-Oksykodon.md), [Medication/Scenario-A-Medisin-Paracetamol](Medication-Scenario-A-Medisin-Paracetamol.md), [Medication/Scenario-B-Medisin](Medication-Scenario-B-Medisin.md) and [Medication/Scenario-C-Medisin](Medication-Scenario-C-Medisin.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medication)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "status" : "draft",
@@ -372,25 +372,25 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "mustSupport" : true
     },
     {
-      "id" : "Medication.form.coding:7448",
+      "id" : "Medication.form.coding:OID7448",
       "path" : "Medication.form.coding",
-      "sliceName" : "7448",
+      "sliceName" : "OID7448",
       "short" : "Kodeverk Legemiddelform (OID:7448) fra FEST",
       "min" : 0,
       "max" : "1"
     },
     {
-      "id" : "Medication.form.coding:7448.system",
+      "id" : "Medication.form.coding:OID7448.system",
       "path" : "Medication.form.coding.system",
       "patternUri" : "urn:oid:2.16.578.1.12.4.1.1.7448"
     },
     {
-      "id" : "Medication.form.coding:7448.code",
+      "id" : "Medication.form.coding:OID7448.code",
       "path" : "Medication.form.coding.code",
       "short" : "Verdi fra kodeverket"
     },
     {
-      "id" : "Medication.form.coding:7448.display",
+      "id" : "Medication.form.coding:OID7448.display",
       "path" : "Medication.form.coding.display",
       "short" : "Beskrivelse av koden (navn) fra kodeverket"
     },

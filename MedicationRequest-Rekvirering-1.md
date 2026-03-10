@@ -1,4 +1,4 @@
-# Rekvirering-1 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Rekvirering-1 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -22,7 +22,7 @@ Profile: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
 
 **medication**: [Medication Paracetamol](Medication-Medisin-2-Paracetamol.md)
 
-**subject**: [Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)](Patient-Pasient-2-FNR.md)
+**subject**: [Anonymous Patient Male, DoB: 1953-03-13 ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)](Patient-Pasient-2-FNR.md)
 
 **authoredOn**: 2025-01-27
 

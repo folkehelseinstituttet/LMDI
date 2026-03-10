@@ -1,4 +1,4 @@
-# Administrering-1-Oralt - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Administrering-1-Oralt - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -22,7 +22,7 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
 
 **context**: [https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3](https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&canonical=https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3)
 
-**effective**: 2024-05-28
+**effective**: 2024-05-28 09:30:00+0200
 
 ### Dosages
 
@@ -52,7 +52,7 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
   "context" : {
     "reference" : "https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3"
   },
-  "effectiveDateTime" : "2024-05-28",
+  "effectiveDateTime" : "2024-05-28T09:30:00+02:00",
   "dosage" : {
     "route" : {
       "coding" : [{

@@ -1,4 +1,4 @@
-# Administrering-10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Administrering-10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -29,6 +29,16 @@
     "meta" : {
       "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
     },
+    "extension" : [{
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://www.whocc.no/atc",
+          "code" : "N02AA05",
+          "display" : "Oksykodon"
+        }]
+      }
+    }],
     "code" : {
       "coding" : [{
         "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
@@ -39,6 +49,13 @@
         "system" : "http://snomed.info/sct",
         "code" : "414984009",
         "display" : "Product containing oxycodone (medicinal product)"
+      }]
+    },
+    "form" : {
+      "coding" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+        "code" : "51",
+        "display" : "Mikstur, oppløsning"
       }]
     }
   },
@@ -51,6 +68,21 @@
     "identifier" : [{
       "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
       "value" : "13031353453"
+    }],
+    "gender" : "male",
+    "birthDate" : "1953-03-13",
+    "address" : [{
+      "district" : "Oslo",
+      "_district" : {
+        "extension" : [{
+          "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+            "code" : "0301",
+            "display" : "Oslo"
+          }
+        }]
+      }
     }]
   },
   {
@@ -108,7 +140,21 @@
         "display" : "Healthcare Provider"
       }]
     }],
-    "name" : "Lykkedalen eldrehjem"
+    "name" : "Lykkedalen eldrehjem",
+    "address" : [{
+      "type" : "physical",
+      "district" : "Sigdal",
+      "_district" : {
+        "extension" : [{
+          "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+            "code" : "3025",
+            "display" : "Sigdal"
+          }
+        }]
+      }
+    }]
   }],
   "status" : "completed",
   "medicationReference" : {
@@ -120,7 +166,22 @@
   "context" : {
     "reference" : "#Episode-2-Sykehjem"
   },
-  "effectiveDateTime" : "2024-05-28T13:14:00Z"
+  "effectiveDateTime" : "2024-05-28T13:14:00+02:00",
+  "dosage" : {
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "421521009",
+        "display" : "Swallow"
+      }]
+    },
+    "dose" : {
+      "value" : 5,
+      "unit" : "ml",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ml"
+    }
+  }
 }
 
 ```

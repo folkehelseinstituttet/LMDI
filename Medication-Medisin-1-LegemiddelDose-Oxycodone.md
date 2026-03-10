@@ -1,4 +1,4 @@
-# Medisin-1-LegemiddelDose-Oxycodone - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Medisin-1-LegemiddelDose-Oxycodone - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -19,6 +19,8 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
 **identifier**: [festLegemiddelVirkestoff](NamingSystem-no-basis-fest-legemiddelvirkestoff.md)/C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
 
 **code**: Oksykodon
+
+**form**: Mikstur, oppløsning
 
 
 
@@ -50,6 +52,13 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
       "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
       "code" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9",
       "display" : "Oksykodon"
+    }]
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+      "code" : "51",
+      "display" : "Mikstur, oppløsning"
     }]
   }
 }

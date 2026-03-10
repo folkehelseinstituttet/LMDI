@@ -1,4 +1,4 @@
-# no-basis-fest-legemiddelmerkevare - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# no-basis-fest-legemiddelmerkevare - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare **  | *Version*:1.0.8 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelMerkevare |
 
  
@@ -34,7 +34,7 @@ FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "1.0.7"
+    "valueString" : "1.0.8"
   }],
   "name" : "festLegemiddelMerkevare",
   "status" : "draft",

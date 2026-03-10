@@ -1,4 +1,4 @@
-# Administrering-30 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Administrering-30 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -12,13 +12,17 @@
 
 ## Example MedicationAdministration: Administrering-30
 
+Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
+
 **status**: Completed
 
 **medication**: Identifier: `uri:eu:spor:idmp:mpid:dummy`/1a38f25a8791fc3270e7c388f2031eee
 
 **subject**: [https://fhi.no/fhir/lmdi/pasient/12345678](https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&canonical=https://fhi.no/fhir/lmdi/pasient/12345678)
 
-**effective**: 2024-05-28
+**context**: [https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3](https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&canonical=https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3)
+
+**effective**: 2024-05-28 14:30:00+0200
 
 ### Dosages
 
@@ -35,6 +39,9 @@
 {
   "resourceType" : "MedicationAdministration",
   "id" : "Administrering-30",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
+  },
   "status" : "completed",
   "medicationReference" : {
     "identifier" : {
@@ -45,7 +52,10 @@
   "subject" : {
     "reference" : "https://fhi.no/fhir/lmdi/pasient/12345678"
   },
-  "effectiveDateTime" : "2024-05-28",
+  "context" : {
+    "reference" : "https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3"
+  },
+  "effectiveDateTime" : "2024-05-28T14:30:00+02:00",
   "dosage" : {
     "route" : {
       "coding" : [{
@@ -56,6 +66,7 @@
     },
     "dose" : {
       "value" : 100,
+      "unit" : "mg",
       "system" : "http://unitsofmeasure.org",
       "code" : "mg"
     }

@@ -1,4 +1,4 @@
-# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.0.8 **  |
 | Active as of 2025-09-12 | *Computable Name*:LegemiddelClassification |
 
 Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Legemiddel](StructureDefinition-lmdi-medication.md)
-* Examples for this Extension: [Medication/Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md), [Medication/Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md) and [Medication/Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md)
+* Examples for this Extension: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md), [Medication/Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md)... Show 7 more, [Medication/Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md), [Medication/Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md), [Medication/Scenario-A-Medisin-Oksykodon](Medication-Scenario-A-Medisin-Oksykodon.md), [Medication/Scenario-A-Medisin-Paracetamol](Medication-Scenario-A-Medisin-Paracetamol.md), [Medication/Scenario-B-Medisin](Medication-Scenario-B-Medisin.md), [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md) and [MedicationAdministration/Administrering-20](MedicationAdministration-Administrering-20.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/legemiddel-classification)
 
@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
   "resourceType" : "StructureDefinition",
   "id" : "legemiddel-classification",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "LegemiddelClassification",
   "title" : "Legemiddel Classification",
   "status" : "active",

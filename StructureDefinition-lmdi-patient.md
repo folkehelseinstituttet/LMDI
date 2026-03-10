@@ -1,4 +1,4 @@
-# Pasient - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Pasient - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Pasient |
 
  
@@ -23,7 +23,7 @@ Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Diagnose](StructureDefinition-lmdi-condition.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Patient/Pasient-1-Uten-FNR](Patient-Pasient-1-Uten-FNR.md) and [Patient/Pasient-2-FNR](Patient-Pasient-2-FNR.md)
+* Examples for this Profile: [Patient/Pasient-1-Uten-FNR](Patient-Pasient-1-Uten-FNR.md), [Patient/Pasient-2-FNR](Patient-Pasient-2-FNR.md), [Patient/Scenario-A-Pasient](Patient-Scenario-A-Pasient.md), [Patient/Scenario-B-Pasient](Patient-Scenario-B-Pasient.md) and [Patient/Scenario-C-Pasient](Patient-Scenario-C-Pasient.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-patient)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-patient",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Pasient",
   "title" : "Pasient",
   "status" : "draft",

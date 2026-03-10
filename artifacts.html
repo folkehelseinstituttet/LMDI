@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.7</title>
+        v1.0.8</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.7 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.8 - ci-build
                             
                             
                             
@@ -209,7 +209,7 @@
             <td>
 <p>Beskriver administrering av legemiddel til pasient på institusjon.</p>
 
-<p>Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering, hvem som utførte den (helsepersonell eller rolle ved institusjon) og dose med eventuell administrasjonsvei.</p>
+<p>Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.</p>
 </td>
          </tr>
          <tr>
@@ -512,7 +512,7 @@
                   title="MedicationAdministration/Administrering-20">Administrering-20</a>
             </td>
             <td>
-<p>Utfyllende eksempel - andre referanser</p>
+<p>Utfyllende eksempel - contained med minimal medisinreferanse</p>
 </td>
          </tr>
          <tr>
@@ -521,7 +521,7 @@
                   title="MedicationAdministration/Administrering-30">Administrering-30</a>
             </td>
             <td>
-<p>Utfyllende eksempel - minimalt, logiske referanser</p>
+<p>Eksempel med logiske referanser (identifier-baserte) - demonstrerer identifier-referanser</p>
 </td>
          </tr>
          <tr>
@@ -549,6 +549,15 @@
             </td>
             <td>
 <p>Eksempel på en batch-bundle som inneholder to legemiddeladministreringer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-Episode-1-Sykehus.html"
+                  title="Encounter/Episode-1-Sykehus">Episode-1-Sykehus</a>
+            </td>
+            <td>
+<p>Eksempel på episode i spesialisthelsetjenesten</p>
 </td>
          </tr>
          <tr>
@@ -594,6 +603,15 @@
             </td>
             <td>
 <p>Eksempel på legemiddel - paking</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Medisin-4-LokaltLegemiddel.html"
+                  title="Medication/Medisin-4-LokaltLegemiddel">Medisin-4-LokaltLegemiddel</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel fra lokal legemiddelkatalog</p>
 </td>
          </tr>
          <tr>
@@ -651,11 +669,269 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-eksempel-pasient-1234567890.html"
-                  title="Patient/eksempel-pasient-1234567890">eksempel-pasient-1234567890</a>
+               <a href="MedicationRequest-Rekvirering-2-Kjemoterapi.html"
+                  title="MedicationRequest/Rekvirering-2-Kjemoterapi">Rekvirering-2-Kjemoterapi</a>
             </td>
             <td>
-<p>Eksempel på en pasient</p>
+<p>Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-Scenario-A-Bundle.html" title="Bundle/Scenario-A-Bundle">Scenario A - Sykehjemsadministrering Bundle</a>
+            </td>
+            <td>
+<p>Komplett Bundle med sykehjemsadministrering, organisasjonshierarki og to administreringer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-Scenario-B-Bundle.html" title="Bundle/Scenario-B-Bundle">Scenario B - Rekvirering og administrering Bundle</a>
+            </td>
+            <td>
+<p>Komplett Bundle med rekvirering, administrering og diagnose</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-Scenario-C-Bundle.html" title="Bundle/Scenario-C-Bundle">Scenario C - Kjemoterapi Bundle</a>
+            </td>
+            <td>
+<p>Komplett Bundle med kjemoterapibehandling, lokal legemiddelkatalog og alle extensions</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Scenario-A-Administrering-Oksykodon.html"
+                  title="MedicationAdministration/Scenario-A-Administrering-Oksykodon">Scenario-A-Administrering-Oksykodon</a>
+            </td>
+            <td>
+<p>Scenario A - Administrering av Oksykodon mikstur</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Scenario-A-Administrering-Paracetamol.html"
+                  title="MedicationAdministration/Scenario-A-Administrering-Paracetamol">Scenario-A-Administrering-Paracetamol</a>
+            </td>
+            <td>
+<p>Scenario A - Administrering av Paracetamol</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-Scenario-A-Episode.html"
+                  title="Encounter/Scenario-A-Episode">Scenario-A-Episode</a>
+            </td>
+            <td>
+<p>Scenario A - Sykehjemsopphold</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Scenario-A-Medisin-Oksykodon.html"
+                  title="Medication/Scenario-A-Medisin-Oksykodon">Scenario-A-Medisin-Oksykodon</a>
+            </td>
+            <td>
+<p>Scenario A - Oksykodon mikstur 1 mg/ml</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Scenario-A-Medisin-Paracetamol.html"
+                  title="Medication/Scenario-A-Medisin-Paracetamol">Scenario-A-Medisin-Paracetamol</a>
+            </td>
+            <td>
+<p>Scenario A - Paracetamol 500 mg tablett</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Scenario-A-Org-Avdeling.html"
+                  title="Organization/Scenario-A-Org-Avdeling">Scenario-A-Org-Avdeling</a>
+            </td>
+            <td>
+<p>Scenario A - Sykehjemsavdeling</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Scenario-A-Org-Kommune.html"
+                  title="Organization/Scenario-A-Org-Kommune">Scenario-A-Org-Kommune</a>
+            </td>
+            <td>
+<p>Scenario A - Kommune</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Scenario-A-Org-Sykehjem.html"
+                  title="Organization/Scenario-A-Org-Sykehjem">Scenario-A-Org-Sykehjem</a>
+            </td>
+            <td>
+<p>Scenario A - Sykehjem</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Scenario-A-Pasient.html"
+                  title="Patient/Scenario-A-Pasient">Scenario-A-Pasient</a>
+            </td>
+            <td>
+<p>Scenario A - Sykehjemspasient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Scenario-B-Administrering.html"
+                  title="MedicationAdministration/Scenario-B-Administrering">Scenario-B-Administrering</a>
+            </td>
+            <td>
+<p>Scenario B - Administrering av Morfin subkutant</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-Scenario-B-Diagnose.html"
+                  title="Condition/Scenario-B-Diagnose">Scenario-B-Diagnose</a>
+            </td>
+            <td>
+<p>Scenario B - Postoperativ smerte</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-Scenario-B-Episode.html"
+                  title="Encounter/Scenario-B-Episode">Scenario-B-Episode</a>
+            </td>
+            <td>
+<p>Scenario B - Sykehusinnleggelse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-Scenario-B-Helsepersonell.html"
+                  title="Practitioner/Scenario-B-Helsepersonell">Scenario-B-Helsepersonell</a>
+            </td>
+            <td>
+<p>Scenario B - Rekvirerende lege</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Scenario-B-Medisin.html"
+                  title="Medication/Scenario-B-Medisin">Scenario-B-Medisin</a>
+            </td>
+            <td>
+<p>Scenario B - Morfin injeksjonsvæske</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Scenario-B-Organisasjon.html"
+                  title="Organization/Scenario-B-Organisasjon">Scenario-B-Organisasjon</a>
+            </td>
+            <td>
+<p>Scenario B - Sykehus</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Scenario-B-Pasient.html"
+                  title="Patient/Scenario-B-Pasient">Scenario-B-Pasient</a>
+            </td>
+            <td>
+<p>Scenario B - Pasient med D-nummer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-Scenario-B-Rekvirering.html"
+                  title="MedicationRequest/Scenario-B-Rekvirering">Scenario-B-Rekvirering</a>
+            </td>
+            <td>
+<p>Scenario B - Rekvirering av Morfin</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Scenario-C-Administrering.html"
+                  title="MedicationAdministration/Scenario-C-Administrering">Scenario-C-Administrering</a>
+            </td>
+            <td>
+<p>Scenario C - Infusjon av Oksaliplatin</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-Scenario-C-Episode.html"
+                  title="Encounter/Scenario-C-Episode">Scenario-C-Episode</a>
+            </td>
+            <td>
+<p>Scenario C - Kjemoterapibehandling</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-Scenario-C-Helsepersonell.html"
+                  title="Practitioner/Scenario-C-Helsepersonell">Scenario-C-Helsepersonell</a>
+            </td>
+            <td>
+<p>Scenario C - Onkolog</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Scenario-C-Medisin.html"
+                  title="Medication/Scenario-C-Medisin">Scenario-C-Medisin</a>
+            </td>
+            <td>
+<p>Scenario C - Oksaliplatin fra lokal legemiddelkatalog</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Scenario-C-Organisasjon.html"
+                  title="Organization/Scenario-C-Organisasjon">Scenario-C-Organisasjon</a>
+            </td>
+            <td>
+<p>Scenario C - Onkologisk avdeling</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-Scenario-C-Pasient.html"
+                  title="Patient/Scenario-C-Pasient">Scenario-C-Pasient</a>
+            </td>
+            <td>
+<p>Scenario C - Kreftpasient</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-Scenario-C-Rekvirering.html"
+                  title="MedicationRequest/Scenario-C-Rekvirering">Scenario-C-Rekvirering</a>
+            </td>
+            <td>
+<p>Scenario C - FOLFOX6 kjemoterapirekvirering med alle extensions</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-Scenario-C-Virkestoff.html"
+                  title="Substance/Scenario-C-Virkestoff">Scenario-C-Virkestoff</a>
+            </td>
+            <td>
+<p>Scenario C - Oksaliplatin virkestoff</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Substance-Virkestoff-1-Oksykodon.html"
+                  title="Substance/Virkestoff-1-Oksykodon">Virkestoff-1-Oksykodon</a>
+            </td>
+            <td>
+<p>Eksempel på virkestoff - Oksykodon</p>
 </td>
          </tr>
       </tbody>
@@ -682,10 +958,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.7 based on <a
+                    Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, Mar 10, 2026 12:49+0000">2026-03-10</span>
+                        title="Tue, Mar 10, 2026 15:33+0000">2026-03-10</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

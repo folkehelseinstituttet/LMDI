@@ -1,4 +1,4 @@
-# Pasient-1-Uten-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Pasient-1-Uten-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 

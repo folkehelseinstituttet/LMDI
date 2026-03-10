@@ -1,4 +1,4 @@
-# Virkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Virkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Virkestoff |
 
  
@@ -23,6 +23,7 @@ En tilpasset profil av Substance for å representere virkestoff, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+* Examples for this Profile: [Substance/Scenario-C-Virkestoff](Substance-Scenario-C-Virkestoff.md) and [Substance/Virkestoff-1-Oksykodon](Substance-Virkestoff-1-Oksykodon.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-substance)
 
@@ -43,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-substance",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Virkestoff",
   "title" : "Virkestoff",
   "status" : "draft",

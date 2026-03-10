@@ -1,4 +1,4 @@
-# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.0.8 **  |
 | Draft as of 2026-03-10 | *Computable Name*:Episode |
 
  
@@ -23,6 +23,7 @@ Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne pr
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
+* Examples for this Profile: [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Scenario-A-Episode](Encounter-Scenario-A-Episode.md), [Encounter/Scenario-B-Episode](Encounter-Scenario-B-Episode.md) and [Encounter/Scenario-C-Episode](Encounter-Scenario-C-Episode.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-encounter)
 
@@ -43,11 +44,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-encounter",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Episode",
   "title" : "Episode",
   "status" : "draft",
-  "date" : "2026-03-10T12:49:22+00:00",
+  "date" : "2026-03-10T15:33:20+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

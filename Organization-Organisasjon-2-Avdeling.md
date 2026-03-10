@@ -1,4 +1,4 @@
-# Organisasjon-2-Avdeling - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Organisasjon-2-Avdeling - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -18,6 +18,8 @@ Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
 
 **name**: Avdeling for epilepsi, poliklinikk
 
+**address**: 
+
 **partOf**: [Organization Oslo universitetssykehus HF](Organization-Organisasjon-3-Sykehus.md)
 
 
@@ -36,6 +38,20 @@ Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
     "value" : "4208723"
   }],
   "name" : "Avdeling for epilepsi, poliklinikk",
+  "address" : [{
+    "type" : "physical",
+    "district" : "Oslo",
+    "_district" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+        "valueCoding" : {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+          "code" : "0301",
+          "display" : "Oslo"
+        }
+      }]
+    }
+  }],
   "partOf" : {
     "reference" : "Organization/Organisasjon-3-Sykehus"
   }

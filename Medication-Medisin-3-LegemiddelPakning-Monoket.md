@@ -1,4 +1,4 @@
-# Medisin-3-LegemiddelPakning-Monoket - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Medisin-3-LegemiddelPakning-Monoket - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,11 +14,13 @@
 
 Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
 
-**Legemiddel Classification**: Isosorbid mononitrat
+**Legemiddel Classification**: isosorbide mononitrate
 
 **identifier**: [festLegemiddelPakning](NamingSystem-no-basis-fest-legemiddelpakning.md)/0003602E-315E-4CDE-9EB0-6756BE9CD120
 
 **code**: Monoket
+
+**form**: Depottablett
 
 
 
@@ -37,7 +39,7 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
       "coding" : [{
         "system" : "http://www.whocc.no/atc",
         "code" : "C01DA14",
-        "display" : "Isosorbid mononitrat"
+        "display" : "isosorbide mononitrate"
       }]
     }
   }],
@@ -50,6 +52,13 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
       "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
       "code" : "0003602E-315E-4CDE-9EB0-6756BE9CD120",
       "display" : "Monoket"
+    }]
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+      "code" : "68",
+      "display" : "Depottablett"
     }]
   }
 }

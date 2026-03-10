@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -166,6 +166,9 @@
       "Patient.address"
     ],
     "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode": [
+      "Bundle.entry.resource.address.district",
+      "Bundle.entry.resource.contained.address.district",
+      "MedicationAdministration.contained.address.district",
       "Organization.address.district",
       "Patient.address.district"
     ],
@@ -178,15 +181,21 @@
       "Patient.address"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification": [
-      "Medication"
+      "Bundle.entry.resource",
+      "Bundle.entry.resource.contained",
+      "Medication",
+      "MedicationAdministration.contained"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
+      "Bundle.entry.resource",
       "MedicationRequest"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie": [
+      "Bundle.entry.resource",
       "MedicationRequest"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring": [
+      "Bundle.entry.resource",
       "MedicationRequest"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier": [

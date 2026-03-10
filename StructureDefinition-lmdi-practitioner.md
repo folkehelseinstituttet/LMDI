@@ -1,4 +1,4 @@
-# Helsepersonell - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Helsepersonell - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Helsepersonell |
 
  
@@ -23,7 +23,7 @@ Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. H
 **Usages:**
 
 * Refer to this Profile: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Practitioner/Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md) and [Practitioner/Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md)
+* Examples for this Profile: [Practitioner/Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md), [Practitioner/Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md), [Practitioner/Scenario-B-Helsepersonell](Practitioner-Scenario-B-Helsepersonell.md) and [Practitioner/Scenario-C-Helsepersonell](Practitioner-Scenario-C-Helsepersonell.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-practitioner)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-practitioner.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-practitioner",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Helsepersonell",
   "title" : "Helsepersonell",
   "status" : "draft",

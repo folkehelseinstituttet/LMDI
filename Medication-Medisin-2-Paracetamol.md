@@ -1,4 +1,4 @@
-# Medisin-2-Paracetamol - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Medisin-2-Paracetamol - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -19,6 +19,8 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
 **identifier**: [festLegemiddelMerkevare](NamingSystem-no-basis-fest-legemiddelmerkevare.md)/2ABAC272-0BCF-43F0-84BE-984074D92E15
 
 **code**: Paracetamol
+
+**form**: Tablett
 
 
 
@@ -50,6 +52,13 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
       "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
       "code" : "2ABAC272-0BCF-43F0-84BE-984074D92E15",
       "display" : "Paracetamol"
+    }]
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+      "code" : "1",
+      "display" : "Tablett"
     }]
   }
 }

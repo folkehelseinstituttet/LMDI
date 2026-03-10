@@ -1,4 +1,4 @@
-# Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.7
+# Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest **  | *Version*:1.0.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest **  | *Version*:1.0.8 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddelrekvirering |
 
  
@@ -23,7 +23,7 @@ Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [MedicationRequest/Rekvirering-1](MedicationRequest-Rekvirering-1.md)
+* Examples for this Profile: [MedicationRequest/Rekvirering-1](MedicationRequest-Rekvirering-1.md), [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md), [MedicationRequest/Scenario-B-Rekvirering](MedicationRequest-Scenario-B-Rekvirering.md) and [MedicationRequest/Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationrequest)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationrequest",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest",
-  "version" : "1.0.7",
+  "version" : "1.0.8",
   "name" : "Legemiddelrekvirering",
   "title" : "Legemiddelrekvirering",
   "status" : "draft",
@@ -167,7 +167,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
     {
       "id" : "MedicationRequest.identifier",
       "path" : "MedicationRequest.identifier",
-      "short" : "Identifikator for rekvisisjon",
+      "short" : "Identifikator for rekvirering",
       "definition" : "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes",
       "mustSupport" : true
     },
@@ -175,7 +175,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.status",
       "path" : "MedicationRequest.status",
       "short" : "Status for rekvireringen",
-      "definition" : "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvisisjon og må støttes av alle systemer",
+      "definition" : "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer",
       "comment" : "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft",
       "mustSupport" : true,
       "binding" : {
