@@ -4,7 +4,7 @@ Id: lmdi-medicationadministration
 Title: "Legemiddeladministrering"
 Description: """Beskriver administrering av legemiddel til pasient på institusjon.
 
-Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering, hvem som utførte den (helsepersonell eller rolle ved institusjon) og dose med eventuell administrasjonsvei."""
+Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei."""
 
 * ^status = #draft
 * ^date = "2025-09-12"
@@ -42,8 +42,8 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legem
 
 * request MS
 * request only Reference(Legemiddelrekvirering)
-* request ^short = "Referanse til rekivreringen"
-* request ^definition = "Referanse til rekivreringen som denne administreringen er basert på."
+* request ^short = "Referanse til rekvireringen"
+* request ^definition = "Referanse til rekvireringen som denne administreringen er basert på."
 
 * reasonReference only Reference(Diagnose)
 * reasonReference ^short = "Indikasjon (diagnose) for legemiddeladministreringen"
@@ -52,7 +52,7 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre legem
 * dosage.route MS
 * dosage.route ^short = "Administrasjonsvei"
 * dosage.route ^definition = "Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept."
-* dosage.route ^comment = "TODO #22 Diskuter om det bør være 0..1 hvis man ikke har registret administrasjonsvei."
+* dosage.route ^comment = "Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt."
 
 * dosage.route.coding ^slicing.discriminator.type = #pattern
 * dosage.route.coding ^slicing.discriminator.path = "system"
@@ -119,7 +119,7 @@ Description: "Eksempel på administrering av legemiddel"
 * medicationReference = Reference(https://fhir.legemidler.example.com/legemidler/123456780)
 * subject = Reference(https://fhi.no/fhir/lmdi/pasient/12345678)
 * context = Reference(https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3)
-* effectiveDateTime = "2024-05-28"
+* effectiveDateTime = "2024-05-28T09:30:00+02:00"
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code = #421521009
 * dosage.route.coding[SCT].display = "Swallow"

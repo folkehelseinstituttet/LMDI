@@ -84,7 +84,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 Instance: Diagnose-1-ICD10-OID
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose ICD-10"
-* subject = Reference(eksempel-pasient-1234567890)
+* subject = Reference(Pasient-2-FNR)
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10] = #R63.3
 * code.coding[ICD10].display = "Vanskeligheter med inntak og tilførsel av mat"
@@ -92,7 +92,7 @@ Description: "Eksempel på diagnose ICD-10"
 Instance: Diagnose-2-SNOMED-CT
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose SNOMED CT og ICD-10"
-* subject = Reference(eksempel-pasient-1234567890)
+* subject = Reference(Pasient-2-FNR)
 * code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[SCT] = #276241001
 * code.coding[SCT].display = "frykt for høyder"
@@ -100,7 +100,3 @@ Description: "Eksempel på diagnose SNOMED CT og ICD-10"
 * code.coding[ICD10] = #F40.2
 * code.coding[ICD10].display = "Spesifikke (isolerte) fobier"
 * code.text = "Høydeskrekk"
-
-Instance: eksempel-pasient-1234567890
-InstanceOf: Patient
-Description: "Eksempel på en pasient"

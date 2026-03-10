@@ -12,3 +12,14 @@ Description: "En tilpasset profil av Substance for å representere virkestoff, b
 * description 0..0
 * ingredient 0..0
 * category 1..1
+
+// EKSEMPLER
+Instance: Virkestoff-1-Oksykodon
+InstanceOf: Virkestoff
+Description: "Eksempel på virkestoff - Oksykodon"
+* code.coding.system = "http://snomed.info/sct"
+* code.coding.code = #55452001
+* code.coding.display = "Oxycodone (substance)"
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/substance-category"
+* category.coding.code = #drug
+* category.coding.display = "Drug or Medicament"

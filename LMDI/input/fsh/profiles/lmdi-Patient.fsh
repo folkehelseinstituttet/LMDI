@@ -97,6 +97,8 @@ InstanceOf: Pasient
 Description: "Eksempel på pasient med fødselsnummer"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier[FNR].value = "13031353453"
+* gender = #male
+* birthDate = "1953-03-13"
 * address.district = "Bærum"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3024 "Bærum"
 
