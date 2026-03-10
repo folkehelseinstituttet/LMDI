@@ -33,20 +33,21 @@ jobs:
 
     - name: Install FHIR packages including no-basis
       run: |
-        echo "📦 Installing FHIR R4 core 4.0.1"
-        npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
-        
+        NO_BASIS_TGZ="hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz"
+
         echo "📦 Installing no-basis ${{ env.NO_BASIS_VERSION }} snapshot"
-        # Sjekk om lokal fil eksisterer først
-        if [ -f "no-basis-${{ env.NO_BASIS_VERSION }}.tgz" ]; then
+        if [ -f "$NO_BASIS_TGZ" ]; then
           echo "Using local no-basis package"
-          npm install no-basis-${{ env.NO_BASIS_VERSION }}.tgz
         else
           echo "Downloading no-basis from GitHub"
-          curl -L -o hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz \
-            https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
-          npm install hl7.fhir.no.basis-${{ env.NO_BASIS_VERSION }}-snapshots.tgz
+          curl -L -o "$NO_BASIS_TGZ" \
+            https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/$NO_BASIS_TGZ
         fi
+
+        echo "📦 Installing FHIR R4 core 4.0.1"
+        npm --registry https://packages.simplifier.net install hl7.fhir.r4.core@4.0.1
+
+        npm install "$NO_BASIS_TGZ"
         
         echo "📁 Creating FHIR package cache directory"
         mkdir -p $HOME/.fhir/packages/hl7.fhir.no.basis#${{ env.NO_BASIS_VERSION }}/package
