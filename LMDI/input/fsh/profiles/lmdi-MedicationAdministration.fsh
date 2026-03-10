@@ -57,18 +57,18 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 * dosage.route.coding ^slicing.discriminator.type = #pattern
 * dosage.route.coding ^slicing.discriminator.path = "system"
 * dosage.route.coding ^slicing.rules = #closed
-* dosage.route.coding contains SCT 0..1 and 7477 0..1
+* dosage.route.coding contains SCT 0..1 and OID7477 0..1
 
 * dosage.route.coding[SCT] ^short = "SNOMED CT"
 * dosage.route.coding[SCT] ^definition = "Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7."
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code from http://hl7.org/fhir/ValueSet/route-codes (required)
 
-* dosage.route.coding[7477] ^short = "Administrasjonsvei (OID=7477)"
-* dosage.route.coding[7477] ^definition = "Administrasjonsvei (OID=7477) fra kodeverkssamling Resept."
-* dosage.route.coding[7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
-* dosage.route.coding[7477].code ^short = "Verdi fra kodeverket"
-* dosage.route.coding[7477].display ^short = "Beskrivelse av koden (navn) fra kodeverket"
+* dosage.route.coding[OID7477] ^short = "Administrasjonsvei (OID=7477)"
+* dosage.route.coding[OID7477] ^definition = "Administrasjonsvei (OID=7477) fra kodeverkssamling Resept."
+* dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code ^short = "Verdi fra kodeverket"
+* dosage.route.coding[OID7477].display ^short = "Beskrivelse av koden (navn) fra kodeverket"
 
 * dosage.dose 1..1
 * dosage.dose ^short = "Administrert mengde virkestoff"

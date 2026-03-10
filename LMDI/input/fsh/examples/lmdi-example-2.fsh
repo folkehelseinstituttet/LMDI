@@ -23,6 +23,6 @@ Usage: #inline
 * code.coding[FestLegemiddelpakning].code = #ID_00B35335-0DF7-4C98-8A0A-1148F4599D21
 * code.coding[FestLegemiddelpakning].display = "Botox pulv til inj væske, oppl 50 E"
 * extension[classification].valueCodeableConcept = $ATC#M03AX01 "Botulinumtoksin"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[7448].code = #36
-* form.coding[7448].display = "Pulver til injeksjonsvæske, oppløsning"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #36
+* form.coding[OID7448].display = "Pulver til injeksjonsvæske, oppløsning"

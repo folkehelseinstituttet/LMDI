@@ -61,9 +61,9 @@ Description: "Scenario A - Paracetamol 500 mg tablett"
 * code.coding[FestLegemiddelMerkevare].code = #2ABAC272-0BCF-43F0-84BE-984074D92E15
 * code.coding[FestLegemiddelMerkevare].display = "Paracet tab 500 mg"
 * extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[7448].code = #1
-* form.coding[7448].display = "Tablett"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #1
+* form.coding[OID7448].display = "Tablett"
 
 Instance: Scenario-A-Medisin-Oksykodon
 InstanceOf: Legemiddel
@@ -73,9 +73,9 @@ Description: "Scenario A - Oksykodon mikstur 1 mg/ml"
 * code.coding[FestVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
 * code.coding[FestVirkestoff].display = "Oksykodon"
 * extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[7448].code = #51
-* form.coding[7448].display = "Mikstur, oppløsning"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #51
+* form.coding[OID7448].display = "Mikstur, oppløsning"
 
 Instance: Scenario-A-Administrering-Paracetamol
 InstanceOf: Legemiddeladministrering

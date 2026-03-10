@@ -57,9 +57,9 @@ Description: "Scenario C - Oksaliplatin fra lokal legemiddelkatalog"
 * code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
 * code.coding[LokaltLegemiddel].code = #OXA-85-INF
 * code.coding[LokaltLegemiddel].display = "Oksaliplatin 85 mg/m2 infusjonsvæske"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[7448].code = #9
-* form.coding[7448].display = "Infusjonsvæske, oppløsning"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #9
+* form.coding[OID7448].display = "Infusjonsvæske, oppløsning"
 * ingredient.itemReference = Reference(Scenario-C-Virkestoff)
 * ingredient.isActive = true
 

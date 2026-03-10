@@ -61,9 +61,9 @@ Description: "Scenario B - Morfin injeksjonsvæske"
 * code.coding[FestLegemiddelMerkevare].code = #ID_81E2A556-B09B-4EC2-BA37-E3A9E3E0F6D0
 * code.coding[FestLegemiddelMerkevare].display = "Morfin injeksjonsvæske 10 mg/ml"
 * extension[classification].valueCodeableConcept = $ATC#N02AA01 "Morfin"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[7448].code = #11
-* form.coding[7448].display = "Injeksjonsvæske, oppløsning"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #11
+* form.coding[OID7448].display = "Injeksjonsvæske, oppløsning"
 
 Instance: Scenario-B-Rekvirering
 InstanceOf: Legemiddelrekvirering

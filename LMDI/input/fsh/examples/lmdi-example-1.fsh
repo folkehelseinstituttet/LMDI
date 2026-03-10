@@ -31,9 +31,9 @@ Usage: #inline
 * code.coding[SCT].code = #414984009
 * code.coding[SCT].display = "Product containing oxycodone (medicinal product)"
 * extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[7448].code = #51
-* form.coding[7448].display = "Mikstur, oppløsning"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #51
+* form.coding[OID7448].display = "Mikstur, oppløsning"
 
 Instance: Pasient-20
 InstanceOf: Pasient
