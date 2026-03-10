@@ -29,7 +29,7 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 
 * entry.request.url 1..1
 * entry.request.url ^short = "URL for requesten (påkrevd, men verdien har ingen betydning)"
-* entry.request.url ^definition = "Representerer addressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."
+* entry.request.url ^definition = "Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."
 
 * entry.resource 1..1 MS
 
@@ -37,17 +37,18 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 * obeys lr-allowed-resources
 
 Invariant: lr-allowed-resources
-Description: "Bundle kan bare inneholde følgende profilerte ressurstyper: Diagnose, Helsepersonell, Episode, Legemiddel, LegemiddelAdministrasjon, Legemiddelrekvirering, Organisasjon, Pasient"
+Description: "Bundle kan bare inneholde følgende profilerte ressurstyper: Diagnose, Helsepersonell, Episode, Legemiddel, LegemiddelAdministrasjon, Legemiddelrekvirering, Organisasjon, Pasient, Virkestoff"
 Severity: #error
 Expression: "entry.all(
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization').exists() or 
-  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient').exists()
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient').exists() or
+  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance').exists()
 )"
 
 // EKSEMPEL
@@ -77,7 +78,7 @@ Description: "Eksempel på en batch-bundle som inneholder to legemiddeladministr
 
 * entry[3].resource = Episode-2-Sykehjem
 * entry[3].request.method = #POST
-* entry[3].request.url = "EpisodeOfCare"
+* entry[3].request.url = "Encounter"
 
 * entry[4].resource = Organisasjon-2-Eldrehjem
 * entry[4].request.method = #POST

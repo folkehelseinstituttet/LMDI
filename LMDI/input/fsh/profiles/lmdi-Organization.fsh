@@ -100,8 +100,11 @@ Description: "Eksempel på spesialistavdeling"
 * identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
 * identifier[RSH].value = "4208723"
 * name = "Avdeling for epilepsi, poliklinikk"
-// Midlertidig fjernet type for testing
+
 * partOf = Reference(Organisasjon-3-Sykehus)
+* address.type = #physical
+* address.district = "Oslo"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
 
 Instance: Organisasjon-3-Sykehus
 InstanceOf: Organisasjon
@@ -111,7 +114,7 @@ Description: "Eksempel på sykehusorganisasjon"
 * identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
 * identifier[RSH].value = "4001031"
 * name = "Oslo universitetssykehus HF"
-// Midlertidig fjernet type for testing
+
 * address.type = #physical
 * address.district = "Oslo"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"

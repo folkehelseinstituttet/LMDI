@@ -41,13 +41,13 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 
 // Identifikator
 * identifier 0..* MS
-* identifier ^short = "Identifikator for rekvisisjon"
+* identifier ^short = "Identifikator for rekvirering"
 * identifier ^definition = "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes"
 
 // Status og intensjon
 * status 1..1 MS
 * status ^short = "Status for rekvireringen"
-* status ^definition = "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvisisjon og må støttes av alle systemer"
+* status ^definition = "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer"
 * status from http://hl7.org/fhir/ValueSet/medicationrequest-status
 * status ^comment = "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"
 
@@ -95,3 +95,19 @@ Description: "Eksempel på legemiddelrekvirering av Paracet"
 * subject = Reference(Pasient-2-FNR)
 * requester = Reference(Helsepersonell-1-HPR-nummer)
 * authoredOn = "2025-01-27"
+
+Instance: Rekvirering-2-Kjemoterapi
+InstanceOf: Legemiddelrekvirering
+Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"
+* status = #active
+* intent = #order
+* medicationReference = Reference(Medisin-1-LegemiddelDose-Oxycodone)
+* subject = Reference(Pasient-2-FNR)
+* requester = Reference(Helsepersonell-1-HPR-nummer)
+* authoredOn = "2025-03-10"
+* extension[prosentvisDoseendring].valueQuantity.value = 80
+* extension[prosentvisDoseendring].valueQuantity.system = "http://unitsofmeasure.org"
+* extension[prosentvisDoseendring].valueQuantity.code = #%
+* extension[prosentvisDoseendring].valueQuantity.unit = "%"
+* extension[delAvBehandlingsregime].valueString = "FOLFOX6"
+* extension[kliniskStudie].valueBoolean = true

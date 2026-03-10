@@ -90,16 +90,16 @@ Description: "Beskrivelse av legemiddel."
 * form.coding ^slicing.discriminator.type = #value
 * form.coding ^slicing.discriminator.path = "system"
 * form.coding ^slicing.rules = #closed
-* form.coding contains 7448 0..1 and SCT 0..1
+* form.coding contains OID7448 0..1 and SCT 0..1
 * form.coding 1..* 
 * form.coding ^short = "Legemiddelform"
 * form.coding ^comment = "Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT."
-* form.coding[7448] ^short = "Kodeverk Legemiddelform (OID:7448) fra FEST"
+* form.coding[OID7448] ^short = "Kodeverk Legemiddelform (OID:7448) fra FEST"
 * form.coding[SCT] ^short = "SNOMED CT Form Codes"
-* form.coding[7448].code 1..1
-* form.coding[7448].code ^short = "Verdi fra kodeverket"
-* form.coding[7448].display ^short = "Beskrivelse av koden (navn) fra kodeverket"
-* form.coding[7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448" 
+* form.coding[OID7448].code 1..1
+* form.coding[OID7448].code ^short = "Verdi fra kodeverket"
+* form.coding[OID7448].display ^short = "Beskrivelse av koden (navn) fra kodeverket"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448" 
 * form.coding[SCT].system = "http://snomed.info/sct" 
 
 * batch MS
@@ -115,8 +115,6 @@ Description: "Beskrivelse av legemiddel."
 
 
 // EKSEMPLER
-Alias: $ATC = http://www.whocc.no/atc
-
 Instance: Medisin-1-LegemiddelDose-Oxycodone
 InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel"
@@ -127,6 +125,9 @@ Description: "Eksempel på legemiddel"
 * code.coding[FestVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 * code.coding[FestVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
 * code.coding[FestVirkestoff].display = "Oksykodon"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #51
+* form.coding[OID7448].display = "Mikstur, oppløsning"
 
 Instance: Medisin-2-Paracetamol
 InstanceOf: Legemiddel
@@ -137,13 +138,19 @@ Description: "Eksempel på legemiddel - Paracetamol - UTKAST"
 * code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * code.coding[FestLegemiddelMerkevare].code = #2ABAC272-0BCF-43F0-84BE-984074D92E15
 * code.coding[FestLegemiddelMerkevare].display = "Paracetamol"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #1
+* form.coding[OID7448].display = "Tablett"
 
 Instance: Medisin-3-LegemiddelPakning-Monoket
 InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel - paking"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * identifier.value = "0003602E-315E-4CDE-9EB0-6756BE9CD120"
-* extension[classification].valueCodeableConcept = $ATC#C01DA14 "Isosorbid mononitrat"
+* extension[classification].valueCodeableConcept = $ATC#C01DA14 "isosorbide mononitrate"
 * code.coding[FestLegemiddelpakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * code.coding[FestLegemiddelpakning].code = #0003602E-315E-4CDE-9EB0-6756BE9CD120
 * code.coding[FestLegemiddelpakning].display = "Monoket"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #68
+* form.coding[OID7448].display = "Depottablett"
