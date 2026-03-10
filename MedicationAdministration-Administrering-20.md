@@ -20,21 +20,17 @@
 {
   "resourceType" : "MedicationAdministration",
   "id" : "Administrering-20",
-  "contained" : [
-    {
-      "resourceType" : "Medication",
-      "id" : "medisin-91171f8e-b615-41ba-881a-87b8e8075611",
-      "code" : {
-        "coding" : [
-          {
-            "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
-            "code" : "ID_00B35335-0DF7-4C98-8A0A-1148F4599D21",
-            "display" : "Botox pulv til inj væske, oppl 50 E"
-          }
-        ]
-      }
+  "contained" : [{
+    "resourceType" : "Medication",
+    "id" : "medisin-91171f8e-b615-41ba-881a-87b8e8075611",
+    "code" : {
+      "coding" : [{
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+        "code" : "ID_00B35335-0DF7-4C98-8A0A-1148F4599D21",
+        "display" : "Botox pulv til inj væske, oppl 50 E"
+      }]
     }
-  ],
+  }],
   "status" : "completed",
   "medicationReference" : {
     "reference" : "#medisin-91171f8e-b615-41ba-881a-87b8e8075611"

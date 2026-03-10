@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.0.7 **  |
-| Active as of 2026-02-05 | *Computable Name*:NprEpisodeIdentifier |
+| Active as of 2026-03-10 | *Computable Name*:NprEpisodeIdentifier |
 
 Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.
 
@@ -57,147 +57,125 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
   "kind" : "complex-type",
   "abstract" : false,
-  "context" : [
-    {
-      "type" : "element",
-      "expression" : "Encounter"
-    }
-  ],
+  "context" : [{
+    "type" : "element",
+    "expression" : "Encounter"
+  }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Extension",
-        "path" : "Extension",
-        "short" : "NPR Episode Identifier",
-        "definition" : "Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.",
-        "constraint" : [
-          {
-            "key" : "npr-episode-at-least-one",
-            "severity" : "error",
-            "human" : "Minst én NPR episode identifikator (string eller UUID) må oppgis",
-            "expression" : "extension('stringIdentifier').exists() or extension('uuidIdentifier').exists()",
-            "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
-          }
-        ]
-      },
-      {
-        "id" : "Extension.extension:stringIdentifier",
-        "path" : "Extension.extension",
-        "sliceName" : "stringIdentifier",
-        "short" : "String-basert NPR episode identifikator",
-        "definition" : "String-basert identifikator for episoden som brukes ved rapportering til NPR.",
-        "min" : 0,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Extension.extension:stringIdentifier.extension",
-        "path" : "Extension.extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.extension:stringIdentifier.url",
-        "path" : "Extension.extension.url",
-        "fixedUri" : "stringIdentifier"
-      },
-      {
-        "id" : "Extension.extension:stringIdentifier.value[x]",
-        "path" : "Extension.extension.value[x]",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "string"
-          }
-        ]
-      },
-      {
-        "id" : "Extension.extension:uuidIdentifier",
-        "path" : "Extension.extension",
-        "sliceName" : "uuidIdentifier",
-        "short" : "UUID-basert NPR episode identifikator",
-        "definition" : "UUID-basert identifikator for episoden som brukes ved rapportering til NPR.",
-        "min" : 0,
-        "max" : "1",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Extension.extension:uuidIdentifier.extension",
-        "path" : "Extension.extension.extension",
-        "max" : "0"
-      },
-      {
-        "id" : "Extension.extension:uuidIdentifier.url",
-        "path" : "Extension.extension.url",
-        "fixedUri" : "uuidIdentifier"
-      },
-      {
-        "id" : "Extension.extension:uuidIdentifier.value[x]",
-        "path" : "Extension.extension.value[x]",
-        "min" : 1,
-        "type" : [
-          {
-            "code" : "uuid"
-          }
-        ]
-      },
-      {
-        "id" : "Extension.url",
-        "path" : "Extension.url",
-        "fixedUri" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
-      },
-      {
-        "id" : "Extension.value[x]",
-        "path" : "Extension.value[x]",
-        "max" : "0"
-      }
-    ]
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "NPR Episode Identifier",
+      "definition" : "Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.",
+      "constraint" : [{
+        "key" : "npr-episode-at-least-one",
+        "severity" : "error",
+        "human" : "Minst én NPR episode identifikator (string eller UUID) må oppgis",
+        "expression" : "extension('stringIdentifier').exists() or extension('uuidIdentifier').exists()",
+        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
+      }]
+    },
+    {
+      "id" : "Extension.extension:stringIdentifier",
+      "path" : "Extension.extension",
+      "sliceName" : "stringIdentifier",
+      "short" : "String-basert NPR episode identifikator",
+      "definition" : "String-basert identifikator for episoden som brukes ved rapportering til NPR.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:stringIdentifier.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:stringIdentifier.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "stringIdentifier"
+    },
+    {
+      "id" : "Extension.extension:stringIdentifier.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "min" : 1,
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "Extension.extension:uuidIdentifier",
+      "path" : "Extension.extension",
+      "sliceName" : "uuidIdentifier",
+      "short" : "UUID-basert NPR episode identifikator",
+      "definition" : "UUID-basert identifikator for episoden som brukes ved rapportering til NPR.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Extension.extension:uuidIdentifier.extension",
+      "path" : "Extension.extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.extension:uuidIdentifier.url",
+      "path" : "Extension.extension.url",
+      "fixedUri" : "uuidIdentifier"
+    },
+    {
+      "id" : "Extension.extension:uuidIdentifier.value[x]",
+      "path" : "Extension.extension.value[x]",
+      "min" : 1,
+      "type" : [{
+        "code" : "uuid"
+      }]
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "max" : "0"
+    }]
   }
 }
 

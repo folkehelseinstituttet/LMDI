@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.0.7 **  |
-| Active as of 2026-02-05 | *Computable Name*:KommunenummerCodeSystem |
+| Active as of 2026-03-10 | *Computable Name*:KommunenummerCodeSystem |
 
  
 Kodesystem for norske kommunenummer (Volven 3402) 
@@ -37,40 +37,30 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "status" : "active",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Kodesystem for norske kommunenummer (Volven 3402)",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "content" : "not-present"
 }
 

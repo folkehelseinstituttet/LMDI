@@ -31,33 +31,25 @@ Anonymous Patient (no stated gender), DoB Unknown ( urn:oid:2.16.578.1.12.4.1.4.
   "resourceType" : "Patient",
   "id" : "Pasient-2-FNR",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
   },
-  "identifier" : [
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
-      "value" : "13031353453"
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
+    "value" : "13031353453"
+  }],
+  "address" : [{
+    "district" : "Bærum",
+    "_district" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+        "valueCoding" : {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+          "code" : "3024",
+          "display" : "Bærum"
+        }
+      }]
     }
-  ],
-  "address" : [
-    {
-      "district" : "Bærum",
-      "_district" : {
-        "extension" : [
-          {
-            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-            "valueCoding" : {
-              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-              "code" : "3024",
-              "display" : "Bærum"
-            }
-          }
-        ]
-      }
-    }
-  ]
+  }]
 }
 
 ```

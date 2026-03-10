@@ -29,49 +29,39 @@ Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
   "resourceType" : "Organization",
   "id" : "Organisasjon-3-Sykehus",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
   },
-  "identifier" : [
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
-      "value" : "993467049"
-    },
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
-      "value" : "4001031"
-    }
-  ],
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+    "value" : "993467049"
+  },
+  {
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+    "value" : "4001031"
+  }],
   "name" : "Oslo universitetssykehus HF",
-  "address" : [
-    {
-      "extension" : [
-        {
-          "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district",
-          "valueCoding" : {
-            "system" : "urn:oid:2.16.578.1.12.4.1.1.3403",
-            "code" : "01",
-            "display" : "Gamle Oslo"
-          }
-        }
-      ],
-      "type" : "physical",
-      "district" : "Oslo",
-      "_district" : {
-        "extension" : [
-          {
-            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-            "valueCoding" : {
-              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-              "code" : "0301",
-              "display" : "Oslo"
-            }
-          }
-        ]
+  "address" : [{
+    "extension" : [{
+      "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district",
+      "valueCoding" : {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.3403",
+        "code" : "01",
+        "display" : "Gamle Oslo"
       }
+    }],
+    "type" : "physical",
+    "district" : "Oslo",
+    "_district" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+        "valueCoding" : {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+          "code" : "0301",
+          "display" : "Oslo"
+        }
+      }]
     }
-  ]
+  }]
 }
 
 ```

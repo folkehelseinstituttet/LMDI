@@ -25,16 +25,12 @@ Profile: [Helsepersonell](StructureDefinition-lmdi-practitioner.md)
   "resourceType" : "Practitioner",
   "id" : "Helsepersonell-1-HPR-nummer",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
   },
-  "identifier" : [
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
-      "value" : "9144900"
-    }
-  ]
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
+    "value" : "9144900"
+  }]
 }
 
 ```

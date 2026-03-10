@@ -40,9 +40,7 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
   "resourceType" : "MedicationAdministration",
   "id" : "Administrering-2-Infusjon",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
   },
   "status" : "completed",
   "medicationReference" : {
@@ -60,13 +58,11 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
   },
   "dosage" : {
     "route" : {
-      "coding" : [
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "47625008",
-          "display" : "Intravenous route (qualifier value)"
-        }
-      ]
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "47625008",
+        "display" : "Intravenous route (qualifier value)"
+      }]
     },
     "dose" : {
       "value" : 4500,

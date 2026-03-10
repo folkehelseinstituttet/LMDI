@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle **  | *Version*:1.0.7 **  |
-| Active as of 2026-02-05 | *Computable Name*:KommunenummerValueSet |
+| Active as of 2026-03-10 | *Computable Name*:KommunenummerValueSet |
 
  
 Komplett kodeverk for norske kommunenummer (Volven 3402) 
@@ -30,7 +30,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
 
 ### Expansion
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -58,46 +58,34 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "name" : "KommunenummerValueSet",
   "title" : "Kommunenummer ValueSet",
   "status" : "active",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Komplett kodeverk for norske kommunenummer (Volven 3402)",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "urn:oid:2.16.578.1.12.4.1.1.3402"
-      }
-    ]
+    "include" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.3402"
+    }]
   }
 }
 

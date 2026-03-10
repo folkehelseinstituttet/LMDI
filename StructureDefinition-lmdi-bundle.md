@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle **  | *Version*:1.0.7 **  |
-| Draft as of 2026-02-05 | *Computable Name*:LegemiddelregisterBundle |
+| Draft as of 2026-03-10 | *Computable Name*:LegemiddelregisterBundle |
 
  
 Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. 
@@ -47,148 +47,132 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
   "name" : "LegemiddelregisterBundle",
   "title" : "LegemiddelregisterBundle",
   "status" : "draft",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [
-    {
-      "identity" : "v2",
-      "uri" : "http://hl7.org/v2",
-      "name" : "HL7 v2 Mapping"
-    },
-    {
-      "identity" : "rim",
-      "uri" : "http://hl7.org/v3",
-      "name" : "RIM Mapping"
-    },
-    {
-      "identity" : "cda",
-      "uri" : "http://hl7.org/v3/cda",
-      "name" : "CDA (R2)"
-    },
-    {
-      "identity" : "w5",
-      "uri" : "http://hl7.org/fhir/fivews",
-      "name" : "FiveWs Pattern Mapping"
-    }
-  ],
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Bundle",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Bundle",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Bundle",
-        "path" : "Bundle",
-        "constraint" : [
-          {
-            "key" : "lr-allowed-resources",
-            "severity" : "error",
-            "human" : "Bundle kan bare inneholde følgende profilerte ressurstyper: Diagnose, Helsepersonell, Episode, Legemiddel, LegemiddelAdministrasjon, Legemiddelrekvirering, Organisasjon, Pasient",
-            "expression" : "entry.all(\n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient').exists()\n)",
-            "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
-          }
-        ]
-      },
-      {
-        "id" : "Bundle.identifier",
-        "path" : "Bundle.identifier",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.type",
-        "path" : "Bundle.type",
-        "short" : "Må være av type transaction",
-        "definition" : "Angir at bundle må være av type transaction",
-        "fixedCode" : "transaction",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.timestamp",
-        "path" : "Bundle.timestamp",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.total",
-        "path" : "Bundle.total",
-        "max" : "0"
-      },
-      {
-        "id" : "Bundle.link",
-        "path" : "Bundle.link",
-        "max" : "0"
-      },
-      {
-        "id" : "Bundle.entry",
-        "path" : "Bundle.entry",
-        "short" : "Innholdselementer i bundle",
-        "definition" : "Inneholder ressursene som skal sendes inn til registeret",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.entry.resource",
-        "path" : "Bundle.entry.resource",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.entry.request",
-        "path" : "Bundle.entry.request",
-        "min" : 1,
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.entry.request.method",
-        "path" : "Bundle.entry.request.method",
-        "short" : "Må være POST",
-        "definition" : "Angir at alle forespørsler i bundle må være av type POST",
-        "fixedCode" : "POST",
-        "mustSupport" : true
-      },
-      {
-        "id" : "Bundle.entry.request.url",
-        "path" : "Bundle.entry.request.url",
-        "short" : "URL for requesten (påkrevd, men verdien har ingen betydning)",
-        "definition" : "Representerer addressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."
-      }
-    ]
+    "element" : [{
+      "id" : "Bundle",
+      "path" : "Bundle",
+      "constraint" : [{
+        "key" : "lr-allowed-resources",
+        "severity" : "error",
+        "human" : "Bundle kan bare inneholde følgende profilerte ressurstyper: Diagnose, Helsepersonell, Episode, Legemiddel, LegemiddelAdministrasjon, Legemiddelrekvirering, Organisasjon, Pasient",
+        "expression" : "entry.all(\n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization').exists() or \n  resource.meta.profile.where($this = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient').exists()\n)",
+        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
+      }]
+    },
+    {
+      "id" : "Bundle.identifier",
+      "path" : "Bundle.identifier",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.type",
+      "path" : "Bundle.type",
+      "short" : "Må være av type transaction",
+      "definition" : "Angir at bundle må være av type transaction",
+      "fixedCode" : "transaction",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.timestamp",
+      "path" : "Bundle.timestamp",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.total",
+      "path" : "Bundle.total",
+      "max" : "0"
+    },
+    {
+      "id" : "Bundle.link",
+      "path" : "Bundle.link",
+      "max" : "0"
+    },
+    {
+      "id" : "Bundle.entry",
+      "path" : "Bundle.entry",
+      "short" : "Innholdselementer i bundle",
+      "definition" : "Inneholder ressursene som skal sendes inn til registeret",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.entry.resource",
+      "path" : "Bundle.entry.resource",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.entry.request",
+      "path" : "Bundle.entry.request",
+      "min" : 1,
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.entry.request.method",
+      "path" : "Bundle.entry.request.method",
+      "short" : "Må være POST",
+      "definition" : "Angir at alle forespørsler i bundle må være av type POST",
+      "fixedCode" : "POST",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Bundle.entry.request.url",
+      "path" : "Bundle.entry.request.url",
+      "short" : "URL for requesten (påkrevd, men verdien har ingen betydning)",
+      "definition" : "Representerer addressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."
+    }]
   }
 }
 

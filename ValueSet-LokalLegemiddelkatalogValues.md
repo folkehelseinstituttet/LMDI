@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues **  | *Version*:1.0.7 **  |
-| Draft as of 2026-02-05 | *Computable Name*:LokalLegemiddelkatalogValues |
+| Draft as of 2026-03-10 | *Computable Name*:LokalLegemiddelkatalogValues |
 
  
 Gyldige verdier for medlemskapsstatus 
@@ -56,46 +56,34 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
   "status" : "draft",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Gyldige verdier for medlemskapsstatus",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
-      }
-    ]
+    "include" : [{
+      "system" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
+    }]
   }
 }
 

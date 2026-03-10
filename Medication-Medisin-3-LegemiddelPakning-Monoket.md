@@ -29,38 +29,28 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
   "resourceType" : "Medication",
   "id" : "Medisin-3-LegemiddelPakning-Monoket",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://www.whocc.no/atc",
-            "code" : "C01DA14",
-            "display" : "Isosorbid mononitrat"
-          }
-        ]
-      }
+  "extension" : [{
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.whocc.no/atc",
+        "code" : "C01DA14",
+        "display" : "Isosorbid mononitrat"
+      }]
     }
-  ],
-  "identifier" : [
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
-      "value" : "0003602E-315E-4CDE-9EB0-6756BE9CD120"
-    }
-  ],
+  }],
+  "identifier" : [{
+    "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+    "value" : "0003602E-315E-4CDE-9EB0-6756BE9CD120"
+  }],
   "code" : {
-    "coding" : [
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
-        "code" : "0003602E-315E-4CDE-9EB0-6756BE9CD120",
-        "display" : "Monoket"
-      }
-    ]
+    "coding" : [{
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+      "code" : "0003602E-315E-4CDE-9EB0-6756BE9CD120",
+      "display" : "Monoket"
+    }]
   }
 }
 

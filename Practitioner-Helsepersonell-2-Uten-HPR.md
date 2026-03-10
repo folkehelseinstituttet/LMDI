@@ -23,9 +23,7 @@ Profile: [Helsepersonell](StructureDefinition-lmdi-practitioner.md)
   "resourceType" : "Practitioner",
   "id" : "Helsepersonell-2-Uten-HPR",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
   }
 }
 

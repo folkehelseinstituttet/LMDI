@@ -28,61 +28,47 @@ FEST-id for virkestoff. Benyttes ved virkestoffrekvirering
 {
   "resourceType" : "NamingSystem",
   "id" : "no-basis-fest-legemiddelvirkestoff",
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
-      "valueUri" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelvirkestoff"
-    },
-    {
-      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-      "valueString" : "1.0.7"
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+    "valueUri" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelvirkestoff"
+  },
+  {
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+    "valueString" : "1.0.7"
+  }],
   "name" : "festLegemiddelVirkestoff",
   "status" : "draft",
   "kind" : "identifier",
   "date" : "2024-06-10",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "responsible" : "Direktoratet for medisinske produkter",
   "description" : "FEST-id for virkestoff. Benyttes ved virkestoffrekvirering",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
-  "uniqueId" : [
-    {
-      "type" : "uri",
-      "value" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
-      "preferred" : true
-    }
-  ]
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "uniqueId" : [{
+    "type" : "uri",
+    "value" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+    "preferred" : true
+  }]
 }
 
 ```

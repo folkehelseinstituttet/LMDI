@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use **  | *Version*:1.0.7 **  |
-| Active as of 2026-02-05 | *Computable Name*:LmdiAddressUse |
+| Active as of 2026-03-10 | *Computable Name*:LmdiAddressUse |
 
  
 Tillatte verdier for address.use i LMDI: home, temp, old 
@@ -56,57 +56,43 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
   "status" : "active",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Tillatte verdier for address.use i LMDI: home, temp, old",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://hl7.org/fhir/address-use",
+      "concept" : [{
+        "code" : "home"
+      },
       {
-        "system" : "http://hl7.org/fhir/address-use",
-        "concept" : [
-          {
-            "code" : "home"
-          },
-          {
-            "code" : "temp"
-          },
-          {
-            "code" : "old"
-          }
-        ]
-      }
-    ]
+        "code" : "temp"
+      },
+      {
+        "code" : "old"
+      }]
+    }]
   }
 }
 

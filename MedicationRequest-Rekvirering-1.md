@@ -37,16 +37,12 @@ Profile: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
   "resourceType" : "MedicationRequest",
   "id" : "Rekvirering-1",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
   },
-  "identifier" : [
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.reseptid",
-      "value" : "REK123456"
-    }
-  ],
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.1.reseptid",
+    "value" : "REK123456"
+  }],
   "status" : "active",
   "intent" : "order",
   "medicationReference" : {

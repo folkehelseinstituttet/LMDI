@@ -29,38 +29,28 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
   "resourceType" : "Medication",
   "id" : "Medisin-2-Paracetamol",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://www.whocc.no/atc",
-            "code" : "N02BE01",
-            "display" : "Paracetamol"
-          }
-        ]
-      }
-    }
-  ],
-  "identifier" : [
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
-      "value" : "2ABAC272-0BCF-43F0-84BE-984074D92E15"
-    }
-  ],
-  "code" : {
-    "coding" : [
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
-        "code" : "2ABAC272-0BCF-43F0-84BE-984074D92E15",
+  "extension" : [{
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.whocc.no/atc",
+        "code" : "N02BE01",
         "display" : "Paracetamol"
-      }
-    ]
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
+    "value" : "2ABAC272-0BCF-43F0-84BE-984074D92E15"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
+      "code" : "2ABAC272-0BCF-43F0-84BE-984074D92E15",
+      "display" : "Paracetamol"
+    }]
   }
 }
 

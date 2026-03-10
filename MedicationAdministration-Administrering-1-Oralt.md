@@ -40,9 +40,7 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
   "resourceType" : "MedicationAdministration",
   "id" : "Administrering-1-Oralt",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
   },
   "status" : "completed",
   "medicationReference" : {
@@ -57,13 +55,11 @@ Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministr
   "effectiveDateTime" : "2024-05-28",
   "dosage" : {
     "route" : {
-      "coding" : [
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "421521009",
-          "display" : "Swallow"
-        }
-      ]
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "421521009",
+        "display" : "Swallow"
+      }]
     },
     "dose" : {
       "value" : 2,

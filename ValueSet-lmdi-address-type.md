@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type **  | *Version*:1.0.7 **  |
-| Active as of 2026-02-05 | *Computable Name*:LmdiAddressType |
+| Active as of 2026-03-10 | *Computable Name*:LmdiAddressType |
 
  
 Tillatt verdi for address.type i LMDI: physical 
@@ -57,51 +57,37 @@ Tillatt verdi for address.type i LMDI: physical
   "name" : "LmdiAddressType",
   "title" : "LMDI Address Type",
   "status" : "active",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Tillatt verdi for address.type i LMDI: physical",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "compose" : {
-    "include" : [
-      {
-        "system" : "http://hl7.org/fhir/address-type",
-        "concept" : [
-          {
-            "code" : "physical"
-          }
-        ]
-      }
-    ]
+    "include" : [{
+      "system" : "http://hl7.org/fhir/address-type",
+      "concept" : [{
+        "code" : "physical"
+      }]
+    }]
   }
 }
 

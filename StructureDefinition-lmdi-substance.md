@@ -49,38 +49,28 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -88,33 +78,31 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
   "baseDefinition" : "http://hl7.no/fhir/StructureDefinition/no-basis-Substance",
   "derivation" : "constraint",
   "differential" : {
-    "element" : [
-      {
-        "id" : "Substance",
-        "path" : "Substance"
-      },
-      {
-        "id" : "Substance.text",
-        "path" : "Substance.text",
-        "max" : "0"
-      },
-      {
-        "id" : "Substance.category",
-        "path" : "Substance.category",
-        "min" : 1,
-        "max" : "1"
-      },
-      {
-        "id" : "Substance.description",
-        "path" : "Substance.description",
-        "max" : "0"
-      },
-      {
-        "id" : "Substance.ingredient",
-        "path" : "Substance.ingredient",
-        "max" : "0"
-      }
-    ]
+    "element" : [{
+      "id" : "Substance",
+      "path" : "Substance"
+    },
+    {
+      "id" : "Substance.text",
+      "path" : "Substance.text",
+      "max" : "0"
+    },
+    {
+      "id" : "Substance.category",
+      "path" : "Substance.category",
+      "min" : 1,
+      "max" : "1"
+    },
+    {
+      "id" : "Substance.description",
+      "path" : "Substance.description",
+      "max" : "0"
+    },
+    {
+      "id" : "Substance.ingredient",
+      "path" : "Substance.ingredient",
+      "max" : "0"
+    }]
   }
 }
 

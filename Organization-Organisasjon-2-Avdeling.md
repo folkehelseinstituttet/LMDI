@@ -29,16 +29,12 @@ Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
   "resourceType" : "Organization",
   "id" : "Organisasjon-2-Avdeling",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
   },
-  "identifier" : [
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
-      "value" : "4208723"
-    }
-  ],
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+    "value" : "4208723"
+  }],
   "name" : "Avdeling for epilepsi, poliklinikk",
   "partOf" : {
     "reference" : "Organization/Organisasjon-3-Sykehus"

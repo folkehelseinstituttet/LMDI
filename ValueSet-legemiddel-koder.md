@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.0.7 **  |
-| Draft as of 2026-02-05 | *Computable Name*:LegemiddelKoder |
+| Draft as of 2026-03-10 | *Computable Name*:LegemiddelKoder |
 
  
 ValueSet som inneholder koder fra SNOMED CT og FEST 
@@ -29,6 +29,8 @@ ValueSet som inneholder koder fra SNOMED CT og FEST
  
 
 ### Expansion
+
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -56,58 +58,46 @@ ValueSet som inneholder koder fra SNOMED CT og FEST
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "draft",
-  "date" : "2026-02-05T09:35:49+00:00",
+  "date" : "2026-03-10T12:49:22+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
+  "description" : "ValueSet som inneholder koder fra SNOMED CT og FEST",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct"
     },
     {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
-  "description" : "ValueSet som inneholder koder fra SNOMED CT og FEST",
-  "jurisdiction" : [
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+    },
     {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
-  "compose" : {
-    "include" : [
-      {
-        "system" : "http://snomed.info/sct"
-      },
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-      },
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-      },
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-      },
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-      }
-    ]
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+    }]
   }
 }
 

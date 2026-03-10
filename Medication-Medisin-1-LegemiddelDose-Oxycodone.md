@@ -29,38 +29,28 @@ Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
   "resourceType" : "Medication",
   "id" : "Medisin-1-LegemiddelDose-Oxycodone",
   "meta" : {
-    "profile" : [
-      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    ]
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
   },
-  "extension" : [
-    {
-      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-      "valueCodeableConcept" : {
-        "coding" : [
-          {
-            "system" : "http://www.whocc.no/atc",
-            "code" : "N02AA05",
-            "display" : "Oksykodon"
-          }
-        ]
-      }
-    }
-  ],
-  "identifier" : [
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
-      "value" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
-    }
-  ],
-  "code" : {
-    "coding" : [
-      {
-        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
-        "code" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9",
+  "extension" : [{
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.whocc.no/atc",
+        "code" : "N02AA05",
         "display" : "Oksykodon"
-      }
-    ]
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+    "value" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+      "code" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9",
+      "display" : "Oksykodon"
+    }]
   }
 }
 

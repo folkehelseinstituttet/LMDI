@@ -48,13 +48,11 @@
   "effectiveDateTime" : "2024-05-28",
   "dosage" : {
     "route" : {
-      "coding" : [
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "47625008",
-          "display" : "Intravenous route (qualifier value)"
-        }
-      ]
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "47625008",
+        "display" : "Intravenous route (qualifier value)"
+      }]
     },
     "dose" : {
       "value" : 100,

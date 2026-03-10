@@ -30,7 +30,7 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
 
 ### Expansion
 
-No Expansion for this valueset (not supported by Publication Tooling)
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -60,54 +60,40 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "description" : "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
   "compose" : {
-    "include" : [
+    "include" : [{
+      "system" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
+      "concept" : [{
+        "code" : "completed",
+        "display" : "Gjennomført"
+      },
       {
-        "system" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
-        "concept" : [
-          {
-            "code" : "completed",
-            "display" : "Gjennomført"
-          },
-          {
-            "code" : "entered-in-error",
-            "display" : "Feilregistrert"
-          }
-        ]
-      }
-    ]
+        "code" : "entered-in-error",
+        "display" : "Feilregistrert"
+      }]
+    }]
   }
 }
 

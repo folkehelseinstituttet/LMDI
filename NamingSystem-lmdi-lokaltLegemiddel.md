@@ -28,61 +28,47 @@ Id for angivelse av legemiddel fra lokal legemiddelkatalog
 {
   "resourceType" : "NamingSystem",
   "id" : "lmdi-lokaltLegemiddel",
-  "extension" : [
-    {
-      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
-      "valueUri" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel"
-    },
-    {
-      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-      "valueString" : "1.0.7"
-    }
-  ],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+    "valueUri" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel"
+  },
+  {
+    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+    "valueString" : "1.0.7"
+  }],
   "name" : "lmdiLokaltLegemiddel",
   "status" : "draft",
   "kind" : "identifier",
   "date" : "2024-06-10",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [
-    {
-      "name" : "Folkehelseinstituttet",
-      "telecom" : [
-        {
-          "system" : "url",
-          "value" : "https://www.fhi.no"
-        }
-      ]
-    },
-    {
-      "name" : "Legemiddelregisteret",
-      "telecom" : [
-        {
-          "system" : "email",
-          "value" : "legemiddelregisteret@fhi.no"
-        }
-      ]
-    }
-  ],
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
   "responsible" : "Folkehelseinstituttet",
   "description" : "Id for angivelse av legemiddel fra lokal legemiddelkatalog",
-  "jurisdiction" : [
-    {
-      "coding" : [
-        {
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "NO",
-          "display" : "Norway"
-        }
-      ]
-    }
-  ],
-  "uniqueId" : [
-    {
-      "type" : "uri",
-      "value" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel",
-      "preferred" : true
-    }
-  ]
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "uniqueId" : [{
+    "type" : "uri",
+    "value" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel",
+    "preferred" : true
+  }]
 }
 
 ```
