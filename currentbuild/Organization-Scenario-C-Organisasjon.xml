@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Scenario-C-Organisasjon"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization Scenario-C-Organisasjon</b></p><a name="Scenario-C-Organisasjon"> </a><a name="hcScenario-C-Organisasjon"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.102</code>/4201050</p><p><b>name</b>: Onkologisk avdeling, St. Olavs hospital</p><p><b>address</b>: </p></div>
+  </text>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.102"/>
+    <value value="4201050"/>
+  </identifier>
+  <name value="Onkologisk avdeling, St. Olavs hospital"/>
+  <address>
+    <type value="physical"/>
+    <district value="Trondheim">
+      <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+        <valueCoding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+          <code value="5001"/>
+          <display value="Trondheim"/>
+        </valueCoding>
+      </extension>
+    </district>
+  </address>
+</Organization>

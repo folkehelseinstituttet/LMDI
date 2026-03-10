@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Scenario-A-Org-Sykehjem",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Scenario-A-Org-Sykehjem</b></p><a name=\"Scenario-A-Org-Sykehjem\"> </a><a name=\"hcScenario-A-Org-Sykehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-organization.html\">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.101</code>/987654321</p><p><b>name</b>: Soltoppen sykehjem</p><p><b>address</b>: </p><p><b>partOf</b>: <a href=\"Organization-Scenario-A-Org-Kommune.html\">Organization Drammen kommune</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+    "value" : "987654321"
+  }],
+  "name" : "Soltoppen sykehjem",
+  "address" : [{
+    "type" : "physical",
+    "district" : "Drammen",
+    "_district" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+        "valueCoding" : {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+          "code" : "3005",
+          "display" : "Drammen"
+        }
+      }]
+    }
+  }],
+  "partOf" : {
+    "reference" : "Organization/Scenario-A-Org-Kommune"
+  }
+}

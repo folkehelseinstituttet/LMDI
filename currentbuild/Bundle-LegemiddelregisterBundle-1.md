@@ -1,0 +1,393 @@
+# Eksempel på LegemiddelregisterBundle med administreringer - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+
+*  [Hjem](index.md) 
+*  [Informasjonsmodell](informasjonsmodell.md) 
+*  [Integrasjon](integrasjon.md) 
+*  [FHIR-profiler](profiler.md) 
+*  [Nedlastinger](nedlastinger.md) 
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Eksempel på LegemiddelregisterBundle med administreringer**
+
+## Example Bundle: Eksempel på LegemiddelregisterBundle med administreringer
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "LegemiddelregisterBundle-1",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:oid:2.16.578.1.34.10.3",
+    "value" : "bundle-001"
+  },
+  "type" : "transaction",
+  "timestamp" : "2024-02-07T13:28:17.239+02:00",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Pasient-20",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_Pasient-20\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient Pasient-20</b></p><a name=\"Pasient-20\"> </a><a name=\"hcPasient-20\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-patient.html\">Pasient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient Male, DoB: 1953-03-13 ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
+        "value" : "13031353453"
+      }],
+      "gender" : "male",
+      "birthDate" : "1953-03-13",
+      "address" : [{
+        "district" : "Oslo",
+        "_district" : {
+          "extension" : [{
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "0301",
+              "display" : "Oslo"
+            }
+          }]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Medication",
+      "id" : "Medisin-10",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_Medisin-10\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication Medisin-10</b></p><a name=\"Medisin-10\"> </a><a name=\"hcMedisin-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medication.html\">Legemiddel</a></p></div><p><b>Legemiddel Classification</b>: <span title=\"Codes:{http://www.whocc.no/atc N02AA05}\">Oksykodon</span></p><p><b>code</b>: <span title=\"Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelDose ID_48BD33D2-2838-4B81-8225-02391B7A4516}, {http://snomed.info/sct 414984009}\">Oxycodone Orifarm mikst oppl 1 mg/ml</span></p><p><b>form</b>: <span title=\"Codes:{urn:oid:2.16.578.1.12.4.1.1.7448 51}\">Mikstur, oppløsning</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02AA05",
+            "display" : "Oksykodon"
+          }]
+        }
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
+          "code" : "ID_48BD33D2-2838-4B81-8225-02391B7A4516",
+          "display" : "Oxycodone Orifarm mikst oppl 1 mg/ml"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "414984009",
+          "display" : "Product containing oxycodone (medicinal product)"
+        }]
+      },
+      "form" : {
+        "coding" : [{
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+          "code" : "51",
+          "display" : "Mikstur, oppløsning"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Medication"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "Helsepersonell-10",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_Helsepersonell-10\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Helsepersonell-10</b></p><a name=\"Helsepersonell-10\"> </a><a name=\"hcHelsepersonell-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-practitioner.html\">Helsepersonell</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.4</code>/9144900</p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
+        "value" : "9144900"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Practitioner"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "Episode-2-Sykehjem",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_Episode-2-Sykehjem\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter Episode-2-Sykehjem</b></p><a name=\"Episode-2-Sykehjem\"> </a><a name=\"hcEpisode-2-Sykehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-encounter.html\">Episode</a></p></div><blockquote><p><b>NPR Episode Identifier</b></p><ul><li>stringIdentifier: NPR123456789</li><li>uuidIdentifier: 550e8400-e29b-41d4-a716-446655440000</li></ul></blockquote><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>serviceProvider</b>: <a href=\"Bundle-LegemiddelregisterBundle-1.html#Organization_Organisasjon-2-Eldrehjem\">Organization Lykkedalen eldrehjem</a></p></div>"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "stringIdentifier",
+          "valueString" : "NPR123456789"
+        },
+        {
+          "url" : "uuidIdentifier",
+          "valueUuid" : "550e8400-e29b-41d4-a716-446655440000"
+        }],
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
+      }],
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "IMP",
+        "display" : "inpatient encounter"
+      },
+      "serviceProvider" : {
+        "reference" : "Organization/Organisasjon-2-Eldrehjem"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Encounter"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "Organisasjon-2-Eldrehjem",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_Organisasjon-2-Eldrehjem\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization Organisasjon-2-Eldrehjem</b></p><a name=\"Organisasjon-2-Eldrehjem\"> </a><a name=\"hcOrganisasjon-2-Eldrehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-organization.html\">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.101</code>/1234567890</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Lykkedalen eldrehjem</p><p><b>address</b>: </p></div>"
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+        "value" : "1234567890"
+      }],
+      "type" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code" : "prov",
+          "display" : "Healthcare Provider"
+        }]
+      }],
+      "name" : "Lykkedalen eldrehjem",
+      "address" : [{
+        "type" : "physical",
+        "district" : "Sigdal",
+        "_district" : {
+          "extension" : [{
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "3025",
+              "display" : "Sigdal"
+            }
+          }]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "Administrering-10",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MedicationAdministration_Administrering-10\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration Administrering-10</b></p><a name=\"Administrering-10\"> </a><a name=\"hcAdministrering-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medicationadministration.html\">Legemiddeladministrering</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"#hcAdministrering-10/Medisin-10\">Medication Oxycodone Orifarm mikst oppl 1 mg/ml</a></p><p><b>subject</b>: <a href=\"#hcAdministrering-10/Pasient-20\">Anonymous Patient Male, DoB: 1953-03-13 ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</a></p><p><b>context</b>: <a href=\"#hcAdministrering-10/Episode-2-Sykehjem\">Encounter: extension = ; status = finished; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2024-05-28 13:14:00+0200</p><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 421521009}\">Swallow</span></td><td>5 ml<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeml = 'ml')</span></td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Medication #Medisin-10</b></p><a name=\"Administrering-10/Medisin-10\"> </a><a name=\"hcAdministrering-10/Medisin-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medication.html\">Legemiddel</a></p></div><p><b>Legemiddel Classification</b>: <span title=\"Codes:{http://www.whocc.no/atc N02AA05}\">Oksykodon</span></p><p><b>code</b>: <span title=\"Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelDose ID_48BD33D2-2838-4B81-8225-02391B7A4516}, {http://snomed.info/sct 414984009}\">Oxycodone Orifarm mikst oppl 1 mg/ml</span></p><p><b>form</b>: <span title=\"Codes:{urn:oid:2.16.578.1.12.4.1.1.7448 51}\">Mikstur, oppløsning</span></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Patient #Pasient-20</b></p><a name=\"Administrering-10/Pasient-20\"> </a><a name=\"hcAdministrering-10/Pasient-20\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-patient.html\">Pasient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient Male, DoB: 1953-03-13 ( urn:oid:2.16.578.1.12.4.1.4.1#13031353453)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"></td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Practitioner #Helsepersonell-10</b></p><a name=\"Administrering-10/Helsepersonell-10\"> </a><a name=\"hcAdministrering-10/Helsepersonell-10\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-practitioner.html\">Helsepersonell</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.4</code>/9144900</p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Encounter #Episode-2-Sykehjem</b></p><a name=\"Administrering-10/Episode-2-Sykehjem\"> </a><a name=\"hcAdministrering-10/Episode-2-Sykehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-encounter.html\">Episode</a></p></div><blockquote><p><b>NPR Episode Identifier</b></p><ul><li>stringIdentifier: NPR123456789</li><li>uuidIdentifier: 550e8400-e29b-41d4-a716-446655440000</li></ul></blockquote><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>serviceProvider</b>: <a href=\"#hcAdministrering-10/Organisasjon-2-Eldrehjem\">Organization Lykkedalen eldrehjem</a></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Organization #Organisasjon-2-Eldrehjem</b></p><a name=\"Administrering-10/Organisasjon-2-Eldrehjem\"> </a><a name=\"hcAdministrering-10/Organisasjon-2-Eldrehjem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-organization.html\">Organisasjon</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.578.1.12.4.1.4.101</code>/1234567890</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Lykkedalen eldrehjem</p><p><b>address</b>: </p></blockquote></div>"
+      },
+      "contained" : [{
+        "resourceType" : "Medication",
+        "id" : "Medisin-10",
+        "meta" : {
+          "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+        },
+        "extension" : [{
+          "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "http://www.whocc.no/atc",
+              "code" : "N02AA05",
+              "display" : "Oksykodon"
+            }]
+          }
+        }],
+        "code" : {
+          "coding" : [{
+            "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
+            "code" : "ID_48BD33D2-2838-4B81-8225-02391B7A4516",
+            "display" : "Oxycodone Orifarm mikst oppl 1 mg/ml"
+          },
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "414984009",
+            "display" : "Product containing oxycodone (medicinal product)"
+          }]
+        },
+        "form" : {
+          "coding" : [{
+            "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+            "code" : "51",
+            "display" : "Mikstur, oppløsning"
+          }]
+        }
+      },
+      {
+        "resourceType" : "Patient",
+        "id" : "Pasient-20",
+        "meta" : {
+          "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
+        },
+        "identifier" : [{
+          "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
+          "value" : "13031353453"
+        }],
+        "gender" : "male",
+        "birthDate" : "1953-03-13",
+        "address" : [{
+          "district" : "Oslo",
+          "_district" : {
+            "extension" : [{
+              "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+              "valueCoding" : {
+                "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+                "code" : "0301",
+                "display" : "Oslo"
+              }
+            }]
+          }
+        }]
+      },
+      {
+        "resourceType" : "Practitioner",
+        "id" : "Helsepersonell-10",
+        "meta" : {
+          "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
+        },
+        "identifier" : [{
+          "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
+          "value" : "9144900"
+        }]
+      },
+      {
+        "resourceType" : "Encounter",
+        "id" : "Episode-2-Sykehjem",
+        "meta" : {
+          "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
+        },
+        "extension" : [{
+          "extension" : [{
+            "url" : "stringIdentifier",
+            "valueString" : "NPR123456789"
+          },
+          {
+            "url" : "uuidIdentifier",
+            "valueUuid" : "550e8400-e29b-41d4-a716-446655440000"
+          }],
+          "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
+        }],
+        "status" : "finished",
+        "class" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "IMP",
+          "display" : "inpatient encounter"
+        },
+        "serviceProvider" : {
+          "reference" : "#Organisasjon-2-Eldrehjem"
+        }
+      },
+      {
+        "resourceType" : "Organization",
+        "id" : "Organisasjon-2-Eldrehjem",
+        "meta" : {
+          "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+        },
+        "identifier" : [{
+          "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+          "value" : "1234567890"
+        }],
+        "type" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+            "code" : "prov",
+            "display" : "Healthcare Provider"
+          }]
+        }],
+        "name" : "Lykkedalen eldrehjem",
+        "address" : [{
+          "type" : "physical",
+          "district" : "Sigdal",
+          "_district" : {
+            "extension" : [{
+              "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+              "valueCoding" : {
+                "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+                "code" : "3025",
+                "display" : "Sigdal"
+              }
+            }]
+          }
+        }]
+      }],
+      "status" : "completed",
+      "medicationReference" : {
+        "reference" : "#Medisin-10"
+      },
+      "subject" : {
+        "reference" : "#Pasient-20"
+      },
+      "context" : {
+        "reference" : "#Episode-2-Sykehjem"
+      },
+      "effectiveDateTime" : "2024-05-28T13:14:00+02:00",
+      "dosage" : {
+        "route" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "421521009",
+            "display" : "Swallow"
+          }]
+        },
+        "dose" : {
+          "value" : 5,
+          "unit" : "ml",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "ml"
+        }
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  }]
+}
+
+```

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-20"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationAdministration Administrering-20</b></p><a name="Administrering-20"> </a><a name="hcAdministrering-20"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href="#hcAdministrering-20/medisin-91171f8e-b615-41ba-881a-87b8e8075611">Medication Botox pulv til inj væske, oppl 50 E</a></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=https://fhi.no/fhir/lmdi/pasient/12345678">https://fhi.no/fhir/lmdi/pasient/12345678</a></p><p><b>effective</b>: 2024-05-28 10:00:00+0200</p><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 78421000}">Intramuscular route (qualifier value)</span></td><td>100 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span></td></tr></table><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Medication #medisin-91171f8e-b615-41ba-881a-87b8e8075611</b></p><a name="Administrering-20/medisin-91171f8e-b615-41ba-881a-87b8e8075611"> </a><a name="hcAdministrering-20/medisin-91171f8e-b615-41ba-881a-87b8e8075611"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></p></div><p><b>Legemiddel Classification</b>: <span title="Codes:{http://www.whocc.no/atc M03AX01}">Botulinumtoksin</span></p><p><b>code</b>: <span title="Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelPakning ID_00B35335-0DF7-4C98-8A0A-1148F4599D21}">Botox pulv til inj væske, oppl 50 E</span></p><p><b>form</b>: <span title="Codes:{urn:oid:2.16.578.1.12.4.1.1.7448 36}">Pulver til injeksjonsvæske, oppløsning</span></p></blockquote></div>
+  </text>
+  <contained>
+    <Medication>
+      <id value="medisin-91171f8e-b615-41ba-881a-87b8e8075611"/>
+      <meta>
+        <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+      </meta>
+      <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="M03AX01"/>
+            <display value="Botulinumtoksin"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <code>
+        <coding>
+          <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"/>
+          <code value="ID_00B35335-0DF7-4C98-8A0A-1148F4599D21"/>
+          <display value="Botox pulv til inj væske, oppl 50 E"/>
+        </coding>
+      </code>
+      <form>
+        <coding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+          <code value="36"/>
+          <display value="Pulver til injeksjonsvæske, oppløsning"/>
+        </coding>
+      </form>
+    </Medication>
+  </contained>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="#medisin-91171f8e-b615-41ba-881a-87b8e8075611"/>
+  </medicationReference>
+  <subject>
+    <reference value="https://fhi.no/fhir/lmdi/pasient/12345678"/>
+  </subject>
+  <effectiveDateTime value="2024-05-28T10:00:00+02:00"/>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="78421000"/>
+        <display value="Intramuscular route (qualifier value)"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="100"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

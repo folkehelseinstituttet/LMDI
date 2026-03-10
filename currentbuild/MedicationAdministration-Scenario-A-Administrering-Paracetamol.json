@@ -1,0 +1,37 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "Scenario-A-Administrering-Paracetamol",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration Scenario-A-Administrering-Paracetamol</b></p><a name=\"Scenario-A-Administrering-Paracetamol\"> </a><a name=\"hcScenario-A-Administrering-Paracetamol\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medicationadministration.html\">Legemiddeladministrering</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"Medication-Scenario-A-Medisin-Paracetamol.html\">Medication Paracet tab 500 mg</a></p><p><b>subject</b>: <a href=\"Patient-Scenario-A-Pasient.html\">Anonymous Patient Female, DoB: 1945-04-12 ( urn:oid:2.16.578.1.12.4.1.4.1#12045678901)</a></p><p><b>context</b>: <a href=\"Encounter-Scenario-A-Episode.html\">Encounter: extension = ; status = in-progress; class = inpatient encounter (ActCode#IMP)</a></p><p><b>effective</b>: 2025-03-10 08:00:00+0100</p><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 421521009}\">Swallow</span></td><td>500 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></div>"
+  },
+  "status" : "completed",
+  "medicationReference" : {
+    "reference" : "Medication/Scenario-A-Medisin-Paracetamol"
+  },
+  "subject" : {
+    "reference" : "Patient/Scenario-A-Pasient"
+  },
+  "context" : {
+    "reference" : "Encounter/Scenario-A-Episode"
+  },
+  "effectiveDateTime" : "2025-03-10T08:00:00+01:00",
+  "dosage" : {
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "421521009",
+        "display" : "Swallow"
+      }]
+    },
+    "dose" : {
+      "value" : 500,
+      "unit" : "mg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg"
+    }
+  }
+}

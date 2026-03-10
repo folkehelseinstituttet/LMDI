@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="Scenario-B-Diagnose"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition Scenario-B-Diagnose</b></p><a name="Scenario-B-Diagnose"> </a><a name="hcScenario-B-Diagnose"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-condition.html">Diagnose</a></p></div><p><b>code</b>: <span title="Codes:{urn:oid:2.16.578.1.12.4.1.1.7110 G89.1}, {http://snomed.info/sct 274663001}">Akutt smerte</span></p><p><b>subject</b>: <a href="Patient-Scenario-B-Pasient.html">Anonymous Patient Female, DoB: 2000-03-12 ( urn:oid:2.16.578.1.12.4.1.4.2#52030078901)</a></p></div>
+  </text>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7110"/>
+      <code value="G89.1"/>
+      <display value="Akutt smerte"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="274663001"/>
+      <display value="Acute pain (finding)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Scenario-B-Pasient"/>
+  </subject>
+</Condition>

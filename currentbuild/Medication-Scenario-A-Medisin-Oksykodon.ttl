@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Scenario-A-Medisin-Oksykodon> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Scenario-A-Medisin-Oksykodon"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication Scenario-A-Medisin-Oksykodon</b></p><a name=\"Scenario-A-Medisin-Oksykodon\"> </a><a name=\"hcScenario-A-Medisin-Oksykodon\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-lmdi-medication.html\">Legemiddel</a></p></div><p><b>Legemiddel Classification</b>: <span title=\"Codes:{http://www.whocc.no/atc N02AA05}\">Oksykodon</span></p><p><b>code</b>: <span title=\"Codes:{http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff C31AF94A-5D5A-4C91-9B99-BB221E26E4C9}\">Oksykodon</span></p><p><b>form</b>: <span title=\"Codes:{urn:oid:2.16.578.1.12.4.1.1.7448 51}\">Mikstur, oppløsning</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+           fhir:l <http://www.whocc.no/atc>
+         ] ;
+         fhir:code [ fhir:v "N02AA05" ] ;
+         fhir:display [ fhir:v "Oksykodon" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"^^xsd:anyURI ;
+         fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff>
+       ] ;
+       fhir:code [ fhir:v "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9" ] ;
+       fhir:display [ fhir:v "Oksykodon" ]
+     ] )
+  ] ; # 
+  fhir:form [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.1.7448"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.1.7448>
+       ] ;
+       fhir:code [ fhir:v "51" ] ;
+       fhir:display [ fhir:v "Mikstur, oppløsning" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

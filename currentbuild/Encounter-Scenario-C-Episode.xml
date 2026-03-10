@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="Scenario-C-Episode"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter Scenario-C-Episode</b></p><a name="Scenario-C-Episode"> </a><a name="hcScenario-C-Episode"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-encounter.html">Episode</a></p></div><blockquote><p><b>NPR Episode Identifier</b></p><ul><li>stringIdentifier: NPR-STOL-2025-789</li></ul></blockquote><p><b>status</b>: In Progress</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP">ActCode: IMP</a> (inpatient encounter)</p><p><b>serviceProvider</b>: <a href="Organization-Scenario-C-Organisasjon.html">Organization Onkologisk avdeling, St. Olavs hospital</a></p></div>
+  </text>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier">
+    <extension url="stringIdentifier">
+      <valueString value="NPR-STOL-2025-789"/>
+    </extension>
+  </extension>
+  <status value="in-progress"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+    <display value="inpatient encounter"/>
+  </class>
+  <serviceProvider>
+    <reference value="Organization/Scenario-C-Organisasjon"/>
+  </serviceProvider>
+</Encounter>
