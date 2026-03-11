@@ -36,6 +36,17 @@ parameters:
   generate-json: true
   generate-xml: false
   generate-turtle: false
+  no-narrative:
+    - MedicationAdministration/*
+    - MedicationRequest/*
+    - Medication/*
+    - Patient/*
+    - Encounter/*
+    - Condition/*
+    - Organization/*
+    - Practitioner/*
+    - Substance/*
+    - Bundle/*
 dependencies:
   hl7.fhir.uv.extensions.r4: "5.2.0"
   hl7.fhir.no.basis: "2.2.0"
@@ -70,4 +81,3 @@ menu:
   Integrasjon: integrasjon.html
   FHIR-profiler: profiler.html
   Nedlastinger: nedlastinger.html
- 
