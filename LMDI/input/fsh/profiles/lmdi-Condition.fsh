@@ -22,6 +22,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * asserter 0..0
 * evidence 0..0
 * note 0..0
+* stage.summary 1..1
 * stage.assessment 0..0
 
 // Grunnleggende elementer
@@ -76,9 +77,6 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICPC2].code 1..1
 * code.coding[ICPC2].code ^short = "Diagnosekode fra kodeverket"
 * code.coding[ICPC2].display ^short = "Beskrivelse av diagnosekode (fra kodeverket)"
-
-* stage ^constraint[0].expression = ""
-* stage ^constraint[0].severity = #warning
 
 // EKSEMPLER
 Instance: Diagnose-1-ICD10-OID

@@ -7,7 +7,6 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 * ^status = #draft
 * ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
-* ^version = "1.0.6"
 
 // === IDENTIFIER HÅNDTERING ===
 // Bruker no-basis slicing med closed slicing for å begrense til kun HPR

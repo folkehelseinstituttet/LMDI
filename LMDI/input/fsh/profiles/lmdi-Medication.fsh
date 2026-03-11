@@ -7,6 +7,7 @@ Description: "Beskrivelse av legemiddel."
 * ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
 
+* obeys lmdi-medication-code-or-ingredient
 * manufacturer 0..0
 * text 0..0
 
@@ -76,9 +77,9 @@ Description: "Beskrivelse av legemiddel."
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
-* extension contains LegemiddelClassification named classification 0..*
-* extension[classification] ^short = "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
-* extension[classification] ^definition = "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
+* extension contains LegemiddelClassification named classification 0..1
+* extension[classification] ^short = "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
+* extension[classification] ^definition = "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
 * extension[classification] ^comment = "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO."
 
 * form.text 0..0
@@ -91,7 +92,6 @@ Description: "Beskrivelse av legemiddel."
 * form.coding ^slicing.discriminator.path = "system"
 * form.coding ^slicing.rules = #closed
 * form.coding contains OID7448 0..1 and SCT 0..1
-* form.coding 1..* 
 * form.coding ^short = "Legemiddelform"
 * form.coding ^comment = "Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT."
 * form.coding[OID7448] ^short = "Kodeverk Legemiddelform (OID:7448) fra FEST"
@@ -131,7 +131,7 @@ Description: "Eksempel på legemiddel"
 
 Instance: Medisin-2-Paracetamol
 InstanceOf: Legemiddel
-Description: "Eksempel på legemiddel - Paracetamol - UTKAST"
+Description: "Eksempel på legemiddel - Paracetamol"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 * identifier.value = "2ABAC272-0BCF-43F0-84BE-984074D92E15"
 * extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
@@ -154,3 +154,9 @@ Description: "Eksempel på legemiddel - paking"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
 * form.coding[OID7448].code = #68
 * form.coding[OID7448].display = "Depottablett"
+
+// Invarianter
+Invariant: lmdi-medication-code-or-ingredient
+Description: "Medication skal ha code.coding eller ingredient"
+Severity: #error
+Expression: "code.coding.exists() or ingredient.exists()"

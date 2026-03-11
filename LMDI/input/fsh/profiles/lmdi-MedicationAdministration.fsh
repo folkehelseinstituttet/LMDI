@@ -57,16 +57,19 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 * dosage.route.coding ^slicing.discriminator.type = #pattern
 * dosage.route.coding ^slicing.discriminator.path = "system"
 * dosage.route.coding ^slicing.rules = #closed
+* dosage.route.coding 1..*
 * dosage.route.coding contains SCT 0..1 and OID7477 0..1
 
 * dosage.route.coding[SCT] ^short = "SNOMED CT"
 * dosage.route.coding[SCT] ^definition = "Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7."
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
+* dosage.route.coding[SCT].code 1..1
 * dosage.route.coding[SCT].code from http://hl7.org/fhir/ValueSet/route-codes (required)
 
 * dosage.route.coding[OID7477] ^short = "Administrasjonsvei (OID=7477)"
 * dosage.route.coding[OID7477] ^definition = "Administrasjonsvei (OID=7477) fra kodeverkssamling Resept."
 * dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code 1..1
 * dosage.route.coding[OID7477].code ^short = "Verdi fra kodeverket"
 * dosage.route.coding[OID7477].display ^short = "Beskrivelse av koden (navn) fra kodeverket"
 
@@ -102,12 +105,11 @@ ValueSet: LegemiddeladministreringStatus
 Id: lmdi-medicationadministrationstatus
 Title: "Status for legemiddeladministrering"
 Description: "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'."
-* ^version = "1.0.6"
 * ^status = #draft
 * ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
-* http://hl7.org/fhir/ValueSet/medication-admin-status#completed "Gjennomført"
-* http://hl7.org/fhir/ValueSet/medication-admin-status#entered-in-error "Feilregistrert"
+* http://terminology.hl7.org/CodeSystem/medication-admin-status#completed "Gjennomført"
+* http://terminology.hl7.org/CodeSystem/medication-admin-status#entered-in-error "Feilregistrert"
 
 // =========================================
 // Examples
@@ -123,10 +125,10 @@ Description: "Eksempel på administrering av legemiddel"
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code = #421521009
 * dosage.route.coding[SCT].display = "Swallow"
-* dosage.dose.value = 2.0
-* dosage.dose.unit = "metric tablespoon"
+* dosage.dose.value = 10.0
+* dosage.dose.unit = "ml"
 * dosage.dose.system = "http://unitsofmeasure.org"
-* dosage.dose.code = #tsp_us
+* dosage.dose.code = #mL
 
 Instance: Administrering-2-Infusjon
 InstanceOf: Legemiddeladministrering
@@ -146,7 +148,7 @@ Description: "Eksempel på administrering av legemiddel - infusjon"
 * dosage.dose.code = #mg
 * dosage.rateRatio.numerator.value = 8.0
 * dosage.rateRatio.numerator.system = "http://unitsofmeasure.org"
-* dosage.rateRatio.numerator.code = #ml
+* dosage.rateRatio.numerator.code = #mL
 * dosage.rateRatio.denominator.value = 1
 * dosage.rateRatio.denominator.system = "http://unitsofmeasure.org"
 * dosage.rateRatio.denominator.code = #min

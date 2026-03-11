@@ -42,7 +42,6 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.use ^binding.description = "Tillatte verdier er home, temp eller old"
 * address.use ^short = "home | temp | old"
 * address.use ^definition = "Adressetype begrenset til home, temp eller old"
-* address.use obeys address-use-constraint
 * address.state ^short = "Fylkesnavn"
 * address.country 0..0
 * address.postalCode 0..0
@@ -62,7 +61,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 // Identifikatorer - bruker no-basis slices
 * identifier MS
 * identifier ^short = "Identifikator for pasienten."
-* identifier ^definition = "Identifikator for pasienten. Skal være fødselsnummer (FNR) eller D-nummer (DNR)."
+* identifier ^definition = "Identifikator for pasienten. Bør være fødselsnummer (FNR) eller D-nummer (DNR) når tilgjengelig."
 
 // Bruker no-basis sine eksisterende slices
 * identifier[FNR] 0..1 MS
@@ -103,8 +102,4 @@ Description: "Eksempel på pasient med fødselsnummer"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3024 "Bærum"
 
 
-Invariant: address-use-constraint
-Description: "Kun home, temp eller old er tillatt for address.use"
-Severity: #error
-Expression: "address.use.empty() or address.use in ('home' | 'temp' | 'old')"
 
