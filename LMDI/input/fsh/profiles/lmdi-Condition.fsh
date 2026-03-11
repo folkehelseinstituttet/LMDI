@@ -83,6 +83,7 @@ Instance: Diagnose-1-ICD10-OID
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose ICD-10"
 * subject = Reference(Pasient-2-FNR)
+* stage.summary.text = "Indikasjonsdiagnose for legemiddelbehandling"
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10] = #R63.3
 * code.coding[ICD10].display = "Vanskeligheter med inntak og tilførsel av mat"
@@ -91,6 +92,7 @@ Instance: Diagnose-2-SNOMED-CT
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose SNOMED CT og ICD-10"
 * subject = Reference(Pasient-2-FNR)
+* stage.summary.text = "Indikasjonsdiagnose for legemiddelbehandling"
 * code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[SCT] = #276241001
 * code.coding[SCT].display = "frykt for høyder"

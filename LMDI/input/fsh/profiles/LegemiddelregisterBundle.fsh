@@ -52,11 +52,11 @@ Expression: "entry.all(
 )"
 
 // EKSEMPEL
-Instance: LegemiddelregisterBundle-1
+Instance: Bundle-Contained-Oksykodon-Sykehjem
 InstanceOf: LegemiddelregisterBundle
 Usage: #example
-Title: "Eksempel på LegemiddelregisterBundle med administreringer"
-Description: "Eksempel på en transaction-bundle som inneholder to legemiddeladministreringer"
+Title: "Contained bundle med oksykodonadministrering i sykehjem"
+Description: "Eksempel på transaction-bundle med contained relaterte ressurser for en enkel sykehjemsadministrering."
 
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
 * identifier.value = "bundle-001"
@@ -64,26 +64,26 @@ Description: "Eksempel på en transaction-bundle som inneholder to legemiddeladm
 * type = #transaction
 
 // Ressurser i bundle
-* entry[0].resource = Pasient-20
+* entry[0].resource = Pasient-Contained-Fnr-Oslo
 * entry[0].request.method = #POST
 * entry[0].request.url = "Patient"
 
-* entry[1].resource = Medisin-10
+* entry[1].resource = Legemiddel-Contained-Oksykodon-FestDose
 * entry[1].request.method = #POST
 * entry[1].request.url = "Medication"
 
-* entry[2].resource = Helsepersonell-10
+* entry[2].resource = Helsepersonell-Contained-Hpr
 * entry[2].request.method = #POST
 * entry[2].request.url = "Practitioner"
 
-* entry[3].resource = Episode-2-Sykehjem
+* entry[3].resource = Episode-Contained-Sykehjemsopphold
 * entry[3].request.method = #POST
 * entry[3].request.url = "Encounter"
 
-* entry[4].resource = Organisasjon-2-Eldrehjem
+* entry[4].resource = Organisasjon-Contained-Eldrehjem
 * entry[4].request.method = #POST
 * entry[4].request.url = "Organization"
 
-* entry[5].resource = Administrering-10
+* entry[5].resource = Administrering-Contained-Oksykodon-Oral
 * entry[5].request.method = #POST
 * entry[5].request.url = "MedicationAdministration"

@@ -1,29 +1,30 @@
-// Eksempel inline/contained
+// Eksempel: oral administrering med contained ressurser
 
-Instance: Administrering-10
+Instance: Administrering-Contained-Oksykodon-Oral
 InstanceOf: Legemiddeladministrering
-Description: "Utfyllende eksempel, f.eks. om alt rapporteres som én melding. Bruker contained - bundle er å foretrekke for melding."
+Description: "Contained eksempel med oral administrering av oksykodon og tilhørende pasient-, episode- og organisasjonskontekst."
 * status = #completed
-* medicationReference = Reference(Medisin-10)
-* subject = Reference(Pasient-20)
-* context = Reference(Episode-2-Sykehjem)
+* medicationReference = Reference(Legemiddel-Contained-Oksykodon-FestDose)
+* subject = Reference(Pasient-Contained-Fnr-Oslo)
+* context = Reference(Episode-Contained-Sykehjemsopphold)
 * effectiveDateTime = "2024-05-28T13:14:00+02:00"
 * dosage.dose.value = 5.0
-* dosage.dose.unit = "ml"
+* dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"
-* dosage.dose.code = #ml
+* dosage.dose.code = #mg
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code = #421521009
 * dosage.route.coding[SCT].display = "Swallow"
-* contained[+] = Medisin-10
-* contained[+] = Pasient-20
-* contained[+] = Helsepersonell-10
-* contained[+] = Episode-2-Sykehjem
-* contained[+] = Organisasjon-2-Eldrehjem
+* contained[+] = Legemiddel-Contained-Oksykodon-FestDose
+* contained[+] = Pasient-Contained-Fnr-Oslo
+* contained[+] = Helsepersonell-Contained-Hpr
+* contained[+] = Episode-Contained-Sykehjemsopphold
+* contained[+] = Organisasjon-Contained-Eldrehjem
 
-Instance: Medisin-10
+Instance: Legemiddel-Contained-Oksykodon-FestDose
 InstanceOf: Legemiddel
 Usage: #inline
+Description: "Contained legemiddel med FEST dose-id og SNOMED-koding."
 * code.coding[FestLegemiddeldose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
 * code.coding[FestLegemiddeldose].code = #ID_48BD33D2-2838-4B81-8225-02391B7A4516
 * code.coding[FestLegemiddeldose].display = "Oxycodone Orifarm mikst oppl 1 mg/ml"
@@ -35,9 +36,9 @@ Usage: #inline
 * form.coding[OID7448].code = #51
 * form.coding[OID7448].display = "Mikstur, oppløsning"
 
-Instance: Pasient-20
+Instance: Pasient-Contained-Fnr-Oslo
 InstanceOf: Pasient
-Description: "Eksempel på pasient med fødselsnummer"
+Description: "Contained pasient med fødselsnummer."
 Usage: #inline
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier[FNR].value = "13031353453"
@@ -46,25 +47,26 @@ Usage: #inline
 * address.district = "Oslo"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
 
-Instance: Helsepersonell-10
+Instance: Helsepersonell-Contained-Hpr
 InstanceOf: Helsepersonell
 Usage: #inline
+Description: "Contained rekvirent med HPR-nummer."
 * identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
 * identifier[HPR].value = "9144900"
 
-Instance: Episode-2-Sykehjem
+Instance: Episode-Contained-Sykehjemsopphold
 InstanceOf: Episode
-Description: "Eksempel på Episode"
+Description: "Contained episode med både NPR string- og UUID-identifikator."
 Usage: #inline
 * status = #finished
-* serviceProvider = Reference(Organisasjon-2-Eldrehjem)
+* serviceProvider = Reference(Organisasjon-Contained-Eldrehjem)
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 * extension[nprEpisodeIdentifier].extension[stringIdentifier].valueString = "NPR123456789"
 * extension[nprEpisodeIdentifier].extension[uuidIdentifier].valueUuid = "550e8400-e29b-41d4-a716-446655440000"
 
-Instance: Organisasjon-2-Eldrehjem
+Instance: Organisasjon-Contained-Eldrehjem
 InstanceOf: Organisasjon
-Description: "Eksempel på organisasjon - Primærhelsetjeneste"
+Description: "Contained organisasjon fra primærhelsetjenesten."
 Usage: #inline
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "1234567890"

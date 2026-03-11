@@ -126,9 +126,9 @@ Description: "Eksempel på administrering av legemiddel"
 * dosage.route.coding[SCT].code = #421521009
 * dosage.route.coding[SCT].display = "Swallow"
 * dosage.dose.value = 10.0
-* dosage.dose.unit = "ml"
+* dosage.dose.unit = "mg"
 * dosage.dose.system = "http://unitsofmeasure.org"
-* dosage.dose.code = #mL
+* dosage.dose.code = #mg
 
 Instance: Administrering-2-Infusjon
 InstanceOf: Legemiddeladministrering

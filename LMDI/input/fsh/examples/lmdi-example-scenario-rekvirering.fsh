@@ -1,10 +1,10 @@
-// Scenario B: Rekvirering + administrering med diagnose
-// Demonstrerer: Komplett flyt fra ordinering til administrering, med diagnose som indikasjon
+// Scenario: Endosebasert smertebehandling med rekvirering og diagnose
+// Demonstrerer: D-nummer, diagnosekobling, FestLmrLopenr- og Varenummer-slicer, samt begge route-slicer
 
-Instance: Scenario-B-Pasient
+Instance: Endose-Smertebehandling-Pasient-Dnr
 InstanceOf: Pasient
 Usage: #example
-Description: "Scenario B - Pasient med D-nummer"
+Description: "Pasient med D-nummer i et innleggelsesscenario for postoperativ smertebehandling."
 * identifier[DNR].system = "urn:oid:2.16.578.1.12.4.1.4.2"
 * identifier[DNR].value = "52030078901"
 * gender = #female
@@ -12,17 +12,17 @@ Description: "Scenario B - Pasient med D-nummer"
 * address.district = "Bergen"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#4601 "Bergen"
 
-Instance: Scenario-B-Helsepersonell
+Instance: Endose-Smertebehandling-Rekvirent
 InstanceOf: Helsepersonell
 Usage: #example
-Description: "Scenario B - Rekvirerende lege"
+Description: "Rekvirerende lege i sykehusscenarioet."
 * identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
 * identifier[HPR].value = "7654321"
 
-Instance: Scenario-B-Organisasjon
+Instance: Endose-Smertebehandling-Sykehus
 InstanceOf: Organisasjon
 Usage: #example
-Description: "Scenario B - Sykehus"
+Description: "Sykehusorganisasjon der behandling og administrering skjer."
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "974557746"
 * identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
@@ -32,20 +32,21 @@ Description: "Scenario B - Sykehus"
 * address.district = "Bergen"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#4601 "Bergen"
 
-Instance: Scenario-B-Episode
+Instance: Endose-Smertebehandling-Episode
 InstanceOf: Episode
 Usage: #example
-Description: "Scenario B - Sykehusinnleggelse"
+Description: "Sykehusinnleggelse for pasient med akutt smertebehov."
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
-* serviceProvider = Reference(Scenario-B-Organisasjon)
+* serviceProvider = Reference(Endose-Smertebehandling-Sykehus)
 * extension[nprEpisodeIdentifier].extension[stringIdentifier].valueString = "NPR-HUS-2025-4567"
 
-Instance: Scenario-B-Diagnose
+Instance: Endose-Smertebehandling-Diagnose
 InstanceOf: Diagnose
 Usage: #example
-Description: "Scenario B - Postoperativ smerte"
-* subject = Reference(Scenario-B-Pasient)
+Description: "Postoperativ smerte kodet med både ICD-10 og SNOMED CT."
+* subject = Reference(Endose-Smertebehandling-Pasient-Dnr)
+* stage.summary.text = "Akutt postoperativ smerte"
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10].code = #G89.1
 * code.coding[ICD10].display = "Akutt smerte"
@@ -53,41 +54,44 @@ Description: "Scenario B - Postoperativ smerte"
 * code.coding[SCT].code = #274663001
 * code.coding[SCT].display = "Acute pain (finding)"
 
-Instance: Scenario-B-Medisin
+Instance: Endose-Smertebehandling-Morfin-Endose
 InstanceOf: Legemiddel
 Usage: #example
-Description: "Scenario B - Morfin injeksjonsvæske"
-* code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-* code.coding[FestLegemiddelMerkevare].code = #ID_81E2A556-B09B-4EC2-BA37-E3A9E3E0F6D0
-* code.coding[FestLegemiddelMerkevare].display = "Morfin injeksjonsvæske 10 mg/ml"
+Description: "Morfin identifisert med både LMR-løpenummer og varenummer."
+* code.coding[FestLmrLopenr].system = "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+* code.coding[FestLmrLopenr].code = #1234567
+* code.coding[FestLmrLopenr].display = "Morfin endose 10 mg/ml"
+* code.coding[Varenummer].system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+* code.coding[Varenummer].code = #476281
+* code.coding[Varenummer].display = "Morfin injeksjonsvæske 10 mg/ml"
 * extension[classification].valueCodeableConcept = $ATC#N02AA01 "Morfin"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
 * form.coding[OID7448].code = #11
 * form.coding[OID7448].display = "Injeksjonsvæske, oppløsning"
 
-Instance: Scenario-B-Rekvirering
+Instance: Endose-Smertebehandling-Rekvirering
 InstanceOf: Legemiddelrekvirering
 Usage: #example
-Description: "Scenario B - Rekvirering av Morfin"
+Description: "Rekvirering av morfin ved postoperativ smerte."
 * status = #completed
 * intent = #order
-* medicationReference = Reference(Scenario-B-Medisin)
-* subject = Reference(Scenario-B-Pasient)
-* requester = Reference(Scenario-B-Helsepersonell)
+* medicationReference = Reference(Endose-Smertebehandling-Morfin-Endose)
+* subject = Reference(Endose-Smertebehandling-Pasient-Dnr)
+* requester = Reference(Endose-Smertebehandling-Rekvirent)
 * authoredOn = "2025-03-09"
-* reasonReference = Reference(Scenario-B-Diagnose)
-* encounter = Reference(Scenario-B-Episode)
+* reasonReference = Reference(Endose-Smertebehandling-Diagnose)
+* encounter = Reference(Endose-Smertebehandling-Episode)
 
-Instance: Scenario-B-Administrering
+Instance: Endose-Smertebehandling-Administrering
 InstanceOf: Legemiddeladministrering
 Usage: #example
-Description: "Scenario B - Administrering av Morfin subkutant"
+Description: "Subkutan administrering med både SNOMED- og OID7477-koding av administrasjonsvei."
 * status = #completed
-* medicationReference = Reference(Scenario-B-Medisin)
-* subject = Reference(Scenario-B-Pasient)
-* context = Reference(Scenario-B-Episode)
-* request = Reference(Scenario-B-Rekvirering)
-* reasonReference = Reference(Scenario-B-Diagnose)
+* medicationReference = Reference(Endose-Smertebehandling-Morfin-Endose)
+* subject = Reference(Endose-Smertebehandling-Pasient-Dnr)
+* context = Reference(Endose-Smertebehandling-Episode)
+* request = Reference(Endose-Smertebehandling-Rekvirering)
+* reasonReference = Reference(Endose-Smertebehandling-Diagnose)
 * effectiveDateTime = "2025-03-09T22:30:00+01:00"
 * dosage.dose.value = 5.0
 * dosage.dose.unit = "mg"
@@ -96,45 +100,48 @@ Description: "Scenario B - Administrering av Morfin subkutant"
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code = #34206005
 * dosage.route.coding[SCT].display = "Subcutaneous route (qualifier value)"
+* dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code = #3
+* dosage.route.coding[OID7477].display = "Subkutan"
 
-Instance: Scenario-B-Bundle
+Instance: Endose-Smertebehandling-Bundle
 InstanceOf: LegemiddelregisterBundle
 Usage: #example
-Title: "Scenario B - Rekvirering og administrering Bundle"
-Description: "Komplett Bundle med rekvirering, administrering og diagnose"
+Title: "Endosebasert smertebehandling med rekvirering, diagnose og administrering"
+Description: "Komplett bundle for postoperativ smertebehandling der legemidlet er identifisert med LMR-løpenummer og varenummer."
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
-* identifier.value = "scenario-b-bundle-001"
+* identifier.value = "endose-smertebehandling-bundle-001"
 * timestamp = "2025-03-10T08:00:00+01:00"
 * type = #transaction
 
-* entry[0].resource = Scenario-B-Pasient
+* entry[0].resource = Endose-Smertebehandling-Pasient-Dnr
 * entry[0].request.method = #POST
 * entry[0].request.url = "Patient"
 
-* entry[1].resource = Scenario-B-Helsepersonell
+* entry[1].resource = Endose-Smertebehandling-Rekvirent
 * entry[1].request.method = #POST
 * entry[1].request.url = "Practitioner"
 
-* entry[2].resource = Scenario-B-Organisasjon
+* entry[2].resource = Endose-Smertebehandling-Sykehus
 * entry[2].request.method = #POST
 * entry[2].request.url = "Organization"
 
-* entry[3].resource = Scenario-B-Episode
+* entry[3].resource = Endose-Smertebehandling-Episode
 * entry[3].request.method = #POST
 * entry[3].request.url = "Encounter"
 
-* entry[4].resource = Scenario-B-Diagnose
+* entry[4].resource = Endose-Smertebehandling-Diagnose
 * entry[4].request.method = #POST
 * entry[4].request.url = "Condition"
 
-* entry[5].resource = Scenario-B-Medisin
+* entry[5].resource = Endose-Smertebehandling-Morfin-Endose
 * entry[5].request.method = #POST
 * entry[5].request.url = "Medication"
 
-* entry[6].resource = Scenario-B-Rekvirering
+* entry[6].resource = Endose-Smertebehandling-Rekvirering
 * entry[6].request.method = #POST
 * entry[6].request.url = "MedicationRequest"
 
-* entry[7].resource = Scenario-B-Administrering
+* entry[7].resource = Endose-Smertebehandling-Administrering
 * entry[7].request.method = #POST
 * entry[7].request.url = "MedicationAdministration"
