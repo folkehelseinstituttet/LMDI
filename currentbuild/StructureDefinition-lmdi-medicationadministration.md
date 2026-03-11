@@ -289,7 +289,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
           "path" : "system"
         }],
         "rules" : "closed"
-      }
+      },
+      "min" : 1
     },
     {
       "id" : "MedicationAdministration.dosage.route.coding:SCT",
@@ -309,6 +310,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     {
       "id" : "MedicationAdministration.dosage.route.coding:SCT.code",
       "path" : "MedicationAdministration.dosage.route.coding.code",
+      "min" : 1,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/ValueSet/route-codes"
@@ -332,7 +334,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     {
       "id" : "MedicationAdministration.dosage.route.coding:OID7477.code",
       "path" : "MedicationAdministration.dosage.route.coding.code",
-      "short" : "Verdi fra kodeverket"
+      "short" : "Verdi fra kodeverket",
+      "min" : 1
     },
     {
       "id" : "MedicationAdministration.dosage.route.coding:OID7477.display",

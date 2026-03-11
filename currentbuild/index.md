@@ -1043,7 +1043,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "Bundle/LegemiddelregisterBundle-1"
       },
       "name" : "Eksempel på LegemiddelregisterBundle med administreringer",
-      "description" : "Eksempel på en batch-bundle som inneholder to legemiddeladministreringer",
+      "description" : "Eksempel på en transaction-bundle som inneholder to legemiddeladministreringer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
     },
     {
@@ -1271,7 +1271,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "ValueSet/LokalLegemiddelkatalogValues"
       },
       "name" : "Lokal Legemiddelkatalog Values",
-      "description" : "Gyldige verdier for medlemskapsstatus",
+      "description" : "Gyldige verdier for lokal legemiddelkatalog",
       "exampleBoolean" : false
     },
     {
@@ -1295,7 +1295,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "Medication/Medisin-2-Paracetamol"
       },
       "name" : "Medisin-2-Paracetamol",
-      "description" : "Eksempel på legemiddel - Paracetamol - UTKAST",
+      "description" : "Eksempel på legemiddel - Paracetamol",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {

@@ -291,14 +291,9 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "max" : "0"
     },
     {
-      "id" : "Condition.stage",
-      "path" : "Condition.stage",
-      "constraint" : [{
-        "key" : "con-1",
-        "severity" : "warning",
-        "human" : "Stage SHALL have summary or assessment",
-        "xpath" : "exists(f:summary) or exists(f:assessment)"
-      }]
+      "id" : "Condition.stage.summary",
+      "path" : "Condition.stage.summary",
+      "min" : 1
     },
     {
       "id" : "Condition.stage.assessment",

@@ -23,7 +23,7 @@ Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant 
 
 This extension may be used on the following element(s):
 
-* Element ID Element
+* Element ID MedicationRequest
 
 **Usage info**
 
@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
   "status" : "draft",
-  "date" : "2026-03-11T12:27:06+00:00",
+  "date" : "2026-03-11T13:36:16+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "abstract" : false,
   "context" : [{
     "type" : "element",
-    "expression" : "Element"
+    "expression" : "MedicationRequest"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",

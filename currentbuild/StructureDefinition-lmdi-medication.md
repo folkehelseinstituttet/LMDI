@@ -101,7 +101,14 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "differential" : {
     "element" : [{
       "id" : "Medication",
-      "path" : "Medication"
+      "path" : "Medication",
+      "constraint" : [{
+        "key" : "lmdi-medication-code-or-ingredient",
+        "severity" : "error",
+        "human" : "Medication skal ha code.coding eller ingredient",
+        "expression" : "code.coding.exists() or ingredient.exists()",
+        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+      }]
     },
     {
       "id" : "Medication.text",
@@ -123,11 +130,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.extension:classification",
       "path" : "Medication.extension",
       "sliceName" : "classification",
-      "short" : "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
-      "definition" : "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
+      "short" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
+      "definition" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
       "comment" : "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO.",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "type" : [{
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"]

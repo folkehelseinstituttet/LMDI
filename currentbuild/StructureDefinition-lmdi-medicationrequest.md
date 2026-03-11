@@ -273,7 +273,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
     {
       "id" : "MedicationRequest.courseOfTherapyType",
       "path" : "MedicationRequest.courseOfTherapyType",
-      "short" : "continuous | acute | seasonal"
+      "short" : "Type behandlingsforløp (continuous | acute | seasonal)"
     },
     {
       "id" : "MedicationRequest.insurance",

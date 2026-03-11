@@ -73,6 +73,31 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "loinc",
+    "uri" : "http://loinc.org",
+    "name" : "LOINC code for the element"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Patient",
@@ -98,7 +123,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "id" : "Patient.identifier",
       "path" : "Patient.identifier",
       "short" : "Identifikator for pasienten.",
-      "definition" : "Identifikator for pasienten. Skal være fødselsnummer (FNR) eller D-nummer (DNR).",
+      "definition" : "Identifikator for pasienten. Bør være fødselsnummer (FNR) eller D-nummer (DNR) når tilgjengelig.",
       "mustSupport" : true
     },
     {
@@ -214,13 +239,6 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "path" : "Patient.address.use",
       "short" : "home | temp | old",
       "definition" : "Adressetype begrenset til home, temp eller old",
-      "constraint" : [{
-        "key" : "address-use-constraint",
-        "severity" : "error",
-        "human" : "Kun home, temp eller old er tillatt for address.use",
-        "expression" : "address.use.empty() or address.use in ('home' | 'temp' | 'old')",
-        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
-      }],
       "binding" : {
         "strength" : "required",
         "description" : "Tillatte verdier er home, temp eller old",

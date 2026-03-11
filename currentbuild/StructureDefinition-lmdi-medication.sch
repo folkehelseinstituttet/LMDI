@@ -13,6 +13,7 @@
     <sch:title>f:Medication</sch:title>
     <sch:rule context="f:Medication">
       <sch:assert test="count(f:text) &lt;= 0">text: maximum cardinality of 'text' is 0</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:manufacturer) &lt;= 0">manufacturer: maximum cardinality of 'manufacturer' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>

@@ -55,7 +55,7 @@
       "numerator" : {
         "value" : 8,
         "system" : "http://unitsofmeasure.org",
-        "code" : "ml"
+        "code" : "mL"
       },
       "denominator" : {
         "value" : 1,

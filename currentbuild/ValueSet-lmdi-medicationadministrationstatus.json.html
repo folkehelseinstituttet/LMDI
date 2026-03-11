@@ -220,8 +220,8 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
   "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">id</a>" : "lmdi-medicationadministrationstatus",
   "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet lmdi-medicationadministrationstatus&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;lmdi-medicationadministrationstatus\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hclmdi-medicationadministrationstatus\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;http://hl7.org/fhir/ValueSet/medication-admin-status&lt;/code&gt;&lt;span title=\&quot;Version is not explicitly stated. No matching Code System found\&quot;&gt; version Not Stated (use latest from terminology server)&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;completed&lt;/td&gt;&lt;td&gt;Gjennomført&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;entered-in-error&lt;/td&gt;&lt;td&gt;Feilregistrert&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet lmdi-medicationadministrationstatus&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;lmdi-medicationadministrationstatus\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hclmdi-medicationadministrationstatus\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-medication-admin-status.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/medication-admin-status&lt;/code&gt;&lt;/a&gt;&lt;span title=\&quot;Version is not explicitly stated, which means it is fixed to 4.0.1, the version found through the package references\&quot;&gt; version &amp;#x1F4E6;4.0.1&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-medication-admin-status.html#medication-admin-status-completed\&quot;&gt;completed&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Gjennomført&lt;/td&gt;&lt;td&gt;All actions that are implied by the administration have occurred.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/R4/codesystem-medication-admin-status.html#medication-admin-status-entered-in-error\&quot;&gt;entered-in-error&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Feilregistrert&lt;/td&gt;&lt;td&gt;The administration was entered in error and therefore nullified.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "1.0.8",
@@ -265,7 +265,7 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://terminology.hl7.org/CodeSystem/medication-admin-status",
         "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "completed",
@@ -310,7 +310,7 @@
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Mar 11, 2026 12:27+0000">2026-03-11</span>
+                        title="Wed, Mar 11, 2026 13:36+0000">2026-03-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

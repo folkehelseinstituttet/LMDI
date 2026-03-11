@@ -57,7 +57,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Kommunenummer ValueSet](ValueSet-kommunenummer-alle.md) | Komplett kodeverk for norske kommunenummer (Volven 3402) |
 | [LMDI Address Type](ValueSet-lmdi-address-type.md) | Tillatt verdi for address.type i LMDI: physical |
 | [LMDI Address Use](ValueSet-lmdi-address-use.md) | Tillatte verdier for address.use i LMDI: home, temp, old |
-| [Lokal Legemiddelkatalog Values](ValueSet-LokalLegemiddelkatalogValues.md) | Gyldige verdier for medlemskapsstatus |
+| [Lokal Legemiddelkatalog Values](ValueSet-LokalLegemiddelkatalogValues.md) | Gyldige verdier for lokal legemiddelkatalog |
 | [Status for legemiddeladministrering](ValueSet-lmdi-medicationadministrationstatus.md) | Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘Gjennomført’ eller ‘Feilregistrert’. |
 
 ### Terminology: Code Systems 
@@ -94,12 +94,12 @@ These are example instances that show what data produced and consumed by systems
 | [Administrering-30](MedicationAdministration-Administrering-30.md) | Eksempel med logiske referanser (identifier-baserte) - demonstrerer identifier-referanser |
 | [Diagnose-1-ICD10-OID](Condition-Diagnose-1-ICD10-OID.md) | Eksempel på diagnose ICD-10 |
 | [Diagnose-2-SNOMED-CT](Condition-Diagnose-2-SNOMED-CT.md) | Eksempel på diagnose SNOMED CT og ICD-10 |
-| [Eksempel på LegemiddelregisterBundle med administreringer](Bundle-LegemiddelregisterBundle-1.md) | Eksempel på en batch-bundle som inneholder to legemiddeladministreringer |
+| [Eksempel på LegemiddelregisterBundle med administreringer](Bundle-LegemiddelregisterBundle-1.md) | Eksempel på en transaction-bundle som inneholder to legemiddeladministreringer |
 | [Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
 | [Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
 | [Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md) | Eksempel på legemiddel |
-| [Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md) | Eksempel på legemiddel - Paracetamol - UTKAST |
+| [Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md) | Eksempel på legemiddel - Paracetamol |
 | [Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md) | Eksempel på legemiddel - paking |
 | [Medisin-4-LokaltLegemiddel](Medication-Medisin-4-LokaltLegemiddel.md) | Eksempel på legemiddel fra lokal legemiddelkatalog |
 | [Organisasjon-1-Sykehjem](Organization-Organisasjon-1-Sykehjem.md) | Eksempel på sykehjem i primærhelsetjenesten |
