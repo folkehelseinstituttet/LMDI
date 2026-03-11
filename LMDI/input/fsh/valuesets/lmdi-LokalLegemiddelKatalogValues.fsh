@@ -6,5 +6,5 @@ Description: "Kodesystem for lokal legemiddelkatalog"
 
 ValueSet: LokalLegemiddelkatalogValues
 Title: "Lokal Legemiddelkatalog Values"
-Description: "Gyldige verdier for medlemskapsstatus"
+Description: "Gyldige verdier for lokal legemiddelkatalog"
 * include codes from system LokalLegemiddelkatalogCodeSystem

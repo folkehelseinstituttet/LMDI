@@ -15,7 +15,6 @@ Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
      - sykehjem, kommune
 - minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)
 """
-* ^version = "1.0.7"
 * ^status = #draft
 * ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
@@ -89,7 +88,6 @@ Description: "Eksempel på sykehjem i primærhelsetjenesten"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "1234567890"
 * name = "Lykkedalen sykehjem"
-// Midlertidig fjernet type for testing - kan legges tilbake med no-basis slices
 * address.type = #physical
 * address.district = "Sigdal"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3025 "Sigdal"

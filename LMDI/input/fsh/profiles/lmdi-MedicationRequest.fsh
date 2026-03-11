@@ -75,7 +75,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * encounter only Reference(Episode)
 * encounter ^short = "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med."
 
-* courseOfTherapyType ^short = "continuous | acute | seasonal"
+* courseOfTherapyType ^short = "Type behandlingsforløp (continuous | acute | seasonal)"
 
 // Andre elementer
 * reported[x] only boolean
@@ -87,7 +87,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 Instance: Rekvirering-1
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på legemiddelrekvirering av Paracet"
-* identifier.system = "urn:oid:2.16.578.1.12.4.1.1.reseptid"
+* identifier.system = "http://example.org/rekvirering-id"
 * identifier.value = "REK123456"
 * status = #active
 * intent = #order

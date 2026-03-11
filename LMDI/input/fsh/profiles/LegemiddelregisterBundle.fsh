@@ -56,7 +56,7 @@ Instance: LegemiddelregisterBundle-1
 InstanceOf: LegemiddelregisterBundle
 Usage: #example
 Title: "Eksempel på LegemiddelregisterBundle med administreringer"
-Description: "Eksempel på en batch-bundle som inneholder to legemiddeladministreringer"
+Description: "Eksempel på en transaction-bundle som inneholder to legemiddeladministreringer"
 
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
 * identifier.value = "bundle-001"
