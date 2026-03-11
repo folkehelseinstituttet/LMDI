@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Condition/Kjemoterapi-Full-Diagnose> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Kjemoterapi-Full-Diagnose"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition>
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.1.7110"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.1.7110>
+       ] ;
+       fhir:code [ fhir:v "C18.7" ] ;
+       fhir:display [ fhir:v "Ondartet svulst i sigmoideum" ]
+     ] [
+       a sct:363406005 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "363406005" ] ;
+       fhir:display [ fhir:v "Malignant tumor of colon" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Kjemoterapi-Full-Pasient> ;
+     fhir:reference [ fhir:v "Patient/Kjemoterapi-Full-Pasient" ]
+  ] ; # 
+  fhir:stage ( [
+     fhir:summary [
+       fhir:text [ fhir:v "Adjuvant kjemoterapi etter colorectal cancer" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

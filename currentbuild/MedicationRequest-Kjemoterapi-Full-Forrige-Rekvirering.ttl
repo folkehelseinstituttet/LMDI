@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationRequest/Kjemoterapi-Full-Forrige-Rekvirering> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Kjemoterapi-Full-Forrige-Rekvirering"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/rekvirering-id"^^xsd:anyURI ;
+       fhir:l <http://example.org/rekvirering-id>
+     ] ;
+     fhir:value [ fhir:v "KJEMO-2025-001" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:reported [
+     a fhir:Boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Kjemoterapi-Full-Oksaliplatin-LokalKatalog> ;
+     fhir:reference [ fhir:v "Medication/Kjemoterapi-Full-Oksaliplatin-LokalKatalog" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Kjemoterapi-Full-Pasient> ;
+     fhir:reference [ fhir:v "Patient/Kjemoterapi-Full-Pasient" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Kjemoterapi-Full-Episode> ;
+     fhir:reference [ fhir:v "Encounter/Kjemoterapi-Full-Episode" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-02-24"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Practitioner/Kjemoterapi-Full-Helsepersonell> ;
+     fhir:reference [ fhir:v "Practitioner/Kjemoterapi-Full-Helsepersonell" ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Kjemoterapi-Full-Diagnose> ;
+     fhir:reference [ fhir:v "Condition/Kjemoterapi-Full-Diagnose" ]
+  ] ) ; # 
+  fhir:courseOfTherapyType [
+     fhir:text [ fhir:v "Kjemoterapikur" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

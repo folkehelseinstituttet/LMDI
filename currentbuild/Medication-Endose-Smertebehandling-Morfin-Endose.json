@@ -1,0 +1,36 @@
+{
+  "resourceType" : "Medication",
+  "id" : "Endose-Smertebehandling-Morfin-Endose",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.whocc.no/atc",
+        "code" : "N02AA01",
+        "display" : "Morfin"
+      }]
+    }
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer",
+      "code" : "1234567",
+      "display" : "Morfin endose 10 mg/ml"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer",
+      "code" : "476281",
+      "display" : "Morfin injeksjonsvæske 10 mg/ml"
+    }]
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+      "code" : "11",
+      "display" : "Injeksjonsvæske, oppløsning"
+    }]
+  }
+}

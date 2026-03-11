@@ -23,7 +23,7 @@ En tilpasset profil av Substance for å representere virkestoff, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
-* Examples for this Profile: [Substance/Scenario-C-Virkestoff](Substance-Scenario-C-Virkestoff.md) and [Substance/Virkestoff-1-Oksykodon](Substance-Virkestoff-1-Oksykodon.md)
+* Examples for this Profile: [Substance/Kjemoterapi-Full-Virkestoff](Substance-Kjemoterapi-Full-Virkestoff.md) and [Substance/Virkestoff-1-Oksykodon](Substance-Virkestoff-1-Oksykodon.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-substance)
 
@@ -73,6 +73,21 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "orim",
+    "uri" : "http://hl7.org/orim",
+    "name" : "Ontological RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Substance",

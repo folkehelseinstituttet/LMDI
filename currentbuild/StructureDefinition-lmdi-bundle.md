@@ -22,7 +22,7 @@ Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POS
 
 **Usages:**
 
-* Examples for this Profile: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md) and [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md)
+* Examples for this Profile: [Bundle/Bundle-Contained-Oksykodon-Sykehjem](Bundle-Bundle-Contained-Oksykodon-Sykehjem.md), [Bundle/Endose-Smertebehandling-Bundle](Bundle-Endose-Smertebehandling-Bundle.md), [Bundle/Kjemoterapi-Full-Bundle](Bundle-Kjemoterapi-Full-Bundle.md) and [Bundle/Sykehjem-Minimum-Bundle](Bundle-Sykehjem-Minimum-Bundle.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-bundle)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
   "name" : "LegemiddelregisterBundle",
   "title" : "LegemiddelregisterBundle",
   "status" : "draft",
-  "date" : "2026-03-11T13:36:49+00:00",
+  "date" : "2026-03-11T14:49:37+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

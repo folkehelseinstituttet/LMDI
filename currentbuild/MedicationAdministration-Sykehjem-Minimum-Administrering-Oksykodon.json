@@ -1,0 +1,26 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "Sykehjem-Minimum-Administrering-Oksykodon",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
+  },
+  "status" : "completed",
+  "medicationReference" : {
+    "reference" : "Medication/Sykehjem-Minimum-Oksykodon-Virkestoff"
+  },
+  "subject" : {
+    "reference" : "Patient/Sykehjem-Minimum-Pasient"
+  },
+  "context" : {
+    "reference" : "Encounter/Sykehjem-Minimum-Episode"
+  },
+  "effectiveDateTime" : "2025-03-10T08:15:00+01:00",
+  "dosage" : {
+    "dose" : {
+      "value" : 5,
+      "unit" : "mg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg"
+    }
+  }
+}

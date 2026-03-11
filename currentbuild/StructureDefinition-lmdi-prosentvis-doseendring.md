@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Extension: [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md), [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md) and [MedicationRequest/Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md)
+* Examples for this Extension: [Bundle/Kjemoterapi-Full-Bundle](Bundle-Kjemoterapi-Full-Bundle.md), [MedicationRequest/Kjemoterapi-Full-Rekvirering](MedicationRequest-Kjemoterapi-Full-Rekvirering.md) and [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-prosentvis-doseendring)
 
@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
   "status" : "draft",
-  "date" : "2026-03-11T13:36:49+00:00",
+  "date" : "2026-03-11T14:49:37+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

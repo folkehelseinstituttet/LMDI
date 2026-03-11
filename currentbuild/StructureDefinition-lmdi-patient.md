@@ -23,7 +23,7 @@ Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Diagnose](StructureDefinition-lmdi-condition.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Patient/Pasient-1-Uten-FNR](Patient-Pasient-1-Uten-FNR.md), [Patient/Pasient-2-FNR](Patient-Pasient-2-FNR.md), [Patient/Scenario-A-Pasient](Patient-Scenario-A-Pasient.md), [Patient/Scenario-B-Pasient](Patient-Scenario-B-Pasient.md) and [Patient/Scenario-C-Pasient](Patient-Scenario-C-Pasient.md)
+* Examples for this Profile: [Patient/Endose-Smertebehandling-Pasient-Dnr](Patient-Endose-Smertebehandling-Pasient-Dnr.md), [Patient/Kjemoterapi-Full-Pasient](Patient-Kjemoterapi-Full-Pasient.md), [Patient/Pasient-1-Uten-FNR](Patient-Pasient-1-Uten-FNR.md), [Patient/Pasient-2-FNR](Patient-Pasient-2-FNR.md) and [Patient/Sykehjem-Minimum-Pasient](Patient-Sykehjem-Minimum-Pasient.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-patient)
 
@@ -73,6 +73,31 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "cda",
+    "uri" : "http://hl7.org/v3/cda",
+    "name" : "CDA (R2)"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "loinc",
+    "uri" : "http://loinc.org",
+    "name" : "LOINC code for the element"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Patient",

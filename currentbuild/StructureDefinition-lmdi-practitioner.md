@@ -23,7 +23,7 @@ Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. H
 **Usages:**
 
 * Refer to this Profile: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Practitioner/Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md), [Practitioner/Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md), [Practitioner/Scenario-B-Helsepersonell](Practitioner-Scenario-B-Helsepersonell.md) and [Practitioner/Scenario-C-Helsepersonell](Practitioner-Scenario-C-Helsepersonell.md)
+* Examples for this Profile: [Practitioner/Endose-Smertebehandling-Rekvirent](Practitioner-Endose-Smertebehandling-Rekvirent.md), [Practitioner/Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md), [Practitioner/Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md) and [Practitioner/Kjemoterapi-Full-Helsepersonell](Practitioner-Kjemoterapi-Full-Helsepersonell.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-practitioner)
 
@@ -73,6 +73,26 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-practitioner.cs
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "servd",
+    "uri" : "http://www.omg.org/spec/ServD/1.0/",
+    "name" : "ServD"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Practitioner",

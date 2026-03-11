@@ -1,0 +1,111 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Minimal-Botox-Intramuskular-Contained> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Administrering-Minimal-Botox-Intramuskular-Contained"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:contained ( [
+     a fhir:Medication ;
+     fhir:id [ fhir:v "Legemiddel-Contained-Botox-FestPakning" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ] )
+     ] ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+             fhir:l <http://www.whocc.no/atc>
+           ] ;
+           fhir:code [ fhir:v "M03AX01" ] ;
+           fhir:display [ fhir:v "Botulinumtoksin" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelPakning>
+         ] ;
+         fhir:code [ fhir:v "ID_00B35335-0DF7-4C98-8A0A-1148F4599D21" ] ;
+         fhir:display [ fhir:v "Botox pulv til inj væske, oppl 50 E" ]
+       ] [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/fest-varenummer"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/fest-varenummer>
+         ] ;
+         fhir:code [ fhir:v "476281" ] ;
+         fhir:display [ fhir:v "Botox pulv til inj væske, oppl 50 E" ]
+       ] )
+     ] ;
+     fhir:form [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.1.7448"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.1.7448>
+         ] ;
+         fhir:code [ fhir:v "36" ] ;
+         fhir:display [ fhir:v "Pulver til injeksjonsvæske, oppløsning" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <#Legemiddel-Contained-Botox-FestPakning> ;
+     fhir:reference [ fhir:v "#Legemiddel-Contained-Botox-FestPakning" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhi.no/fhir/lmdi/pasient/12345678> ;
+     fhir:reference [ fhir:v "https://fhi.no/fhir/lmdi/pasient/12345678" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2024-05-28T10:00:00+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:dosage [
+     fhir:route [
+       fhir:coding ( [
+         a sct:78421000 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "78421000" ] ;
+         fhir:display [ fhir:v "Intramuscular route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

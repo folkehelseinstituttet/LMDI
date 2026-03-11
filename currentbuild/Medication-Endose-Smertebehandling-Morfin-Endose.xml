@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Endose-Smertebehandling-Morfin-Endose"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="N02AA01"/>
+        <display value="Morfin"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://dmp.no/fhir/NamingSystem/lmrLopenummer"/>
+      <code value="1234567"/>
+      <display value="Morfin endose 10 mg/ml"/>
+    </coding>
+    <coding>
+      <system value="http://dmp.no/fhir/NamingSystem/fest-varenummer"/>
+      <code value="476281"/>
+      <display value="Morfin injeksjonsvæske 10 mg/ml"/>
+    </coding>
+  </code>
+  <form>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+      <code value="11"/>
+      <display value="Injeksjonsvæske, oppløsning"/>
+    </coding>
+  </form>
+</Medication>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="Endose-Smertebehandling-Diagnose"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
+  </meta>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7110"/>
+      <code value="G89.1"/>
+      <display value="Akutt smerte"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="274663001"/>
+      <display value="Acute pain (finding)"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Endose-Smertebehandling-Pasient-Dnr"/>
+  </subject>
+  <stage>
+    <summary>
+      <text value="Akutt postoperativ smerte"/>
+    </summary>
+  </stage>
+</Condition>

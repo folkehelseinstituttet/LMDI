@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Endose-Smertebehandling-Administrering> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Endose-Smertebehandling-Administrering"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Endose-Smertebehandling-Morfin-Endose> ;
+     fhir:reference [ fhir:v "Medication/Endose-Smertebehandling-Morfin-Endose" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Endose-Smertebehandling-Pasient-Dnr> ;
+     fhir:reference [ fhir:v "Patient/Endose-Smertebehandling-Pasient-Dnr" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Endose-Smertebehandling-Episode> ;
+     fhir:reference [ fhir:v "Encounter/Endose-Smertebehandling-Episode" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-03-09T22:30:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Endose-Smertebehandling-Diagnose> ;
+     fhir:reference [ fhir:v "Condition/Endose-Smertebehandling-Diagnose" ]
+  ] ) ; # 
+  fhir:request [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Endose-Smertebehandling-Rekvirering> ;
+     fhir:reference [ fhir:v "MedicationRequest/Endose-Smertebehandling-Rekvirering" ]
+  ] ; # 
+  fhir:dosage [
+     fhir:route [
+       fhir:coding ( [
+         a sct:34206005 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "34206005" ] ;
+         fhir:display [ fhir:v "Subcutaneous route (qualifier value)" ]
+       ] [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.1.7477"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.1.7477>
+         ] ;
+         fhir:code [ fhir:v "3" ] ;
+         fhir:display [ fhir:v "Subkutan" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

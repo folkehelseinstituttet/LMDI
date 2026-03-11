@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Sykehjem-Minimum-Bundle"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.34.10.3"/>
+    <value value="sykehjem-minimum-bundle-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2025-03-10T09:00:00+01:00"/>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="Sykehjem-Minimum-Pasient"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+          <value value="12045678901"/>
+        </identifier>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="Sykehjem-Minimum-Avdeling"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.102"/>
+          <value value="7100001"/>
+        </identifier>
+        <name value="Avdeling 2B, Soltoppen sykehjem"/>
+        <partOf>
+          <reference value="Organization/Sykehjem-Minimum-Sykehjem"/>
+        </partOf>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="Sykehjem-Minimum-Sykehjem"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.101"/>
+          <value value="987654321"/>
+        </identifier>
+        <name value="Soltoppen sykehjem"/>
+        <partOf>
+          <reference value="Organization/Sykehjem-Minimum-Kommune"/>
+        </partOf>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="Sykehjem-Minimum-Kommune"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.101"/>
+          <value value="938726027"/>
+        </identifier>
+        <name value="Drammen kommune"/>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Encounter>
+        <id value="Sykehjem-Minimum-Episode"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+        </meta>
+        <status value="in-progress"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <serviceProvider>
+          <reference value="Organization/Sykehjem-Minimum-Avdeling"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Medication>
+        <id value="Sykehjem-Minimum-Paracetamol-Merkevare"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+        </meta>
+        <code>
+          <coding>
+            <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"/>
+            <code value="2ABAC272-0BCF-43F0-84BE-984074D92E15"/>
+            <display value="Paracet tab 500 mg"/>
+          </coding>
+        </code>
+      </Medication>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Medication"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Medication>
+        <id value="Sykehjem-Minimum-Oksykodon-Virkestoff"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+        </meta>
+        <code>
+          <coding>
+            <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"/>
+            <code value="C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"/>
+            <display value="Oksykodon"/>
+          </coding>
+        </code>
+      </Medication>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Medication"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationAdministration>
+        <id value="Sykehjem-Minimum-Administrering-Paracetamol"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+        </meta>
+        <status value="completed"/>
+        <medicationReference>
+          <reference value="Medication/Sykehjem-Minimum-Paracetamol-Merkevare"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/Sykehjem-Minimum-Pasient"/>
+        </subject>
+        <context>
+          <reference value="Encounter/Sykehjem-Minimum-Episode"/>
+        </context>
+        <effectiveDateTime value="2025-03-10T08:00:00+01:00"/>
+        <dosage>
+          <dose>
+            <value value="500"/>
+            <unit value="mg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg"/>
+          </dose>
+        </dosage>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationAdministration>
+        <id value="Sykehjem-Minimum-Administrering-Oksykodon"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+        </meta>
+        <status value="completed"/>
+        <medicationReference>
+          <reference value="Medication/Sykehjem-Minimum-Oksykodon-Virkestoff"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/Sykehjem-Minimum-Pasient"/>
+        </subject>
+        <context>
+          <reference value="Encounter/Sykehjem-Minimum-Episode"/>
+        </context>
+        <effectiveDateTime value="2025-03-10T08:15:00+01:00"/>
+        <dosage>
+          <dose>
+            <value value="5"/>
+            <unit value="mg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg"/>
+          </dose>
+        </dosage>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+</Bundle>

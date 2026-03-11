@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Sykehjem-Minimum-Administrering-Oksykodon"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="Medication/Sykehjem-Minimum-Oksykodon-Virkestoff"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Sykehjem-Minimum-Pasient"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Sykehjem-Minimum-Episode"/>
+  </context>
+  <effectiveDateTime value="2025-03-10T08:15:00+01:00"/>
+  <dosage>
+    <dose>
+      <value value="5"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

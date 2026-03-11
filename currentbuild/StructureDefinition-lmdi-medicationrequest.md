@@ -23,7 +23,7 @@ Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [MedicationRequest/Rekvirering-1](MedicationRequest-Rekvirering-1.md), [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md), [MedicationRequest/Scenario-B-Rekvirering](MedicationRequest-Scenario-B-Rekvirering.md) and [MedicationRequest/Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md)
+* Examples for this Profile: [MedicationRequest/Endose-Smertebehandling-Rekvirering](MedicationRequest-Endose-Smertebehandling-Rekvirering.md), [MedicationRequest/Kjemoterapi-Full-Forrige-Rekvirering](MedicationRequest-Kjemoterapi-Full-Forrige-Rekvirering.md), [MedicationRequest/Kjemoterapi-Full-Rekvirering](MedicationRequest-Kjemoterapi-Full-Rekvirering.md), [MedicationRequest/Rekvirering-1](MedicationRequest-Rekvirering-1.md) and [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationrequest)
 

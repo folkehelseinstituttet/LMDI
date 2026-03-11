@@ -1,0 +1,664 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>Endosebasert smertebehandling med rekvirering, diagnose og administrering - JSON Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
+        v1.0.8</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/project.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+
+
+    <script type="text/javascript" src="assets/js/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" sizes="32x32" href="assets/images/favicon.ico" />
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <div id="segment-header" class="segment"> <!-- segment-header -->
+        <div class="container"> <!-- container -->
+            
+            <!-- Placeholder for child template header declarations -->
+
+
+<header class="fhi-header mb-0">
+    <div class="fhi-header__brand">
+        <div class="container fhi-header__brand-container">
+            <div class="fhi-header__brand-content">
+                <a class="fhi-header__logo" href="index.html">
+                    <i class="icon-fhi-logo fhi-header__logo-icon"></i>
+                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                </a>
+                <div class="fhi-header__project">
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.8 - ci-build
+                            
+                            
+                            
+                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
+                                title="Norway" />
+                            
+                            
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+        </div> <!-- /container -->
+    </div> <!-- /segment-header -->
+
+    <div class="container fhi-header__main-menu-alt-container">
+    <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
+        <div class="container fhi-main-menu-alt__container">
+            <div class="fhi-main-menu-alt__collapse">
+                <div id="menu">
+                    <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Hjem</a>
+  </li>
+  <li>
+    <a href="informasjonsmodell.html">Informasjonsmodell</a>
+  </li>
+  <li>
+    <a href="integrasjon.html">Integrasjon</a>
+  </li>
+  <li>
+    <a href="profiler.html">FHIR-profiler</a>
+  </li>
+  <li>
+    <a href="nedlastinger.html">Nedlastinger</a>
+  </li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
+        <div class="container p-0"> <!-- container -->
+            <ul class="breadcrumb p-2 mb-1">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Endosebasert smertebehandling med rekvirering, diagnose og administrering</b></li>
+                
+            </ul>
+        </div> <!-- /container -->
+    </div> <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment"> <!-- segment-content -->
+        <div class="container"> <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.8) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+<div class="fhi-nav-tabs border-bottom">
+    <ul class="nav nav-tabs undermeny mb-0">
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Bundle-Endose-Smertebehandling-Bundle.html">
+        Narrative Content
+    </a>
+</li>
+
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Bundle-Endose-Smertebehandling-Bundle.xml.html">
+        XML
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
+        JSON
+    </a>
+</li>
+
+        
+
+        
+        
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Bundle-Endose-Smertebehandling-Bundle.ttl.html">
+        TTL
+    </a>
+</li>
+
+        
+
+        
+    </ul>
+</div>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Endosebasert smertebehandling med rekvirering, diagnose og administrering - JSON Representation</h2>
+
+
+<p><a href="Bundle-Endose-Smertebehandling-Bundle.json" no-download="true">Raw json</a> | <a href="Bundle-Endose-Smertebehandling-Bundle.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Bundle.id">id</a>" : "Endose-Smertebehandling-Bundle",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-lmdi-bundle.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.578.1.34.10.3",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "endose-smertebehandling-bundle-001"
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "transaction",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a>" : "2025-03-10T08:00:00+01:00",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a>" : "Endose-Smertebehandling-Pasient-Dnr",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-patient.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.4.2",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "52030078901"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "2000-03-12",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Bergen",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">_district</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "4601",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bergen"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Patient"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Practitioner.id">id</a>" : "Endose-Smertebehandling-Rekvirent",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.4.4",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "7654321"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Practitioner"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a>" : "Endose-Smertebehandling-Sykehus",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Organization.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-organization.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.4.101",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "974557746"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.4.102",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "4204191"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "Haukeland universitetssjukehus",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "physical",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Bergen",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">_district</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+                  "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "4601",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bergen"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Organization"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/encounter.html">resourceType</a>" : "Encounter",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Encounter.id">id</a>" : "Endose-Smertebehandling-Episode",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Encounter.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-encounter.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#Encounter.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "stringIdentifier",
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "NPR-HUS-2025-4567"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.status">status</a>" : "finished",
+        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.class">class</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IMP",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "inpatient encounter"
+        },
+        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.serviceProvider">serviceProvider</a>" : {
+          <a href="Organization-Endose-Smertebehandling-Sykehus.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Endose-Smertebehandling-Sykehus"
+        }
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Encounter"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/condition.html">resourceType</a>" : "Condition",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Condition.id">id</a>" : "Endose-Smertebehandling-Diagnose",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Condition.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-condition.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.7110",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "G89.1",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Akutt smerte"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "274663001",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Acute pain (finding)"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">subject</a>" : {
+          <a href="Patient-Endose-Smertebehandling-Pasient-Dnr.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Endose-Smertebehandling-Pasient-Dnr"
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage">stage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage.summary">summary</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Akutt postoperativ smerte"
+            }
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Condition"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Medication.id">id</a>" : "Endose-Smertebehandling-Morfin-Endose",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-medication.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#Medication.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.whocc.no/atc",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "N02AA01",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Morfin"
+                }
+              ]
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1234567",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Morfin endose 10 mg/ml"
+            },
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://dmp.no/fhir/NamingSystem/fest-varenummer",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "476281",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Morfin injeksjonsvæske 10 mg/ml"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.form">form</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "11",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Injeksjonsvæske, oppløsning"
+            }
+          ]
+        }
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Medication"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html">resourceType</a>" : "MedicationRequest",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.id">id</a>" : "Endose-Smertebehandling-Rekvirering",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-medicationrequest.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a>" : "order",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication_x_">medicationReference</a>" : {
+          <a href="Medication-Endose-Smertebehandling-Morfin-Endose.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Endose-Smertebehandling-Morfin-Endose"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>" : {
+          <a href="Patient-Endose-Smertebehandling-Pasient-Dnr.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Endose-Smertebehandling-Pasient-Dnr"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.encounter">encounter</a>" : {
+          <a href="Encounter-Endose-Smertebehandling-Episode.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Endose-Smertebehandling-Episode"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.authoredOn">authoredOn</a>" : "2025-03-09",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.requester">requester</a>" : {
+          <a href="Practitioner-Endose-Smertebehandling-Rekvirent.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/Endose-Smertebehandling-Rekvirent"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.reasonReference">reasonReference</a>" : [
+          {
+            <a href="Condition-Endose-Smertebehandling-Diagnose.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/Endose-Smertebehandling-Diagnose"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationRequest"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "Endose-Smertebehandling-Administrering",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            <a href="StructureDefinition-lmdi-medicationadministration.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>" : {
+          <a href="Medication-Endose-Smertebehandling-Morfin-Endose.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Endose-Smertebehandling-Morfin-Endose"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+          <a href="Patient-Endose-Smertebehandling-Pasient-Dnr.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Endose-Smertebehandling-Pasient-Dnr"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>" : {
+          <a href="Encounter-Endose-Smertebehandling-Episode.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Endose-Smertebehandling-Episode"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2025-03-09T22:30:00+01:00",
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.reasonReference">reasonReference</a>" : [
+          {
+            <a href="Condition-Endose-Smertebehandling-Diagnose.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/Endose-Smertebehandling-Diagnose"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+          <a href="MedicationRequest-Endose-Smertebehandling-Rekvirering.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/Endose-Smertebehandling-Rekvirering"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage">dosage</a>" : {
+          "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.route">route</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "34206005",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Subcutaneous route (qualifier value)"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.7477",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "3",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Subkutan"
+              }
+            ]
+          },
+          "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 5,
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "mg",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+          }
+        }
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "MedicationAdministration"
+      }
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+</div> <!-- /inner-wrapper -->
+</div> <!-- /row -->
+</div> <!-- /container -->
+</div> <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
+<!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
+    <div class="container"> <!-- container -->
+        <div class="container-fluid">
+            
+            <div class="inner-wrapper p-3">
+                <p class="m-0">
+                    IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
+                        href="https://www.fhi.no">Folkehelseinstituttet</a>.
+                    Package hl7.fhir.no.lmdi#1.0.8 based on <a
+                        style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span
+                        title="Wed, Mar 11, 2026 14:49+0000">2026-03-11</span>
+                    <br />
+                    <span style="color: var(--footer-highlight-text-color)">
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    </span>
+                </p>
+            </div> <!-- /inner-wrapper -->
+        </div>
+    </div><!-- /container -->
+</footer> <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden d-none"> <!-- segment-post-footer -->
+    <div class="container"> <!-- container -->
+    </div> <!-- /container -->
+</div> <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<script id="page-data" type="application/json">
+  {
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Endosebasert smertebehandling med rekvirering, diagnose og administrering</b></li>"
+  }
+</script>
+<script type="text/javascript">
+    const pageData = JSON.parse(document.getElementById("page-data").textContent);
+
+    const secondLevel = (key) => {
+        if (pageData.breadcrumb) {
+            const liRegex = /<li>(.*?)<\/li>/g;
+            const listItems = [...pageData.breadcrumb.matchAll(liRegex)].map(match => match[1].trim());
+            return listItems[1]?.includes(key) || false;
+        }
+        return false;
+    };
+
+    // Style FHI menu
+    const classMenuNav = 'fhi-main-menu-alt__nav',
+        classMenuNavItem = 'fhi-main-menu-alt__nav-item',
+        classMenuNavLink = 'fhi-main-menu-alt__nav-link';
+    const menu = document.getElementById('menu');
+    const ul = menu.querySelector('ul');
+    ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+    ul.querySelectorAll('li').forEach(li => {
+        li.classList.add(classMenuNavItem);
+        li.querySelectorAll('a').forEach(a => {
+            a.classList.add('nav-link', classMenuNavLink);
+        });
+
+        if (li.classList.contains('dropdown')) {
+            li.addEventListener('click', () => {
+                li.classList.toggle('show');
+                li.querySelector('ul').classList.toggle('show');
+            });
+        }
+    });
+
+    // Set active class on menu item
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
+    menuItems.forEach(item => {
+        const menuLink = item.querySelector('a').getAttribute('href');
+        if (menuLink === page) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+        else if (secondLevel(menuLink)) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+    });
+
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
+</script>
+<!-- Analytics Below
+  ================================================== -->
+</body>
+
+</html>
+

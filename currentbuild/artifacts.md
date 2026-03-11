@@ -88,20 +88,41 @@ These are example instances that show what data produced and consumed by systems
 | | |
 | :--- | :--- |
 | [Administrering-1-Oralt](MedicationAdministration-Administrering-1-Oralt.md) | Eksempel på administrering av legemiddel |
-| [Administrering-10](MedicationAdministration-Administrering-10.md) | Utfyllende eksempel, f.eks. om alt rapporteres som én melding. Bruker contained - bundle er å foretrekke for melding. |
 | [Administrering-2-Infusjon](MedicationAdministration-Administrering-2-Infusjon.md) | Eksempel på administrering av legemiddel - infusjon |
-| [Administrering-20](MedicationAdministration-Administrering-20.md) | Utfyllende eksempel - contained med minimal medisinreferanse |
-| [Administrering-30](MedicationAdministration-Administrering-30.md) | Eksempel med logiske referanser (identifier-baserte) - demonstrerer identifier-referanser |
+| [Administrering-Contained-Oksykodon-Oral](MedicationAdministration-Administrering-Contained-Oksykodon-Oral.md) | Contained eksempel med oral administrering av oksykodon og tilhørende pasient-, episode- og organisasjonskontekst. |
+| [Administrering-LogiskReferanse-Infusjon](MedicationAdministration-Administrering-LogiskReferanse-Infusjon.md) | Eksempel med logisk medikamentreferanse ved infusjon, uten lokal medication-ressurs i meldingen. |
+| [Administrering-Minimal-Botox-Intramuskular-Contained](MedicationAdministration-Administrering-Minimal-Botox-Intramuskular-Contained.md) | Minimalt contained eksempel med intramuskulær administrering og kun den nødvendige legemiddelreferansen lokalt i ressursen. |
+| [Contained bundle med oksykodonadministrering i sykehjem](Bundle-Bundle-Contained-Oksykodon-Sykehjem.md) | Eksempel på transaction-bundle med contained relaterte ressurser for en enkel sykehjemsadministrering. |
 | [Diagnose-1-ICD10-OID](Condition-Diagnose-1-ICD10-OID.md) | Eksempel på diagnose ICD-10 |
 | [Diagnose-2-SNOMED-CT](Condition-Diagnose-2-SNOMED-CT.md) | Eksempel på diagnose SNOMED CT og ICD-10 |
-| [Eksempel på LegemiddelregisterBundle med administreringer](Bundle-LegemiddelregisterBundle-1.md) | Eksempel på en transaction-bundle som inneholder to legemiddeladministreringer |
+| [Endose-Smertebehandling-Administrering](MedicationAdministration-Endose-Smertebehandling-Administrering.md) | Subkutan administrering med både SNOMED- og OID7477-koding av administrasjonsvei. |
+| [Endose-Smertebehandling-Diagnose](Condition-Endose-Smertebehandling-Diagnose.md) | Postoperativ smerte kodet med både ICD-10 og SNOMED CT. |
+| [Endose-Smertebehandling-Episode](Encounter-Endose-Smertebehandling-Episode.md) | Sykehusinnleggelse for pasient med akutt smertebehov. |
+| [Endose-Smertebehandling-Morfin-Endose](Medication-Endose-Smertebehandling-Morfin-Endose.md) | Morfin identifisert med både LMR-løpenummer og varenummer. |
+| [Endose-Smertebehandling-Pasient-Dnr](Patient-Endose-Smertebehandling-Pasient-Dnr.md) | Pasient med D-nummer i et innleggelsesscenario for postoperativ smertebehandling. |
+| [Endose-Smertebehandling-Rekvirent](Practitioner-Endose-Smertebehandling-Rekvirent.md) | Rekvirerende lege i sykehusscenarioet. |
+| [Endose-Smertebehandling-Rekvirering](MedicationRequest-Endose-Smertebehandling-Rekvirering.md) | Rekvirering av morfin ved postoperativ smerte. |
+| [Endose-Smertebehandling-Sykehus](Organization-Endose-Smertebehandling-Sykehus.md) | Sykehusorganisasjon der behandling og administrering skjer. |
+| [Endosebasert smertebehandling med rekvirering, diagnose og administrering](Bundle-Endose-Smertebehandling-Bundle.md) | Komplett bundle for postoperativ smertebehandling der legemidlet er identifisert med LMR-løpenummer og varenummer. |
 | [Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
+| [Fullt kjemoterapiscenario med lokal katalog, forrige rekvirering og aktiv administrering](Bundle-Kjemoterapi-Full-Bundle.md) | Komplett bundle som viser lokal legemiddelkatalog, diagnosekobling, begge NPR-identifikatorer og alle LMDI-extensions for rekvirering. |
 | [Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
+| [Kjemoterapi-Full-Administrering](MedicationAdministration-Kjemoterapi-Full-Administrering.md) | Infusjon av lokalregistrert oksaliplatin med request-, diagnose- og hastighetsinformasjon. |
+| [Kjemoterapi-Full-Diagnose](Condition-Kjemoterapi-Full-Diagnose.md) | Diagnose knyttet til kjemoterapiregimet. |
+| [Kjemoterapi-Full-Episode](Encounter-Kjemoterapi-Full-Episode.md) | Kjemoterapiepisode med både string- og UUID-basert NPR-identifikator. |
+| [Kjemoterapi-Full-Forrige-Rekvirering](MedicationRequest-Kjemoterapi-Full-Forrige-Rekvirering.md) | Tidligere rekvirering i samme kurforløp. |
+| [Kjemoterapi-Full-Helsepersonell](Practitioner-Kjemoterapi-Full-Helsepersonell.md) | Onkolog som rekvirerer kuren. |
+| [Kjemoterapi-Full-Oksaliplatin-LokalKatalog](Medication-Kjemoterapi-Full-Oksaliplatin-LokalKatalog.md) | Lokalregistrert oksaliplatin med ingredient-reference og ATC-klassifisering. |
+| [Kjemoterapi-Full-Organisasjon](Organization-Kjemoterapi-Full-Organisasjon.md) | Onkologisk avdeling som gjennomfører kjemoterapien. |
+| [Kjemoterapi-Full-Pasient](Patient-Kjemoterapi-Full-Pasient.md) | Kreftpasient med fullere demografisk og geografisk kontekst. |
+| [Kjemoterapi-Full-Rekvirering](MedicationRequest-Kjemoterapi-Full-Rekvirering.md) | Aktiv rekvirering i FOLFOX6-regime med alle LMDI-extensions. |
+| [Kjemoterapi-Full-Virkestoff](Substance-Kjemoterapi-Full-Virkestoff.md) | Virkestoff for lokalregistrert oksaliplatin. |
+| [Legemiddel-LokalKatalog-Kalsiumklorid-Infusjon](Medication-Legemiddel-LokalKatalog-Kalsiumklorid-Infusjon.md) | Eksempel på lokalt registrert legemiddel med ingredient som CodeableConcept. |
 | [Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md) | Eksempel på legemiddel |
 | [Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md) | Eksempel på legemiddel - Paracetamol |
 | [Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md) | Eksempel på legemiddel - paking |
-| [Medisin-4-LokaltLegemiddel](Medication-Medisin-4-LokaltLegemiddel.md) | Eksempel på legemiddel fra lokal legemiddelkatalog |
+| [Minimumsrapportering fra sykehjem med to administreringer](Bundle-Sykehjem-Minimum-Bundle.md) | Transaction-bundle med kun nødvendige felter, organisasjonshierarki og to ulike legemiddelslicer. |
 | [Organisasjon-1-Sykehjem](Organization-Organisasjon-1-Sykehjem.md) | Eksempel på sykehjem i primærhelsetjenesten |
 | [Organisasjon-2-Avdeling](Organization-Organisasjon-2-Avdeling.md) | Eksempel på spesialistavdeling |
 | [Organisasjon-3-Sykehus](Organization-Organisasjon-3-Sykehus.md) | Eksempel på sykehusorganisasjon |
@@ -109,33 +130,14 @@ These are example instances that show what data produced and consumed by systems
 | [Pasient-2-FNR](Patient-Pasient-2-FNR.md) | Eksempel på pasient med fødselsnummer |
 | [Rekvirering-1](MedicationRequest-Rekvirering-1.md) | Eksempel på legemiddelrekvirering av Paracet |
 | [Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |
-| [Scenario A - Sykehjemsadministrering Bundle](Bundle-Scenario-A-Bundle.md) | Komplett Bundle med sykehjemsadministrering, organisasjonshierarki og to administreringer |
-| [Scenario B - Rekvirering og administrering Bundle](Bundle-Scenario-B-Bundle.md) | Komplett Bundle med rekvirering, administrering og diagnose |
-| [Scenario C - Kjemoterapi Bundle](Bundle-Scenario-C-Bundle.md) | Komplett Bundle med kjemoterapibehandling, lokal legemiddelkatalog og alle extensions |
-| [Scenario-A-Administrering-Oksykodon](MedicationAdministration-Scenario-A-Administrering-Oksykodon.md) | Scenario A - Administrering av Oksykodon mikstur |
-| [Scenario-A-Administrering-Paracetamol](MedicationAdministration-Scenario-A-Administrering-Paracetamol.md) | Scenario A - Administrering av Paracetamol |
-| [Scenario-A-Episode](Encounter-Scenario-A-Episode.md) | Scenario A - Sykehjemsopphold |
-| [Scenario-A-Medisin-Oksykodon](Medication-Scenario-A-Medisin-Oksykodon.md) | Scenario A - Oksykodon mikstur 1 mg/ml |
-| [Scenario-A-Medisin-Paracetamol](Medication-Scenario-A-Medisin-Paracetamol.md) | Scenario A - Paracetamol 500 mg tablett |
-| [Scenario-A-Org-Avdeling](Organization-Scenario-A-Org-Avdeling.md) | Scenario A - Sykehjemsavdeling |
-| [Scenario-A-Org-Kommune](Organization-Scenario-A-Org-Kommune.md) | Scenario A - Kommune |
-| [Scenario-A-Org-Sykehjem](Organization-Scenario-A-Org-Sykehjem.md) | Scenario A - Sykehjem |
-| [Scenario-A-Pasient](Patient-Scenario-A-Pasient.md) | Scenario A - Sykehjemspasient |
-| [Scenario-B-Administrering](MedicationAdministration-Scenario-B-Administrering.md) | Scenario B - Administrering av Morfin subkutant |
-| [Scenario-B-Diagnose](Condition-Scenario-B-Diagnose.md) | Scenario B - Postoperativ smerte |
-| [Scenario-B-Episode](Encounter-Scenario-B-Episode.md) | Scenario B - Sykehusinnleggelse |
-| [Scenario-B-Helsepersonell](Practitioner-Scenario-B-Helsepersonell.md) | Scenario B - Rekvirerende lege |
-| [Scenario-B-Medisin](Medication-Scenario-B-Medisin.md) | Scenario B - Morfin injeksjonsvæske |
-| [Scenario-B-Organisasjon](Organization-Scenario-B-Organisasjon.md) | Scenario B - Sykehus |
-| [Scenario-B-Pasient](Patient-Scenario-B-Pasient.md) | Scenario B - Pasient med D-nummer |
-| [Scenario-B-Rekvirering](MedicationRequest-Scenario-B-Rekvirering.md) | Scenario B - Rekvirering av Morfin |
-| [Scenario-C-Administrering](MedicationAdministration-Scenario-C-Administrering.md) | Scenario C - Infusjon av Oksaliplatin |
-| [Scenario-C-Episode](Encounter-Scenario-C-Episode.md) | Scenario C - Kjemoterapibehandling |
-| [Scenario-C-Helsepersonell](Practitioner-Scenario-C-Helsepersonell.md) | Scenario C - Onkolog |
-| [Scenario-C-Medisin](Medication-Scenario-C-Medisin.md) | Scenario C - Oksaliplatin fra lokal legemiddelkatalog |
-| [Scenario-C-Organisasjon](Organization-Scenario-C-Organisasjon.md) | Scenario C - Onkologisk avdeling |
-| [Scenario-C-Pasient](Patient-Scenario-C-Pasient.md) | Scenario C - Kreftpasient |
-| [Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md) | Scenario C - FOLFOX6 kjemoterapirekvirering med alle extensions |
-| [Scenario-C-Virkestoff](Substance-Scenario-C-Virkestoff.md) | Scenario C - Oksaliplatin virkestoff |
+| [Sykehjem-Minimum-Administrering-Oksykodon](MedicationAdministration-Sykehjem-Minimum-Administrering-Oksykodon.md) | Minimumsscenario - administrering av oksykodon som virkestoffidentifisert legemiddel. |
+| [Sykehjem-Minimum-Administrering-Paracetamol](MedicationAdministration-Sykehjem-Minimum-Administrering-Paracetamol.md) | Minimumsscenario - tablettadministrering uten valgfri kontekst utover episode. |
+| [Sykehjem-Minimum-Avdeling](Organization-Sykehjem-Minimum-Avdeling.md) | Minimumsscenario - avdelingen som administrerer legemidlet. |
+| [Sykehjem-Minimum-Episode](Encounter-Sykehjem-Minimum-Episode.md) | Minimumsscenario - pågående sykehjemsopphold. |
+| [Sykehjem-Minimum-Kommune](Organization-Sykehjem-Minimum-Kommune.md) | Minimumsscenario - overordnet kommuneorganisasjon. |
+| [Sykehjem-Minimum-Oksykodon-Virkestoff](Medication-Sykehjem-Minimum-Oksykodon-Virkestoff.md) | Minimumsscenario - oksykodon identifisert med FEST virkestoff-id. |
+| [Sykehjem-Minimum-Paracetamol-Merkevare](Medication-Sykehjem-Minimum-Paracetamol-Merkevare.md) | Minimumsscenario - paracetamol identifisert med FEST merkevare. |
+| [Sykehjem-Minimum-Pasient](Patient-Sykehjem-Minimum-Pasient.md) | Minimumsscenario - pasient identifisert med fødselsnummer. |
+| [Sykehjem-Minimum-Sykehjem](Organization-Sykehjem-Minimum-Sykehjem.md) | Minimumsscenario - institusjonen som avdelingen tilhører. |
 | [Virkestoff-1-Oksykodon](Substance-Virkestoff-1-Oksykodon.md) | Eksempel på virkestoff - Oksykodon |
 

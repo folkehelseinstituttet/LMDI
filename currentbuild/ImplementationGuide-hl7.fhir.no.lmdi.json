@@ -875,18 +875,6 @@
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
-        "reference" : "MedicationAdministration/Administrering-10"
-      },
-      "name" : "Administrering-10",
-      "description" : "Utfyllende eksempel, f.eks. om alt rapporteres som én melding. Bruker contained - bundle er å foretrekke for melding.",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationAdministration"
-      }],
-      "reference" : {
         "reference" : "MedicationAdministration/Administrering-2-Infusjon"
       },
       "name" : "Administrering-2-Infusjon",
@@ -899,10 +887,10 @@
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
-        "reference" : "MedicationAdministration/Administrering-20"
+        "reference" : "MedicationAdministration/Administrering-Contained-Oksykodon-Oral"
       },
-      "name" : "Administrering-20",
-      "description" : "Utfyllende eksempel - contained med minimal medisinreferanse",
+      "name" : "Administrering-Contained-Oksykodon-Oral",
+      "description" : "Contained eksempel med oral administrering av oksykodon og tilhørende pasient-, episode- og organisasjonskontekst.",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
     },
     {
@@ -911,10 +899,22 @@
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
-        "reference" : "MedicationAdministration/Administrering-30"
+        "reference" : "MedicationAdministration/Administrering-LogiskReferanse-Infusjon"
       },
-      "name" : "Administrering-30",
-      "description" : "Eksempel med logiske referanser (identifier-baserte) - demonstrerer identifier-referanser",
+      "name" : "Administrering-LogiskReferanse-Infusjon",
+      "description" : "Eksempel med logisk medikamentreferanse ved infusjon, uten lokal medication-ressurs i meldingen.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Administrering-Minimal-Botox-Intramuskular-Contained"
+      },
+      "name" : "Administrering-Minimal-Botox-Intramuskular-Contained",
+      "description" : "Minimalt contained eksempel med intramuskulær administrering og kun den nødvendige legemiddelreferansen lokalt i ressursen.",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
     },
     {
@@ -928,6 +928,18 @@
       "name" : "ATC Kodesystem ValueSet",
       "description" : "ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Bundle-Contained-Oksykodon-Sykehjem"
+      },
+      "name" : "Contained bundle med oksykodonadministrering i sykehjem",
+      "description" : "Eksempel på transaction-bundle med contained relaterte ressurser for en enkel sykehjemsadministrering.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
     },
     {
       "extension" : [{
@@ -980,13 +992,109 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Endose-Smertebehandling-Administrering"
+      },
+      "name" : "Endose-Smertebehandling-Administrering",
+      "description" : "Subkutan administrering med både SNOMED- og OID7477-koding av administrasjonsvei.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/Endose-Smertebehandling-Diagnose"
+      },
+      "name" : "Endose-Smertebehandling-Diagnose",
+      "description" : "Postoperativ smerte kodet med både ICD-10 og SNOMED CT.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Endose-Smertebehandling-Episode"
+      },
+      "name" : "Endose-Smertebehandling-Episode",
+      "description" : "Sykehusinnleggelse for pasient med akutt smertebehov.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Endose-Smertebehandling-Morfin-Endose"
+      },
+      "name" : "Endose-Smertebehandling-Morfin-Endose",
+      "description" : "Morfin identifisert med både LMR-løpenummer og varenummer.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Endose-Smertebehandling-Pasient-Dnr"
+      },
+      "name" : "Endose-Smertebehandling-Pasient-Dnr",
+      "description" : "Pasient med D-nummer i et innleggelsesscenario for postoperativ smertebehandling.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/Endose-Smertebehandling-Rekvirent"
+      },
+      "name" : "Endose-Smertebehandling-Rekvirent",
+      "description" : "Rekvirerende lege i sykehusscenarioet.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Endose-Smertebehandling-Rekvirering"
+      },
+      "name" : "Endose-Smertebehandling-Rekvirering",
+      "description" : "Rekvirering av morfin ved postoperativ smerte.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Endose-Smertebehandling-Sykehus"
+      },
+      "name" : "Endose-Smertebehandling-Sykehus",
+      "description" : "Sykehusorganisasjon der behandling og administrering skjer.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/LegemiddelregisterBundle-1"
+        "reference" : "Bundle/Endose-Smertebehandling-Bundle"
       },
-      "name" : "Eksempel på LegemiddelregisterBundle med administreringer",
-      "description" : "Eksempel på en transaction-bundle som inneholder to legemiddeladministreringer",
+      "name" : "Endosebasert smertebehandling med rekvirering, diagnose og administrering",
+      "description" : "Komplett bundle for postoperativ smertebehandling der legemidlet er identifisert med LMR-løpenummer og varenummer.",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
     },
     {
@@ -1012,6 +1120,18 @@
       "name" : "Episode-1-Sykehus",
       "description" : "Eksempel på episode i spesialisthelsetjenesten",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/Kjemoterapi-Full-Bundle"
+      },
+      "name" : "Fullt kjemoterapiscenario med lokal katalog, forrige rekvirering og aktiv administrering",
+      "description" : "Komplett bundle som viser lokal legemiddelkatalog, diagnosekobling, begge NPR-identifikatorer og alle LMDI-extensions for rekvirering.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
     },
     {
       "extension" : [{
@@ -1060,6 +1180,126 @@
       "name" : "Helsepersonell-2-Uten-HPR",
       "description" : "Eksempel på rekvirent uten HPR-nummer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Kjemoterapi-Full-Administrering"
+      },
+      "name" : "Kjemoterapi-Full-Administrering",
+      "description" : "Infusjon av lokalregistrert oksaliplatin med request-, diagnose- og hastighetsinformasjon.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/Kjemoterapi-Full-Diagnose"
+      },
+      "name" : "Kjemoterapi-Full-Diagnose",
+      "description" : "Diagnose knyttet til kjemoterapiregimet.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Kjemoterapi-Full-Episode"
+      },
+      "name" : "Kjemoterapi-Full-Episode",
+      "description" : "Kjemoterapiepisode med både string- og UUID-basert NPR-identifikator.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Kjemoterapi-Full-Forrige-Rekvirering"
+      },
+      "name" : "Kjemoterapi-Full-Forrige-Rekvirering",
+      "description" : "Tidligere rekvirering i samme kurforløp.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/Kjemoterapi-Full-Helsepersonell"
+      },
+      "name" : "Kjemoterapi-Full-Helsepersonell",
+      "description" : "Onkolog som rekvirerer kuren.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Kjemoterapi-Full-Oksaliplatin-LokalKatalog"
+      },
+      "name" : "Kjemoterapi-Full-Oksaliplatin-LokalKatalog",
+      "description" : "Lokalregistrert oksaliplatin med ingredient-reference og ATC-klassifisering.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Kjemoterapi-Full-Organisasjon"
+      },
+      "name" : "Kjemoterapi-Full-Organisasjon",
+      "description" : "Onkologisk avdeling som gjennomfører kjemoterapien.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Kjemoterapi-Full-Pasient"
+      },
+      "name" : "Kjemoterapi-Full-Pasient",
+      "description" : "Kreftpasient med fullere demografisk og geografisk kontekst.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Kjemoterapi-Full-Rekvirering"
+      },
+      "name" : "Kjemoterapi-Full-Rekvirering",
+      "description" : "Aktiv rekvirering i FOLFOX6-regime med alle LMDI-extensions.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/Kjemoterapi-Full-Virkestoff"
+      },
+      "name" : "Kjemoterapi-Full-Virkestoff",
+      "description" : "Virkestoff for lokalregistrert oksaliplatin.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
     },
     {
       "extension" : [{
@@ -1120,6 +1360,18 @@
       "name" : "Legemiddel Classification",
       "description" : "Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-LokalKatalog-Kalsiumklorid-Infusjon"
+      },
+      "name" : "Legemiddel-LokalKatalog-Kalsiumklorid-Infusjon",
+      "description" : "Eksempel på lokalt registrert legemiddel med ingredient som CodeableConcept.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
       "extension" : [{
@@ -1256,14 +1508,14 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
+        "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Medication/Medisin-4-LokaltLegemiddel"
+        "reference" : "Bundle/Sykehjem-Minimum-Bundle"
       },
-      "name" : "Medisin-4-LokaltLegemiddel",
-      "description" : "Eksempel på legemiddel fra lokal legemiddelkatalog",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+      "name" : "Minimumsrapportering fra sykehjem med to administreringer",
+      "description" : "Transaction-bundle med kun nødvendige felter, organisasjonshierarki og to ulike legemiddelslicer.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
     },
     {
       "extension" : [{
@@ -1448,342 +1700,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Scenario-A-Bundle"
-      },
-      "name" : "Scenario A - Sykehjemsadministrering Bundle",
-      "description" : "Komplett Bundle med sykehjemsadministrering, organisasjonshierarki og to administreringer",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Scenario-B-Bundle"
-      },
-      "name" : "Scenario B - Rekvirering og administrering Bundle",
-      "description" : "Komplett Bundle med rekvirering, administrering og diagnose",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/Scenario-C-Bundle"
-      },
-      "name" : "Scenario C - Kjemoterapi Bundle",
-      "description" : "Komplett Bundle med kjemoterapibehandling, lokal legemiddelkatalog og alle extensions",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationAdministration"
-      }],
-      "reference" : {
-        "reference" : "MedicationAdministration/Scenario-A-Administrering-Oksykodon"
-      },
-      "name" : "Scenario-A-Administrering-Oksykodon",
-      "description" : "Scenario A - Administrering av Oksykodon mikstur",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationAdministration"
-      }],
-      "reference" : {
-        "reference" : "MedicationAdministration/Scenario-A-Administrering-Paracetamol"
-      },
-      "name" : "Scenario-A-Administrering-Paracetamol",
-      "description" : "Scenario A - Administrering av Paracetamol",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Encounter"
-      }],
-      "reference" : {
-        "reference" : "Encounter/Scenario-A-Episode"
-      },
-      "name" : "Scenario-A-Episode",
-      "description" : "Scenario A - Sykehjemsopphold",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Scenario-A-Medisin-Oksykodon"
-      },
-      "name" : "Scenario-A-Medisin-Oksykodon",
-      "description" : "Scenario A - Oksykodon mikstur 1 mg/ml",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Scenario-A-Medisin-Paracetamol"
-      },
-      "name" : "Scenario-A-Medisin-Paracetamol",
-      "description" : "Scenario A - Paracetamol 500 mg tablett",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/Scenario-A-Org-Avdeling"
-      },
-      "name" : "Scenario-A-Org-Avdeling",
-      "description" : "Scenario A - Sykehjemsavdeling",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/Scenario-A-Org-Kommune"
-      },
-      "name" : "Scenario-A-Org-Kommune",
-      "description" : "Scenario A - Kommune",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/Scenario-A-Org-Sykehjem"
-      },
-      "name" : "Scenario-A-Org-Sykehjem",
-      "description" : "Scenario A - Sykehjem",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Scenario-A-Pasient"
-      },
-      "name" : "Scenario-A-Pasient",
-      "description" : "Scenario A - Sykehjemspasient",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationAdministration"
-      }],
-      "reference" : {
-        "reference" : "MedicationAdministration/Scenario-B-Administrering"
-      },
-      "name" : "Scenario-B-Administrering",
-      "description" : "Scenario B - Administrering av Morfin subkutant",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Condition"
-      }],
-      "reference" : {
-        "reference" : "Condition/Scenario-B-Diagnose"
-      },
-      "name" : "Scenario-B-Diagnose",
-      "description" : "Scenario B - Postoperativ smerte",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Encounter"
-      }],
-      "reference" : {
-        "reference" : "Encounter/Scenario-B-Episode"
-      },
-      "name" : "Scenario-B-Episode",
-      "description" : "Scenario B - Sykehusinnleggelse",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/Scenario-B-Helsepersonell"
-      },
-      "name" : "Scenario-B-Helsepersonell",
-      "description" : "Scenario B - Rekvirerende lege",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Scenario-B-Medisin"
-      },
-      "name" : "Scenario-B-Medisin",
-      "description" : "Scenario B - Morfin injeksjonsvæske",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/Scenario-B-Organisasjon"
-      },
-      "name" : "Scenario-B-Organisasjon",
-      "description" : "Scenario B - Sykehus",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Scenario-B-Pasient"
-      },
-      "name" : "Scenario-B-Pasient",
-      "description" : "Scenario B - Pasient med D-nummer",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationRequest"
-      }],
-      "reference" : {
-        "reference" : "MedicationRequest/Scenario-B-Rekvirering"
-      },
-      "name" : "Scenario-B-Rekvirering",
-      "description" : "Scenario B - Rekvirering av Morfin",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationAdministration"
-      }],
-      "reference" : {
-        "reference" : "MedicationAdministration/Scenario-C-Administrering"
-      },
-      "name" : "Scenario-C-Administrering",
-      "description" : "Scenario C - Infusjon av Oksaliplatin",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Encounter"
-      }],
-      "reference" : {
-        "reference" : "Encounter/Scenario-C-Episode"
-      },
-      "name" : "Scenario-C-Episode",
-      "description" : "Scenario C - Kjemoterapibehandling",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/Scenario-C-Helsepersonell"
-      },
-      "name" : "Scenario-C-Helsepersonell",
-      "description" : "Scenario C - Onkolog",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Scenario-C-Medisin"
-      },
-      "name" : "Scenario-C-Medisin",
-      "description" : "Scenario C - Oksaliplatin fra lokal legemiddelkatalog",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/Scenario-C-Organisasjon"
-      },
-      "name" : "Scenario-C-Organisasjon",
-      "description" : "Scenario C - Onkologisk avdeling",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Scenario-C-Pasient"
-      },
-      "name" : "Scenario-C-Pasient",
-      "description" : "Scenario C - Kreftpasient",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationRequest"
-      }],
-      "reference" : {
-        "reference" : "MedicationRequest/Scenario-C-Rekvirering"
-      },
-      "name" : "Scenario-C-Rekvirering",
-      "description" : "Scenario C - FOLFOX6 kjemoterapirekvirering med alle extensions",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Substance"
-      }],
-      "reference" : {
-        "reference" : "Substance/Scenario-C-Virkestoff"
-      },
-      "name" : "Scenario-C-Virkestoff",
-      "description" : "Scenario C - Oksaliplatin virkestoff",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -1792,6 +1708,114 @@
       "name" : "Status for legemiddeladministrering",
       "description" : "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Sykehjem-Minimum-Administrering-Oksykodon"
+      },
+      "name" : "Sykehjem-Minimum-Administrering-Oksykodon",
+      "description" : "Minimumsscenario - administrering av oksykodon som virkestoffidentifisert legemiddel.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Sykehjem-Minimum-Administrering-Paracetamol"
+      },
+      "name" : "Sykehjem-Minimum-Administrering-Paracetamol",
+      "description" : "Minimumsscenario - tablettadministrering uten valgfri kontekst utover episode.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Sykehjem-Minimum-Avdeling"
+      },
+      "name" : "Sykehjem-Minimum-Avdeling",
+      "description" : "Minimumsscenario - avdelingen som administrerer legemidlet.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Sykehjem-Minimum-Episode"
+      },
+      "name" : "Sykehjem-Minimum-Episode",
+      "description" : "Minimumsscenario - pågående sykehjemsopphold.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Sykehjem-Minimum-Kommune"
+      },
+      "name" : "Sykehjem-Minimum-Kommune",
+      "description" : "Minimumsscenario - overordnet kommuneorganisasjon.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Sykehjem-Minimum-Oksykodon-Virkestoff"
+      },
+      "name" : "Sykehjem-Minimum-Oksykodon-Virkestoff",
+      "description" : "Minimumsscenario - oksykodon identifisert med FEST virkestoff-id.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Sykehjem-Minimum-Paracetamol-Merkevare"
+      },
+      "name" : "Sykehjem-Minimum-Paracetamol-Merkevare",
+      "description" : "Minimumsscenario - paracetamol identifisert med FEST merkevare.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Sykehjem-Minimum-Pasient"
+      },
+      "name" : "Sykehjem-Minimum-Pasient",
+      "description" : "Minimumsscenario - pasient identifisert med fødselsnummer.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Sykehjem-Minimum-Sykehjem"
+      },
+      "name" : "Sykehjem-Minimum-Sykehjem",
+      "description" : "Minimumsscenario - institusjonen som avdelingen tilhører.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
     },
     {
       "extension" : [{

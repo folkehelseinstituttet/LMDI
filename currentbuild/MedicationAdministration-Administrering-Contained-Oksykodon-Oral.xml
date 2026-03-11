@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-Contained-Oksykodon-Oral"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <contained>
+    <Medication>
+      <id value="Legemiddel-Contained-Oksykodon-FestDose"/>
+      <meta>
+        <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+      </meta>
+      <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="N02AA05"/>
+            <display value="Oksykodon"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+      <code>
+        <coding>
+          <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
+          <code value="ID_48BD33D2-2838-4B81-8225-02391B7A4516"/>
+          <display value="Oxycodone Orifarm mikst oppl 1 mg/ml"/>
+        </coding>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="414984009"/>
+          <display value="Product containing oxycodone (medicinal product)"/>
+        </coding>
+      </code>
+      <form>
+        <coding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+          <code value="51"/>
+          <display value="Mikstur, oppløsning"/>
+        </coding>
+      </form>
+    </Medication>
+  </contained>
+  <contained>
+    <Patient>
+      <id value="Pasient-Contained-Fnr-Oslo"/>
+      <meta>
+        <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+      </meta>
+      <identifier>
+        <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+        <value value="13031353453"/>
+      </identifier>
+      <gender value="male"/>
+      <birthDate value="1953-03-13"/>
+      <address>
+        <district value="Oslo">
+          <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+            <valueCoding>
+              <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+              <code value="0301"/>
+              <display value="Oslo"/>
+            </valueCoding>
+          </extension>
+        </district>
+      </address>
+    </Patient>
+  </contained>
+  <contained>
+    <Practitioner>
+      <id value="Helsepersonell-Contained-Hpr"/>
+      <meta>
+        <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
+      </meta>
+      <identifier>
+        <system value="urn:oid:2.16.578.1.12.4.1.4.4"/>
+        <value value="9144900"/>
+      </identifier>
+    </Practitioner>
+  </contained>
+  <contained>
+    <Encounter>
+      <id value="Episode-Contained-Sykehjemsopphold"/>
+      <meta>
+        <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+      </meta>
+      <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier">
+        <extension url="stringIdentifier">
+          <valueString value="NPR123456789"/>
+        </extension>
+        <extension url="uuidIdentifier">
+          <valueUuid value="550e8400-e29b-41d4-a716-446655440000"/>
+        </extension>
+      </extension>
+      <status value="finished"/>
+      <class>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="IMP"/>
+        <display value="inpatient encounter"/>
+      </class>
+      <serviceProvider>
+        <reference value="#Organisasjon-Contained-Eldrehjem"/>
+      </serviceProvider>
+    </Encounter>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="Organisasjon-Contained-Eldrehjem"/>
+      <meta>
+        <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+      </meta>
+      <identifier>
+        <system value="urn:oid:2.16.578.1.12.4.1.4.101"/>
+        <value value="1234567890"/>
+      </identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+          <code value="prov"/>
+          <display value="Healthcare Provider"/>
+        </coding>
+      </type>
+      <name value="Lykkedalen eldrehjem"/>
+      <address>
+        <type value="physical"/>
+        <district value="Sigdal">
+          <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+            <valueCoding>
+              <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+              <code value="3025"/>
+              <display value="Sigdal"/>
+            </valueCoding>
+          </extension>
+        </district>
+      </address>
+    </Organization>
+  </contained>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="#Legemiddel-Contained-Oksykodon-FestDose"/>
+  </medicationReference>
+  <subject>
+    <reference value="#Pasient-Contained-Fnr-Oslo"/>
+  </subject>
+  <context>
+    <reference value="#Episode-Contained-Sykehjemsopphold"/>
+  </context>
+  <effectiveDateTime value="2024-05-28T13:14:00+02:00"/>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="421521009"/>
+        <display value="Swallow"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="5"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

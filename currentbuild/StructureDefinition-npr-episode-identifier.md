@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Episode](StructureDefinition-lmdi-encounter.md)
-* Examples for this Extension: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md), [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md)... Show 5 more, [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Scenario-A-Episode](Encounter-Scenario-A-Episode.md), [Encounter/Scenario-B-Episode](Encounter-Scenario-B-Episode.md), [Encounter/Scenario-C-Episode](Encounter-Scenario-C-Episode.md) and [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md)
+* Examples for this Extension: [Bundle/Bundle-Contained-Oksykodon-Sykehjem](Bundle-Bundle-Contained-Oksykodon-Sykehjem.md), [Bundle/Endose-Smertebehandling-Bundle](Bundle-Endose-Smertebehandling-Bundle.md), [Bundle/Kjemoterapi-Full-Bundle](Bundle-Kjemoterapi-Full-Bundle.md), [Encounter/Endose-Smertebehandling-Episode](Encounter-Endose-Smertebehandling-Episode.md)... Show 3 more, [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Kjemoterapi-Full-Episode](Encounter-Kjemoterapi-Full-Episode.md) and [MedicationAdministration/Administrering-Contained-Oksykodon-Oral](MedicationAdministration-Administrering-Contained-Oksykodon-Oral.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/npr-episode-identifier)
 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2026-03-11T13:36:49+00:00",
+  "date" : "2026-03-11T14:49:37+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

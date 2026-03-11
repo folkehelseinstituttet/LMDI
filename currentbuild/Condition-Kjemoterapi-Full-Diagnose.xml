@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="Kjemoterapi-Full-Diagnose"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
+  </meta>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7110"/>
+      <code value="C18.7"/>
+      <display value="Ondartet svulst i sigmoideum"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="363406005"/>
+      <display value="Malignant tumor of colon"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Kjemoterapi-Full-Pasient"/>
+  </subject>
+  <stage>
+    <summary>
+      <text value="Adjuvant kjemoterapi etter colorectal cancer"/>
+    </summary>
+  </stage>
+</Condition>

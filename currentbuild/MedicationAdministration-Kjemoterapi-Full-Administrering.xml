@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Kjemoterapi-Full-Administrering"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="Medication/Kjemoterapi-Full-Oksaliplatin-LokalKatalog"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Kjemoterapi-Full-Pasient"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Kjemoterapi-Full-Episode"/>
+  </context>
+  <effectivePeriod>
+    <start value="2025-03-10T09:00:00+01:00"/>
+    <end value="2025-03-10T11:00:00+01:00"/>
+  </effectivePeriod>
+  <reasonReference>
+    <reference value="Condition/Kjemoterapi-Full-Diagnose"/>
+  </reasonReference>
+  <request>
+    <reference value="MedicationRequest/Kjemoterapi-Full-Rekvirering"/>
+  </request>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="Intravenous route (qualifier value)"/>
+      </coding>
+      <coding>
+        <system value="urn:oid:2.16.578.1.12.4.1.1.7477"/>
+        <code value="7"/>
+        <display value="Intravenøs"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="170"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+    <rateRatio>
+      <numerator>
+        <value value="250"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="ml"/>
+      </numerator>
+      <denominator>
+        <value value="120"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="min"/>
+      </denominator>
+    </rateRatio>
+  </dosage>
+</MedicationAdministration>

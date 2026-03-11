@@ -44,9 +44,9 @@
     },
     "dose" : {
       "value" : 10,
-      "unit" : "ml",
+      "unit" : "mg",
       "system" : "http://unitsofmeasure.org",
-      "code" : "mL"
+      "code" : "mg"
     }
   }
 }

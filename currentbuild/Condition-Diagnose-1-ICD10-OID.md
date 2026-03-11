@@ -32,7 +32,12 @@
   },
   "subject" : {
     "reference" : "Patient/Pasient-2-FNR"
-  }
+  },
+  "stage" : [{
+    "summary" : {
+      "text" : "Indikasjonsdiagnose for legemiddelbehandling"
+    }
+  }]
 }
 
 ```
