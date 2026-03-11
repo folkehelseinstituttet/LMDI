@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Pasient-2-FNR"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+    <value value="13031353453"/>
+  </identifier>
+  <gender value="male"/>
+  <birthDate value="1953-03-13"/>
+  <address>
+    <district value="Bærum">
+      <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+        <valueCoding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+          <code value="3024"/>
+          <display value="Bærum"/>
+        </valueCoding>
+      </extension>
+    </district>
+  </address>
+</Patient>

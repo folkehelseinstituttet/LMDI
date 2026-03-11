@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Scenario-C-Administrering> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Scenario-C-Administrering"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Scenario-C-Medisin> ;
+     fhir:reference [ fhir:v "Medication/Scenario-C-Medisin" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Scenario-C-Pasient> ;
+     fhir:reference [ fhir:v "Patient/Scenario-C-Pasient" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Scenario-C-Episode> ;
+     fhir:reference [ fhir:v "Encounter/Scenario-C-Episode" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2025-03-10T09:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2025-03-10T11:00:00+01:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:request [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Scenario-C-Rekvirering> ;
+     fhir:reference [ fhir:v "MedicationRequest/Scenario-C-Rekvirering" ]
+  ] ; # 
+  fhir:dosage [
+     fhir:route [
+       fhir:coding ( [
+         a sct:47625008 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "47625008" ] ;
+         fhir:display [ fhir:v "Intravenous route (qualifier value)" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "170"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ] ;
+     fhir:rate [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "250"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "ml" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "120"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "min" ]
+       ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

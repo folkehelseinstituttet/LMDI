@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Scenario-B-Administrering"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="Medication/Scenario-B-Medisin"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Scenario-B-Pasient"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Scenario-B-Episode"/>
+  </context>
+  <effectiveDateTime value="2025-03-09T22:30:00+01:00"/>
+  <reasonReference>
+    <reference value="Condition/Scenario-B-Diagnose"/>
+  </reasonReference>
+  <request>
+    <reference value="MedicationRequest/Scenario-B-Rekvirering"/>
+  </request>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="34206005"/>
+        <display value="Subcutaneous route (qualifier value)"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="5"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

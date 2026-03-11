@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Scenario-A-Pasient"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+    <value value="12045678901"/>
+  </identifier>
+  <gender value="female"/>
+  <birthDate value="1945-04-12"/>
+  <address>
+    <district value="Drammen">
+      <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+        <valueCoding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+          <code value="3005"/>
+          <display value="Drammen"/>
+        </valueCoding>
+      </extension>
+    </district>
+  </address>
+</Patient>

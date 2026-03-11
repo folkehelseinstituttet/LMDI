@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Scenario-B-Organisasjon"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.101"/>
+    <value value="974557746"/>
+  </identifier>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.102"/>
+    <value value="4204191"/>
+  </identifier>
+  <name value="Haukeland universitetssjukehus"/>
+  <address>
+    <type value="physical"/>
+    <district value="Bergen">
+      <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+        <valueCoding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+          <code value="4601"/>
+          <display value="Bergen"/>
+        </valueCoding>
+      </extension>
+    </district>
+  </address>
+</Organization>

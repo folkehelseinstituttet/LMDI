@@ -1,0 +1,479 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Bundle/Scenario-A-Bundle> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Scenario-A-Bundle"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle>
+     ] )
+  ] ; # 
+  fhir:identifier [
+     fhir:system [
+       fhir:v "urn:oid:2.16.578.1.34.10.3"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.578.1.34.10.3>
+     ] ;
+     fhir:value [ fhir:v "scenario-a-bundle-001" ]
+  ] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:timestamp [ fhir:v "2025-03-10T09:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:entry ( [
+     fhir:resource ( [
+       a fhir:Patient ;
+       fhir:id [ fhir:v "Scenario-A-Pasient" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
+         ] )
+       ] ;
+       fhir:identifier ( [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.4.1"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.4.1>
+         ] ;
+         fhir:value [ fhir:v "12045678901" ]
+       ] ) ;
+       fhir:gender [ fhir:v "female" ] ;
+       fhir:birthDate [ fhir:v "1945-04-12"^^xsd:date ] ;
+       fhir:address ( [
+         fhir:district [
+           fhir:v "Drammen" ;
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
+               fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode>
+             ] ;
+             fhir:value [
+               a fhir:Coding ;
+               fhir:system [
+                 fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+                 fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+               ] ;
+               fhir:code [ fhir:v "3005" ] ;
+               fhir:display [ fhir:v "Drammen" ]
+             ]
+           ] )
+         ]
+       ] )
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Patient"^^xsd:anyURI ;
+         fhir:l fhir:Patient
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:Organization ;
+       fhir:id [ fhir:v "Scenario-A-Org-Avdeling" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+         ] )
+       ] ;
+       fhir:identifier ( [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.4.102"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.4.102>
+         ] ;
+         fhir:value [ fhir:v "7100001" ]
+       ] ) ;
+       fhir:name [ fhir:v "Avdeling 2B, Soltoppen sykehjem" ] ;
+       fhir:partOf [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Scenario-A-Org-Sykehjem> ;
+         fhir:reference [ fhir:v "Organization/Scenario-A-Org-Sykehjem" ]
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Organization"^^xsd:anyURI ;
+         fhir:l fhir:Organization
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:Organization ;
+       fhir:id [ fhir:v "Scenario-A-Org-Sykehjem" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+         ] )
+       ] ;
+       fhir:identifier ( [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.4.101"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.4.101>
+         ] ;
+         fhir:value [ fhir:v "987654321" ]
+       ] ) ;
+       fhir:name [ fhir:v "Soltoppen sykehjem" ] ;
+       fhir:address ( [
+         fhir:type [ fhir:v "physical" ] ;
+         fhir:district [
+           fhir:v "Drammen" ;
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
+               fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode>
+             ] ;
+             fhir:value [
+               a fhir:Coding ;
+               fhir:system [
+                 fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+                 fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+               ] ;
+               fhir:code [ fhir:v "3005" ] ;
+               fhir:display [ fhir:v "Drammen" ]
+             ]
+           ] )
+         ]
+       ] ) ;
+       fhir:partOf [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Scenario-A-Org-Kommune> ;
+         fhir:reference [ fhir:v "Organization/Scenario-A-Org-Kommune" ]
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Organization"^^xsd:anyURI ;
+         fhir:l fhir:Organization
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:Organization ;
+       fhir:id [ fhir:v "Scenario-A-Org-Kommune" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+         ] )
+       ] ;
+       fhir:identifier ( [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.4.101"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.4.101>
+         ] ;
+         fhir:value [ fhir:v "938726027" ]
+       ] ) ;
+       fhir:name [ fhir:v "Drammen kommune" ] ;
+       fhir:address ( [
+         fhir:type [ fhir:v "physical" ] ;
+         fhir:district [
+           fhir:v "Drammen" ;
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
+               fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode>
+             ] ;
+             fhir:value [
+               a fhir:Coding ;
+               fhir:system [
+                 fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+                 fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+               ] ;
+               fhir:code [ fhir:v "3005" ] ;
+               fhir:display [ fhir:v "Drammen" ]
+             ]
+           ] )
+         ]
+       ] )
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Organization"^^xsd:anyURI ;
+         fhir:l fhir:Organization
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:Encounter ;
+       fhir:id [ fhir:v "Scenario-A-Episode" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter>
+         ] )
+       ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "stringIdentifier"^^xsd:anyURI ;
+             fhir:l fhir:stringIdentifier
+           ] ;
+           fhir:value [
+             a fhir:String ;
+             fhir:v "NPR-SYK-2025-001"
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier>
+         ]
+       ] ) ;
+       fhir:status [ fhir:v "in-progress" ] ;
+       fhir:class [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+         ] ;
+         fhir:code [ fhir:v "IMP" ] ;
+         fhir:display [ fhir:v "inpatient encounter" ]
+       ] ;
+       fhir:serviceProvider [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Scenario-A-Org-Avdeling> ;
+         fhir:reference [ fhir:v "Organization/Scenario-A-Org-Avdeling" ]
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Encounter"^^xsd:anyURI ;
+         fhir:l fhir:Encounter
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "Scenario-A-Medisin-Paracetamol" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+         ] )
+       ] ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+               fhir:l <http://www.whocc.no/atc>
+             ] ;
+             fhir:code [ fhir:v "N02BE01" ] ;
+             fhir:display [ fhir:v "Paracetamol" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"^^xsd:anyURI ;
+             fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare>
+           ] ;
+           fhir:code [ fhir:v "2ABAC272-0BCF-43F0-84BE-984074D92E15" ] ;
+           fhir:display [ fhir:v "Paracet tab 500 mg" ]
+         ] )
+       ] ;
+       fhir:form [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:oid:2.16.578.1.12.4.1.1.7448"^^xsd:anyURI ;
+             fhir:l <urn:oid:2.16.578.1.12.4.1.1.7448>
+           ] ;
+           fhir:code [ fhir:v "1" ] ;
+           fhir:display [ fhir:v "Tablett" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Medication"^^xsd:anyURI ;
+         fhir:l fhir:Medication
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:Medication ;
+       fhir:id [ fhir:v "Scenario-A-Medisin-Oksykodon" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+         ] )
+       ] ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+               fhir:l <http://www.whocc.no/atc>
+             ] ;
+             fhir:code [ fhir:v "N02AA05" ] ;
+             fhir:display [ fhir:v "Oksykodon" ]
+           ] )
+         ]
+       ] ) ;
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"^^xsd:anyURI ;
+             fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff>
+           ] ;
+           fhir:code [ fhir:v "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9" ] ;
+           fhir:display [ fhir:v "Oksykodon" ]
+         ] )
+       ] ;
+       fhir:form [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:oid:2.16.578.1.12.4.1.1.7448"^^xsd:anyURI ;
+             fhir:l <urn:oid:2.16.578.1.12.4.1.1.7448>
+           ] ;
+           fhir:code [ fhir:v "51" ] ;
+           fhir:display [ fhir:v "Mikstur, oppløsning" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Medication"^^xsd:anyURI ;
+         fhir:l fhir:Medication
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationAdministration ;
+       fhir:id [ fhir:v "Scenario-A-Administrering-Paracetamol" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+         ] )
+       ] ;
+       fhir:status [ fhir:v "completed" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Scenario-A-Medisin-Paracetamol> ;
+         fhir:reference [ fhir:v "Medication/Scenario-A-Medisin-Paracetamol" ]
+       ] ;
+       fhir:subject [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Scenario-A-Pasient> ;
+         fhir:reference [ fhir:v "Patient/Scenario-A-Pasient" ]
+       ] ;
+       fhir:context [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Scenario-A-Episode> ;
+         fhir:reference [ fhir:v "Encounter/Scenario-A-Episode" ]
+       ] ;
+       fhir:effective [
+         a fhir:DateTime ;
+         fhir:v "2025-03-10T08:00:00+01:00"^^xsd:dateTime
+       ] ;
+       fhir:dosage [
+         fhir:route [
+           fhir:coding ( [
+             a sct:421521009 ;
+             fhir:system [
+               fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+               fhir:l <http://snomed.info/sct>
+             ] ;
+             fhir:code [ fhir:v "421521009" ] ;
+             fhir:display [ fhir:v "Swallow" ]
+           ] )
+         ] ;
+         fhir:dose [
+           fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "mg" ] ;
+           fhir:system [
+             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+             fhir:l <http://unitsofmeasure.org>
+           ] ;
+           fhir:code [ fhir:v "mg" ]
+         ]
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "MedicationAdministration"^^xsd:anyURI ;
+         fhir:l fhir:MedicationAdministration
+       ]
+     ]
+  ] [
+     fhir:resource ( [
+       a fhir:MedicationAdministration ;
+       fhir:id [ fhir:v "Scenario-A-Administrering-Oksykodon" ] ;
+       fhir:meta [
+         fhir:profile ( [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+         ] )
+       ] ;
+       fhir:status [ fhir:v "completed" ] ;
+       fhir:medication [
+         a fhir:Reference ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Scenario-A-Medisin-Oksykodon> ;
+         fhir:reference [ fhir:v "Medication/Scenario-A-Medisin-Oksykodon" ]
+       ] ;
+       fhir:subject [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Scenario-A-Pasient> ;
+         fhir:reference [ fhir:v "Patient/Scenario-A-Pasient" ]
+       ] ;
+       fhir:context [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Scenario-A-Episode> ;
+         fhir:reference [ fhir:v "Encounter/Scenario-A-Episode" ]
+       ] ;
+       fhir:effective [
+         a fhir:DateTime ;
+         fhir:v "2025-03-10T08:15:00+01:00"^^xsd:dateTime
+       ] ;
+       fhir:dosage [
+         fhir:route [
+           fhir:coding ( [
+             a sct:421521009 ;
+             fhir:system [
+               fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+               fhir:l <http://snomed.info/sct>
+             ] ;
+             fhir:code [ fhir:v "421521009" ] ;
+             fhir:display [ fhir:v "Swallow" ]
+           ] )
+         ] ;
+         fhir:dose [
+           fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+           fhir:unit [ fhir:v "ml" ] ;
+           fhir:system [
+             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+             fhir:l <http://unitsofmeasure.org>
+           ] ;
+           fhir:code [ fhir:v "ml" ]
+         ]
+       ]
+     ] ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "MedicationAdministration"^^xsd:anyURI ;
+         fhir:l fhir:MedicationAdministration
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

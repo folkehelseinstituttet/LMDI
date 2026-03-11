@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Scenario-C-Bundle"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.34.10.3"/>
+    <value value="scenario-c-bundle-001"/>
+  </identifier>
+  <type value="transaction"/>
+  <timestamp value="2025-03-10T12:00:00+01:00"/>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="Scenario-C-Pasient"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+          <value value="15076500565"/>
+        </identifier>
+        <gender value="male"/>
+        <birthDate value="1965-07-15"/>
+        <address>
+          <district value="Trondheim">
+            <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+              <valueCoding>
+                <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+                <code value="5001"/>
+                <display value="Trondheim"/>
+              </valueCoding>
+            </extension>
+          </district>
+        </address>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Practitioner>
+        <id value="Scenario-C-Helsepersonell"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.4"/>
+          <value value="8877665"/>
+        </identifier>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="Scenario-C-Organisasjon"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+        </meta>
+        <identifier>
+          <system value="urn:oid:2.16.578.1.12.4.1.4.102"/>
+          <value value="4201050"/>
+        </identifier>
+        <name value="Onkologisk avdeling, St. Olavs hospital"/>
+        <address>
+          <type value="physical"/>
+          <district value="Trondheim">
+            <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+              <valueCoding>
+                <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+                <code value="5001"/>
+                <display value="Trondheim"/>
+              </valueCoding>
+            </extension>
+          </district>
+        </address>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Encounter>
+        <id value="Scenario-C-Episode"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+        </meta>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier">
+          <extension url="stringIdentifier">
+            <valueString value="NPR-STOL-2025-789"/>
+          </extension>
+        </extension>
+        <status value="in-progress"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="IMP"/>
+          <display value="inpatient encounter"/>
+        </class>
+        <serviceProvider>
+          <reference value="Organization/Scenario-C-Organisasjon"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Medication>
+        <id value="Scenario-C-Medisin"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+        </meta>
+        <code>
+          <coding>
+            <system value="http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"/>
+            <code value="OXA-85-INF"/>
+            <display value="Oksaliplatin 85 mg/m2 infusjonsvæske"/>
+          </coding>
+        </code>
+        <form>
+          <coding>
+            <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+            <code value="9"/>
+            <display value="Infusjonsvæske, oppløsning"/>
+          </coding>
+        </form>
+        <ingredient>
+          <itemReference>
+            <reference value="Substance/Scenario-C-Virkestoff"/>
+          </itemReference>
+          <isActive value="true"/>
+        </ingredient>
+      </Medication>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Medication"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationRequest>
+        <id value="Scenario-C-Rekvirering"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+        </meta>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring">
+          <valueQuantity>
+            <value value="80"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </valueQuantity>
+        </extension>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime">
+          <valueString value="FOLFOX6"/>
+        </extension>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie">
+          <valueBoolean value="true"/>
+        </extension>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationReference>
+          <reference value="Medication/Scenario-C-Medisin"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/Scenario-C-Pasient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/Scenario-C-Episode"/>
+        </encounter>
+        <authoredOn value="2025-03-10"/>
+        <requester>
+          <reference value="Practitioner/Scenario-C-Helsepersonell"/>
+        </requester>
+      </MedicationRequest>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationRequest"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <MedicationAdministration>
+        <id value="Scenario-C-Administrering"/>
+        <meta>
+          <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+        </meta>
+        <status value="completed"/>
+        <medicationReference>
+          <reference value="Medication/Scenario-C-Medisin"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/Scenario-C-Pasient"/>
+        </subject>
+        <context>
+          <reference value="Encounter/Scenario-C-Episode"/>
+        </context>
+        <effectivePeriod>
+          <start value="2025-03-10T09:00:00+01:00"/>
+          <end value="2025-03-10T11:00:00+01:00"/>
+        </effectivePeriod>
+        <request>
+          <reference value="MedicationRequest/Scenario-C-Rekvirering"/>
+        </request>
+        <dosage>
+          <route>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="47625008"/>
+              <display value="Intravenous route (qualifier value)"/>
+            </coding>
+          </route>
+          <dose>
+            <value value="170"/>
+            <unit value="mg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg"/>
+          </dose>
+          <rateRatio>
+            <numerator>
+              <value value="250"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="ml"/>
+            </numerator>
+            <denominator>
+              <value value="120"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="min"/>
+            </denominator>
+          </rateRatio>
+        </dosage>
+      </MedicationAdministration>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="MedicationAdministration"/>
+    </request>
+  </entry>
+</Bundle>
