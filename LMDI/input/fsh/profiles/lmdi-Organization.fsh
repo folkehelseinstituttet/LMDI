@@ -82,7 +82,7 @@ Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
 * address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 
 // EKSEMPLER
-Instance: Organisasjon-1-Sykehjem
+Instance: Organisasjon-Eksempel-Sykehjem
 InstanceOf: Organisasjon
 Description: "Eksempel på sykehjem i primærhelsetjenesten"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
@@ -92,19 +92,19 @@ Description: "Eksempel på sykehjem i primærhelsetjenesten"
 * address.district = "Sigdal"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3025 "Sigdal"
 
-Instance: Organisasjon-2-Avdeling
+Instance: Organisasjon-Eksempel-Avdeling
 InstanceOf: Organisasjon
 Description: "Eksempel på spesialistavdeling"
 * identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
 * identifier[RSH].value = "4208723"
 * name = "Avdeling for epilepsi, poliklinikk"
 
-* partOf = Reference(Organisasjon-3-Sykehus)
+* partOf = Reference(Organisasjon-Eksempel-Sykehus)
 * address.type = #physical
 * address.district = "Oslo"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
 
-Instance: Organisasjon-3-Sykehus
+Instance: Organisasjon-Eksempel-Sykehus
 InstanceOf: Organisasjon
 Description: "Eksempel på sykehusorganisasjon"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"

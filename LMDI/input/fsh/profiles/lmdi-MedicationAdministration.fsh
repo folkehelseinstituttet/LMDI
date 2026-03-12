@@ -114,7 +114,7 @@ Description: "Verdisett som begrenses status til Legemiddeladministrering til he
 // =========================================
 // Examples
 // =========================================
-Instance: Administrering-1-Oralt
+Instance: Legemiddeladministrering-Eksempel-Oral
 InstanceOf: Legemiddeladministrering
 Description: "Eksempel på administrering av legemiddel"
 * status = #completed
@@ -130,7 +130,7 @@ Description: "Eksempel på administrering av legemiddel"
 * dosage.dose.system = "http://unitsofmeasure.org"
 * dosage.dose.code = #mg
 
-Instance: Administrering-2-Infusjon
+Instance: Legemiddeladministrering-Eksempel-Infusjon
 InstanceOf: Legemiddeladministrering
 Description: "Eksempel på administrering av legemiddel - infusjon"
 * status = #completed

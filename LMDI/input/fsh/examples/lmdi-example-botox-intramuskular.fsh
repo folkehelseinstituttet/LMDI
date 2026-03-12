@@ -1,10 +1,11 @@
-// Eksempel: minimal contained administrering med paknings-id og varenummer
+// Eksempel: intramuskular administrering med paknings-id og varenummer
 
-Instance: Administrering-Minimal-Botox-Intramuskular-Contained
+Instance: Legemiddeladministrering-Eksempel-Botox-Intramuskular
 InstanceOf: Legemiddeladministrering
-Description: "Minimalt contained eksempel med intramuskulær administrering og kun den nødvendige legemiddelreferansen lokalt i ressursen."
+Usage: #example
+Description: "Eksempel med intramuskular administrering av Botox og legemiddelreferanse med FEST paknings-id."
 * status = #completed
-* medicationReference = Reference(Legemiddel-Contained-Botox-FestPakning)
+* medicationReference = Reference(Legemiddel-Eksempel-Botox-FEST-Pakning)
 * subject = Reference(https://fhi.no/fhir/lmdi/pasient/12345678)
 * effectiveDateTime = "2024-05-28T10:00:00+02:00"
 * dosage.dose.value = 100.0
@@ -14,12 +15,11 @@ Description: "Minimalt contained eksempel med intramuskulær administrering og k
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code = #78421000
 * dosage.route.coding[SCT].display = "Intramuscular route (qualifier value)"
-* contained[+] = Legemiddel-Contained-Botox-FestPakning
 
-Instance: Legemiddel-Contained-Botox-FestPakning
+Instance: Legemiddel-Eksempel-Botox-FEST-Pakning
 InstanceOf: Legemiddel
-Usage: #inline
-Description: "Contained legemiddel med FEST paknings-id og varenummer."
+Usage: #example
+Description: "Legemiddel med FEST paknings-id og varenummer."
 * code.coding[FestLegemiddelpakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 * code.coding[FestLegemiddelpakning].code = #ID_00B35335-0DF7-4C98-8A0A-1148F4599D21
 * code.coding[FestLegemiddelpakning].display = "Botox pulv til inj væske, oppl 50 E"

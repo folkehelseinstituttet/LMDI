@@ -1,8 +1,9 @@
-// Eksempel: infusjon med logiske referanser
+// Eksempel: infusjon med logisk referanse
 // Demonstrerer bruk av identifier-referanser i stedet for literal-referanser
 
-Instance: Administrering-LogiskReferanse-Infusjon
+Instance: Legemiddeladministrering-Eksempel-LogiskReferanse-Infusjon
 InstanceOf: Legemiddeladministrering
+Usage: #example
 Description: "Eksempel med logisk medikamentreferanse ved infusjon, uten lokal medication-ressurs i meldingen."
 * status = #completed
 * medicationReference.identifier.system = "uri:eu:spor:idmp:mpid:dummy"
