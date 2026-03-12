@@ -58,7 +58,7 @@ Description: "Minimumsscenario - oksykodon identifisert med FEST virkestoff-id."
 * code.coding[FestVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
 * code.coding[FestVirkestoff].display = "Oksykodon"
 
-Instance: Legemiddeladministrering-Scenario-Sykehjem-Minimum-Paracetamol
+Instance: Administrering-Scenario-Sykehjem-Minimum-Paracetamol
 InstanceOf: Legemiddeladministrering
 Usage: #example
 Description: "Minimumsscenario - tablettadministrering uten valgfri kontekst utover episode."
@@ -72,7 +72,7 @@ Description: "Minimumsscenario - tablettadministrering uten valgfri kontekst uto
 * dosage.dose.system = "http://unitsofmeasure.org"
 * dosage.dose.code = #mg
 
-Instance: Legemiddeladministrering-Scenario-Sykehjem-Minimum-Oksykodon
+Instance: Administrering-Scenario-Sykehjem-Minimum-Oksykodon
 InstanceOf: Legemiddeladministrering
 Usage: #example
 Description: "Minimumsscenario - administrering av oksykodon som virkestoffidentifisert legemiddel."
@@ -124,10 +124,10 @@ Description: "Transaction-bundle med kun nødvendige felter, organisasjonshierar
 * entry[6].request.method = #POST
 * entry[6].request.url = "Medication"
 
-* entry[7].resource = Legemiddeladministrering-Scenario-Sykehjem-Minimum-Paracetamol
+* entry[7].resource = Administrering-Scenario-Sykehjem-Minimum-Paracetamol
 * entry[7].request.method = #POST
 * entry[7].request.url = "MedicationAdministration"
 
-* entry[8].resource = Legemiddeladministrering-Scenario-Sykehjem-Minimum-Oksykodon
+* entry[8].resource = Administrering-Scenario-Sykehjem-Minimum-Oksykodon
 * entry[8].request.method = #POST
 * entry[8].request.url = "MedicationAdministration"

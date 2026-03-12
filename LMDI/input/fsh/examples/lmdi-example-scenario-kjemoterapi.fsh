@@ -79,7 +79,7 @@ Description: "Lokalregistrert oksaliplatin med ingredient-reference og ATC-klass
 * ingredient.itemReference = Reference(Virkestoff-Scenario-Kjemoterapi-Full-Oksaliplatin)
 * ingredient.isActive = true
 
-Instance: Legemiddelrekvirering-Scenario-Kjemoterapi-Full-Forrige
+Instance: Rekvirering-Scenario-Kjemoterapi-Full-Forrige
 InstanceOf: Legemiddelrekvirering
 Usage: #example
 Description: "Tidligere rekvirering i samme kurforløp."
@@ -96,7 +96,7 @@ Description: "Tidligere rekvirering i samme kurforløp."
 * reportedBoolean = false
 * courseOfTherapyType.text = "Kjemoterapikur"
 
-Instance: Legemiddelrekvirering-Scenario-Kjemoterapi-Full-Gjeldende
+Instance: Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende
 InstanceOf: Legemiddelrekvirering
 Usage: #example
 Description: "Aktiv rekvirering i FOLFOX6-regime med alle LMDI-extensions."
@@ -109,7 +109,7 @@ Description: "Aktiv rekvirering i FOLFOX6-regime med alle LMDI-extensions."
 * requester = Reference(Helsepersonell-Scenario-Kjemoterapi-Full-Rekvirent)
 * encounter = Reference(Episode-Scenario-Kjemoterapi-Full-Innleggelse)
 * reasonReference = Reference(Diagnose-Scenario-Kjemoterapi-Full-Kreftdiagnose)
-* priorPrescription = Reference(Legemiddelrekvirering-Scenario-Kjemoterapi-Full-Forrige)
+* priorPrescription = Reference(Rekvirering-Scenario-Kjemoterapi-Full-Forrige)
 * authoredOn = "2025-03-10"
 * reportedBoolean = false
 * courseOfTherapyType.text = "Kjemoterapikur"
@@ -120,7 +120,7 @@ Description: "Aktiv rekvirering i FOLFOX6-regime med alle LMDI-extensions."
 * extension[delAvBehandlingsregime].valueString = "FOLFOX6"
 * extension[kliniskStudie].valueBoolean = true
 
-Instance: Legemiddeladministrering-Scenario-Kjemoterapi-Full-Oksaliplatin
+Instance: Administrering-Scenario-Kjemoterapi-Full-Oksaliplatin
 InstanceOf: Legemiddeladministrering
 Usage: #example
 Description: "Infusjon av lokalregistrert oksaliplatin med request-, diagnose- og hastighetsinformasjon."
@@ -128,7 +128,7 @@ Description: "Infusjon av lokalregistrert oksaliplatin med request-, diagnose- o
 * medicationReference = Reference(Legemiddel-Scenario-Kjemoterapi-Full-Oksaliplatin-LokalKatalog)
 * subject = Reference(Pasient-Scenario-Kjemoterapi-Full-Med-FNR)
 * context = Reference(Episode-Scenario-Kjemoterapi-Full-Innleggelse)
-* request = Reference(Legemiddelrekvirering-Scenario-Kjemoterapi-Full-Gjeldende)
+* request = Reference(Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende)
 * reasonReference = Reference(Diagnose-Scenario-Kjemoterapi-Full-Kreftdiagnose)
 * effectivePeriod.start = "2025-03-10T09:00:00+01:00"
 * effectivePeriod.end = "2025-03-10T11:00:00+01:00"
@@ -187,14 +187,14 @@ Description: "Komplett bundle som viser lokal legemiddelkatalog, diagnosekobling
 * entry[6].request.method = #POST
 * entry[6].request.url = "Medication"
 
-* entry[7].resource = Legemiddelrekvirering-Scenario-Kjemoterapi-Full-Forrige
+* entry[7].resource = Rekvirering-Scenario-Kjemoterapi-Full-Forrige
 * entry[7].request.method = #POST
 * entry[7].request.url = "MedicationRequest"
 
-* entry[8].resource = Legemiddelrekvirering-Scenario-Kjemoterapi-Full-Gjeldende
+* entry[8].resource = Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende
 * entry[8].request.method = #POST
 * entry[8].request.url = "MedicationRequest"
 
-* entry[9].resource = Legemiddeladministrering-Scenario-Kjemoterapi-Full-Oksaliplatin
+* entry[9].resource = Administrering-Scenario-Kjemoterapi-Full-Oksaliplatin
 * entry[9].request.method = #POST
 * entry[9].request.url = "MedicationAdministration"

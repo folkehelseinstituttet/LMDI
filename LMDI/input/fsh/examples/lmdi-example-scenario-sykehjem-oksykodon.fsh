@@ -55,7 +55,7 @@ Description: "Legemiddel med FEST dose-id og SNOMED-koding."
 * form.coding[OID7448].code = #51
 * form.coding[OID7448].display = "Mikstur, oppløsning"
 
-Instance: Legemiddelrekvirering-Scenario-Sykehjem-Oksykodon-Oral
+Instance: Rekvirering-Scenario-Sykehjem-Oksykodon-Oral
 InstanceOf: Legemiddelrekvirering
 Usage: #example
 Description: "Rekvirering av oksykodon i sykehjemsscenarioet."
@@ -67,7 +67,7 @@ Description: "Rekvirering av oksykodon i sykehjemsscenarioet."
 * encounter = Reference(Episode-Scenario-Sykehjem-Oksykodon-Opphold)
 * authoredOn = "2024-05-28T12:30:00+02:00"
 
-Instance: Legemiddeladministrering-Scenario-Sykehjem-Oksykodon-Oral
+Instance: Administrering-Scenario-Sykehjem-Oksykodon-Oral
 InstanceOf: Legemiddeladministrering
 Usage: #example
 Description: "Oral administrering av oksykodon med referanser til egne relaterte ressurser."
@@ -75,7 +75,7 @@ Description: "Oral administrering av oksykodon med referanser til egne relaterte
 * medicationReference = Reference(Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose)
 * subject = Reference(Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR)
 * context = Reference(Episode-Scenario-Sykehjem-Oksykodon-Opphold)
-* request = Reference(Legemiddelrekvirering-Scenario-Sykehjem-Oksykodon-Oral)
+* request = Reference(Rekvirering-Scenario-Sykehjem-Oksykodon-Oral)
 * effectiveDateTime = "2024-05-28T13:14:00+02:00"
 * dosage.dose.value = 5.0
 * dosage.dose.unit = "mg"
