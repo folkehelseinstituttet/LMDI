@@ -84,10 +84,10 @@ Description: "Eksempel på transaction-bundle der relaterte ressurser sendes som
 * entry[4].request.method = #POST
 * entry[4].request.url = "Medication"
 
-* entry[5].resource = Legemiddelrekvirering-Scenario-Sykehjem-Oksykodon-Oral
+* entry[5].resource = Rekvirering-Scenario-Sykehjem-Oksykodon-Oral
 * entry[5].request.method = #POST
 * entry[5].request.url = "MedicationRequest"
 
-* entry[6].resource = Legemiddeladministrering-Scenario-Sykehjem-Oksykodon-Oral
+* entry[6].resource = Administrering-Scenario-Sykehjem-Oksykodon-Oral
 * entry[6].request.method = #POST
 * entry[6].request.url = "MedicationAdministration"

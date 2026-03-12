@@ -84,7 +84,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 //  priorPrescription må referere til Legemiddelrekvirering
 
 // EKSEMPEL
-Instance: Legemiddelrekvirering-Eksempel-Paracetamol
+Instance: Rekvirering-Eksempel-Paracetamol
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på legemiddelrekvirering av Paracet"
 * identifier.system = "http://example.org/rekvirering-id"
@@ -96,7 +96,7 @@ Description: "Eksempel på legemiddelrekvirering av Paracet"
 * requester = Reference(Helsepersonell-Eksempel-Med-HPR)
 * authoredOn = "2025-01-27"
 
-Instance: Legemiddelrekvirering-Eksempel-Kjemoterapi
+Instance: Rekvirering-Eksempel-Kjemoterapi
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"
 * status = #active

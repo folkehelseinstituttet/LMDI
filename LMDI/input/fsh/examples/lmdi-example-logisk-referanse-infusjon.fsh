@@ -1,7 +1,7 @@
 // Eksempel: infusjon med logisk referanse
 // Demonstrerer bruk av identifier-referanser i stedet for literal-referanser
 
-Instance: Legemiddeladministrering-Eksempel-LogiskReferanse-Infusjon
+Instance: Administrering-Eksempel-LogiskReferanse-Infusjon
 InstanceOf: Legemiddeladministrering
 Usage: #example
 Description: "Eksempel med logisk medikamentreferanse ved infusjon, uten lokal medication-ressurs i meldingen."

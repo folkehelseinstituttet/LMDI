@@ -1,6 +1,6 @@
 // Eksempel: intramuskular administrering med paknings-id og varenummer
 
-Instance: Legemiddeladministrering-Eksempel-Botox-Intramuskular
+Instance: Administrering-Eksempel-Botox-Intramuskular
 InstanceOf: Legemiddeladministrering
 Usage: #example
 Description: "Eksempel med intramuskular administrering av Botox og legemiddelreferanse med FEST paknings-id."
