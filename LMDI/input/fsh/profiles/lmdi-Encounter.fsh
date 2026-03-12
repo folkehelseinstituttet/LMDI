@@ -33,10 +33,10 @@ Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i 
 * serviceProvider ^short = "Sted for episoden"
 
 // EKSEMPLER
-Instance: Episode-1-Sykehus
+Instance: Episode-Eksempel-Sykehus
 InstanceOf: Episode
 Description: "Eksempel på episode i spesialisthelsetjenesten"
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
-* serviceProvider = Reference(Organisasjon-3-Sykehus)
+* serviceProvider = Reference(Organisasjon-Eksempel-Sykehus)
 * extension[nprEpisodeIdentifier].extension[stringIdentifier].valueString = "NPR987654321"

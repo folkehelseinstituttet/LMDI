@@ -52,11 +52,11 @@ Expression: "entry.all(
 )"
 
 // EKSEMPEL
-Instance: Bundle-Contained-Oksykodon-Sykehjem
+Instance: Bundle-Scenario-Sykehjem-Oksykodon
 InstanceOf: LegemiddelregisterBundle
 Usage: #example
-Title: "Contained bundle med oksykodonadministrering i sykehjem"
-Description: "Eksempel på transaction-bundle med contained relaterte ressurser for en enkel sykehjemsadministrering."
+Title: "Oksykodonadministrering i sykehjem med separate ressurser"
+Description: "Eksempel på transaction-bundle der relaterte ressurser sendes som egne bundle entries."
 
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
 * identifier.value = "bundle-001"
@@ -64,26 +64,30 @@ Description: "Eksempel på transaction-bundle med contained relaterte ressurser 
 * type = #transaction
 
 // Ressurser i bundle
-* entry[0].resource = Pasient-Contained-Fnr-Oslo
+* entry[0].resource = Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR
 * entry[0].request.method = #POST
 * entry[0].request.url = "Patient"
 
-* entry[1].resource = Legemiddel-Contained-Oksykodon-FestDose
+* entry[1].resource = Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent
 * entry[1].request.method = #POST
-* entry[1].request.url = "Medication"
+* entry[1].request.url = "Practitioner"
 
-* entry[2].resource = Helsepersonell-Contained-Hpr
+* entry[2].resource = Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem
 * entry[2].request.method = #POST
-* entry[2].request.url = "Practitioner"
+* entry[2].request.url = "Organization"
 
-* entry[3].resource = Episode-Contained-Sykehjemsopphold
+* entry[3].resource = Episode-Scenario-Sykehjem-Oksykodon-Opphold
 * entry[3].request.method = #POST
 * entry[3].request.url = "Encounter"
 
-* entry[4].resource = Organisasjon-Contained-Eldrehjem
+* entry[4].resource = Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose
 * entry[4].request.method = #POST
-* entry[4].request.url = "Organization"
+* entry[4].request.url = "Medication"
 
-* entry[5].resource = Administrering-Contained-Oksykodon-Oral
+* entry[5].resource = Legemiddelrekvirering-Scenario-Sykehjem-Oksykodon-Oral
 * entry[5].request.method = #POST
-* entry[5].request.url = "MedicationAdministration"
+* entry[5].request.url = "MedicationRequest"
+
+* entry[6].resource = Legemiddeladministrering-Scenario-Sykehjem-Oksykodon-Oral
+* entry[6].request.method = #POST
+* entry[6].request.url = "MedicationAdministration"

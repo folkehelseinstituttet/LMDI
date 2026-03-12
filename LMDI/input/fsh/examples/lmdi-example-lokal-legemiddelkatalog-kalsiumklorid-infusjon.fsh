@@ -1,7 +1,8 @@
-// Eksempel: legemiddel fra lokal legemiddelkatalog
+// Eksempel: legemiddel fra lokal legemiddelkatalog med kalsiumklorid-infusjon
 
-Instance: Legemiddel-LokalKatalog-Kalsiumklorid-Infusjon
+Instance: Legemiddel-Eksempel-LokalKatalog-Kalsiumklorid-Infusjon
 InstanceOf: Legemiddel
+Usage: #example
 Description: "Eksempel på lokalt registrert legemiddel med ingredient som CodeableConcept."
 * code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
 * code.coding[LokaltLegemiddel].code = #12345

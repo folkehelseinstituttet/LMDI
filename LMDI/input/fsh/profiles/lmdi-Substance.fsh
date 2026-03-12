@@ -14,7 +14,7 @@ Description: "En tilpasset profil av Substance for å representere virkestoff, b
 * category 1..1
 
 // EKSEMPLER
-Instance: Virkestoff-1-Oksykodon
+Instance: Virkestoff-Eksempel-Oksykodon
 InstanceOf: Virkestoff
 Description: "Eksempel på virkestoff - Oksykodon"
 * code.coding.system = "http://snomed.info/sct"
