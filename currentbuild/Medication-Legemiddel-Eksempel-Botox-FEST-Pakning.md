@@ -1,0 +1,57 @@
+# Legemiddel-Eksempel-Botox-FEST-Pakning - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+
+*  [Hjem](index.md) 
+*  [Informasjonsmodell](informasjonsmodell.md) 
+*  [Integrasjon](integrasjon.md) 
+*  [FHIR-profiler](profiler.md) 
+*  [Nedlastinger](nedlastinger.md) 
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Legemiddel-Eksempel-Botox-FEST-Pakning**
+
+## Example Medication: Legemiddel-Eksempel-Botox-FEST-Pakning
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Medication",
+  "id" : "Legemiddel-Eksempel-Botox-FEST-Pakning",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.whocc.no/atc",
+        "code" : "M03AX01",
+        "display" : "Botulinumtoksin"
+      }]
+    }
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+      "code" : "ID_00B35335-0DF7-4C98-8A0A-1148F4599D21",
+      "display" : "Botox pulv til inj væske, oppl 50 E"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer",
+      "code" : "476281",
+      "display" : "Botox pulv til inj væske, oppl 50 E"
+    }]
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+      "code" : "36",
+      "display" : "Pulver til injeksjonsvæske, oppløsning"
+    }]
+  }
+}
+
+```

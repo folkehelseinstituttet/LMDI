@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="Diagnose-Eksempel-ICD10"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
+  </meta>
+  <code>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7110"/>
+      <code value="R63.3"/>
+      <display value="Vanskeligheter med inntak og tilførsel av mat"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Pasient-Eksempel-Med-FNR"/>
+  </subject>
+  <stage>
+    <summary>
+      <text value="Indikasjonsdiagnose for legemiddelbehandling"/>
+    </summary>
+  </stage>
+</Condition>

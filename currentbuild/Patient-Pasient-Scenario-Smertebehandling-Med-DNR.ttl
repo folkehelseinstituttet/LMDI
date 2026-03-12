@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Scenario-Smertebehandling-Med-DNR> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Pasient-Scenario-Smertebehandling-Med-DNR"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:oid:2.16.578.1.12.4.1.4.2"^^xsd:anyURI ;
+       fhir:l <urn:oid:2.16.578.1.12.4.1.4.2>
+     ] ;
+     fhir:value [ fhir:v "52030078901" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "2000-03-12"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:district [
+       fhir:v "Bergen" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
+             fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
+           ] ;
+           fhir:code [ fhir:v "4601" ] ;
+           fhir:display [ fhir:v "Bergen" ]
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

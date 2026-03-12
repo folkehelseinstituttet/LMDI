@@ -1,0 +1,25 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "Rekvirering-Scenario-Smertebehandling-Morfin",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
+  },
+  "status" : "completed",
+  "intent" : "order",
+  "medicationReference" : {
+    "reference" : "Medication/Legemiddel-Scenario-Smertebehandling-Morfin-Endose"
+  },
+  "subject" : {
+    "reference" : "Patient/Pasient-Scenario-Smertebehandling-Med-DNR"
+  },
+  "encounter" : {
+    "reference" : "Encounter/Episode-Scenario-Smertebehandling-Innleggelse"
+  },
+  "authoredOn" : "2025-03-09",
+  "requester" : {
+    "reference" : "Practitioner/Helsepersonell-Scenario-Smertebehandling-Rekvirent"
+  },
+  "reasonReference" : [{
+    "reference" : "Condition/Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte"
+  }]
+}

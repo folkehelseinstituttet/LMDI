@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-11 | *Computable Name*:Episode |
+| Draft as of 2026-03-12 | *Computable Name*:Episode |
 
  
 Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -23,7 +23,7 @@ Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne pr
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Encounter/Endose-Smertebehandling-Episode](Encounter-Endose-Smertebehandling-Episode.md), [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Kjemoterapi-Full-Episode](Encounter-Kjemoterapi-Full-Episode.md) and [Encounter/Sykehjem-Minimum-Episode](Encounter-Sykehjem-Minimum-Episode.md)
+* Examples for this Profile: [Encounter/Episode-Eksempel-Sykehus](Encounter-Episode-Eksempel-Sykehus.md), [Encounter/Episode-Scenario-Kjemoterapi-Full-Innleggelse](Encounter-Episode-Scenario-Kjemoterapi-Full-Innleggelse.md), [Encounter/Episode-Scenario-Smertebehandling-Innleggelse](Encounter-Episode-Scenario-Smertebehandling-Innleggelse.md), [Encounter/Episode-Scenario-Sykehjem-Minimum-Opphold](Encounter-Episode-Scenario-Sykehjem-Minimum-Opphold.md) and [Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold](Encounter-Episode-Scenario-Sykehjem-Oksykodon-Opphold.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-encounter)
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "name" : "Episode",
   "title" : "Episode",
   "status" : "draft",
-  "date" : "2026-03-11T14:51:01+00:00",
+  "date" : "2026-03-12T09:35:00+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

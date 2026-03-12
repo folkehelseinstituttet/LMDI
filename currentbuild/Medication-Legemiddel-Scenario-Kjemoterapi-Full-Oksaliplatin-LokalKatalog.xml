@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-Scenario-Kjemoterapi-Full-Oksaliplatin-LokalKatalog"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="L01XA03"/>
+        <display value="Oksaliplatin"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"/>
+      <code value="OXA-85-INF"/>
+      <display value="Oksaliplatin 85 mg/m2 infusjonsvæske"/>
+    </coding>
+  </code>
+  <form>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+      <code value="9"/>
+      <display value="Infusjonsvæske, oppløsning"/>
+    </coding>
+  </form>
+  <ingredient>
+    <itemReference>
+      <reference value="Substance/Virkestoff-Scenario-Kjemoterapi-Full-Oksaliplatin"/>
+    </itemReference>
+    <isActive value="true"/>
+  </ingredient>
+</Medication>

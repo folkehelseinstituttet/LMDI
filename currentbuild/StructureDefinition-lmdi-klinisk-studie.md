@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-11 | *Computable Name*:KliniskStudie |
+| Draft as of 2026-03-12 | *Computable Name*:KliniskStudie |
 
 Angir om legemidlet gis som en del av en klinisk studie.
 
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Extension: [Bundle/Kjemoterapi-Full-Bundle](Bundle-Kjemoterapi-Full-Bundle.md), [MedicationRequest/Kjemoterapi-Full-Rekvirering](MedicationRequest-Kjemoterapi-Full-Rekvirering.md) and [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Kjemoterapi-Full](Bundle-Bundle-Scenario-Kjemoterapi-Full.md), [MedicationRequest/Rekvirering-Eksempel-Kjemoterapi](MedicationRequest-Rekvirering-Eksempel-Kjemoterapi.md) and [MedicationRequest/Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende](MedicationRequest-Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-klinisk-studie)
 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
   "name" : "KliniskStudie",
   "title" : "Klinisk studie",
   "status" : "draft",
-  "date" : "2026-03-11T14:51:01+00:00",
+  "date" : "2026-03-12T09:35:00+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

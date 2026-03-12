@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Scenario-Smertebehandling-Morfin> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Rekvirering-Scenario-Smertebehandling-Morfin"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Scenario-Smertebehandling-Morfin-Endose> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-Scenario-Smertebehandling-Morfin-Endose" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Scenario-Smertebehandling-Med-DNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Scenario-Smertebehandling-Med-DNR" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Scenario-Smertebehandling-Innleggelse> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Scenario-Smertebehandling-Innleggelse" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-03-09"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Practitioner/Helsepersonell-Scenario-Smertebehandling-Rekvirent> ;
+     fhir:reference [ fhir:v "Practitioner/Helsepersonell-Scenario-Smertebehandling-Rekvirent" ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte> ;
+     fhir:reference [ fhir:v "Condition/Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Scenario-Sykehjem-Minimum-Paracetamol-FEST-Merkevare> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-Scenario-Sykehjem-Minimum-Paracetamol-FEST-Merkevare"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"^^xsd:anyURI ;
+         fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare>
+       ] ;
+       fhir:code [ fhir:v "2ABAC272-0BCF-43F0-84BE-984074D92E15" ] ;
+       fhir:display [ fhir:v "Paracet tab 500 mg" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

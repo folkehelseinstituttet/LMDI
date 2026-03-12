@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Scenario-Sykehjem-Minimum-Oksykodon> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Administrering-Scenario-Sykehjem-Minimum-Oksykodon"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Scenario-Sykehjem-Minimum-Oksykodon-FEST-Virkestoff> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-Scenario-Sykehjem-Minimum-Oksykodon-FEST-Virkestoff" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Scenario-Sykehjem-Minimum-Med-FNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Scenario-Sykehjem-Minimum-Med-FNR" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Scenario-Sykehjem-Minimum-Opphold> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Scenario-Sykehjem-Minimum-Opphold" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-03-10T08:15:00+01:00"^^xsd:dateTime
+  ] ; # 
+  fhir:dosage [
+     fhir:dose [
+       fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,54 @@
+# Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+
+*  [Hjem](index.md) 
+*  [Informasjonsmodell](informasjonsmodell.md) 
+*  [Integrasjon](integrasjon.md) 
+*  [FHIR-profiler](profiler.md) 
+*  [Nedlastinger](nedlastinger.md) 
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem**
+
+## Example Organization: Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Organization",
+  "id" : "Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+    "value" : "1234567890"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "prov",
+      "display" : "Healthcare Provider"
+    }]
+  }],
+  "name" : "Lykkedalen eldrehjem",
+  "address" : [{
+    "type" : "physical",
+    "district" : "Sigdal",
+    "_district" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+        "valueCoding" : {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+          "code" : "3025",
+          "display" : "Sigdal"
+        }
+      }]
+    }
+  }]
+}
+
+```

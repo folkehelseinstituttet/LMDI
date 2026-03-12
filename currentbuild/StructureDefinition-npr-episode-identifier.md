@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.0.8 **  |
-| Active as of 2026-03-11 | *Computable Name*:NprEpisodeIdentifier |
+| Active as of 2026-03-12 | *Computable Name*:NprEpisodeIdentifier |
 
 Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.
 
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Episode](StructureDefinition-lmdi-encounter.md)
-* Examples for this Extension: [Bundle/Bundle-Contained-Oksykodon-Sykehjem](Bundle-Bundle-Contained-Oksykodon-Sykehjem.md), [Bundle/Endose-Smertebehandling-Bundle](Bundle-Endose-Smertebehandling-Bundle.md), [Bundle/Kjemoterapi-Full-Bundle](Bundle-Kjemoterapi-Full-Bundle.md), [Encounter/Endose-Smertebehandling-Episode](Encounter-Endose-Smertebehandling-Episode.md)... Show 3 more, [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Kjemoterapi-Full-Episode](Encounter-Kjemoterapi-Full-Episode.md) and [MedicationAdministration/Administrering-Contained-Oksykodon-Oral](MedicationAdministration-Administrering-Contained-Oksykodon-Oral.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Kjemoterapi-Full](Bundle-Bundle-Scenario-Kjemoterapi-Full.md), [Bundle/Bundle-Scenario-Smertebehandling](Bundle-Bundle-Scenario-Smertebehandling.md), [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [Encounter/Episode-Eksempel-Sykehus](Encounter-Episode-Eksempel-Sykehus.md)... Show 3 more, [Encounter/Episode-Scenario-Kjemoterapi-Full-Innleggelse](Encounter-Episode-Scenario-Kjemoterapi-Full-Innleggelse.md), [Encounter/Episode-Scenario-Smertebehandling-Innleggelse](Encounter-Episode-Scenario-Smertebehandling-Innleggelse.md) and [Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold](Encounter-Episode-Scenario-Sykehjem-Oksykodon-Opphold.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/npr-episode-identifier)
 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2026-03-11T14:51:01+00:00",
+  "date" : "2026-03-12T09:35:00+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

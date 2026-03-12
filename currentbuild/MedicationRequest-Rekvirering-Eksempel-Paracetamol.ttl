@@ -1,0 +1,43 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Eksempel-Paracetamol> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Rekvirering-Eksempel-Paracetamol"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/rekvirering-id"^^xsd:anyURI ;
+       fhir:l <http://example.org/rekvirering-id>
+     ] ;
+     fhir:value [ fhir:v "REK123456" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Eksempel-Paracetamol-FEST-Merkevare> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-Eksempel-Paracetamol-FEST-Merkevare" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Eksempel-Med-FNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Eksempel-Med-FNR" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-01-27"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Practitioner/Helsepersonell-Eksempel-Med-HPR> ;
+     fhir:reference [ fhir:v "Practitioner/Helsepersonell-Eksempel-Med-HPR" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

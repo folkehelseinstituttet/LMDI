@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier">
+    <extension url="stringIdentifier">
+      <valueString value="NPR123456789"/>
+    </extension>
+    <extension url="uuidIdentifier">
+      <valueUuid value="550e8400-e29b-41d4-a716-446655440000"/>
+    </extension>
+  </extension>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="IMP"/>
+    <display value="inpatient encounter"/>
+  </class>
+  <serviceProvider>
+    <reference value="Organization/Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"/>
+  </serviceProvider>
+</Encounter>

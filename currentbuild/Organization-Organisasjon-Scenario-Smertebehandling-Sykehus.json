@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Organization",
+  "id" : "Organisasjon-Scenario-Smertebehandling-Sykehus",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+  },
+  "identifier" : [{
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+    "value" : "974557746"
+  },
+  {
+    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+    "value" : "4204191"
+  }],
+  "name" : "Haukeland universitetssjukehus",
+  "address" : [{
+    "type" : "physical",
+    "district" : "Bergen",
+    "_district" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+        "valueCoding" : {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+          "code" : "4601",
+          "display" : "Bergen"
+        }
+      }]
+    }
+  }]
+}

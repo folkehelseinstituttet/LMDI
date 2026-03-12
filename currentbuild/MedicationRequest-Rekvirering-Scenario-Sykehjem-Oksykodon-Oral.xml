@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+  </meta>
+  <status value="completed"/>
+  <intent value="order"/>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
+  </encounter>
+  <authoredOn value="2024-05-28T12:30:00+02:00"/>
+  <requester>
+    <reference value="Practitioner/Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"/>
+  </requester>
+</MedicationRequest>
