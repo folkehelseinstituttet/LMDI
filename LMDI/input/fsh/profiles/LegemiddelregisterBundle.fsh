@@ -56,7 +56,7 @@ Instance: Bundle-Scenario-Sykehjem-Oksykodon
 InstanceOf: LegemiddelregisterBundle
 Usage: #example
 Title: "Oksykodonadministrering i sykehjem med separate ressurser"
-Description: "Eksempel på transaction-bundle der relaterte ressurser sendes som egne bundle entries."
+Description: "Eksempel på transaction-bundle satt sammen av gjenværende profildefinerte eksempelressurser."
 
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
 * identifier.value = "bundle-001"
@@ -64,30 +64,30 @@ Description: "Eksempel på transaction-bundle der relaterte ressurser sendes som
 * type = #transaction
 
 // Ressurser i bundle
-* entry[0].resource = Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR
+* entry[0].resource = Pasient-Med-FNR
 * entry[0].request.method = #POST
 * entry[0].request.url = "Patient"
 
-* entry[1].resource = Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent
+* entry[1].resource = Helsepersonell-Med-HPR
 * entry[1].request.method = #POST
 * entry[1].request.url = "Practitioner"
 
-* entry[2].resource = Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem
+* entry[2].resource = Organisasjon-Sykehjem
 * entry[2].request.method = #POST
 * entry[2].request.url = "Organization"
 
-* entry[3].resource = Episode-Scenario-Sykehjem-Oksykodon-Opphold
+* entry[3].resource = Episode-Sykehus
 * entry[3].request.method = #POST
 * entry[3].request.url = "Encounter"
 
-* entry[4].resource = Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose
+* entry[4].resource = Legemiddel-Oksykodon-FEST-Virkestoff
 * entry[4].request.method = #POST
 * entry[4].request.url = "Medication"
 
-* entry[5].resource = Rekvirering-Scenario-Sykehjem-Oksykodon-Oral
+* entry[5].resource = Rekvirering-Kjemoterapi
 * entry[5].request.method = #POST
 * entry[5].request.url = "MedicationRequest"
 
-* entry[6].resource = Administrering-Scenario-Sykehjem-Oksykodon-Oral
+* entry[6].resource = Administrering-Oral
 * entry[6].request.method = #POST
 * entry[6].request.url = "MedicationAdministration"

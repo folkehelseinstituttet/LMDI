@@ -83,7 +83,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * identifier[HNR] 0..0
 
 // EKSEMPLER
-Instance: Pasient-Eksempel-Uten-FNR
+Instance: Pasient-Uten-FNR
 InstanceOf: Pasient
 Description: "Eksempel på pasient med kjønn og fødselsdato"
 * gender = #female
@@ -91,7 +91,7 @@ Description: "Eksempel på pasient med kjønn og fødselsdato"
 * address.district = "Bærum"
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3024 "Bærum"
 
-Instance: Pasient-Eksempel-Med-FNR
+Instance: Pasient-Med-FNR
 InstanceOf: Pasient
 Description: "Eksempel på pasient med fødselsnummer"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"

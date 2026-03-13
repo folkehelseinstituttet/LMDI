@@ -84,26 +84,26 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 //  priorPrescription må referere til Legemiddelrekvirering
 
 // EKSEMPEL
-Instance: Rekvirering-Eksempel-Paracetamol
+Instance: Rekvirering-Paracetamol
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på legemiddelrekvirering av Paracet"
 * identifier.system = "http://example.org/rekvirering-id"
 * identifier.value = "REK123456"
 * status = #active
 * intent = #order
-* medicationReference = Reference(Legemiddel-Eksempel-Paracetamol-FEST-Merkevare)
-* subject = Reference(Pasient-Eksempel-Med-FNR)
-* requester = Reference(Helsepersonell-Eksempel-Med-HPR)
+* medicationReference = Reference(Legemiddel-Paracetamol-FEST-Merkevare)
+* subject = Reference(Pasient-Med-FNR)
+* requester = Reference(Helsepersonell-Med-HPR)
 * authoredOn = "2025-01-27"
 
-Instance: Rekvirering-Eksempel-Kjemoterapi
+Instance: Rekvirering-Kjemoterapi
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"
 * status = #active
 * intent = #order
-* medicationReference = Reference(Legemiddel-Eksempel-Oksykodon-FEST-Virkestoff)
-* subject = Reference(Pasient-Eksempel-Med-FNR)
-* requester = Reference(Helsepersonell-Eksempel-Med-HPR)
+* medicationReference = Reference(Legemiddel-Oksykodon-FEST-Virkestoff)
+* subject = Reference(Pasient-Med-FNR)
+* requester = Reference(Helsepersonell-Med-HPR)
 * authoredOn = "2025-03-10"
 * extension[prosentvisDoseendring].valueQuantity.value = 80
 * extension[prosentvisDoseendring].valueQuantity.system = "http://unitsofmeasure.org"

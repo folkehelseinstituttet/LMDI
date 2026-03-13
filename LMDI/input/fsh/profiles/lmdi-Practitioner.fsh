@@ -43,13 +43,13 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 * communication 0..0
 * active 0..0
 
-Instance: Helsepersonell-Eksempel-Med-HPR
+Instance: Helsepersonell-Med-HPR
 InstanceOf: Helsepersonell
 Description: "Eksempel på helsepersonell med HPR-nummer"
 * identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
 * identifier[HPR].value = "9144900"
 
-Instance: Helsepersonell-Eksempel-Uten-HPR
+Instance: Helsepersonell-Uten-HPR
 InstanceOf: Helsepersonell
 Description: "Eksempel på rekvirent uten HPR-nummer"
 // Ingen identifier - gyldig da identifier er valgfri (0..*)

@@ -115,7 +115,7 @@ Description: "Beskrivelse av legemiddel."
 
 
 // EKSEMPLER
-Instance: Legemiddel-Eksempel-Oksykodon-FEST-Virkestoff
+Instance: Legemiddel-Oksykodon-FEST-Virkestoff
 InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel"
 // "Oxycodone Orifarm mikst oppl 1 mg/ml"
@@ -129,7 +129,7 @@ Description: "Eksempel på legemiddel"
 * form.coding[OID7448].code = #51
 * form.coding[OID7448].display = "Mikstur, oppløsning"
 
-Instance: Legemiddel-Eksempel-Paracetamol-FEST-Merkevare
+Instance: Legemiddel-Paracetamol-FEST-Merkevare
 InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel - Paracetamol"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
@@ -142,7 +142,7 @@ Description: "Eksempel på legemiddel - Paracetamol"
 * form.coding[OID7448].code = #1
 * form.coding[OID7448].display = "Tablett"
 
-Instance: Legemiddel-Eksempel-Monoket-FEST-Pakning
+Instance: Legemiddel-Monoket-FEST-Pakning
 InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel - paking"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
