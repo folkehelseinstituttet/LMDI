@@ -32,7 +32,7 @@ Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”:
 **Usages:**
 
 * Refer to this Profile: [Episode](StructureDefinition-lmdi-encounter.md) and [Organisasjon](StructureDefinition-lmdi-organization.md)
-* Examples for this Profile: [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Eksempel-Avdeling.md), [Lykkedalen sykehjem](Organization-Organisasjon-Eksempel-Sykehjem.md), [Oslo universitetssykehus HF](Organization-Organisasjon-Eksempel-Sykehus.md), [Onkologisk avdeling, St. Olavs hospital](Organization-Organisasjon-Scenario-Kjemoterapi-Full-Onkologisk-Avdeling.md)... Show 5 more, [Haukeland universitetssjukehus](Organization-Organisasjon-Scenario-Smertebehandling-Sykehus.md), [Avdeling 2B, Soltoppen sykehjem](Organization-Organisasjon-Scenario-Sykehjem-Minimum-Avdeling.md), [Drammen kommune](Organization-Organisasjon-Scenario-Sykehjem-Minimum-Kommune.md), [Soltoppen sykehjem](Organization-Organisasjon-Scenario-Sykehjem-Minimum-Sykehjem.md) and [Lykkedalen eldrehjem](Organization-Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem.md)
+* Examples for this Profile: [Oslo universitetssykehus HF](Organization-Organisasjon-HF.md), [TRONDHEIM KOMMUNE](Organization-Organisasjon-Kommune.md), [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md), [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md) and [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Sykehusavdeling.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-organization)
 
@@ -82,6 +82,26 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "servd",
+    "uri" : "http://www.omg.org/spec/ServD/1.0/",
+    "name" : "ServD"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Organization",
@@ -135,6 +155,12 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "path" : "Organization.type",
       "short" : "Organisasjonstype",
       "definition" : "Type organisasjon (f.eks. sykehus, avdeling, klinikk)"
+    },
+    {
+      "id" : "Organization.type:organisatoriskNiva",
+      "path" : "Organization.type",
+      "sliceName" : "organisatoriskNiva",
+      "max" : "0"
     },
     {
       "id" : "Organization.name",

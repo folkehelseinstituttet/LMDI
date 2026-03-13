@@ -23,7 +23,7 @@ Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Condition/Diagnose-Eksempel-ICD10](Condition-Diagnose-Eksempel-ICD10.md), [Condition/Diagnose-Eksempel-SNOMED-CT](Condition-Diagnose-Eksempel-SNOMED-CT.md), [Condition/Diagnose-Scenario-Kjemoterapi-Full-Kreftdiagnose](Condition-Diagnose-Scenario-Kjemoterapi-Full-Kreftdiagnose.md) and [Condition/Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte](Condition-Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte.md)
+* Examples for this Profile: [Condition/Diagnose-ICD10](Condition-Diagnose-ICD10.md) and [Condition/Diagnose-SNOMED-CT](Condition-Diagnose-SNOMED-CT.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-condition)
 

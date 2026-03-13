@@ -32,7 +32,7 @@
   "entry" : [{
     "resource" : {
       "resourceType" : "Patient",
-      "id" : "Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR",
+      "id" : "Pasient-Med-FNR",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
       },
@@ -43,14 +43,14 @@
       "gender" : "male",
       "birthDate" : "1953-03-13",
       "address" : [{
-        "district" : "Oslo",
+        "district" : "Bærum",
         "_district" : {
           "extension" : [{
             "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
             "valueCoding" : {
               "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-              "code" : "0301",
-              "display" : "Oslo"
+              "code" : "3024",
+              "display" : "Bærum"
             }
           }]
         }
@@ -64,7 +64,7 @@
   {
     "resource" : {
       "resourceType" : "Practitioner",
-      "id" : "Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent",
+      "id" : "Helsepersonell-Med-HPR",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
       },
@@ -81,36 +81,32 @@
   {
     "resource" : {
       "resourceType" : "Organization",
-      "id" : "Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem",
+      "id" : "Organisasjon-Sykehjem",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
       },
       "identifier" : [{
         "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
-        "value" : "1234567890"
+        "value" : "985626154"
       }],
-      "type" : [{
-        "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
-          "code" : "prov",
-          "display" : "Healthcare Provider"
-        }]
-      }],
-      "name" : "Lykkedalen eldrehjem",
+      "name" : "BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM",
       "address" : [{
         "type" : "physical",
-        "district" : "Sigdal",
+        "district" : "Trondheim",
         "_district" : {
           "extension" : [{
             "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
             "valueCoding" : {
               "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-              "code" : "3025",
-              "display" : "Sigdal"
+              "code" : "5001",
+              "display" : "Trondheim - Tråante"
             }
           }]
         }
-      }]
+      }],
+      "partOf" : {
+        "reference" : "Organization/Organisasjon-Kommune"
+      }
     },
     "request" : {
       "method" : "POST",
@@ -120,18 +116,14 @@
   {
     "resource" : {
       "resourceType" : "Encounter",
-      "id" : "Episode-Scenario-Sykehjem-Oksykodon-Opphold",
+      "id" : "Episode-Sykehus",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
       },
       "extension" : [{
         "extension" : [{
           "url" : "stringIdentifier",
-          "valueString" : "NPR123456789"
-        },
-        {
-          "url" : "uuidIdentifier",
-          "valueUuid" : "550e8400-e29b-41d4-a716-446655440000"
+          "valueString" : "NPR987654321"
         }],
         "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
       }],
@@ -142,7 +134,7 @@
         "display" : "inpatient encounter"
       },
       "serviceProvider" : {
-        "reference" : "Organization/Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"
+        "reference" : "Organization/Organisasjon-Sykehusavdeling"
       }
     },
     "request" : {
@@ -153,7 +145,7 @@
   {
     "resource" : {
       "resourceType" : "Medication",
-      "id" : "Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose",
+      "id" : "Legemiddel-Oksykodon-FEST-Virkestoff",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
       },
@@ -167,16 +159,15 @@
           }]
         }
       }],
+      "identifier" : [{
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+        "value" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
+      }],
       "code" : {
         "coding" : [{
-          "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
-          "code" : "ID_48BD33D2-2838-4B81-8225-02391B7A4516",
-          "display" : "Oxycodone Orifarm mikst oppl 1 mg/ml"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "414984009",
-          "display" : "Product containing oxycodone (medicinal product)"
+          "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+          "code" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9",
+          "display" : "Oksykodon"
         }]
       },
       "form" : {
@@ -195,24 +186,38 @@
   {
     "resource" : {
       "resourceType" : "MedicationRequest",
-      "id" : "Rekvirering-Scenario-Sykehjem-Oksykodon-Oral",
+      "id" : "Rekvirering-Kjemoterapi",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
       },
-      "status" : "completed",
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
+        "valueQuantity" : {
+          "value" : 80,
+          "unit" : "%",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "%"
+        }
+      },
+      {
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime",
+        "valueString" : "FOLFOX6"
+      },
+      {
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
+        "valueBoolean" : true
+      }],
+      "status" : "active",
       "intent" : "order",
       "medicationReference" : {
-        "reference" : "Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"
+        "reference" : "Medication/Legemiddel-Oksykodon-FEST-Virkestoff"
       },
       "subject" : {
-        "reference" : "Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"
+        "reference" : "Patient/Pasient-Med-FNR"
       },
-      "encounter" : {
-        "reference" : "Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"
-      },
-      "authoredOn" : "2024-05-28T12:30:00+02:00",
+      "authoredOn" : "2025-03-10",
       "requester" : {
-        "reference" : "Practitioner/Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"
+        "reference" : "Practitioner/Helsepersonell-Med-HPR"
       }
     },
     "request" : {
@@ -223,24 +228,21 @@
   {
     "resource" : {
       "resourceType" : "MedicationAdministration",
-      "id" : "Administrering-Scenario-Sykehjem-Oksykodon-Oral",
+      "id" : "Administrering-Oral",
       "meta" : {
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
       },
       "status" : "completed",
       "medicationReference" : {
-        "reference" : "Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"
+        "reference" : "https://fhir.legemidler.example.com/legemidler/123456780"
       },
       "subject" : {
-        "reference" : "Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"
+        "reference" : "https://fhi.no/fhir/lmdi/pasient/12345678"
       },
       "context" : {
-        "reference" : "Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"
+        "reference" : "https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3"
       },
-      "effectiveDateTime" : "2024-05-28T13:14:00+02:00",
-      "request" : {
-        "reference" : "MedicationRequest/Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"
-      },
+      "effectiveDateTime" : "2024-05-28T09:30:00+02:00",
       "dosage" : {
         "route" : {
           "coding" : [{
@@ -250,7 +252,7 @@
           }]
         },
         "dose" : {
-          "value" : 5,
+          "value" : 10,
           "unit" : "mg",
           "system" : "http://unitsofmeasure.org",
           "code" : "mg"

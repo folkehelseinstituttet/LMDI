@@ -14,7 +14,7 @@
   <entry>
     <resource>
       <Patient>
-        <id value="Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"/>
+        <id value="Pasient-Med-FNR"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
         </meta>
@@ -25,12 +25,12 @@
         <gender value="male"/>
         <birthDate value="1953-03-13"/>
         <address>
-          <district value="Oslo">
+          <district value="Bærum">
             <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
               <valueCoding>
                 <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
-                <code value="0301"/>
-                <display value="Oslo"/>
+                <code value="3024"/>
+                <display value="Bærum"/>
               </valueCoding>
             </extension>
           </district>
@@ -45,7 +45,7 @@
   <entry>
     <resource>
       <Practitioner>
-        <id value="Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"/>
+        <id value="Helsepersonell-Med-HPR"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
         </meta>
@@ -63,34 +63,30 @@
   <entry>
     <resource>
       <Organization>
-        <id value="Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"/>
+        <id value="Organisasjon-Sykehjem"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
         </meta>
         <identifier>
           <system value="urn:oid:2.16.578.1.12.4.1.4.101"/>
-          <value value="1234567890"/>
+          <value value="985626154"/>
         </identifier>
-        <type>
-          <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
-            <code value="prov"/>
-            <display value="Healthcare Provider"/>
-          </coding>
-        </type>
-        <name value="Lykkedalen eldrehjem"/>
+        <name value="BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM"/>
         <address>
           <type value="physical"/>
-          <district value="Sigdal">
+          <district value="Trondheim">
             <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
               <valueCoding>
                 <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
-                <code value="3025"/>
-                <display value="Sigdal"/>
+                <code value="5001"/>
+                <display value="Trondheim - Tråante"/>
               </valueCoding>
             </extension>
           </district>
         </address>
+        <partOf>
+          <reference value="Organization/Organisasjon-Kommune"/>
+        </partOf>
       </Organization>
     </resource>
     <request>
@@ -101,16 +97,13 @@
   <entry>
     <resource>
       <Encounter>
-        <id value="Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
+        <id value="Episode-Sykehus"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
         </meta>
         <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier">
           <extension url="stringIdentifier">
-            <valueString value="NPR123456789"/>
-          </extension>
-          <extension url="uuidIdentifier">
-            <valueUuid value="550e8400-e29b-41d4-a716-446655440000"/>
+            <valueString value="NPR987654321"/>
           </extension>
         </extension>
         <status value="finished"/>
@@ -120,7 +113,7 @@
           <display value="inpatient encounter"/>
         </class>
         <serviceProvider>
-          <reference value="Organization/Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"/>
+          <reference value="Organization/Organisasjon-Sykehusavdeling"/>
         </serviceProvider>
       </Encounter>
     </resource>
@@ -132,7 +125,7 @@
   <entry>
     <resource>
       <Medication>
-        <id value="Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"/>
+        <id value="Legemiddel-Oksykodon-FEST-Virkestoff"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
         </meta>
@@ -145,16 +138,15 @@
             </coding>
           </valueCodeableConcept>
         </extension>
+        <identifier>
+          <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"/>
+          <value value="C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"/>
+        </identifier>
         <code>
           <coding>
-            <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
-            <code value="ID_48BD33D2-2838-4B81-8225-02391B7A4516"/>
-            <display value="Oxycodone Orifarm mikst oppl 1 mg/ml"/>
-          </coding>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="414984009"/>
-            <display value="Product containing oxycodone (medicinal product)"/>
+            <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"/>
+            <code value="C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"/>
+            <display value="Oksykodon"/>
           </coding>
         </code>
         <form>
@@ -174,24 +166,35 @@
   <entry>
     <resource>
       <MedicationRequest>
-        <id value="Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"/>
+        <id value="Rekvirering-Kjemoterapi"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
         </meta>
-        <status value="completed"/>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring">
+          <valueQuantity>
+            <value value="80"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </valueQuantity>
+        </extension>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime">
+          <valueString value="FOLFOX6"/>
+        </extension>
+        <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie">
+          <valueBoolean value="true"/>
+        </extension>
+        <status value="active"/>
         <intent value="order"/>
         <medicationReference>
-          <reference value="Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"/>
+          <reference value="Medication/Legemiddel-Oksykodon-FEST-Virkestoff"/>
         </medicationReference>
         <subject>
-          <reference value="Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"/>
+          <reference value="Patient/Pasient-Med-FNR"/>
         </subject>
-        <encounter>
-          <reference value="Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
-        </encounter>
-        <authoredOn value="2024-05-28T12:30:00+02:00"/>
+        <authoredOn value="2025-03-10"/>
         <requester>
-          <reference value="Practitioner/Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"/>
+          <reference value="Practitioner/Helsepersonell-Med-HPR"/>
         </requester>
       </MedicationRequest>
     </resource>
@@ -203,24 +206,21 @@
   <entry>
     <resource>
       <MedicationAdministration>
-        <id value="Administrering-Scenario-Sykehjem-Oksykodon-Oral"/>
+        <id value="Administrering-Oral"/>
         <meta>
           <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
         </meta>
         <status value="completed"/>
         <medicationReference>
-          <reference value="Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"/>
+          <reference value="https://fhir.legemidler.example.com/legemidler/123456780"/>
         </medicationReference>
         <subject>
-          <reference value="Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"/>
+          <reference value="https://fhi.no/fhir/lmdi/pasient/12345678"/>
         </subject>
         <context>
-          <reference value="Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
+          <reference value="https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3"/>
         </context>
-        <effectiveDateTime value="2024-05-28T13:14:00+02:00"/>
-        <request>
-          <reference value="MedicationRequest/Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"/>
-        </request>
+        <effectiveDateTime value="2024-05-28T09:30:00+02:00"/>
         <dosage>
           <route>
             <coding>
@@ -230,7 +230,7 @@
             </coding>
           </route>
           <dose>
-            <value value="5"/>
+            <value value="10"/>
             <unit value="mg"/>
             <system value="http://unitsofmeasure.org"/>
             <code value="mg"/>

@@ -219,7 +219,7 @@
     {
       "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
-        "<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a>" : "Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a>" : "Pasient-Med-FNR",
         "<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-patient.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
@@ -235,15 +235,15 @@
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1953-03-13",
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
           {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Oslo",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Bærum",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">_district</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>" : [
                 {
                   "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
                   "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
                     "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "0301",
-                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Oslo"
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "3024",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bærum"
                   }
                 }
               ]
@@ -259,7 +259,7 @@
     {
       "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
-        "<a href="http://hl7.org/fhir/R4/resource.html#Practitioner.id">id</a>" : "Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Practitioner.id">id</a>" : "Helsepersonell-Med-HPR",
         "<a href="http://hl7.org/fhir/R4/resource.html#Practitioner.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-practitioner.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
@@ -280,7 +280,7 @@
     {
       "<a href="http://hl7.org/fhir/R4/organization.html#Organization">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/organization.html">resourceType</a>" : "Organization",
-        "<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a>" : "Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Organization.id">id</a>" : "Organisasjon-Sykehjem",
         "<a href="http://hl7.org/fhir/R4/resource.html#Organization.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-organization.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
@@ -289,39 +289,31 @@
         "<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.4.101",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "1234567890"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "985626154"
           }
         ],
-        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.type">type</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/organization-type",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "prov",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Healthcare Provider"
-              }
-            ]
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "Lykkedalen eldrehjem",
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a>" : "BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM",
         "<a href="http://hl7.org/fhir/R4/organization.html#Organization.address">address</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.type">type</a>" : "physical",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Sigdal",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Trondheim",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">_district</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>" : [
                 {
                   "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
                   "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
                     "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "3025",
-                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Sigdal"
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "5001",
+                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Trondheim - Tråante"
                   }
                 }
               ]
             }
           }
-        ]
+        ],
+        "<a href="http://hl7.org/fhir/R4/organization.html#Organization.partOf">partOf</a>" : {
+          <a href="Organization-Organisasjon-Kommune.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Organisasjon-Kommune"
+        }
       },
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
         "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "POST",
@@ -331,7 +323,7 @@
     {
       "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/encounter.html">resourceType</a>" : "Encounter",
-        "<a href="http://hl7.org/fhir/R4/resource.html#Encounter.id">id</a>" : "Episode-Scenario-Sykehjem-Oksykodon-Opphold",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Encounter.id">id</a>" : "Episode-Sykehus",
         "<a href="http://hl7.org/fhir/R4/resource.html#Encounter.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-encounter.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
@@ -342,11 +334,7 @@
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#Extension.extension">extension</a>" : [
               {
                 "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "stringIdentifier",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "NPR123456789"
-              },
-              {
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "uuidIdentifier",
-                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueUuid</a>" : "550e8400-e29b-41d4-a716-446655440000"
+                "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "NPR987654321"
               }
             ],
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
@@ -359,7 +347,7 @@
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "inpatient encounter"
         },
         "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.serviceProvider">serviceProvider</a>" : {
-          <a href="Organization-Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"
+          <a href="Organization-Organisasjon-Sykehusavdeling.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Organisasjon-Sykehusavdeling"
         }
       },
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
@@ -370,7 +358,7 @@
     {
       "<a href="http://hl7.org/fhir/R4/medication.html#Medication">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/medication.html">resourceType</a>" : "Medication",
-        "<a href="http://hl7.org/fhir/R4/resource.html#Medication.id">id</a>" : "Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose",
+        "<a href="http://hl7.org/fhir/R4/resource.html#Medication.id">id</a>" : "Legemiddel-Oksykodon-FEST-Virkestoff",
         "<a href="http://hl7.org/fhir/R4/resource.html#Medication.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-medication.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
@@ -390,17 +378,18 @@
             }
           }
         ],
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
+          }
+        ],
         "<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "ID_48BD33D2-2838-4B81-8225-02391B7A4516",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Oxycodone Orifarm mikst oppl 1 mg/ml"
-            },
-            {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "414984009",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Product containing oxycodone (medicinal product)"
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Oksykodon"
             }
           ]
         },
@@ -422,26 +411,42 @@
     {
       "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/medicationrequest.html">resourceType</a>" : "MedicationRequest",
-        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.id">id</a>" : "Rekvirering-Scenario-Sykehjem-Oksykodon-Oral",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.id">id</a>" : "Rekvirering-Kjemoterapi",
         "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-medicationrequest.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
           ]
         },
-        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueQuantity</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 80,
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "%",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "%"
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a>" : "FOLFOX6"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : true
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "active",
         "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a>" : "order",
         "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication_x_">medicationReference</a>" : {
-          <a href="Medication-Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"
+          <a href="Medication-Legemiddel-Oksykodon-FEST-Virkestoff.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-Oksykodon-FEST-Virkestoff"
         },
         "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>" : {
-          <a href="Patient-Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"
+          <a href="Patient-Pasient-Med-FNR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Pasient-Med-FNR"
         },
-        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.encounter">encounter</a>" : {
-          <a href="Encounter-Episode-Scenario-Sykehjem-Oksykodon-Opphold.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"
-        },
-        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.authoredOn">authoredOn</a>" : "2024-05-28T12:30:00+02:00",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.authoredOn">authoredOn</a>" : "2025-03-10",
         "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.requester">requester</a>" : {
-          <a href="Practitioner-Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"
+          <a href="Practitioner-Helsepersonell-Med-HPR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/Helsepersonell-Med-HPR"
         }
       },
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
@@ -452,7 +457,7 @@
     {
       "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/medicationadministration.html">resourceType</a>" : "MedicationAdministration",
-        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "Administrering-Scenario-Sykehjem-Oksykodon-Oral",
+        "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "Administrering-Oral",
         "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.meta">meta</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
             <a href="StructureDefinition-lmdi-medicationadministration.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
@@ -460,18 +465,15 @@
         },
         "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
         "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>" : {
-          <a href="Medication-Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://fhir.legemidler.example.com/legemidler/123456780"
         },
         "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
-          <a href="Patient-Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://fhi.no/fhir/lmdi/pasient/12345678"
         },
         "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>" : {
-          <a href="Encounter-Episode-Scenario-Sykehjem-Oksykodon-Opphold.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3"
         },
-        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2024-05-28T13:14:00+02:00",
-        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
-          <a href="MedicationRequest-Rekvirering-Scenario-Sykehjem-Oksykodon-Oral.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"
-        },
+        "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2024-05-28T09:30:00+02:00",
         "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage">dosage</a>" : {
           "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.route">route</a>" : {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
@@ -483,7 +485,7 @@
             ]
           },
           "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>" : {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 5,
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 10,
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "mg",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
@@ -527,7 +529,7 @@
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, Mar 12, 2026 09:36+0000">2026-03-12</span>
+                        title="Fri, Mar 13, 2026 18:31+0000">2026-03-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

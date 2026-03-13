@@ -642,20 +642,9 @@
         <valueString value="MedicationAdministration"/>
       </extension>
       <reference>
-        <reference value="MedicationAdministration/Administrering-Eksempel-Botox-Intramuskular"/>
+        <reference value="MedicationAdministration/Administrering-Infusjon"/>
       </reference>
-      <name value="Administrering-Eksempel-Botox-Intramuskular"/>
-      <description value="Eksempel med intramuskular administrering av Botox og legemiddelreferanse med FEST paknings-id."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Eksempel-Infusjon"/>
-      </reference>
-      <name value="Administrering-Eksempel-Infusjon"/>
+      <name value="Administrering-Infusjon"/>
       <description value="Eksempel på administrering av legemiddel - infusjon"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
     </resource>
@@ -664,76 +653,10 @@
         <valueString value="MedicationAdministration"/>
       </extension>
       <reference>
-        <reference value="MedicationAdministration/Administrering-Eksempel-LogiskReferanse-Infusjon"/>
+        <reference value="MedicationAdministration/Administrering-Oral"/>
       </reference>
-      <name value="Administrering-Eksempel-LogiskReferanse-Infusjon"/>
-      <description value="Eksempel med logisk medikamentreferanse ved infusjon, uten lokal medication-ressurs i meldingen."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Eksempel-Oral"/>
-      </reference>
-      <name value="Administrering-Eksempel-Oral"/>
+      <name value="Administrering-Oral"/>
       <description value="Eksempel på administrering av legemiddel"/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Scenario-Kjemoterapi-Full-Oksaliplatin"/>
-      </reference>
-      <name value="Administrering-Scenario-Kjemoterapi-Full-Oksaliplatin"/>
-      <description value="Infusjon av lokalregistrert oksaliplatin med request-, diagnose- og hastighetsinformasjon."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Scenario-Smertebehandling-Morfin"/>
-      </reference>
-      <name value="Administrering-Scenario-Smertebehandling-Morfin"/>
-      <description value="Subkutan administrering med både SNOMED- og OID7477-koding av administrasjonsvei."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Scenario-Sykehjem-Minimum-Oksykodon"/>
-      </reference>
-      <name value="Administrering-Scenario-Sykehjem-Minimum-Oksykodon"/>
-      <description value="Minimumsscenario - administrering av oksykodon som virkestoffidentifisert legemiddel."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Scenario-Sykehjem-Minimum-Paracetamol"/>
-      </reference>
-      <name value="Administrering-Scenario-Sykehjem-Minimum-Paracetamol"/>
-      <description value="Minimumsscenario - tablettadministrering uten valgfri kontekst utover episode."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationAdministration"/>
-      </extension>
-      <reference>
-        <reference value="MedicationAdministration/Administrering-Scenario-Sykehjem-Oksykodon-Oral"/>
-      </reference>
-      <name value="Administrering-Scenario-Sykehjem-Oksykodon-Oral"/>
-      <description value="Oral administrering av oksykodon med referanser til egne relaterte ressurser."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
     </resource>
     <resource>
@@ -774,9 +697,9 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
-        <reference value="Condition/Diagnose-Eksempel-ICD10"/>
+        <reference value="Condition/Diagnose-ICD10"/>
       </reference>
-      <name value="Diagnose-Eksempel-ICD10"/>
+      <name value="Diagnose-ICD10"/>
       <description value="Eksempel på diagnose ICD-10"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
     </resource>
@@ -785,44 +708,11 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
-        <reference value="Condition/Diagnose-Eksempel-SNOMED-CT"/>
+        <reference value="Condition/Diagnose-SNOMED-CT"/>
       </reference>
-      <name value="Diagnose-Eksempel-SNOMED-CT"/>
+      <name value="Diagnose-SNOMED-CT"/>
       <description value="Eksempel på diagnose SNOMED CT og ICD-10"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Condition"/>
-      </extension>
-      <reference>
-        <reference value="Condition/Diagnose-Scenario-Kjemoterapi-Full-Kreftdiagnose"/>
-      </reference>
-      <name value="Diagnose-Scenario-Kjemoterapi-Full-Kreftdiagnose"/>
-      <description value="Diagnose knyttet til kjemoterapiregimet."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Condition"/>
-      </extension>
-      <reference>
-        <reference value="Condition/Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte"/>
-      </reference>
-      <name value="Diagnose-Scenario-Smertebehandling-Postoperativ-Smerte"/>
-      <description value="Postoperativ smerte kodet med både ICD-10 og SNOMED CT."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Bundle-Scenario-Smertebehandling"/>
-      </reference>
-      <name value="Endosebasert smertebehandling med rekvirering, diagnose og administrering"/>
-      <description value="Komplett bundle for postoperativ smertebehandling der legemidlet er identifisert med LMR-løpenummer og varenummer."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -840,66 +730,11 @@
         <valueString value="Encounter"/>
       </extension>
       <reference>
-        <reference value="Encounter/Episode-Eksempel-Sykehus"/>
+        <reference value="Encounter/Episode-Sykehus"/>
       </reference>
-      <name value="Episode-Eksempel-Sykehus"/>
+      <name value="Episode-Sykehus"/>
       <description value="Eksempel på episode i spesialisthelsetjenesten"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
-      </extension>
-      <reference>
-        <reference value="Encounter/Episode-Scenario-Kjemoterapi-Full-Innleggelse"/>
-      </reference>
-      <name value="Episode-Scenario-Kjemoterapi-Full-Innleggelse"/>
-      <description value="Kjemoterapiepisode med både string- og UUID-basert NPR-identifikator."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
-      </extension>
-      <reference>
-        <reference value="Encounter/Episode-Scenario-Smertebehandling-Innleggelse"/>
-      </reference>
-      <name value="Episode-Scenario-Smertebehandling-Innleggelse"/>
-      <description value="Sykehusinnleggelse for pasient med akutt smertebehov."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
-      </extension>
-      <reference>
-        <reference value="Encounter/Episode-Scenario-Sykehjem-Minimum-Opphold"/>
-      </reference>
-      <name value="Episode-Scenario-Sykehjem-Minimum-Opphold"/>
-      <description value="Minimumsscenario - pågående sykehjemsopphold."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
-      </extension>
-      <reference>
-        <reference value="Encounter/Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
-      </reference>
-      <name value="Episode-Scenario-Sykehjem-Oksykodon-Opphold"/>
-      <description value="Sykehjemsopphold med både NPR string- og UUID-identifikator."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Bundle-Scenario-Kjemoterapi-Full"/>
-      </reference>
-      <name value="Fullt kjemoterapiscenario med lokal katalog, forrige rekvirering og aktiv administrering"/>
-      <description value="Komplett bundle som viser lokal legemiddelkatalog, diagnosekobling, begge NPR-identifikatorer og alle LMDI-extensions for rekvirering."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -928,9 +763,9 @@
         <valueString value="Practitioner"/>
       </extension>
       <reference>
-        <reference value="Practitioner/Helsepersonell-Eksempel-Med-HPR"/>
+        <reference value="Practitioner/Helsepersonell-Med-HPR"/>
       </reference>
-      <name value="Helsepersonell-Eksempel-Med-HPR"/>
+      <name value="Helsepersonell-Med-HPR"/>
       <description value="Eksempel på helsepersonell med HPR-nummer"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
     </resource>
@@ -939,43 +774,10 @@
         <valueString value="Practitioner"/>
       </extension>
       <reference>
-        <reference value="Practitioner/Helsepersonell-Eksempel-Uten-HPR"/>
+        <reference value="Practitioner/Helsepersonell-Uten-HPR"/>
       </reference>
-      <name value="Helsepersonell-Eksempel-Uten-HPR"/>
+      <name value="Helsepersonell-Uten-HPR"/>
       <description value="Eksempel på rekvirent uten HPR-nummer"/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
-      </extension>
-      <reference>
-        <reference value="Practitioner/Helsepersonell-Scenario-Kjemoterapi-Full-Rekvirent"/>
-      </reference>
-      <name value="Helsepersonell-Scenario-Kjemoterapi-Full-Rekvirent"/>
-      <description value="Onkolog som rekvirerer kuren."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
-      </extension>
-      <reference>
-        <reference value="Practitioner/Helsepersonell-Scenario-Smertebehandling-Rekvirent"/>
-      </reference>
-      <name value="Helsepersonell-Scenario-Smertebehandling-Rekvirent"/>
-      <description value="Rekvirerende lege i sykehusscenarioet."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
-      </extension>
-      <reference>
-        <reference value="Practitioner/Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"/>
-      </reference>
-      <name value="Helsepersonell-Scenario-Sykehjem-Oksykodon-Rekvirent"/>
-      <description value="Rekvirent i sykehjemsscenarioet, identifisert med HPR-nummer."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"/>
     </resource>
     <resource>
@@ -1038,31 +840,9 @@
         <valueString value="Medication"/>
       </extension>
       <reference>
-        <reference value="Medication/Legemiddel-Eksempel-Botox-FEST-Pakning"/>
+        <reference value="Medication/Legemiddel-Monoket-FEST-Pakning"/>
       </reference>
-      <name value="Legemiddel-Eksempel-Botox-FEST-Pakning"/>
-      <description value="Legemiddel med FEST paknings-id og varenummer."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Eksempel-LokalKatalog-Kalsiumklorid-Infusjon"/>
-      </reference>
-      <name value="Legemiddel-Eksempel-LokalKatalog-Kalsiumklorid-Infusjon"/>
-      <description value="Eksempel på lokalt registrert legemiddel med ingredient som CodeableConcept."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Eksempel-Monoket-FEST-Pakning"/>
-      </reference>
-      <name value="Legemiddel-Eksempel-Monoket-FEST-Pakning"/>
+      <name value="Legemiddel-Monoket-FEST-Pakning"/>
       <description value="Eksempel på legemiddel - paking"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
     </resource>
@@ -1071,9 +851,9 @@
         <valueString value="Medication"/>
       </extension>
       <reference>
-        <reference value="Medication/Legemiddel-Eksempel-Oksykodon-FEST-Virkestoff"/>
+        <reference value="Medication/Legemiddel-Oksykodon-FEST-Virkestoff"/>
       </reference>
-      <name value="Legemiddel-Eksempel-Oksykodon-FEST-Virkestoff"/>
+      <name value="Legemiddel-Oksykodon-FEST-Virkestoff"/>
       <description value="Eksempel på legemiddel"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
     </resource>
@@ -1082,65 +862,10 @@
         <valueString value="Medication"/>
       </extension>
       <reference>
-        <reference value="Medication/Legemiddel-Eksempel-Paracetamol-FEST-Merkevare"/>
+        <reference value="Medication/Legemiddel-Paracetamol-FEST-Merkevare"/>
       </reference>
-      <name value="Legemiddel-Eksempel-Paracetamol-FEST-Merkevare"/>
+      <name value="Legemiddel-Paracetamol-FEST-Merkevare"/>
       <description value="Eksempel på legemiddel - Paracetamol"/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Scenario-Kjemoterapi-Full-Oksaliplatin-LokalKatalog"/>
-      </reference>
-      <name value="Legemiddel-Scenario-Kjemoterapi-Full-Oksaliplatin-LokalKatalog"/>
-      <description value="Lokalregistrert oksaliplatin med ingredient-reference og ATC-klassifisering."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Scenario-Smertebehandling-Morfin-Endose"/>
-      </reference>
-      <name value="Legemiddel-Scenario-Smertebehandling-Morfin-Endose"/>
-      <description value="Morfin identifisert med både LMR-løpenummer og varenummer."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Scenario-Sykehjem-Minimum-Oksykodon-FEST-Virkestoff"/>
-      </reference>
-      <name value="Legemiddel-Scenario-Sykehjem-Minimum-Oksykodon-FEST-Virkestoff"/>
-      <description value="Minimumsscenario - oksykodon identifisert med FEST virkestoff-id."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Scenario-Sykehjem-Minimum-Paracetamol-FEST-Merkevare"/>
-      </reference>
-      <name value="Legemiddel-Scenario-Sykehjem-Minimum-Paracetamol-FEST-Merkevare"/>
-      <description value="Minimumsscenario - paracetamol identifisert med FEST merkevare."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Medication"/>
-      </extension>
-      <reference>
-        <reference value="Medication/Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"/>
-      </reference>
-      <name value="Legemiddel-Scenario-Sykehjem-Oksykodon-FEST-Dose"/>
-      <description value="Legemiddel med FEST dose-id og SNOMED-koding."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
     </resource>
     <resource>
@@ -1233,17 +958,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Bundle-Scenario-Sykehjem-Minimum"/>
-      </reference>
-      <name value="Minimumsrapportering fra sykehjem med to administreringer"/>
-      <description value="Transaction-bundle med kun nødvendige felter, organisasjonshierarki og to ulike legemiddelslicer."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="NamingSystem"/>
       </extension>
       <reference>
@@ -1305,7 +1019,7 @@
         <reference value="Bundle/Bundle-Scenario-Sykehjem-Oksykodon"/>
       </reference>
       <name value="Oksykodonadministrering i sykehjem med separate ressurser"/>
-      <description value="Eksempel på transaction-bundle der relaterte ressurser sendes som egne bundle entries."/>
+      <description value="Eksempel på transaction-bundle satt sammen av gjenværende profildefinerte eksempelressurser."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
     </resource>
     <resource>
@@ -1324,10 +1038,10 @@
         <valueString value="Organization"/>
       </extension>
       <reference>
-        <reference value="Organization/Organisasjon-Eksempel-Avdeling"/>
+        <reference value="Organization/Organisasjon-HF"/>
       </reference>
-      <name value="Organisasjon-Eksempel-Avdeling"/>
-      <description value="Eksempel på spesialistavdeling"/>
+      <name value="Organisasjon-HF"/>
+      <description value="Eksempel på Helseforetak"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
     </resource>
     <resource>
@@ -1335,9 +1049,20 @@
         <valueString value="Organization"/>
       </extension>
       <reference>
-        <reference value="Organization/Organisasjon-Eksempel-Sykehjem"/>
+        <reference value="Organization/Organisasjon-Kommune"/>
       </reference>
-      <name value="Organisasjon-Eksempel-Sykehjem"/>
+      <name value="Organisasjon-Kommune"/>
+      <description value="Eksempel på kommune i primærhelsetjenesten"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/Organisasjon-Sykehjem"/>
+      </reference>
+      <name value="Organisasjon-Sykehjem"/>
       <description value="Eksempel på sykehjem i primærhelsetjenesten"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
     </resource>
@@ -1346,9 +1071,9 @@
         <valueString value="Organization"/>
       </extension>
       <reference>
-        <reference value="Organization/Organisasjon-Eksempel-Sykehus"/>
+        <reference value="Organization/Organisasjon-Sykehus"/>
       </reference>
-      <name value="Organisasjon-Eksempel-Sykehus"/>
+      <name value="Organisasjon-Sykehus"/>
       <description value="Eksempel på sykehusorganisasjon"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
     </resource>
@@ -1357,65 +1082,10 @@
         <valueString value="Organization"/>
       </extension>
       <reference>
-        <reference value="Organization/Organisasjon-Scenario-Kjemoterapi-Full-Onkologisk-Avdeling"/>
+        <reference value="Organization/Organisasjon-Sykehusavdeling"/>
       </reference>
-      <name value="Organisasjon-Scenario-Kjemoterapi-Full-Onkologisk-Avdeling"/>
-      <description value="Onkologisk avdeling som gjennomfører kjemoterapien."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/Organisasjon-Scenario-Smertebehandling-Sykehus"/>
-      </reference>
-      <name value="Organisasjon-Scenario-Smertebehandling-Sykehus"/>
-      <description value="Sykehusorganisasjon der behandling og administrering skjer."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/Organisasjon-Scenario-Sykehjem-Minimum-Avdeling"/>
-      </reference>
-      <name value="Organisasjon-Scenario-Sykehjem-Minimum-Avdeling"/>
-      <description value="Minimumsscenario - avdelingen som administrerer legemidlet."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/Organisasjon-Scenario-Sykehjem-Minimum-Kommune"/>
-      </reference>
-      <name value="Organisasjon-Scenario-Sykehjem-Minimum-Kommune"/>
-      <description value="Minimumsscenario - overordnet kommuneorganisasjon."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/Organisasjon-Scenario-Sykehjem-Minimum-Sykehjem"/>
-      </reference>
-      <name value="Organisasjon-Scenario-Sykehjem-Minimum-Sykehjem"/>
-      <description value="Minimumsscenario - institusjonen som avdelingen tilhører."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"/>
-      </reference>
-      <name value="Organisasjon-Scenario-Sykehjem-Oksykodon-Eldrehjem"/>
-      <description value="Sykehjemsorganisasjon fra primærhelsetjenesten."/>
+      <name value="Organisasjon-Sykehusavdeling"/>
+      <description value="Eksempel på spesialistavdeling"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
     </resource>
     <resource>
@@ -1434,9 +1104,9 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/Pasient-Eksempel-Med-FNR"/>
+        <reference value="Patient/Pasient-Med-FNR"/>
       </reference>
-      <name value="Pasient-Eksempel-Med-FNR"/>
+      <name value="Pasient-Med-FNR"/>
       <description value="Eksempel på pasient med fødselsnummer"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
     </resource>
@@ -1445,54 +1115,10 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/Pasient-Eksempel-Uten-FNR"/>
+        <reference value="Patient/Pasient-Uten-FNR"/>
       </reference>
-      <name value="Pasient-Eksempel-Uten-FNR"/>
+      <name value="Pasient-Uten-FNR"/>
       <description value="Eksempel på pasient med kjønn og fødselsdato"/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Pasient-Scenario-Kjemoterapi-Full-Med-FNR"/>
-      </reference>
-      <name value="Pasient-Scenario-Kjemoterapi-Full-Med-FNR"/>
-      <description value="Kreftpasient med fullere demografisk og geografisk kontekst."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Pasient-Scenario-Smertebehandling-Med-DNR"/>
-      </reference>
-      <name value="Pasient-Scenario-Smertebehandling-Med-DNR"/>
-      <description value="Pasient med D-nummer i et innleggelsesscenario for postoperativ smertebehandling."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Pasient-Scenario-Sykehjem-Minimum-Med-FNR"/>
-      </reference>
-      <name value="Pasient-Scenario-Sykehjem-Minimum-Med-FNR"/>
-      <description value="Minimumsscenario - pasient identifisert med fødselsnummer."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"/>
-      </reference>
-      <name value="Pasient-Scenario-Sykehjem-Oksykodon-Med-FNR"/>
-      <description value="Pasient med fødselsnummer i et enkelt sykehjemsscenario."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
     </resource>
     <resource>
@@ -1511,9 +1137,9 @@
         <valueString value="MedicationRequest"/>
       </extension>
       <reference>
-        <reference value="MedicationRequest/Rekvirering-Eksempel-Kjemoterapi"/>
+        <reference value="MedicationRequest/Rekvirering-Kjemoterapi"/>
       </reference>
-      <name value="Rekvirering-Eksempel-Kjemoterapi"/>
+      <name value="Rekvirering-Kjemoterapi"/>
       <description value="Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
     </resource>
@@ -1522,54 +1148,10 @@
         <valueString value="MedicationRequest"/>
       </extension>
       <reference>
-        <reference value="MedicationRequest/Rekvirering-Eksempel-Paracetamol"/>
+        <reference value="MedicationRequest/Rekvirering-Paracetamol"/>
       </reference>
-      <name value="Rekvirering-Eksempel-Paracetamol"/>
+      <name value="Rekvirering-Paracetamol"/>
       <description value="Eksempel på legemiddelrekvirering av Paracet"/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationRequest"/>
-      </extension>
-      <reference>
-        <reference value="MedicationRequest/Rekvirering-Scenario-Kjemoterapi-Full-Forrige"/>
-      </reference>
-      <name value="Rekvirering-Scenario-Kjemoterapi-Full-Forrige"/>
-      <description value="Tidligere rekvirering i samme kurforløp."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationRequest"/>
-      </extension>
-      <reference>
-        <reference value="MedicationRequest/Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende"/>
-      </reference>
-      <name value="Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende"/>
-      <description value="Aktiv rekvirering i FOLFOX6-regime med alle LMDI-extensions."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationRequest"/>
-      </extension>
-      <reference>
-        <reference value="MedicationRequest/Rekvirering-Scenario-Smertebehandling-Morfin"/>
-      </reference>
-      <name value="Rekvirering-Scenario-Smertebehandling-Morfin"/>
-      <description value="Rekvirering av morfin ved postoperativ smerte."/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationRequest"/>
-      </extension>
-      <reference>
-        <reference value="MedicationRequest/Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"/>
-      </reference>
-      <name value="Rekvirering-Scenario-Sykehjem-Oksykodon-Oral"/>
-      <description value="Rekvirering av oksykodon i sykehjemsscenarioet."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
     </resource>
     <resource>
@@ -1599,21 +1181,10 @@
         <valueString value="Substance"/>
       </extension>
       <reference>
-        <reference value="Substance/Virkestoff-Eksempel-Oksykodon"/>
+        <reference value="Substance/Virkestoff-Oksykodon"/>
       </reference>
-      <name value="Virkestoff-Eksempel-Oksykodon"/>
+      <name value="Virkestoff-Oksykodon"/>
       <description value="Eksempel på virkestoff - Oksykodon"/>
-      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Substance"/>
-      </extension>
-      <reference>
-        <reference value="Substance/Virkestoff-Scenario-Kjemoterapi-Full-Oksaliplatin"/>
-      </reference>
-      <name value="Virkestoff-Scenario-Kjemoterapi-Full-Oksaliplatin"/>
-      <description value="Virkestoff for lokalregistrert oksaliplatin."/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"/>
     </resource>
     <page>

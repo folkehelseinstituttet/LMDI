@@ -23,7 +23,7 @@ Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [MedicationRequest/Rekvirering-Eksempel-Kjemoterapi](MedicationRequest-Rekvirering-Eksempel-Kjemoterapi.md), [MedicationRequest/Rekvirering-Eksempel-Paracetamol](MedicationRequest-Rekvirering-Eksempel-Paracetamol.md), [MedicationRequest/Rekvirering-Scenario-Kjemoterapi-Full-Forrige](MedicationRequest-Rekvirering-Scenario-Kjemoterapi-Full-Forrige.md), [MedicationRequest/Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende](MedicationRequest-Rekvirering-Scenario-Kjemoterapi-Full-Gjeldende.md)... Show 2 more, [MedicationRequest/Rekvirering-Scenario-Smertebehandling-Morfin](MedicationRequest-Rekvirering-Scenario-Smertebehandling-Morfin.md) and [MedicationRequest/Rekvirering-Scenario-Sykehjem-Oksykodon-Oral](MedicationRequest-Rekvirering-Scenario-Sykehjem-Oksykodon-Oral.md)
+* Examples for this Profile: [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) and [MedicationRequest/Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationrequest)
 
