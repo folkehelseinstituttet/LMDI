@@ -39,4 +39,13 @@ Description: "Eksempel på episode i spesialisthelsetjenesten"
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 * serviceProvider = Reference(Organisasjon-Sykehusavdeling)
+* identifier.value = "550e8400-e29b-41d4-a716-446655440000"
 * extension[nprEpisodeIdentifier].extension[stringIdentifier].valueString = "NPR987654321"
+* extension[nprEpisodeIdentifier].extension[uuidIdentifier].valueUuid = "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
+
+Instance: Episode-Sykehjem
+InstanceOf: Episode
+Description: "Eksempel på episode på sykehjem"
+* status = #in-progress
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#SS "short stay"
+* serviceProvider = Reference(Organisasjon-Sykehjem)
