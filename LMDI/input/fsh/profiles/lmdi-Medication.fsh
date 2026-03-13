@@ -155,6 +155,55 @@ Description: "Eksempel på legemiddel - paking"
 * form.coding[OID7448].code = #68
 * form.coding[OID7448].display = "Depottablett"
 
+Instance: Legemiddel-Lokalt-Med-Flere-Ingredienser
+InstanceOf: Legemiddel
+Description: "Eksempel på lokalt legemiddel med flere ingredienser"
+* code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
+* code.coding[LokaltLegemiddel].code = #lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron
+* code.coding[LokaltLegemiddel].display = "Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"
+* ingredient[0].itemCodeableConcept.text = "Ketamin"
+* ingredient[0].strength.numerator.value = 10
+* ingredient[0].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[0].strength.numerator.code = #mg
+* ingredient[0].strength.denominator.value = 1
+* ingredient[0].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[0].strength.denominator.code = #1
+* ingredient[1].itemCodeableConcept.text = "Deksametason"
+* ingredient[1].strength.numerator.value = 4
+* ingredient[1].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[1].strength.numerator.code = #mg
+* ingredient[1].strength.denominator.value = 1
+* ingredient[1].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[1].strength.denominator.code = #1
+* ingredient[2].itemCodeableConcept.text = "Haloperidol"
+* ingredient[2].strength.numerator.value = 5
+* ingredient[2].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[2].strength.numerator.code = #mg
+* ingredient[2].strength.denominator.value = 1
+* ingredient[2].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[2].strength.denominator.code = #1
+* ingredient[3].itemCodeableConcept.text = "Klonidin"
+* ingredient[3].strength.numerator.value = 150
+* ingredient[3].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[3].strength.numerator.code = #ug
+* ingredient[3].strength.denominator.value = 1
+* ingredient[3].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[3].strength.denominator.code = #1
+* ingredient[4].itemCodeableConcept.text = "Midazolam"
+* ingredient[4].strength.numerator.value = 5
+* ingredient[4].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[4].strength.numerator.code = #mg
+* ingredient[4].strength.denominator.value = 1
+* ingredient[4].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[4].strength.denominator.code = #1
+* ingredient[5].itemCodeableConcept.text = "Ondansetron"
+* ingredient[5].strength.numerator.value = 2
+* ingredient[5].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[5].strength.numerator.code = #mg
+* ingredient[5].strength.denominator.value = 1
+* ingredient[5].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[5].strength.denominator.code = #1
+
 // Invarianter
 Invariant: lmdi-medication-code-or-ingredient
 Description: "Medication skal ha code.coding eller ingredient"

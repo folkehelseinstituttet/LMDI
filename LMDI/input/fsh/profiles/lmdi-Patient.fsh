@@ -83,9 +83,9 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * identifier[HNR] 0..0
 
 // EKSEMPLER
-Instance: Pasient-Uten-FNR
+Instance: Pasient-Uten-Personidentifikator
 InstanceOf: Pasient
-Description: "Eksempel på pasient med kjønn og fødselsdato"
+Description: "Eksempel på pasient uten personidentifikator"
 * gender = #female
 * birthDate = "1958-09-19"
 * address.district = "Bærum"
@@ -95,10 +95,20 @@ Instance: Pasient-Med-FNR
 InstanceOf: Pasient
 Description: "Eksempel på pasient med fødselsnummer"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
-* identifier[FNR].value = "13031353453"
+* identifier[FNR].value = "12705825562"
 * gender = #male
-* birthDate = "1953-03-13"
-* address.district = "Bærum"
-* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3024 "Bærum"
+* birthDate = "1958-05-12"
+* address.use = #home
+* address.type = #physical
+* address.district = "Oslo"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
+* address.extension[urbanDistrict].valueCoding = $VsLmdiUrbanDistrict#030102 "Grünerløkka"
 
+Instance: Pasient-Med-DNR
+InstanceOf: Pasient
+Description: "Eksempel på pasient med D-nummer"
+* identifier[DNR].system = "urn:oid:2.16.578.1.12.4.1.4.2"
+* identifier[DNR].value = "41667987421"
+* birthDate = "1979-01-01"
+* address.state = "Vestland"
 
