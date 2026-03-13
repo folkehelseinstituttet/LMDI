@@ -225,10 +225,20 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> fhir:stringIdentifier       ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;NPR987654321&quot;       ]     ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;NPR987654321&quot;       ]     ] [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;uuidIdentifier&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> fhir:uuidIdentifier       ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uuid">a</a> fhir:Uuid ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uuid">fhir:v</a> &quot;urn:uuid:550e8400-e29b-41d4-a716-446655440000&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uuid">fhir:l</a> &lt;urn:uuid:550e8400-e29b-41d4-a716-446655440000&gt;       ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier&gt;     ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/encounter.html#Encounter.identifier">fhir:identifier</a> ( [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;550e8400-e29b-41d4-a716-446655440000&quot; ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/encounter.html#Encounter.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;finished&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/encounter.html#Encounter.class">fhir:class</a> [
@@ -275,7 +285,7 @@
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Mar 13, 2026 19:05+0000">2026-03-13</span>
+                        title="Fri, Mar 13, 2026 19:17+0000">2026-03-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

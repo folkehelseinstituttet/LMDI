@@ -91,6 +91,7 @@ These are example instances that show what data produced and consumed by systems
 | [Administrering-Oral](MedicationAdministration-Administrering-Oral.md) | Eksempel på administrering av legemiddel |
 | [Diagnose-ICD10](Condition-Diagnose-ICD10.md) | Eksempel på diagnose ICD-10 |
 | [Diagnose-SNOMED-CT](Condition-Diagnose-SNOMED-CT.md) | Eksempel på diagnose SNOMED CT og ICD-10 |
+| [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |

@@ -1016,6 +1016,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Encounter"
       }],
       "reference" : {
+        "reference" : "Encounter/Episode-Sykehjem"
+      },
+      "name" : "Episode-Sykehjem",
+      "description" : "Eksempel på episode på sykehjem",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
         "reference" : "Encounter/Episode-Sykehus"
       },
       "name" : "Episode-Sykehus",

@@ -168,11 +168,24 @@
              a fhir:String ;
              fhir:v "NPR987654321"
            ]
+         ] [
+           fhir:url [
+             fhir:v "uuidIdentifier"^^xsd:anyURI ;
+             fhir:l fhir:uuidIdentifier
+           ] ;
+           fhir:value [
+             a fhir:Uuid ;
+             fhir:v "urn:uuid:550e8400-e29b-41d4-a716-446655440000"^^xsd:anyURI ;
+             fhir:l <urn:uuid:550e8400-e29b-41d4-a716-446655440000>
+           ]
          ] ) ;
          fhir:url [
            fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"^^xsd:anyURI ;
            fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier>
          ]
+       ] ) ;
+       fhir:identifier ( [
+         fhir:value [ fhir:v "550e8400-e29b-41d4-a716-446655440000" ]
        ] ) ;
        fhir:status [ fhir:v "finished" ] ;
        fhir:class [

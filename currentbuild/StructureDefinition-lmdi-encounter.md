@@ -23,7 +23,7 @@ Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne pr
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Encounter/Episode-Sykehus](Encounter-Episode-Sykehus.md)
+* Examples for this Profile: [Encounter/Episode-Sykehjem](Encounter-Episode-Sykehjem.md) and [Encounter/Episode-Sykehus](Encounter-Episode-Sykehus.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-encounter)
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "name" : "Episode",
   "title" : "Episode",
   "status" : "draft",
-  "date" : "2026-03-13T19:05:40+00:00",
+  "date" : "2026-03-13T19:17:29+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
