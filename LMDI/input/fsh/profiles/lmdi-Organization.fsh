@@ -48,9 +48,11 @@ Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
 * type 0..*
 * type ^short = "Organisasjonstype"
 * type ^definition = "Type organisasjon (f.eks. sykehus, avdeling, klinikk)"
-// no-basis definerer slices: organisatoriskNiva og organisatoriskBetegnelse med required bindings
+* type[organisatoriskNiva] 0..0
+// LMDI deaktiverer organisatoriskNiva fordi kodeverket (OID 8628) ikke lenger er i bruk.
+// organisatoriskBetegnelse beholdes fra no-basis og brukes i eksemplene.
 
-* name 1..1 MS 
+* name 1..1 MS
 * name ^short = "Organisasjonsnavn"
 * name ^definition = "Offisielt navn på organisasjonen"
 * name ^comment = "Kan være navn på post, avdelingsnavn, klinikknavn, sykehusnavn eller sykehjemsnavn"
@@ -82,41 +84,58 @@ Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
 * address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 
 // EKSEMPLER
-Instance: Organisasjon-Eksempel-Sykehjem
+
+Instance: Organisasjon-Kommune
+InstanceOf: Organisasjon
+Description: "Eksempel på kommune i primærhelsetjenesten"
+* identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
+* identifier[ENH].value = "942110464"
+* name = "TRONDHEIM KOMMUNE"
+* address.type = #physical
+* address.district = "Trondheim"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#5001 "Trondheim - Tråante"
+
+Instance: Organisasjon-Sykehjem
 InstanceOf: Organisasjon
 Description: "Eksempel på sykehjem i primærhelsetjenesten"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
-* identifier[ENH].value = "1234567890"
-* name = "Lykkedalen sykehjem"
+* identifier[ENH].value = "985626154"
+* name = "BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM"
+* partOf = Reference(Organisasjon-Kommune)
 * address.type = #physical
-* address.district = "Sigdal"
-* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3025 "Sigdal"
+* address.district = "Trondheim"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#5001 "Trondheim - Tråante"
 
-Instance: Organisasjon-Eksempel-Avdeling
+Instance: Organisasjon-HF
 InstanceOf: Organisasjon
-Description: "Eksempel på spesialistavdeling"
-* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
-* identifier[RSH].value = "4208723"
-* name = "Avdeling for epilepsi, poliklinikk"
-
-* partOf = Reference(Organisasjon-Eksempel-Sykehus)
-* address.type = #physical
-* address.district = "Oslo"
-* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
-
-Instance: Organisasjon-Eksempel-Sykehus
-InstanceOf: Organisasjon
-Description: "Eksempel på sykehusorganisasjon"
+Description: "Eksempel på Helseforetak"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "993467049"
 * identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
 * identifier[RSH].value = "4001031"
 * name = "Oslo universitetssykehus HF"
 
+Instance: Organisasjon-Sykehus
+InstanceOf: Organisasjon
+Description: "Eksempel på sykehusorganisasjon"
+* identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
+* identifier[ENH].value = "974705761"
+* name = "OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK"
+* type[organisatoriskBetegnelse].coding = $organisatoriskBetegnelse#01 "Sykehus"
+* partOf = Reference(Organisasjon-HF)
 * address.type = #physical
-* address.district = "Oslo"
-* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#0301 "Oslo"
-* address.extension[urbanDistrict].valueCoding = $VsLmdiUrbanDistrict#01 "Gamle Oslo"
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3201 "Bærum"
+
+Instance: Organisasjon-Sykehusavdeling
+InstanceOf: Organisasjon
+Description: "Eksempel på spesialistavdeling"
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
+* identifier[RSH].value = "4208723"
+* name = "Avdeling for epilepsi, poliklinikk"
+* type[organisatoriskBetegnelse].coding = $organisatoriskBetegnelse#05 "Avdeling"
+* partOf = Reference(Organisasjon-Sykehus)
+* address.type = #physical
+* address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3201 "Bærum"
 
 // Invariant definisjon
 Invariant: lmdi-org-identifier

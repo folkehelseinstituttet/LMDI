@@ -79,19 +79,19 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICPC2].display ^short = "Beskrivelse av diagnosekode (fra kodeverket)"
 
 // EKSEMPLER
-Instance: Diagnose-Eksempel-ICD10
+Instance: Diagnose-ICD10
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose ICD-10"
-* subject = Reference(Pasient-Eksempel-Med-FNR)
+* subject = Reference(Pasient-Med-FNR)
 * stage.summary.text = "Indikasjonsdiagnose for legemiddelbehandling"
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10] = #R63.3
 * code.coding[ICD10].display = "Vanskeligheter med inntak og tilførsel av mat"
 
-Instance: Diagnose-Eksempel-SNOMED-CT
+Instance: Diagnose-SNOMED-CT
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose SNOMED CT og ICD-10"
-* subject = Reference(Pasient-Eksempel-Med-FNR)
+* subject = Reference(Pasient-Med-FNR)
 * stage.summary.text = "Indikasjonsdiagnose for legemiddelbehandling"
 * code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[SCT] = #276241001

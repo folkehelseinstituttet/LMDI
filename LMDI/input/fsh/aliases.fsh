@@ -10,6 +10,9 @@ Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-t
 // ATC alias
 Alias: $ATC = http://www.whocc.no/atc
 
+// Volven alias
+Alias: $organisatoriskBetegnelse = urn:oid:2.16.578.1.12.4.1.1.8624
+
 // LMDI Profile aliases
 Alias: $LMDISubstance = http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance
 Alias: $LMDIMedication = http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication
