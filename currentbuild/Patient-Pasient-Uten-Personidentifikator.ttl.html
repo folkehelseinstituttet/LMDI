@@ -6,7 +6,7 @@
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Pasient-Uten-FNR - XML Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title>Pasient-Uten-Personidentifikator - TTL Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.0.8</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -115,7 +115,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-FNR</b></li>
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-Personidentifikator</b></li>
                 
             </ul>
         </div> <!-- /container -->
@@ -127,7 +127,7 @@
             <div class="row">
                 <div class="inner-wrapper">
 
-<div style="counter-reset: section 7" class="col-12">
+<div style="counter-reset: section 9" class="col-12">
 <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.8) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
@@ -142,7 +142,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.html">
+        href="Patient-Pasient-Uten-Personidentifikator.html">
         Narrative Content
     </a>
 </li>
@@ -152,9 +152,9 @@
 
         
         
-        <li class="nav-item active">
-    <a class="nav-link active"
-        href="#">
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Patient-Pasient-Uten-Personidentifikator.xml.html">
         XML
     </a>
 </li>
@@ -165,7 +165,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.json.html">
+        href="Patient-Pasient-Uten-Personidentifikator.json.html">
         JSON
     </a>
 </li>
@@ -174,9 +174,9 @@
 
         
         
-        <li class="nav-item ">
-    <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.ttl.html">
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
         TTL
     </a>
 </li>
@@ -191,38 +191,53 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Pasient-Uten-FNR - XML Representation</h2>
+<h2 id="root">: Pasient-Uten-Personidentifikator - TTL Representation</h2>
 
 
-<p><a href="Patient-Pasient-Uten-FNR.xml" no-download="true">Raw xml</a> | <a href="Patient-Pasient-Uten-FNR.xml" download>Download</a></p>
+<p><a href="Patient-Pasient-Uten-Personidentifikator.ttl" no-download="true">Raw ttl</a> | <a href="Patient-Pasient-Uten-Personidentifikator.ttl" download>Download</a></p>
 
   <!-- insert intro if present -->
   
 
 
 
-  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-&lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient">Patient</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Pasient-Uten-FNR&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
-             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;female&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#date">value</a>=&quot;1958-09-19&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Bærum&quot;&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:2.16.578.1.12.4.1.1.3402&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;3024&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Bærum&quot;/&gt;
-        &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>&gt;
-      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>&gt;
-&lt;/<a href="http://hl7.org/fhir/R4/patient.html#Patient">Patient</a>&gt;</code></pre>
+  <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Patient ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Patient.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Pasient-Uten-Personidentifikator&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">fhir:meta</a> [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient&gt;     ] )
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">fhir:gender</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;female&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">fhir:birthDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#date">fhir:v</a> &quot;1958-09-19&quot;^^xsd:date] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.address">fhir:address</a> ( [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">fhir:district</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bærum&quot; ;
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding">a</a> fhir:Coding ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:2.16.578.1.12.4.1.1.3402&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:2.16.578.1.12.4.1.1.3402&gt;           ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;3024&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Bærum&quot; ]         ]       ] )     ]
+  ] ) . # 
+
+</code></pre>
+
 
 
   <!-- insert notes if present -->
@@ -253,7 +268,7 @@
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Mar 13, 2026 19:17+0000">2026-03-13</span>
+                        title="Fri, Mar 13, 2026 19:33+0000">2026-03-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -284,7 +299,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-FNR</b></li>"
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-Personidentifikator</b></li>"
   }
 </script>
 <script type="text/javascript">

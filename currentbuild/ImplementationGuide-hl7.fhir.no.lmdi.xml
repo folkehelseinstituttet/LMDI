@@ -851,6 +851,17 @@
         <valueString value="Medication"/>
       </extension>
       <reference>
+        <reference value="Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"/>
+      </reference>
+      <name value="Legemiddel-Lokalt-Med-Flere-Ingredienser"/>
+      <description value="Eksempel på lokalt legemiddel med flere ingredienser"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
         <reference value="Medication/Legemiddel-Monoket-FEST-Pakning"/>
       </reference>
       <name value="Legemiddel-Monoket-FEST-Pakning"/>
@@ -1115,6 +1126,17 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
+        <reference value="Patient/Pasient-Med-DNR"/>
+      </reference>
+      <name value="Pasient-Med-DNR"/>
+      <description value="Eksempel på pasient med D-nummer"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
         <reference value="Patient/Pasient-Med-FNR"/>
       </reference>
       <name value="Pasient-Med-FNR"/>
@@ -1126,10 +1148,10 @@
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/Pasient-Uten-FNR"/>
+        <reference value="Patient/Pasient-Uten-Personidentifikator"/>
       </reference>
-      <name value="Pasient-Uten-FNR"/>
-      <description value="Eksempel på pasient med kjønn og fødselsdato"/>
+      <name value="Pasient-Uten-Personidentifikator"/>
+      <description value="Eksempel på pasient uten personidentifikator"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
     </resource>
     <resource>

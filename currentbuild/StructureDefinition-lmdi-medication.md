@@ -23,7 +23,7 @@ Beskrivelse av legemiddel.
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Medication/Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md), [Medication/Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) and [Medication/Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
+* Examples for this Profile: [Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md), [Medication/Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md), [Medication/Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) and [Medication/Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medication)
 

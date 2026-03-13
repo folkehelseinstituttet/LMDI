@@ -1,4 +1,4 @@
-# Pasient-Uten-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Pasient-Uten-Personidentifikator - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -8,9 +8,9 @@
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Pasient-Uten-FNR**
+* **Pasient-Uten-Personidentifikator**
 
-## Example Patient: Pasient-Uten-FNR
+## Example Patient: Pasient-Uten-Personidentifikator
 
 
 
@@ -19,7 +19,7 @@
 ```json
 {
   "resourceType" : "Patient",
-  "id" : "Pasient-Uten-FNR",
+  "id" : "Pasient-Uten-Personidentifikator",
   "meta" : {
     "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
   },

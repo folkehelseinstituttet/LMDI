@@ -2244,6 +2244,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-Lokalt-Med-Flere-Ingredienser" ] ;
+       fhir:description [ fhir:v "Eksempel på lokalt legemiddel med flere ingredienser" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Monoket-FEST-Pakning> ;
          fhir:reference [ fhir:v "Medication/Legemiddel-Monoket-FEST-Pakning" ]
        ] ;
@@ -2757,6 +2779,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-DNR> ;
+         fhir:reference [ fhir:v "Patient/Pasient-Med-DNR" ]
+       ] ;
+       fhir:name [ fhir:v "Pasient-Med-DNR" ] ;
+       fhir:description [ fhir:v "Eksempel på pasient med D-nummer" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-FNR> ;
          fhir:reference [ fhir:v "Patient/Pasient-Med-FNR" ]
        ] ;
@@ -2779,11 +2823,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Uten-FNR> ;
-         fhir:reference [ fhir:v "Patient/Pasient-Uten-FNR" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Uten-Personidentifikator> ;
+         fhir:reference [ fhir:v "Patient/Pasient-Uten-Personidentifikator" ]
        ] ;
-       fhir:name [ fhir:v "Pasient-Uten-FNR" ] ;
-       fhir:description [ fhir:v "Eksempel på pasient med kjønn og fødselsdato" ] ;
+       fhir:name [ fhir:v "Pasient-Uten-Personidentifikator" ] ;
+       fhir:description [ fhir:v "Eksempel på pasient uten personidentifikator" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"^^xsd:anyURI ;

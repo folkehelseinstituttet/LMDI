@@ -38,19 +38,29 @@
       },
       "identifier" : [{
         "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
-        "value" : "13031353453"
+        "value" : "12705825562"
       }],
       "gender" : "male",
-      "birthDate" : "1953-03-13",
+      "birthDate" : "1958-05-12",
       "address" : [{
-        "district" : "Bærum",
+        "extension" : [{
+          "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.578.1.12.4.1.1.3403",
+            "code" : "030102",
+            "display" : "Grünerløkka"
+          }
+        }],
+        "use" : "home",
+        "type" : "physical",
+        "district" : "Oslo",
         "_district" : {
           "extension" : [{
             "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
             "valueCoding" : {
               "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-              "code" : "3024",
-              "display" : "Bærum"
+              "code" : "0301",
+              "display" : "Oslo"
             }
           }]
         }

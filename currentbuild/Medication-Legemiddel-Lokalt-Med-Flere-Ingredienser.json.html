@@ -6,7 +6,7 @@
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Pasient-Uten-FNR - JSON Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title>Legemiddel-Lokalt-Med-Flere-Ingredienser - JSON Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.0.8</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -115,7 +115,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-FNR</b></li>
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-Lokalt-Med-Flere-Ingredienser</b></li>
                 
             </ul>
         </div> <!-- /container -->
@@ -142,7 +142,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.html">
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html">
         Narrative Content
     </a>
 </li>
@@ -154,7 +154,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.xml.html">
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.xml.html">
         XML
     </a>
 </li>
@@ -176,7 +176,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.ttl.html">
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.ttl.html">
         TTL
     </a>
 </li>
@@ -191,10 +191,10 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Pasient-Uten-FNR - JSON Representation</h2>
+<h2 id="root">: Legemiddel-Lokalt-Med-Flere-Ingredienser - JSON Representation</h2>
 
 
-<p><a href="Patient-Pasient-Uten-FNR.json" no-download="true">Raw json</a> | <a href="Patient-Pasient-Uten-FNR.json" download>Download</a></p>
+<p><a href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.json" no-download="true">Raw json</a> | <a href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.json" download>Download</a></p>
 
   <!-- insert intro if present -->
   
@@ -202,29 +202,123 @@
 
 
   <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
-  "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resourceType</a>" : "Patient",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Patient.id">id</a>" : "Pasient-Uten-FNR",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Patient.meta">meta</a>" : {
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication">resourceType</a>" : "Medication",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Medication.id">id</a>" : "Legemiddel-Lokalt-Med-Flere-Ingredienser",
+  "<a href="http://hl7.org/fhir/R4/resource.html#Medication.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      <a href="StructureDefinition-lmdi-patient.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+      <a href="StructureDefinition-lmdi-medication.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     ]
   },
-  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
-  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1958-09-19",
-  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient">ingredient</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "Bærum",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">_district</a>" : {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCoding</a>" : {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "3024",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Bærum"
-            }
-          }
-        ]
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item_x_">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Ketamin"
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 10,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "1"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item_x_">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Deksametason"
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 4,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "1"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item_x_">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Haloperidol"
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 5,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "1"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item_x_">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Klonidin"
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 150,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "ug"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "1"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item_x_">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Midazolam"
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 5,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "1"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item_x_">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Ondansetron"
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 2,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "1"
+        }
       }
     }
   ]
@@ -259,7 +353,7 @@
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Mar 13, 2026 19:17+0000">2026-03-13</span>
+                        title="Fri, Mar 13, 2026 19:33+0000">2026-03-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -290,7 +384,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-FNR</b></li>"
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-Lokalt-Med-Flere-Ingredienser</b></li>"
   }
 </script>
 <script type="text/javascript">

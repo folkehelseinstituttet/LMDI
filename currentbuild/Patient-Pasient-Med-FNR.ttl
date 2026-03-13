@@ -20,13 +20,30 @@
        fhir:v "urn:oid:2.16.578.1.12.4.1.4.1"^^xsd:anyURI ;
        fhir:l <urn:oid:2.16.578.1.12.4.1.4.1>
      ] ;
-     fhir:value [ fhir:v "13031353453" ]
+     fhir:value [ fhir:v "12705825562" ]
   ] ) ; # 
   fhir:gender [ fhir:v "male"] ; # 
-  fhir:birthDate [ fhir:v "1953-03-13"^^xsd:date] ; # 
+  fhir:birthDate [ fhir:v "1958-05-12"^^xsd:date] ; # 
   fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/StructureDefinition/no-basis-urban-district>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.1.3403"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.1.3403>
+         ] ;
+         fhir:code [ fhir:v "030102" ] ;
+         fhir:display [ fhir:v "Grünerløkka" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "physical" ] ;
      fhir:district [
-       fhir:v "Bærum" ;
+       fhir:v "Oslo" ;
        fhir:extension ( [
          fhir:url [
            fhir:v "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode"^^xsd:anyURI ;
@@ -38,8 +55,8 @@
              fhir:v "urn:oid:2.16.578.1.12.4.1.1.3402"^^xsd:anyURI ;
              fhir:l <urn:oid:2.16.578.1.12.4.1.1.3402>
            ] ;
-           fhir:code [ fhir:v "3024" ] ;
-           fhir:display [ fhir:v "Bærum" ]
+           fhir:code [ fhir:v "0301" ] ;
+           fhir:display [ fhir:v "Oslo" ]
          ]
        ] )
      ]

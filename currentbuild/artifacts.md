@@ -95,6 +95,7 @@ These are example instances that show what data produced and consumed by systems
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
+| [Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
 | [Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md) | Eksempel på legemiddel - paking |
 | [Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) | Eksempel på legemiddel |
 | [Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md) | Eksempel på legemiddel - Paracetamol |
@@ -104,8 +105,9 @@ These are example instances that show what data produced and consumed by systems
 | [Organisasjon-Sykehjem](Organization-Organisasjon-Sykehjem.md) | Eksempel på sykehjem i primærhelsetjenesten |
 | [Organisasjon-Sykehus](Organization-Organisasjon-Sykehus.md) | Eksempel på sykehusorganisasjon |
 | [Organisasjon-Sykehusavdeling](Organization-Organisasjon-Sykehusavdeling.md) | Eksempel på spesialistavdeling |
+| [Pasient-Med-DNR](Patient-Pasient-Med-DNR.md) | Eksempel på pasient med D-nummer |
 | [Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) | Eksempel på pasient med fødselsnummer |
-| [Pasient-Uten-FNR](Patient-Pasient-Uten-FNR.md) | Eksempel på pasient med kjønn og fødselsdato |
+| [Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md) | Eksempel på pasient uten personidentifikator |
 | [Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |
 | [Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md) | Eksempel på legemiddelrekvirering av Paracet |
 | [Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md) | Eksempel på virkestoff - Oksykodon |

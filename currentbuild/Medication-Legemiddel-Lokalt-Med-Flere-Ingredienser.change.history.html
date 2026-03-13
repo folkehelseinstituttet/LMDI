@@ -1,10 +1,14 @@
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Pasient-Uten-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title> - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.0.8</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -113,7 +117,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-FNR</b></li>
+                
                 
             </ul>
         </div> <!-- /container -->
@@ -125,9 +129,9 @@
             <div class="row">
                 <div class="inner-wrapper">
 
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.8) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.0.8) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -139,9 +143,9 @@
 <div class="fhi-nav-tabs border-bottom">
     <ul class="nav nav-tabs undermeny mb-0">
         
-        <li class="nav-item active">
-    <a class="nav-link active"
-        href="#">
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html">
         Narrative Content
     </a>
 </li>
@@ -153,7 +157,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.xml.html">
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.xml.html">
         XML
     </a>
 </li>
@@ -164,7 +168,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.json.html">
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.json.html">
         JSON
     </a>
 </li>
@@ -175,7 +179,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Patient-Pasient-Uten-FNR.ttl.html">
+        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.ttl.html">
         TTL
     </a>
 </li>
@@ -188,28 +192,13 @@
 
 
   <a name="root"> </a>
-
-
-  <h2 id="root">Example Patient: Pasient-Uten-FNR</h2>
-
-
-
-
-  <!-- insert intro if present -->
-  
-
-
-
-  <div data-fhir="generated"><p class="res-header-id"/><a name="Pasient-Uten-FNR"> </a><a name="hcPasient-Uten-FNR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-patient.html">Pasient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Anonymous Patient Female, DoB: 1958-09-19</p><hr/><table class="grid" data-fhir="generated"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"></td></tr></table></div>
+  <h2 id="root">: Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser - Change History</h2>
+  <p>History of changes for Legemiddel-Lokalt-Med-Flere-Ingredienser .</p>
 
   
-
-  <!-- insert notes if present -->
-  
-
-
 
 </div>
+
 </div> <!-- /inner-wrapper -->
 </div> <!-- /row -->
 </div> <!-- /container -->
@@ -218,6 +207,8 @@
 <script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/tabs.js"> </script>
 
 <script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
@@ -232,7 +223,7 @@
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Mar 13, 2026 19:17+0000">2026-03-13</span>
+                        title="Fri, Mar 13, 2026 19:33+0000">2026-03-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -263,7 +254,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Pasient-Uten-FNR</b></li>"
+    "breadcrumb": ""
   }
 </script>
 <script type="text/javascript">

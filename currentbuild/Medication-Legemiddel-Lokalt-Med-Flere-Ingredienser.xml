@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-Lokalt-Med-Flere-Ingredienser"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <code>
+    <coding>
+      <system value="http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"/>
+      <code value="lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron"/>
+      <display value="Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"/>
+    </coding>
+  </code>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Ketamin"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="10"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Deksametason"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="4"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Haloperidol"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="5"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Klonidin"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="150"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="ug"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Midazolam"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="5"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <text value="Ondansetron"/>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="2"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </denominator>
+    </strength>
+  </ingredient>
+</Medication>

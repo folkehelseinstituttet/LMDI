@@ -1148,6 +1148,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Medication"
       }],
       "reference" : {
+        "reference" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
+      },
+      "name" : "Legemiddel-Lokalt-Med-Flere-Ingredienser",
+      "description" : "Eksempel på lokalt legemiddel med flere ingredienser",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
         "reference" : "Medication/Legemiddel-Monoket-FEST-Pakning"
       },
       "name" : "Legemiddel-Monoket-FEST-Pakning",
@@ -1436,6 +1448,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Patient"
       }],
       "reference" : {
+        "reference" : "Patient/Pasient-Med-DNR"
+      },
+      "name" : "Pasient-Med-DNR",
+      "description" : "Eksempel på pasient med D-nummer",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
         "reference" : "Patient/Pasient-Med-FNR"
       },
       "name" : "Pasient-Med-FNR",
@@ -1448,10 +1472,10 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Patient"
       }],
       "reference" : {
-        "reference" : "Patient/Pasient-Uten-FNR"
+        "reference" : "Patient/Pasient-Uten-Personidentifikator"
       },
-      "name" : "Pasient-Uten-FNR",
-      "description" : "Eksempel på pasient med kjønn og fødselsdato",
+      "name" : "Pasient-Uten-Personidentifikator",
+      "description" : "Eksempel på pasient uten personidentifikator",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
     },
     {

@@ -23,7 +23,7 @@ Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Diagnose](StructureDefinition-lmdi-condition.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Patient/Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) and [Patient/Pasient-Uten-FNR](Patient-Pasient-Uten-FNR.md)
+* Examples for this Profile: [Patient/Pasient-Med-DNR](Patient-Pasient-Med-DNR.md), [Patient/Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) and [Patient/Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-patient)
 
@@ -73,31 +73,6 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     }]
   }],
   "fhirVersion" : "4.0.1",
-  "mapping" : [{
-    "identity" : "rim",
-    "uri" : "http://hl7.org/v3",
-    "name" : "RIM Mapping"
-  },
-  {
-    "identity" : "cda",
-    "uri" : "http://hl7.org/v3/cda",
-    "name" : "CDA (R2)"
-  },
-  {
-    "identity" : "w5",
-    "uri" : "http://hl7.org/fhir/fivews",
-    "name" : "FiveWs Pattern Mapping"
-  },
-  {
-    "identity" : "v2",
-    "uri" : "http://hl7.org/v2",
-    "name" : "HL7 v2 Mapping"
-  },
-  {
-    "identity" : "loinc",
-    "uri" : "http://loinc.org",
-    "name" : "LOINC code for the element"
-  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Patient",
