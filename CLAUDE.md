@@ -80,6 +80,7 @@ cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#2.2.
 2. Run `sushi .` to compile FSH to FHIR resources
 3. For full documentation generation, run IG Publisher
 4. Generated content appears in `LMDI/output/`
+5. Etter endringer i FSH-filer: kjør `bash .claude/skills/lmdi-fhir/scripts/sync_references.sh` for å oppdatere skill-snapshoten, og `bash .claude/skills/lmdi-fhir/scripts/validate_skill.sh` for å verifisere konsistens
 
 The project follows Norwegian healthcare data standards and integrates with FEST (Norwegian drug database) identifiers.
 
