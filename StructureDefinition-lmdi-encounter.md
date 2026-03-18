@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:Episode |
+| Draft as of 2026-03-18 | *Computable Name*:Episode |
 
  
 Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -23,7 +23,7 @@ Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne pr
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Scenario-A-Episode](Encounter-Scenario-A-Episode.md), [Encounter/Scenario-B-Episode](Encounter-Scenario-B-Episode.md) and [Encounter/Scenario-C-Episode](Encounter-Scenario-C-Episode.md)
+* Examples for this Profile: [Encounter/Episode-Sykehjem](Encounter-Episode-Sykehjem.md) and [Encounter/Episode-Sykehus](Encounter-Episode-Sykehus.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-encounter)
 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "name" : "Episode",
   "title" : "Episode",
   "status" : "draft",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -124,8 +124,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
       "id" : "Encounter.extension:nprEpisodeIdentifier",
       "path" : "Encounter.extension",
       "sliceName" : "nprEpisodeIdentifier",
-      "short" : "Unik identifikator(er) for episoden, som brukes ved rapportering til NPR",
-      "definition" : "En eller flere unike identifikatorer (string og/eller UUID) som identifiserer episoden entydig i helseinstitusjonens systemer. Brukes ved rapportering til Norsk pasientregister (NPR). Kan inneholde både string-basert og UUID-basert identifikator samtidig.",
+      "short" : "NPR episodeidentifikator som sendes til LMDI",
+      "definition" : "Unik identifikator for episoden som skal sendes til LMDI. Selv om avsender kan ha flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til LMDI. Dersom flere identifiere finnes, velges gjerne den første eller foretrukne identifikatoren lokalt. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon dersom begge er tilgjengelig.",
       "min" : 0,
       "max" : "1",
       "type" : [{

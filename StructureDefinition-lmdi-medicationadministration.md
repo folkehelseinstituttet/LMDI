@@ -23,7 +23,7 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 
 **Usages:**
 
-* Examples for this Profile: [MedicationAdministration/Administrering-1-Oralt](MedicationAdministration-Administrering-1-Oralt.md), [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md), [MedicationAdministration/Administrering-2-Infusjon](MedicationAdministration-Administrering-2-Infusjon.md), [MedicationAdministration/Administrering-20](MedicationAdministration-Administrering-20.md)... Show 5 more, [MedicationAdministration/Administrering-30](MedicationAdministration-Administrering-30.md), [MedicationAdministration/Scenario-A-Administrering-Oksykodon](MedicationAdministration-Scenario-A-Administrering-Oksykodon.md), [MedicationAdministration/Scenario-A-Administrering-Paracetamol](MedicationAdministration-Scenario-A-Administrering-Paracetamol.md), [MedicationAdministration/Scenario-B-Administrering](MedicationAdministration-Scenario-B-Administrering.md) and [MedicationAdministration/Scenario-C-Administrering](MedicationAdministration-Scenario-C-Administrering.md)
+* Examples for this Profile: [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) and [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationadministration)
 
@@ -289,7 +289,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
           "path" : "system"
         }],
         "rules" : "closed"
-      }
+      },
+      "min" : 1
     },
     {
       "id" : "MedicationAdministration.dosage.route.coding:SCT",
@@ -309,6 +310,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     {
       "id" : "MedicationAdministration.dosage.route.coding:SCT.code",
       "path" : "MedicationAdministration.dosage.route.coding.code",
+      "min" : 1,
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.org/fhir/ValueSet/route-codes"
@@ -332,7 +334,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     {
       "id" : "MedicationAdministration.dosage.route.coding:OID7477.code",
       "path" : "MedicationAdministration.dosage.route.coding.code",
-      "short" : "Verdi fra kodeverket"
+      "short" : "Verdi fra kodeverket",
+      "min" : 1
     },
     {
       "id" : "MedicationAdministration.dosage.route.coding:OID7477.display",

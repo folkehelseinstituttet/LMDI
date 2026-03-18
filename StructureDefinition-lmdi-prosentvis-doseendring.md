@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:ProsentvisDoseendring |
+| Draft as of 2026-03-18 | *Computable Name*:ProsentvisDoseendring |
 
 Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.
 
@@ -23,14 +23,14 @@ Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant 
 
 This extension may be used on the following element(s):
 
-* Element ID Element
+* Element ID MedicationRequest
 
 **Usage info**
 
 **Usages:**
 
 * Use this Extension: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Extension: [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md), [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md) and [MedicationRequest/Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) and [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-prosentvis-doseendring)
 
@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
   "status" : "draft",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -93,7 +93,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "abstract" : false,
   "context" : [{
     "type" : "element",
-    "expression" : "Element"
+    "expression" : "MedicationRequest"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",

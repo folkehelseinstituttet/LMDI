@@ -167,8 +167,6 @@
     ],
     "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode": [
       "Bundle.entry.resource.address.district",
-      "Bundle.entry.resource.contained.address.district",
-      "MedicationAdministration.contained.address.district",
       "Organization.address.district",
       "Patient.address.district"
     ],
@@ -177,14 +175,13 @@
       "Patient.address"
     ],
     "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district": [
+      "Bundle.entry.resource.address",
       "Organization.address",
       "Patient.address"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification": [
       "Bundle.entry.resource",
-      "Bundle.entry.resource.contained",
-      "Medication",
-      "MedicationAdministration.contained"
+      "Medication"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
       "Bundle.entry.resource",
@@ -199,10 +196,7 @@
       "MedicationRequest"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier": [
-      "Bundle.entry.resource",
-      "Bundle.entry.resource.contained",
-      "Encounter",
-      "MedicationAdministration.contained"
+      "Encounter"
     ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url": [
       "NamingSystem"

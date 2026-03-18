@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="legemiddel-koder"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet legemiddel-koder</b></p><a name="legemiddel-koder"> </a><a name="hclegemiddel-koder"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet legemiddel-koder</b></p><a name="legemiddel-koder"> </a><a name="hclegemiddel-koder"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/lmrLopenummer</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://dmp.no/fhir/NamingSystem/fest-varenummer</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li><li>Include all codes defined in <code>http://fh.no/fhir/NamingSystem/lokaltVirkemiddel</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span></li></ul></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder"/>
   <version value="1.0.8"/>
   <name value="LegemiddelKoder"/>
   <title value="Gyldige legemiddelkoder"/>
   <status value="draft"/>
-  <date value="2026-03-10T15:33:20+00:00"/>
+  <date value="2026-03-18T15:02:12+00:00"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -26,7 +26,7 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="ValueSet som inneholder koder fra SNOMED CT og FEST"/>
+  <description value="ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -49,6 +49,15 @@
     </include>
     <include>
       <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
+    </include>
+    <include>
+      <system value="http://dmp.no/fhir/NamingSystem/lmrLopenummer"/>
+    </include>
+    <include>
+      <system value="http://dmp.no/fhir/NamingSystem/fest-varenummer"/>
+    </include>
+    <include>
+      <system value="http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"/>
     </include>
   </compose>
 </ValueSet>

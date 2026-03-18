@@ -23,6 +23,7 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
  **References** 
 
 * [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
+* [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
 
 ### Logical Definition (CLD)
 

@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type **  | *Version*:1.0.8 **  |
-| Active as of 2026-03-10 | *Computable Name*:LmdiAddressType |
+| Active as of 2026-03-18 | *Computable Name*:LmdiAddressType |
 
  
 Tillatt verdi for address.type i LMDI: physical 
@@ -23,6 +23,8 @@ Tillatt verdi for address.type i LMDI: physical
  **References** 
 
 * [Organisasjon](StructureDefinition-lmdi-organization.md)
+* [Organisasjon](StructureDefinition-lmdi-organization.md)
+* [Pasient](StructureDefinition-lmdi-patient.md)
 * [Pasient](StructureDefinition-lmdi-patient.md)
 
 ### Logical Definition (CLD)
@@ -57,7 +59,7 @@ Tillatt verdi for address.type i LMDI: physical
   "name" : "LmdiAddressType",
   "title" : "LMDI Address Type",
   "status" : "active",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

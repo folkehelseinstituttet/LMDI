@@ -217,57 +217,75 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
 
 <p><strong>Validering av FHIR-bundle:</strong></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code> - Validerer innholdet i en FHIR-bundle mot LMDI-spesifikasjonen. Endepunktet forventer å motta en usignert og ukryptert FHIR-bundle i JSON-format. Krever ikke autentisering. Returnerer valideringsresultat som OperationOutcome med status 200 (gyldig) eller 400 (ugyldig).</li>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code> – Validerer innholdet i en FHIR-bundle mot LMDI-spesifikasjonen.<br />
+Endepunktet forventer å motta en usignert og ukryptert FHIR-bundle i JSON-format. Krever ikke autentisering, og avsender trenger ikke være registrert.<br />
+Returnerer valideringsresultat som <code class="language-plaintext highlighter-rouge">OperationOutcome</code> med status 200 (gyldig) eller 400 (ugyldig).</li>
 </ul>
 
 <p><strong>Validering av signert og kryptert bundle:</strong></p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> - Validerer at signering og kryptering er utført korrekt, samt at innholdet i den krypterte FHIR-bundelen er i henhold til LMDI-spesifikasjonen. Endepunktet forventer å motta en signert og kryptert bundle. Data valideres men lagres ikke. Krever Maskinporten-autentisering. Returnerer status 200 (gyldig) eller 400 (ugyldig).</li>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> – Validerer at signering og kryptering er utført korrekt, samt at innholdet i den krypterte FHIR-bundelen er i henhold til LMDI-spesifikasjonen.<br />
+Endepunktet forventer å motta en signert og kryptert bundle. Avsender må være registrert og aktiv. Data valideres, men lagres ikke.<br />
+Krever Maskinporten-autentisering med scope <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code>.<br />
+Returnerer status 200 (gyldig) eller 400 (ugyldig).</li>
 </ul>
 
-<h4 id="håndter-respons-fra-api-et">Håndter respons fra API-et</h4>
+<h4 id="håndter-respons-fra-testendepunktene">Håndter respons fra testendepunktene</h4>
 
-<p>API-et returnerer følgende HTTP-statuskoder:</p>
+<p>Testendepunktene returnerer følgende HTTP-statuskoder:</p>
 
 <p><strong>200 OK</strong></p>
 <ul>
   <li>Meldingen ble validert uten feil</li>
-  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1</code>: Meldingen er validert og lagret i databasen</li>
-  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>: Meldingen er validert men ikke lagret</li>
-  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Returnerer OperationOutcome som bekrefter at FHIR-bundelen er gyldig</li>
+  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>: Meldingen er validert, men ikke lagret</li>
+  <li>Ved <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Returnerer <code class="language-plaintext highlighter-rouge">OperationOutcome</code> som bekrefter at FHIR-bundelen er gyldig</li>
 </ul>
 
 <p><strong>400 Bad Request</strong></p>
 <ul>
   <li>Valideringsfeil i den innsendte meldingen</li>
-  <li>Mulige årsaker for alle endepunkter:
+  <li>Mulige årsaker (begge endepunkter):
     <ul>
-      <li>FHIR bundle validering feilet (ikke i henhold til LMDI-spesifikasjonen)</li>
+      <li>FHIR-bundle-validering feilet (ikke i henhold til LMDI-spesifikasjonen)</li>
       <li>Ugyldig JSON-format</li>
     </ul>
   </li>
-  <li>Mulige årsaker for <code class="language-plaintext highlighter-rouge">/fhirmottak/v1</code> og <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>:
+  <li>Mulige årsaker kun for <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>:
     <ul>
       <li>Ukjent eller inaktiv avsender</li>
       <li>Organisasjonsnummer i melding stemmer ikke med registrert avsender</li>
-      <li>Signaturvalidering feilet (gjelder <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+      <li>Signaturvalidering feilet</li>
       <li>Dekryptering feilet</li>
     </ul>
   </li>
 </ul>
 
+<p><strong>401 Unauthorized</strong></p>
+<ul>
+  <li>Autentisering feilet (gjelder <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+  <li>Mulige årsaker:
+    <ul>
+      <li>Manglende Authorization-header eller token</li>
+      <li>Utløpt access token</li>
+      <li>Ugyldig tokensignatur</li>
+      <li>Ugyldig utsteder (issuer) eller mottaker (audience)</li>
+    </ul>
+  </li>
+  <li>Responsen inkluderer en <code class="language-plaintext highlighter-rouge">WWW-Authenticate</code>-header med feilbeskrivelse</li>
+</ul>
+
+<p><strong>403 Forbidden</strong></p>
+<ul>
+  <li>Autorisering feilet (gjelder <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+  <li>Token er gyldig, men mangler påkrevd scope (<code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code>)</li>
+  <li>Responsen inkluderer en <code class="language-plaintext highlighter-rouge">WWW-Authenticate</code>-header med feilbeskrivelse</li>
+</ul>
+
 <p><strong>500 Internal Server Error</strong></p>
 <ul>
   <li>En uventet feil oppstod ved behandling av meldingen</li>
-  <li>Dette kan skyldes:
-    <ul>
-      <li>Manglende FHIR R4 core specifications (validering utilgjengelig)</li>
-      <li>Teknisk feil i FHIR-validering</li>
-      <li>Serverfeil som bør undersøkes med FHI</li>
-    </ul>
-  </li>
+  <li>Serverfeil som bør undersøkes med FHI</li>
 </ul>
-
 
 
 
@@ -294,7 +312,7 @@ Det er kun hvitelisting i produksjonsmiljøet.</p>
                     Package hl7.fhir.no.lmdi#1.0.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, Mar 10, 2026 15:33+0000">2026-03-10</span>
+                        title="Wed, Mar 18, 2026 15:02+0000">2026-03-18</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

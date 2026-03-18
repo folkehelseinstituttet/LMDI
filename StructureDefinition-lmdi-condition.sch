@@ -74,6 +74,7 @@
   <sch:pattern>
     <sch:title>f:Condition/f:stage</sch:title>
     <sch:rule context="f:Condition/f:stage">
+      <sch:assert test="count(f:summary) &gt;= 1">summary: minimum cardinality of 'summary' is 1</sch:assert>
       <sch:assert test="count(f:assessment) &lt;= 0">assessment: maximum cardinality of 'assessment' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>

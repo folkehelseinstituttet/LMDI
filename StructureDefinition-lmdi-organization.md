@@ -32,7 +32,7 @@ Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”:
 **Usages:**
 
 * Refer to this Profile: [Episode](StructureDefinition-lmdi-encounter.md) and [Organisasjon](StructureDefinition-lmdi-organization.md)
-* Examples for this Profile: [Lykkedalen sykehjem](Organization-Organisasjon-1-Sykehjem.md), [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-2-Avdeling.md), [Oslo universitetssykehus HF](Organization-Organisasjon-3-Sykehus.md), [Avdeling 2B, Soltoppen sykehjem](Organization-Scenario-A-Org-Avdeling.md)... Show 4 more, [Drammen kommune](Organization-Scenario-A-Org-Kommune.md), [Soltoppen sykehjem](Organization-Scenario-A-Org-Sykehjem.md), [Haukeland universitetssjukehus](Organization-Scenario-B-Organisasjon.md) and [Onkologisk avdeling, St. Olavs hospital](Organization-Scenario-C-Organisasjon.md)
+* Examples for this Profile: [Oslo universitetssykehus HF](Organization-Organisasjon-HF.md), [TRONDHEIM KOMMUNE](Organization-Organisasjon-Kommune.md), [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md), [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md) and [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Sykehusavdeling.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-organization)
 
@@ -135,6 +135,12 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "path" : "Organization.type",
       "short" : "Organisasjonstype",
       "definition" : "Type organisasjon (f.eks. sykehus, avdeling, klinikk)"
+    },
+    {
+      "id" : "Organization.type:organisatoriskNiva",
+      "path" : "Organization.type",
+      "sliceName" : "organisatoriskNiva",
+      "max" : "0"
     },
     {
       "id" : "Organization.name",

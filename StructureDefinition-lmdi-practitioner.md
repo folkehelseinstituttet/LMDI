@@ -23,7 +23,7 @@ Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. H
 **Usages:**
 
 * Refer to this Profile: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Practitioner/Helsepersonell-1-HPR-nummer](Practitioner-Helsepersonell-1-HPR-nummer.md), [Practitioner/Helsepersonell-2-Uten-HPR](Practitioner-Helsepersonell-2-Uten-HPR.md), [Practitioner/Scenario-B-Helsepersonell](Practitioner-Scenario-B-Helsepersonell.md) and [Practitioner/Scenario-C-Helsepersonell](Practitioner-Scenario-C-Helsepersonell.md)
+* Examples for this Profile: [Practitioner/Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) and [Practitioner/Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-practitioner)
 

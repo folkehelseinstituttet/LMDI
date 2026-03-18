@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:DelAvBehandlingsregime |
+| Draft as of 2026-03-18 | *Computable Name*:DelAvBehandlingsregime |
 
 Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.
 
@@ -23,14 +23,14 @@ Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del
 
 This extension may be used on the following element(s):
 
-* Element ID Element
+* Element ID MedicationRequest
 
 **Usage info**
 
 **Usages:**
 
 * Use this Extension: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Extension: [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md), [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md) and [MedicationRequest/Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) and [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-del-av-behandlingsregime)
 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
   "name" : "DelAvBehandlingsregime",
   "title" : "Del av behandlingsregime",
   "status" : "draft",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -91,7 +91,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
   "abstract" : false,
   "context" : [{
     "type" : "element",
-    "expression" : "Element"
+    "expression" : "MedicationRequest"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",

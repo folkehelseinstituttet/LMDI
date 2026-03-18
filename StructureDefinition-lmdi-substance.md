@@ -23,7 +23,7 @@ En tilpasset profil av Substance for å representere virkestoff, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
-* Examples for this Profile: [Substance/Scenario-C-Virkestoff](Substance-Scenario-C-Virkestoff.md) and [Substance/Virkestoff-1-Oksykodon](Substance-Virkestoff-1-Oksykodon.md)
+* Examples for this Profile: [Substance/Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-substance)
 

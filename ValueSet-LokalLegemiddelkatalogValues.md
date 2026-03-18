@@ -15,10 +15,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:LokalLegemiddelkatalogValues |
+| Draft as of 2026-03-18 | *Computable Name*:LokalLegemiddelkatalogValues |
 
  
-Gyldige verdier for medlemskapsstatus 
+Gyldige verdier for lokal legemiddelkatalog 
 
  **References** 
 
@@ -56,7 +56,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
   "status" : "draft",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -72,7 +72,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Gyldige verdier for medlemskapsstatus",
+  "description" : "Gyldige verdier for lokal legemiddelkatalog",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

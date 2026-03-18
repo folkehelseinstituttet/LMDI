@@ -23,7 +23,7 @@ Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-b
 **Usages:**
 
 * Refer to this Profile: [Diagnose](StructureDefinition-lmdi-condition.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Patient/Pasient-1-Uten-FNR](Patient-Pasient-1-Uten-FNR.md), [Patient/Pasient-2-FNR](Patient-Pasient-2-FNR.md), [Patient/Scenario-A-Pasient](Patient-Scenario-A-Pasient.md), [Patient/Scenario-B-Pasient](Patient-Scenario-B-Pasient.md) and [Patient/Scenario-C-Pasient](Patient-Scenario-C-Pasient.md)
+* Examples for this Profile: [Patient/Pasient-Med-DNR](Patient-Pasient-Med-DNR.md), [Patient/Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) and [Patient/Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-patient)
 
@@ -98,7 +98,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "id" : "Patient.identifier",
       "path" : "Patient.identifier",
       "short" : "Identifikator for pasienten.",
-      "definition" : "Identifikator for pasienten. Skal være fødselsnummer (FNR) eller D-nummer (DNR).",
+      "definition" : "Identifikator for pasienten. Bør være fødselsnummer (FNR) eller D-nummer (DNR) når tilgjengelig.",
       "mustSupport" : true
     },
     {
@@ -214,13 +214,6 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "path" : "Patient.address.use",
       "short" : "home | temp | old",
       "definition" : "Adressetype begrenset til home, temp eller old",
-      "constraint" : [{
-        "key" : "address-use-constraint",
-        "severity" : "error",
-        "human" : "Kun home, temp eller old er tillatt for address.use",
-        "expression" : "address.use.empty() or address.use in ('home' | 'temp' | 'old')",
-        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
-      }],
       "binding" : {
         "strength" : "required",
         "description" : "Tillatte verdier er home, temp eller old",

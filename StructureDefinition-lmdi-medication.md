@@ -23,7 +23,7 @@ Beskrivelse av legemiddel.
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Medication/Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md), [Medication/Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md), [Medication/Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md), [Medication/Medisin-4-LokaltLegemiddel](Medication-Medisin-4-LokaltLegemiddel.md)... Show 4 more, [Medication/Scenario-A-Medisin-Oksykodon](Medication-Scenario-A-Medisin-Oksykodon.md), [Medication/Scenario-A-Medisin-Paracetamol](Medication-Scenario-A-Medisin-Paracetamol.md), [Medication/Scenario-B-Medisin](Medication-Scenario-B-Medisin.md) and [Medication/Scenario-C-Medisin](Medication-Scenario-C-Medisin.md)
+* Examples for this Profile: [Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md), [Medication/Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md), [Medication/Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) and [Medication/Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medication)
 
@@ -101,7 +101,14 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "differential" : {
     "element" : [{
       "id" : "Medication",
-      "path" : "Medication"
+      "path" : "Medication",
+      "constraint" : [{
+        "key" : "lmdi-medication-code-or-ingredient",
+        "severity" : "error",
+        "human" : "Medication skal ha code.coding eller ingredient",
+        "expression" : "code.coding.exists() or ingredient.exists()",
+        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+      }]
     },
     {
       "id" : "Medication.text",
@@ -123,11 +130,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.extension:classification",
       "path" : "Medication.extension",
       "sliceName" : "classification",
-      "short" : "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
-      "definition" : "Klassifisering av legemidlet, fortrinnsvis ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
+      "short" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
+      "definition" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
       "comment" : "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO.",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "type" : [{
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"]

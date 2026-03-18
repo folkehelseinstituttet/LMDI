@@ -15,14 +15,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:LegemiddelregisterBundle |
+| Draft as of 2026-03-18 | *Computable Name*:LegemiddelregisterBundle |
 
  
 Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. 
 
 **Usages:**
 
-* Examples for this Profile: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md) and [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md)
+* Examples for this Profile: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-bundle)
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
   "name" : "LegemiddelregisterBundle",
   "title" : "LegemiddelregisterBundle",
   "status" : "draft",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

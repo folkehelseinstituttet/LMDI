@@ -23,7 +23,7 @@ Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Condition/Diagnose-1-ICD10-OID](Condition-Diagnose-1-ICD10-OID.md), [Condition/Diagnose-2-SNOMED-CT](Condition-Diagnose-2-SNOMED-CT.md) and [Condition/Scenario-B-Diagnose](Condition-Scenario-B-Diagnose.md)
+* Examples for this Profile: [Condition/Diagnose-ICD10](Condition-Diagnose-ICD10.md) and [Condition/Diagnose-SNOMED-CT](Condition-Diagnose-SNOMED-CT.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-condition)
 
@@ -291,14 +291,9 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "max" : "0"
     },
     {
-      "id" : "Condition.stage",
-      "path" : "Condition.stage",
-      "constraint" : [{
-        "key" : "con-1",
-        "severity" : "warning",
-        "human" : "Stage SHALL have summary or assessment",
-        "xpath" : "exists(f:summary) or exists(f:assessment)"
-      }]
+      "id" : "Condition.stage.summary",
+      "path" : "Condition.stage.summary",
+      "min" : 1
     },
     {
       "id" : "Condition.stage.assessment",

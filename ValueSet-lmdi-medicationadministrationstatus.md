@@ -23,14 +23,13 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
  **References** 
 
 * [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
+* [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
 
 ### Logical Definition (CLD)
 
  
 
 ### Expansion
-
-No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -84,7 +83,7 @@ No Expansion for this valueset (Unknown Code System)
   }],
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
+      "system" : "http://terminology.hl7.org/CodeSystem/medication-admin-status",
       "concept" : [{
         "code" : "completed",
         "display" : "Gjennomført"

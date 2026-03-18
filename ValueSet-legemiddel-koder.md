@@ -15,13 +15,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:LegemiddelKoder |
+| Draft as of 2026-03-18 | *Computable Name*:LegemiddelKoder |
 
  
-ValueSet som inneholder koder fra SNOMED CT og FEST 
+ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog 
 
  **References** 
 
+* [Legemiddel](StructureDefinition-lmdi-medication.md)
 * [Legemiddel](StructureDefinition-lmdi-medication.md)
 
 ### Logical Definition (CLD)
@@ -58,7 +59,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "draft",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -74,7 +75,7 @@ No Expansion for this valueset (Unknown Code System)
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "ValueSet som inneholder koder fra SNOMED CT og FEST",
+  "description" : "ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -97,6 +98,15 @@ No Expansion for this valueset (Unknown Code System)
     },
     {
       "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+    },
+    {
+      "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+    },
+    {
+      "system" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
     }]
   }
 }

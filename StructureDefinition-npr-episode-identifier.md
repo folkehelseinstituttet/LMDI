@@ -15,9 +15,9 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.0.8 **  |
-| Active as of 2026-03-10 | *Computable Name*:NprEpisodeIdentifier |
+| Active as of 2026-03-18 | *Computable Name*:NprEpisodeIdentifier |
 
-Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.
+Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt.
 
 **Context of Use**
 
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Episode](StructureDefinition-lmdi-encounter.md)
-* Examples for this Extension: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md), [Bundle/Scenario-C-Bundle](Bundle-Scenario-C-Bundle.md)... Show 5 more, [Encounter/Episode-1-Sykehus](Encounter-Episode-1-Sykehus.md), [Encounter/Scenario-A-Episode](Encounter-Scenario-A-Episode.md), [Encounter/Scenario-B-Episode](Encounter-Scenario-B-Episode.md), [Encounter/Scenario-C-Episode](Encounter-Scenario-C-Episode.md) and [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md)
+* Examples for this Extension: [Encounter/Episode-Sykehus](Encounter-Episode-Sykehus.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/npr-episode-identifier)
 
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "status" : "active",
-  "date" : "2026-03-10T15:33:20+00:00",
+  "date" : "2026-03-18T15:02:12+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -73,7 +73,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.",
+  "description" : "Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -101,7 +101,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       "id" : "Extension",
       "path" : "Extension",
       "short" : "NPR Episode Identifier",
-      "definition" : "Entydig identifikator for episode, brukt ved rapportering til NPR. Kan inneholde både string-basert og UUID-basert identifikator.",
+      "definition" : "Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt.",
       "constraint" : [{
         "key" : "npr-episode-at-least-one",
         "severity" : "error",
@@ -114,8 +114,8 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       "id" : "Extension.extension:stringIdentifier",
       "path" : "Extension.extension",
       "sliceName" : "stringIdentifier",
-      "short" : "String-basert NPR episode identifikator",
-      "definition" : "String-basert identifikator for episoden som brukes ved rapportering til NPR.",
+      "short" : "String-representasjon av NPR episodeidentifikatoren",
+      "definition" : "String-representasjon av den valgte NPR episodeidentifikatoren som sendes til LMDI. Skal oppgis dersom stringrepresentasjonen av identifikatoren er tilgjengelig.",
       "min" : 0,
       "max" : "1",
       "mustSupport" : true
@@ -142,8 +142,8 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       "id" : "Extension.extension:uuidIdentifier",
       "path" : "Extension.extension",
       "sliceName" : "uuidIdentifier",
-      "short" : "UUID-basert NPR episode identifikator",
-      "definition" : "UUID-basert identifikator for episoden som brukes ved rapportering til NPR.",
+      "short" : "UUID-representasjon av NPR episodeidentifikatoren",
+      "definition" : "UUID-representasjon av den valgte NPR episodeidentifikatoren som sendes til LMDI. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.",
       "min" : 0,
       "max" : "1",
       "mustSupport" : true

@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Legemiddel](StructureDefinition-lmdi-medication.md)
-* Examples for this Extension: [Bundle/LegemiddelregisterBundle-1](Bundle-LegemiddelregisterBundle-1.md), [Bundle/Scenario-A-Bundle](Bundle-Scenario-A-Bundle.md), [Bundle/Scenario-B-Bundle](Bundle-Scenario-B-Bundle.md), [Medication/Medisin-1-LegemiddelDose-Oxycodone](Medication-Medisin-1-LegemiddelDose-Oxycodone.md)... Show 7 more, [Medication/Medisin-2-Paracetamol](Medication-Medisin-2-Paracetamol.md), [Medication/Medisin-3-LegemiddelPakning-Monoket](Medication-Medisin-3-LegemiddelPakning-Monoket.md), [Medication/Scenario-A-Medisin-Oksykodon](Medication-Scenario-A-Medisin-Oksykodon.md), [Medication/Scenario-A-Medisin-Paracetamol](Medication-Scenario-A-Medisin-Paracetamol.md), [Medication/Scenario-B-Medisin](Medication-Scenario-B-Medisin.md), [MedicationAdministration/Administrering-10](MedicationAdministration-Administrering-10.md) and [MedicationAdministration/Administrering-20](MedicationAdministration-Administrering-20.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [Medication/Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md), [Medication/Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) and [Medication/Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/legemiddel-classification)
 

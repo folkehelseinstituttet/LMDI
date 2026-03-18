@@ -98,7 +98,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.identifier","Patient.identifier","","","",0,*,"Y","","Y","Identifier {[]} {[]}
-","Identifikator for pasienten.","Identifikator for pasienten. Skal være fødselsnummer (FNR) eller D-nummer (DNR).","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"","value:system}
+","Identifikator for pasienten.","Identifikator for pasienten. Bør være fødselsnummer (FNR) eller D-nummer (DNR) når tilgjengelig.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"","value:system}
 ","",,"open","Patient.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
@@ -365,7 +365,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Patient.address.use","Patient.address.use","","","",0,1,"","Y","Y","code {[]} {[]}
 ","home | temp | old","Adressetype begrenset til home, temp eller old","Applications can assume that an address is current unless it explicitly says that it is temporary or old.","Allows an appropriate address to be chosen from a list of many.","","","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""home""/>","","",,"required","Tillatte verdier er home, temp eller old","http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use","",,,,"Address.use",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-address-use-constraint:Kun home, temp eller old er tillatt for address.use {address.use.empty() or address.use in ('home' | 'temp' | 'old')}"
+"
 "Patient.address.type","Patient.address.type","","","",0,1,"","","Y","code {[]} {[]}
 ","physical","Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.
 

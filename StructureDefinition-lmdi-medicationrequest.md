@@ -23,7 +23,7 @@ Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [MedicationRequest/Rekvirering-1](MedicationRequest-Rekvirering-1.md), [MedicationRequest/Rekvirering-2-Kjemoterapi](MedicationRequest-Rekvirering-2-Kjemoterapi.md), [MedicationRequest/Scenario-B-Rekvirering](MedicationRequest-Scenario-B-Rekvirering.md) and [MedicationRequest/Scenario-C-Rekvirering](MedicationRequest-Scenario-C-Rekvirering.md)
+* Examples for this Profile: [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) and [MedicationRequest/Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationrequest)
 
@@ -273,7 +273,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
     {
       "id" : "MedicationRequest.courseOfTherapyType",
       "path" : "MedicationRequest.courseOfTherapyType",
-      "short" : "continuous | acute | seasonal"
+      "short" : "Type behandlingsforløp (continuous | acute | seasonal)"
     },
     {
       "id" : "MedicationRequest.insurance",
