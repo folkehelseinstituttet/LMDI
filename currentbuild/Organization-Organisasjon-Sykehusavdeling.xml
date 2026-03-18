@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="Organisasjon-Sykehusavdeling"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.102"/>
+    <value value="4208723"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.8624"/>
+      <code value="05"/>
+      <display value="Avdeling"/>
+    </coding>
+  </type>
+  <name value="Avdeling for epilepsi, poliklinikk"/>
+  <address>
+    <type value="physical"/>
+    <district>
+      <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+        <valueCoding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+          <code value="3201"/>
+          <display value="Bærum"/>
+        </valueCoding>
+      </extension>
+    </district>
+  </address>
+  <partOf>
+    <reference value="Organization/Organisasjon-Sykehus"/>
+  </partOf>
+</Organization>

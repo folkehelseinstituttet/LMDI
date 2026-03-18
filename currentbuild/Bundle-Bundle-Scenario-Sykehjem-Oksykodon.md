@@ -1,0 +1,318 @@
+# Oksykodonadministrering i sykehjem med inline ressurskopier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+
+*  [Hjem](index.md) 
+*  [Informasjonsmodell](informasjonsmodell.md) 
+*  [Integrasjon](integrasjon.md) 
+*  [FHIR-profiler](profiler.md) 
+*  [Nedlastinger](nedlastinger.md) 
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Oksykodonadministrering i sykehjem med inline ressurskopier**
+
+## Example Bundle: Oksykodonadministrering i sykehjem med inline ressurskopier
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "Bundle-Scenario-Sykehjem-Oksykodon",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"]
+  },
+  "identifier" : {
+    "system" : "urn:oid:2.16.578.1.34.10.3",
+    "value" : "bundle-001"
+  },
+  "type" : "transaction",
+  "timestamp" : "2024-02-07T13:28:17.239+02:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:11111111-1111-4111-8111-111111111111",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "Scenario-Sykehjem-Oksykodon-Pasient",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.1",
+        "value" : "12705825562"
+      }],
+      "gender" : "male",
+      "birthDate" : "1958-05-12",
+      "address" : [{
+        "extension" : [{
+          "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-urban-district",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.578.1.12.4.1.1.3403",
+            "code" : "030102",
+            "display" : "Grünerløkka"
+          }
+        }],
+        "use" : "home",
+        "type" : "physical",
+        "district" : "Oslo",
+        "_district" : {
+          "extension" : [{
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "0301",
+              "display" : "Oslo"
+            }
+          }]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:22222222-2222-4222-8222-222222222222",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "Scenario-Sykehjem-Oksykodon-Helsepersonell",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
+        "value" : "9144900"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Practitioner"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:33333333-3333-4333-8333-333333333333",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "Scenario-Sykehjem-Oksykodon-Kommune",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+        "value" : "942110464"
+      }],
+      "name" : "TRONDHEIM KOMMUNE",
+      "address" : [{
+        "type" : "physical",
+        "district" : "Trondheim",
+        "_district" : {
+          "extension" : [{
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "5001",
+              "display" : "Trondheim - Tråante"
+            }
+          }]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:44444444-4444-4444-8444-444444444444",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "Scenario-Sykehjem-Oksykodon-Sykehjem",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+      },
+      "identifier" : [{
+        "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+        "value" : "985626154"
+      }],
+      "name" : "BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM",
+      "address" : [{
+        "type" : "physical",
+        "district" : "Trondheim",
+        "_district" : {
+          "extension" : [{
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "5001",
+              "display" : "Trondheim - Tråante"
+            }
+          }]
+        }
+      }],
+      "partOf" : {
+        "reference" : "urn:uuid:33333333-3333-4333-8333-333333333333"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Organization"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:55555555-5555-4555-8555-555555555555",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "Scenario-Sykehjem-Oksykodon-Episode",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
+      },
+      "status" : "in-progress",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "SS",
+        "display" : "short stay"
+      },
+      "serviceProvider" : {
+        "reference" : "urn:uuid:44444444-4444-4444-8444-444444444444"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Encounter"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:66666666-6666-4666-8666-666666666666",
+    "resource" : {
+      "resourceType" : "Medication",
+      "id" : "Scenario-Sykehjem-Oksykodon-Legemiddel",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+      },
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02AA05",
+            "display" : "Oksykodon"
+          }]
+        }
+      }],
+      "identifier" : [{
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+        "value" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+          "code" : "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9",
+          "display" : "Oksykodon"
+        }]
+      },
+      "form" : {
+        "coding" : [{
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+          "code" : "51",
+          "display" : "Mikstur, oppløsning"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Medication"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:77777777-7777-4777-8777-777777777777",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "Scenario-Sykehjem-Oksykodon-Rekvirering",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
+      },
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
+        "valueQuantity" : {
+          "value" : 80,
+          "unit" : "%",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "%"
+        }
+      },
+      {
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime",
+        "valueString" : "FOLFOX6"
+      },
+      {
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
+        "valueBoolean" : true
+      }],
+      "status" : "active",
+      "intent" : "order",
+      "medicationReference" : {
+        "reference" : "urn:uuid:66666666-6666-4666-8666-666666666666"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:11111111-1111-4111-8111-111111111111"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:55555555-5555-4555-8555-555555555555"
+      },
+      "authoredOn" : "2025-03-10",
+      "requester" : {
+        "reference" : "urn:uuid:22222222-2222-4222-8222-222222222222"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationRequest"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:88888888-8888-4888-8888-888888888888",
+    "resource" : {
+      "resourceType" : "MedicationAdministration",
+      "id" : "Scenario-Sykehjem-Oksykodon-Administrering",
+      "meta" : {
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
+      },
+      "status" : "completed",
+      "medicationReference" : {
+        "reference" : "urn:uuid:66666666-6666-4666-8666-666666666666"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:11111111-1111-4111-8111-111111111111"
+      },
+      "context" : {
+        "reference" : "urn:uuid:55555555-5555-4555-8555-555555555555"
+      },
+      "effectiveDateTime" : "2024-05-28T09:30:00+02:00",
+      "request" : {
+        "reference" : "urn:uuid:77777777-7777-4777-8777-777777777777"
+      },
+      "dosage" : {
+        "route" : {
+          "coding" : [{
+            "system" : "http://snomed.info/sct",
+            "code" : "421521009",
+            "display" : "Swallow"
+          }]
+        },
+        "dose" : {
+          "value" : 10,
+          "unit" : "mg",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mg"
+        }
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "MedicationAdministration"
+    }
+  }]
+}
+
+```

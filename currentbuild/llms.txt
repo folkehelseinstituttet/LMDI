@@ -1,0 +1,91 @@
+# hl7.fhir.no.lmdi#1.0.8: Legemiddeldata fra institusjon til Legemiddelregisteret
+
+## Pages
+
+* [Hjem](index.md)
+* [FHIR-profiler](profiler.md)
+* [Protokoll](protokoll.md)
+* [Integrasjon](integrasjon.md)
+* [Artifacts Summary](artifacts.md)
+* [SignertKryptertBundle](SignertKryptertBundle.md)
+* [C# eksempelkode](eksempelkode_cs.md)
+* [Powershell eksempelkode](eksempelkode_ps1.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Nedlastinger](nedlastinger.md)
+
+## Resources
+
+### CodeSystems
+
+* [Lokal Legemiddelkatalog Codes](CodeSystem-LokalLegemiddelkatalogCodeSystem.md)
+* [Kommunenummer CodeSystem](CodeSystem-kommunenummer-codesystem.md)
+
+### ValueSets
+
+* [Lokal Legemiddelkatalog Values](ValueSet-LokalLegemiddelkatalogValues.md)
+* [ATC Kodesystem ValueSet](ValueSet-atc-valueset.md)
+* [Kommunenummer ValueSet](ValueSet-kommunenummer-alle.md)
+* [Gyldige legemiddelkoder](ValueSet-legemiddel-koder.md)
+* [LMDI Address Type](ValueSet-lmdi-address-type.md)
+* [LMDI Address Use](ValueSet-lmdi-address-use.md)
+* [Status for legemiddeladministrering](ValueSet-lmdi-medicationadministrationstatus.md)
+
+### Resource Profiles
+
+* [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.md)
+* [Diagnose](StructureDefinition-lmdi-condition.md)
+* [Episode](StructureDefinition-lmdi-encounter.md)
+* [Legemiddel](StructureDefinition-lmdi-medication.md)
+* [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
+* [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
+* [Organisasjon](StructureDefinition-lmdi-organization.md)
+* [Pasient](StructureDefinition-lmdi-patient.md)
+* [Helsepersonell](StructureDefinition-lmdi-practitioner.md)
+* [Virkestoff](StructureDefinition-lmdi-substance.md)
+
+### Extensions
+
+* [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
+* [Del av behandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md)
+* [Klinisk studie](StructureDefinition-lmdi-klinisk-studie.md)
+* [Prosentvis doseendring](StructureDefinition-lmdi-prosentvis-doseendring.md)
+* [NPR Episode Identifier](StructureDefinition-npr-episode-identifier.md)
+
+### ImplementationGuides
+
+* [Legemiddeldata fra institusjon til Legemiddelregisteret](index.md)
+
+### NamingSystems
+
+* [lmdiLokaltLegemiddel](NamingSystem-lmdi-lokaltLegemiddel.md)
+* [festLegemiddelDose](NamingSystem-no-basis-fest-legemiddeldose.md)
+* [festLegemiddelMerkevare](NamingSystem-no-basis-fest-legemiddelmerkevare.md)
+* [festLegemiddelPakning](NamingSystem-no-basis-fest-legemiddelpakning.md)
+* [festLegemiddelVirkestoff](NamingSystem-no-basis-fest-legemiddelvirkestoff.md)
+
+### Examples
+
+* [Bundle-Scenario-Sykehjem-Oksykodon (Bundle)](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md)
+* [Diagnose-ICD10 (Condition)](Condition-Diagnose-ICD10.md)
+* [Diagnose-SNOMED-CT (Condition)](Condition-Diagnose-SNOMED-CT.md)
+* [Episode-Sykehjem (Encounter)](Encounter-Episode-Sykehjem.md)
+* [Episode-Sykehus (Encounter)](Encounter-Episode-Sykehus.md)
+* [Legemiddel-Lokalt-Med-Flere-Ingredienser (Medication)](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md)
+* [Legemiddel-Monoket-FEST-Pakning (Medication)](Medication-Legemiddel-Monoket-FEST-Pakning.md)
+* [Legemiddel-Oksykodon-FEST-Virkestoff (Medication)](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md)
+* [Legemiddel-Paracetamol-FEST-Merkevare (Medication)](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
+* [Administrering-Infusjon (MedicationAdministration)](MedicationAdministration-Administrering-Infusjon.md)
+* [Administrering-Oral (MedicationAdministration)](MedicationAdministration-Administrering-Oral.md)
+* [Rekvirering-Kjemoterapi (MedicationRequest)](MedicationRequest-Rekvirering-Kjemoterapi.md)
+* [Rekvirering-Paracetamol (MedicationRequest)](MedicationRequest-Rekvirering-Paracetamol.md)
+* [Oslo universitetssykehus HF (Organization)](Organization-Organisasjon-HF.md)
+* [TRONDHEIM KOMMUNE (Organization)](Organization-Organisasjon-Kommune.md)
+* [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM (Organization)](Organization-Organisasjon-Sykehjem.md)
+* [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK (Organization)](Organization-Organisasjon-Sykehus.md)
+* [Avdeling for epilepsi, poliklinikk (Organization)](Organization-Organisasjon-Sykehusavdeling.md)
+* [Pasient-Med-DNR (Patient)](Patient-Pasient-Med-DNR.md)
+* [Pasient-Med-FNR (Patient)](Patient-Pasient-Med-FNR.md)
+* [Pasient-Uten-Personidentifikator (Patient)](Patient-Pasient-Uten-Personidentifikator.md)
+* [Helsepersonell-Med-HPR (Practitioner)](Practitioner-Helsepersonell-Med-HPR.md)
+* [Helsepersonell-Uten-HPR (Practitioner)](Practitioner-Helsepersonell-Uten-HPR.md)
+* [Virkestoff-Oksykodon (Substance)](Substance-Virkestoff-Oksykodon.md)

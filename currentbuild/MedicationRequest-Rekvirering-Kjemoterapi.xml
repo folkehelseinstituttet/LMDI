@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Rekvirering-Kjemoterapi"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring">
+    <valueQuantity>
+      <value value="80"/>
+      <unit value="%"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </valueQuantity>
+  </extension>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime">
+    <valueString value="FOLFOX6"/>
+  </extension>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie">
+    <valueBoolean value="true"/>
+  </extension>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-Oksykodon-FEST-Virkestoff"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <authoredOn value="2025-03-10"/>
+  <requester>
+    <reference value="Practitioner/Helsepersonell-Med-HPR"/>
+  </requester>
+</MedicationRequest>
