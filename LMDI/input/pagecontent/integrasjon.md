@@ -54,44 +54,56 @@ URL til Legemiddelregisterets API:
   - TEST-miljø: [https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1](https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1)
   - PROD-miljø: [https://fhirmottak.lmr.fhi.no/fhirmottak/v1](https://fhirmottak.lmr.fhi.no/fhirmottak/v1)
 
+
 #### Testendepunkter
 
 For testing av integrasjonen er det tilgjengelig to dedikerte valideringsendepunkter. Disse lagrer ingen data og er kun tilgjengelig i testmiljøet.
 
 **Validering av FHIR-bundle:**
-- `/fhirmottak/v1/validateLegemiddelregisterBundle` - Validerer innholdet i en FHIR-bundle mot LMDI-spesifikasjonen. Endepunktet forventer å motta en usignert og ukryptert FHIR-bundle i JSON-format. Krever ikke autentisering. Returnerer valideringsresultat som OperationOutcome med status 200 (gyldig) eller 400 (ugyldig).
+- `/fhirmottak/v1/validateLegemiddelregisterBundle` – Validerer innholdet i en FHIR-bundle mot LMDI-spesifikasjonen.  
+  Endepunktet forventer å motta en usignert og ukryptert FHIR-bundle i JSON-format. Krever ikke autentisering, og avsender trenger ikke være registrert.  
+  Returnerer valideringsresultat som `OperationOutcome` med status 200 (gyldig) eller 400 (ugyldig).
 
 **Validering av signert og kryptert bundle:**
-- `/fhirmottak/v1/validate` - Validerer at signering og kryptering er utført korrekt, samt at innholdet i den krypterte FHIR-bundelen er i henhold til LMDI-spesifikasjonen. Endepunktet forventer å motta en signert og kryptert bundle. Data valideres men lagres ikke. Krever Maskinporten-autentisering. Returnerer status 200 (gyldig) eller 400 (ugyldig).
+- `/fhirmottak/v1/validate` – Validerer at signering og kryptering er utført korrekt, samt at innholdet i den krypterte FHIR-bundelen er i henhold til LMDI-spesifikasjonen.  
+  Endepunktet forventer å motta en signert og kryptert bundle. Avsender må være registrert og aktiv. Data valideres, men lagres ikke.  
+  Krever Maskinporten-autentisering med scope `fhi:lmr/fhirmottak.api`.  
+  Returnerer status 200 (gyldig) eller 400 (ugyldig).
 
-#### Håndter respons fra API-et
+#### Håndter respons fra testendepunktene
 
-API-et returnerer følgende HTTP-statuskoder:
+Testendepunktene returnerer følgende HTTP-statuskoder:
 
 **200 OK**
 - Meldingen ble validert uten feil
-- Ved `/fhirmottak/v1`: Meldingen er validert og lagret i databasen
-- Ved `/fhirmottak/v1/validate`: Meldingen er validert men ikke lagret
-- Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer OperationOutcome som bekrefter at FHIR-bundelen er gyldig
+- Ved `/fhirmottak/v1/validate`: Meldingen er validert, men ikke lagret
+- Ved `/fhirmottak/v1/validateLegemiddelregisterBundle`: Returnerer `OperationOutcome` som bekrefter at FHIR-bundelen er gyldig
 
 **400 Bad Request**
 - Valideringsfeil i den innsendte meldingen
-- Mulige årsaker for alle endepunkter:
-  - FHIR bundle validering feilet (ikke i henhold til LMDI-spesifikasjonen)
+- Mulige årsaker (begge endepunkter):
+  - FHIR-bundle-validering feilet (ikke i henhold til LMDI-spesifikasjonen)
   - Ugyldig JSON-format
-- Mulige årsaker for `/fhirmottak/v1` og `/fhirmottak/v1/validate`:
+- Mulige årsaker kun for `/fhirmottak/v1/validate`:
   - Ukjent eller inaktiv avsender
   - Organisasjonsnummer i melding stemmer ikke med registrert avsender
-  - Signaturvalidering feilet (gjelder `/fhirmottak/v1/validate`)
+  - Signaturvalidering feilet
   - Dekryptering feilet
+
+**401 Unauthorized**
+- Autentisering feilet (gjelder `/fhirmottak/v1/validate`)
+- Mulige årsaker:
+  - Manglende Authorization-header eller token
+  - Utløpt access token
+  - Ugyldig tokensignatur
+  - Ugyldig utsteder (issuer) eller mottaker (audience)
+- Responsen inkluderer en `WWW-Authenticate`-header med feilbeskrivelse
+
+**403 Forbidden**
+- Autorisering feilet (gjelder `/fhirmottak/v1/validate`)
+- Token er gyldig, men mangler påkrevd scope (`fhi:lmr/fhirmottak.api`)
+- Responsen inkluderer en `WWW-Authenticate`-header med feilbeskrivelse
 
 **500 Internal Server Error**
 - En uventet feil oppstod ved behandling av meldingen
-- Dette kan skyldes:
-  - Manglende FHIR R4 core specifications (validering utilgjengelig)
-  - Teknisk feil i FHIR-validering
-  - Serverfeil som bør undersøkes med FHI
-
-
-
-
+- Serverfeil som bør undersøkes med FHI
