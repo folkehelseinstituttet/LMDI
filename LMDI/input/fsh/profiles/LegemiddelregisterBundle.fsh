@@ -111,9 +111,9 @@ Description: "Oksykodon på virkestoffnivå"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 * identifier.value = "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
 * extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"
-* code.coding[FestVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-* code.coding[FestVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
-* code.coding[FestVirkestoff].display = "Oksykodon"
+* code.coding[FestLegemiddelVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+* code.coding[FestLegemiddelVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
+* code.coding[FestLegemiddelVirkestoff].display = "Oksykodon"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
 * form.coding[OID7448].code = #51
 * form.coding[OID7448].display = "Mikstur, oppløsning"
