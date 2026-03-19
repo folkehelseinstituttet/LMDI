@@ -266,22 +266,22 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
-      "id" : "Medication.code.coding:FestVirkestoff",
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff",
       "path" : "Medication.code.coding",
-      "sliceName" : "FestVirkestoff",
+      "sliceName" : "FestLegemiddelVirkestoff",
       "short" : "FEST-id for legemiddel virkestoff",
       "definition" : "Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST.",
       "min" : 0,
       "max" : "1"
     },
     {
-      "id" : "Medication.code.coding:FestVirkestoff.system",
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff.system",
       "path" : "Medication.code.coding.system",
       "min" : 1,
       "patternUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
     },
     {
-      "id" : "Medication.code.coding:FestVirkestoff.code",
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff.code",
       "path" : "Medication.code.coding.code",
       "short" : "Identifikator fra FEST",
       "min" : 1
@@ -424,7 +424,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "path" : "Medication.ingredient",
       "short" : "Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.",
       "definition" : "Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.",
-      "comment" : "For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."
+      "comment" : "For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."
     },
     {
       "id" : "Medication.ingredient.item[x]",
