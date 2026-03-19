@@ -37,7 +37,7 @@ Kodesystem for lokal legemiddelkatalog
   "name" : "LokalLegemiddelkatalogCodeSystem",
   "title" : "Lokal Legemiddelkatalog Codes",
   "status" : "draft",
-  "date" : "2026-03-19T19:57:45+00:00",
+  "date" : "2026-03-19T19:58:27+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
