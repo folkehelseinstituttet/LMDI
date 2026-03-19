@@ -224,6 +224,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
+      "id" : "Medication.code.coding:FestLegemiddelMerkevare.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "Varenavn fra FEST"
+    },
+    {
       "id" : "Medication.code.coding:FestLegemiddelpakning",
       "path" : "Medication.code.coding",
       "sliceName" : "FestLegemiddelpakning",
