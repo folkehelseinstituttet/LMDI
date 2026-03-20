@@ -163,6 +163,13 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "max" : "0"
     },
     {
+      "id" : "Organization.type:organisatoriskBetegnelse",
+      "path" : "Organization.type",
+      "sliceName" : "organisatoriskBetegnelse",
+      "short" : "Organisatorisk betegnelse. Kodeverk \"Organisatorisk betegnelse\" (OID 8624)",
+      "definition" : "Kode fra kodeverk \"Organisatorisk betegnelse\" (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)"
+    },
+    {
       "id" : "Organization.name",
       "path" : "Organization.name",
       "short" : "Organisasjonsnavn",
