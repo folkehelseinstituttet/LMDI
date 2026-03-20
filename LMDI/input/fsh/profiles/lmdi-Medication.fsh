@@ -116,7 +116,7 @@ Description: "Beskrivelse av legemiddel."
 
 
 // EKSEMPLER
-Instance: Legemiddel-FestVirkestoff
+Instance: Legemiddel-FestLegemiddelVirkestoff
 InstanceOf: Legemiddel
 Description: "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id"
 * extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"

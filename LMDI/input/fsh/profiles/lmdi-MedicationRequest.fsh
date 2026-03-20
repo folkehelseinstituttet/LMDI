@@ -101,7 +101,7 @@ InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"
 * status = #active
 * intent = #order
-* medicationReference = Reference(Legemiddel-FestVirkestoff)
+* medicationReference = Reference(Legemiddel-FestLegemiddelVirkestoff)
 * subject = Reference(Pasient-Med-FNR)
 * requester = Reference(Helsepersonell-Med-HPR)
 * authoredOn = "2025-03-10"
