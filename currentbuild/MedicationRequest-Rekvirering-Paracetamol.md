@@ -30,7 +30,7 @@
   "status" : "active",
   "intent" : "order",
   "medicationReference" : {
-    "reference" : "Medication/Legemiddel-Paracetamol-FEST-Merkevare"
+    "reference" : "Medication/Legemiddel-FestLegemiddelMerkevare"
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"

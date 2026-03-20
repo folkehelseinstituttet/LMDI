@@ -43,7 +43,7 @@
   "status" : "active",
   "intent" : "order",
   "medicationReference" : {
-    "reference" : "Medication/Legemiddel-Oksykodon-FEST-Virkestoff"
+    "reference" : "Medication/Legemiddel-FestLegemiddelVirkestoff"
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"

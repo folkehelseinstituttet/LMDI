@@ -95,10 +95,14 @@ These are example instances that show what data produced and consumed by systems
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
+| [Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md) | Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id |
+| [Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md) | Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id |
+| [Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md) | Eksempel på legemiddel identifisert med FEST legemiddeldose-id |
+| [Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md) | Eksempel på legemiddel identifisert med FEST legemiddelpakning-id |
+| [Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md) | Eksempel på legemiddel identifisert med LMR-løpenummer |
 | [Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
-| [Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md) | Eksempel på legemiddel - paking |
-| [Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) | Eksempel på legemiddel |
-| [Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md) | Eksempel på legemiddel - Paracetamol |
+| [Legemiddel-SCT](Medication-Legemiddel-SCT.md) | Eksempel på legemiddel identifisert med SNOMED CT-kode |
+| [Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) | Eksempel på legemiddel identifisert med varenummer |
 | [Oksykodonadministrering i sykehjem med inline ressurskopier](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) | Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline. |
 | [Organisasjon-HF](Organization-Organisasjon-HF.md) | Eksempel på Helseforetak |
 | [Organisasjon-Kommune](Organization-Organisasjon-Kommune.md) | Eksempel på kommune i primærhelsetjenesten |

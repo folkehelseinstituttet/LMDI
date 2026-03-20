@@ -1148,6 +1148,66 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Medication"
       }],
       "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddeldose"
+      },
+      "name" : "Legemiddel-FestLegemiddeldose",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddeldose-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelMerkevare"
+      },
+      "name" : "Legemiddel-FestLegemiddelMerkevare",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelpakning"
+      },
+      "name" : "Legemiddel-FestLegemiddelpakning",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddelpakning-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelVirkestoff"
+      },
+      "name" : "Legemiddel-FestLegemiddelVirkestoff",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLmrLopenr"
+      },
+      "name" : "Legemiddel-FestLmrLopenr",
+      "description" : "Eksempel på legemiddel identifisert med LMR-løpenummer",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
         "reference" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
       },
       "name" : "Legemiddel-Lokalt-Med-Flere-Ingredienser",
@@ -1160,10 +1220,10 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Monoket-FEST-Pakning"
+        "reference" : "Medication/Legemiddel-SCT"
       },
-      "name" : "Legemiddel-Monoket-FEST-Pakning",
-      "description" : "Eksempel på legemiddel - paking",
+      "name" : "Legemiddel-SCT",
+      "description" : "Eksempel på legemiddel identifisert med SNOMED CT-kode",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1172,22 +1232,10 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Oksykodon-FEST-Virkestoff"
+        "reference" : "Medication/Legemiddel-Varenummer"
       },
-      "name" : "Legemiddel-Oksykodon-FEST-Virkestoff",
-      "description" : "Eksempel på legemiddel",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Medication"
-      }],
-      "reference" : {
-        "reference" : "Medication/Legemiddel-Paracetamol-FEST-Merkevare"
-      },
-      "name" : "Legemiddel-Paracetamol-FEST-Merkevare",
-      "description" : "Eksempel på legemiddel - Paracetamol",
+      "name" : "Legemiddel-Varenummer",
+      "description" : "Eksempel på legemiddel identifisert med varenummer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
