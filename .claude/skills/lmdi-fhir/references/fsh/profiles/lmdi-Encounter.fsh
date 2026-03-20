@@ -5,8 +5,8 @@ Title: "Episode"
 Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."
 
 * extension contains NprEpisodeIdentifier named nprEpisodeIdentifier 0..1 MS
-* extension[nprEpisodeIdentifier] ^short = "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR)."
-* extension[nprEpisodeIdentifier] ^definition = "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge."
+* extension[nprEpisodeIdentifier] ^short = "NPR episodeidentifikator som sendes til LMDI"
+* extension[nprEpisodeIdentifier] ^definition = "Unik identifikator for episoden som skal sendes til LMDI. Selv om avsender kan ha flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til LMDI. Dersom flere identifiere finnes, velges gjerne den første eller foretrukne identifikatoren lokalt. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon dersom begge er tilgjengelig."
 
 * statusHistory 0..0 
 * classHistory 0..0
