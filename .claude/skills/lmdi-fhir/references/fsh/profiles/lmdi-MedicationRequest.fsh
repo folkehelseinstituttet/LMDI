@@ -91,7 +91,7 @@ Description: "Eksempel på legemiddelrekvirering av Paracet"
 * identifier.value = "REK123456"
 * status = #active
 * intent = #order
-* medicationReference = Reference(Legemiddel-Paracetamol-FEST-Merkevare)
+* medicationReference = Reference(Legemiddel-FestLegemiddelMerkevare)
 * subject = Reference(Pasient-Med-FNR)
 * requester = Reference(Helsepersonell-Med-HPR)
 * authoredOn = "2025-01-27"
@@ -101,7 +101,7 @@ InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"
 * status = #active
 * intent = #order
-* medicationReference = Reference(Legemiddel-Oksykodon-FEST-Virkestoff)
+* medicationReference = Reference(Legemiddel-FestVirkestoff)
 * subject = Reference(Pasient-Med-FNR)
 * requester = Reference(Helsepersonell-Med-HPR)
 * authoredOn = "2025-03-10"
