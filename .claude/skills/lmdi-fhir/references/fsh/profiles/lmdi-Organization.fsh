@@ -51,6 +51,8 @@ Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
 * type[organisatoriskNiva] 0..0
 // LMDI deaktiverer organisatoriskNiva fordi kodeverket (OID 8628) ikke lenger er i bruk.
 // organisatoriskBetegnelse beholdes fra no-basis og brukes i eksemplene.
+* type[organisatoriskBetegnelse] ^short = "Organisatorisk betegnelse. Kodeverk \"Organisatorisk betegnelse\" (OID 8624)"
+* type[organisatoriskBetegnelse] ^definition = "Kode fra kodeverk \"Organisatorisk betegnelse\" (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)"
 
 * name 1..1 MS
 * name ^short = "Organisasjonsnavn"
