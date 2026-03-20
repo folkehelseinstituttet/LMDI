@@ -116,45 +116,79 @@ Description: "Beskrivelse av legemiddel."
 
 
 // EKSEMPLER
-Instance: Legemiddel-Oksykodon-FEST-Virkestoff
+Instance: Legemiddel-FestLegemiddelVirkestoff
 InstanceOf: Legemiddel
-Description: "Eksempel på legemiddel"
-// "Oxycodone Orifarm mikst oppl 1 mg/ml"
-* identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-* identifier.value = "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
+Description: "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id"
 * extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"
 * code.coding[FestLegemiddelVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-* code.coding[FestLegemiddelVirkestoff].code = #C31AF94A-5D5A-4C91-9B99-BB221E26E4C9
-* code.coding[FestLegemiddelVirkestoff].display = "Oksykodon"
+* code.coding[FestLegemiddelVirkestoff].code = #ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E
+* code.coding[FestLegemiddelVirkestoff].display = "Oksykodon mikst oppl 1 mg/ml"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[OID7448].code = #51
+* form.coding[OID7448].code = #842
 * form.coding[OID7448].display = "Mikstur, oppløsning"
 
-Instance: Legemiddel-Paracetamol-FEST-Merkevare
+Instance: Legemiddel-FestLegemiddelMerkevare
 InstanceOf: Legemiddel
-Description: "Eksempel på legemiddel - Paracetamol"
-* identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-* identifier.value = "2ABAC272-0BCF-43F0-84BE-984074D92E15"
+Description: "Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id"
 * extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
 * code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-* code.coding[FestLegemiddelMerkevare].code = #2ABAC272-0BCF-43F0-84BE-984074D92E15
-* code.coding[FestLegemiddelMerkevare].display = "Paracetamol"
+* code.coding[FestLegemiddelMerkevare].code = #ID_2ABAC272-0BCF-43F0-84BE-984074D92E15
+* code.coding[FestLegemiddelMerkevare].display = "Paracet tab 500 mg"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[OID7448].code = #1
+* form.coding[OID7448].code = #53
 * form.coding[OID7448].display = "Tablett"
 
-Instance: Legemiddel-Monoket-FEST-Pakning
+Instance: Legemiddel-FestLegemiddelpakning
 InstanceOf: Legemiddel
-Description: "Eksempel på legemiddel - paking"
-* identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-* identifier.value = "0003602E-315E-4CDE-9EB0-6756BE9CD120"
+Description: "Eksempel på legemiddel identifisert med FEST legemiddelpakning-id"
 * extension[classification].valueCodeableConcept = $ATC#C01DA14 "isosorbide mononitrate"
 * code.coding[FestLegemiddelpakning].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-* code.coding[FestLegemiddelpakning].code = #0003602E-315E-4CDE-9EB0-6756BE9CD120
-* code.coding[FestLegemiddelpakning].display = "Monoket"
+* code.coding[FestLegemiddelpakning].code = #ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C
+* code.coding[FestLegemiddelpakning].display = "Monoket retard depottab 50 mg"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
-* form.coding[OID7448].code = #68
+* form.coding[OID7448].code = #25
 * form.coding[OID7448].display = "Depottablett"
+
+Instance: Legemiddel-Varenummer
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel identifisert med varenummer"
+* extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
+* code.coding[Varenummer].system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+* code.coding[Varenummer].code = #106383
+* code.coding[Varenummer].display = "Paracet mikst oppl 24 mg/ml"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #842
+* form.coding[OID7448].display = "Mikstur, oppløsning"
+
+Instance: Legemiddel-FestLegemiddeldose
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel identifisert med FEST legemiddeldose-id"
+* extension[classification].valueCodeableConcept = $ATC#A10AB05 "insulin aspart"
+* code.coding[FestLegemiddeldose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* code.coding[FestLegemiddeldose].code = #ID_0008D107-4F34-470F-83CA-541F6E9FA3C4
+* code.coding[FestLegemiddeldose].display = "NovoRapid Flexpen inj, oppl 100 E/ml"
+
+Instance: Legemiddel-FestLmrLopenr
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel identifisert med LMR-løpenummer"
+* extension[classification].valueCodeableConcept = $ATC#N03AX11 "topiramat"
+* code.coding[FestLmrLopenr].system = "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+* code.coding[FestLmrLopenr].code = #1003023
+* code.coding[FestLmrLopenr].display = "Topimax kaps 15 mg"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #891
+* form.coding[OID7448].display = "Kapsel, hard"
+
+Instance: Legemiddel-SCT
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel identifisert med SNOMED CT-kode"
+* extension[classification].valueCodeableConcept = $ATC#N02BE01 "Paracetamol"
+* code.coding[SCT].system = "http://snomed.info/sct"
+* code.coding[SCT].code = #32236009
+* code.coding[SCT].display = "paracetamol tab 500 mg"
+* form.coding[SCT].system = "http://snomed.info/sct"
+* form.coding[SCT].code = #385055001
+* form.coding[SCT].display = "tablett"
 
 Instance: Legemiddel-Lokalt-Med-Flere-Ingredienser
 InstanceOf: Legemiddel
