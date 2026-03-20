@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-19 | *Computable Name*:Episode |
+| Draft as of 2026-03-20 | *Computable Name*:Episode |
 
  
 Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -48,7 +48,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "name" : "Episode",
   "title" : "Episode",
   "status" : "draft",
-  "date" : "2026-03-19T20:30:35+00:00",
+  "date" : "2026-03-20T06:49:44+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -124,8 +124,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
       "id" : "Encounter.extension:nprEpisodeIdentifier",
       "path" : "Encounter.extension",
       "sliceName" : "nprEpisodeIdentifier",
-      "short" : "NPR episodeidentifikator som sendes til LMDI",
-      "definition" : "Unik identifikator for episoden som skal sendes til LMDI. Selv om avsender kan ha flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til LMDI. Dersom flere identifiere finnes, velges gjerne den første eller foretrukne identifikatoren lokalt. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon dersom begge er tilgjengelig.",
+      "short" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR).",
+      "definition" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge.",
       "min" : 0,
       "max" : "1",
       "type" : [{
