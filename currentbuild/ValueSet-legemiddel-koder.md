@@ -58,7 +58,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "draft",
-  "date" : "2026-03-27T10:18:52+00:00",
+  "date" : "2026-03-27T10:20:03+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
