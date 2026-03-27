@@ -9,4 +9,4 @@ Description: "ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, var
 * include codes from system http://dmp.no/fhir/NamingSystem/festLegemiddelDose
 * include codes from system http://dmp.no/fhir/NamingSystem/lmrLopenummer
 * include codes from system http://dmp.no/fhir/NamingSystem/fest-varenummer
-* include codes from system http://fh.no/fhir/NamingSystem/lokaltVirkemiddel
+* include codes from system http://fh.no/fhir/NamingSystem/lokaltLegemiddel
