@@ -25,7 +25,7 @@
   },
   "code" : {
     "coding" : [{
-      "system" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel",
+      "system" : "http://fh.no/fhir/NamingSystem/lokaltLegemiddel",
       "code" : "lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron",
       "display" : "Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"
     }]

@@ -304,7 +304,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.code.coding:LokaltLegemiddel.system",
       "path" : "Medication.code.coding.system",
       "min" : 1,
-      "patternUri" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
+      "patternUri" : "http://fh.no/fhir/NamingSystem/lokaltLegemiddel"
     },
     {
       "id" : "Medication.code.coding:LokaltLegemiddel.code",

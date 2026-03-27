@@ -15,14 +15,13 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use **  | *Version*:1.0.8 **  |
-| Active as of 2026-03-20 | *Computable Name*:LmdiAddressUse |
+| Active as of 2026-03-27 | *Computable Name*:LmdiAddressUse |
 
  
 Tillatte verdier for address.use i LMDI: home, temp, old 
 
  **References** 
 
-* [Pasient](StructureDefinition-lmdi-patient.md)
 * [Pasient](StructureDefinition-lmdi-patient.md)
 
 ### Logical Definition (CLD)
@@ -57,7 +56,7 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
   "status" : "active",
-  "date" : "2026-03-20T09:01:24+00:00",
+  "date" : "2026-03-27T10:18:52+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

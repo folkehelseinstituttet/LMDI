@@ -33,11 +33,11 @@
       </li>
       <li>
         <a href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html">
-<code>http://fh.no/fhir/NamingSystem/lokaltVirkemiddel</code>        </a>
+<code>http://fh.no/fhir/NamingSystem/lokaltLegemiddel</code>        </a>
       </li>
       <li>
-        <a href="ValueSet-lmdi-medicationadministrationstatus.html">
-<code>urn:iso:std:iso:3166</code>        </a>
+        <a href="Medication-Legemiddel-Varenummer.html">
+<code>http://www.whocc.no/atc</code>        </a>
       </li>
       <li>
         <a href="Patient-Pasient-Uten-Personidentifikator.html">
@@ -70,9 +70,7 @@
       <ul>
 
         <li>
-This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact           <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a>
- or           <a href="mailto:info@snomed.org">info@snomed.org</a>
-.          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
+ISO          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
              <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
           </div>
           <div style="display: none" id="ipp2_1">
@@ -80,12 +78,64 @@ This material contains content that is copyright of SNOMED International. Implem
             <ul>
 
               <li>
+                <a href="https://tx.hl7.org.au/fhir/ValueSet/ISO3166Part1">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+:                 <a href="ValueSet-atc-valueset.html">ATCValueSet</a>
+,                 <a href="StructureDefinition-lmdi-del-av-behandlingsregime.html">DelAvBehandlingsregime</a>
+                <span onClick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 28 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="StructureDefinition-lmdi-condition.html">Diagnose</a>, <a href="StructureDefinition-lmdi-encounter.html">Episode</a>, <a href="StructureDefinition-lmdi-practitioner.html">Helsepersonell</a>, <a href="StructureDefinition-lmdi-klinisk-studie.html">KliniskStudie</a>, <a href="CodeSystem-kommunenummer-codesystem.html">KommunenummerCodeSystem</a>, <a href="ValueSet-kommunenummer-alle.html">KommunenummerValueSet</a>, <a href="StructureDefinition-lmdi-medication.html">Legemiddel</a>, <a href="StructureDefinition-legemiddel-classification.html">LegemiddelClassification</a>, <a href="ValueSet-legemiddel-koder.html">LegemiddelKoder</a>, <a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a>, <a href="ValueSet-lmdi-medicationadministrationstatus.html">LegemiddeladministreringStatus</a>, <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a>, <a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a>, <a href="index.html">Lmdi</a>, <a href="ValueSet-lmdi-address-type.html">LmdiAddressType</a>, <a href="ValueSet-lmdi-address-use.html">LmdiAddressUse</a>, <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html">LokalLegemiddelkatalogCodeSystem</a>, <a href="ValueSet-LokalLegemiddelkatalogValues.html">LokalLegemiddelkatalogValues</a>, <a href="StructureDefinition-npr-episode-identifier.html">NprEpisodeIdentifier</a>, <a href="StructureDefinition-lmdi-organization.html">Organisasjon</a>, <a href="StructureDefinition-lmdi-patient.html">Pasient</a>, <a href="StructureDefinition-lmdi-prosentvis-doseendring.html">ProsentvisDoseendring</a>, <a href="StructureDefinition-lmdi-substance.html">Virkestoff</a>, <a href="NamingSystem-no-basis-fest-legemiddeldose.html">festLegemiddelDose</a>, <a href="NamingSystem-no-basis-fest-legemiddelmerkevare.html">festLegemiddelMerkevare</a>, <a href="NamingSystem-no-basis-fest-legemiddelpakning.html">festLegemiddelPakning</a>, <a href="NamingSystem-no-basis-fest-legemiddelvirkestoff.html">festLegemiddelVirkestoff</a> and <a href="NamingSystem-lmdi-lokaltLegemiddel.html">lmdiLokaltLegemiddel</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+The Unified Code for Units of Measure (UCUM) Copyright &copy; 1999-2020 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved.  * This table of examples does not include all possible UCUM codes.  It includes the most common codes needed for routine laboratory and clinical measures but is not meant to be a comprehensive list.  See           <a href="http://unitsofmeasure.org">http://unitsofmeasure.org</a>
+ for the full UCUM specification.  This table was compiled by the National Library of Medicine, National Institutes of Health, U.S. Department of Health and Human Services with content contributions from Intermountain Healthcare and the Regenstrief Institute, and is currently maintained by the Regenstrief Institute.          <div onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_2">
+
+            <ul>
+
+              <li>
+                <a href="https://tx.hl7.org.au/fhir/ValueSet/unitsofmeasure">UCUM Fragment of common codes</a>
+:                 <a href="Bundle-Bundle-Scenario-Sykehjem-Oksykodon.html">Bundle/Bundle-Scenario-Sykehjem-Oksykodon</a>
+,                 <a href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html">Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser</a>
+,                 <a href="MedicationAdministration-Administrering-Infusjon.html">MedicationAdministration/Administrering-Infusjon</a>
+,                 <a href="MedicationAdministration-Administrering-Oral.html">MedicationAdministration/Administrering-Oral</a>
+ and                 <a href="MedicationRequest-Rekvirering-Kjemoterapi.html">MedicationRequest/Rekvirering-Kjemoterapi</a>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact           <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a>
+ or           <a href="mailto:info@snomed.org">info@snomed.org</a>
+.          <div onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_3">
+
+            <ul>
+
+              <li>
                 <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;)</a>
 :                 <a href="Bundle-Bundle-Scenario-Sykehjem-Oksykodon.html">Bundle/Bundle-Scenario-Sykehjem-Oksykodon</a>
 ,                 <a href="Condition-Diagnose-SNOMED-CT.html">Condition/Diagnose-SNOMED-CT</a>
-                <span onClick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+                <span onClick="document.getElementById('ips_3').innerHTML = document.getElementById('ips2_3').innerHTML" id="ips_3">
 ... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 7 more</span>                </span>
-                <span style="display: none" id="ips2_1">
+                <span style="display: none" id="ips2_3">
 , <a href="StructureDefinition-lmdi-medication.html">Legemiddel</a>, <a href="ValueSet-legemiddel-koder.html">LegemiddelKoder</a>, <a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a>, <a href="Medication-Legemiddel-SCT.html">Medication/Legemiddel-SCT</a>, <a href="MedicationAdministration-Administrering-Infusjon.html">MedicationAdministration/Administrering-Infusjon</a>, <a href="MedicationAdministration-Administrering-Oral.html">MedicationAdministration/Administrering-Oral</a> and <a href="Substance-Virkestoff-Oksykodon.html">Substance/Virkestoff-Oksykodon</a>                </span>
               </li>
 
@@ -98,10 +148,10 @@ This material contains content that is copyright of SNOMED International. Implem
 
         <li>
 This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see:           <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a>
-          <div onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated">
+          <div onClick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}" id="ipp_4" data-fhir="generated">
              <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
           </div>
-          <div style="display: none" id="ipp2_2">
+          <div style="display: none" id="ipp2_4">
 
             <ul>
 
@@ -124,31 +174,6 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
           </div>
         </li>
 
-        <li>
-WHO Collaborating Centre for Drug Statistics Methodology, Oslo, Norway.  Use of all or parts of the material requires reference to the WHO Collaborating Centre for Drug Statistics Methodology. Copying and distribution for commercial purposes is not allowed. Changing or manipulating the material is not allowed.          <div onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3" data-fhir="generated">
-             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
-          </div>
-          <div style="display: none" id="ipp2_3">
-
-            <ul>
-
-              <li>
-                <a href="http://tx.fhir.org/r4/ValueSet/1853">ATC classification system</a>
-:                 <a href="ValueSet-atc-valueset.html">ATCValueSet</a>
-,                 <a href="Bundle-Bundle-Scenario-Sykehjem-Oksykodon.html">Bundle/Bundle-Scenario-Sykehjem-Oksykodon</a>
-                <span onClick="document.getElementById('ips_4').innerHTML = document.getElementById('ips2_4').innerHTML" id="ips_4">
-... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 8 more</span>                </span>
-                <span style="display: none" id="ips2_4">
-, <a href="StructureDefinition-legemiddel-classification.html">LegemiddelClassification</a>, <a href="Medication-Legemiddel-FestLegemiddelMerkevare.html">Medication/Legemiddel-FestLegemiddelMerkevare</a>, <a href="Medication-Legemiddel-FestLegemiddelVirkestoff.html">Medication/Legemiddel-FestLegemiddelVirkestoff</a>, <a href="Medication-Legemiddel-FestLegemiddeldose.html">Medication/Legemiddel-FestLegemiddeldose</a>, <a href="Medication-Legemiddel-FestLegemiddelpakning.html">Medication/Legemiddel-FestLegemiddelpakning</a>, <a href="Medication-Legemiddel-FestLmrLopenr.html">Medication/Legemiddel-FestLmrLopenr</a>, <a href="Medication-Legemiddel-SCT.html">Medication/Legemiddel-SCT</a> and <a href="Medication-Legemiddel-Varenummer.html">Medication/Legemiddel-Varenummer</a>                </span>
-              </li>
-
-
-            </ul>
-
-
-          </div>
-        </li>
-
 
       </ul>
 
@@ -160,7 +185,7 @@ WHO Collaborating Centre for Drug Statistics Methodology, Oslo, Norway.  Use of 
 
                     IG &copy; 2024+ Folkehelseinstituttet.
                     Package hl7.fhir.no.lmdi#1.0.8 based on FHIR
-                        4.0.1. Generated 2026-03-20
+                        4.0.1. Generated 2026-03-27
                     
                     
                                   Links: Table of Contents |
@@ -211,7 +236,7 @@ There are examples where a medication request may include the option of an oral 
         <td>
 Include all codes defined in           <a href="http://www.whocc.no/atc">
 <code>http://www.whocc.no/atc</code>          </a>
-          <span style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 2025 has been used"> version ⏿2025</span>
+          <span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span>
         </td>
       </tr>
       <tr>
@@ -227,7 +252,7 @@ Include all codes defined in           <a href="http://www.whocc.no/atc">
 .
                     Package hl7.fhir.no.lmdi#1.0.8 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>
-. Generated           <span title="Fri, Mar 20, 2026 09:01+0000">2026-03-20</span>
+. Generated           <span title="Fri, Mar 27, 2026 10:18+0000">2026-03-27</span>
 
                               <br/>
 

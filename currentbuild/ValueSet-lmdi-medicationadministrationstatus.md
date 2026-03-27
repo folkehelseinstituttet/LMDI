@@ -23,7 +23,6 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
  **References** 
 
 * [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
-* [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
 
 ### Logical Definition (CLD)
 
