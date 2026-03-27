@@ -12,5 +12,5 @@ Usage: #definition
 * description = "Id for angivelse av legemiddel fra lokal legemiddelkatalog"
 * jurisdiction = urn:iso:std:iso:3166#NO "Norway"
 * uniqueId[0].type = #uri
-* uniqueId[=].value = "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
+* uniqueId[=].value = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 * uniqueId[=].preferred = true

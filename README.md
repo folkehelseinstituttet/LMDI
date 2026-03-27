@@ -38,6 +38,8 @@ pilotering og innføring hos institusjonene.
 
 | Versjon | Dato | Kort beskrivelse |
 |---------|------|------------------|
+| 1.1.0 | 2026-03-27 | Rettet NamingSystem-URL fra fh.no til fhi.no; rettet skrivefeil lokaltVirkemiddel til lokaltLegemiddel |
+| 1.0.8 | 2026-03-10 | Forbedret FSH-eksempler, nye Bundle-eksempler, Virkestoff tillatt i LegemiddelregisterBundle |
 | 1.0.7 | 2025-09-30 | Oppdateringer av adresser og extensions i Pasient og Organisasjon |
 | 1.0.6 | 2025-09-12 | Helsepersonell, Organisasjon, Pasient og Virkestoff basert på no-basis |
 | 1.0.5 | 2025-07-28 | Støtte for både string og UUID i NPR-episoder; nye kodeslicer for Legemiddel |

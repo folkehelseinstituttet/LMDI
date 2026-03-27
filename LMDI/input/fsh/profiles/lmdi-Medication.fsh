@@ -33,7 +33,7 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[Varenummer].system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
 * code.coding[FestLegemiddelVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 * code.coding[SCT].system = "http://snomed.info/sct"
-* code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltLegemiddel"
+* code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 
 * code.coding[FestLegemiddeldose] ^short = "FEST-id for legemiddeldose"
 * code.coding[FestLmrLopenr] ^short = "Fest-løpenummer som identifiserer legemiddeldose"
@@ -193,7 +193,7 @@ Description: "Eksempel på legemiddel identifisert med SNOMED CT-kode"
 Instance: Legemiddel-Lokalt-Med-Flere-Ingredienser
 InstanceOf: Legemiddel
 Description: "Eksempel på lokalt legemiddel med flere ingredienser"
-* code.coding[LokaltLegemiddel].system = "http://fh.no/fhir/NamingSystem/lokaltLegemiddel"
+* code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 * code.coding[LokaltLegemiddel].code = #lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron
 * code.coding[LokaltLegemiddel].display = "Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"
 * ingredient[0].itemCodeableConcept.text = "Ketamin"
