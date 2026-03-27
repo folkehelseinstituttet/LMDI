@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "status" : "draft",
@@ -304,7 +304,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.code.coding:LokaltLegemiddel.system",
       "path" : "Medication.code.coding.system",
       "min" : 1,
-      "patternUri" : "http://fh.no/fhir/NamingSystem/lokaltLegemiddel"
+      "patternUri" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
     },
     {
       "id" : "Medication.code.coding:LokaltLegemiddel.code",

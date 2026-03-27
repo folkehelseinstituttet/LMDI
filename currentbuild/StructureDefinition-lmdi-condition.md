@@ -1,4 +1,4 @@
-# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Diagnose |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-condition",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Diagnose",
   "title" : "Diagnose",
   "status" : "draft",

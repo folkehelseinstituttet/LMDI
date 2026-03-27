@@ -1,4 +1,4 @@
-# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 

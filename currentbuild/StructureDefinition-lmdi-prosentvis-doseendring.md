@@ -1,4 +1,4 @@
-# Prosentvis doseendring - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Prosentvis doseendring - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.1.0 **  |
 | Draft as of 2026-03-27 | *Computable Name*:ProsentvisDoseendring |
 
 Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.
@@ -55,11 +55,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-prosentvis-doseendring",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
   "status" : "draft",
-  "date" : "2026-03-27T10:20:03+00:00",
+  "date" : "2026-03-27T10:28:06+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

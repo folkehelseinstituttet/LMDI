@@ -1,4 +1,4 @@
-# Virkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Virkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Virkestoff |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-substance",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Virkestoff",
   "title" : "Virkestoff",
   "status" : "draft",

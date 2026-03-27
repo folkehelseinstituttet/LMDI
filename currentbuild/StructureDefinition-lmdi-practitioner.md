@@ -1,4 +1,4 @@
-# Helsepersonell - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Helsepersonell - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Helsepersonell |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-practitioner.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-practitioner",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Helsepersonell",
   "title" : "Helsepersonell",
   "status" : "draft",

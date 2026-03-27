@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "status" : "draft",

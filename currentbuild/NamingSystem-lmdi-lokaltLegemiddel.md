@@ -1,4 +1,4 @@
-# lmdi-lokaltLegemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# lmdi-lokaltLegemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/lmdi-lokaltLegemiddel **  | *Version*:1.1.0 **  |
 | Draft as of 2024-06-10 | *Computable Name*:lmdiLokaltLegemiddel |
 
  
@@ -34,7 +34,7 @@ Id for angivelse av legemiddel fra lokal legemiddelkatalog
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "1.0.8"
+    "valueString" : "1.1.0"
   }],
   "name" : "lmdiLokaltLegemiddel",
   "status" : "draft",
@@ -66,7 +66,7 @@ Id for angivelse av legemiddel fra lokal legemiddelkatalog
   }],
   "uniqueId" : [{
     "type" : "uri",
-    "value" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel",
+    "value" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel",
     "preferred" : true
   }]
 }

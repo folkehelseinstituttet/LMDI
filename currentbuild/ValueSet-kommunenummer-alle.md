@@ -1,4 +1,4 @@
-# Kommunenummer ValueSet - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Kommunenummer ValueSet - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle **  | *Version*:1.1.0 **  |
 | Active as of 2026-03-27 | *Computable Name*:KommunenummerValueSet |
 
  
@@ -54,11 +54,11 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "kommunenummer-alle",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "KommunenummerValueSet",
   "title" : "Kommunenummer ValueSet",
   "status" : "active",
-  "date" : "2026-03-27T10:20:03+00:00",
+  "date" : "2026-03-27T10:28:06+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

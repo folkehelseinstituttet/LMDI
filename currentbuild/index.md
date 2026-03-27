@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -11,8 +11,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-10 | *Computable Name*:Lmdi |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.0 **  |
+| Draft as of 2026-03-27 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.0 | 2026-03-27 | Rettet NamingSystem-URL fra fh.no til fhi.no; rettet skrivefeil lokaltVirkemiddel til lokaltLegemiddel |
 | 1.0.8 | 2026-03-10 | Forbedret FSH-eksempler: fikset valideringsfeil, lagt til manglende felter, nye scenariobaserte Bundle-eksempler (sykehjem, rekvirering, kjemoterapi)Virkestoff tillatt i LegemiddelregisterBundleHarmonisert no-basis-versjon i byggeskriptRettet skrivefeil og fjernet utdaterte kommentarer i profiler |
 | 1.0.7 | 2025-09-30 | Fjernet country-feltet fra adresse i Pasient og Organisasjonaddress.type satt til physical i Pasient (kun fysiske adresser)Endret kommune-extension fra propertyInformation til municipalitycode i PasientFjernet citizenship-extension fra PasientEndret bydel-extension fra lmdi-urban-district til no-basis urbanDistrict i Organisasjon |
 | 1.0.6 | 2025-09-12 | Helsepersonell, Organisasjon, Pasient og Virkestoff er nå basert på no-basis |
@@ -64,11 +65,11 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "draft",
-  "date" : "2026-03-10",
+  "date" : "2026-03-27",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

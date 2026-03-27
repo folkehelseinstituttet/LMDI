@@ -1,4 +1,4 @@
-# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.1.0 **  |
 | Active as of 2025-09-12 | *Computable Name*:LegemiddelClassification |
 
 Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).
@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
   "resourceType" : "StructureDefinition",
   "id" : "legemiddel-classification",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "LegemiddelClassification",
   "title" : "Legemiddel Classification",
   "status" : "active",

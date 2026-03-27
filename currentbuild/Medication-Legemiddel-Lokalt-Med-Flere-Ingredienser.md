@@ -1,4 +1,4 @@
-# Legemiddel-Lokalt-Med-Flere-Ingredienser - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Legemiddel-Lokalt-Med-Flere-Ingredienser - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -25,7 +25,7 @@
   },
   "code" : {
     "coding" : [{
-      "system" : "http://fh.no/fhir/NamingSystem/lokaltLegemiddel",
+      "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel",
       "code" : "lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron",
       "display" : "Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"
     }]

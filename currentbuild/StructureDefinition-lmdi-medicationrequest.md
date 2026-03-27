@@ -1,4 +1,4 @@
-# Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddelrekvirering |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationrequest",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Legemiddelrekvirering",
   "title" : "Legemiddelrekvirering",
   "status" : "draft",
