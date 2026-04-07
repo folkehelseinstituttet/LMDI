@@ -13,7 +13,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 // Extensions for Legemiddelrekvirering
 * extension contains ProsentvisDoseendring named prosentvisDoseendring 0..1
 * extension[prosentvisDoseendring] ^short = "Doseendring i prosent"
-* extension[prosentvisDoseendring] ^definition = "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. Kan ha verdier fra 0. Ved vanlig dose uten endring er doseendring 100 (%). Enhet skal være prosent."
+* extension[prosentvisDoseendring] ^definition = "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent."
 
 * extension contains DelAvBehandlingsregime named delAvBehandlingsregime 0..1
 * extension[delAvBehandlingsregime] ^short = "Del av behandlingsregime"
