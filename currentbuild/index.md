@@ -1437,10 +1437,46 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Organization"
       }],
       "reference" : {
+        "reference" : "Organization/Organisasjon-HF-2"
+      },
+      "name" : "Organisasjon-HF-2",
+      "description" : "Eksempel på Helseforetak (Helse Møre og Romsdal HF)",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
         "reference" : "Organization/Organisasjon-Kommune"
       },
       "name" : "Organisasjon-Kommune",
       "description" : "Eksempel på kommune i primærhelsetjenesten",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Organisasjon-Post"
+      },
+      "name" : "Organisasjon-Post",
+      "description" : "Eksempel på post – laveste nivå i organisasjonshierarkiet",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Organisasjon-Seksjon"
+      },
+      "name" : "Organisasjon-Seksjon",
+      "description" : "Eksempel på seksjonsnivå i organisasjonshierarkiet",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
     },
     {
@@ -1465,6 +1501,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       },
       "name" : "Organisasjon-Sykehus",
       "description" : "Eksempel på sykehusorganisasjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Organisasjon-Sykehus-2"
+      },
+      "name" : "Organisasjon-Sykehus-2",
+      "description" : "Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
     },
     {

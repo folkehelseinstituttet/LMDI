@@ -105,9 +105,13 @@ These are example instances that show what data produced and consumed by systems
 | [Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) | Eksempel på legemiddel identifisert med varenummer |
 | [Oksykodonadministrering i sykehjem med inline ressurskopier](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) | Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline. |
 | [Organisasjon-HF](Organization-Organisasjon-HF.md) | Eksempel på Helseforetak |
+| [Organisasjon-HF-2](Organization-Organisasjon-HF-2.md) | Eksempel på Helseforetak (Helse Møre og Romsdal HF) |
 | [Organisasjon-Kommune](Organization-Organisasjon-Kommune.md) | Eksempel på kommune i primærhelsetjenesten |
+| [Organisasjon-Post](Organization-Organisasjon-Post.md) | Eksempel på post – laveste nivå i organisasjonshierarkiet |
+| [Organisasjon-Seksjon](Organization-Organisasjon-Seksjon.md) | Eksempel på seksjonsnivå i organisasjonshierarkiet |
 | [Organisasjon-Sykehjem](Organization-Organisasjon-Sykehjem.md) | Eksempel på sykehjem i primærhelsetjenesten |
 | [Organisasjon-Sykehus](Organization-Organisasjon-Sykehus.md) | Eksempel på sykehusorganisasjon |
+| [Organisasjon-Sykehus-2](Organization-Organisasjon-Sykehus-2.md) | Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF |
 | [Organisasjon-Sykehusavdeling](Organization-Organisasjon-Sykehusavdeling.md) | Eksempel på spesialistavdeling |
 | [Pasient-Med-DNR](Patient-Pasient-Med-DNR.md) | Eksempel på pasient med D-nummer |
 | [Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) | Eksempel på pasient med fødselsnummer |
