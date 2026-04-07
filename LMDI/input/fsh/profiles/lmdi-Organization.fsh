@@ -139,6 +139,40 @@ Description: "Eksempel på spesialistavdeling"
 * address.type = #physical
 * address.district.extension[municipalitycode].valueCoding = $kommunenummer-alle#3201 "Bærum"
 
+Instance: Organisasjon-HF-2
+InstanceOf: Organisasjon
+Description: "Eksempel på Helseforetak (Helse Møre og Romsdal HF)"
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
+* identifier[RSH].value = "4201115"
+* name = "Helse Møre og Romsdal HF"
+
+Instance: Organisasjon-Sykehus-2
+InstanceOf: Organisasjon
+Description: "Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF"
+* identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
+* identifier[ENH].value = "974747138"
+* name = "Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk"
+* type[organisatoriskBetegnelse].coding = $organisatoriskBetegnelse#01 "Sykehus"
+* partOf = Reference(Organisasjon-HF-2)
+
+Instance: Organisasjon-Seksjon
+InstanceOf: Organisasjon
+Description: "Eksempel på seksjonsnivå i organisasjonshierarkiet"
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
+* identifier[RSH].value = "4223264"
+* name = "Kreft og blodsykdommer sengepost Ålesund"
+* type[organisatoriskBetegnelse].coding = $organisatoriskBetegnelse#06 "Seksjon"
+* partOf = Reference(Organisasjon-Sykehus-2)
+
+Instance: Organisasjon-Post
+InstanceOf: Organisasjon
+Description: "Eksempel på post – laveste nivå i organisasjonshierarkiet"
+* identifier[RSH].system = "urn:oid:2.16.578.1.12.4.1.4.102"
+* identifier[RSH].value = "102683"
+* name = "HMR ÅLE SH Kreft og blodsjukdommar sengepost"
+* type[organisatoriskBetegnelse].coding = $organisatoriskBetegnelse#08 "Post"
+* partOf = Reference(Organisasjon-Seksjon)
+
 // Invariant definisjon
 Invariant: lmdi-org-identifier
 Description: "Organisasjon skal ha minst ENH eller RSH identifier"
