@@ -1,11 +1,11 @@
 Lmdi : Validation Results
 =========================================
 
-err = 48, warn = 182, info = 59
+err = 48, warn = 173, info = 68
 $--
 Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7.no/fhir/ig/lmdi)
  Build Errors : 12 / 75 / 0
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 6 / 20 / 27
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 6 / 17 / 30
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/CodeSystem-kommunenummer-codesystem : 2 / 2 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10 : 0 / 2 / 1
@@ -31,13 +31,13 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/NamingSystem-no-basis-fest-legemiddelpakning : 0 / 1 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/NamingSystem-no-basis-fest-legemiddelvirkestoff : 0 / 1 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-HF : 0 / 3 / 1
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Kommune : 0 / 4 / 1
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Sykehjem : 0 / 4 / 1
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Sykehus : 0 / 5 / 1
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Sykehusavdeling : 0 / 5 / 1
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Kommune : 0 / 3 / 2
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Sykehjem : 0 / 3 / 2
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Sykehus : 0 / 4 / 2
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Organization-Organisasjon-Sykehusavdeling : 0 / 4 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Patient-Pasient-Med-DNR : 0 / 1 / 1
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Patient-Pasient-Med-FNR : 0 / 4 / 2
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Patient-Pasient-Uten-Personidentifikator : 0 / 3 / 1
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Patient-Pasient-Med-FNR : 0 / 3 / 3
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Patient-Pasient-Uten-Personidentifikator : 0 / 2 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Practitioner-Helsepersonell-Med-HPR : 0 / 1 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Practitioner-Helsepersonell-Uten-HPR : 0 / 1 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-legemiddel-classification : 0 / 0 / 2
@@ -157,16 +157,16 @@ WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.identifier.system: No
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[0].resource/*Patient/Scenario-Sykehjem-Oksykodon-Pasient*/.address[0].extension[0].value.ofType(Coding): ValueSet 'urn:oid:2.16.578.1.12.4.1.1.3403' not found
 INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[0].resource/*Patient/Scenario-Sykehjem-Oksykodon-Pasient*/.address[0].extension[0].value.ofType(Coding).system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.3403' could not be found, so the code cannot be validated
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[0].resource/*Patient/Scenario-Sykehjem-Oksykodon-Pasient*/.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[0].resource/*Patient/Scenario-Sykehjem-Oksykodon-Pasient*/.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#0301')
+INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[0].resource/*Patient/Scenario-Sykehjem-Oksykodon-Pasient*/.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[0].resource/*Patient/Scenario-Sykehjem-Oksykodon-Pasient*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[1].resource/*Practitioner/Scenario-Sykehjem-Oksykodon-Helsepersonell*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[2].resource/*Organization/Scenario-Sykehjem-Oksykodon-Kommune*/.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.578.1.12.4.1.4.101'
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[2].resource/*Organization/Scenario-Sykehjem-Oksykodon-Kommune*/.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[2].resource/*Organization/Scenario-Sykehjem-Oksykodon-Kommune*/.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#5001')
+INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[2].resource/*Organization/Scenario-Sykehjem-Oksykodon-Kommune*/.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[2].resource/*Organization/Scenario-Sykehjem-Oksykodon-Kommune*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.578.1.12.4.1.4.101'
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#5001')
+INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[4].resource/*Encounter/Scenario-Sykehjem-Oksykodon-Episode*/.class.display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#SS for language(s) 'no'. The display is 'short stay' which is the default language display
 INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[4].resource/*Encounter/Scenario-Sykehjem-Oksykodon-Episode*/.class: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#SS for language(s) 'no'. The display is 'short stay' which is the default language display
@@ -297,36 +297,36 @@ WARNING: Organization/Organisasjon-HF: Organization: Constraint failed: dom-6: '
 == fsh-generated/resources/Organization-Organisasjon-Kommune.json ==
 WARNING: Organization/Organisasjon-Kommune: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.578.1.12.4.1.4.101'
 WARNING: Organization/Organisasjon-Kommune: Organization.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Organization/Organisasjon-Kommune: Organization.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#5001')
+INFORMATION: Organization/Organisasjon-Kommune: Organization.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Organization/Organisasjon-Kommune: Organization: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Organization-Organisasjon-Sykehjem.json ==
 WARNING: Organization/Organisasjon-Sykehjem: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.578.1.12.4.1.4.101'
 WARNING: Organization/Organisasjon-Sykehjem: Organization.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Organization/Organisasjon-Sykehjem: Organization.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#5001')
+INFORMATION: Organization/Organisasjon-Sykehjem: Organization.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Organization/Organisasjon-Sykehjem: Organization: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Organization-Organisasjon-Sykehus.json ==
 WARNING: Organization/Organisasjon-Sykehus: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.578.1.12.4.1.4.101'
 WARNING: Organization/Organisasjon-Sykehus: Organization.type[0]: ValueSet 'urn:oid:2.16.578.1.12.4.1.1.8624' not found
 WARNING: Organization/Organisasjon-Sykehus: Organization.type[0].coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.8624' could not be found, so the code cannot be validated
 WARNING: Organization/Organisasjon-Sykehus: Organization.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Organization/Organisasjon-Sykehus: Organization.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#3201')
+INFORMATION: Organization/Organisasjon-Sykehus: Organization.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 == fsh-generated/resources/Organization-Organisasjon-Sykehusavdeling.json ==
 WARNING: Organization/Organisasjon-Sykehusavdeling: Organization.identifier[0].system: No definition could be found for URL value 'urn:oid:2.16.578.1.12.4.1.4.102'
 WARNING: Organization/Organisasjon-Sykehusavdeling: Organization.type[0]: ValueSet 'urn:oid:2.16.578.1.12.4.1.1.8624' not found
 WARNING: Organization/Organisasjon-Sykehusavdeling: Organization.type[0].coding[0]: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.8624' could not be found, so the code cannot be validated
 WARNING: Organization/Organisasjon-Sykehusavdeling: Organization.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Organization/Organisasjon-Sykehusavdeling: Organization.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#3201')
+INFORMATION: Organization/Organisasjon-Sykehusavdeling: Organization.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 == fsh-generated/resources/Patient-Pasient-Med-DNR.json ==
 WARNING: Patient/Pasient-Med-DNR: Patient: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Patient-Pasient-Med-FNR.json ==
 WARNING: Patient/Pasient-Med-FNR: Patient.address[0].extension[0].value.ofType(Coding): ValueSet 'urn:oid:2.16.578.1.12.4.1.1.3403' not found
 INFORMATION: Patient/Pasient-Med-FNR: Patient.address[0].extension[0].value.ofType(Coding).system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.3403' could not be found, so the code cannot be validated
 WARNING: Patient/Pasient-Med-FNR: Patient.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Patient/Pasient-Med-FNR: Patient.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#0301')
+INFORMATION: Patient/Pasient-Med-FNR: Patient.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Patient/Pasient-Med-FNR: Patient: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Patient-Pasient-Uten-Personidentifikator.json ==
 WARNING: Patient/Pasient-Uten-Personidentifikator: Patient.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
-WARNING: Patient/Pasient-Uten-Personidentifikator: Patient.address[0].district.extension[0].value.ofType(Coding): Resolved system urn:oid:2.16.578.1.12.4.1.1.3402 (v1.1.0), but the definition doesn't include any codes, so the code has not been validated (for 'urn:oid:2.16.578.1.12.4.1.1.3402#3024')
+INFORMATION: Patient/Pasient-Uten-Personidentifikator: Patient.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Patient/Pasient-Uten-Personidentifikator: Patient: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Practitioner-Helsepersonell-Med-HPR.json ==
 WARNING: Practitioner/Helsepersonell-Med-HPR: Practitioner: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)

@@ -15,9 +15,9 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.1.0 **  |
-| Draft as of 2026-03-27 | *Computable Name*:ProsentvisDoseendring |
+| Draft as of 2026-04-07 | *Computable Name*:ProsentvisDoseendring |
 
-Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.
+Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.
 
 **Context of Use**
 
@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
   "status" : "draft",
-  "date" : "2026-03-27T10:27:35+00:00",
+  "date" : "2026-04-07T13:07:42+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -75,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.",
+  "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -103,7 +103,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
       "id" : "Extension",
       "path" : "Extension",
       "short" : "Prosentvis doseendring",
-      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi."
+      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%."
     },
     {
       "id" : "Extension.extension",

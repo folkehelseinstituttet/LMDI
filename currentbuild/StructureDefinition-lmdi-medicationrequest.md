@@ -130,7 +130,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "path" : "MedicationRequest.extension",
       "sliceName" : "prosentvisDoseendring",
       "short" : "Doseendring i prosent",
-      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. Kan ha verdier fra 0. Ved vanlig dose uten endring er doseendring 100 (%). Enhet skal være prosent.",
+      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent.",
       "min" : 0,
       "max" : "1",
       "type" : [{
