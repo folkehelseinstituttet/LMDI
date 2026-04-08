@@ -945,6 +945,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-MedDiagnoseICD10"
+      },
+      "name" : "Administrering-MedDiagnoseICD10",
+      "description" : "Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-MedDiagnoseSCT"
       },
       "name" : "Administrering-MedDiagnoseSCT",

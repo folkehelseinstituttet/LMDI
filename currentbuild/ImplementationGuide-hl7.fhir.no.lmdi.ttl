@@ -1881,6 +1881,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-MedDiagnoseICD10> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-MedDiagnoseICD10" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-MedDiagnoseICD10" ] ;
+       fhir:description [ fhir:v "Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-MedDiagnoseSCT> ;
          fhir:reference [ fhir:v "MedicationAdministration/Administrering-MedDiagnoseSCT" ]
        ] ;
