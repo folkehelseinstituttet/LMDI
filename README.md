@@ -19,7 +19,7 @@ Samle inn legemiddeldata på individnivå fra polikliniske og innlagte pasienter
 - All koding av profiler skjer med [FHIR Shorthand](https://www.hl7.org/fhir/uv/shorthand/) (FSH)
 - Dokumentasjon genereres med [IG Publisher](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
 
-I første omgang utvikles implementasjonsguiden for [FHIR R4](https://www.hl7.org/fhir/R4/), da dette er anbefalingen fra Helsedirektoratet og HL7 Norge. Tilrettelegging for R4B eller R5 må vurderes på et senere tidspunkt. 
+Implementasjonsguiden er utviklet for [FHIR R4](https://www.hl7.org/fhir/R4/), da dette er anbefalingen fra Helsedirektoratet og HL7 Norge. Tilrettelegging for R4B eller R5 må vurderes på et senere tidspunkt. 
 
 Er HL7 FHIR nytt for deg anbefaler vi å ta en titt på [HL7 Norge sin side med ressurser](https://hl7norway.github.io/best-practice/docs/resources.html), f.eks. introduksjon for henholdsvis [klinikere](https://www.hl7.org/fhir/overview-clinical.html), [arkitekter](https://www.hl7.org/fhir/overview-arch.html) og [utviklere](https://www.hl7.org/fhir/overview-dev.html).
 
@@ -31,7 +31,7 @@ Implementasjonsguiden inneholder detaljert dokumentasjon for alle FHIR-profilene
 
 ## Plan
 
-Implementasjonsguiden i 1.0.x-serien er publisert og oppdateres fortløpende med forbedringer basert på tilbakemeldinger fra
+Implementasjonsguiden i 1.x-serien er publisert og oppdateres fortløpende med forbedringer basert på tilbakemeldinger fra
 pilotering og innføring hos institusjonene.
 
 ## Status og historikk
