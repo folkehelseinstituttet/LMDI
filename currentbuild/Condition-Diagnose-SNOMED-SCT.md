@@ -1,4 +1,4 @@
-# Diagnose-SNOMED-CT - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Diagnose-SNOMED-SCT - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -8,9 +8,9 @@
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **Diagnose-SNOMED-CT**
+* **Diagnose-SNOMED-SCT**
 
-## Example Condition: Diagnose-SNOMED-CT
+## Example Condition: Diagnose-SNOMED-SCT
 
 
 
@@ -19,31 +19,26 @@
 ```json
 {
   "resourceType" : "Condition",
-  "id" : "Diagnose-SNOMED-CT",
+  "id" : "Diagnose-SNOMED-SCT",
   "meta" : {
     "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
   },
   "code" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
-      "code" : "276241001",
-      "display" : "frykt for høyder"
-    },
-    {
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
-      "code" : "F40.2",
-      "display" : "Spesifikke (isolerte) fobier"
-    }],
-    "text" : "Høydeskrekk"
+      "code" : "396275006",
+      "display" : "Artrose"
+    }]
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"
-  },
-  "stage" : [{
-    "summary" : {
-      "text" : "Indikasjonsdiagnose for legemiddelbehandling"
-    }
-  }]
+  }
 }
 
 ```

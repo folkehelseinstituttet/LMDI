@@ -664,6 +664,17 @@
         <valueString value="MedicationAdministration"/>
       </extension>
       <reference>
+        <reference value="MedicationAdministration/Administrering-MedDiagnoseSCT"/>
+      </reference>
+      <name value="Administrering-MedDiagnoseSCT"/>
+      <description value="Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
         <reference value="MedicationAdministration/Administrering-Oral"/>
       </reference>
       <name value="Administrering-Oral"/>
@@ -719,10 +730,10 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
-        <reference value="Condition/Diagnose-SNOMED-CT"/>
+        <reference value="Condition/Diagnose-SNOMED-SCT"/>
       </reference>
-      <name value="Diagnose-SNOMED-CT"/>
-      <description value="Eksempel på diagnose SNOMED CT og ICD-10"/>
+      <name value="Diagnose-SNOMED-SCT"/>
+      <description value="Eksempel på diagnose SNOMED CT"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
     </resource>
     <resource>

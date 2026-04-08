@@ -1,10 +1,12 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Diagnose-SNOMED-CT - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title>Administrering-MedDiagnoseSCT - JSON Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -113,7 +115,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Diagnose-SNOMED-CT</b></li>
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Administrering-MedDiagnoseSCT</b></li>
                 
             </ul>
         </div> <!-- /container -->
@@ -125,10 +127,9 @@
             <div class="row">
                 <div class="inner-wrapper">
 
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
-  
 
 
 
@@ -139,9 +140,9 @@
 <div class="fhi-nav-tabs border-bottom">
     <ul class="nav nav-tabs undermeny mb-0">
         
-        <li class="nav-item active">
-    <a class="nav-link active"
-        href="#">
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="MedicationAdministration-Administrering-MedDiagnoseSCT.html">
         Narrative Content
     </a>
 </li>
@@ -153,7 +154,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Condition-Diagnose-SNOMED-CT.xml.html">
+        href="MedicationAdministration-Administrering-MedDiagnoseSCT.xml.html">
         XML
     </a>
 </li>
@@ -162,9 +163,9 @@
 
         
         
-        <li class="nav-item ">
-    <a class="nav-link "
-        href="Condition-Diagnose-SNOMED-CT.json.html">
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
         JSON
     </a>
 </li>
@@ -175,7 +176,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Condition-Diagnose-SNOMED-CT.ttl.html">
+        href="MedicationAdministration-Administrering-MedDiagnoseSCT.ttl.html">
         TTL
     </a>
 </li>
@@ -187,22 +188,62 @@
 </div>
 
 
-  <a name="root"> </a>
+<a name="root"> </a>
 
 
-  <h2 id="root">Example Condition: Diagnose-SNOMED-CT</h2>
+<h2 id="root">: Administrering-MedDiagnoseSCT - JSON Representation</h2>
 
 
-
+<p><a href="MedicationAdministration-Administrering-MedDiagnoseSCT.json" no-download="true">Raw json</a> | <a href="MedicationAdministration-Administrering-MedDiagnoseSCT.json" download>Download</a></p>
 
   <!-- insert intro if present -->
   
 
 
 
-  <div data-fhir="generated"><p class="res-header-id"/><a name="Diagnose-SNOMED-CT"> </a><a name="hcDiagnose-SNOMED-CT"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-condition.html">Diagnose</a></p></div><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 276241001}, {urn:oid:2.16.578.1.12.4.1.1.7110 F40.2}">Høydeskrekk</span></p><p><b>subject</b>: <a href="Patient-Pasient-Med-FNR.html">Anonymous Patient Male, DoB: 1958-05-12 ( urn:oid:2.16.578.1.12.4.1.4.1#Foedselsnummer#12705825562)</a></p><h3>Stages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Summary</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:">Indikasjonsdiagnose for legemiddelbehandling</span></td></tr></table></div>
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resourceType</a>" : "MedicationAdministration",
+  "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "Administrering-MedDiagnoseSCT",
+  "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-lmdi-medicationadministration.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>" : {
+    <a href="Medication-Legemiddel-Varenummer.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-Varenummer"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
+    <a href="Patient-Pasient-Med-DNR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Pasient-Med-DNR"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>" : {
+    <a href="Encounter-Episode-Sykehus.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Episode-Sykehus"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a>" : "2025-07-13T14:48:47+02:00",
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.reasonReference">reasonReference</a>" : [
+    {
+      <a href="Condition-Diagnose-SNOMED-SCT.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/Diagnose-SNOMED-SCT"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage">dosage</a>" : {
+    "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.route">route</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.7477",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "53",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Oral bruk"
+        }
+      ]
+    },
+    "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 750,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "milligram",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+    }
+  }
+}</code></pre>
 
-  
 
   <!-- insert notes if present -->
   
@@ -232,7 +273,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Apr 8, 2026 08:50+0000">2026-04-08</span>
+                        title="Wed, Apr 8, 2026 09:24+0000">2026-04-08</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -263,7 +304,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Diagnose-SNOMED-CT</b></li>"
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Administrering-MedDiagnoseSCT</b></li>"
   }
 </script>
 <script type="text/javascript">

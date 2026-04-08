@@ -1881,6 +1881,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-MedDiagnoseSCT> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-MedDiagnoseSCT" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-MedDiagnoseSCT" ] ;
+       fhir:description [ fhir:v "Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Oral> ;
          fhir:reference [ fhir:v "MedicationAdministration/Administrering-Oral" ]
        ] ;
@@ -1988,11 +2010,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-SNOMED-CT> ;
-         fhir:reference [ fhir:v "Condition/Diagnose-SNOMED-CT" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-SNOMED-SCT> ;
+         fhir:reference [ fhir:v "Condition/Diagnose-SNOMED-SCT" ]
        ] ;
-       fhir:name [ fhir:v "Diagnose-SNOMED-CT" ] ;
-       fhir:description [ fhir:v "Eksempel på diagnose SNOMED CT og ICD-10" ] ;
+       fhir:name [ fhir:v "Diagnose-SNOMED-SCT" ] ;
+       fhir:description [ fhir:v "Eksempel på diagnose SNOMED CT" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"^^xsd:anyURI ;

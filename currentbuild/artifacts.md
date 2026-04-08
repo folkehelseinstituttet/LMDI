@@ -89,9 +89,10 @@ These are example instances that show what data produced and consumed by systems
 | :--- | :--- |
 | [Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md) | Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error) |
 | [Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) | Eksempel på administrering av legemiddel - infusjon |
+| [Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md) | Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon |
 | [Administrering-Oral](MedicationAdministration-Administrering-Oral.md) | Eksempel på administrering av legemiddel |
 | [Diagnose-ICD10](Condition-Diagnose-ICD10.md) | Eksempel på diagnose ICD-10 |
-| [Diagnose-SNOMED-CT](Condition-Diagnose-SNOMED-CT.md) | Eksempel på diagnose SNOMED CT og ICD-10 |
+| [Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md) | Eksempel på diagnose SNOMED CT |
 | [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |

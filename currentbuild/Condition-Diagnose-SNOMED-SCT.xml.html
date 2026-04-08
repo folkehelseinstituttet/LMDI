@@ -6,7 +6,7 @@
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Diagnose-SNOMED-CT - JSON Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title>Diagnose-SNOMED-SCT - XML Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -115,7 +115,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Diagnose-SNOMED-CT</b></li>
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Diagnose-SNOMED-SCT</b></li>
                 
             </ul>
         </div> <!-- /container -->
@@ -127,7 +127,7 @@
             <div class="row">
                 <div class="inner-wrapper">
 
-<div style="counter-reset: section 8" class="col-12">
+<div style="counter-reset: section 7" class="col-12">
 <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
@@ -142,7 +142,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Condition-Diagnose-SNOMED-CT.html">
+        href="Condition-Diagnose-SNOMED-SCT.html">
         Narrative Content
     </a>
 </li>
@@ -152,9 +152,9 @@
 
         
         
-        <li class="nav-item ">
-    <a class="nav-link "
-        href="Condition-Diagnose-SNOMED-CT.xml.html">
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
         XML
     </a>
 </li>
@@ -163,9 +163,9 @@
 
         
         
-        <li class="nav-item active">
-    <a class="nav-link active"
-        href="#">
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Condition-Diagnose-SNOMED-SCT.json.html">
         JSON
     </a>
 </li>
@@ -176,7 +176,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Condition-Diagnose-SNOMED-CT.ttl.html">
+        href="Condition-Diagnose-SNOMED-SCT.ttl.html">
         TTL
     </a>
 </li>
@@ -191,50 +191,41 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Diagnose-SNOMED-CT - JSON Representation</h2>
+<h2 id="root">: Diagnose-SNOMED-SCT - XML Representation</h2>
 
 
-<p><a href="Condition-Diagnose-SNOMED-CT.json" no-download="true">Raw json</a> | <a href="Condition-Diagnose-SNOMED-CT.json" download>Download</a></p>
+<p><a href="Condition-Diagnose-SNOMED-SCT.xml" no-download="true">Raw xml</a> | <a href="Condition-Diagnose-SNOMED-SCT.xml" download>Download</a></p>
 
   <!-- insert intro if present -->
   
 
 
 
-  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
-  "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resourceType</a>" : "Condition",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Condition.id">id</a>" : "Diagnose-SNOMED-CT",
-  "<a href="http://hl7.org/fhir/R4/resource.html#Condition.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      <a href="StructureDefinition-lmdi-condition.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
-    ]
-  },
-  "<a href="http://hl7.org/fhir/R4/condition.html#Condition.code">code</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "276241001",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "frykt for høyder"
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:2.16.578.1.12.4.1.1.7110",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "F40.2",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Spesifikke (isolerte) fobier"
-      }
-    ],
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Høydeskrekk"
-  },
-  "<a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">subject</a>" : {
-    <a href="Patient-Pasient-Med-FNR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Pasient-Med-FNR"
-  },
-  "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage">stage</a>" : [
-    {
-      "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage.summary">summary</a>" : {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Indikasjonsdiagnose for legemiddelbehandling"
-      }
-    }
-  ]
-}</code></pre>
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R4/condition.html#Condition">Condition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Condition.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Diagnose-SNOMED-SCT&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Condition.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Condition.meta">meta</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/condition.html#Condition.clinicalStatus">clinicalStatus</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/condition-clinical&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/condition.html#Condition.clinicalStatus">clinicalStatus</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/condition.html#Condition.code">code</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;396275006&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Artrose&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/condition.html#Condition.code">code</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">subject</a>&gt;<a href="Patient-Pasient-Med-FNR.html" style="color: Maroon">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/Pasient-Med-FNR&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">subject</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/condition.html#Condition">Condition</a>&gt;</code></pre>
 
 
   <!-- insert notes if present -->
@@ -265,7 +256,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Apr 8, 2026 08:50+0000">2026-04-08</span>
+                        title="Wed, Apr 8, 2026 09:24+0000">2026-04-08</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -296,7 +287,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Diagnose-SNOMED-CT</b></li>"
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Diagnose-SNOMED-SCT</b></li>"
   }
 </script>
 <script type="text/javascript">

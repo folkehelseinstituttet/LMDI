@@ -945,6 +945,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-MedDiagnoseSCT"
+      },
+      "name" : "Administrering-MedDiagnoseSCT",
+      "description" : "Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-Oral"
       },
       "name" : "Administrering-Oral",
@@ -1005,10 +1017,10 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Condition"
       }],
       "reference" : {
-        "reference" : "Condition/Diagnose-SNOMED-CT"
+        "reference" : "Condition/Diagnose-SNOMED-SCT"
       },
-      "name" : "Diagnose-SNOMED-CT",
-      "description" : "Eksempel på diagnose SNOMED CT og ICD-10",
+      "name" : "Diagnose-SNOMED-SCT",
+      "description" : "Eksempel på diagnose SNOMED CT",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
     },
     {

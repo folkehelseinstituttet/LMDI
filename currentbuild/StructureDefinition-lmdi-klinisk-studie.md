@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
   "name" : "KliniskStudie",
   "title" : "Klinisk studie",
   "status" : "draft",
-  "date" : "2026-04-08T08:50:28+00:00",
+  "date" : "2026-04-08T09:24:52+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
