@@ -1629,6 +1629,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationRequest"
       }],
       "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-Infusjon"
+      },
+      "name" : "Rekvirering-Infusjon",
+      "description" : "Eksempel på rekvirering for intravenøs infusjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
         "reference" : "MedicationRequest/Rekvirering-Kjemoterapi"
       },
       "name" : "Rekvirering-Kjemoterapi",

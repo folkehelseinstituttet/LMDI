@@ -211,17 +211,20 @@
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>" : {
-    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://fhir.legemidler.example.com/legemidler/0987654321"
+    <a href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
-    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://fhi.no/fhir/lmdi/pasient/12345678"
+    <a href="Patient-Pasient-Med-FNR.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Pasient-Med-FNR"
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>" : {
-    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3"
+    <a href="Encounter-Episode-Sykehus.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Episode-Sykehus"
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectivePeriod</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2024-06-13T14:26:01+02:00",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2024-06-13T14:48:47+02:00"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.request">request</a>" : {
+    <a href="MedicationRequest-Rekvirering-Infusjon.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "MedicationRequest/Rekvirering-Infusjon"
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage">dosage</a>" : {
     "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.route">route</a>" : {
@@ -229,19 +232,19 @@
         {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "47625008",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Intravenous route (qualifier value)"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "intravenøs administrasjonsvei"
         }
       ]
     },
     "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>" : {
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 4500,
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "mg",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 80,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "milliliter",
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mL"
     },
     "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.rate_x_">rateRatio</a>" : {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 8,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 3.6,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mL"
       },
@@ -283,7 +286,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Apr 8, 2026 09:39+0000">2026-04-08</span>
+                        title="Wed, Apr 8, 2026 10:19+0000">2026-04-08</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

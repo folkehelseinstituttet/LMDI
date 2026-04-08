@@ -119,6 +119,7 @@ These are example instances that show what data produced and consumed by systems
 | [Pasient-Med-DNR](Patient-Pasient-Med-DNR.md) | Eksempel på pasient med D-nummer |
 | [Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) | Eksempel på pasient med fødselsnummer |
 | [Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md) | Eksempel på pasient uten personidentifikator |
+| [Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md) | Eksempel på rekvirering for intravenøs infusjon |
 | [Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |
 | [Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md) | Eksempel på legemiddelrekvirering av Paracet |
 | [Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md) | Eksempel på virkestoff - Oksykodon |

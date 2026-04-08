@@ -3108,6 +3108,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Infusjon> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Infusjon" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-Infusjon" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering for intravenøs infusjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Kjemoterapi> ;
          fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Kjemoterapi" ]
        ] ;

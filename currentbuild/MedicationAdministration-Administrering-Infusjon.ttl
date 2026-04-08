@@ -19,21 +19,25 @@
   fhir:status [ fhir:v "completed"] ; # 
   fhir:medication [
      a fhir:Reference ;
-     fhir:l <https://fhir.legemidler.example.com/legemidler/0987654321> ;
-     fhir:reference [ fhir:v "https://fhir.legemidler.example.com/legemidler/0987654321" ]
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser" ]
   ] ; # 
   fhir:subject [
-     fhir:l <https://fhi.no/fhir/lmdi/pasient/12345678> ;
-     fhir:reference [ fhir:v "https://fhi.no/fhir/lmdi/pasient/12345678" ]
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-FNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Med-FNR" ]
   ] ; # 
   fhir:context [
-     fhir:l <https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3> ;
-     fhir:reference [ fhir:v "https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3" ]
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Sykehus> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Sykehus" ]
   ] ; # 
   fhir:effective [
      a fhir:Period ;
      fhir:start [ fhir:v "2024-06-13T14:26:01+02:00"^^xsd:dateTime ] ;
      fhir:end [ fhir:v "2024-06-13T14:48:47+02:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:request [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Infusjon> ;
+     fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Infusjon" ]
   ] ; # 
   fhir:dosage [
      fhir:route [
@@ -44,22 +48,22 @@
            fhir:l <http://snomed.info/sct>
          ] ;
          fhir:code [ fhir:v "47625008" ] ;
-         fhir:display [ fhir:v "Intravenous route (qualifier value)" ]
+         fhir:display [ fhir:v "intravenøs administrasjonsvei" ]
        ] )
      ] ;
      fhir:dose [
-       fhir:value [ fhir:v "4500"^^xsd:decimal ] ;
-       fhir:unit [ fhir:v "mg" ] ;
+       fhir:value [ fhir:v "80"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "milliliter" ] ;
        fhir:system [
          fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
          fhir:l <http://unitsofmeasure.org>
        ] ;
-       fhir:code [ fhir:v "mg" ]
+       fhir:code [ fhir:v "mL" ]
      ] ;
      fhir:rate [
        a fhir:Ratio ;
        fhir:numerator [
-         fhir:value [ fhir:v "8"^^xsd:decimal ] ;
+         fhir:value [ fhir:v 3.6 ] ;
          fhir:system [
            fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
            fhir:l <http://unitsofmeasure.org>

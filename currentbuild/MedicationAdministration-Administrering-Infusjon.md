@@ -25,35 +25,38 @@
   },
   "status" : "completed",
   "medicationReference" : {
-    "reference" : "https://fhir.legemidler.example.com/legemidler/0987654321"
+    "reference" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
   },
   "subject" : {
-    "reference" : "https://fhi.no/fhir/lmdi/pasient/12345678"
+    "reference" : "Patient/Pasient-Med-FNR"
   },
   "context" : {
-    "reference" : "https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3"
+    "reference" : "Encounter/Episode-Sykehus"
   },
   "effectivePeriod" : {
     "start" : "2024-06-13T14:26:01+02:00",
     "end" : "2024-06-13T14:48:47+02:00"
+  },
+  "request" : {
+    "reference" : "MedicationRequest/Rekvirering-Infusjon"
   },
   "dosage" : {
     "route" : {
       "coding" : [{
         "system" : "http://snomed.info/sct",
         "code" : "47625008",
-        "display" : "Intravenous route (qualifier value)"
+        "display" : "intravenøs administrasjonsvei"
       }]
     },
     "dose" : {
-      "value" : 4500,
-      "unit" : "mg",
+      "value" : 80,
+      "unit" : "milliliter",
       "system" : "http://unitsofmeasure.org",
-      "code" : "mg"
+      "code" : "mL"
     },
     "rateRatio" : {
       "numerator" : {
-        "value" : 8,
+        "value" : 3.6,
         "system" : "http://unitsofmeasure.org",
         "code" : "mL"
       },
