@@ -73,6 +73,21 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
     }]
   }],
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "orim",
+    "uri" : "http://hl7.org/orim",
+    "name" : "Ontological RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Substance",

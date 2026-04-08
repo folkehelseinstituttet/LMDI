@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.1.0 **  |
-| Active as of 2026-04-07 | *Computable Name*:KommunenummerCodeSystem |
+| Active as of 2026-04-08 | *Computable Name*:KommunenummerCodeSystem |
 
  
 Kodesystem for norske kommunenummer (Volven 3402) 
@@ -37,7 +37,7 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "status" : "active",
-  "date" : "2026-04-07T14:41:24+00:00",
+  "date" : "2026-04-08T08:32:59+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

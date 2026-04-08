@@ -87,6 +87,7 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md) | Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error) |
 | [Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) | Eksempel på administrering av legemiddel - infusjon |
 | [Administrering-Oral](MedicationAdministration-Administrering-Oral.md) | Eksempel på administrering av legemiddel |
 | [Diagnose-ICD10](Condition-Diagnose-ICD10.md) | Eksempel på diagnose ICD-10 |

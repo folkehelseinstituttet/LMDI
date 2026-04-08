@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle **  | *Version*:1.1.0 **  |
-| Draft as of 2026-04-07 | *Computable Name*:LegemiddelregisterBundle |
+| Draft as of 2026-04-08 | *Computable Name*:LegemiddelregisterBundle |
 
  
 Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
   "name" : "LegemiddelregisterBundle",
   "title" : "LegemiddelregisterBundle",
   "status" : "draft",
-  "date" : "2026-04-07T14:41:24+00:00",
+  "date" : "2026-04-08T08:32:59+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

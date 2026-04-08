@@ -921,6 +921,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-EnteredInError"
+      },
+      "name" : "Administrering-EnteredInError",
+      "description" : "Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-Infusjon"
       },
       "name" : "Administrering-Infusjon",

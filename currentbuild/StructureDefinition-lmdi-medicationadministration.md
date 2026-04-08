@@ -23,7 +23,7 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 
 **Usages:**
 
-* Examples for this Profile: [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) and [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md)
+* Examples for this Profile: [MedicationAdministration/Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md), [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) and [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationadministration)
 
