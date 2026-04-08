@@ -83,10 +83,11 @@ Instance: Diagnose-ICD10
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose ICD-10"
 * subject = Reference(Pasient-Med-FNR)
-* stage.summary.text = "Indikasjonsdiagnose for legemiddelbehandling"
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
-* code.coding[ICD10] = #R63.3
-* code.coding[ICD10].display = "Vanskeligheter med inntak og tilførsel av mat"
+* code.coding[ICD10] = #I20
+* code.coding[ICD10].display = "Angina pectoris"
 
 Instance: Diagnose-SNOMED-SCT
 InstanceOf: Diagnose

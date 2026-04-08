@@ -170,6 +170,24 @@ Description: "Eksempel på administrering av legemiddel med SNOMED CT-diagnose s
 * dosage.dose.system = "http://unitsofmeasure.org"
 * dosage.dose.code = #mg
 
+Instance: Administrering-MedDiagnoseICD10
+InstanceOf: Legemiddeladministrering
+Description: "Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon"
+* status = #completed
+* identifier.value = "71dd991f-2662-4a7e-86b6-c6c85c9580d4"
+* medicationReference = Reference(Legemiddel-FestLegemiddelpakning)
+* subject = Reference(Pasient-Med-FNR)
+* context = Reference(Episode-Sykehus)
+* effectiveDateTime = "2025-06-13T14:48:47+02:00"
+* reasonReference = Reference(Diagnose-ICD10)
+* dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code = #53
+* dosage.route.coding[OID7477].display = "Oral bruk"
+* dosage.dose.value = 50
+* dosage.dose.unit = "milligram"
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
+
 Instance: Administrering-EnteredInError
 InstanceOf: Legemiddeladministrering
 Description: "Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)"
