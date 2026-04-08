@@ -73,7 +73,12 @@ Description: "Beskrivelse av legemiddel."
 
 * code.coding[LokaltLegemiddel].display 1..1
 * code.coding[LokaltLegemiddel].display ^short = "Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"
-* code.coding[FestLegemiddelMerkevare].display ^short = "Varenavn fra FEST"
+* code.coding[FestLegemiddeldose].display ^short = "NavnFormStyrke fra FEST"
+* code.coding[FestLmrLopenr].display ^short = "NavnFormStyrke fra FEST"
+* code.coding[FestLegemiddelMerkevare].display ^short = "Varenavn eller NavnFormStyrke fra FEST"
+* code.coding[FestLegemiddelpakning].display ^short = "Varenavn eller NavnFormStyrke fra FEST"
+* code.coding[Varenummer].display ^short = "Varenavn eller NavnFormStyrke fra FEST"
+* code.coding[FestLegemiddelVirkestoff].display ^short = "NavnFormStyrke fra FEST"
 
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
