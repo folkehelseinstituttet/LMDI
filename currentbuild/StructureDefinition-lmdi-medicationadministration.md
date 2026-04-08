@@ -23,7 +23,7 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 
 **Usages:**
 
-* Examples for this Profile: [MedicationAdministration/Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md), [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md), [MedicationAdministration/Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md), [MedicationAdministration/Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md) and [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md)
+* Examples for this Profile: [MedicationAdministration/Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md), [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md), [MedicationAdministration/Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md), [MedicationAdministration/Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md)... Show 2 more, [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md) and [MedicationAdministration/Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationadministration)
 
@@ -126,6 +126,16 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"
+      }
+    },
+    {
+      "id" : "MedicationAdministration.category",
+      "path" : "MedicationAdministration.category",
+      "short" : "Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)",
+      "definition" : "Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen.",
+      "binding" : {
+        "strength" : "preferred",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/medication-admin-category"
       }
     },
     {

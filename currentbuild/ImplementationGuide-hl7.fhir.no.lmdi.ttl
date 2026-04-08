@@ -1943,6 +1943,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Selvadministrert> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-Selvadministrert" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-Selvadministrert" ] ;
+       fhir:description [ fhir:v "Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "ValueSet"
          ]
        ] ) ;

@@ -92,6 +92,7 @@ These are example instances that show what data produced and consumed by systems
 | [Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md) | Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon |
 | [Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md) | Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon |
 | [Administrering-Oral](MedicationAdministration-Administrering-Oral.md) | Eksempel på administrering av legemiddel |
+| [Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md) | Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon |
 | [Diagnose-ICD10](Condition-Diagnose-ICD10.md) | Eksempel på diagnose ICD-10 |
 | [Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md) | Eksempel på diagnose SNOMED CT |
 | [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
