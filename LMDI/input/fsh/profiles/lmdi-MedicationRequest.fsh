@@ -111,3 +111,27 @@ Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsre
 * extension[prosentvisDoseendring].valueQuantity.unit = "%"
 * extension[delAvBehandlingsregime].valueString = "FOLFOX6"
 * extension[kliniskStudie].valueBoolean = true
+
+Instance: Rekvirering-Infusjon
+InstanceOf: Legemiddelrekvirering
+Description: "Eksempel på rekvirering for intravenøs infusjon"
+* extension[kliniskStudie].valueBoolean = false
+* status = #active
+* intent = #original-order
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+* category.coding.code = #inpatient
+* reportedBoolean = false
+* medicationReference = Reference(Legemiddel-Lokalt-Med-Flere-Ingredienser)
+* subject = Reference(Pasient-Med-FNR)
+* authoredOn = "2024-05-31T21:00:01+02:00"
+* requester = Reference(Helsepersonell-Med-HPR)
+* dosageInstruction.asNeededBoolean = true
+* dosageInstruction.route.coding.system = "http://snomed.info/sct"
+* dosageInstruction.route.coding.code = #47625008
+* dosageInstruction.route.coding.display = "intravenøs administrasjonsvei"
+* dosageInstruction.doseAndRate.rateRatio.numerator.value = 2.5
+* dosageInstruction.doseAndRate.rateRatio.numerator.system = "http://unitsofmeasure.org"
+* dosageInstruction.doseAndRate.rateRatio.numerator.code = #mL
+* dosageInstruction.doseAndRate.rateRatio.denominator.value = 1
+* dosageInstruction.doseAndRate.rateRatio.denominator.system = "http://unitsofmeasure.org"
+* dosageInstruction.doseAndRate.rateRatio.denominator.code = #min

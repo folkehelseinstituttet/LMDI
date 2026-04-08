@@ -134,19 +134,20 @@ Instance: Administrering-Infusjon
 InstanceOf: Legemiddeladministrering
 Description: "Eksempel på administrering av legemiddel - infusjon"
 * status = #completed
-* medicationReference = Reference(https://fhir.legemidler.example.com/legemidler/0987654321)
-* subject = Reference(https://fhi.no/fhir/lmdi/pasient/12345678)
-* context = Reference(https://fhi.no/fhir/lmdi/institusjonsopphold/428ff23d-7a65-4c67-8059-6a1d07d287e3)
+* medicationReference = Reference(Legemiddel-Lokalt-Med-Flere-Ingredienser)
+* subject = Reference(Pasient-Med-FNR)
+* context = Reference(Episode-Sykehus)
+* request = Reference(Rekvirering-Infusjon)
 * effectivePeriod.start = "2024-06-13T14:26:01+02:00"
 * effectivePeriod.end = "2024-06-13T14:48:47+02:00"
 * dosage.route.coding[SCT].system = "http://snomed.info/sct"
 * dosage.route.coding[SCT].code = #47625008
-* dosage.route.coding[SCT].display = "Intravenous route (qualifier value)"
-* dosage.dose.value = 4500
-* dosage.dose.unit = "mg"
+* dosage.route.coding[SCT].display = "intravenøs administrasjonsvei"
+* dosage.dose.value = 80
+* dosage.dose.unit = "milliliter"
 * dosage.dose.system = "http://unitsofmeasure.org"
-* dosage.dose.code = #mg
-* dosage.rateRatio.numerator.value = 8.0
+* dosage.dose.code = #mL
+* dosage.rateRatio.numerator.value = 3.6
 * dosage.rateRatio.numerator.system = "http://unitsofmeasure.org"
 * dosage.rateRatio.numerator.code = #mL
 * dosage.rateRatio.denominator.value = 1
