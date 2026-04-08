@@ -12,7 +12,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.0 **  |
-| Draft as of 2026-03-27 | *Computable Name*:Lmdi |
+| Active as of 2026-03-27 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -68,7 +68,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "version" : "1.1.0",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
-  "status" : "draft",
+  "status" : "active",
   "date" : "2026-03-27",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{

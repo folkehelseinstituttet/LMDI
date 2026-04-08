@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime **  | *Version*:1.1.0 **  |
-| Draft as of 2026-04-08 | *Computable Name*:DelAvBehandlingsregime |
+| Active as of 2026-04-08 | *Computable Name*:DelAvBehandlingsregime |
 
 Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.
 
@@ -56,8 +56,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
   "version" : "1.1.0",
   "name" : "DelAvBehandlingsregime",
   "title" : "Del av behandlingsregime",
-  "status" : "draft",
-  "date" : "2026-04-08T10:26:49+00:00",
+  "status" : "active",
+  "date" : "2026-04-08T10:36:39+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

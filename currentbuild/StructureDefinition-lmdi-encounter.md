@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.0 **  |
-| Draft as of 2026-04-08 | *Computable Name*:Episode |
+| Active as of 2026-04-08 | *Computable Name*:Episode |
 
  
 Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -47,8 +47,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "version" : "1.1.0",
   "name" : "Episode",
   "title" : "Episode",
-  "status" : "draft",
-  "date" : "2026-04-08T10:26:49+00:00",
+  "status" : "active",
+  "date" : "2026-04-08T10:36:39+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
