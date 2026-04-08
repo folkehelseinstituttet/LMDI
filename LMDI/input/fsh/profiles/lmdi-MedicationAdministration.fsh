@@ -38,6 +38,11 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 * context ^short = "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med."
 * context ^definition = "Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert."
 
+* category MS
+* category from http://hl7.org/fhir/ValueSet/medication-admin-category (preferred)
+* category ^short = "Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)"
+* category ^definition = "Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen."
+
 * reasonCode ^short = "Årsak til utført administrering (Given as Ordered, Emergency, None)"
 
 * request MS
@@ -206,6 +211,23 @@ Description: "Eksempel på administrering av legemiddel med status feilregistrer
 * dosage.route.coding[OID7477].code = #53
 * dosage.route.coding[OID7477].display = "Oral bruk"
 * dosage.dose.value = 50
+* dosage.dose.unit = "milligram"
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
+
+Instance: Administrering-Selvadministrert
+InstanceOf: Legemiddeladministrering
+Description: "Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon"
+* status = #completed
+* category = http://terminology.hl7.org/CodeSystem/medication-admin-category#community "Community"
+* medicationReference = Reference(Legemiddel-Varenummer)
+* subject = Reference(Pasient-Med-FNR)
+* context = Reference(Episode-Sykehus)
+* effectiveDateTime = "2025-08-14T10:00:00+02:00"
+* dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code = #53
+* dosage.route.coding[OID7477].display = "Oral bruk"
+* dosage.dose.value = 10
 * dosage.dose.unit = "milligram"
 * dosage.dose.system = "http://unitsofmeasure.org"
 * dosage.dose.code = #mg
