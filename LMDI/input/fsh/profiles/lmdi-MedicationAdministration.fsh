@@ -153,6 +153,23 @@ Description: "Eksempel på administrering av legemiddel - infusjon"
 * dosage.rateRatio.denominator.system = "http://unitsofmeasure.org"
 * dosage.rateRatio.denominator.code = #min
 
+Instance: Administrering-MedDiagnoseSCT
+InstanceOf: Legemiddeladministrering
+Description: "Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon"
+* status = #completed
+* medicationReference = Reference(Legemiddel-Varenummer)
+* subject = Reference(Pasient-Med-DNR)
+* context = Reference(Episode-Sykehus)
+* effectiveDateTime = "2025-07-13T14:48:47+02:00"
+* reasonReference = Reference(Diagnose-SNOMED-SCT)
+* dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code = #53
+* dosage.route.coding[OID7477].display = "Oral bruk"
+* dosage.dose.value = 750
+* dosage.dose.unit = "milligram"
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
+
 Instance: Administrering-EnteredInError
 InstanceOf: Legemiddeladministrering
 Description: "Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)"

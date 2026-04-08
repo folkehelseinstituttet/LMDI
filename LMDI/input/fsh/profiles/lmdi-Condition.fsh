@@ -88,15 +88,12 @@ Description: "Eksempel på diagnose ICD-10"
 * code.coding[ICD10] = #R63.3
 * code.coding[ICD10].display = "Vanskeligheter med inntak og tilførsel av mat"
 
-Instance: Diagnose-SNOMED-CT
+Instance: Diagnose-SNOMED-SCT
 InstanceOf: Diagnose
-Description: "Eksempel på diagnose SNOMED CT og ICD-10"
+Description: "Eksempel på diagnose SNOMED CT"
 * subject = Reference(Pasient-Med-FNR)
-* stage.summary.text = "Indikasjonsdiagnose for legemiddelbehandling"
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
 * code.coding[SCT].system = "http://snomed.info/sct"
-* code.coding[SCT] = #276241001
-* code.coding[SCT].display = "frykt for høyder"
-* code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
-* code.coding[ICD10] = #F40.2
-* code.coding[ICD10].display = "Spesifikke (isolerte) fobier"
-* code.text = "Høydeskrekk"
+* code.coding[SCT] = #396275006
+* code.coding[SCT].display = "Artrose"
