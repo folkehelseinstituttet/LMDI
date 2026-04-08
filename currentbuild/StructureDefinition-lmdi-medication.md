@@ -182,6 +182,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
+      "id" : "Medication.code.coding:FestLegemiddeldose.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "NavnFormStyrke fra FEST"
+    },
+    {
       "id" : "Medication.code.coding:FestLmrLopenr",
       "path" : "Medication.code.coding",
       "sliceName" : "FestLmrLopenr",
@@ -201,6 +206,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "path" : "Medication.code.coding.code",
       "short" : "7‑sifret nummer",
       "min" : 1
+    },
+    {
+      "id" : "Medication.code.coding:FestLmrLopenr.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "NavnFormStyrke fra FEST"
     },
     {
       "id" : "Medication.code.coding:FestLegemiddelMerkevare",
@@ -226,7 +236,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
     {
       "id" : "Medication.code.coding:FestLegemiddelMerkevare.display",
       "path" : "Medication.code.coding.display",
-      "short" : "Varenavn fra FEST"
+      "short" : "Varenavn eller NavnFormStyrke fra FEST"
     },
     {
       "id" : "Medication.code.coding:FestLegemiddelpakning",
@@ -250,6 +260,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
+      "id" : "Medication.code.coding:FestLegemiddelpakning.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "Varenavn eller NavnFormStyrke fra FEST"
+    },
+    {
       "id" : "Medication.code.coding:Varenummer",
       "path" : "Medication.code.coding",
       "sliceName" : "Varenummer",
@@ -271,6 +286,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
+      "id" : "Medication.code.coding:Varenummer.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "Varenavn eller NavnFormStyrke fra FEST"
+    },
+    {
       "id" : "Medication.code.coding:FestLegemiddelVirkestoff",
       "path" : "Medication.code.coding",
       "sliceName" : "FestLegemiddelVirkestoff",
@@ -290,6 +310,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "path" : "Medication.code.coding.code",
       "short" : "Identifikator fra FEST",
       "min" : 1
+    },
+    {
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "NavnFormStyrke fra FEST"
     },
     {
       "id" : "Medication.code.coding:LokaltLegemiddel",
