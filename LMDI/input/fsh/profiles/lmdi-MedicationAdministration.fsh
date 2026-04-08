@@ -38,7 +38,6 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
 * context ^short = "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med."
 * context ^definition = "Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert."
 
-* category MS
 * category from http://hl7.org/fhir/ValueSet/medication-admin-category (preferred)
 * category ^short = "Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)"
 * category ^definition = "Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen."
