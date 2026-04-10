@@ -98,3 +98,13 @@ Description: "Eksempel på diagnose SNOMED CT"
 * code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[SCT] = #396275006
 * code.coding[SCT].display = "Artrose"
+
+Instance: Diagnose-ICD10-Allergi
+InstanceOf: Diagnose
+Description: "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt"
+* subject = Reference(Pasient-Med-DNR)
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+* code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
+* code.coding[ICD10] = #J30
+* code.coding[ICD10].display = "Vasomotorisk og allergisk rhinitt"

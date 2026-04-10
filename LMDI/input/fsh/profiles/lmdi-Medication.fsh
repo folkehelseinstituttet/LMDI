@@ -244,6 +244,17 @@ Description: "Eksempel på lokalt legemiddel med flere ingredienser"
 * ingredient[5].strength.denominator.system = "http://unitsofmeasure.org"
 * ingredient[5].strength.denominator.code = #1
 
+Instance: Legemiddel-FestLegemiddelVirkestoff-2
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id"
+* extension[classification].valueCodeableConcept = $ATC#R06AE07 "cetirizin"
+* code.coding[FestLegemiddelVirkestoff].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+* code.coding[FestLegemiddelVirkestoff].code = #ID_6E3F89D6-152B-4BD4-924B-4C229E45BD04
+* code.coding[FestLegemiddelVirkestoff].display = "Cetirizin tab 10 mg"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #53
+* form.coding[OID7448].display = "Tablett"
+
 // Invarianter
 Invariant: lmdi-medication-code-or-ingredient
 Description: "Medication skal ha code.coding eller ingredient"

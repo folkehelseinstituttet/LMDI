@@ -135,3 +135,32 @@ Description: "Eksempel på rekvirering for intravenøs infusjon"
 * dosageInstruction.doseAndRate.rateRatio.denominator.value = 1
 * dosageInstruction.doseAndRate.rateRatio.denominator.system = "http://unitsofmeasure.org"
 * dosageInstruction.doseAndRate.rateRatio.denominator.code = #min
+
+Instance: Rekvirering-MedDiagnoseICD10
+InstanceOf: Legemiddelrekvirering
+Description: "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)"
+* extension[kliniskStudie].valueBoolean = false
+* identifier.system = "http://example.org/rekvirering-id"
+* identifier.value = "13fb2660-f88a-473e-b0a9-a72266dc7137"
+* status = #active
+* intent = #plan
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+* category.coding.code = #inpatient
+* reportedBoolean = true
+* medicationReference = Reference(Legemiddel-FestLegemiddelVirkestoff-2)
+* subject = Reference(Pasient-Med-DNR)
+* encounter = Reference(Episode-Sykehus)
+* authoredOn = "2025-04-15"
+* requester = Reference(Helsepersonell-Med-HPR)
+* reasonReference = Reference(Diagnose-ICD10-Allergi)
+* courseOfTherapyType.coding.system = "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
+* courseOfTherapyType.coding.code = #seasonal
+* courseOfTherapyType.coding.display = "Seasonal"
+* dosageInstruction.timing.code.coding.system = "urn:oid:2.16.578.1.12.4.1.1.7478"
+* dosageInstruction.timing.code.coding.code = #5685
+* dosageInstruction.timing.code.coding.display = "1 inntil x1"
+* dosageInstruction.asNeededBoolean = true
+* dosageInstruction.doseAndRate.doseQuantity.value = 10
+* dosageInstruction.doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
+* dosageInstruction.doseAndRate.doseQuantity.code = #mg
+* dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
