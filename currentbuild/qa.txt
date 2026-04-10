@@ -1,9 +1,9 @@
 Lmdi : Validation Results
 =========================================
 
-err = 48, warn = 227, info = 70
+err = 48, warn = 232, info = 70
 IG Publisher Version: 2.2.5
-Generated Fri Apr 10 07:46:35 UTC 2026. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.0 (canonical = http://hl7.no/fhir/ig/lmdi)
+Generated Fri Apr 10 09:16:41 UTC 2026. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.0 (canonical = http://hl7.no/fhir/ig/lmdi)
  Build Errors : 12 / 89 / 0
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 6 / 17 / 30
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 3
@@ -21,7 +21,7 @@ Generated Fri Apr 10 07:46:35 UTC 2026. FHIR version 4.0.1 for hl7.fhir.no.lmdi#
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelpakning : 0 / 3 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLmrLopenr : 1 / 3 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-Legemiddeldose-SmofKabiven : 1 / 2 / 1
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser : 0 / 2 / 1
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser : 0 / 7 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-SCT : 2 / 1 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-UtenCoding : 0 / 4 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-Varenummer : 0 / 3 / 1
@@ -99,7 +99,7 @@ WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddeldose.htm
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddelpakning.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLmrLopenr.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-Legemiddeldose-SmofKabiven.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
-WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-SCT.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-UtenCoding.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-Varenummer.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
@@ -285,9 +285,14 @@ WARNING: Medication/Legemiddel-FestLmrLopenr: Medication: Constraint failed: dom
 ERROR: Medication/Legemiddel-Legemiddeldose-SmofKabiven: Medication.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Kombinasjoner' for http://www.whocc.no/atc#B05BA10. Valid display is 'combinations' (for the language(s) 'no')
 WARNING: Medication/Legemiddel-Legemiddeldose-SmofKabiven: Medication.code.coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated
 WARNING: Medication/Legemiddel-Legemiddeldose-SmofKabiven: Medication: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-== fsh-generated/resources/Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.json ==
-WARNING: Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser: Medication.code.coding[0].system: A definition for CodeSystem 'http://fhi.no/fhir/NamingSystem/lokaltLegemiddel' could not be found, so the code cannot be validated
-WARNING: Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser: Medication: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.json ==
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication.code.coding[0].system: A definition for CodeSystem 'http://fhi.no/fhir/NamingSystem/lokaltLegemiddel' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication.ingredient[0].item.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication.ingredient[1].item.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication.ingredient[1].item.ofType(CodeableConcept).coding[0]: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication.ingredient[2].item.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication.ingredient[3].item.ofType(CodeableConcept).coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/fest-varenummer' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser: Medication: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Medication-Legemiddel-SCT.json ==
 ERROR: Medication/Legemiddel-SCT: Medication.code.coding[0].code: Unknown code '32236009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)
 ERROR: Medication/Legemiddel-SCT: Medication.form.coding[0].display: Wrong Display Name 'tablett' for http://snomed.info/sct#385055001. There are no valid display names found for language(s) 'no'. Default display is 'Tablet'

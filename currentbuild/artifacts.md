@@ -107,7 +107,7 @@ These are example instances that show what data produced and consumed by systems
 | [Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md) | Eksempel på legemiddel identifisert med FEST legemiddelpakning-id |
 | [Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md) | Eksempel på legemiddel identifisert med LMR-løpenummer |
 | [Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md) | Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id |
-| [Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
+| [Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
 | [Legemiddel-SCT](Medication-Legemiddel-SCT.md) | Eksempel på legemiddel identifisert med SNOMED CT-kode |
 | [Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md) | Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept |
 | [Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) | Eksempel på legemiddel identifisert med varenummer |

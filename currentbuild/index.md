@@ -1293,9 +1293,9 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
+        "reference" : "Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser"
       },
-      "name" : "Legemiddel-Lokalt-Med-Flere-Ingredienser",
+      "name" : "Legemiddel-LokaltLegemiddel-FlereIngredienser",
       "description" : "Eksempel på lokalt legemiddel med flere ingredienser",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },

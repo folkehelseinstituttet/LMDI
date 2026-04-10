@@ -37,7 +37,7 @@
   }],
   "reportedBoolean" : false,
   "medicationReference" : {
-    "reference" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
+    "reference" : "Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser"
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"

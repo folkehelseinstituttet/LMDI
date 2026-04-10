@@ -1,10 +1,14 @@
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Legemiddel-Lokalt-Med-Flere-Ingredienser - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title> - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -113,7 +117,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-Lokalt-Med-Flere-Ingredienser</b></li>
+                
                 
             </ul>
         </div> <!-- /container -->
@@ -125,9 +129,9 @@
             <div class="row">
                 <div class="inner-wrapper">
 
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -139,9 +143,9 @@
 <div class="fhi-nav-tabs border-bottom">
     <ul class="nav nav-tabs undermeny mb-0">
         
-        <li class="nav-item active">
-    <a class="nav-link active"
-        href="#">
+        <li class="nav-item ">
+    <a class="nav-link "
+        href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.html">
         Narrative Content
     </a>
 </li>
@@ -153,7 +157,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.xml.html">
+        href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.xml.html">
         XML
     </a>
 </li>
@@ -164,7 +168,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.json.html">
+        href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.json.html">
         JSON
     </a>
 </li>
@@ -175,7 +179,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.ttl.html">
+        href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.ttl.html">
         TTL
     </a>
 </li>
@@ -188,28 +192,13 @@
 
 
   <a name="root"> </a>
-
-
-  <h2 id="root">Example Medication: Legemiddel-Lokalt-Med-Flere-Ingredienser</h2>
-
-
-
-
-  <!-- insert intro if present -->
-  
-
-
-
-  <div data-fhir="generated"><p class="res-header-id"/><a name="Legemiddel-Lokalt-Med-Flere-Ingredienser"> </a><a name="hcLegemiddel-Lokalt-Med-Flere-Ingredienser"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></p></div><p><b>code</b>: <span title="Codes:{http://fhi.no/fhir/NamingSystem/lokaltLegemiddel lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron}">Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:">Ketamin</span></p><p><b>strength</b>: 10 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:">Deksametason</span></p><p><b>strength</b>: 4 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:">Haloperidol</span></p><p><b>strength</b>: 5 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:">Klonidin</span></p><p><b>strength</b>: 150 ug<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeug = 'ug')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:">Midazolam</span></p><p><b>strength</b>: 5 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: <span title="Codes:">Ondansetron</span></p><p><b>strength</b>: 2 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/1 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote></div>
+  <h2 id="root">: Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser - Change History</h2>
+  <p>History of changes for Legemiddel-LokaltLegemiddel-FlereIngredienser .</p>
 
   
-
-  <!-- insert notes if present -->
-  
-
-
 
 </div>
+
 </div> <!-- /inner-wrapper -->
 </div> <!-- /row -->
 </div> <!-- /container -->
@@ -218,6 +207,8 @@
 <script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/tabs.js"> </script>
 
 <script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
@@ -232,7 +223,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Apr 10, 2026 07:44+0000">2026-04-10</span>
+                        title="Fri, Apr 10, 2026 09:14+0000">2026-04-10</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -263,7 +254,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-Lokalt-Med-Flere-Ingredienser</b></li>"
+    "breadcrumb": ""
   }
 </script>
 <script type="text/javascript">
