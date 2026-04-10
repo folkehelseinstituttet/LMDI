@@ -195,54 +195,48 @@ Description: "Eksempel på legemiddel identifisert med SNOMED CT-kode"
 * form.coding[SCT].code = #385055001
 * form.coding[SCT].display = "tablett"
 
-Instance: Legemiddel-Lokalt-Med-Flere-Ingredienser
+Instance: Legemiddel-LokaltLegemiddel-FlereIngredienser
 InstanceOf: Legemiddel
 Description: "Eksempel på lokalt legemiddel med flere ingredienser"
 * code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-* code.coding[LokaltLegemiddel].code = #lokal-ketamin-deksametason-haloperidol-klonidin-midazolam-ondansetron
-* code.coding[LokaltLegemiddel].display = "Lokalt legemiddel med ketamin, deksametason, haloperidol, klonidin, midazolam og ondansetron"
-* ingredient[0].itemCodeableConcept.text = "Ketamin"
-* ingredient[0].strength.numerator.value = 10
+* code.coding[LokaltLegemiddel].code = #lokal-ketamin-haloperidol-klonidin-midazolam
+* code.coding[LokaltLegemiddel].display = "Lokalt legemiddel med ketamin, haloperidol, klonidin og midazolam"
+* ingredient[0].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+* ingredient[0].itemCodeableConcept.coding.code = #ID_28C1C9F5-0D9C-4F5F-9823-A0BC8643CFE9
+* ingredient[0].itemCodeableConcept.coding.display = "Ketamin Abcur inj, oppl 10 mg/ml"
+* ingredient[0].strength.numerator.value = 2
 * ingredient[0].strength.numerator.system = "http://unitsofmeasure.org"
 * ingredient[0].strength.numerator.code = #mg
 * ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.system = "http://unitsofmeasure.org"
-* ingredient[0].strength.denominator.code = #1
-* ingredient[1].itemCodeableConcept.text = "Deksametason"
-* ingredient[1].strength.numerator.value = 4
+* ingredient[0].strength.denominator.code = #mL
+* ingredient[1].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+* ingredient[1].itemCodeableConcept.coding.code = #ID_5B77F59F-8C66-4C5F-80F7-1EB54FB5E66C
+* ingredient[1].itemCodeableConcept.coding.display = "Haldol inj, oppl 5 mg/ml"
+* ingredient[1].strength.numerator.value = 0.5
 * ingredient[1].strength.numerator.system = "http://unitsofmeasure.org"
 * ingredient[1].strength.numerator.code = #mg
 * ingredient[1].strength.denominator.value = 1
 * ingredient[1].strength.denominator.system = "http://unitsofmeasure.org"
-* ingredient[1].strength.denominator.code = #1
-* ingredient[2].itemCodeableConcept.text = "Haloperidol"
-* ingredient[2].strength.numerator.value = 5
+* ingredient[1].strength.denominator.code = #mL
+* ingredient[2].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+* ingredient[2].itemCodeableConcept.coding.code = #ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F
+* ingredient[2].itemCodeableConcept.coding.display = "Catapresan øresund inj, oppl 150 mikrog/ml"
+* ingredient[2].strength.numerator.value = 1.5
 * ingredient[2].strength.numerator.system = "http://unitsofmeasure.org"
-* ingredient[2].strength.numerator.code = #mg
+* ingredient[2].strength.numerator.code = #ug
 * ingredient[2].strength.denominator.value = 1
 * ingredient[2].strength.denominator.system = "http://unitsofmeasure.org"
-* ingredient[2].strength.denominator.code = #1
-* ingredient[3].itemCodeableConcept.text = "Klonidin"
-* ingredient[3].strength.numerator.value = 150
+* ingredient[2].strength.denominator.code = #mL
+* ingredient[3].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+* ingredient[3].itemCodeableConcept.coding.code = #156660
+* ingredient[3].itemCodeableConcept.coding.display = "Midazolam Accordpharma inj/inf, oppl 1 mg/ml"
+* ingredient[3].strength.numerator.value = 0.2
 * ingredient[3].strength.numerator.system = "http://unitsofmeasure.org"
-* ingredient[3].strength.numerator.code = #ug
+* ingredient[3].strength.numerator.code = #mg
 * ingredient[3].strength.denominator.value = 1
 * ingredient[3].strength.denominator.system = "http://unitsofmeasure.org"
-* ingredient[3].strength.denominator.code = #1
-* ingredient[4].itemCodeableConcept.text = "Midazolam"
-* ingredient[4].strength.numerator.value = 5
-* ingredient[4].strength.numerator.system = "http://unitsofmeasure.org"
-* ingredient[4].strength.numerator.code = #mg
-* ingredient[4].strength.denominator.value = 1
-* ingredient[4].strength.denominator.system = "http://unitsofmeasure.org"
-* ingredient[4].strength.denominator.code = #1
-* ingredient[5].itemCodeableConcept.text = "Ondansetron"
-* ingredient[5].strength.numerator.value = 2
-* ingredient[5].strength.numerator.system = "http://unitsofmeasure.org"
-* ingredient[5].strength.numerator.code = #mg
-* ingredient[5].strength.denominator.value = 1
-* ingredient[5].strength.denominator.system = "http://unitsofmeasure.org"
-* ingredient[5].strength.denominator.code = #1
+* ingredient[3].strength.denominator.code = #mL
 
 Instance: Legemiddel-FestLegemiddelVirkestoff-2
 InstanceOf: Legemiddel

@@ -121,7 +121,7 @@ Description: "Eksempel på rekvirering for intravenøs infusjon"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
 * category.coding.code = #inpatient
 * reportedBoolean = false
-* medicationReference = Reference(Legemiddel-Lokalt-Med-Flere-Ingredienser)
+* medicationReference = Reference(Legemiddel-LokaltLegemiddel-FlereIngredienser)
 * subject = Reference(Pasient-Med-FNR)
 * authoredOn = "2024-05-31T21:00:01+02:00"
 * requester = Reference(Helsepersonell-Med-HPR)

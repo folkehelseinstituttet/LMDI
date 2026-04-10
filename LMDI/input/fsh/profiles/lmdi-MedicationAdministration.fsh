@@ -138,7 +138,7 @@ Instance: Administrering-Infusjon
 InstanceOf: Legemiddeladministrering
 Description: "Eksempel på administrering av legemiddel - infusjon"
 * status = #completed
-* medicationReference = Reference(Legemiddel-Lokalt-Med-Flere-Ingredienser)
+* medicationReference = Reference(Legemiddel-LokaltLegemiddel-FlereIngredienser)
 * subject = Reference(Pasient-Med-FNR)
 * context = Reference(Episode-Sykehus)
 * request = Reference(Rekvirering-Infusjon)
