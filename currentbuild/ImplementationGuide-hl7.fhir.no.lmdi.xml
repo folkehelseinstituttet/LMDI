@@ -752,6 +752,17 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
+        <reference value="Condition/Diagnose-ICD10-Allergi"/>
+      </reference>
+      <name value="Diagnose-ICD10-Allergi"/>
+      <description value="Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
         <reference value="Condition/Diagnose-SNOMED-SCT"/>
       </reference>
       <name value="Diagnose-SNOMED-SCT"/>
@@ -932,6 +943,17 @@
       </reference>
       <name value="Legemiddel-FestLegemiddelVirkestoff"/>
       <description value="Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/Legemiddel-FestLegemiddelVirkestoff-2"/>
+      </reference>
+      <name value="Legemiddel-FestLegemiddelVirkestoff-2"/>
+      <description value="Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
     </resource>
     <resource>
@@ -1317,6 +1339,17 @@
       </reference>
       <name value="Rekvirering-Kjemoterapi"/>
       <description value="Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/Rekvirering-MedDiagnoseICD10"/>
+      </reference>
+      <name value="Rekvirering-MedDiagnoseICD10"/>
+      <description value="Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
     </resource>
     <resource>

@@ -1,20 +1,22 @@
 Lmdi : Validation Results
 =========================================
 
-err = 46, warn = 204, info = 69
+err = 47, warn = 219, info = 70
 $--
 Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7.no/fhir/ig/lmdi)
- Build Errors : 12 / 84 / 0
+ Build Errors : 12 / 87 / 0
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 6 / 17 / 30
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/CodeSystem-kommunenummer-codesystem : 2 / 2 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10 : 0 / 2 / 1
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10-Allergi : 0 / 2 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Condition-Diagnose-SNOMED-SCT : 1 / 1 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Encounter-Episode-Sykehjem : 0 / 1 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Encounter-Episode-Sykehus : 0 / 1 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/ImplementationGuide-hl7.fhir.no.lmdi : 4 / 3 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelMerkevare : 0 / 3 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelVirkestoff : 1 / 3 / 1
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelVirkestoff-2 : 1 / 3 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddeldose : 0 / 2 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelpakning : 0 / 3 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLmrLopenr : 1 / 3 / 1
@@ -29,6 +31,7 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/MedicationAdministration-Administrering-Selvadministrert : 0 / 2 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Infusjon : 1 / 1 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Kjemoterapi : 0 / 1 / 1
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-MedDiagnoseICD10 : 0 / 2 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Paracetamol : 0 / 1 / 1
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/NamingSystem-lmdi-lokaltLegemiddel : 0 / 1 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/NamingSystem-no-basis-fest-legemiddeldose : 0 / 1 / 2
@@ -58,9 +61,9 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medication : 0 / 0 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationadministration : 0 / 0 / 4
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-medicationrequest : 0 / 0 / 2
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-organization : 0 / 4 / 3
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-organization : 0 / 6 / 3
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-patient : 0 / 3 / 2
- /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-practitioner : 0 / 3 / 2
+ /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-practitioner : 0 / 6 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring : 0 / 0 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-lmdi-substance : 0 / 0 / 2
  /__w/LMDI/LMDI/LMDI/fsh-generated/resources/StructureDefinition-npr-episode-identifier : 0 / 0 / 2
@@ -77,16 +80,18 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
 WARNING: Organization.type: The reference urn:oid:2.16.578.1.12.4.1.1.8628 could not be resolved
 WARNING: Organization.type: The reference urn:oid:2.16.578.1.12.4.1.1.8624 could not be resolved
 WARNING: Organization.address.extension: The reference urn:oid:2.16.578.1.12.4.1.1.3403 could not be resolved
-WARNING: /__w/LMDI/LMDI/LMDI/output/Bundle-Bundle-Scenario-Sykehjem-Oksykodon.change.history.html#/html/body/script at Line 255, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 65 other files)
-WARNING: /__w/LMDI/LMDI/LMDI/output/Bundle-Bundle-Scenario-Sykehjem-Oksykodon.change.history.html#/html/body/script at Line 260, column 2: The <script> containing the javascript 'const pageData = JSO'... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 409 other files)
+WARNING: /__w/LMDI/LMDI/LMDI/output/Bundle-Bundle-Scenario-Sykehjem-Oksykodon.change.history.html#/html/body/script at Line 255, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 68 other files)
+WARNING: /__w/LMDI/LMDI/LMDI/output/Bundle-Bundle-Scenario-Sykehjem-Oksykodon.change.history.html#/html/body/script at Line 260, column 2: The <script> containing the javascript 'const pageData = JSO'... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 424 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Bundle-Bundle-Scenario-Sykehjem-Oksykodon.html#/html/body/script at Line 272, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/CodeSystem-LokalLegemiddelkatalogCodeSystem-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/CodeSystem-kommunenummer-codesystem-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
+WARNING: /__w/LMDI/LMDI/LMDI/output/Condition-Diagnose-ICD10-Allergi.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Condition-Diagnose-ICD10.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Condition-Diagnose-SNOMED-SCT.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Encounter-Episode-Sykehjem.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Encounter-Episode-Sykehus.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddelMerkevare.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddelVirkestoff-2.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddelVirkestoff.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddeldose.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/Medication-Legemiddel-FestLegemiddelpakning.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
@@ -102,6 +107,7 @@ WARNING: /__w/LMDI/LMDI/LMDI/output/MedicationAdministration-Administrering-Oral
 WARNING: /__w/LMDI/LMDI/LMDI/output/MedicationAdministration-Administrering-Selvadministrert.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/MedicationRequest-Rekvirering-Infusjon.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/MedicationRequest-Rekvirering-Kjemoterapi.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
+WARNING: /__w/LMDI/LMDI/LMDI/output/MedicationRequest-Rekvirering-MedDiagnoseICD10.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/MedicationRequest-Rekvirering-Paracetamol.html#/html/body/script at Line 264, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 3 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/NamingSystem-lmdi-lokaltLegemiddel-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/NamingSystem-no-basis-fest-legemiddeldose-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
@@ -148,7 +154,7 @@ WARNING: /__w/LMDI/LMDI/LMDI/output/ValueSet-lmdi-address-type-testing.html#/htm
 WARNING: /__w/LMDI/LMDI/LMDI/output/ValueSet-lmdi-address-use-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
 WARNING: /__w/LMDI/LMDI/LMDI/output/ValueSet-lmdi-medicationadministrationstatus-testing.html#/html/body/script at Line 286, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
 ERROR: /__w/LMDI/LMDI/LMDI/output/artifacts.html: The html source does not contain the publish box
-WARNING: /__w/LMDI/LMDI/LMDI/output/artifacts.html#/html/body/script at Line 866, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /__w/LMDI/LMDI/LMDI/output/artifacts.html#/html/body/script at Line 893, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /__w/LMDI/LMDI/LMDI/output/eksempelkode_cs.html: The html source does not contain the publish box
 WARNING: /__w/LMDI/LMDI/LMDI/output/eksempelkode_cs.html#/html/body/script at Line 483, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /__w/LMDI/LMDI/LMDI/output/eksempelkode_ps1.html: The html source does not contain the publish box
@@ -220,8 +226,11 @@ WARNING: CodeSystem/kommunenummer-codesystem: CodeSystem: Published code systems
 WARNING: CodeSystem/kommunenummer-codesystem: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
 ERROR: /__w/LMDI/LMDI/LMDI/fsh-generated/resources/CodeSystem-kommunenummer-codesystem: URL Mismatch http://hl7.no/fhir/ig/lmdi/CodeSystem/kommunenummer-codesystem vs urn:oid:2.16.578.1.12.4.1.1.3402
 == fsh-generated/resources/Condition-Diagnose-ICD10.json ==
-WARNING: Condition/Diagnose-ICD10: Condition.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated
+WARNING: Condition/Diagnose-ICD10: Condition.code.coding[0]: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated
 WARNING: Condition/Diagnose-ICD10: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/Condition-Diagnose-ICD10-Allergi.json ==
+WARNING: Condition/Diagnose-ICD10-Allergi: Condition.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated
+WARNING: Condition/Diagnose-ICD10-Allergi: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Condition-Diagnose-SNOMED-SCT.json ==
 ERROR: Condition/Diagnose-SNOMED-SCT: Condition.code.coding[0].display: Wrong Display Name 'Artrose' for http://snomed.info/sct#396275006. There are no valid display names found for language(s) 'no'. Default display is 'Osteoarthritis'
 WARNING: Condition/Diagnose-SNOMED-SCT: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
@@ -251,6 +260,11 @@ ERROR: Medication/Legemiddel-FestLegemiddelVirkestoff: Medication.extension[0].v
 WARNING: Medication/Legemiddel-FestLegemiddelVirkestoff: Medication.code.coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated
 WARNING: Medication/Legemiddel-FestLegemiddelVirkestoff: Medication.form.coding[0]: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7448' could not be found, so the code cannot be validated
 WARNING: Medication/Legemiddel-FestLegemiddelVirkestoff: Medication: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/Medication-Legemiddel-FestLegemiddelVirkestoff-2.json ==
+ERROR: Medication/Legemiddel-FestLegemiddelVirkestoff-2: Medication.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'cetirizin' for http://www.whocc.no/atc#R06AE07. Valid display is 'cetirizine' (for the language(s) 'no')
+WARNING: Medication/Legemiddel-FestLegemiddelVirkestoff-2: Medication.code.coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-FestLegemiddelVirkestoff-2: Medication.form.coding[0]: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7448' could not be found, so the code cannot be validated
+WARNING: Medication/Legemiddel-FestLegemiddelVirkestoff-2: Medication: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Medication-Legemiddel-FestLegemiddeldose.json ==
 WARNING: Medication/Legemiddel-FestLegemiddeldose: Medication.code.coding[0].system: A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated
 WARNING: Medication/Legemiddel-FestLegemiddeldose: Medication: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
@@ -303,6 +317,10 @@ ERROR: MedicationRequest/Rekvirering-Infusjon: MedicationRequest.dosageInstructi
 WARNING: MedicationRequest/Rekvirering-Infusjon: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/MedicationRequest-Rekvirering-Kjemoterapi.json ==
 WARNING: MedicationRequest/Rekvirering-Kjemoterapi: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+== fsh-generated/resources/MedicationRequest-Rekvirering-MedDiagnoseICD10.json ==
+INFORMATION: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.courseOfTherapyType.coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy#seasonal for language(s) 'no'. The display is 'Seasonal' which is the default language display
+WARNING: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.dosageInstruction[0].timing.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7478' could not be found, so the code cannot be validated
+WARNING: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/MedicationRequest-Rekvirering-Paracetamol.json ==
 WARNING: MedicationRequest/Rekvirering-Paracetamol: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/NamingSystem-lmdi-lokaltLegemiddel.json ==
@@ -408,6 +426,8 @@ INFORMATION: StructureDefinition/lmdi-organization: StructureDefinition.jurisdic
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[30].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.8628'
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[42].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.8624'
 INFORMATION: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[72].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[30].binding: The valueSet reference urn:oid:2.16.578.1.12.4.1.1.8628 on element Organization.type could not be resolved
+WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot.element[42].binding: The valueSet reference urn:oid:2.16.578.1.12.4.1.1.8624 on element Organization.type could not be resolved
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot: The slice 'ENH' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/lmdi-organization: StructureDefinition.snapshot: The slice 'RSH' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 == fsh-generated/resources/StructureDefinition-lmdi-patient.json ==
@@ -420,6 +440,9 @@ INFORMATION: StructureDefinition/lmdi-practitioner: StructureDefinition.jurisdic
 WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[53].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.9060'
 WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[61].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7704'
 WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[69].binding.valueSet: A definition could not be found for Canonical URL 'urn:oid:2.16.578.1.12.4.1.1.7426'
+WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[53].binding: The valueSet reference urn:oid:2.16.578.1.12.4.1.1.9060 on element Practitioner.qualification.code.coding could not be resolved
+WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[61].binding: The valueSet reference urn:oid:2.16.578.1.12.4.1.1.7704 on element Practitioner.qualification.code.coding could not be resolved
+WARNING: StructureDefinition/lmdi-practitioner: StructureDefinition.snapshot.element[69].binding: The valueSet reference urn:oid:2.16.578.1.12.4.1.1.7426 on element Practitioner.qualification.code.coding could not be resolved
 == fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring.json ==
 INFORMATION: StructureDefinition/lmdi-prosentvis-doseendring: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#NO for language(s) 'no'. The display is 'Norway' which is the default language display
 == fsh-generated/resources/StructureDefinition-lmdi-substance.json ==

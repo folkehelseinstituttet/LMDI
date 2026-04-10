@@ -2054,6 +2054,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-ICD10-Allergi> ;
+         fhir:reference [ fhir:v "Condition/Diagnose-ICD10-Allergi" ]
+       ] ;
+       fhir:name [ fhir:v "Diagnose-ICD10-Allergi" ] ;
+       fhir:description [ fhir:v "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-SNOMED-SCT> ;
          fhir:reference [ fhir:v "Condition/Diagnose-SNOMED-SCT" ]
        ] ;
@@ -2403,6 +2425,28 @@
        ] ;
        fhir:name [ fhir:v "Legemiddel-FestLegemiddelVirkestoff" ] ;
        fhir:description [ fhir:v "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelVirkestoff-2> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelVirkestoff-2" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLegemiddelVirkestoff-2" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
@@ -3157,6 +3201,28 @@
        ] ;
        fhir:name [ fhir:v "Rekvirering-Kjemoterapi" ] ;
        fhir:description [ fhir:v "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-MedDiagnoseICD10> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-MedDiagnoseICD10" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-MedDiagnoseICD10" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
