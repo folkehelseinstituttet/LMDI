@@ -255,6 +255,25 @@ Description: "Eksempel på legemiddel (cetirizin) identifisert med FEST legemidd
 * form.coding[OID7448].code = #53
 * form.coding[OID7448].display = "Tablett"
 
+Instance: Legemiddel-Legemiddeldose-SmofKabiven
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id"
+* extension[classification].valueCodeableConcept = $ATC#B05BA10 "Kombinasjoner"
+* code.coding[FestLegemiddeldose].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* code.coding[FestLegemiddeldose].code = #ID_58EA43B8-817A-4CCC-8C88-A780399018E3
+* code.coding[FestLegemiddeldose].display = "SmofKabiven inf, emul"
+
+Instance: Legemiddel-UtenCoding
+InstanceOf: Legemiddel
+Description: "Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept"
+* ingredient[0].itemReference = Reference(Legemiddel-Legemiddeldose-SmofKabiven)
+* ingredient[1].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* ingredient[1].itemCodeableConcept.coding.code = #ID_3BDBA6F5-AE18-4A03-949A-A10BE4C085D0
+* ingredient[1].itemCodeableConcept.coding.display = "Soluvit pulv til inf væske oppl"
+* ingredient[2].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* ingredient[2].itemCodeableConcept.coding.code = #ID_4440528A-4654-4C34-A36B-B85251A5410F
+* ingredient[2].itemCodeableConcept.coding.display = "Vitalipid Infant kons til inf emul"
+
 // Invarianter
 Invariant: lmdi-medication-code-or-ingredient
 Description: "Medication skal ha code.coding eller ingredient"
