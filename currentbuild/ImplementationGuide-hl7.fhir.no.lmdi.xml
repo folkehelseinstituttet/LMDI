@@ -972,6 +972,17 @@
         <valueString value="Medication"/>
       </extension>
       <reference>
+        <reference value="Medication/Legemiddel-Legemiddeldose-SmofKabiven"/>
+      </reference>
+      <name value="Legemiddel-Legemiddeldose-SmofKabiven"/>
+      <description value="Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
         <reference value="Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"/>
       </reference>
       <name value="Legemiddel-Lokalt-Med-Flere-Ingredienser"/>
@@ -987,6 +998,17 @@
       </reference>
       <name value="Legemiddel-SCT"/>
       <description value="Eksempel på legemiddel identifisert med SNOMED CT-kode"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/Legemiddel-UtenCoding"/>
+      </reference>
+      <name value="Legemiddel-UtenCoding"/>
+      <description value="Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
     </resource>
     <resource>

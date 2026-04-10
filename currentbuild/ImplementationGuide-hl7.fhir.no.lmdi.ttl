@@ -2486,6 +2486,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Legemiddeldose-SmofKabiven> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-Legemiddeldose-SmofKabiven" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-Legemiddeldose-SmofKabiven" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser> ;
          fhir:reference [ fhir:v "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser" ]
        ] ;
@@ -2513,6 +2535,28 @@
        ] ;
        fhir:name [ fhir:v "Legemiddel-SCT" ] ;
        fhir:description [ fhir:v "Eksempel på legemiddel identifisert med SNOMED CT-kode" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-UtenCoding> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-UtenCoding" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-UtenCoding" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
