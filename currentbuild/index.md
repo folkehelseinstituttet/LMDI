@@ -1689,6 +1689,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationRequest"
       }],
       "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-EnteredInError"
+      },
+      "name" : "Rekvirering-EnteredInError",
+      "description" : "Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
         "reference" : "MedicationRequest/Rekvirering-Infusjon"
       },
       "name" : "Rekvirering-Infusjon",

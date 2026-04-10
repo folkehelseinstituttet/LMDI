@@ -3218,6 +3218,28 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-EnteredInError> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-EnteredInError" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-EnteredInError" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Infusjon> ;
          fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Infusjon" ]
        ] ;

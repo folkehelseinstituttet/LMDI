@@ -124,6 +124,7 @@ These are example instances that show what data produced and consumed by systems
 | [Pasient-Med-DNR](Patient-Pasient-Med-DNR.md) | Eksempel på pasient med D-nummer |
 | [Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) | Eksempel på pasient med fødselsnummer |
 | [Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md) | Eksempel på pasient uten personidentifikator |
+| [Rekvirering-EnteredInError](MedicationRequest-Rekvirering-EnteredInError.md) | Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling |
 | [Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md) | Eksempel på rekvirering for intravenøs infusjon |
 | [Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |
 | [Rekvirering-MedDiagnoseICD10](MedicationRequest-Rekvirering-MedDiagnoseICD10.md) | Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling) |

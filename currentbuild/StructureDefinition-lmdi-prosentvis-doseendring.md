@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
   "status" : "active",
-  "date" : "2026-04-10T09:14:17+00:00",
+  "date" : "2026-04-10T09:31:22+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
