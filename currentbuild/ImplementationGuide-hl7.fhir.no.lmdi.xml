@@ -642,6 +642,17 @@
         <valueString value="MedicationAdministration"/>
       </extension>
       <reference>
+        <reference value="MedicationAdministration/Administrering-Cellegift"/>
+      </reference>
+      <name value="Administrering-Cellegift"/>
+      <description value="Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
         <reference value="MedicationAdministration/Administrering-EnteredInError"/>
       </reference>
       <name value="Administrering-EnteredInError"/>
@@ -800,6 +811,17 @@
       </reference>
       <name value="Episode-Sykehus"/>
       <description value="Eksempel på episode i spesialisthelsetjenesten"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/Episode-Sykehus-2"/>
+      </reference>
+      <name value="Episode-Sykehus-2"/>
+      <description value="Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
     </resource>
     <resource>
@@ -1112,6 +1134,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/Lokalt-legemiddel-cellegift"/>
+      </reference>
+      <name value="Lokalt-legemiddel-cellegift"/>
+      <description value="Eksempel på lokalt katalogisert cellegift (Cisplatin)"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="NamingSystem"/>
       </extension>
       <reference>
@@ -1340,6 +1373,17 @@
       <name value="Prosentvis doseendring"/>
       <description value="Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/Rekvirering-Cellegift"/>
+      </reference>
+      <name value="Rekvirering-Cellegift"/>
+      <description value="Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

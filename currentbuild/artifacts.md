@@ -87,6 +87,7 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Administrering-Cellegift](MedicationAdministration-Administrering-Cellegift.md) | Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring |
 | [Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md) | Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error) |
 | [Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) | Eksempel på administrering av legemiddel - infusjon |
 | [Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md) | Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon |
@@ -98,6 +99,7 @@ These are example instances that show what data produced and consumed by systems
 | [Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md) | Eksempel på diagnose SNOMED CT |
 | [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
+| [Episode-Sykehus-2](Encounter-Episode-Sykehus-2.md) | Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
 | [Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md) | Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id |
@@ -111,6 +113,7 @@ These are example instances that show what data produced and consumed by systems
 | [Legemiddel-SCT](Medication-Legemiddel-SCT.md) | Eksempel på legemiddel identifisert med SNOMED CT-kode |
 | [Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md) | Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept |
 | [Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) | Eksempel på legemiddel identifisert med varenummer |
+| [Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md) | Eksempel på lokalt katalogisert cellegift (Cisplatin) |
 | [Oksykodonadministrering i sykehjem med inline ressurskopier](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) | Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline. |
 | [Organisasjon-HF](Organization-Organisasjon-HF.md) | Eksempel på Helseforetak |
 | [Organisasjon-HF-2](Organization-Organisasjon-HF-2.md) | Eksempel på Helseforetak (Helse Møre og Romsdal HF) |
@@ -124,6 +127,7 @@ These are example instances that show what data produced and consumed by systems
 | [Pasient-Med-DNR](Patient-Pasient-Med-DNR.md) | Eksempel på pasient med D-nummer |
 | [Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) | Eksempel på pasient med fødselsnummer |
 | [Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md) | Eksempel på pasient uten personidentifikator |
+| [Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md) | Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime |
 | [Rekvirering-EnteredInError](MedicationRequest-Rekvirering-EnteredInError.md) | Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling |
 | [Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md) | Eksempel på rekvirering for intravenøs infusjon |
 | [Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |

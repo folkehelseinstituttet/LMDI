@@ -921,6 +921,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-Cellegift"
+      },
+      "name" : "Administrering-Cellegift",
+      "description" : "Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-EnteredInError"
       },
       "name" : "Administrering-EnteredInError",
@@ -1093,6 +1105,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       },
       "name" : "Episode-Sykehus",
       "description" : "Eksempel på episode i spesialisthelsetjenesten",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Episode-Sykehus-2"
+      },
+      "name" : "Episode-Sykehus-2",
+      "description" : "Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
     },
     {
@@ -1434,6 +1458,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Lokalt-legemiddel-cellegift"
+      },
+      "name" : "Lokalt-legemiddel-cellegift",
+      "description" : "Eksempel på lokalt katalogisert cellegift (Cisplatin)",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "NamingSystem"
       }],
       "reference" : {
@@ -1682,6 +1718,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       "name" : "Prosentvis doseendring",
       "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-Cellegift"
+      },
+      "name" : "Rekvirering-Cellegift",
+      "description" : "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
     },
     {
       "extension" : [{
