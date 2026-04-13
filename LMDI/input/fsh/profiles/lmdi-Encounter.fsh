@@ -49,3 +49,10 @@ Description: "Eksempel på episode på sykehjem"
 * status = #in-progress
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#SS "short stay"
 * serviceProvider = Reference(Organisasjon-Sykehjem)
+
+Instance: Episode-Sykehus-2
+InstanceOf: Episode
+Description: "Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter"
+* status = #finished
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
+* serviceProvider = Reference(Organisasjon-Post)

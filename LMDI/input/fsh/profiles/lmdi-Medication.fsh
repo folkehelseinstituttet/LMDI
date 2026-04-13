@@ -268,6 +268,20 @@ Description: "Eksempel på legemiddel uten code — ingredienser uttrykt via Ref
 * ingredient[2].itemCodeableConcept.coding.code = #ID_4440528A-4654-4C34-A36B-B85251A5410F
 * ingredient[2].itemCodeableConcept.coding.display = "Vitalipid Infant kons til inf emul"
 
+Instance: Lokalt-legemiddel-cellegift
+InstanceOf: Legemiddel
+Description: "Eksempel på lokalt katalogisert cellegift (Cisplatin)"
+* extension[classification].valueCodeableConcept = $ATC#L01XA01 "Cisplatin"
+* code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+* code.coding[LokaltLegemiddel].code = #Cisplatin
+* code.coding[LokaltLegemiddel].display = "Cisplatin"
+* amount.numerator.value = 1025
+* amount.numerator.unit = "milligram"
+* amount.numerator.system = "http://unitsofmeasure.org"
+* amount.numerator.code = #mg
+* amount.denominator.value = 1
+* amount.denominator.unit = "pose"
+
 // Invarianter
 Invariant: lmdi-medication-code-or-ingredient
 Description: "Medication skal ha code.coding eller ingredient"

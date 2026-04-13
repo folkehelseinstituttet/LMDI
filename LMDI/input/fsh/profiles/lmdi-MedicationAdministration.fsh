@@ -230,3 +230,28 @@ Description: "Eksempel på selvadministrering — pasienten tar legemidlet selv 
 * dosage.dose.unit = "milligram"
 * dosage.dose.system = "http://unitsofmeasure.org"
 * dosage.dose.code = #mg
+
+Instance: Administrering-Cellegift
+InstanceOf: Legemiddeladministrering
+Description: "Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring"
+* identifier.value = "15634555315"
+* status = #completed
+* medicationReference = Reference(Lokalt-legemiddel-cellegift)
+* subject = Reference(Pasient-Med-FNR)
+* context = Reference(Episode-Sykehus-2)
+* effectivePeriod.start = "2026-04-01T12:12:00+02:00"
+* effectivePeriod.end = "2026-04-01T13:45:00+02:00"
+* request = Reference(Rekvirering-Cellegift)
+* dosage.route.coding[SCT].system = "http://snomed.info/sct"
+* dosage.route.coding[SCT].code = #47625008
+* dosage.route.coding[SCT].display = "intravenøs administrasjonsvei"
+* dosage.dose.value = 1000
+* dosage.dose.unit = "milligram"
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
+* dosage.rateRatio.numerator.value = 10
+* dosage.rateRatio.numerator.system = "http://unitsofmeasure.org"
+* dosage.rateRatio.numerator.code = #mg
+* dosage.rateRatio.denominator.value = 1
+* dosage.rateRatio.denominator.system = "http://unitsofmeasure.org"
+* dosage.rateRatio.denominator.code = #min

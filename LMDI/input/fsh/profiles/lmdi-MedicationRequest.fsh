@@ -196,3 +196,35 @@ Description: "Eksempel på rekvirering markert som entered-in-error grunnet dupl
 * dosageInstruction.doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
 * dosageInstruction.doseAndRate.doseQuantity.code = #mg
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mg"
+
+Instance: Rekvirering-Cellegift
+InstanceOf: Legemiddelrekvirering
+Description: "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime"
+* identifier.system = "http://example.org/rekvirering-id"
+* identifier.value = "46456453321544556324"
+* status = #unknown
+* intent = #original-order
+* medicationReference = Reference(Lokalt-legemiddel-cellegift)
+* subject = Reference(Pasient-Med-FNR)
+* requester = Reference(Helsepersonell-Uten-HPR)
+* authoredOn = "2026-03-28"
+* extension[prosentvisDoseendring].valueQuantity.value = 50
+* extension[prosentvisDoseendring].valueQuantity.system = "http://unitsofmeasure.org"
+* extension[prosentvisDoseendring].valueQuantity.code = #%
+* extension[prosentvisDoseendring].valueQuantity.unit = "%"
+* extension[delAvBehandlingsregime].valueString = "B102 Gastro, ECX, Epirubicin, Cisplatin, Xeloda"
+* dosageInstruction.timing.repeat.count = 5
+* dosageInstruction.timing.repeat.frequency = 1
+* dosageInstruction.timing.repeat.period = 1
+* dosageInstruction.timing.repeat.periodUnit = #mo
+* dosageInstruction.route.coding.system = "http://snomed.info/sct"
+* dosageInstruction.route.coding.code = #47625008
+* dosageInstruction.route.coding.display = "intravenøs administrasjonsvei"
+* dosageInstruction.doseAndRate.doseQuantity.value = 1025
+* dosageInstruction.doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
+* dosageInstruction.doseAndRate.doseQuantity.code = #mg
+* dosageInstruction.doseAndRate.doseQuantity.unit = "milligram"
+* dosageInstruction.doseAndRate.rateQuantity.value = 12
+* dosageInstruction.doseAndRate.rateQuantity.system = "http://unitsofmeasure.org"
+* dosageInstruction.doseAndRate.rateQuantity.code = #mg/min
+* dosageInstruction.doseAndRate.rateQuantity.unit = "milligram per minute"
