@@ -243,8 +243,8 @@
   <tbody>
     <tr>
       <td>1.1.0</td>
-      <td>2026-03-27</td>
-      <td>Rettet NamingSystem-URL fra fh.no til fhi.no; rettet skrivefeil lokaltVirkemiddel til lokaltLegemiddel</td>
+      <td>2026-04-13</td>
+      <td><strong>Breaking changes:</strong><br />LokaltLegemiddel bruker ny URL: <code class="language-plaintext highlighter-rouge">http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</code> (tidligere <code class="language-plaintext highlighter-rouge">fh.no/lokaltVirkemiddel</code>)<br />Legemiddel må ha enten kode eller virkestoff<br />Kun én ATC-klassifisering per legemiddel<br /><code class="language-plaintext highlighter-rouge">organisatoriskNiva</code> er ikke lenger tillatt på Organisasjon<br />Diagnose: <code class="language-plaintext highlighter-rouge">stage.summary</code> må fylles ut når <code class="language-plaintext highlighter-rouge">stage</code> brukes<br />Legemiddeladministrering: administrasjonsvei må være kodet med <code class="language-plaintext highlighter-rouge">code</code>-verdi<br /><strong>Andre endringer:</strong><br />IG-status satt til active<br />Nytt <code class="language-plaintext highlighter-rouge">category</code>-felt i Legemiddeladministrering (bl.a. <code class="language-plaintext highlighter-rouge">community</code> for selvadministrering)<br />Presisert at <code class="language-plaintext highlighter-rouge">prosentvisDoseendring</code> 100 % = umodifisert dose<br /><code class="language-plaintext highlighter-rouge">LegemiddelKoder</code> utvidet med LMR-løpenummer, varenummer og lokaltLegemiddel<br />Pasient: fjernet overflødig address-use-invariant; <code class="language-plaintext highlighter-rouge">identifier</code>-definition lempet<br />Konsistent navngivning av eksempelinstanser; nye eksempler for diagnose, infusjon, entered-in-error, cellegift, selvadministrering, legemiddel uten kode og organisasjonshierarki</td>
     </tr>
     <tr>
       <td>1.0.8</td>
@@ -320,7 +320,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, Apr 13, 2026 06:42+0000">2026-04-13</span>
+                        title="Mon, Apr 13, 2026 07:37+0000">2026-04-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -58,7 +58,7 @@ No Expansion for this valueset (Unknown Code System)
   "name" : "KommunenummerValueSet",
   "title" : "Kommunenummer ValueSet",
   "status" : "active",
-  "date" : "2026-04-13T06:42:00+00:00",
+  "date" : "2026-04-13T07:37:51+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

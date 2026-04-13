@@ -57,7 +57,7 @@ Tillatt verdi for address.type i LMDI: physical
   "name" : "LmdiAddressType",
   "title" : "LMDI Address Type",
   "status" : "active",
-  "date" : "2026-04-13T06:42:00+00:00",
+  "date" : "2026-04-13T07:37:51+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

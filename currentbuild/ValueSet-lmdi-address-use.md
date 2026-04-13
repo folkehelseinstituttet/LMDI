@@ -56,7 +56,7 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
   "status" : "active",
-  "date" : "2026-04-13T06:42:00+00:00",
+  "date" : "2026-04-13T07:37:51+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
