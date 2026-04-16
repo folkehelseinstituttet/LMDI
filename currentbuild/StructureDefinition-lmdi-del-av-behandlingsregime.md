@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
   "name" : "DelAvBehandlingsregime",
   "title" : "Del av behandlingsregime",
   "status" : "active",
-  "date" : "2026-04-16T09:46:31+00:00",
+  "date" : "2026-04-16T10:27:27+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
