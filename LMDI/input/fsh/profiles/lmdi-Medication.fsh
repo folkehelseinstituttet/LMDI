@@ -83,9 +83,9 @@ Description: "Beskrivelse av legemiddel."
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #closed
-* extension contains LegemiddelClassification named classification 0..1
-* extension[classification] ^short = "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
-* extension[classification] ^definition = "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode."
+* extension contains LegemiddelClassification named classification 0..*
+* extension[classification] ^short = "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem."
+* extension[classification] ^definition = "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode."
 * extension[classification] ^comment = "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO."
 
 * form.text 0..0
