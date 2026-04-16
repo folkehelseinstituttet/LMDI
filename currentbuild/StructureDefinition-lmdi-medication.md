@@ -130,11 +130,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.extension:classification",
       "path" : "Medication.extension",
       "sliceName" : "classification",
-      "short" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
-      "definition" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
+      "short" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem.",
+      "definition" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode.",
       "comment" : "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO.",
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"]
