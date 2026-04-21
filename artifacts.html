@@ -5,7 +5,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.0.8</title>
+        v1.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -60,7 +60,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.0.8 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.0 - ci-build
                             
                             
                             
@@ -312,7 +312,7 @@
                   title="StructureDefinition/npr-episode-identifier">NPR Episode Identifier</a>
             </td>
             <td>
-<p>Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt.</p>
+<p>Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.</p>
 </td>
          </tr>
          <tr>
@@ -321,7 +321,7 @@
                   title="StructureDefinition/lmdi-prosentvis-doseendring">Prosentvis doseendring</a>
             </td>
             <td>
-<p>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.</p>
+<p>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.</p>
 </td>
          </tr>
       </tbody>
@@ -481,11 +481,47 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationAdministration-Administrering-Cellegift.html"
+                  title="MedicationAdministration/Administrering-Cellegift">Administrering-Cellegift</a>
+            </td>
+            <td>
+<p>Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Administrering-EnteredInError.html"
+                  title="MedicationAdministration/Administrering-EnteredInError">Administrering-EnteredInError</a>
+            </td>
+            <td>
+<p>Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="MedicationAdministration-Administrering-Infusjon.html"
                   title="MedicationAdministration/Administrering-Infusjon">Administrering-Infusjon</a>
             </td>
             <td>
 <p>Eksempel på administrering av legemiddel - infusjon</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Administrering-MedDiagnoseICD10.html"
+                  title="MedicationAdministration/Administrering-MedDiagnoseICD10">Administrering-MedDiagnoseICD10</a>
+            </td>
+            <td>
+<p>Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-Administrering-MedDiagnoseSCT.html"
+                  title="MedicationAdministration/Administrering-MedDiagnoseSCT">Administrering-MedDiagnoseSCT</a>
+            </td>
+            <td>
+<p>Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon</p>
 </td>
          </tr>
          <tr>
@@ -499,6 +535,15 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationAdministration-Administrering-Selvadministrert.html"
+                  title="MedicationAdministration/Administrering-Selvadministrert">Administrering-Selvadministrert</a>
+            </td>
+            <td>
+<p>Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Condition-Diagnose-ICD10.html" title="Condition/Diagnose-ICD10">Diagnose-ICD10</a>
             </td>
             <td>
@@ -507,11 +552,20 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-Diagnose-SNOMED-CT.html"
-                  title="Condition/Diagnose-SNOMED-CT">Diagnose-SNOMED-CT</a>
+               <a href="Condition-Diagnose-ICD10-Allergi.html"
+                  title="Condition/Diagnose-ICD10-Allergi">Diagnose-ICD10-Allergi</a>
             </td>
             <td>
-<p>Eksempel på diagnose SNOMED CT og ICD-10</p>
+<p>Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-Diagnose-SNOMED-SCT.html"
+                  title="Condition/Diagnose-SNOMED-SCT">Diagnose-SNOMED-SCT</a>
+            </td>
+            <td>
+<p>Eksempel på diagnose SNOMED CT</p>
 </td>
          </tr>
          <tr>
@@ -529,6 +583,15 @@
             </td>
             <td>
 <p>Eksempel på episode i spesialisthelsetjenesten</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-Episode-Sykehus-2.html"
+                  title="Encounter/Episode-Sykehus-2">Episode-Sykehus-2</a>
+            </td>
+            <td>
+<p>Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter</p>
 </td>
          </tr>
          <tr>
@@ -551,8 +614,71 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.html"
-                  title="Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser">Legemiddel-Lokalt-Med-Flere-Ingredienser</a>
+               <a href="Medication-Legemiddel-FestLegemiddelMerkevare.html"
+                  title="Medication/Legemiddel-FestLegemiddelMerkevare">Legemiddel-FestLegemiddelMerkevare</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-FestLegemiddelVirkestoff.html"
+                  title="Medication/Legemiddel-FestLegemiddelVirkestoff">Legemiddel-FestLegemiddelVirkestoff</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-FestLegemiddelVirkestoff-2.html"
+                  title="Medication/Legemiddel-FestLegemiddelVirkestoff-2">Legemiddel-FestLegemiddelVirkestoff-2</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-FestLegemiddeldose.html"
+                  title="Medication/Legemiddel-FestLegemiddeldose">Legemiddel-FestLegemiddeldose</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel identifisert med FEST legemiddeldose-id</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-FestLegemiddelpakning.html"
+                  title="Medication/Legemiddel-FestLegemiddelpakning">Legemiddel-FestLegemiddelpakning</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel identifisert med FEST legemiddelpakning-id</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-FestLmrLopenr.html"
+                  title="Medication/Legemiddel-FestLmrLopenr">Legemiddel-FestLmrLopenr</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel identifisert med LMR-løpenummer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-Legemiddeldose-SmofKabiven.html"
+                  title="Medication/Legemiddel-Legemiddeldose-SmofKabiven">Legemiddel-Legemiddeldose-SmofKabiven</a>
+            </td>
+            <td>
+<p>Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.html"
+                  title="Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser">Legemiddel-LokaltLegemiddel-FlereIngredienser</a>
             </td>
             <td>
 <p>Eksempel på lokalt legemiddel med flere ingredienser</p>
@@ -560,29 +686,37 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-Monoket-FEST-Pakning.html"
-                  title="Medication/Legemiddel-Monoket-FEST-Pakning">Legemiddel-Monoket-FEST-Pakning</a>
+               <a href="Medication-Legemiddel-SCT.html" title="Medication/Legemiddel-SCT">Legemiddel-SCT</a>
             </td>
             <td>
-<p>Eksempel på legemiddel - paking</p>
+<p>Eksempel på legemiddel identifisert med SNOMED CT-kode</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-Oksykodon-FEST-Virkestoff.html"
-                  title="Medication/Legemiddel-Oksykodon-FEST-Virkestoff">Legemiddel-Oksykodon-FEST-Virkestoff</a>
+               <a href="Medication-Legemiddel-UtenCoding.html"
+                  title="Medication/Legemiddel-UtenCoding">Legemiddel-UtenCoding</a>
             </td>
             <td>
-<p>Eksempel på legemiddel</p>
+<p>Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-Paracetamol-FEST-Merkevare.html"
-                  title="Medication/Legemiddel-Paracetamol-FEST-Merkevare">Legemiddel-Paracetamol-FEST-Merkevare</a>
+               <a href="Medication-Legemiddel-Varenummer.html"
+                  title="Medication/Legemiddel-Varenummer">Legemiddel-Varenummer</a>
             </td>
             <td>
-<p>Eksempel på legemiddel - Paracetamol</p>
+<p>Eksempel på legemiddel identifisert med varenummer</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Lokalt-legemiddel-cellegift.html"
+                  title="Medication/Lokalt-legemiddel-cellegift">Lokalt-legemiddel-cellegift</a>
+            </td>
+            <td>
+<p>Eksempel på lokalt katalogisert cellegift (Cisplatin)</p>
 </td>
          </tr>
          <tr>
@@ -605,11 +739,38 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Organization-Organisasjon-HF-2.html"
+                  title="Organization/Organisasjon-HF-2">Organisasjon-HF-2</a>
+            </td>
+            <td>
+<p>Eksempel på Helseforetak (Helse Møre og Romsdal HF)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Organization-Organisasjon-Kommune.html"
                   title="Organization/Organisasjon-Kommune">Organisasjon-Kommune</a>
             </td>
             <td>
 <p>Eksempel på kommune i primærhelsetjenesten</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Organisasjon-Post.html"
+                  title="Organization/Organisasjon-Post">Organisasjon-Post</a>
+            </td>
+            <td>
+<p>Eksempel på post – laveste nivå i organisasjonshierarkiet</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Organisasjon-Seksjon.html"
+                  title="Organization/Organisasjon-Seksjon">Organisasjon-Seksjon</a>
+            </td>
+            <td>
+<p>Eksempel på seksjonsnivå i organisasjonshierarkiet</p>
 </td>
          </tr>
          <tr>
@@ -628,6 +789,15 @@
             </td>
             <td>
 <p>Eksempel på sykehusorganisasjon</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-Organisasjon-Sykehus-2.html"
+                  title="Organization/Organisasjon-Sykehus-2">Organisasjon-Sykehus-2</a>
+            </td>
+            <td>
+<p>Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF</p>
 </td>
          </tr>
          <tr>
@@ -666,11 +836,47 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationRequest-Rekvirering-Cellegift.html"
+                  title="MedicationRequest/Rekvirering-Cellegift">Rekvirering-Cellegift</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-Rekvirering-EnteredInError.html"
+                  title="MedicationRequest/Rekvirering-EnteredInError">Rekvirering-EnteredInError</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-Rekvirering-Infusjon.html"
+                  title="MedicationRequest/Rekvirering-Infusjon">Rekvirering-Infusjon</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirering for intravenøs infusjon</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="MedicationRequest-Rekvirering-Kjemoterapi.html"
                   title="MedicationRequest/Rekvirering-Kjemoterapi">Rekvirering-Kjemoterapi</a>
             </td>
             <td>
 <p>Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-Rekvirering-MedDiagnoseICD10.html"
+                  title="MedicationRequest/Rekvirering-MedDiagnoseICD10">Rekvirering-MedDiagnoseICD10</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)</p>
 </td>
          </tr>
          <tr>
@@ -715,10 +921,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.0.8 based on <a
+                    Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Mar 18, 2026 15:02+0000">2026-03-18</span>
+                        title="Tue, Apr 21, 2026 11:04+0000">2026-04-21</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

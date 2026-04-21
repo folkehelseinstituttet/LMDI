@@ -15,25 +15,29 @@
        fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition>
      ] )
   ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
   fhir:code [
      fhir:coding ( [
        fhir:system [
          fhir:v "urn:oid:2.16.578.1.12.4.1.1.7110"^^xsd:anyURI ;
          fhir:l <urn:oid:2.16.578.1.12.4.1.1.7110>
        ] ;
-       fhir:code [ fhir:v "R63.3" ] ;
-       fhir:display [ fhir:v "Vanskeligheter med inntak og tilførsel av mat" ]
+       fhir:code [ fhir:v "I20" ] ;
+       fhir:display [ fhir:v "Angina pectoris" ]
      ] )
   ] ; # 
   fhir:subject [
      fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-FNR> ;
      fhir:reference [ fhir:v "Patient/Pasient-Med-FNR" ]
-  ] ; # 
-  fhir:stage ( [
-     fhir:summary [
-       fhir:text [ fhir:v "Indikasjonsdiagnose for legemiddelbehandling" ]
-     ]
-  ] ) . # 
+  ] . # 
 
 # -------------------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-# Prosentvis doseendring - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Prosentvis doseendring - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,10 +14,10 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-18 | *Computable Name*:ProsentvisDoseendring |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.1.0 **  |
+| Active as of 2026-04-21 | *Computable Name*:ProsentvisDoseendring |
 
-Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.
+Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.
 
 **Context of Use**
 
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) and [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [MedicationRequest/Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md) and [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-prosentvis-doseendring)
 
@@ -55,11 +55,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-prosentvis-doseendring",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "ProsentvisDoseendring",
   "title" : "Prosentvis doseendring",
-  "status" : "draft",
-  "date" : "2026-03-18T15:02:12+00:00",
+  "status" : "active",
+  "date" : "2026-04-21T11:04:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -75,7 +75,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.",
+  "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -103,7 +103,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
       "id" : "Extension",
       "path" : "Extension",
       "short" : "Prosentvis doseendring",
-      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi."
+      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%."
     },
     {
       "id" : "Extension.extension",

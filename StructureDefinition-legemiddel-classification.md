@@ -1,4 +1,4 @@
-# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.1.0 **  |
 | Active as of 2025-09-12 | *Computable Name*:LegemiddelClassification |
 
 Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).
@@ -30,7 +30,7 @@ This extension may be used on the following element(s):
 **Usages:**
 
 * Use this Extension: [Legemiddel](StructureDefinition-lmdi-medication.md)
-* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [Medication/Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md), [Medication/Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) and [Medication/Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [Medication/Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md), [Medication/Legemiddel-FestLegemiddelVirkestoff-2](Medication-Legemiddel-FestLegemiddelVirkestoff-2.md), [Medication/Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md)... Show 7 more, [Medication/Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md), [Medication/Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md), [Medication/Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md), [Medication/Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md), [Medication/Legemiddel-SCT](Medication-Legemiddel-SCT.md), [Medication/Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) and [Medication/Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/legemiddel-classification)
 
@@ -55,7 +55,7 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
   "resourceType" : "StructureDefinition",
   "id" : "legemiddel-classification",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "LegemiddelClassification",
   "title" : "Legemiddel Classification",
   "status" : "active",

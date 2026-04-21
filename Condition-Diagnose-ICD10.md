@@ -1,4 +1,4 @@
-# Diagnose-ICD10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Diagnose-ICD10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -23,21 +23,22 @@
   "meta" : {
     "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
   },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
   "code" : {
     "coding" : [{
       "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
-      "code" : "R63.3",
-      "display" : "Vanskeligheter med inntak og tilførsel av mat"
+      "code" : "I20",
+      "display" : "Angina pectoris"
     }]
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"
-  },
-  "stage" : [{
-    "summary" : {
-      "text" : "Indikasjonsdiagnose for legemiddelbehandling"
-    }
-  }]
+  }
 }
 
 ```

@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
@@ -32,7 +32,7 @@ Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”:
 **Usages:**
 
 * Refer to this Profile: [Episode](StructureDefinition-lmdi-encounter.md) and [Organisasjon](StructureDefinition-lmdi-organization.md)
-* Examples for this Profile: [Oslo universitetssykehus HF](Organization-Organisasjon-HF.md), [TRONDHEIM KOMMUNE](Organization-Organisasjon-Kommune.md), [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md), [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md) and [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Sykehusavdeling.md)
+* Examples for this Profile: [Helse Møre og Romsdal HF](Organization-Organisasjon-HF-2.md), [Oslo universitetssykehus HF](Organization-Organisasjon-HF.md), [TRONDHEIM KOMMUNE](Organization-Organisasjon-Kommune.md), [HMR ÅLE SH Kreft og blodsjukdommar sengepost](Organization-Organisasjon-Post.md)... Show 5 more, [Kreft og blodsykdommer sengepost Ålesund](Organization-Organisasjon-Seksjon.md), [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md), [Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk](Organization-Organisasjon-Sykehus-2.md), [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md) and [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Sykehusavdeling.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-organization)
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "status" : "draft",
@@ -141,6 +141,13 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "path" : "Organization.type",
       "sliceName" : "organisatoriskNiva",
       "max" : "0"
+    },
+    {
+      "id" : "Organization.type:organisatoriskBetegnelse",
+      "path" : "Organization.type",
+      "sliceName" : "organisatoriskBetegnelse",
+      "short" : "Organisatorisk betegnelse. Kodeverk \"Organisatorisk betegnelse\" (OID 8624)",
+      "definition" : "Kode fra kodeverk \"Organisatorisk betegnelse\" (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)"
     },
     {
       "id" : "Organization.name",

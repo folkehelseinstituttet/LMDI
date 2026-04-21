@@ -1,4 +1,4 @@
-# Gyldige legemiddelkoder - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Gyldige legemiddelkoder - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,15 +14,14 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-18 | *Computable Name*:LegemiddelKoder |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.1.0 **  |
+| Active as of 2026-04-21 | *Computable Name*:LegemiddelKoder |
 
  
 ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog 
 
  **References** 
 
-* [Legemiddel](StructureDefinition-lmdi-medication.md)
 * [Legemiddel](StructureDefinition-lmdi-medication.md)
 
 ### Logical Definition (CLD)
@@ -31,7 +30,7 @@ ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lok
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+This value set cannot be expanded because of the way it is defined - it has an infinite number of members
 
 -------
 
@@ -55,11 +54,11 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "legemiddel-koder",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
-  "status" : "draft",
-  "date" : "2026-03-18T15:02:12+00:00",
+  "status" : "active",
+  "date" : "2026-04-21T11:04:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -106,7 +105,7 @@ No Expansion for this valueset (Unknown Code System)
       "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer"
     },
     {
-      "system" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
+      "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
     }]
   }
 }

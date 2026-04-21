@@ -188,7 +188,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Organization.type:organisatoriskBetegnelse","Organization.type","organisatoriskBetegnelse","","",0,*,"","","Y","CodeableConcept {[]} {[]}
-","Organisatorisk betegnelse","The kind(s) of organization that this is.","Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes
+","Organisatorisk betegnelse. Kodeverk ""Organisatorisk betegnelse"" (OID 8624)","Kode fra kodeverk ""Organisatorisk betegnelse"" (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)","Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes
 
 When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.
 

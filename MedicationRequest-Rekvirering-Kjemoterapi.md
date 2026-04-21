@@ -1,4 +1,4 @@
-# Rekvirering-Kjemoterapi - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Rekvirering-Kjemoterapi - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -43,7 +43,7 @@
   "status" : "active",
   "intent" : "order",
   "medicationReference" : {
-    "reference" : "Medication/Legemiddel-Oksykodon-FEST-Virkestoff"
+    "reference" : "Medication/Legemiddel-FestLegemiddelVirkestoff"
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"

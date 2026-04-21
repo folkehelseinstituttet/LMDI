@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -23,7 +23,7 @@ Beskrivelse av legemiddel.
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md), [Medication/Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md), [Medication/Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) and [Medication/Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md)
+* Examples for this Profile: [Medication/Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md), [Medication/Legemiddel-FestLegemiddelVirkestoff-2](Medication-Legemiddel-FestLegemiddelVirkestoff-2.md), [Medication/Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md), [Medication/Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md)... Show 8 more, [Medication/Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md), [Medication/Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md), [Medication/Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md), [Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md), [Medication/Legemiddel-SCT](Medication-Legemiddel-SCT.md), [Medication/Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md), [Medication/Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) and [Medication/Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medication)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "status" : "draft",
@@ -130,11 +130,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.extension:classification",
       "path" : "Medication.extension",
       "sliceName" : "classification",
-      "short" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
-      "definition" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Ett legemiddel kan ha inntil én ATC-kode.",
+      "short" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem.",
+      "definition" : "Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode.",
       "comment" : "Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO.",
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"]
@@ -182,6 +182,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
+      "id" : "Medication.code.coding:FestLegemiddeldose.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "NavnFormStyrke fra FEST"
+    },
+    {
       "id" : "Medication.code.coding:FestLmrLopenr",
       "path" : "Medication.code.coding",
       "sliceName" : "FestLmrLopenr",
@@ -201,6 +206,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "path" : "Medication.code.coding.code",
       "short" : "7‑sifret nummer",
       "min" : 1
+    },
+    {
+      "id" : "Medication.code.coding:FestLmrLopenr.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "NavnFormStyrke fra FEST"
     },
     {
       "id" : "Medication.code.coding:FestLegemiddelMerkevare",
@@ -224,6 +234,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
+      "id" : "Medication.code.coding:FestLegemiddelMerkevare.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "Varenavn eller NavnFormStyrke fra FEST"
+    },
+    {
       "id" : "Medication.code.coding:FestLegemiddelpakning",
       "path" : "Medication.code.coding",
       "sliceName" : "FestLegemiddelpakning",
@@ -243,6 +258,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "path" : "Medication.code.coding.code",
       "short" : "Identifikator fra FEST",
       "min" : 1
+    },
+    {
+      "id" : "Medication.code.coding:FestLegemiddelpakning.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "Varenavn eller NavnFormStyrke fra FEST"
     },
     {
       "id" : "Medication.code.coding:Varenummer",
@@ -266,25 +286,35 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "min" : 1
     },
     {
-      "id" : "Medication.code.coding:FestVirkestoff",
+      "id" : "Medication.code.coding:Varenummer.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "Varenavn eller NavnFormStyrke fra FEST"
+    },
+    {
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff",
       "path" : "Medication.code.coding",
-      "sliceName" : "FestVirkestoff",
+      "sliceName" : "FestLegemiddelVirkestoff",
       "short" : "FEST-id for legemiddel virkestoff",
       "definition" : "Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST.",
       "min" : 0,
       "max" : "1"
     },
     {
-      "id" : "Medication.code.coding:FestVirkestoff.system",
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff.system",
       "path" : "Medication.code.coding.system",
       "min" : 1,
       "patternUri" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
     },
     {
-      "id" : "Medication.code.coding:FestVirkestoff.code",
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff.code",
       "path" : "Medication.code.coding.code",
       "short" : "Identifikator fra FEST",
       "min" : 1
+    },
+    {
+      "id" : "Medication.code.coding:FestLegemiddelVirkestoff.display",
+      "path" : "Medication.code.coding.display",
+      "short" : "NavnFormStyrke fra FEST"
     },
     {
       "id" : "Medication.code.coding:LokaltLegemiddel",
@@ -299,7 +329,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.code.coding:LokaltLegemiddel.system",
       "path" : "Medication.code.coding.system",
       "min" : 1,
-      "patternUri" : "http://fh.no/fhir/NamingSystem/lokaltVirkemiddel"
+      "patternUri" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
     },
     {
       "id" : "Medication.code.coding:LokaltLegemiddel.code",
@@ -424,7 +454,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "path" : "Medication.ingredient",
       "short" : "Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.",
       "definition" : "Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.",
-      "comment" : "For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."
+      "comment" : "For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."
     },
     {
       "id" : "Medication.ingredient.item[x]",

@@ -1,4 +1,4 @@
-# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -43,8 +43,8 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [Del av behandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
 | [Klinisk studie](StructureDefinition-lmdi-klinisk-studie.md) | Angir om legemidlet gis som en del av en klinisk studie. |
 | [Legemiddel Classification](StructureDefinition-legemiddel-classification.md) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
-| [NPR Episode Identifier](StructureDefinition-npr-episode-identifier.md) | Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt. |
-| [Prosentvis doseendring](StructureDefinition-lmdi-prosentvis-doseendring.md) | Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. |
+| [NPR Episode Identifier](StructureDefinition-npr-episode-identifier.md) | Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. |
+| [Prosentvis doseendring](StructureDefinition-lmdi-prosentvis-doseendring.md) | Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. |
 
 ### Terminology: Value Sets 
 
@@ -87,28 +87,51 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Administrering-Cellegift](MedicationAdministration-Administrering-Cellegift.md) | Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring |
+| [Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md) | Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error) |
 | [Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) | Eksempel på administrering av legemiddel - infusjon |
+| [Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md) | Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon |
+| [Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md) | Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon |
 | [Administrering-Oral](MedicationAdministration-Administrering-Oral.md) | Eksempel på administrering av legemiddel |
+| [Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md) | Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon |
 | [Diagnose-ICD10](Condition-Diagnose-ICD10.md) | Eksempel på diagnose ICD-10 |
-| [Diagnose-SNOMED-CT](Condition-Diagnose-SNOMED-CT.md) | Eksempel på diagnose SNOMED CT og ICD-10 |
+| [Diagnose-ICD10-Allergi](Condition-Diagnose-ICD10-Allergi.md) | Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt |
+| [Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md) | Eksempel på diagnose SNOMED CT |
 | [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
+| [Episode-Sykehus-2](Encounter-Episode-Sykehus-2.md) | Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
-| [Legemiddel-Lokalt-Med-Flere-Ingredienser](Medication-Legemiddel-Lokalt-Med-Flere-Ingredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
-| [Legemiddel-Monoket-FEST-Pakning](Medication-Legemiddel-Monoket-FEST-Pakning.md) | Eksempel på legemiddel - paking |
-| [Legemiddel-Oksykodon-FEST-Virkestoff](Medication-Legemiddel-Oksykodon-FEST-Virkestoff.md) | Eksempel på legemiddel |
-| [Legemiddel-Paracetamol-FEST-Merkevare](Medication-Legemiddel-Paracetamol-FEST-Merkevare.md) | Eksempel på legemiddel - Paracetamol |
+| [Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md) | Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id |
+| [Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md) | Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id |
+| [Legemiddel-FestLegemiddelVirkestoff-2](Medication-Legemiddel-FestLegemiddelVirkestoff-2.md) | Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id |
+| [Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md) | Eksempel på legemiddel identifisert med FEST legemiddeldose-id |
+| [Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md) | Eksempel på legemiddel identifisert med FEST legemiddelpakning-id |
+| [Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md) | Eksempel på legemiddel identifisert med LMR-løpenummer |
+| [Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md) | Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id |
+| [Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
+| [Legemiddel-SCT](Medication-Legemiddel-SCT.md) | Eksempel på legemiddel identifisert med SNOMED CT-kode |
+| [Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md) | Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept |
+| [Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) | Eksempel på legemiddel identifisert med varenummer |
+| [Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md) | Eksempel på lokalt katalogisert cellegift (Cisplatin) |
 | [Oksykodonadministrering i sykehjem med inline ressurskopier](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md) | Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline. |
 | [Organisasjon-HF](Organization-Organisasjon-HF.md) | Eksempel på Helseforetak |
+| [Organisasjon-HF-2](Organization-Organisasjon-HF-2.md) | Eksempel på Helseforetak (Helse Møre og Romsdal HF) |
 | [Organisasjon-Kommune](Organization-Organisasjon-Kommune.md) | Eksempel på kommune i primærhelsetjenesten |
+| [Organisasjon-Post](Organization-Organisasjon-Post.md) | Eksempel på post – laveste nivå i organisasjonshierarkiet |
+| [Organisasjon-Seksjon](Organization-Organisasjon-Seksjon.md) | Eksempel på seksjonsnivå i organisasjonshierarkiet |
 | [Organisasjon-Sykehjem](Organization-Organisasjon-Sykehjem.md) | Eksempel på sykehjem i primærhelsetjenesten |
 | [Organisasjon-Sykehus](Organization-Organisasjon-Sykehus.md) | Eksempel på sykehusorganisasjon |
+| [Organisasjon-Sykehus-2](Organization-Organisasjon-Sykehus-2.md) | Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF |
 | [Organisasjon-Sykehusavdeling](Organization-Organisasjon-Sykehusavdeling.md) | Eksempel på spesialistavdeling |
 | [Pasient-Med-DNR](Patient-Pasient-Med-DNR.md) | Eksempel på pasient med D-nummer |
 | [Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) | Eksempel på pasient med fødselsnummer |
 | [Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md) | Eksempel på pasient uten personidentifikator |
+| [Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md) | Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime |
+| [Rekvirering-EnteredInError](MedicationRequest-Rekvirering-EnteredInError.md) | Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling |
+| [Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md) | Eksempel på rekvirering for intravenøs infusjon |
 | [Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |
+| [Rekvirering-MedDiagnoseICD10](MedicationRequest-Rekvirering-MedDiagnoseICD10.md) | Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling) |
 | [Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md) | Eksempel på legemiddelrekvirering av Paracet |
 | [Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md) | Eksempel på virkestoff - Oksykodon |
 

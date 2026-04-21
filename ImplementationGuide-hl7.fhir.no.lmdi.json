@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"no\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"no\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.lmdi</b></p><a name=\"hl7.fhir.no.lmdi\"> </a><a name=\"hchl7.fhir.no.lmdi\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: no</p></div><h2>Lmdi</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi</pre><div><p>Denne implementasjongguiden beskriver hvordan institusjoner skal overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret</p>\n</div></div>"
   },
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
-  "status" : "draft",
-  "date" : "2026-03-10",
+  "status" : "active",
+  "date" : "2026-03-27",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -459,7 +459,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.2"
     },
     {
       "extension" : [{
@@ -863,6 +863,30 @@
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-Cellegift"
+      },
+      "name" : "Administrering-Cellegift",
+      "description" : "Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Administrering-EnteredInError"
+      },
+      "name" : "Administrering-EnteredInError",
+      "description" : "Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-Infusjon"
       },
       "name" : "Administrering-Infusjon",
@@ -875,10 +899,46 @@
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-MedDiagnoseICD10"
+      },
+      "name" : "Administrering-MedDiagnoseICD10",
+      "description" : "Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Administrering-MedDiagnoseSCT"
+      },
+      "name" : "Administrering-MedDiagnoseSCT",
+      "description" : "Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-Oral"
       },
       "name" : "Administrering-Oral",
       "description" : "Eksempel på administrering av legemiddel",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
+        "reference" : "MedicationAdministration/Administrering-Selvadministrert"
+      },
+      "name" : "Administrering-Selvadministrert",
+      "description" : "Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
     },
     {
@@ -935,10 +995,22 @@
         "valueString" : "Condition"
       }],
       "reference" : {
-        "reference" : "Condition/Diagnose-SNOMED-CT"
+        "reference" : "Condition/Diagnose-ICD10-Allergi"
       },
-      "name" : "Diagnose-SNOMED-CT",
-      "description" : "Eksempel på diagnose SNOMED CT og ICD-10",
+      "name" : "Diagnose-ICD10-Allergi",
+      "description" : "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/Diagnose-SNOMED-SCT"
+      },
+      "name" : "Diagnose-SNOMED-SCT",
+      "description" : "Eksempel på diagnose SNOMED CT",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
     },
     {
@@ -975,6 +1047,18 @@
       },
       "name" : "Episode-Sykehus",
       "description" : "Eksempel på episode i spesialisthelsetjenesten",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Episode-Sykehus-2"
+      },
+      "name" : "Episode-Sykehus-2",
+      "description" : "Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
     },
     {
@@ -1091,9 +1175,93 @@
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser"
+        "reference" : "Medication/Legemiddel-FestLegemiddeldose"
       },
-      "name" : "Legemiddel-Lokalt-Med-Flere-Ingredienser",
+      "name" : "Legemiddel-FestLegemiddeldose",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddeldose-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelMerkevare"
+      },
+      "name" : "Legemiddel-FestLegemiddelMerkevare",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelpakning"
+      },
+      "name" : "Legemiddel-FestLegemiddelpakning",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddelpakning-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelVirkestoff"
+      },
+      "name" : "Legemiddel-FestLegemiddelVirkestoff",
+      "description" : "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLegemiddelVirkestoff-2"
+      },
+      "name" : "Legemiddel-FestLegemiddelVirkestoff-2",
+      "description" : "Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-FestLmrLopenr"
+      },
+      "name" : "Legemiddel-FestLmrLopenr",
+      "description" : "Eksempel på legemiddel identifisert med LMR-løpenummer",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-Legemiddeldose-SmofKabiven"
+      },
+      "name" : "Legemiddel-Legemiddeldose-SmofKabiven",
+      "description" : "Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser"
+      },
+      "name" : "Legemiddel-LokaltLegemiddel-FlereIngredienser",
       "description" : "Eksempel på lokalt legemiddel med flere ingredienser",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
@@ -1103,10 +1271,10 @@
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Monoket-FEST-Pakning"
+        "reference" : "Medication/Legemiddel-SCT"
       },
-      "name" : "Legemiddel-Monoket-FEST-Pakning",
-      "description" : "Eksempel på legemiddel - paking",
+      "name" : "Legemiddel-SCT",
+      "description" : "Eksempel på legemiddel identifisert med SNOMED CT-kode",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1115,10 +1283,10 @@
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Oksykodon-FEST-Virkestoff"
+        "reference" : "Medication/Legemiddel-UtenCoding"
       },
-      "name" : "Legemiddel-Oksykodon-FEST-Virkestoff",
-      "description" : "Eksempel på legemiddel",
+      "name" : "Legemiddel-UtenCoding",
+      "description" : "Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1127,10 +1295,10 @@
         "valueString" : "Medication"
       }],
       "reference" : {
-        "reference" : "Medication/Legemiddel-Paracetamol-FEST-Merkevare"
+        "reference" : "Medication/Legemiddel-Varenummer"
       },
-      "name" : "Legemiddel-Paracetamol-FEST-Merkevare",
-      "description" : "Eksempel på legemiddel - Paracetamol",
+      "name" : "Legemiddel-Varenummer",
+      "description" : "Eksempel på legemiddel identifisert med varenummer",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1232,6 +1400,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Lokalt-legemiddel-cellegift"
+      },
+      "name" : "Lokalt-legemiddel-cellegift",
+      "description" : "Eksempel på lokalt katalogisert cellegift (Cisplatin)",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "NamingSystem"
       }],
       "reference" : {
@@ -1286,7 +1466,7 @@
         "reference" : "StructureDefinition/npr-episode-identifier"
       },
       "name" : "NPR Episode Identifier",
-      "description" : "Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt.",
+      "description" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.",
       "exampleBoolean" : false
     },
     {
@@ -1331,10 +1511,46 @@
         "valueString" : "Organization"
       }],
       "reference" : {
+        "reference" : "Organization/Organisasjon-HF-2"
+      },
+      "name" : "Organisasjon-HF-2",
+      "description" : "Eksempel på Helseforetak (Helse Møre og Romsdal HF)",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
         "reference" : "Organization/Organisasjon-Kommune"
       },
       "name" : "Organisasjon-Kommune",
       "description" : "Eksempel på kommune i primærhelsetjenesten",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Organisasjon-Post"
+      },
+      "name" : "Organisasjon-Post",
+      "description" : "Eksempel på post – laveste nivå i organisasjonshierarkiet",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Organisasjon-Seksjon"
+      },
+      "name" : "Organisasjon-Seksjon",
+      "description" : "Eksempel på seksjonsnivå i organisasjonshierarkiet",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
     },
     {
@@ -1359,6 +1575,18 @@
       },
       "name" : "Organisasjon-Sykehus",
       "description" : "Eksempel på sykehusorganisasjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Organisasjon-Sykehus-2"
+      },
+      "name" : "Organisasjon-Sykehus-2",
+      "description" : "Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
     },
     {
@@ -1430,8 +1658,44 @@
         "reference" : "StructureDefinition/lmdi-prosentvis-doseendring"
       },
       "name" : "Prosentvis doseendring",
-      "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi.",
+      "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-Cellegift"
+      },
+      "name" : "Rekvirering-Cellegift",
+      "description" : "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-EnteredInError"
+      },
+      "name" : "Rekvirering-EnteredInError",
+      "description" : "Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-Infusjon"
+      },
+      "name" : "Rekvirering-Infusjon",
+      "description" : "Eksempel på rekvirering for intravenøs infusjon",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
     },
     {
       "extension" : [{
@@ -1443,6 +1707,18 @@
       },
       "name" : "Rekvirering-Kjemoterapi",
       "description" : "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-MedDiagnoseICD10"
+      },
+      "name" : "Rekvirering-MedDiagnoseICD10",
+      "description" : "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
     },
     {

@@ -1,4 +1,4 @@
-# ATC Kodesystem ValueSet - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# ATC Kodesystem ValueSet - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://fhir.no/ValueSet/atc-valueset **  | *Version*:1.0.8 **  |
+| *Official URL*:http://fhir.no/ValueSet/atc-valueset **  | *Version*:1.1.0 **  |
 | Active as of 2025-09-12 | *Computable Name*:ATCValueSet |
 
  
@@ -22,7 +22,6 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
 
  **References** 
 
-* [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
 * [Legemiddel Classification](StructureDefinition-legemiddel-classification.md)
 
 ### Logical Definition (CLD)
@@ -53,7 +52,7 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
   "resourceType" : "ValueSet",
   "id" : "atc-valueset",
   "url" : "http://fhir.no/ValueSet/atc-valueset",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "ATCValueSet",
   "title" : "ATC Kodesystem ValueSet",
   "status" : "active",

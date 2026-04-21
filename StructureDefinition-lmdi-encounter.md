@@ -1,4 +1,4 @@
-# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.0.8 **  |
-| Draft as of 2026-03-18 | *Computable Name*:Episode |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.0 **  |
+| Active as of 2026-04-21 | *Computable Name*:Episode |
 
  
 Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -23,7 +23,7 @@ Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne pr
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Encounter/Episode-Sykehjem](Encounter-Episode-Sykehjem.md) and [Encounter/Episode-Sykehus](Encounter-Episode-Sykehus.md)
+* Examples for this Profile: [Encounter/Episode-Sykehjem](Encounter-Episode-Sykehjem.md), [Encounter/Episode-Sykehus-2](Encounter-Episode-Sykehus-2.md) and [Encounter/Episode-Sykehus](Encounter-Episode-Sykehus.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-encounter)
 
@@ -44,11 +44,11 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-encounter",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Episode",
   "title" : "Episode",
-  "status" : "draft",
-  "date" : "2026-03-18T15:02:12+00:00",
+  "status" : "active",
+  "date" : "2026-04-21T11:04:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -124,8 +124,8 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
       "id" : "Encounter.extension:nprEpisodeIdentifier",
       "path" : "Encounter.extension",
       "sliceName" : "nprEpisodeIdentifier",
-      "short" : "NPR episodeidentifikator som sendes til LMDI",
-      "definition" : "Unik identifikator for episoden som skal sendes til LMDI. Selv om avsender kan ha flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til LMDI. Dersom flere identifiere finnes, velges gjerne den første eller foretrukne identifikatoren lokalt. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon dersom begge er tilgjengelig.",
+      "short" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR).",
+      "definition" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge.",
       "min" : 0,
       "max" : "1",
       "type" : [{

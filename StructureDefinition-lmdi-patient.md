@@ -1,4 +1,4 @@
-# Pasient - Legemiddeldata fra institusjon til Legemiddelregisteret v1.0.8
+# Pasient - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
 *  [Hjem](index.md) 
 *  [Informasjonsmodell](informasjonsmodell.md) 
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient **  | *Version*:1.0.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient **  | *Version*:1.1.0 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Pasient |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-patient",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient",
-  "version" : "1.0.8",
+  "version" : "1.1.0",
   "name" : "Pasient",
   "title" : "Pasient",
   "status" : "draft",

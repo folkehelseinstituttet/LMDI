@@ -18,11 +18,11 @@
      fhir:v "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"^^xsd:anyURI ;
      fhir:l <http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi>
   ] ; # 
-  fhir:version [ fhir:v "1.0.8"] ; # 
+  fhir:version [ fhir:v "1.1.0"] ; # 
   fhir:name [ fhir:v "Lmdi"] ; # 
   fhir:title [ fhir:v "Legemiddeldata fra institusjon til Legemiddelregisteret"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-03-10"^^xsd:date] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-03-27"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -958,7 +958,7 @@
        ] ;
        fhir:value [
          a fhir:Code ;
-         fhir:v "hl7.fhir.uv.tools.r4#1.1.0"
+         fhir:v "hl7.fhir.uv.tools.r4#1.1.2"
        ]
      ] [
        fhir:extension ( [
@@ -1837,6 +1837,50 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Cellegift> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-Cellegift" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-Cellegift" ] ;
+       fhir:description [ fhir:v "Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-EnteredInError> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-EnteredInError" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-EnteredInError" ] ;
+       fhir:description [ fhir:v "Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Infusjon> ;
          fhir:reference [ fhir:v "MedicationAdministration/Administrering-Infusjon" ]
        ] ;
@@ -1859,11 +1903,77 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-MedDiagnoseICD10> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-MedDiagnoseICD10" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-MedDiagnoseICD10" ] ;
+       fhir:description [ fhir:v "Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-MedDiagnoseSCT> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-MedDiagnoseSCT" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-MedDiagnoseSCT" ] ;
+       fhir:description [ fhir:v "Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Oral> ;
          fhir:reference [ fhir:v "MedicationAdministration/Administrering-Oral" ]
        ] ;
        fhir:name [ fhir:v "Administrering-Oral" ] ;
        fhir:description [ fhir:v "Eksempel på administrering av legemiddel" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationAdministration"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Selvadministrert> ;
+         fhir:reference [ fhir:v "MedicationAdministration/Administrering-Selvadministrert" ]
+       ] ;
+       fhir:name [ fhir:v "Administrering-Selvadministrert" ] ;
+       fhir:description [ fhir:v "Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
@@ -1966,11 +2076,33 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-SNOMED-CT> ;
-         fhir:reference [ fhir:v "Condition/Diagnose-SNOMED-CT" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-ICD10-Allergi> ;
+         fhir:reference [ fhir:v "Condition/Diagnose-ICD10-Allergi" ]
        ] ;
-       fhir:name [ fhir:v "Diagnose-SNOMED-CT" ] ;
-       fhir:description [ fhir:v "Eksempel på diagnose SNOMED CT og ICD-10" ] ;
+       fhir:name [ fhir:v "Diagnose-ICD10-Allergi" ] ;
+       fhir:description [ fhir:v "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Condition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-SNOMED-SCT> ;
+         fhir:reference [ fhir:v "Condition/Diagnose-SNOMED-SCT" ]
+       ] ;
+       fhir:name [ fhir:v "Diagnose-SNOMED-SCT" ] ;
+       fhir:description [ fhir:v "Eksempel på diagnose SNOMED CT" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"^^xsd:anyURI ;
@@ -2036,6 +2168,28 @@
        ] ;
        fhir:name [ fhir:v "Episode-Sykehus" ] ;
        fhir:description [ fhir:v "Eksempel på episode i spesialisthelsetjenesten" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Encounter"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Sykehus-2> ;
+         fhir:reference [ fhir:v "Encounter/Episode-Sykehus-2" ]
+       ] ;
+       fhir:name [ fhir:v "Episode-Sykehus-2" ] ;
+       fhir:description [ fhir:v "Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"^^xsd:anyURI ;
@@ -2244,10 +2398,164 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser> ;
-         fhir:reference [ fhir:v "Medication/Legemiddel-Lokalt-Med-Flere-Ingredienser" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddeldose> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddeldose" ]
        ] ;
-       fhir:name [ fhir:v "Legemiddel-Lokalt-Med-Flere-Ingredienser" ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLegemiddeldose" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med FEST legemiddeldose-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelMerkevare> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelMerkevare" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLegemiddelMerkevare" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelpakning> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelpakning" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLegemiddelpakning" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med FEST legemiddelpakning-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelVirkestoff> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelVirkestoff" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLegemiddelVirkestoff" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelVirkestoff-2> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelVirkestoff-2" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLegemiddelVirkestoff-2" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLmrLopenr> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-FestLmrLopenr" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-FestLmrLopenr" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med LMR-løpenummer" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Legemiddeldose-SmofKabiven> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-Legemiddeldose-SmofKabiven" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-Legemiddeldose-SmofKabiven" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-LokaltLegemiddel-FlereIngredienser" ] ;
        fhir:description [ fhir:v "Eksempel på lokalt legemiddel med flere ingredienser" ] ;
        fhir:example [
          a fhir:Canonical ;
@@ -2266,11 +2574,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Monoket-FEST-Pakning> ;
-         fhir:reference [ fhir:v "Medication/Legemiddel-Monoket-FEST-Pakning" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-SCT> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-SCT" ]
        ] ;
-       fhir:name [ fhir:v "Legemiddel-Monoket-FEST-Pakning" ] ;
-       fhir:description [ fhir:v "Eksempel på legemiddel - paking" ] ;
+       fhir:name [ fhir:v "Legemiddel-SCT" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med SNOMED CT-kode" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
@@ -2288,11 +2596,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Oksykodon-FEST-Virkestoff> ;
-         fhir:reference [ fhir:v "Medication/Legemiddel-Oksykodon-FEST-Virkestoff" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-UtenCoding> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-UtenCoding" ]
        ] ;
-       fhir:name [ fhir:v "Legemiddel-Oksykodon-FEST-Virkestoff" ] ;
-       fhir:description [ fhir:v "Eksempel på legemiddel" ] ;
+       fhir:name [ fhir:v "Legemiddel-UtenCoding" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
@@ -2310,11 +2618,11 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Paracetamol-FEST-Merkevare> ;
-         fhir:reference [ fhir:v "Medication/Legemiddel-Paracetamol-FEST-Merkevare" ]
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Varenummer> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-Varenummer" ]
        ] ;
-       fhir:name [ fhir:v "Legemiddel-Paracetamol-FEST-Merkevare" ] ;
-       fhir:description [ fhir:v "Eksempel på legemiddel - Paracetamol" ] ;
+       fhir:name [ fhir:v "Legemiddel-Varenummer" ] ;
+       fhir:description [ fhir:v "Eksempel på legemiddel identifisert med varenummer" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
@@ -2496,6 +2804,28 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Lokalt-legemiddel-cellegift> ;
+         fhir:reference [ fhir:v "Medication/Lokalt-legemiddel-cellegift" ]
+       ] ;
+       fhir:name [ fhir:v "Lokalt-legemiddel-cellegift" ] ;
+       fhir:description [ fhir:v "Eksempel på lokalt katalogisert cellegift (Cisplatin)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "NamingSystem"
          ]
        ] ) ;
@@ -2588,7 +2918,7 @@
          fhir:reference [ fhir:v "StructureDefinition/npr-episode-identifier" ]
        ] ;
        fhir:name [ fhir:v "NPR Episode Identifier" ] ;
-       fhir:description [ fhir:v "Entydig identifikator for episode som skal sendes til LMDI. Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Forretningsregelen for LMDI er at kun én NPR-identifikator skal sendes per episode. Selv om helseinstitusjonens systemer kan ha flere NPR-identifiere for samme episode lokalt, skal kun én velges ved innsending - gjerne den første eller foretrukne identifikatoren lokalt." ] ;
+       fhir:description [ fhir:v "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2670,11 +3000,77 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-HF-2> ;
+         fhir:reference [ fhir:v "Organization/Organisasjon-HF-2" ]
+       ] ;
+       fhir:name [ fhir:v "Organisasjon-HF-2" ] ;
+       fhir:description [ fhir:v "Eksempel på Helseforetak (Helse Møre og Romsdal HF)" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-Kommune> ;
          fhir:reference [ fhir:v "Organization/Organisasjon-Kommune" ]
        ] ;
        fhir:name [ fhir:v "Organisasjon-Kommune" ] ;
        fhir:description [ fhir:v "Eksempel på kommune i primærhelsetjenesten" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-Post> ;
+         fhir:reference [ fhir:v "Organization/Organisasjon-Post" ]
+       ] ;
+       fhir:name [ fhir:v "Organisasjon-Post" ] ;
+       fhir:description [ fhir:v "Eksempel på post – laveste nivå i organisasjonshierarkiet" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-Seksjon> ;
+         fhir:reference [ fhir:v "Organization/Organisasjon-Seksjon" ]
+       ] ;
+       fhir:name [ fhir:v "Organisasjon-Seksjon" ] ;
+       fhir:description [ fhir:v "Eksempel på seksjonsnivå i organisasjonshierarkiet" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
@@ -2719,6 +3115,28 @@
        ] ;
        fhir:name [ fhir:v "Organisasjon-Sykehus" ] ;
        fhir:description [ fhir:v "Eksempel på sykehusorganisasjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-Sykehus-2> ;
+         fhir:reference [ fhir:v "Organization/Organisasjon-Sykehus-2" ]
+       ] ;
+       fhir:name [ fhir:v "Organisasjon-Sykehus-2" ] ;
+       fhir:description [ fhir:v "Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"^^xsd:anyURI ;
@@ -2849,10 +3267,76 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-prosentvis-doseendring" ]
        ] ;
        fhir:name [ fhir:v "Prosentvis doseendring" ] ;
-       fhir:description [ fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi." ] ;
+       fhir:description [ fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Cellegift> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Cellegift" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-Cellegift" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-EnteredInError> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-EnteredInError" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-EnteredInError" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Infusjon> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Infusjon" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-Infusjon" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering for intravenøs infusjon" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
        ]
      ] [
        fhir:extension ( [
@@ -2871,6 +3355,28 @@
        ] ;
        fhir:name [ fhir:v "Rekvirering-Kjemoterapi" ] ;
        fhir:description [ fhir:v "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "MedicationRequest"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-MedDiagnoseICD10> ;
+         fhir:reference [ fhir:v "MedicationRequest/Rekvirering-MedDiagnoseICD10" ]
+       ] ;
+       fhir:name [ fhir:v "Rekvirering-MedDiagnoseICD10" ] ;
+       fhir:description [ fhir:v "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
