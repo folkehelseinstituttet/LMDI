@@ -74,15 +74,13 @@
                     </span>
                 </div>
                 <div class="fhi-lang-selector">
-                    <div class="fhi-lang-dropdown">
-                        <button class="fhi-lang-btn" id="fhi-lang-btn" aria-haspopup="true" aria-expanded="false">
-                            <span id="fhi-lang-current">NO</span>
-                            <span class="fhi-lang-chevron">&#9660;</span>
-                        </button>
-                        <ul class="fhi-lang-menu" id="fhi-lang-menu" role="menu">
-                            <li role="menuitem"><a href="#" data-lang="no">&#127475;&#127476; Norsk</a></li>
-                            <li role="menuitem"><a href="#" data-lang="en">&#127468;&#127463; English</a></li>
-                        </ul>
+                    <div class="fhi-lang-select-wrap">
+                        <label class="visually-hidden" for="fhi-lang-select">Language / Språk</label>
+                        <select id="fhi-lang-select" class="fhi-lang-select">
+                            <option value="no">NO – Norsk</option>
+                            <option value="en">EN – English</option>
+                        </select>
+                        <span class="fhi-lang-chevron" aria-hidden="true">&#9660;</span>
                     </div>
                 </div>
             </div>
@@ -302,7 +300,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Wed, Apr 29, 2026 19:26+0000">2026-04-29</span>
+                        title="Wed, Apr 29, 2026 19:44+0000">2026-04-29</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -71,15 +71,13 @@
                     </span>
                 </div>
                 <div class="fhi-lang-selector">
-                    <div class="fhi-lang-dropdown">
-                        <button aria-expanded="false" aria-haspopup="true" id="fhi-lang-btn" class="fhi-lang-btn">
-                            <span id="fhi-lang-current">NO</span>
-                            <span class="fhi-lang-chevron">▼</span>
-                        </button>
-                        <ul role="menu" id="fhi-lang-menu" class="fhi-lang-menu">
-                            <li role="menuitem"><a data-lang="no" href="#">&#x1F1F3;&#x1F1F4; Norsk</a></li>
-                            <li role="menuitem"><a data-lang="en" href="#">&#x1F1EC;&#x1F1E7; English</a></li>
-                        </ul>
+                    <div class="fhi-lang-select-wrap">
+                        <label for="fhi-lang-select" class="visually-hidden">Language / Språk</label>
+                        <select id="fhi-lang-select" class="fhi-lang-select">
+                            <option value="no">NO – Norsk</option>
+                            <option value="en">EN – English</option>
+                        </select>
+                        <span aria-hidden="true" class="fhi-lang-chevron">▼</span>
                     </div>
                 </div>
             </div>
@@ -181,7 +179,7 @@
 
 <p>The Medication Registry already contains data on dispensed medications from pharmacies at the individual level. The LMDI project now specifically focuses on extending this with data on administered medications from hospitals and other institutions, providing a more complete picture of medication use across the entire healthcare system. This is an important extension that will strengthen the foundation for better patient safety, knowledge production, and health surveillance.</p>
 
-<figure><a name="l288">​</a>
+<figure><a name="l283">​</a>
     <img src="../lmdi-2.png" width="49%" style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;"/>
     <figcaption style="font-style: italic; font-size: 14px; margin-top: 5px;">
         Figure: The LMDI project will implement reception of data on administered medications.
@@ -290,7 +288,7 @@
                 <p class="m-0">
                     IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 19:26+0000">2026-04-29</span>
+                        4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 19:44+0000">2026-04-29</span>
                     <br/>
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

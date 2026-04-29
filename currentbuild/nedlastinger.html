@@ -71,15 +71,13 @@
                     </span>
                 </div>
                 <div class="fhi-lang-selector">
-                    <div class="fhi-lang-dropdown">
-                        <button aria-expanded="false" aria-haspopup="true" id="fhi-lang-btn" class="fhi-lang-btn">
-                            <span id="fhi-lang-current">NO</span>
-                            <span class="fhi-lang-chevron">▼</span>
-                        </button>
-                        <ul role="menu" id="fhi-lang-menu" class="fhi-lang-menu">
-                            <li role="menuitem"><a data-lang="no" href="#">&#x1F1F3;&#x1F1F4; Norsk</a></li>
-                            <li role="menuitem"><a data-lang="en" href="#">&#x1F1EC;&#x1F1E7; English</a></li>
-                        </ul>
+                    <div class="fhi-lang-select-wrap">
+                        <label for="fhi-lang-select" class="visually-hidden">Language / Språk</label>
+                        <select id="fhi-lang-select" class="fhi-lang-select">
+                            <option value="no">NO – Norsk</option>
+                            <option value="en">EN – English</option>
+                        </select>
+                        <span aria-hidden="true" class="fhi-lang-chevron">▼</span>
                     </div>
                 </div>
             </div>
@@ -188,7 +186,7 @@
 <h3 id="sertifikater">Sertifikater</h3>
 <p>Sertifikatene er i BASE64-enkodet .cer format. Skal brukes til kryptering av meldinger til Legemiddelregisteret.</p>
 <ul>
-  <li><a name="l316">​</a><a href="certificates.zip">Sertifikater for TEST- og PRODUKSJONSMILJØET</a> - Brukes ved kryptering av meldinger</li>
+  <li><a name="l311">​</a><a href="certificates.zip">Sertifikater for TEST- og PRODUKSJONSMILJØET</a> - Brukes ved kryptering av meldinger</li>
 </ul>
 
 
@@ -214,7 +212,7 @@
                 <p class="m-0">
                     IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 19:26+0000">2026-04-29</span>
+                        4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 19:44+0000">2026-04-29</span>
                     <br/>
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
