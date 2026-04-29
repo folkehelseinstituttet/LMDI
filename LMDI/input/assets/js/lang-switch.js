@@ -55,16 +55,13 @@
     function updateUI() {
         var lang = currentLang();
 
-        // Update lang attribute for accessibility
         document.documentElement.lang = lang === 'en' ? 'en' : 'nb';
 
-        // Update current label in dropdown button
-        var label = document.getElementById('fhi-lang-current');
-        if (label) {
-            label.textContent = lang === 'en' ? 'EN' : 'NO';
+        var select = document.getElementById('fhi-lang-select');
+        if (select) {
+            select.value = lang;
         }
 
-        // Show correct menu
         var menuNo = document.getElementById('menu-no');
         var menuEn = document.getElementById('menu-en');
         if (menuNo && menuEn) {
@@ -77,40 +74,20 @@
             }
         }
 
-        // Persist selection
         try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
     }
 
-    function initDropdown() {
-        var btn = document.getElementById('fhi-lang-btn');
-        var menu = document.getElementById('fhi-lang-menu');
+    function initSelect() {
+        var select = document.getElementById('fhi-lang-select');
+        if (!select) return;
 
-        if (!btn || !menu) return;
-
-        btn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var open = menu.classList.contains('open');
-            menu.classList.toggle('open', !open);
-            btn.setAttribute('aria-expanded', String(!open));
-        });
-
-        document.addEventListener('click', function () {
-            menu.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
-        });
-
-        var items = menu.querySelectorAll('a[data-lang]');
-        items.forEach(function (item) {
-            item.addEventListener('click', function (e) {
-                e.preventDefault();
-                var lang = item.getAttribute('data-lang');
-                switchToLang(lang);
-            });
+        select.addEventListener('change', function () {
+            switchToLang(this.value);
         });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
         updateUI();
-        initDropdown();
+        initSelect();
     });
 })();
