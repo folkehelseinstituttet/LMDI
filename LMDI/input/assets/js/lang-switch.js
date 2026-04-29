@@ -86,8 +86,7 @@
         });
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        updateUI();
-        initSelect();
-    });
+    // Script loads at bottom of <body> – DOM is already ready, no need to wait
+    updateUI();
+    initSelect();
 })();
