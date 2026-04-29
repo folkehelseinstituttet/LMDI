@@ -15,7 +15,7 @@ The purpose of this protocol is to ensure daily transfer of medication administr
 ### 2.2 Technical requirements
 - Data is transferred via the **Medication Registry's FHIR reception API**.
 - Resources must comply with the Medication Registry's **defined FHIR profiles**.
-- Each transfer shall consist of a [signed and encrypted FHIR bundle](SignertKryptertBundle.html) to ensure integrity and confidentiality.
+- Each transfer shall consist of a [signed and encrypted FHIR bundle](en-SignertKryptertBundle.html) to ensure integrity and confidentiality.
 - API access requires authentication via **Maskinporten**.
 
 ## 3. Error handling

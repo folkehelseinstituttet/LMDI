@@ -7,8 +7,8 @@
 FHI has developed example code showing how an integration with the Norwegian Medication Registry can be built. The example code is available in both C# and PowerShell and demonstrates the most important functions for secure data transfer to the registry.
 
 You can find the example code here:
-- [C# example code](eksempelkode_cs.html)
-- [PowerShell example code](eksempelkode_ps1.html)
+- [C# example code](en-eksempelkode_cs.html)
+- [PowerShell example code](en-eksempelkode_ps1.html)
 
 
 #### IP address whitelisting
@@ -19,9 +19,9 @@ Only whitelisting in the production environment is required.
 
 #### Certificates
 
-Data transferred to the API must be encrypted and signed (see [SignedEncryptedBundle](SignertKryptertBundle.html)).
+Data transferred to the API must be encrypted and signed (see [SignedEncryptedBundle](en-SignertKryptertBundle.html)).
 - For signing, the private key in the sender's enterprise certificate is used. The public part of this certificate must be sent to the Medication Registry.
-- For encrypting data, the public key in the Medication Registry's enterprise certificate is used. This can be downloaded [here](nedlastinger.html)
+- For encrypting data, the public key in the Medication Registry's enterprise certificate is used. This can be downloaded [here](en-nedlastinger.html)
 
 
 #### Maskinporten
@@ -43,11 +43,11 @@ To gain access:
 
 ### Transferring data to the Norwegian Medication Registry
 
-Institutions that are to transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: [Protocol for data transfer](protokoll.html).
+Institutions that are to transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: [Protocol for data transfer](en-protokoll.html).
 
 To build a collection of data to be transferred, a [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.html) must be created. This is a specialized FHIR Bundle profile developed for submitting data to the Medication Registry. It is restricted to transaction-type bundles and only allows POST operations, ensuring consistent data handling and traceability. The bundle can only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.
 
-When transferring data, a `SignedEncryptedBundle` must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based `LegemiddelregisterBundle` before sending it to the API. Read more about how to create a `SignedEncryptedBundle` in [this guide](SignertKryptertBundle.html).
+When transferring data, a `SignedEncryptedBundle` must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based `LegemiddelregisterBundle` before sending it to the API. Read more about how to create a `SignedEncryptedBundle` in [this guide](en-SignertKryptertBundle.html).
 
 URL to the Medication Registry's API:
   - TEST environment: [https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1](https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1)

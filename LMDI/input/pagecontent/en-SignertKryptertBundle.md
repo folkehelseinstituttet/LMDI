@@ -2,7 +2,7 @@ When data is to be delivered from institutions to the Norwegian Medication Regis
 
 This describes how to create a `SignedEncryptedBundle` to be sent to the Medication Registry's API. Implementation details (language, libraries, etc.) are up to you, as long as the result conforms to the specification below.
 
-Example code for generating a SignedEncryptedBundle: [Example in C#](eksempelkode_cs.html)
+Example code for generating a SignedEncryptedBundle: [Example in C#](en-eksempelkode_cs.html)
 
 <img src="../signertkryptertbundle.svg" width="50%" />
 <br clear="all"/>
@@ -40,7 +40,7 @@ The result after GZip compression shall be a byte array containing the compresse
 
 ### 4. Encrypt the AES key with RSA (Medication Registry's public key)
 
-The 256-bit AES key from step 3 is encrypted with the Medication Registry's public RSA key. This is available in the certificates that can be downloaded [here](nedlastinger.html)
+The 256-bit AES key from step 3 is encrypted with the Medication Registry's public RSA key. This is available in the certificates that can be downloaded [here](en-nedlastinger.html)
 
 The algorithm shall be RSA OAEP with SHA-256 (RSAEncryptionPadding.OaepSHA256). The result is a byte array `encryptedKey`.
 

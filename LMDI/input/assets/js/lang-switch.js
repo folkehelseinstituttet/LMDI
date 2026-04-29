@@ -16,7 +16,7 @@
     var STORAGE_KEY = 'lmdi-lang';
 
     function isEnglish() {
-        return window.location.pathname.indexOf('/en/') !== -1;
+        return currentFilename().indexOf('en-') === 0;
     }
 
     function currentLang() {
@@ -29,13 +29,6 @@
     }
 
     function rootPrefix() {
-        // From en/ pages, assets prefix is '../'; from root it is '' or './'
-        // We derive the root by walking up from the current path
-        if (isEnglish()) {
-            var path = window.location.pathname;
-            var enIndex = path.indexOf('/en/');
-            return path.substring(0, enIndex + 1); // absolute path to root, e.g. /fhir/ig/lmdi/
-        }
         var parts = window.location.pathname.split('/');
         parts.pop(); // remove filename
         return parts.join('/') + '/';
@@ -46,11 +39,14 @@
         var root = rootPrefix();
 
         if (lang === 'en') {
-            var target = KNOWN_PAGES.indexOf(file) !== -1 ? file : 'index.html';
-            window.location.href = root + 'en/' + target;
+            if (!isEnglish()) {
+                var target = KNOWN_PAGES.indexOf(file) !== -1 ? file : 'index.html';
+                window.location.href = root + 'en-' + target;
+            }
         } else {
             if (isEnglish()) {
-                var target2 = KNOWN_PAGES.indexOf(file) !== -1 ? file : 'index.html';
+                var noFile = file.replace(/^en-/, '');
+                var target2 = KNOWN_PAGES.indexOf(noFile) !== -1 ? noFile : 'index.html';
                 window.location.href = root + target2;
             }
         }
