@@ -69,7 +69,7 @@ This value set cannot be expanded because of the way it is defined - it has an i
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "active",
-  "date" : "2026-04-29T19:44:03+00:00",
+  "date" : "2026-04-29T20:17:30+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
