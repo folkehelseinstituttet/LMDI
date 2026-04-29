@@ -239,3 +239,79 @@ a:not(.nav-link) {
   font-size: var(--fhi-font-size-3)!important;
   text-align: left!important;
 }
+
+/* Language selector dropdown */
+.fhi-lang-selector {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.fhi-lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.fhi-lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--fhi-font-family-roboto-flex);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.fhi-lang-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.fhi-lang-chevron {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+.fhi-lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  list-style: none;
+  margin: 0;
+  min-width: 130px;
+  padding: 4px 0;
+  z-index: 1000;
+}
+
+.fhi-lang-menu.open {
+  display: block;
+}
+
+.fhi-lang-menu li {
+  padding: 0;
+}
+
+.fhi-lang-menu li a {
+  color: #333 !important;
+  display: block;
+  font-size: 0.9rem !important;
+  padding: 6px 14px;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.fhi-lang-menu li a:hover {
+  background: #f0f0f0;
+}

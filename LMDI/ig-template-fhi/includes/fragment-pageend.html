@@ -91,34 +91,40 @@
         return false;
     };
 
-    // Style FHI menu
+    // Style FHI menu (applied to both language menus)
     const classMenuNav = 'fhi-main-menu-alt__nav',
         classMenuNavItem = 'fhi-main-menu-alt__nav-item',
         classMenuNavLink = 'fhi-main-menu-alt__nav-link';
-    const menu = document.getElementById('menu');
-    const ul = menu.querySelector('ul');
-    ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
-    ul.querySelectorAll('li').forEach(li => {
-        li.classList.add(classMenuNavItem);
-        li.querySelectorAll('a').forEach(a => {
-            a.classList.add('nav-link', classMenuNavLink);
-        });
 
-        if (li.classList.contains('dropdown')) {
-            li.addEventListener('click', () => {
-                li.classList.toggle('show');
-                li.querySelector('ul').classList.toggle('show');
+    ['menu-no', 'menu-en'].forEach(menuId => {
+        const menuDiv = document.getElementById(menuId);
+        if (!menuDiv) return;
+        const ul = menuDiv.querySelector('ul');
+        if (!ul) return;
+        ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+        ul.querySelectorAll('li').forEach(li => {
+            li.classList.add(classMenuNavItem);
+            li.querySelectorAll('a').forEach(a => {
+                a.classList.add('nav-link', classMenuNavLink);
             });
-        }
+
+            if (li.classList.contains('dropdown')) {
+                li.addEventListener('click', () => {
+                    li.classList.toggle('show');
+                    li.querySelector('ul').classList.toggle('show');
+                });
+            }
+        });
     });
 
-    // Set active class on menu item
+    // Set active class on menu item (compare by filename only to support both root and en/ depth)
     const path = window.location.pathname;
     const page = path.split("/").pop();
     const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
     menuItems.forEach(item => {
         const menuLink = item.querySelector('a').getAttribute('href');
-        if (menuLink === page) {
+        const linkPage = menuLink.split('/').pop();
+        if (linkPage === page) {
             item.classList.add('active');
             item.querySelector('a').classList.add('active');
         }
@@ -131,6 +137,7 @@
     // Init clipboard.js - commented out as library was removed
     // new ClipboardJS('.btn-copy');
 </script>
+<script type="text/javascript" src="{{site.data.info.assets}}assets/js/lang-switch.js"> </script>
 <!-- Analytics Below
   ================================================== -->
 </body>

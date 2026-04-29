@@ -2,8 +2,24 @@
     <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
         <div class="container fhi-main-menu-alt__container">
             <div class="fhi-main-menu-alt__collapse">
-                <div id="menu">
+                <div id="menu-no" class="lang-menu">
                     {% include menu.xml %}
+                </div>
+                <div id="menu-en" class="lang-menu" style="display:none">
+                    <ul>
+                        <li><a href="{{site.data.info.assets}}en/index.html">Home</a></li>
+                        <li><a href="{{site.data.info.assets}}en/informasjonsmodell.html">Information Model</a></li>
+                        <li class="dropdown"><a href="{{site.data.info.assets}}en/integrasjon.html">Integration</a>
+                            <ul>
+                                <li><a href="{{site.data.info.assets}}en/protokoll.html">Protocol</a></li>
+                                <li><a href="{{site.data.info.assets}}en/SignertKryptertBundle.html">SignedEncryptedBundle</a></li>
+                                <li><a href="{{site.data.info.assets}}en/eksempelkode_cs.html">C# Example Code</a></li>
+                                <li><a href="{{site.data.info.assets}}en/eksempelkode_ps1.html">PowerShell Example Code</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{site.data.info.assets}}en/profiler.html">FHIR Profiles</a></li>
+                        <li><a href="{{site.data.info.assets}}en/nedlastinger.html">Downloads</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
