@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Home - Legemiddeldata fra institusjon til Legemiddelregisteret
+        v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/prism.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/cqf.css" type="text/css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/fhir.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/fhi.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/project.css" type="text/css"/>
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+
+
+    <script src="assets/js/fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+    <link sizes="32x32" rel="icon" href="assets/images/favicon.ico"/>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script src="assets/js/prism.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <div id="segment-header" class="segment">   <!-- segment-header -->
+        <div class="container">   <!-- container -->
+            
+              <!-- Placeholder for child template header declarations -->
+
+
+<header class="fhi-header mb-0">
+    <div class="fhi-header__brand">
+        <div class="container fhi-header__brand-container">
+            <div class="fhi-header__brand-content">
+                <a href="index.html" class="fhi-header__logo">
+                    <i class="icon-fhi-logo fhi-header__logo-icon"></i>
+                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                </a>
+                <div class="fhi-header__project">
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> — 1.1.0 - ci-build
+                            
+                            
+                            
+                            <img src="assets/images/nor.svg" alt="Norway flag" title="Norway" height="16"/>
+                            
+                            
+                        </span>
+                    </span>
+                </div>
+                <div class="fhi-lang-selector">
+                    <div class="fhi-lang-dropdown">
+                        <button aria-expanded="false" aria-haspopup="true" id="fhi-lang-btn" class="fhi-lang-btn">
+                            <span id="fhi-lang-current">NO</span>
+                            <span class="fhi-lang-chevron">▼</span>
+                        </button>
+                        <ul role="menu" id="fhi-lang-menu" class="fhi-lang-menu">
+                            <li role="menuitem"><a data-lang="no" href="#">&#x1F1F3;&#x1F1F4; Norsk</a></li>
+                            <li role="menuitem"><a data-lang="en" href="#">&#x1F1EC;&#x1F1E7; English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+        </div>   <!-- /container -->
+    </div>   <!-- /segment-header -->
+
+    <div class="container fhi-header__main-menu-alt-container">
+    <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
+        <div class="container fhi-main-menu-alt__container">
+            <div class="fhi-main-menu-alt__collapse">
+                <div id="menu-no" class="lang-menu">
+                      <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Hjem</a>
+  </li>
+  <li>
+    <a href="informasjonsmodell.html">Informasjonsmodell</a>
+  </li>
+  <li>
+    <a href="integrasjon.html">Integrasjon</a>
+  </li>
+  <li>
+    <a href="profiler.html">FHIR-profiler</a>
+  </li>
+  <li>
+    <a href="nedlastinger.html">Nedlastinger</a>
+  </li>
+</ul>
+                </div>
+                <div style="display:none" id="menu-en" class="lang-menu">
+                    <ul>
+                        <li><a href="en-index.html">Home</a></li>
+                        <li><a href="en-informasjonsmodell.html">Information Model</a></li>
+                        <li class="dropdown"><a href="en-integrasjon.html">Integration</a>
+                            <ul>
+                                <li><a href="en-protokoll.html">Protocol</a></li>
+                                <li><a href="en-SignertKryptertBundle.html">SignedEncryptedBundle</a></li>
+                                <li><a href="en-eksempelkode_cs.html">C# Example Code</a></li>
+                                <li><a href="en-eksempelkode_ps1.html">PowerShell Example Code</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="en-profiler.html">FHIR Profiles</a></li>
+                        <li><a href="en-nedlastinger.html">Downloads</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div id="segment-breadcrumb" class="segment">   <!-- segment-breadcrumb -->
+        <div class="container p-0">   <!-- container -->
+            <ul class="breadcrumb p-2 mb-1">
+                <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Home</b></li>
+                
+            </ul>
+        </div>   <!-- /container -->
+    </div>   <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">   <!-- segment-content -->
+        <div class="container">   <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+
+<div class="col-12">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+
+<h3 id="medication-data-from-institution-to-the-norwegian-medication-registry-lmdi">Medication Data from Institution to the Norwegian Medication Registry (LMDI)</h3>
+
+<p>Complete and up-to-date health data on medications are available for analysis and research to improve quality, governance, health surveillance, emergency preparedness, and knowledge management in healthcare.</p>
+
+<h4 id="objective">Objective</h4>
+
+<p>Collect medication data at the individual level from outpatient and inpatient patients in institutions to the Norwegian Medication Registry (LMR). As part of this, an implementation guide (IG) based on a shared information model and HL7 FHIR (this document) is being developed. This will be used for submitting data from institutions to LMR via data sharing (secured REST API).</p>
+
+<p>The Medication Registry already contains data on dispensed medications from pharmacies at the individual level. The LMDI project now specifically focuses on extending this with data on administered medications from hospitals and other institutions, providing a more complete picture of medication use across the entire healthcare system. This is an important extension that will strengthen the foundation for better patient safety, knowledge production, and health surveillance.</p>
+
+<figure><a name="l288">​</a>
+    <img src="../lmdi-2.png" width="49%" style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;"/>
+    <figcaption style="font-style: italic; font-size: 14px; margin-top: 5px;">
+        Figure: The LMDI project will implement reception of data on administered medications.
+    </figcaption>
+</figure>
+<p><br clear="all"/></p>
+
+<h4 id="no-basis-dependencies">no-basis dependencies</h4>
+
+<p>The LMDI profiles are based on <a href="https://hl7.no/fhir/no-basis/">no-basis</a> – the Norwegian base profiles for FHIR. no-basis provides standardized profiles adapted to Norwegian conditions, including identifiers, addresses, and code systems.</p>
+
+<p>The following LMDI profiles inherit from no-basis:</p>
+<ul>
+  <li><strong>Healthcare professional</strong> is based on no-basis-Practitioner (HPR number, Norwegian specialties)</li>
+  <li><strong>Organization</strong> is based on no-basis-Organization (organization number, RESH-ID)</li>
+  <li><strong>Patient</strong> is based on no-basis-Patient (national identity number, D-number, Norwegian addresses)</li>
+  <li><strong>Substance</strong> is based on no-basis-Substance (active ingredients in a Norwegian context)</li>
+</ul>
+
+<p>This provides consistent handling of Norwegian identifiers and code systems across the health sector. To use the LMDI profiles, no-basis (version 2.2.0) must be installed as a dependency.</p>
+
+<h4 id="implementation-guide-versions">Implementation guide versions</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.1.0</td>
+      <td>2026-04-13</td>
+      <td><strong>Breaking changes:</strong><br/>LokaltLegemiddel uses new URL: <code class="language-plaintext highlighter-rouge">http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</code> (previously <code class="language-plaintext highlighter-rouge">fh.no/lokaltVirkemiddel</code>)<br/>Medication must have either a code or an active ingredient<br/><code class="language-plaintext highlighter-rouge">organisatoriskNiva</code> is no longer allowed on Organization<br/>Condition: <code class="language-plaintext highlighter-rouge">stage.summary</code> must be filled in when <code class="language-plaintext highlighter-rouge">stage</code> is used<br/>MedicationAdministration: route of administration must be coded with a <code class="language-plaintext highlighter-rouge">code</code> value<br/><strong>Other changes:</strong><br/>IG status set to active<br/>New <code class="language-plaintext highlighter-rouge">category</code> field in MedicationAdministration (including <code class="language-plaintext highlighter-rouge">community</code> for self-administration)<br/>Clarified that <code class="language-plaintext highlighter-rouge">prosentvisDoseendring</code> 100% = unmodified dose<br/><code class="language-plaintext highlighter-rouge">LegemiddelKoder</code> extended with LMR serial number, item number and lokaltLegemiddel<br/>Patient: removed redundant address-use constraint; <code class="language-plaintext highlighter-rouge">identifier</code> definition relaxed<br/>Consistent naming of example instances; new examples for condition, infusion, entered-in-error, chemotherapy, self-administration, medication without code and organization hierarchy</td>
+    </tr>
+    <tr>
+      <td>1.0.8</td>
+      <td>2026-03-10</td>
+      <td>Improved FSH examples: fixed validation errors, added missing fields, new scenario-based Bundle examples (nursing home, prescription, chemotherapy)<br/>Substance allowed in LegemiddelregisterBundle<br/>Harmonized no-basis version in build scripts<br/>Fixed typos and removed outdated comments in profiles</td>
+    </tr>
+    <tr>
+      <td>1.0.7</td>
+      <td>2025-09-30</td>
+      <td>Removed country field from address in Patient and Organization<br/>address.type set to physical in Patient (physical addresses only)<br/>Changed municipality extension from propertyInformation to municipalitycode in Patient<br/>Removed citizenship extension from Patient<br/>Changed urban district extension from lmdi-urban-district to no-basis urbanDistrict in Organization</td>
+    </tr>
+    <tr>
+      <td>1.0.6</td>
+      <td>2025-09-12</td>
+      <td>Healthcare professional, Organization, Patient and Substance are now based on no-basis<br/></td>
+    </tr>
+    <tr>
+      <td>1.0.5</td>
+      <td>2025-07-28</td>
+      <td>NPR Episode Identifier extension changed to support both string and UUID simultaneously. Extension is now a complex structure with sub-extensions for stringIdentifier and uuidIdentifier.<br/>Added LmrLopenummer and FestVarenummer slices to <code class="language-plaintext highlighter-rouge">Medication.code.coding</code></td>
+    </tr>
+    <tr>
+      <td>1.0.4</td>
+      <td>2025-05-30</td>
+      <td>Medication.code can now be a SNOMED CT code.<br/> New profile Substance to be used for Substance resources.<br/>New extension (Must Support) Episode.nprEpisodeIdentifier. <br/> New C# example code for authorization with HelseID.</td>
+    </tr>
+    <tr>
+      <td>1.0.3</td>
+      <td>2025-04-11</td>
+      <td>Removed MedicationRequest.dosageInstruction.patientInstruction and Medication.text from the profile. <br/> New extension: Medication.classification. <br/> Added example code in C# and PowerShell</td>
+    </tr>
+    <tr>
+      <td>1.0.2</td>
+      <td>2025-04-01</td>
+      <td>New extensions added to the MedicationRequest profile: ProsentvisDoseendring, DelAvBehandlingsregime, KliniskStudie</td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>2025-02-04</td>
+      <td>Changed LegemiddelregisterBundle. Bundle type changed from Batch to Transaction</td>
+    </tr>
+    <tr>
+      <td>1.0.0</td>
+      <td>2025-01-15</td>
+      <td>First official version. Ready for testing.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+</div>   <!-- /inner-wrapper -->
+</div>   <!-- /row -->
+</div>   <!-- /container -->
+</div>   <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>
+  <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<footer igtool="footer" id="segment-footer" class="segment">   <!-- segment-footer -->
+    <div class="container">   <!-- container -->
+        <div class="container-fluid">
+            
+            <div class="inner-wrapper p-3">
+                <p class="m-0">
+                    IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
+                    Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span title="Wed, Apr 29, 2026 19:26+0000">2026-04-29</span>
+                    <br/>
+                    <span style="color: var(--footer-highlight-text-color)">
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    </span>
+                </p>
+            </div>   <!-- /inner-wrapper -->
+        </div>
+    </div>  <!-- /container -->
+</footer>   <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden d-none">   <!-- segment-post-footer -->
+    <div class="container">   <!-- container -->
+    </div>   <!-- /container -->
+</div>   <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+<script id="page-data" type="application/json">
+  {
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>"
+  }
+</script>
+<script type="text/javascript">
+    const pageData = JSON.parse(document.getElementById("page-data").textContent);
+
+    const secondLevel = (key) => {
+        if (pageData.breadcrumb) {
+            const liRegex = /<li>(.*?)<\/li>/g;
+            const listItems = [...pageData.breadcrumb.matchAll(liRegex)].map(match => match[1].trim());
+            return listItems[1]?.includes(key) || false;
+        }
+        return false;
+    };
+
+    // Style FHI menu (applied to both language menus)
+    const classMenuNav = 'fhi-main-menu-alt__nav',
+        classMenuNavItem = 'fhi-main-menu-alt__nav-item',
+        classMenuNavLink = 'fhi-main-menu-alt__nav-link';
+
+    ['menu-no', 'menu-en'].forEach(menuId => {
+        const menuDiv = document.getElementById(menuId);
+        if (!menuDiv) return;
+        const ul = menuDiv.querySelector('ul');
+        if (!ul) return;
+        ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+        ul.querySelectorAll('li').forEach(li => {
+            li.classList.add(classMenuNavItem);
+            li.querySelectorAll('a').forEach(a => {
+                a.classList.add('nav-link', classMenuNavLink);
+            });
+
+            if (li.classList.contains('dropdown')) {
+                li.addEventListener('click', () => {
+                    li.classList.toggle('show');
+                    li.querySelector('ul').classList.toggle('show');
+                });
+            }
+        });
+    });
+
+    // Set active class on menu item (compare by filename only to support both root and en/ depth)
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
+    menuItems.forEach(item => {
+        const menuLink = item.querySelector('a').getAttribute('href');
+        const linkPage = menuLink.split('/').pop();
+        if (linkPage === page) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+        else if (secondLevel(menuLink)) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+    });
+
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
+</script>
+<script src="assets/js/lang-switch.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+</body>
+
+</html>

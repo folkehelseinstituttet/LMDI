@@ -1,0 +1,63 @@
+# Legemiddel-FestLegemiddelVirkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+
+*  [Hjem](index.md) 
+*  [Informasjonsmodell](informasjonsmodell.md) 
+*  [Integrasjon](integrasjon.md) 
+*  [FHIR-profiler](profiler.md) 
+*  [Nedlastinger](nedlastinger.md) 
+
+* [Home](en-index.md)
+* [Information Model](en-informasjonsmodell.md)
+* [Integration](en-integrasjon.md) 
+* [Protocol](en-protokoll.md)
+* [SignedEncryptedBundle](en-SignertKryptertBundle.md)
+* [C# Example Code](en-eksempelkode_cs.md)
+* [PowerShell Example Code](en-eksempelkode_ps1.md)
+ 
+* [FHIR Profiles](en-profiler.md)
+* [Downloads](en-nedlastinger.md)
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Legemiddel-FestLegemiddelVirkestoff**
+
+## Example Medication: Legemiddel-FestLegemiddelVirkestoff
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Medication",
+  "id" : "Legemiddel-FestLegemiddelVirkestoff",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://www.whocc.no/atc",
+        "code" : "N02AA05",
+        "display" : "Oksykodon"
+      }]
+    }
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+      "code" : "ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E",
+      "display" : "Oksykodon mikst oppl 1 mg/ml"
+    }]
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+      "code" : "842",
+      "display" : "Mikstur, oppløsning"
+    }]
+  }
+}
+
+```

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-Selvadministrert"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medication-admin-category"/>
+      <code value="community"/>
+      <display value="Community"/>
+    </coding>
+  </category>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-Varenummer"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Episode-Sykehus"/>
+  </context>
+  <effectiveDateTime value="2025-08-14T10:00:00+02:00"/>
+  <dosage>
+    <route>
+      <coding>
+        <system value="urn:oid:2.16.578.1.12.4.1.1.7477"/>
+        <code value="53"/>
+        <display value="Oral bruk"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="10"/>
+      <unit value="milligram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

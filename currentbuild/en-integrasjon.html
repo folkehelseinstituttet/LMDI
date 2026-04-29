@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <title>Integration - Legemiddeldata fra institusjon til Legemiddelregisteret
+        v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="http://hl7.org/fhir" />
+
+    <link type="text/css" href="assets/css/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/pygments-manni.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
+    <link type="text/css" href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/fhi.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/project.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+
+    
+
+    
+
+    </style>
+
+
+    <script type="text/javascript" src="assets/js/fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="icon" sizes="32x32" href="assets/images/favicon.ico" />
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <div id="segment-header" class="segment"> <!-- segment-header -->
+        <div class="container"> <!-- container -->
+            
+            <!-- Placeholder for child template header declarations -->
+
+
+<header class="fhi-header mb-0">
+    <div class="fhi-header__brand">
+        <div class="container fhi-header__brand-container">
+            <div class="fhi-header__brand-content">
+                <a class="fhi-header__logo" href="index.html">
+                    <i class="icon-fhi-logo fhi-header__logo-icon"></i>
+                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                </a>
+                <div class="fhi-header__project">
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.0 - ci-build
+                            
+                            
+                            
+                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
+                                title="Norway" />
+                            
+                            
+                        </span>
+                    </span>
+                </div>
+                <div class="fhi-lang-selector">
+                    <div class="fhi-lang-dropdown">
+                        <button class="fhi-lang-btn" id="fhi-lang-btn" aria-haspopup="true" aria-expanded="false">
+                            <span id="fhi-lang-current">NO</span>
+                            <span class="fhi-lang-chevron">&#9660;</span>
+                        </button>
+                        <ul class="fhi-lang-menu" id="fhi-lang-menu" role="menu">
+                            <li role="menuitem"><a href="#" data-lang="no">&#127475;&#127476; Norsk</a></li>
+                            <li role="menuitem"><a href="#" data-lang="en">&#127468;&#127463; English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            
+        </div> <!-- /container -->
+    </div> <!-- /segment-header -->
+
+    <div class="container fhi-header__main-menu-alt-container">
+    <nav class="fhi-main-menu-alt fhi-main-menu-alt--open">
+        <div class="container fhi-main-menu-alt__container">
+            <div class="fhi-main-menu-alt__collapse">
+                <div id="menu-no" class="lang-menu">
+                    <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Hjem</a>
+  </li>
+  <li>
+    <a href="informasjonsmodell.html">Informasjonsmodell</a>
+  </li>
+  <li>
+    <a href="integrasjon.html">Integrasjon</a>
+  </li>
+  <li>
+    <a href="profiler.html">FHIR-profiler</a>
+  </li>
+  <li>
+    <a href="nedlastinger.html">Nedlastinger</a>
+  </li>
+</ul>
+                </div>
+                <div id="menu-en" class="lang-menu" style="display:none">
+                    <ul>
+                        <li><a href="en-index.html">Home</a></li>
+                        <li><a href="en-informasjonsmodell.html">Information Model</a></li>
+                        <li class="dropdown"><a href="en-integrasjon.html">Integration</a>
+                            <ul>
+                                <li><a href="en-protokoll.html">Protocol</a></li>
+                                <li><a href="en-SignertKryptertBundle.html">SignedEncryptedBundle</a></li>
+                                <li><a href="en-eksempelkode_cs.html">C# Example Code</a></li>
+                                <li><a href="en-eksempelkode_ps1.html">PowerShell Example Code</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="en-profiler.html">FHIR Profiles</a></li>
+                        <li><a href="en-nedlastinger.html">Downloads</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
+        <div class="container p-0"> <!-- container -->
+            <ul class="breadcrumb p-2 mb-1">
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Integration</b></li>
+                
+            </ul>
+        </div> <!-- /container -->
+    </div> <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment"> <!-- segment-content -->
+        <div class="container"> <!-- container -->
+            <div class="row">
+                <div class="inner-wrapper">
+
+<div class="col-12">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#setting-up-integration-with-the-norwegian-medication-registry" id="markdown-toc-setting-up-integration-with-the-norwegian-medication-registry">Setting up integration with the Norwegian Medication Registry</a></li>
+  <li><a href="#transferring-data-to-the-norwegian-medication-registry" id="markdown-toc-transferring-data-to-the-norwegian-medication-registry">Transferring data to the Norwegian Medication Registry</a></li>
+</ul>
+
+</div>
+
+<h3 id="setting-up-integration-with-the-norwegian-medication-registry">Setting up integration with the Norwegian Medication Registry</h3>
+
+<h4 id="example-code">Example code</h4>
+
+<p>FHI has developed example code showing how an integration with the Norwegian Medication Registry can be built. The example code is available in both C# and PowerShell and demonstrates the most important functions for secure data transfer to the registry.</p>
+
+<p>You can find the example code here:</p>
+<ul>
+  <li><a href="en-eksempelkode_cs.html">C# example code</a></li>
+  <li><a href="en-eksempelkode_ps1.html">PowerShell example code</a></li>
+</ul>
+
+<h4 id="ip-address-whitelisting">IP address whitelisting</h4>
+
+<p>To access the API for data transfer, the sending system’s IP address must be registered in the LMR’s list of whitelisted addresses. Both individual addresses and address ranges can be whitelisted.
+Only whitelisting in the production environment is required.</p>
+
+<h4 id="certificates">Certificates</h4>
+
+<p>Data transferred to the API must be encrypted and signed (see <a href="en-SignertKryptertBundle.html">SignedEncryptedBundle</a>).</p>
+<ul>
+  <li>For signing, the private key in the sender’s enterprise certificate is used. The public part of this certificate must be sent to the Medication Registry.</li>
+  <li>For encrypting data, the public key in the Medication Registry’s enterprise certificate is used. This can be downloaded <a href="en-nedlastinger.html">here</a></li>
+</ul>
+
+<h4 id="maskinporten">Maskinporten</h4>
+
+<p>The API is protected by Maskinporten and requires clients to authenticate with machine-to-machine authentication.</p>
+
+<p>To gain access:</p>
+
+<ol>
+  <li>Register an integration in Digdir’s collaboration portal (<code class="language-plaintext highlighter-rouge">https://sjolvbetjening.test.samarbeid.digdir.no/</code>)
+    <ul>
+      <li>Create a client</li>
+      <li>Request access to the scope <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code></li>
+    </ul>
+  </li>
+  <li>Implement the OAuth 2.0 Client Credentials flow with JWT bearer token. It is recommended to use the Altinn library: <code class="language-plaintext highlighter-rouge">https://github.com/Altinn/altinn-apiclient-maskinporten</code>
+    <ul>
+      <li>Generate a signing key directly in the self-service portal (PEM format) or create your own with an enterprise certificate.</li>
+      <li>Generate a signed JWT-assertion and send it to Maskinporten’s token endpoint.</li>
+      <li>It is important to include the optional claim <code class="language-plaintext highlighter-rouge">Resource</code> in the JWT-assertion. This value must be <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak</code>.</li>
+      <li>The <code class="language-plaintext highlighter-rouge">Scope</code> claim must also be added. This value corresponds to the scope name in the self-service portal: <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code></li>
+    </ul>
+  </li>
+  <li>Include the received access token in the Authorization header as a Bearer token when calling the API</li>
+</ol>
+
+<h3 id="transferring-data-to-the-norwegian-medication-registry">Transferring data to the Norwegian Medication Registry</h3>
+
+<p>Institutions that are to transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: <a href="en-protokoll.html">Protocol for data transfer</a>.</p>
+
+<p>To build a collection of data to be transferred, a <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a> must be created. This is a specialized FHIR Bundle profile developed for submitting data to the Medication Registry. It is restricted to transaction-type bundles and only allows POST operations, ensuring consistent data handling and traceability. The bundle can only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.</p>
+
+<p>When transferring data, a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code> must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code> before sending it to the API. Read more about how to create a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code> in <a href="en-SignertKryptertBundle.html">this guide</a>.</p>
+
+<p>URL to the Medication Registry’s API:</p>
+<ul>
+  <li>TEST environment: <a href="https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1">https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
+  <li>PROD environment: <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">https://fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
+</ul>
+
+<h4 id="test-endpoints">Test endpoints</h4>
+
+<p>For testing the integration, two dedicated validation endpoints are available. These store no data and are only available in the test environment.</p>
+
+<p><strong>Validation of FHIR bundle:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code> – Validates the contents of a FHIR bundle against the LMDI specification.
+The endpoint expects to receive an unsigned and unencrypted FHIR bundle in JSON format. Does not require authentication, and the sender does not need to be registered.
+Returns a validation result as <code class="language-plaintext highlighter-rouge">OperationOutcome</code> with status 200 (valid) or 400 (invalid).</li>
+</ul>
+
+<p><strong>Validation of signed and encrypted bundle:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> – Validates that signing and encryption have been performed correctly, and that the content of the encrypted FHIR bundle complies with the LMDI specification.
+The endpoint expects to receive a signed and encrypted bundle. The sender must be registered and active. Data is validated but not stored.
+Requires Maskinporten authentication with scope <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code>.
+Returns status 200 (valid) or 400 (invalid).</li>
+</ul>
+
+<h4 id="handling-responses-from-test-endpoints">Handling responses from test endpoints</h4>
+
+<p>The test endpoints return the following HTTP status codes:</p>
+
+<p><strong>200 OK</strong></p>
+<ul>
+  <li>The message was validated without errors</li>
+  <li>For <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>: The message has been validated but not stored</li>
+  <li>For <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Returns <code class="language-plaintext highlighter-rouge">OperationOutcome</code> confirming that the FHIR bundle is valid</li>
+</ul>
+
+<p><strong>400 Bad Request</strong></p>
+<ul>
+  <li>Validation errors in the submitted message</li>
+  <li>Possible causes (both endpoints):
+    <ul>
+      <li>FHIR bundle validation failed (not in accordance with the LMDI specification)</li>
+      <li>Invalid JSON format</li>
+    </ul>
+  </li>
+  <li>Possible causes only for <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>:
+    <ul>
+      <li>Unknown or inactive sender</li>
+      <li>Organization number in message does not match registered sender</li>
+      <li>Signature validation failed</li>
+      <li>Decryption failed</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>401 Unauthorized</strong></p>
+<ul>
+  <li>Authentication failed (applies to <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+  <li>Possible causes:
+    <ul>
+      <li>Missing Authorization header or token</li>
+      <li>Expired access token</li>
+      <li>Invalid token signature</li>
+      <li>Invalid issuer or audience</li>
+    </ul>
+  </li>
+  <li>The response includes a <code class="language-plaintext highlighter-rouge">WWW-Authenticate</code> header with an error description</li>
+</ul>
+
+<p><strong>403 Forbidden</strong></p>
+<ul>
+  <li>Authorization failed (applies to <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+  <li>Token is valid, but lacks the required scope (<code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code>)</li>
+  <li>The response includes a <code class="language-plaintext highlighter-rouge">WWW-Authenticate</code> header with an error description</li>
+</ul>
+
+<p><strong>500 Internal Server Error</strong></p>
+<ul>
+  <li>An unexpected error occurred while processing the message</li>
+  <li>Server error that should be investigated with FHI</li>
+</ul>
+
+
+
+
+</div>
+</div> <!-- /inner-wrapper -->
+</div> <!-- /row -->
+</div> <!-- /container -->
+</div> <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>
+<!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<footer id="segment-footer" igtool="footer" class="segment"> <!-- segment-footer -->
+    <div class="container"> <!-- container -->
+        <div class="container-fluid">
+            
+            <div class="inner-wrapper p-3">
+                <p class="m-0">
+                    IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
+                        href="https://www.fhi.no">Folkehelseinstituttet</a>.
+                    Package hl7.fhir.no.lmdi#1.1.0 based on <a
+                        style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span
+                        title="Wed, Apr 29, 2026 19:26+0000">2026-04-29</span>
+                    <br />
+                    <span style="color: var(--footer-highlight-text-color)">
+                                  Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                    </span>
+                </p>
+            </div> <!-- /inner-wrapper -->
+        </div>
+    </div><!-- /container -->
+</footer> <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden d-none"> <!-- segment-post-footer -->
+    <div class="container"> <!-- container -->
+    </div> <!-- /container -->
+</div> <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- Bootstrap and Clipboard.js CDN references removed to comply with IG Publisher validation -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"> </script> -->
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script> -->
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<script id="page-data" type="application/json">
+  {
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Integration</b></li>"
+  }
+</script>
+<script type="text/javascript">
+    const pageData = JSON.parse(document.getElementById("page-data").textContent);
+
+    const secondLevel = (key) => {
+        if (pageData.breadcrumb) {
+            const liRegex = /<li>(.*?)<\/li>/g;
+            const listItems = [...pageData.breadcrumb.matchAll(liRegex)].map(match => match[1].trim());
+            return listItems[1]?.includes(key) || false;
+        }
+        return false;
+    };
+
+    // Style FHI menu (applied to both language menus)
+    const classMenuNav = 'fhi-main-menu-alt__nav',
+        classMenuNavItem = 'fhi-main-menu-alt__nav-item',
+        classMenuNavLink = 'fhi-main-menu-alt__nav-link';
+
+    ['menu-no', 'menu-en'].forEach(menuId => {
+        const menuDiv = document.getElementById(menuId);
+        if (!menuDiv) return;
+        const ul = menuDiv.querySelector('ul');
+        if (!ul) return;
+        ul.classList.add('nav', 'nav-tabs', 'fhi-nav-tabs', classMenuNav);
+        ul.querySelectorAll('li').forEach(li => {
+            li.classList.add(classMenuNavItem);
+            li.querySelectorAll('a').forEach(a => {
+                a.classList.add('nav-link', classMenuNavLink);
+            });
+
+            if (li.classList.contains('dropdown')) {
+                li.addEventListener('click', () => {
+                    li.classList.toggle('show');
+                    li.querySelector('ul').classList.toggle('show');
+                });
+            }
+        });
+    });
+
+    // Set active class on menu item (compare by filename only to support both root and en/ depth)
+    const path = window.location.pathname;
+    const page = path.split("/").pop();
+    const menuItems = document.querySelectorAll(`.${classMenuNavItem}`);
+    menuItems.forEach(item => {
+        const menuLink = item.querySelector('a').getAttribute('href');
+        const linkPage = menuLink.split('/').pop();
+        if (linkPage === page) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+        else if (secondLevel(menuLink)) {
+            item.classList.add('active');
+            item.querySelector('a').classList.add('active');
+        }
+    });
+
+    // Init clipboard.js - commented out as library was removed
+    // new ClipboardJS('.btn-copy');
+</script>
+<script type="text/javascript" src="assets/js/lang-switch.js"> </script>
+<!-- Analytics Below
+  ================================================== -->
+</body>
+
+</html>
+
