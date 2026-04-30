@@ -2,8 +2,15 @@
   <table class="grid">
     <thead>
       <tr>
+        {% assign page_filename = page.path | split: '/' | last %}
+        {% assign page_prefix = page_filename | slice: 0, 3 %}
+        {% if page_prefix == 'en-' %}
+        <th>Name</th>
+        <th>Description</th>
+        {% else %}
         <th>Navn</th>
         <th>Beskrivelse</th>
+        {% endif %}
       </tr>
     </thead>
     <tbody>

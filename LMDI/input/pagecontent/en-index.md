@@ -1,11 +1,11 @@
 
-### Medication Data from Institution to the Norwegian Medication Registry (LMDI)
+### Medication Data from Institutions to the Norwegian Medication Registry (LMDI)
 
 Complete and up-to-date health data on medications are available for analysis and research to improve quality, governance, health surveillance, emergency preparedness, and knowledge management in healthcare.
 
 #### Objective
 
-Collect medication data at the individual level from outpatient and inpatient patients in institutions to the Norwegian Medication Registry (LMR). As part of this, an implementation guide (IG) based on a shared information model and HL7 FHIR (this document) is being developed. This will be used for submitting data from institutions to LMR via data sharing (secured REST API).
+Collect individual-level medication data from outpatient and inpatient care in institutions and submit it to the Norwegian Medication Registry (LMR). As part of this work, an implementation guide (IG) based on a shared information model and HL7 FHIR (this document) is being developed. It is used for secure data transfer from institutions to LMR through a REST API.
 
 The Medication Registry already contains data on dispensed medications from pharmacies at the individual level. The LMDI project now specifically focuses on extending this with data on administered medications from hospitals and other institutions, providing a more complete picture of medication use across the entire healthcare system. This is an important extension that will strengthen the foundation for better patient safety, knowledge production, and health surveillance.
 
@@ -27,7 +27,7 @@ The following LMDI profiles inherit from no-basis:
 - **Patient** is based on no-basis-Patient (national identity number, D-number, Norwegian addresses)
 - **Substance** is based on no-basis-Substance (active ingredients in a Norwegian context)
 
-This provides consistent handling of Norwegian identifiers and code systems across the health sector. To use the LMDI profiles, no-basis (version 2.2.0) must be installed as a dependency.
+This ensures consistent handling of Norwegian identifiers and code systems across the health sector. To use the LMDI profiles, no-basis (version 2.2.0) must be installed as a dependency.
 
 #### Implementation guide versions
 
