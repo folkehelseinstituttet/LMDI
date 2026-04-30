@@ -33,7 +33,7 @@ You can find the example code here:
 
 #### IP address whitelisting
 
-To access the API for data transfer, the sending system’s IP address must be registered in the LMR’s list of whitelisted addresses. Both individual addresses and address ranges can be whitelisted. Only whitelisting in the production environment is required.
+To access the API for data transfer, the sending system’s IP address must be registered in the LMR’s list of whitelisted addresses. Both individual addresses and address ranges can be whitelisted. Whitelisting is required only in the production environment.
 
 #### Certificates
 
@@ -44,7 +44,7 @@ Data transferred to the API must be encrypted and signed (see [SignedEncryptedBu
 
 #### Maskinporten
 
-The API is protected by Maskinporten and requires clients to authenticate with machine-to-machine authentication.
+The API is protected by Maskinporten and requires machine-to-machine authentication.
 
 To gain access:
 
@@ -62,13 +62,13 @@ To gain access:
 
 ### Transferring data to the Norwegian Medication Registry
 
-Institutions that are to transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: [Protocol for data transfer](en-protokoll.md).
+Institutions that transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: [Protocol for data transfer](en-protokoll.md).
 
 To build a collection of data to be transferred, a [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.md) must be created. This is a specialized FHIR Bundle profile developed for submitting data to the Medication Registry. It is restricted to transaction-type bundles and only allows POST operations, ensuring consistent data handling and traceability. The bundle can only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.
 
 When transferring data, a `SignedEncryptedBundle` must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based `LegemiddelregisterBundle` before sending it to the API. Read more about how to create a `SignedEncryptedBundle` in [this guide](en-SignertKryptertBundle.md).
 
-URL to the Medication Registry’s API:
+URLs for the Medication Registry API:
 
 * TEST environment: [https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1](https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1)
 * PROD environment: [https://fhirmottak.lmr.fhi.no/fhirmottak/v1](https://fhirmottak.lmr.fhi.no/fhirmottak/v1)

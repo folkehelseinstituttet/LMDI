@@ -59,7 +59,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "name" : "Episode",
   "title" : "Episode",
   "status" : "active",
-  "date" : "2026-04-30T05:19:18+00:00",
+  "date" : "2026-04-30T05:43:24+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

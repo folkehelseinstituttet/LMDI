@@ -20,7 +20,7 @@
 * [**Table of Contents**](toc.md)
 * **Downloads**
 
-Here you can download various parts of the implementation guide.
+Here you can download key parts of the implementation guide.
 
 #### Complete package
 
@@ -34,7 +34,7 @@ Here you can download various parts of the implementation guide.
 
 ### Certificates
 
-The certificates are in BASE64-encoded .cer format. Used for encrypting messages to the Medication Registry.
+The certificates are provided in Base64-encoded `.cer` format and are used to encrypt messages sent to the Medication Registry.
 
 * [Certificates for TEST and PRODUCTION environments](certificates.zip) - Used when encrypting messages
 

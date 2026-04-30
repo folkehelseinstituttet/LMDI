@@ -178,7 +178,7 @@
 </div>
 <p>When data is to be delivered from institutions to the Norwegian Medication Registry, it must be sent in a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code>. This is created by compressing the <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>, then encrypting and signing the content.</p>
 
-<p>This describes how to create a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code> to be sent to the Medication Registry’s API. Implementation details (language, libraries, etc.) are up to you, as long as the result conforms to the specification below.</p>
+<p>This page describes how to create a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code> for submission to the Medication Registry API. Implementation details (language, libraries, etc.) are up to you, as long as the result conforms to the specification below.</p>
 
 <p>Example code for generating a SignedEncryptedBundle: <a href="en-eksempelkode_cs.html">Example in C#</a></p>
 
@@ -198,7 +198,7 @@ The result is a byte array of compressed data. GZip uses the DEFLATE algorithm a
 
 <p>In Java you can typically use classes from java.util.zip. In .NET, equivalent functionality is available in System.IO.Compression.</p>
 
-<p>The result after GZip compression shall be a byte array containing the compressed FHIR JSON.</p>
+<p>The result of GZip compression shall be a byte array containing the compressed FHIR JSON.</p>
 
 <h3 id="3-encrypt-with-aes-gcm-256-bit-key">3. Encrypt with AES-GCM (256-bit key)</h3>
 
@@ -367,7 +367,7 @@ The result is a byte array of compressed data. GZip uses the DEFLATE algorithm a
                 <p class="m-0">
                     IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Thu, Apr 30, 2026 05:19+0000">2026-04-30</span>
+                        4.0.1</a>. Generated <span title="Thu, Apr 30, 2026 05:43+0000">2026-04-30</span>
                     <br/>
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

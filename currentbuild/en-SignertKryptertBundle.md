@@ -23,7 +23,7 @@
 
 When data is to be delivered from institutions to the Norwegian Medication Registry, it must be sent in a `SignedEncryptedBundle`. This is created by compressing the `LegemiddelregisterBundle`, then encrypting and signing the content.
 
-This describes how to create a `SignedEncryptedBundle` to be sent to the Medication Registry’s API. Implementation details (language, libraries, etc.) are up to you, as long as the result conforms to the specification below.
+This page describes how to create a `SignedEncryptedBundle` for submission to the Medication Registry API. Implementation details (language, libraries, etc.) are up to you, as long as the result conforms to the specification below.
 
 Example code for generating a SignedEncryptedBundle: [Example in C#](en-eksempelkode_cs.md)
 
@@ -41,7 +41,7 @@ To reduce bandwidth and ensure that the encryption process is efficient, the dat
 
 In Java you can typically use classes from java.util.zip. In .NET, equivalent functionality is available in System.IO.Compression.
 
-The result after GZip compression shall be a byte array containing the compressed FHIR JSON.
+The result of GZip compression shall be a byte array containing the compressed FHIR JSON.
 
 ### 3. Encrypt with AES-GCM (256-bit key)
 

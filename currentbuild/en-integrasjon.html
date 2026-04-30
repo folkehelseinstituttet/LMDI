@@ -189,7 +189,7 @@
 <h4 id="ip-address-whitelisting">IP address whitelisting</h4>
 
 <p>To access the API for data transfer, the sending system’s IP address must be registered in the LMR’s list of whitelisted addresses. Both individual addresses and address ranges can be whitelisted.
-Only whitelisting in the production environment is required.</p>
+Whitelisting is required only in the production environment.</p>
 
 <h4 id="certificates">Certificates</h4>
 
@@ -201,7 +201,7 @@ Only whitelisting in the production environment is required.</p>
 
 <h4 id="maskinporten">Maskinporten</h4>
 
-<p>The API is protected by Maskinporten and requires clients to authenticate with machine-to-machine authentication.</p>
+<p>The API is protected by Maskinporten and requires machine-to-machine authentication.</p>
 
 <p>To gain access:</p>
 
@@ -225,13 +225,13 @@ Only whitelisting in the production environment is required.</p>
 
 <h3 id="transferring-data-to-the-norwegian-medication-registry">Transferring data to the Norwegian Medication Registry</h3>
 
-<p>Institutions that are to transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: <a href="en-protokoll.html">Protocol for data transfer</a>.</p>
+<p>Institutions that transfer data to the Norwegian Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: <a href="en-protokoll.html">Protocol for data transfer</a>.</p>
 
 <p>To build a collection of data to be transferred, a <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a> must be created. This is a specialized FHIR Bundle profile developed for submitting data to the Medication Registry. It is restricted to transaction-type bundles and only allows POST operations, ensuring consistent data handling and traceability. The bundle can only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.</p>
 
 <p>When transferring data, a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code> must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code> before sending it to the API. Read more about how to create a <code class="language-plaintext highlighter-rouge">SignedEncryptedBundle</code> in <a href="en-SignertKryptertBundle.html">this guide</a>.</p>
 
-<p>URL to the Medication Registry’s API:</p>
+<p>URLs for the Medication Registry API:</p>
 <ul>
   <li>TEST environment: <a href="https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1">https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
   <li>PROD environment: <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">https://fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
@@ -339,7 +339,7 @@ Returns status 200 (valid) or 400 (invalid).</li>
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, Apr 30, 2026 05:19+0000">2026-04-30</span>
+                        title="Thu, Apr 30, 2026 05:43+0000">2026-04-30</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -22,5 +22,5 @@
 
 ### Information Model - Overview
 
-Click on the classes to be linked to the resources
+Click the classes to navigate to the corresponding resources
 
