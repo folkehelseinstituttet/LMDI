@@ -47,7 +47,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Lmdi</h1>
- <p>Generated Thu Apr 30 05:45:11 UTC 2026, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.0 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Thu Apr 30 05:58:39 UTC 2026, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.0 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.2.7</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.no.lmdi, Canonical = http://hl7.no/fhir/ig/lmdi</td></tr>
@@ -70,7 +70,7 @@
  <tr><td>Related IGs:</td><td>n/a</td></tr>
  <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
  <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
- <tr><td>Terminology Server(s):</td><td><a href="http://tx.fhir.org/r4">http://tx.fhir.org/r4</a>, <a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
  <tr><td>HTA Analysis:</td><td><a href="qa-hta.html"><span style="background-color: #ffcccc">2 issues</span></a></td></tr>
  <tr><td>R5 Dependencies:</td><td><ul><li><a href="http://build.fhir.org/namingsystem.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version</a></li><li><a href="http://build.fhir.org/namingsystem.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url</a></li></ul></td></tr>
  <tr><td>Draft Dependencies:</td><td><ul>
@@ -851,12 +851,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b><a href="">Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*MedicationAdministration&#8203;/Scenario-Sykehjem-Oksykodon-Administrering*&#8203;/&#8203;.request (l341&#8203;/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for urn:uuid:77777777-7777-4777-8777-777777777777 matching against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1</b> <span id="sl155" class="flip" onclick="flip('l155')">Show Reasoning</span><div id="l155" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[6].resource/*MedicationRequest/Scenario-Sykehjem-Oksykodon-Rekvirering*/.medication.ofType(Reference): <ul><li>Bundle.entry[5].resource/*Medication/Scenario-Sykehjem-Oksykodon-Legemiddel*/.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Oksykodon' for http://www.whocc.no/atc#N02AA05. Valid display is 'oxycodone' (for the language(s) 'no')</li></ul></li>, <li>Bundle.entry[6].resource/*MedicationRequest/Scenario-Sykehjem-Oksykodon-Rekvirering*/.medication.ofType(Reference): Unable to find a profile match for urn:uuid:66666666-6666-4666-8666-666666666666 among choices: http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication</li>, <li>Bundle.entry[6].resource/*MedicationRequest/Scenario-Sykehjem-Oksykodon-Rekvirering*/.medication.ofType(Reference): <ul><li>Bundle.entry[5].resource/*Medication/Scenario-Sykehjem-Oksykodon-Legemiddel*/.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Oksykodon' for http://www.whocc.no/atc#N02AA05. Valid display is 'oxycodone' (for the language(s) 'no')</li></ul></li></ul></div> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Details_for__matching_against_Profile_</span></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*MedicationAdministration&#8203;/Scenario-Sykehjem-Oksykodon-Administrering*&#8203;/&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l315&#8203;/c12)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#421521009 for language(s) 'no'. The display is 'Swallow' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi570" onClick="document.getElementById('vmi570').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi570" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*MedicationAdministration&#8203;/Scenario-Sykehjem-Oksykodon-Administrering*&#8203;/&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l315&#8203;/c12)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#421521009 for language(s) 'no'. The display is 'Swallow' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l5">log</a>, or see <a href="#vmi570" onClick="document.getElementById('vmi570').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi570" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#421521009 ("Swallow")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#421521009"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "421521009" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#421521009"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "421521009" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*MedicationAdministration&#8203;/Scenario-Sykehjem-Oksykodon-Administrering*&#8203;/ (l306&#8203;/c8)</b></td><td><b>warning</b></td><td><b>Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6</span></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
@@ -972,9 +972,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Condition&#8203;.code&#8203;.coding[0]&#8203;.display (l9&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Artrose' for http://snomed.info/sct#396275006. There are no valid display names found for language(s) 'no'. Default display is 'Osteoarthritis'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l41">log</a>, or see <a href="#vmi592" onClick="document.getElementById('vmi592').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi592" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Condition&#8203;.code&#8203;.coding[0]&#8203;.display (l9&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Artrose' for http://snomed.info/sct#396275006. There are no valid display names found for language(s) 'no'. Default display is 'Osteoarthritis'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l8">log</a>, or see <a href="#vmi592" onClick="document.getElementById('vmi592').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi592" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#396275006 ("Artrose")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#396275006"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#396275006"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "396275006" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-condition.html">Diagnose</a></td>
@@ -1084,16 +1084,16 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l42">log</a>, or see <a href="#vmi611" onClick="document.getElementById('vmi611').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi611" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l9">log</a>, or see <a href="#vmi611" onClick="document.getElementById('vmi611').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi611" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
@@ -1130,25 +1130,25 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l12&#8203;/c8)</b></td><td><b>information</b></td><td><b>None of the codings provided are in the value set 'ATC Kodesystem ValueSet' (http://fhir.no/ValueSet/atc-valueset|1.1.0), and a coding is recommended to come from this value set (codes = http://www.whocc.no/atc#N02AA05)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_3_CC</span></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l44">log</a>, or see <a href="#vmi616" onClick="document.getElementById('vmi616').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi616" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l11">log</a>, or see <a href="#vmi616" onClick="document.getElementById('vmi616').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi616" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff#ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E ("Oksykodon mikst oppl 1 mg/ml")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff#ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
@@ -1176,22 +1176,22 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l12&#8203;/c8)</b></td><td><b>information</b></td><td><b>None of the codings provided are in the value set 'ATC Kodesystem ValueSet' (http://fhir.no/ValueSet/atc-valueset|1.1.0), and a coding is recommended to come from this value set (codes = http://www.whocc.no/atc#R06AE07)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_3_CC</span></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l43">log</a>, or see <a href="#vmi621" onClick="document.getElementById('vmi621').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi621" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l10">log</a>, or see <a href="#vmi621" onClick="document.getElementById('vmi621').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi621" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
@@ -1216,24 +1216,24 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l45">log</a>, or see <a href="#vmi624" onClick="document.getElementById('vmi624').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi624" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l12">log</a>, or see <a href="#vmi624" onClick="document.getElementById('vmi624').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi624" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_0008D107-4F34-470F-83CA-541F6E9FA3C4 ("NovoRapid Flexpen inj, oppl 100 E/ml")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_0008D107-4F34-470F-83CA-541F6E9FA3C4"
@@ -1253,7 +1253,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l46">log</a>, or see <a href="#vmi626" onClick="document.getElementById('vmi626').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi626" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l13">log</a>, or see <a href="#vmi626" onClick="document.getElementById('vmi626').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi626" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1269,10 +1269,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C ("Monoket retard depottab 50 mg")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C ("Monoket retard depottab 50 mg")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
@@ -1299,7 +1299,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l12&#8203;/c8)</b></td><td><b>information</b></td><td><b>None of the codings provided are in the value set 'ATC Kodesystem ValueSet' (http://fhir.no/ValueSet/atc-valueset|1.1.0), and a coding is recommended to come from this value set (codes = http://www.whocc.no/atc#N03AX11)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_3_CC</span></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/lmrLopenummer' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l47">log</a>, or see <a href="#vmi631" onClick="document.getElementById('vmi631').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi631" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/lmrLopenummer' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l14">log</a>, or see <a href="#vmi631" onClick="document.getElementById('vmi631').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi631" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1307,18 +1307,18 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/lmrLopenummer#1003023 ("Topimax kaps 15 mg")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/lmrLopenummer#1003023 ("Topimax kaps 15 mg")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/lmrLopenummer#1003023"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/lmrLopenummer</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
@@ -1345,7 +1345,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.extension[0]&#8203;.value&#8203;.ofType(CodeableConcept) (l12&#8203;/c8)</b></td><td><b>information</b></td><td><b>None of the codings provided are in the value set 'ATC Kodesystem ValueSet' (http://fhir.no/ValueSet/atc-valueset|1.1.0), and a coding is recommended to come from this value set (codes = http://www.whocc.no/atc#B05BA10)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Terminology_TX_NoValid_3_CC</span></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l48">log</a>, or see <a href="#vmi636" onClick="document.getElementById('vmi636').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi636" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l15">log</a>, or see <a href="#vmi636" onClick="document.getElementById('vmi636').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi636" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1361,10 +1361,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_58EA43B8-817A-4CCC-8C88-A780399018E3 ("SmofKabiven inf, emul")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_58EA43B8-817A-4CCC-8C88-A780399018E3 ("SmofKabiven inf, emul")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_58EA43B8-817A-4CCC-8C88-A780399018E3"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelDose</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
@@ -1382,55 +1382,55 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l9&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://fhi.no/fhir/NamingSystem/lokaltLegemiddel' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l49">log</a>, or see <a href="#vmi638" onClick="document.getElementById('vmi638').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi638" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l9&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://fhi.no/fhir/NamingSystem/lokaltLegemiddel' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l16">log</a>, or see <a href="#vmi638" onClick="document.getElementById('vmi638').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi638" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#lokal-ketamin-haloperidol-klonidin-midazolam ("Lokalt legemiddel med ketamin, haloperidol, klonidin og midazolam")]"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#lokal-ketamin-haloperidol-klonidin-midazolam"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#lokal-ketamin-haloperidol-klonidin-midazolam ("Lokalt legemiddel med ketamin, haloperidol, klonidin og midazolam")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#lokal-ketamin-haloperidol-klonidin-midazolam"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.ingredient[0]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l20&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l50">log</a>, or see <a href="#vmi639" onClick="document.getElementById('vmi639').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi639" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.ingredient[0]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l20&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l17">log</a>, or see <a href="#vmi639" onClick="document.getElementById('vmi639').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi639" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_28C1C9F5-0D9C-4F5F-9823-A0BC8643CFE9 ("Ketamin Abcur inj, oppl 10 mg/ml")]"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_28C1C9F5-0D9C-4F5F-9823-A0BC8643CFE9"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_28C1C9F5-0D9C-4F5F-9823-A0BC8643CFE9 ("Ketamin Abcur inj, oppl 10 mg/ml")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_28C1C9F5-0D9C-4F5F-9823-A0BC8643CFE9"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.ingredient[1]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l43&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l53">log</a>, or see <a href="#vmi640" onClick="document.getElementById('vmi640').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi640" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.ingredient[1]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l43&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l19">log</a>, or see <a href="#vmi640" onClick="document.getElementById('vmi640').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi640" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1449,7 +1449,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_5B77F59F-8C66-4C5F-80F7-1EB54FB5E66C ("Haldol inj, oppl 5 mg/ml")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_5B77F59F-8C66-4C5F-80F7-1EB54FB5E66C ("Haldol inj, oppl 5 mg/ml")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare#ID_5B77F59F-8C66-4C5F-80F7-1EB54FB5E66C"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
@@ -1457,48 +1457,48 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Medication&#8203;.ingredient[1]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0] (l43&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare' could not be found, so the code cannot be validated</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.ingredient[2]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l66&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l54">log</a>, or see <a href="#vmi642" onClick="document.getElementById('vmi642').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi642" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.ingredient[2]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l66&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelPakning' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l20">log</a>, or see <a href="#vmi642" onClick="document.getElementById('vmi642').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi642" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F ("Catapresan øresund inj, oppl 150 mikrog/ml")]"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F ("Catapresan øresund inj, oppl 150 mikrog/ml")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.ingredient[3]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l89&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/fest-varenummer' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l57">log</a>, or see <a href="#vmi643" onClick="document.getElementById('vmi643').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi643" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.ingredient[3]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l89&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/fest-varenummer' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l22">log</a>, or see <a href="#vmi643" onClick="document.getElementById('vmi643').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi643" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/fest-varenummer#156660 ("Midazolam Accordpharma inj/inf, oppl 1 mg/ml")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/fest-varenummer#156660"
@@ -1518,7 +1518,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Medication.code.coding[0].code (l23/c4)</b></td><td><b>error</b></td><td><b>Unknown code '32236009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l59">log</a>, or see <a href="#vmi645" onClick="document.getElementById('vmi645').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Unknown_Code_in_Version</span><div id="vmi645" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication.code.coding[0].code (l23/c4)</b></td><td><b>error</b></td><td><b>Unknown code '32236009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20250201' (International Edition)</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> - see <a href="#vmi645" onClick="document.getElementById('vmi645').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">Unknown_Code_in_Version</span><div id="vmi645" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1544,9 +1544,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Code "32236009" not found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201: undefined</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Medication&#8203;.form&#8203;.coding[0]&#8203;.display (l32&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'tablett' for http://snomed.info/sct#385055001. There are no valid display names found for language(s) 'no'. Default display is 'Tablet'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l60">log</a>, or see <a href="#vmi646" onClick="document.getElementById('vmi646').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi646" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#385055001 ("tablett")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#385055001"
+     <td><b>Medication&#8203;.form&#8203;.coding[0]&#8203;.display (l32&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'tablett' for http://snomed.info/sct#385055001. There are no valid display names found for language(s) 'no'. Default display is 'Tablet'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l24">log</a>, or see <a href="#vmi646" onClick="document.getElementById('vmi646').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi646" style="display:none"><br/><pre>0ms tx-op
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#385055001 ("tablett")]"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#385055001"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "385055001" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
@@ -1565,31 +1565,31 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.ingredient[1]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l16&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l61">log</a>, or see <a href="#vmi648" onClick="document.getElementById('vmi648').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi648" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.ingredient[1]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l16&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l25">log</a>, or see <a href="#vmi648" onClick="document.getElementById('vmi648').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi648" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_3BDBA6F5-AE18-4A03-949A-A10BE4C085D0 ("Soluvit pulv til inf væske oppl")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_3BDBA6F5-AE18-4A03-949A-A10BE4C085D0 ("Soluvit pulv til inf væske oppl")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_3BDBA6F5-AE18-4A03-949A-A10BE4C085D0"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelDose</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.ingredient[2]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l27&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l63">log</a>, or see <a href="#vmi649" onClick="document.getElementById('vmi649').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi649" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.ingredient[2]&#8203;.item&#8203;.ofType(CodeableConcept)&#8203;.coding[0]&#8203;.system (l27&#8203;/c8)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/festLegemiddelDose' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l27">log</a>, or see <a href="#vmi649" onClick="document.getElementById('vmi649').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi649" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1605,7 +1605,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelDose#ID_4440528A-4654-4C34-A36B-B85251A5410F ("Vitalipid Infant kons til inf emul")]"
@@ -1629,7 +1629,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/fest-varenummer' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l64">log</a>, or see <a href="#vmi652" onClick="document.getElementById('vmi652').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi652" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://dmp.no/fhir/NamingSystem/fest-varenummer' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l28">log</a>, or see <a href="#vmi652" onClick="document.getElementById('vmi652').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi652" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
@@ -1637,18 +1637,18 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/fest-varenummer#106383 ("Paracet mikst oppl 24 mg/ml")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/fest-varenummer#106383 ("Paracet mikst oppl 24 mg/ml")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/fest-varenummer#106383"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/fest-varenummer</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
@@ -1669,27 +1669,27 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://fhi.no/fhir/NamingSystem/lokaltLegemiddel' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l65">log</a>, or see <a href="#vmi655" onClick="document.getElementById('vmi655').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi655" style="display:none"><br/><pre>0ms tx-op
+     <td><b>Medication&#8203;.code&#8203;.coding[0]&#8203;.system (l23&#8203;/c4)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'http://fhi.no/fhir/NamingSystem/lokaltLegemiddel' could not be found, so the code cannot be validated</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l29">log</a>, or see <a href="#vmi655" onClick="document.getElementById('vmi655').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNKNOWN_CODESYSTEM</span><div id="vmi655" style="display:none"><br/><pre>0ms tx-op
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#Cisplatin ("Cisplatin")]"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#Cisplatin"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#Cisplatin ("Cisplatin")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel#Cisplatin"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
@@ -1706,12 +1706,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l66">log</a>, or see <a href="#vmi657" onClick="document.getElementById('vmi657').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi657" style="display:none"><br/><pre>0ms tx-op
+     <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l30">log</a>, or see <a href="#vmi657" onClick="document.getElementById('vmi657').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi657" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#47625008 ("intravenøs administrasjonsvei")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>MedicationAdministration (l1/c2)</b></td><td><b>warning</b></td><td><b>Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6</span></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
@@ -1727,9 +1727,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>MedicationAdministration&#8203;.statusReason[0]&#8203;.coding[0]&#8203;.display (l28&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#182896008 for language(s) 'no'. The display is 'Drug declined by patient - dislikes taste' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l71">log</a>, or see <a href="#vmi659" onClick="document.getElementById('vmi659').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi659" style="display:none"><br/><pre>0ms tx-op
+     <td><b>MedicationAdministration&#8203;.statusReason[0]&#8203;.coding[0]&#8203;.display (l28&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#182896008 for language(s) 'no'. The display is 'Drug declined by patient - dislikes taste' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l31">log</a>, or see <a href="#vmi659" onClick="document.getElementById('vmi659').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi659" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#182896008 ("Drug declined by patient - dislikes taste")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#182896008"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#182896008"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "182896008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
@@ -1751,12 +1751,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l66">log</a>, or see <a href="#vmi662" onClick="document.getElementById('vmi662').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi662" style="display:none"><br/><pre>0ms tx-op
+     <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l30">log</a>, or see <a href="#vmi662" onClick="document.getElementById('vmi662').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi662" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#47625008 ("intravenøs administrasjonsvei")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>MedicationAdministration (l1/c2)</b></td><td><b>warning</b></td><td><b>Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6</span></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
@@ -1813,12 +1813,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>MedicationAdministration&#8203;.context (l33&#8203;/c4)</b></td><td><b>error</b></td><td><b>Unable to resolve resource with reference 'https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">Reference_REF_CantResolve</span></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#421521009 for language(s) 'no'. The display is 'Swallow' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l37">log</a>, or see <a href="#vmi671" onClick="document.getElementById('vmi671').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi671" style="display:none"><br/><pre>0ms tx-op
+     <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#421521009 for language(s) 'no'. The display is 'Swallow' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l5">log</a>, or see <a href="#vmi671" onClick="document.getElementById('vmi671').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi671" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#421521009 ("Swallow")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#421521009"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "421521009" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#421521009"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "421521009" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.code (l14&#8203;/c30)</b></td><td><b>error</b></td><td><b>The System URI could not be determined for the code '421521009' in the ValueSet 'http://hl7.org/fhir/ValueSet/route-codes|4.0.1'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">UNABLE_TO_INFER_CODESYSTEM</span></td><td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
@@ -1856,12 +1856,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationRequest&#8203;.dosageInstruction[0]&#8203;.route&#8203;.coding[0]&#8203;.display (l52&#8203;/c8)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l66">log</a>, or see <a href="#vmi677" onClick="document.getElementById('vmi677').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi677" style="display:none"><br/><pre>0ms tx-op
+     <td><b>MedicationRequest&#8203;.dosageInstruction[0]&#8203;.route&#8203;.coding[0]&#8203;.display (l52&#8203;/c8)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l30">log</a>, or see <a href="#vmi677" onClick="document.getElementById('vmi677').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi677" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#47625008 ("intravenøs administrasjonsvei")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>MedicationRequest (l1/c2)</b></td><td><b>warning</b></td><td><b>Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6</span></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
@@ -1902,12 +1902,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>MedicationRequest&#8203;.dosageInstruction[0]&#8203;.route&#8203;.coding[0]&#8203;.display (l41&#8203;/c8)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l66">log</a>, or see <a href="#vmi684" onClick="document.getElementById('vmi684').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi684" style="display:none"><br/><pre>0ms tx-op
+     <td><b>MedicationRequest&#8203;.dosageInstruction[0]&#8203;.route&#8203;.coding[0]&#8203;.display (l41&#8203;/c8)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l30">log</a>, or see <a href="#vmi684" onClick="document.getElementById('vmi684').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi684" style="display:none"><br/><pre>0ms tx-op
 0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#47625008 ("intravenøs administrasjonsvei")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#47625008"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "47625008" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>MedicationRequest (l1/c2)</b></td><td><b>warning</b></td><td><b>Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6</span></td><td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
@@ -2467,8 +2467,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>Substance&#8203;.category[0]&#8203;.coding[0]&#8203;.display (l19&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/substance-category#drug for language(s) 'no'. The display is 'Drug or Medicament' which is the default language display</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span></td><td><a href="StructureDefinition-lmdi-substance.html">Virkestoff</a></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Substance&#8203;.code&#8203;.coding[0]&#8203;.display (l9&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Oxycodone (substance)' for http://snomed.info/sct#55452001. There are no valid display names found for language(s) 'no'. Default display is 'Oxycodone'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l77">log</a>, or see <a href="#vmi784" onClick="document.getElementById('vmi784').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi784" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#55452001 ("Oxycodone (substance)")]"
+     <td><b>Substance&#8203;.code&#8203;.coding[0]&#8203;.display (l9&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Oxycodone (substance)' for http://snomed.info/sct#55452001. There are no valid display names found for language(s) 'no'. Default display is 'Oxycodone'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l35">log</a>, or see <a href="#vmi784" onClick="document.getElementById('vmi784').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi784" style="display:none"><br/><pre>0ms tx-op
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#55452001 ("Oxycodone (substance)")]"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#55452001"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
@@ -2538,7 +2538,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>ValueSet (l1/c1271)</b></td><td><b>error</b></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_SHAREABLE_MISSING_HL7</span></td><td>--</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet&#8203;.where(id = 'kommunenummer-alle')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.3402' could not be found, so the value set cannot be expanded</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l89">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+     <td><b>ValueSet&#8203;.where(id = 'kommunenummer-alle')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.3402' could not be found, so the value set cannot be expanded</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l40">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
    </tr>
 </table>
 <hr/>
@@ -2563,7 +2563,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
      <td><b>ValueSet (l1/c3492)</b></td><td><b>error</b></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_SHAREABLE_MISSING_HL7</span></td><td>--</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'legemiddel-koder')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: The code System &quot;http://snomed.info/sct&quot; has a grammar, and cannot be enumerated directly</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l90">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+     <td><b>ValueSet.where(id = 'legemiddel-koder')</b></td><td><b>warning</b></td><td><b>Error from https://tx.fhir.org/r4: Error: The code System &quot;http://snomed.info/sct&quot; has a grammar, and cannot be enumerated directly</b> (from <a href="qa-txservers.html#server">server</a>, see <a href="qa-tx.html#l41">log</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
    </tr>
 </table>
 <hr/>
