@@ -37,18 +37,23 @@
     function switchToLang(lang) {
         var file = currentFilename();
         var root = rootPrefix();
+        var targetPath = null;
 
         if (lang === 'en') {
             if (!isEnglish()) {
                 var target = KNOWN_PAGES.indexOf(file) !== -1 ? file : 'index.html';
-                window.location.href = root + 'en-' + target;
+                targetPath = root + 'en-' + target;
             }
-        } else {
+        } else if (lang === 'no') {
             if (isEnglish()) {
                 var noFile = file.replace(/^en-/, '');
                 var target2 = KNOWN_PAGES.indexOf(noFile) !== -1 ? noFile : 'index.html';
-                window.location.href = root + target2;
+                targetPath = root + target2;
             }
+        }
+
+        if (targetPath && targetPath !== window.location.pathname) {
+            window.location.replace(targetPath);
         }
     }
 
@@ -82,23 +87,19 @@
         if (!select) return;
 
         select.addEventListener('change', function () {
-            switchToLang(this.value);
+            var selectedLang = this.value === 'en' ? 'en' : 'no';
+            try { localStorage.setItem(STORAGE_KEY, selectedLang); } catch (e) { /* ignore */ }
+            switchToLang(selectedLang);
         });
     }
 
     function applyPreferredLang() {
         var preferred = null;
-        var select = document.getElementById('fhi-lang-select');
 
         try {
             preferred = localStorage.getItem(STORAGE_KEY);
         } catch (e) {
             preferred = null;
-        }
-
-        // If browser restores the select state (e.g. EN on index.html), honor that as preference.
-        if ((!preferred || (preferred !== 'en' && preferred !== 'no')) && select) {
-            preferred = select.value;
         }
 
         if (preferred === 'en' && !isEnglish()) {
