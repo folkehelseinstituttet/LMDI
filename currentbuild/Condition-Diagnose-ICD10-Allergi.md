@@ -12,6 +12,14 @@
 
 ## Example Condition: Diagnose-ICD10-Allergi
 
+Profile: [Diagnose](StructureDefinition-lmdi-condition.md)
+
+**clinicalStatus**: Active
+
+**code**: Vasomotorisk og allergisk rhinitt
+
+**subject**: [Anonymous Patient (no stated gender), DoB: 1979-01-01 ( urn:oid:2.16.578.1.12.4.1.4.2#41667987421)](Patient-Pasient-Med-DNR.md)
+
 
 
 ## Resource Content
@@ -21,20 +29,26 @@
   "resourceType" : "Condition",
   "id" : "Diagnose-ICD10-Allergi",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+    ]
   },
   "clinicalStatus" : {
-    "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-      "code" : "active"
-    }]
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
   },
   "code" : {
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
-      "code" : "J30",
-      "display" : "Vasomotorisk og allergisk rhinitt"
-    }]
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
+        "code" : "J30",
+        "display" : "Vasomotorisk og allergisk rhinitt"
+      }
+    ]
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-DNR"

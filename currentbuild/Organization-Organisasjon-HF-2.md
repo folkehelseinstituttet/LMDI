@@ -12,6 +12,12 @@
 
 ## Example Organization: Organisasjon-HF-2
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.102`/4201115
+
+**name**: Helse Møre og Romsdal HF
+
 
 
 ## Resource Content
@@ -21,12 +27,16 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-HF-2",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
-    "value" : "4201115"
-  }],
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+      "value" : "4201115"
+    }
+  ],
   "name" : "Helse Møre og Romsdal HF"
 }
 

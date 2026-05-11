@@ -202,16 +202,16 @@
 
   <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">resourceType</a>" : "MedicationRequest",
-  "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.id">id</a>" : "Rekvirering-Infusjon",
-  "<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.meta">meta</a>" : {
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">id</a>" : "Rekvirering-Infusjon",
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
       <a href="StructureDefinition-lmdi-medicationrequest.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
     ]
   },
-  "<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>" : [
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>" : [
     {
       "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
-      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a>" : false
+      "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a>" : false
     }
   ],
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "active",
@@ -226,8 +226,8 @@
       ]
     }
   ],
-  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.reported_x_">reportedBoolean</a>" : false,
-  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication_x_">medicationReference</a>" : {
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.reported[x]">reportedBoolean</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationReference</a>" : {
     <a href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser"
   },
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>" : {
@@ -239,7 +239,7 @@
   },
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dosageInstruction">dosageInstruction</a>" : [
     {
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.asNeeded_x_">asNeededBoolean</a>" : true,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.asNeeded[x]">asNeededBoolean</a>" : true,
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.route">route</a>" : {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
           {
@@ -251,7 +251,7 @@
       },
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate">doseAndRate</a>" : [
         {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate.rate_x_">rateRatio</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate.rate[x]">rateRatio</a>" : {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 2.5,
               "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
@@ -298,7 +298,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 07:42+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 08:07+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

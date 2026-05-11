@@ -12,6 +12,12 @@
 
 ## Example Medication: Legemiddel-Legemiddeldose-SmofKabiven
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: Kombinasjoner
+
+**code**: SmofKabiven inf, emul
+
 
 
 ## Resource Content
@@ -21,24 +27,32 @@
   "resourceType" : "Medication",
   "id" : "Legemiddel-Legemiddeldose-SmofKabiven",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "B05BA10",
-        "display" : "Kombinasjoner"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "B05BA10",
+            "display" : "Kombinasjoner"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
-      "code" : "ID_58EA43B8-817A-4CCC-8C88-A780399018E3",
-      "display" : "SmofKabiven inf, emul"
-    }]
+    "coding" : [
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose",
+        "code" : "ID_58EA43B8-817A-4CCC-8C88-A780399018E3",
+        "display" : "SmofKabiven inf, emul"
+      }
+    ]
   }
 }
 

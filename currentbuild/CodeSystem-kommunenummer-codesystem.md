@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.1.0 **  |
+| *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402** | *Version*:1.1.0** |
 | Active as of 2026-05-11 | *Computable Name*:KommunenummerCodeSystem |
 
  
@@ -23,6 +23,8 @@ Kodesystem for norske kommunenummer (Volven 3402)
  This Code system is referenced in the content logical definition of the following value sets: 
 
 * [KommunenummerValueSet](ValueSet-kommunenummer-alle.md)
+
+This code system `urn:oid:2.16.578.1.12.4.1.1.3402` defines codes, but no codes are represented here
 
 
 
@@ -37,30 +39,40 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "status" : "active",
-  "date" : "2026-05-11T07:42:14+00:00",
+  "date" : "2026-05-11T08:07:46+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "description" : "Kodesystem for norske kommunenummer (Volven 3402)",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
   "content" : "not-present"
 }
 

@@ -12,6 +12,14 @@
 
 ## Example Encounter: Episode-Sykehjem
 
+Profile: [Episode](StructureDefinition-lmdi-encounter.md)
+
+**status**: In Progress
+
+**class**: [ActCode: SS](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-SS) (short stay)
+
+**serviceProvider**: [Organization BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md)
+
 
 
 ## Resource Content
@@ -21,7 +29,9 @@
   "resourceType" : "Encounter",
   "id" : "Episode-Sykehjem",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    ]
   },
   "status" : "in-progress",
   "class" : {

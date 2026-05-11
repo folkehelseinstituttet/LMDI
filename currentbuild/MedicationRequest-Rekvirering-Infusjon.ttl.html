@@ -212,17 +212,17 @@
 
  a fhir:MedicationRequest ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;Rekvirering-Infusjon&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;Rekvirering-Infusjon&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">fhir:extension</a> ( [
+  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">fhir:extension</a> ( [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie&gt;     ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false     ]
   ] ) ; # 
@@ -235,11 +235,11 @@
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/medicationrequest-category&gt;       ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;inpatient&quot; ]     ] )
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.reported_x_">fhir:reported</a> [
+  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.reported[x]">fhir:reported</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication_x_">fhir:medication</a> [
+  <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">fhir:medication</a> [
 <a href="http://hl7.org/fhir/R4/references.html#Reference">a</a> fhir:Reference ;
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser ;
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser&quot; ]
@@ -254,7 +254,7 @@
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Practitioner/Helsepersonell-Med-HPR&quot; ]
   ] ; # 
   <a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dosageInstruction">fhir:dosageInstruction</a> ( [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.asNeeded_x_">fhir:asNeeded</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.asNeeded[x]">fhir:asNeeded</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">a</a> fhir:Boolean ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true     ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.route">fhir:route</a> [
@@ -266,7 +266,7 @@ a sct:47625008 ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;47625008&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;intravenøs administrasjonsvei&quot; ]       ] )     ] ;
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate">fhir:doseAndRate</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate.rate_x_">fhir:rate</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.doseAndRate.rate[x]">fhir:rate</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Ratio">a</a> fhir:Ratio ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">fhir:numerator</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">fhir:v</a> 2.5 ] ;
@@ -314,7 +314,7 @@ a sct:47625008 ;
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 07:42+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 08:07+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

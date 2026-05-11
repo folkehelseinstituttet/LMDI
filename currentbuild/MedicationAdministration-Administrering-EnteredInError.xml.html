@@ -202,11 +202,11 @@
 
   <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Administrering-EnteredInError&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.meta">meta</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Administrering-EnteredInError&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.meta">meta</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.meta">meta</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.identifier">identifier</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;71dd991f-2662-4a7e-86b6-c6c85c9580d4&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.identifier">identifier</a>&gt;
@@ -218,16 +218,16 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Drug declined by patient - dislikes taste&quot;/&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.statusReason">statusReason</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>&gt;<a href="Medication-Legemiddel-FestLegemiddelpakning.html" style="color: Maroon">&#x1F517;</a> 
+  &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication[x]">medicationReference</a>&gt;<a href="Medication-Legemiddel-FestLegemiddelpakning.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Medication/Legemiddel-FestLegemiddelpakning&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication[x]">medicationReference</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;<a href="Patient-Pasient-Med-FNR.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/Pasient-Med-FNR&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>&gt;<a href="Encounter-Episode-Sykehus.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Encounter/Episode-Sykehus&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-06-13T14:48:47+02:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective[x]">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-06-13T14:48:47+02:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.reasonReference">reasonReference</a>&gt;<a href="Condition-Diagnose-ICD10.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Condition/Diagnose-ICD10&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.reasonReference">reasonReference</a>&gt;
@@ -240,10 +240,10 @@
       &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.route">route</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">value</a>=&quot;50&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;milligram&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mg&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">value</a>=&quot;50&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;milligram&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mg&quot;/&gt;
     &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage">dosage</a>&gt;
 &lt;/<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">MedicationAdministration</a>&gt;</code></pre>
@@ -277,7 +277,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 07:42+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 08:07+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

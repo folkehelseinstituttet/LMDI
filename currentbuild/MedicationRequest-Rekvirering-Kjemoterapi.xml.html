@@ -202,33 +202,33 @@
 
   <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">MedicationRequest</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Rekvirering-Kjemoterapi&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.meta">meta</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Rekvirering-Kjemoterapi&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/resource.html#MedicationRequest.meta">meta</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring&quot;&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueQuantity</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueQuantity</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">value</a>=&quot;80&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;%&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;%&quot;/&gt;
-    &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueQuantity</a>&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>
+    &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueQuantity</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime&quot;&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FOLFOX6&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>
+    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;FOLFOX6&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie&quot;&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#MedicationRequest.extension">extension</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.extension">extension</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;order&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication_x_">medicationReference</a>&gt;<a href="Medication-Legemiddel-FestLegemiddelVirkestoff.html" style="color: Maroon">&#x1F517;</a> 
+  &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationReference</a>&gt;<a href="Medication-Legemiddel-FestLegemiddelVirkestoff.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Medication/Legemiddel-FestLegemiddelVirkestoff&quot;/&gt;
-  &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication_x_">medicationReference</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationReference</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>&gt;<a href="Patient-Pasient-Med-FNR.html" style="color: Maroon">&#x1F517;</a> 
     &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/Pasient-Med-FNR&quot;/&gt;
   &lt;/<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>&gt;
@@ -267,7 +267,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 07:42+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 08:07+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

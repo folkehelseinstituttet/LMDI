@@ -12,6 +12,12 @@
 
 ## Example Patient: Pasient-Med-DNR
 
+Profile: [Pasient](StructureDefinition-lmdi-patient.md)
+
+Anonymous Patient (no stated gender), DoB: 1979-01-01 ( urn:oid:2.16.578.1.12.4.1.4.2#41667987421)
+
+-------
+
 
 
 ## Resource Content
@@ -21,16 +27,22 @@
   "resourceType" : "Patient",
   "id" : "Pasient-Med-DNR",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.2",
-    "value" : "41667987421"
-  }],
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.2",
+      "value" : "41667987421"
+    }
+  ],
   "birthDate" : "1979-01-01",
-  "address" : [{
-    "state" : "Vestland"
-  }]
+  "address" : [
+    {
+      "state" : "Vestland"
+    }
+  ]
 }
 
 ```

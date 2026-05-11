@@ -12,6 +12,8 @@
 
 ## Example Practitioner: Helsepersonell-Uten-HPR
 
+Profile: [Helsepersonell](StructureDefinition-lmdi-practitioner.md)
+
 
 
 ## Resource Content
@@ -21,7 +23,9 @@
   "resourceType" : "Practitioner",
   "id" : "Helsepersonell-Uten-HPR",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    ]
   }
 }
 

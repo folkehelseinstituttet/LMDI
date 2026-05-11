@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus** | *Version*:1.1.0** |
 | Draft as of 2025-09-12 | *Computable Name*:LegemiddeladministreringStatus |
 
  
@@ -58,40 +58,54 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "description" : "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
   "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/medication-admin-status",
-      "concept" : [{
-        "code" : "completed",
-        "display" : "Gjennomført"
-      },
+    "include" : [
       {
-        "code" : "entered-in-error",
-        "display" : "Feilregistrert"
-      }]
-    }]
+        "system" : "http://terminology.hl7.org/CodeSystem/medication-admin-status",
+        "concept" : [
+          {
+            "code" : "completed",
+            "display" : "Gjennomført"
+          },
+          {
+            "code" : "entered-in-error",
+            "display" : "Feilregistrert"
+          }
+        ]
+      }
+    ]
   }
 }
 

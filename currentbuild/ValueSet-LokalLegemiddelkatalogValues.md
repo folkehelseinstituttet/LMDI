@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues** | *Version*:1.1.0** |
 | Active as of 2026-05-11 | *Computable Name*:LokalLegemiddelkatalogValues |
 
  
@@ -25,6 +25,8 @@ Gyldige verdier for lokal legemiddelkatalog
 This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
 
 ### Logical Definition (CLD)
+
+* Include all codes defined in [`http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem`](CodeSystem-LokalLegemiddelkatalogCodeSystem.md)version 📦1.1.0
 
  
 
@@ -56,34 +58,46 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
   "status" : "active",
-  "date" : "2026-05-11T07:42:14+00:00",
+  "date" : "2026-05-11T08:07:46+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "description" : "Gyldige verdier for lokal legemiddelkatalog",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
   "compose" : {
-    "include" : [{
-      "system" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
-    }]
+    "include" : [
+      {
+        "system" : "http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem"
+      }
+    ]
   }
 }
 

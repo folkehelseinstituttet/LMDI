@@ -12,6 +12,22 @@
 
 ## Example MedicationRequest: Rekvirering-Paracetamol
 
+Profile: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
+
+**identifier**: `http://example.org/rekvirering-id`/REK123456
+
+**status**: Active
+
+**intent**: Order
+
+**medication**: [Medication Paracet tab 500 mg](Medication-Legemiddel-FestLegemiddelMerkevare.md)
+
+**subject**: [Anonymous Patient Male, DoB: 1958-05-12 ( urn:oid:2.16.578.1.12.4.1.4.1#12705825562)](Patient-Pasient-Med-FNR.md)
+
+**authoredOn**: 2025-01-27
+
+**requester**: [Practitioner: identifier = urn:oid:2.16.578.1.12.4.1.4.4#9144900](Practitioner-Helsepersonell-Med-HPR.md)
+
 
 
 ## Resource Content
@@ -21,12 +37,16 @@
   "resourceType" : "MedicationRequest",
   "id" : "Rekvirering-Paracetamol",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    ]
   },
-  "identifier" : [{
-    "system" : "http://example.org/rekvirering-id",
-    "value" : "REK123456"
-  }],
+  "identifier" : [
+    {
+      "system" : "http://example.org/rekvirering-id",
+      "value" : "REK123456"
+    }
+  ],
   "status" : "active",
   "intent" : "order",
   "medicationReference" : {

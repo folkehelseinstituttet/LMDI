@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use** | *Version*:1.1.0** |
 | Active as of 2026-05-11 | *Computable Name*:LmdiAddressUse |
 
  
@@ -56,43 +56,57 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
   "status" : "active",
-  "date" : "2026-05-11T07:42:14+00:00",
+  "date" : "2026-05-11T08:07:46+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "description" : "Tillatte verdier for address.use i LMDI: home, temp, old",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
   "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/address-use",
-      "concept" : [{
-        "code" : "home"
-      },
+    "include" : [
       {
-        "code" : "temp"
-      },
-      {
-        "code" : "old"
-      }]
-    }]
+        "system" : "http://hl7.org/fhir/address-use",
+        "concept" : [
+          {
+            "code" : "home"
+          },
+          {
+            "code" : "temp"
+          },
+          {
+            "code" : "old"
+          }
+        ]
+      }
+    ]
   }
 }
 

@@ -12,6 +12,25 @@
 
 ## Example MedicationAdministration: Administrering-Oral
 
+Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md)
+
+**status**: Completed
+
+**medication**: [https://fhir.legemidler.example.com/legemidler/123456780](https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&canonical=https://fhir.legemidler.example.com/legemidler/123456780)
+
+**subject**: [https://fhi.no/fhir/lmdi/pasient/12345678](https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&canonical=https://fhi.no/fhir/lmdi/pasient/12345678)
+
+**context**: [https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3](https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&canonical=https://fhi.no/fhir/lmdi/episode/428ff23d-7a65-4c67-8059-6a1d07d287e3)
+
+**effective**: 2024-05-28 09:30:00+0200
+
+### Dosages
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Route** | **Dose** |
+| * | Swallow | 10 mg(Details: UCUM codemg = 'mg') |
+
 
 
 ## Resource Content
@@ -21,7 +40,9 @@
   "resourceType" : "MedicationAdministration",
   "id" : "Administrering-Oral",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    ]
   },
   "status" : "completed",
   "medicationReference" : {
@@ -36,11 +57,13 @@
   "effectiveDateTime" : "2024-05-28T09:30:00+02:00",
   "dosage" : {
     "route" : {
-      "coding" : [{
-        "system" : "http://snomed.info/sct",
-        "code" : "421521009",
-        "display" : "Swallow"
-      }]
+      "coding" : [
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "421521009",
+          "display" : "Swallow"
+        }
+      ]
     },
     "dose" : {
       "value" : 10,

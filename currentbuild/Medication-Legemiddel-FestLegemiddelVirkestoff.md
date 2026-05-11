@@ -12,6 +12,14 @@
 
 ## Example Medication: Legemiddel-FestLegemiddelVirkestoff
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: Oksykodon
+
+**code**: Oksykodon mikst oppl 1 mg/ml
+
+**form**: Mikstur, oppløsning
+
 
 
 ## Resource Content
@@ -21,31 +29,41 @@
   "resourceType" : "Medication",
   "id" : "Legemiddel-FestLegemiddelVirkestoff",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "N02AA05",
-        "display" : "Oksykodon"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02AA05",
+            "display" : "Oksykodon"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
-      "code" : "ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E",
-      "display" : "Oksykodon mikst oppl 1 mg/ml"
-    }]
+    "coding" : [
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff",
+        "code" : "ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E",
+        "display" : "Oksykodon mikst oppl 1 mg/ml"
+      }
+    ]
   },
   "form" : {
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
-      "code" : "842",
-      "display" : "Mikstur, oppløsning"
-    }]
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+        "code" : "842",
+        "display" : "Mikstur, oppløsning"
+      }
+    ]
   }
 }
 

@@ -12,6 +12,16 @@
 
 ## Example Organization: Organisasjon-Sykehus-2
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.101`/974747138
+
+**type**: Sykehus
+
+**name**: Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk
+
+**partOf**: [Organization Helse Møre og Romsdal HF](Organization-Organisasjon-HF-2.md)
+
 
 
 ## Resource Content
@@ -21,19 +31,27 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-Sykehus-2",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
-    "value" : "974747138"
-  }],
-  "type" : [{
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
-      "code" : "01",
-      "display" : "Sykehus"
-    }]
-  }],
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+      "value" : "974747138"
+    }
+  ],
+  "type" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
+          "code" : "01",
+          "display" : "Sykehus"
+        }
+      ]
+    }
+  ],
   "name" : "Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk",
   "partOf" : {
     "reference" : "Organization/Organisasjon-HF-2"

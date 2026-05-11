@@ -12,6 +12,16 @@
 
 ## Example Organization: Organisasjon-Post
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.102`/102683
+
+**type**: Post
+
+**name**: HMR ÅLE SH Kreft og blodsjukdommar sengepost
+
+**partOf**: [Organization Kreft og blodsykdommer sengepost Ålesund](Organization-Organisasjon-Seksjon.md)
+
 
 
 ## Resource Content
@@ -21,19 +31,27 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-Post",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
-    "value" : "102683"
-  }],
-  "type" : [{
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
-      "code" : "08",
-      "display" : "Post"
-    }]
-  }],
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+      "value" : "102683"
+    }
+  ],
+  "type" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
+          "code" : "08",
+          "display" : "Post"
+        }
+      ]
+    }
+  ],
   "name" : "HMR ÅLE SH Kreft og blodsjukdommar sengepost",
   "partOf" : {
     "reference" : "Organization/Organisasjon-Seksjon"

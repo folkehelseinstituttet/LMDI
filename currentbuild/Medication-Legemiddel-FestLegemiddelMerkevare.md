@@ -12,6 +12,14 @@
 
 ## Example Medication: Legemiddel-FestLegemiddelMerkevare
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: Paracetamol
+
+**code**: Paracet tab 500 mg
+
+**form**: Tablett
+
 
 
 ## Resource Content
@@ -21,31 +29,41 @@
   "resourceType" : "Medication",
   "id" : "Legemiddel-FestLegemiddelMerkevare",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "N02BE01",
-        "display" : "Paracetamol"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02BE01",
+            "display" : "Paracetamol"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
-      "code" : "ID_2ABAC272-0BCF-43F0-84BE-984074D92E15",
-      "display" : "Paracet tab 500 mg"
-    }]
+    "coding" : [
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
+        "code" : "ID_2ABAC272-0BCF-43F0-84BE-984074D92E15",
+        "display" : "Paracet tab 500 mg"
+      }
+    ]
   },
   "form" : {
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
-      "code" : "53",
-      "display" : "Tablett"
-    }]
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+        "code" : "53",
+        "display" : "Tablett"
+      }
+    ]
   }
 }
 

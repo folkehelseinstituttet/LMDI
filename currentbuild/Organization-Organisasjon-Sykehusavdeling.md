@@ -12,6 +12,18 @@
 
 ## Example Organization: Organisasjon-Sykehusavdeling
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.102`/4208723
+
+**type**: Avdeling
+
+**name**: Avdeling for epilepsi, poliklinikk
+
+**address**: 
+
+**partOf**: [Organization OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md)
+
 
 
 ## Resource Content
@@ -21,33 +33,45 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-Sykehusavdeling",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
-    "value" : "4208723"
-  }],
-  "type" : [{
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
-      "code" : "05",
-      "display" : "Avdeling"
-    }]
-  }],
-  "name" : "Avdeling for epilepsi, poliklinikk",
-  "address" : [{
-    "type" : "physical",
-    "_district" : {
-      "extension" : [{
-        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-        "valueCoding" : {
-          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-          "code" : "3201",
-          "display" : "Bærum"
-        }
-      }]
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+      "value" : "4208723"
     }
-  }],
+  ],
+  "type" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
+          "code" : "05",
+          "display" : "Avdeling"
+        }
+      ]
+    }
+  ],
+  "name" : "Avdeling for epilepsi, poliklinikk",
+  "address" : [
+    {
+      "type" : "physical",
+      "_district" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "3201",
+              "display" : "Bærum"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "partOf" : {
     "reference" : "Organization/Organisasjon-Sykehus"
   }

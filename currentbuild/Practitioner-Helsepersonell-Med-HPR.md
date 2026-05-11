@@ -12,6 +12,10 @@
 
 ## Example Practitioner: Helsepersonell-Med-HPR
 
+Profile: [Helsepersonell](StructureDefinition-lmdi-practitioner.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.4`/9144900
+
 
 
 ## Resource Content
@@ -21,12 +25,16 @@
   "resourceType" : "Practitioner",
   "id" : "Helsepersonell-Med-HPR",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-practitioner"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
-    "value" : "9144900"
-  }]
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.4",
+      "value" : "9144900"
+    }
+  ]
 }
 
 ```

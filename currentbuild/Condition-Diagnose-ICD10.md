@@ -12,6 +12,14 @@
 
 ## Example Condition: Diagnose-ICD10
 
+Profile: [Diagnose](StructureDefinition-lmdi-condition.md)
+
+**clinicalStatus**: Active
+
+**code**: Angina pectoris
+
+**subject**: [Anonymous Patient Male, DoB: 1958-05-12 ( urn:oid:2.16.578.1.12.4.1.4.1#12705825562)](Patient-Pasient-Med-FNR.md)
+
 
 
 ## Resource Content
@@ -21,20 +29,26 @@
   "resourceType" : "Condition",
   "id" : "Diagnose-ICD10",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+    ]
   },
   "clinicalStatus" : {
-    "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
-      "code" : "active"
-    }]
+    "coding" : [
+      {
+        "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "code" : "active"
+      }
+    ]
   },
   "code" : {
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
-      "code" : "I20",
-      "display" : "Angina pectoris"
-    }]
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7110",
+        "code" : "I20",
+        "display" : "Angina pectoris"
+      }
+    ]
   },
   "subject" : {
     "reference" : "Patient/Pasient-Med-FNR"

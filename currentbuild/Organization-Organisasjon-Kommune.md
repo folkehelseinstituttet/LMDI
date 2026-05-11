@@ -12,6 +12,14 @@
 
 ## Example Organization: Organisasjon-Kommune
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.101`/942110464
+
+**name**: TRONDHEIM KOMMUNE
+
+**address**: 
+
 
 
 ## Resource Content
@@ -21,27 +29,35 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-Kommune",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
-    "value" : "942110464"
-  }],
-  "name" : "TRONDHEIM KOMMUNE",
-  "address" : [{
-    "type" : "physical",
-    "district" : "Trondheim",
-    "_district" : {
-      "extension" : [{
-        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-        "valueCoding" : {
-          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-          "code" : "5001",
-          "display" : "Trondheim - Tråante"
-        }
-      }]
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+      "value" : "942110464"
     }
-  }]
+  ],
+  "name" : "TRONDHEIM KOMMUNE",
+  "address" : [
+    {
+      "type" : "physical",
+      "district" : "Trondheim",
+      "_district" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "5001",
+              "display" : "Trondheim - Tråante"
+            }
+          }
+        ]
+      }
+    }
+  ]
 }
 
 ```

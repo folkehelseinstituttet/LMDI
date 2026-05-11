@@ -12,6 +12,14 @@
 
 ## Example Medication: Lokalt-legemiddel-cellegift
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: Cisplatin
+
+**code**: Cisplatin
+
+**amount**: 1025 milligram(Details: UCUM codemg = 'mg')/1 pose
+
 
 
 ## Resource Content
@@ -21,24 +29,32 @@
   "resourceType" : "Medication",
   "id" : "Lokalt-legemiddel-cellegift",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "L01XA01",
-        "display" : "Cisplatin"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "L01XA01",
+            "display" : "Cisplatin"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel",
-      "code" : "Cisplatin",
-      "display" : "Cisplatin"
-    }]
+    "coding" : [
+      {
+        "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel",
+        "code" : "Cisplatin",
+        "display" : "Cisplatin"
+      }
+    ]
   },
   "amount" : {
     "numerator" : {

@@ -12,6 +12,14 @@
 
 ## Example Medication: Legemiddel-FestLegemiddelpakning
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: isosorbide mononitrate
+
+**code**: Monoket retard depottab 50 mg
+
+**form**: Depottablett
+
 
 
 ## Resource Content
@@ -21,31 +29,41 @@
   "resourceType" : "Medication",
   "id" : "Legemiddel-FestLegemiddelpakning",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "C01DA14",
-        "display" : "isosorbide mononitrate"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "C01DA14",
+            "display" : "isosorbide mononitrate"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
-      "code" : "ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C",
-      "display" : "Monoket retard depottab 50 mg"
-    }]
+    "coding" : [
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning",
+        "code" : "ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C",
+        "display" : "Monoket retard depottab 50 mg"
+      }
+    ]
   },
   "form" : {
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
-      "code" : "25",
-      "display" : "Depottablett"
-    }]
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+        "code" : "25",
+        "display" : "Depottablett"
+      }
+    ]
   }
 }
 

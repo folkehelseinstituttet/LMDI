@@ -12,6 +12,12 @@
 
 ## Example Substance: Virkestoff-Oksykodon
 
+Profile: [Virkestoff](StructureDefinition-lmdi-substance.md)
+
+**category**: Drug or Medicament
+
+**code**: Oxycodone (substance)
+
 
 
 ## Resource Content
@@ -21,21 +27,29 @@
   "resourceType" : "Substance",
   "id" : "Virkestoff-Oksykodon",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
+    ]
   },
-  "category" : [{
-    "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/substance-category",
-      "code" : "drug",
-      "display" : "Drug or Medicament"
-    }]
-  }],
+  "category" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/substance-category",
+          "code" : "drug",
+          "display" : "Drug or Medicament"
+        }
+      ]
+    }
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "55452001",
-      "display" : "Oxycodone (substance)"
-    }]
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "55452001",
+        "display" : "Oxycodone (substance)"
+      }
+    ]
   }
 }
 

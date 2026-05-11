@@ -12,6 +12,12 @@
 
 ## Example Organization: Organisasjon-HF
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.101`/993467049, `urn:oid:2.16.578.1.12.4.1.4.102`/4001031
+
+**name**: Oslo universitetssykehus HF
+
 
 
 ## Resource Content
@@ -21,16 +27,20 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-HF",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
-    "value" : "993467049"
-  },
-  {
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
-    "value" : "4001031"
-  }],
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+      "value" : "993467049"
+    },
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.102",
+      "value" : "4001031"
+    }
+  ],
   "name" : "Oslo universitetssykehus HF"
 }
 

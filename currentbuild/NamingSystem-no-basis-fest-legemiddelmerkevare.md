@@ -14,11 +14,28 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare** | *Version*:1.1.0** |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelMerkevare |
 
  
 FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare. 
+
+### Summary
+
+| | |
+| :--- | :--- |
+| Defining URL | http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare |
+| Version | 1.1.0 |
+| Name | festLegemiddelMerkevare |
+| Status | draft |
+| Definition | FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare. |
+| Publisher | Folkehelseinstituttet |
+
+### Identifiers
+
+* **Type**: URI
+  * **Value**: http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare
+  * **Preferred**: true
 
 
 
@@ -28,47 +45,61 @@ FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt
 {
   "resourceType" : "NamingSystem",
   "id" : "no-basis-fest-legemiddelmerkevare",
-  "extension" : [{
-    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
-    "valueUri" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare"
-  },
-  {
-    "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "1.1.0"
-  }],
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url",
+      "valueUri" : "http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelmerkevare"
+    },
+    {
+      "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
+      "valueString" : "1.1.0"
+    }
+  ],
   "name" : "festLegemiddelMerkevare",
   "status" : "draft",
   "kind" : "identifier",
   "date" : "2024-06-10",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "responsible" : "Direktoratet for medisinske produkter",
   "description" : "FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare.",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
-  "uniqueId" : [{
-    "type" : "uri",
-    "value" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
-    "preferred" : true
-  }]
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
+  "uniqueId" : [
+    {
+      "type" : "uri",
+      "value" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare",
+      "preferred" : true
+    }
+  ]
 }
 
 ```

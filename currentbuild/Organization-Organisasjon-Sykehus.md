@@ -12,6 +12,18 @@
 
 ## Example Organization: Organisasjon-Sykehus
 
+Profile: [Organisasjon](StructureDefinition-lmdi-organization.md)
+
+**identifier**: `urn:oid:2.16.578.1.12.4.1.4.101`/974705761
+
+**type**: Sykehus
+
+**name**: OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK
+
+**address**: 
+
+**partOf**: [Organization Oslo universitetssykehus HF](Organization-Organisasjon-HF.md)
+
 
 
 ## Resource Content
@@ -21,33 +33,45 @@
   "resourceType" : "Organization",
   "id" : "Organisasjon-Sykehus",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
+    ]
   },
-  "identifier" : [{
-    "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
-    "value" : "974705761"
-  }],
-  "type" : [{
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
-      "code" : "01",
-      "display" : "Sykehus"
-    }]
-  }],
-  "name" : "OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK",
-  "address" : [{
-    "type" : "physical",
-    "_district" : {
-      "extension" : [{
-        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-        "valueCoding" : {
-          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-          "code" : "3201",
-          "display" : "Bærum"
-        }
-      }]
+  "identifier" : [
+    {
+      "system" : "urn:oid:2.16.578.1.12.4.1.4.101",
+      "value" : "974705761"
     }
-  }],
+  ],
+  "type" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:oid:2.16.578.1.12.4.1.1.8624",
+          "code" : "01",
+          "display" : "Sykehus"
+        }
+      ]
+    }
+  ],
+  "name" : "OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK",
+  "address" : [
+    {
+      "type" : "physical",
+      "_district" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "3201",
+              "display" : "Bærum"
+            }
+          }
+        ]
+      }
+    }
+  ],
   "partOf" : {
     "reference" : "Organization/Organisasjon-HF"
   }

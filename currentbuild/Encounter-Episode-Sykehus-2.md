@@ -12,6 +12,14 @@
 
 ## Example Encounter: Episode-Sykehus-2
 
+Profile: [Episode](StructureDefinition-lmdi-encounter.md)
+
+**status**: Finished
+
+**class**: [ActCode: IMP](http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP) (inpatient encounter)
+
+**serviceProvider**: [Organization HMR ÅLE SH Kreft og blodsjukdommar sengepost](Organization-Organisasjon-Post.md)
+
 
 
 ## Resource Content
@@ -21,7 +29,9 @@
   "resourceType" : "Encounter",
   "id" : "Episode-Sykehus-2",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    ]
   },
   "status" : "finished",
   "class" : {

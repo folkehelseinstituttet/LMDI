@@ -202,14 +202,14 @@
 
   <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration">resourceType</a>" : "MedicationAdministration",
-  "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.id">id</a>" : "Administrering-Infusjon",
-  "<a href="http://hl7.org/fhir/R4/resource.html#MedicationAdministration.meta">meta</a>" : {
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.id">id</a>" : "Administrering-Infusjon",
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
       <a href="StructureDefinition-lmdi-medicationadministration.html" style="color: Maroon">&#x1F517;</a> "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
     ]
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.status">status</a>" : "completed",
-  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication_x_">medicationReference</a>" : {
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.medication[x]">medicationReference</a>" : {
     <a href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser"
   },
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.subject">subject</a>" : {
@@ -218,7 +218,7 @@
   "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.context">context</a>" : {
     <a href="Encounter-Episode-Sykehus.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Episode-Sykehus"
   },
-  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective_x_">effectivePeriod</a>" : {
+  "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.effective[x]">effectivePeriod</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2024-06-13T14:26:01+02:00",
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2024-06-13T14:48:47+02:00"
   },
@@ -236,12 +236,12 @@
       ]
     },
     "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.dose">dose</a>" : {
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 80,
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "milliliter",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
-      "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mL"
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 80,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "milliliter",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a>" : "mL"
     },
-    "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.rate_x_">rateRatio</a>" : {
+    "<a href="http://hl7.org/fhir/R4/medicationadministration.html#MedicationAdministration.dosage.rate[x]">rateRatio</a>" : {
       "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 3.6,
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
@@ -285,7 +285,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 07:42+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 08:07+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

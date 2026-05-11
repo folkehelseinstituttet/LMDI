@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/CodeSystem/LokalLegemiddelkatalogCodeSystem** | *Version*:1.1.0** |
 | Active as of 2026-05-11 | *Computable Name*:LokalLegemiddelkatalogCodeSystem |
 
  
@@ -37,42 +37,54 @@ Kodesystem for lokal legemiddelkatalog
   "name" : "LokalLegemiddelkatalogCodeSystem",
   "title" : "Lokal Legemiddelkatalog Codes",
   "status" : "active",
-  "date" : "2026-05-11T07:42:14+00:00",
+  "date" : "2026-05-11T08:07:46+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "description" : "Kodesystem for lokal legemiddelkatalog",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
   "content" : "complete",
   "count" : 2,
-  "concept" : [{
-    "code" : "metavisionkatalogFraHso",
-    "display" : "MetavisionkatalogFraHso",
-    "definition" : "Metavisionkatalog fra Helse Sør-Øst"
-  },
-  {
-    "code" : "metavisionkatalogFraHN",
-    "display" : "MetavisionkatalogFraHN",
-    "definition" : "Metavisionkatalog fra Helse Nord"
-  }]
+  "concept" : [
+    {
+      "code" : "metavisionkatalogFraHso",
+      "display" : "MetavisionkatalogFraHso",
+      "definition" : "Metavisionkatalog fra Helse Sør-Øst"
+    },
+    {
+      "code" : "metavisionkatalogFraHN",
+      "display" : "MetavisionkatalogFraHN",
+      "definition" : "Metavisionkatalog fra Helse Nord"
+    }
+  ]
 }
 
 ```

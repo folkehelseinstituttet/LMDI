@@ -12,6 +12,14 @@
 
 ## Example Medication: Legemiddel-FestLmrLopenr
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: topiramat
+
+**code**: Topimax kaps 15 mg
+
+**form**: Kapsel, hard
+
 
 
 ## Resource Content
@@ -21,31 +29,41 @@
   "resourceType" : "Medication",
   "id" : "Legemiddel-FestLmrLopenr",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "N03AX11",
-        "display" : "topiramat"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N03AX11",
+            "display" : "topiramat"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer",
-      "code" : "1003023",
-      "display" : "Topimax kaps 15 mg"
-    }]
+    "coding" : [
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer",
+        "code" : "1003023",
+        "display" : "Topimax kaps 15 mg"
+      }
+    ]
   },
   "form" : {
-    "coding" : [{
-      "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
-      "code" : "891",
-      "display" : "Kapsel, hard"
-    }]
+    "coding" : [
+      {
+        "system" : "urn:oid:2.16.578.1.12.4.1.1.7448",
+        "code" : "891",
+        "display" : "Kapsel, hard"
+      }
+    ]
   }
 }
 

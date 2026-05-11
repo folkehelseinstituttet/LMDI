@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder** | *Version*:1.1.0** |
 | Active as of 2026-05-11 | *Computable Name*:LegemiddelKoder |
 
  
@@ -26,11 +26,22 @@ ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lok
 
 ### Logical Definition (CLD)
 
+This value set includes codes based on the following rules:
+
+* Include all codes defined in [`http://snomed.info/sct`](http://www.snomed.org/)version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare`version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff`version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelPakning`version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://dmp.no/fhir/NamingSystem/festLegemiddelDose`version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://dmp.no/fhir/NamingSystem/lmrLopenummer`version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://dmp.no/fhir/NamingSystem/fest-varenummer`version Not Stated (use latest from terminology server)
+* Include all codes defined in `http://fhi.no/fhir/NamingSystem/lokaltLegemiddel`version Not Stated (use latest from terminology server)
+
  
 
 ### Expansion
 
-This value set cannot be expanded because of the way it is defined - it has an infinite number of members
+No Expansion for this valueset (not supported by Publication Tooling)
 
 -------
 
@@ -58,55 +69,67 @@ This value set cannot be expanded because of the way it is defined - it has an i
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "status" : "active",
-  "date" : "2026-05-11T07:42:14+00:00",
+  "date" : "2026-05-11T08:07:46+00:00",
   "publisher" : "Folkehelseinstituttet",
-  "contact" : [{
-    "name" : "Folkehelseinstituttet",
-    "telecom" : [{
-      "system" : "url",
-      "value" : "https://www.fhi.no"
-    }]
-  },
-  {
-    "name" : "Legemiddelregisteret",
-    "telecom" : [{
-      "system" : "email",
-      "value" : "legemiddelregisteret@fhi.no"
-    }]
-  }],
+  "contact" : [
+    {
+      "name" : "Folkehelseinstituttet",
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "https://www.fhi.no"
+        }
+      ]
+    },
+    {
+      "name" : "Legemiddelregisteret",
+      "telecom" : [
+        {
+          "system" : "email",
+          "value" : "legemiddelregisteret@fhi.no"
+        }
+      ]
+    }
+  ],
   "description" : "ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog",
-  "jurisdiction" : [{
-    "coding" : [{
-      "system" : "urn:iso:std:iso:3166",
-      "code" : "NO",
-      "display" : "Norway"
-    }]
-  }],
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "NO",
+          "display" : "Norway"
+        }
+      ]
+    }
+  ],
   "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct"
-    },
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-    },
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-    },
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-    },
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-    },
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-    },
-    {
-      "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-    },
-    {
-      "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-    }]
+    "include" : [
+      {
+        "system" : "http://snomed.info/sct"
+      },
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+      },
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+      },
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+      },
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+      },
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+      },
+      {
+        "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+      },
+      {
+        "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+      }
+    ]
   }
 }
 

@@ -12,6 +12,12 @@
 
 ## Example Patient: Pasient-Uten-Personidentifikator
 
+Profile: [Pasient](StructureDefinition-lmdi-patient.md)
+
+Anonymous Patient Female, DoB: 1958-09-19
+
+-------
+
 
 
 ## Resource Content
@@ -21,23 +27,29 @@
   "resourceType" : "Patient",
   "id" : "Pasient-Uten-Personidentifikator",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"
+    ]
   },
   "gender" : "female",
   "birthDate" : "1958-09-19",
-  "address" : [{
-    "district" : "Bærum",
-    "_district" : {
-      "extension" : [{
-        "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
-        "valueCoding" : {
-          "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-          "code" : "3024",
-          "display" : "Bærum"
-        }
-      }]
+  "address" : [
+    {
+      "district" : "Bærum",
+      "_district" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode",
+            "valueCoding" : {
+              "system" : "urn:oid:2.16.578.1.12.4.1.1.3402",
+              "code" : "3024",
+              "display" : "Bærum"
+            }
+          }
+        ]
+      }
     }
-  }]
+  ]
 }
 
 ```

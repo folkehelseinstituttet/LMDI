@@ -12,6 +12,14 @@
 
 ## Example Medication: Legemiddel-SCT
 
+Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
+
+**Legemiddel Classification**: Paracetamol
+
+**code**: paracetamol tab 500 mg
+
+**form**: tablett
+
 
 
 ## Resource Content
@@ -21,31 +29,41 @@
   "resourceType" : "Medication",
   "id" : "Legemiddel-SCT",
   "meta" : {
-    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+    "profile" : [
+      "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    ]
   },
-  "extension" : [{
-    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-    "valueCodeableConcept" : {
-      "coding" : [{
-        "system" : "http://www.whocc.no/atc",
-        "code" : "N02BE01",
-        "display" : "Paracetamol"
-      }]
+  "extension" : [
+    {
+      "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
+      "valueCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.whocc.no/atc",
+            "code" : "N02BE01",
+            "display" : "Paracetamol"
+          }
+        ]
+      }
     }
-  }],
+  ],
   "code" : {
-    "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "32236009",
-      "display" : "paracetamol tab 500 mg"
-    }]
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "32236009",
+        "display" : "paracetamol tab 500 mg"
+      }
+    ]
   },
   "form" : {
-    "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "385055001",
-      "display" : "tablett"
-    }]
+    "coding" : [
+      {
+        "system" : "http://snomed.info/sct",
+        "code" : "385055001",
+        "display" : "tablett"
+      }
+    ]
   }
 }
 
