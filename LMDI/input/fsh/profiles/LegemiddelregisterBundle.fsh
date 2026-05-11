@@ -3,10 +3,16 @@ Parent: Bundle
 Id: lmdi-bundle
 Title: "LegemiddelregisterBundle"
 Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper."
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Medication Registry Bundle"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Bundle profile for the Medication Registry. Supports only transaction type and POST operations, with restrictions on allowed resource types."
+* ^title.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^title.extension[=].extension[+].url = "lang"
+* ^title.extension[=].extension[=].valueCode = #en
+* ^title.extension[=].extension[+].url = "content"
+* ^title.extension[=].extension[=].valueString = "Medication Registry Bundle"
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = "Bundle profile for the Medication Registry. Supports only transaction type and POST operations, with restrictions on allowed resource types."
 
 // Påkrevde felter
 * identifier 1..1 MS
@@ -15,10 +21,16 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 * type = #transaction (exactly)
 * type ^short = "Må være av type transaction"
 * type ^definition = "Angir at bundle må være av type transaction"
-* type ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* type ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Must be of type transaction"
-* type ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* type ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Indicates that the bundle must be of type transaction"
+* type ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* type ^short.extension[=].extension[+].url = "lang"
+* type ^short.extension[=].extension[=].valueCode = #en
+* type ^short.extension[=].extension[+].url = "content"
+* type ^short.extension[=].extension[=].valueString = "Must be of type transaction"
+* type ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* type ^definition.extension[=].extension[+].url = "lang"
+* type ^definition.extension[=].extension[=].valueCode = #en
+* type ^definition.extension[=].extension[+].url = "content"
+* type ^definition.extension[=].extension[=].valueString = "Indicates that the bundle must be of type transaction"
 
 // Deaktiverte elementer
 * total 0..0
@@ -28,28 +40,46 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 * entry 1..* MS
 * entry ^short = "Innholdselementer i bundle"
 * entry ^definition = "Inneholder ressursene som skal sendes inn til registeret"
-* entry ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* entry ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Content entries in the bundle"
-* entry ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* entry ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Contains the resources to be submitted to the registry"
+* entry ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* entry ^short.extension[=].extension[+].url = "lang"
+* entry ^short.extension[=].extension[=].valueCode = #en
+* entry ^short.extension[=].extension[+].url = "content"
+* entry ^short.extension[=].extension[=].valueString = "Content entries in the bundle"
+* entry ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* entry ^definition.extension[=].extension[+].url = "lang"
+* entry ^definition.extension[=].extension[=].valueCode = #en
+* entry ^definition.extension[=].extension[+].url = "content"
+* entry ^definition.extension[=].extension[=].valueString = "Contains the resources to be submitted to the registry"
 
 * entry.request 1..1 MS
 * entry.request.method 1..1 MS
 * entry.request.method = #POST (exactly)
 * entry.request.method ^short = "Må være POST"
 * entry.request.method ^definition = "Angir at alle forespørsler i bundle må være av type POST"
-* entry.request.method ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* entry.request.method ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Must be POST"
-* entry.request.method ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* entry.request.method ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Indicates that all requests in the bundle must be of type POST"
+* entry.request.method ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* entry.request.method ^short.extension[=].extension[+].url = "lang"
+* entry.request.method ^short.extension[=].extension[=].valueCode = #en
+* entry.request.method ^short.extension[=].extension[+].url = "content"
+* entry.request.method ^short.extension[=].extension[=].valueString = "Must be POST"
+* entry.request.method ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* entry.request.method ^definition.extension[=].extension[+].url = "lang"
+* entry.request.method ^definition.extension[=].extension[=].valueCode = #en
+* entry.request.method ^definition.extension[=].extension[+].url = "content"
+* entry.request.method ^definition.extension[=].extension[=].valueString = "Indicates that all requests in the bundle must be of type POST"
 
 * entry.request.url 1..1
 * entry.request.url ^short = "URL for requesten (påkrevd, men verdien har ingen betydning)"
 * entry.request.url ^definition = "Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."
-* entry.request.url ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* entry.request.url ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "URL for the request (required, but the value has no significance)"
-* entry.request.url ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* entry.request.url ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Represents the address for the request. The URL is required by the FHIR specification for transaction bundles, but the actual value has no functional significance in this case."
+* entry.request.url ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* entry.request.url ^short.extension[=].extension[+].url = "lang"
+* entry.request.url ^short.extension[=].extension[=].valueCode = #en
+* entry.request.url ^short.extension[=].extension[+].url = "content"
+* entry.request.url ^short.extension[=].extension[=].valueString = "URL for the request (required, but the value has no significance)"
+* entry.request.url ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* entry.request.url ^definition.extension[=].extension[+].url = "lang"
+* entry.request.url ^definition.extension[=].extension[=].valueCode = #en
+* entry.request.url ^definition.extension[=].extension[+].url = "content"
+* entry.request.url ^definition.extension[=].extension[=].valueString = "Represents the address for the request. The URL is required by the FHIR specification for transaction bundles, but the actual value has no functional significance in this case."
 
 * entry.resource 1..1 MS
 
@@ -76,8 +106,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Pasient
 InstanceOf: Pasient
 Usage: #inline
 Description: "Pasient med fødselsnummer"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Patient with national identity number"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier[FNR].value = "12705825562"
 * gender = #male
@@ -92,8 +120,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Helsepersonell
 InstanceOf: Helsepersonell
 Usage: #inline
 Description: "Helsepersonell med HPR-nummer"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Healthcare professional with HPR number"
 * identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
 * identifier[HPR].value = "9144900"
 
@@ -101,8 +127,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Kommune
 InstanceOf: Organisasjon
 Usage: #inline
 Description: "Kommune i primærhelsetjenesten"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Municipality in primary healthcare"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "942110464"
 * name = "TRONDHEIM KOMMUNE"
@@ -114,8 +138,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Sykehjem
 InstanceOf: Organisasjon
 Usage: #inline
 Description: "Ssykehjem i primærhelsetjenesten"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Nursing home in primary healthcare"
 * identifier[ENH].system = "urn:oid:2.16.578.1.12.4.1.4.101"
 * identifier[ENH].value = "985626154"
 * name = "BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM"
@@ -128,8 +150,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Episode
 InstanceOf: Episode
 Usage: #inline
 Description: "Episode på sykehjem"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Episode in a nursing home"
 * status = #in-progress
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#SS "short stay"
 * serviceProvider.reference = "urn:uuid:44444444-4444-4444-8444-444444444444"
@@ -138,8 +158,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Legemiddel
 InstanceOf: Legemiddel
 Usage: #inline
 Description: "Oksykodon på virkestoffnivå"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Oxycodone at substance level"
 * identifier.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 * identifier.value = "C31AF94A-5D5A-4C91-9B99-BB221E26E4C9"
 * extension[classification].valueCodeableConcept = $ATC#N02AA05 "Oksykodon"
@@ -154,8 +172,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Rekvirering
 InstanceOf: Legemiddelrekvirering
 Usage: #inline
 Description: "Rekvirering med interne referanser"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Request with internal references"
 * status = #active
 * intent = #order
 * medicationReference.reference = "urn:uuid:66666666-6666-4666-8666-666666666666"
@@ -174,8 +190,6 @@ Instance: Scenario-Sykehjem-Oksykodon-Administrering
 InstanceOf: Legemiddeladministrering
 Usage: #inline
 Description: "Administrering med interne referanser"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Administration with internal references"
 * status = #completed
 * medicationReference.reference = "urn:uuid:66666666-6666-4666-8666-666666666666"
 * subject.reference = "urn:uuid:11111111-1111-4111-8111-111111111111"
@@ -196,10 +210,6 @@ InstanceOf: LegemiddelregisterBundle
 Usage: #example
 Title: "Oksykodonadministrering i sykehjem med inline ressurskopier"
 Description: "Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline."
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Oxycodone administration in a nursing home with inline resource copies"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a transaction bundle where the member resources are local bundle instances marked as inline."
 
 * identifier.system = "urn:oid:2.16.578.1.34.10.3"
 * identifier.value = "bundle-001"

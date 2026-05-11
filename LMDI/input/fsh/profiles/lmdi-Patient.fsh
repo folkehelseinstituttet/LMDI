@@ -6,10 +6,16 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * ^status = #draft
 * ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Patient"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The patient who has been prescribed or administered medication, based on no-basis-Patient"
+* ^title.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^title.extension[=].extension[+].url = "lang"
+* ^title.extension[=].extension[=].valueCode = #en
+* ^title.extension[=].extension[+].url = "content"
+* ^title.extension[=].extension[=].valueString = "Patient"
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = "The patient who has been prescribed or administered medication, based on no-basis-Patient"
 
 // Deaktiverte felter
 * active 0..0
@@ -35,90 +41,150 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.type = #physical
 * address.type from LmdiAddressType (required)
 * address.type ^short = "physical"
-* address.type ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.type ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "physical"
+* address.type ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.type ^short.extension[=].extension[+].url = "lang"
+* address.type ^short.extension[=].extension[=].valueCode = #en
+* address.type ^short.extension[=].extension[+].url = "content"
+* address.type ^short.extension[=].extension[=].valueString = "physical"
 * address.city 0..0
 * address.text 0..0
 * address.line 0..0
 * address.district ^short = "Municipality"
-* address.district ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.district ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Municipality"
+* address.district ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.district ^short.extension[=].extension[+].url = "lang"
+* address.district ^short.extension[=].extension[=].valueCode = #en
+* address.district ^short.extension[=].extension[+].url = "content"
+* address.district ^short.extension[=].extension[=].valueString = "Municipality"
 // Bruker no-basis-municipalitycode extension
 * address.district.extension[municipalitycode] ^short = "Kodet verdi for kommune. Kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402)"
 * address.district.extension[municipalitycode] ^definition = "Kodet verdi for kommune. Koder fra kodeverk \"Kommunenummer og regionale spesialkoder\" (OID 3402) skal benyttes"
-* address.district.extension[municipalitycode] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.district.extension[municipalitycode] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Encoded municipality value. Code system \"Municipality numbers and regional special codes\" (OID 3402)"
-* address.district.extension[municipalitycode] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.district.extension[municipalitycode] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Encoded municipality value. Codes from the code system \"Municipality numbers and regional special codes\" (OID 3402) shall be used."
+* address.district.extension[municipalitycode] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.district.extension[municipalitycode] ^short.extension[=].extension[+].url = "lang"
+* address.district.extension[municipalitycode] ^short.extension[=].extension[=].valueCode = #en
+* address.district.extension[municipalitycode] ^short.extension[=].extension[+].url = "content"
+* address.district.extension[municipalitycode] ^short.extension[=].extension[=].valueString = "Encoded municipality value. Code system \"Municipality numbers and regional special codes\" (OID 3402)"
+* address.district.extension[municipalitycode] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.district.extension[municipalitycode] ^definition.extension[=].extension[+].url = "lang"
+* address.district.extension[municipalitycode] ^definition.extension[=].extension[=].valueCode = #en
+* address.district.extension[municipalitycode] ^definition.extension[=].extension[+].url = "content"
+* address.district.extension[municipalitycode] ^definition.extension[=].extension[=].valueString = "Encoded municipality value. Codes from the code system \"Municipality numbers and regional special codes\" (OID 3402) shall be used."
 * address.use from LmdiAddressUse (required)
 * address.use ^binding.description = "Tillatte verdier er home, temp eller old"
-* address.use ^binding.description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.use ^binding.description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Allowed values are home, temp, or old"
+* address.use ^binding.description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.use ^binding.description.extension[=].extension[+].url = "lang"
+* address.use ^binding.description.extension[=].extension[=].valueCode = #en
+* address.use ^binding.description.extension[=].extension[+].url = "content"
+* address.use ^binding.description.extension[=].extension[=].valueString = "Allowed values are home, temp, or old"
 * address.use ^short = "home | temp | old"
-* address.use ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.use ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "home | temp | old"
+* address.use ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.use ^short.extension[=].extension[+].url = "lang"
+* address.use ^short.extension[=].extension[=].valueCode = #en
+* address.use ^short.extension[=].extension[+].url = "content"
+* address.use ^short.extension[=].extension[=].valueString = "home | temp | old"
 * address.use ^definition = "Adressetype begrenset til home, temp eller old"
-* address.use ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.use ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Address type limited to home, temp, or old"
+* address.use ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.use ^definition.extension[=].extension[+].url = "lang"
+* address.use ^definition.extension[=].extension[=].valueCode = #en
+* address.use ^definition.extension[=].extension[+].url = "content"
+* address.use ^definition.extension[=].extension[=].valueString = "Address type limited to home, temp, or old"
 * address.state ^short = "County name"
-* address.state ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.state ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "County name"
+* address.state ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.state ^short.extension[=].extension[+].url = "lang"
+* address.state ^short.extension[=].extension[=].valueCode = #en
+* address.state ^short.extension[=].extension[+].url = "content"
+* address.state ^short.extension[=].extension[=].valueString = "County name"
 * address.country 0..0
 * address.postalCode 0..0
 
 * address.extension[urbanDistrict] ^short = "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)"
-* address.extension[urbanDistrict] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.extension[urbanDistrict] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)"
+* address.extension[urbanDistrict] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.extension[urbanDistrict] ^short.extension[=].extension[+].url = "lang"
+* address.extension[urbanDistrict] ^short.extension[=].extension[=].valueCode = #en
+* address.extension[urbanDistrict] ^short.extension[=].extension[+].url = "content"
+* address.extension[urbanDistrict] ^short.extension[=].extension[=].valueString = "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)"
 * address.extension[urbanDistrict] ^definition = "Encoded value for urban district. Codes from code system \"Urban district numbers\" (OID 3403) shall be used."
-* address.extension[urbanDistrict] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* address.extension[urbanDistrict] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Encoded value for urban district. Codes from code system \"Urban district numbers\" (OID 3403) shall be used."
+* address.extension[urbanDistrict] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* address.extension[urbanDistrict] ^definition.extension[=].extension[+].url = "lang"
+* address.extension[urbanDistrict] ^definition.extension[=].extension[=].valueCode = #en
+* address.extension[urbanDistrict] ^definition.extension[=].extension[+].url = "content"
+* address.extension[urbanDistrict] ^definition.extension[=].extension[=].valueString = "Encoded value for urban district. Codes from code system \"Urban district numbers\" (OID 3403) shall be used."
 // Fødselsdato
 * birthDate MS
 * birthDate ^short = "Fødselsdato"
-* birthDate ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* birthDate ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Date of birth"
+* birthDate ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* birthDate ^short.extension[=].extension[+].url = "lang"
+* birthDate ^short.extension[=].extension[=].valueCode = #en
+* birthDate ^short.extension[=].extension[+].url = "content"
+* birthDate ^short.extension[=].extension[=].valueString = "Date of birth"
 * birthDate ^definition = "Pasientens fødselsdato."
-* birthDate ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* birthDate ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The patient's date of birth."
+* birthDate ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* birthDate ^definition.extension[=].extension[+].url = "lang"
+* birthDate ^definition.extension[=].extension[=].valueCode = #en
+* birthDate ^definition.extension[=].extension[+].url = "content"
+* birthDate ^definition.extension[=].extension[=].valueString = "The patient's date of birth."
 
 // Kjønn
 * gender MS
 * gender ^short = "Kjønn"
-* gender ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* gender ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Gender"
+* gender ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* gender ^short.extension[=].extension[+].url = "lang"
+* gender ^short.extension[=].extension[=].valueCode = #en
+* gender ^short.extension[=].extension[+].url = "content"
+* gender ^short.extension[=].extension[=].valueString = "Gender"
 * gender ^definition = "Pasientens kjønn."
-* gender ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* gender ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The patient's gender."
+* gender ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* gender ^definition.extension[=].extension[+].url = "lang"
+* gender ^definition.extension[=].extension[=].valueCode = #en
+* gender ^definition.extension[=].extension[+].url = "content"
+* gender ^definition.extension[=].extension[=].valueString = "The patient's gender."
 
 // Identifikatorer - bruker no-basis slices
 * identifier MS
 * identifier ^short = "Identifikator for pasienten."
-* identifier ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Patient identifier."
+* identifier ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^short.extension[=].extension[+].url = "lang"
+* identifier ^short.extension[=].extension[=].valueCode = #en
+* identifier ^short.extension[=].extension[+].url = "content"
+* identifier ^short.extension[=].extension[=].valueString = "Patient identifier."
 * identifier ^definition = "Identifikator for pasienten. Bør være fødselsnummer (FNR) eller D-nummer (DNR) når tilgjengelig."
-* identifier ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Patient identifier. Should be national identity number (FNR) or D-number (DNR) when available."
+* identifier ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^definition.extension[=].extension[+].url = "lang"
+* identifier ^definition.extension[=].extension[=].valueCode = #en
+* identifier ^definition.extension[=].extension[+].url = "content"
+* identifier ^definition.extension[=].extension[=].valueString = "Patient identifier. Should be national identity number (FNR) or D-number (DNR) when available."
 
 // Bruker no-basis sine eksisterende slices
 * identifier[FNR] 0..1 MS
 * identifier[FNR] ^short = "National identity number"
-* identifier[FNR] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier[FNR] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "National identity number"
+* identifier[FNR] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier[FNR] ^short.extension[=].extension[+].url = "lang"
+* identifier[FNR] ^short.extension[=].extension[=].valueCode = #en
+* identifier[FNR] ^short.extension[=].extension[+].url = "content"
+* identifier[FNR] ^short.extension[=].extension[=].valueString = "National identity number"
 * identifier[FNR].value 1..1
 * identifier[FNR].value ^short = "National identity number (11 digits)"
-* identifier[FNR].value ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier[FNR].value ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "National identity number (11 digits)"
+* identifier[FNR].value ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier[FNR].value ^short.extension[=].extension[+].url = "lang"
+* identifier[FNR].value ^short.extension[=].extension[=].valueCode = #en
+* identifier[FNR].value ^short.extension[=].extension[+].url = "content"
+* identifier[FNR].value ^short.extension[=].extension[=].valueString = "National identity number (11 digits)"
 * identifier[FNR].value ^example[0].label = "National identity number"
 * identifier[FNR].value ^example[0].valueString = "12345678901"
 
 * identifier[DNR] 0..1 MS
 * identifier[DNR] ^short = "D-number"
-* identifier[DNR] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier[DNR] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "D-number"
+* identifier[DNR] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier[DNR] ^short.extension[=].extension[+].url = "lang"
+* identifier[DNR] ^short.extension[=].extension[=].valueCode = #en
+* identifier[DNR] ^short.extension[=].extension[+].url = "content"
+* identifier[DNR] ^short.extension[=].extension[=].valueString = "D-number"
 * identifier[DNR].value 1..1
 * identifier[DNR].value ^short = "D-number (11 digits)"
-* identifier[DNR].value ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier[DNR].value ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "D-number (11 digits)"
+* identifier[DNR].value ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier[DNR].value ^short.extension[=].extension[+].url = "lang"
+* identifier[DNR].value ^short.extension[=].extension[=].valueCode = #en
+* identifier[DNR].value ^short.extension[=].extension[+].url = "content"
+* identifier[DNR].value ^short.extension[=].extension[=].valueString = "D-number (11 digits)"
 * identifier[DNR].value ^example[0].label = "D-number"
 * identifier[DNR].value ^example[0].valueString = "12345678901"
 
@@ -130,8 +196,6 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 Instance: Pasient-Uten-Personidentifikator
 InstanceOf: Pasient
 Description: "Eksempel på pasient uten personidentifikator"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a patient without a personal identifier"
 * gender = #female
 * birthDate = "1958-09-19"
 * address.district = "Bærum"
@@ -140,8 +204,6 @@ Description: "Eksempel på pasient uten personidentifikator"
 Instance: Pasient-Med-FNR
 InstanceOf: Pasient
 Description: "Eksempel på pasient med fødselsnummer"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a patient with a national identity number"
 * identifier[FNR].system = "urn:oid:2.16.578.1.12.4.1.4.1"
 * identifier[FNR].value = "12705825562"
 * gender = #male
@@ -155,8 +217,6 @@ Description: "Eksempel på pasient med fødselsnummer"
 Instance: Pasient-Med-DNR
 InstanceOf: Pasient
 Description: "Eksempel på pasient med D-nummer"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a patient with a D-number"
 * identifier[DNR].system = "urn:oid:2.16.578.1.12.4.1.4.2"
 * identifier[DNR].value = "41667987421"
 * birthDate = "1979-01-01"

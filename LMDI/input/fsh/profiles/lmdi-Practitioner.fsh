@@ -7,29 +7,47 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 * ^status = #draft
 * ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Healthcare professional"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Healthcare professional who requested the medication, based on no-basis-Practitioner. The HPR number shall be provided when available."
+* ^title.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^title.extension[=].extension[+].url = "lang"
+* ^title.extension[=].extension[=].valueCode = #en
+* ^title.extension[=].extension[+].url = "content"
+* ^title.extension[=].extension[=].valueString = "Healthcare professional"
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = "Healthcare professional who requested the medication, based on no-basis-Practitioner. The HPR number shall be provided when available."
 
 // === IDENTIFIER HÅNDTERING ===
 // Bruker no-basis slicing med closed slicing for å begrense til kun HPR
 * identifier ^slicing.rules = #closed  // Lukk slicing - kun HPR tillatt
 * identifier ^short = "Helsepersonellnummer (HPR-nummer)"
 * identifier ^definition = "Helsepersonellnummer (HPR-nummer) fra Helsepersonellregisteret. Skal registreres når tilgjengelig."
-* identifier ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Health professional number (HPR number)"
-* identifier ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Health professional number (HPR number) from the Health Personnel Register. Shall be recorded when available."
+* identifier ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^short.extension[=].extension[+].url = "lang"
+* identifier ^short.extension[=].extension[=].valueCode = #en
+* identifier ^short.extension[=].extension[+].url = "content"
+* identifier ^short.extension[=].extension[=].valueString = "Health professional number (HPR number)"
+* identifier ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^definition.extension[=].extension[+].url = "lang"
+* identifier ^definition.extension[=].extension[=].valueCode = #en
+* identifier ^definition.extension[=].extension[+].url = "content"
+* identifier ^definition.extension[=].extension[=].valueString = "Health professional number (HPR number) from the Health Personnel Register. Shall be recorded when available."
 
 // Bruk no-basis HPR slice - system er allerede definert i no-basis
 * identifier[HPR] 0..1 MS
 * identifier[HPR] ^short = "HPR-nummer"
 * identifier[HPR] ^definition = "Helsepersonellnummer fra Helsepersonellregisteret."
-* identifier[HPR] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier[HPR] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "HPR number"
-* identifier[HPR] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* identifier[HPR] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Health professional number from the Health Personnel Register."
+* identifier[HPR] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier[HPR] ^short.extension[=].extension[+].url = "lang"
+* identifier[HPR] ^short.extension[=].extension[=].valueCode = #en
+* identifier[HPR] ^short.extension[=].extension[+].url = "content"
+* identifier[HPR] ^short.extension[=].extension[=].valueString = "HPR number"
+* identifier[HPR] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier[HPR] ^definition.extension[=].extension[+].url = "lang"
+* identifier[HPR] ^definition.extension[=].extension[=].valueCode = #en
+* identifier[HPR] ^definition.extension[=].extension[+].url = "content"
+* identifier[HPR] ^definition.extension[=].extension[=].valueString = "Health professional number from the Health Personnel Register."
 
 // Skjul FNR og DNR slices fra no-basis
 * identifier[FNR] 0..0
@@ -58,14 +76,10 @@ Description: "Helsepersonell som har rekvirert legemidlet, basert på no-basis-P
 Instance: Helsepersonell-Med-HPR
 InstanceOf: Helsepersonell
 Description: "Eksempel på helsepersonell med HPR-nummer"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a healthcare professional with an HPR number"
 * identifier[HPR].system = "urn:oid:2.16.578.1.12.4.1.4.4"
 * identifier[HPR].value = "9144900"
 
 Instance: Helsepersonell-Uten-HPR
 InstanceOf: Helsepersonell
 Description: "Eksempel på rekvirent uten HPR-nummer"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a prescriber without an HPR number"
 // Ingen identifier - gyldig da identifier er valgfri (0..*)

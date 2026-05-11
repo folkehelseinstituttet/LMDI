@@ -7,10 +7,16 @@ Description: "En tilpasset profil av Substance for å representere virkestoff, b
 * ^status = #draft
 * ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Substance"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "A tailored Substance profile for representing active substances, based on no-basis."
+* ^title.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^title.extension[=].extension[+].url = "lang"
+* ^title.extension[=].extension[=].valueCode = #en
+* ^title.extension[=].extension[+].url = "content"
+* ^title.extension[=].extension[=].valueString = "Substance"
+* ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ^description.extension[=].extension[+].url = "lang"
+* ^description.extension[=].extension[=].valueCode = #en
+* ^description.extension[=].extension[+].url = "content"
+* ^description.extension[=].extension[=].valueString = "A tailored Substance profile for representing active substances, based on no-basis."
 
 * text 0..0
 * description 0..0
@@ -21,8 +27,6 @@ Description: "En tilpasset profil av Substance for å representere virkestoff, b
 Instance: Virkestoff-Oksykodon
 InstanceOf: Virkestoff
 Description: "Eksempel på virkestoff - Oksykodon"
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
-* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a substance - oxycodone"
 * code.coding.system = "http://snomed.info/sct"
 * code.coding.code = #55452001
 * code.coding.display = "Oxycodone (substance)"
