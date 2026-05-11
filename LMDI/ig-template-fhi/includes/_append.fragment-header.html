@@ -6,20 +6,29 @@
 
 {% comment %}
 Beregn språk-kontekst for header-dropdown.
-IG Publisher genererer engelske sider under /en/-treet via translation-sources-mekanismen.
-Norske sider lever i roten; engelske under en/.
+Liste over oversettbare sider speiler narrative-sidene i sushi-config.yaml pages:-blokken.
+Hold listen synkronisert ved tillegg/fjerning av narrative sider.
 {% endcomment %}
+{% assign translatable = "index,informasjonsmodell,integrasjon,SignertKryptertBundle,protokoll,eksempelkode_cs,eksempelkode_ps1,nedlastinger,profiler" %}
 {% assign current_path = page.path %}
+{% assign path_prefix = current_path | slice: 0, 3 %}
 {% assign is_english = false %}
-{% if current_path contains "en/" %}{% assign is_english = true %}{% endif %}
+{% if path_prefix == "en-" %}{% assign is_english = true %}{% endif %}
 {% if is_english %}
-  {% assign basename = current_path | remove_first: "en/" | remove: ".html" %}
-  {% assign no_href = basename | append: ".html" %}
-  {% assign en_href = "" %}
+  {% assign basename = current_path | remove_first: "en-" | remove: ".html" %}
 {% else %}
   {% assign basename = current_path | remove: ".html" %}
-  {% assign no_href = "" %}
-  {% assign en_href = "en/" | append: basename | append: ".html" %}
+{% endif %}
+{% assign basename_match = basename | prepend: "," | append: "," %}
+{% assign translatable_match = translatable | prepend: "," | append: "," %}
+{% assign has_translation = false %}
+{% assign en_href = "" %}
+{% if translatable_match contains basename_match %}
+  {% assign has_translation = true %}
+  {% unless is_english %}{% assign en_href = "en-" | append: basename | append: ".html" %}{% endunless %}
+{% elsif basename contains "StructureDefinition-" or basename contains "Extension-" or basename contains "CodeSystem-" or basename contains "ValueSet-" or basename contains "NamingSystem-" %}
+  {% assign has_translation = true %}
+  {% unless is_english %}{% assign en_href = "en-profiler.html" %}{% endunless %}
 {% endif %}
 
 <header class="fhi-header mb-0">
@@ -50,8 +59,8 @@ Norske sider lever i roten; engelske under en/.
             <div class="fhi-header__lang">
                 <label for="lang-switcher" class="visually-hidden">Velg språk / Select language</label>
                 <select id="lang-switcher" class="form-select form-select-sm" aria-label="Velg språk">
-                    <option value="no" {% unless is_english %}selected="selected"{% endunless %} data-href="{{no_href}}">Norsk</option>
-                    <option value="en" {% if is_english %}selected="selected"{% endif %} data-href="{{en_href}}">English</option>
+                    <option value="no" {% unless is_english %}selected="selected"{% endunless %} data-href="{% if is_english %}{{basename}}.html{% endif %}">Norsk</option>
+                    <option value="en" {% if is_english %}selected="selected"{% endif %} {% unless has_translation %}disabled="disabled" title="English version not available for this page yet"{% endunless %} data-href="{{en_href}}">English</option>
                 </select>
             </div>
         </div>
