@@ -3,6 +3,10 @@ Parent: Condition
 Id: lmdi-condition
 Title: "Diagnose"
 Description: "Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for."
+* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Diagnosis"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The diagnosis for which the patient received a medication request or administration."
 
 // Metadata
 * ^status = #draft
@@ -29,11 +33,17 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * subject 1..1
 * subject only Reference(Pasient)
 * subject ^short = "Pasienten diagnosen er knyttet til."
+* subject ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* subject ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The patient the diagnosis is associated with."
 
 // Diagnosekoding - hovedregler
 * code 1..1
 * code ^short = "Diagnosekode."
 * code ^definition = "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT."
+* code ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Diagnosis code."
+* code ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."
 
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "system"
@@ -49,12 +59,20 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 // SNOMED CT
 * code.coding[SCT] ^short = "SNOMED CT"
 * code.coding[SCT] ^definition = "SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta."
+* code.coding[SCT] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[SCT] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "SNOMED CT"
+* code.coding[SCT] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[SCT] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "SNOMED CT is a systematic collection of clinical concepts that can be used to document and share information related to patient care. Using a common terminology makes it easier to communicate across different parts of the health service."
 * code.coding[SCT].system = "http://snomed.info/sct"
 * code.coding[SCT].code 1..1
 
 // ICD-10
 * code.coding[ICD10] ^short = "ICD-10"
 * code.coding[ICD10] ^definition = "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer."
+* code.coding[ICD10] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[ICD10] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "ICD-10"
+* code.coding[ICD10] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[ICD10] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "ICD-10: The International Statistical Classification of Diseases and Related Health Problems."
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10].code 1..1
 * code.coding[ICD10].code ^short = "Diagnosekode fra kodeverket"
@@ -64,6 +82,10 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICD11] ^short = "ICD-11"
 * code.coding[ICD11] ^definition = "International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS)."
 * code.coding[ICD11] ^comment = "Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS."
+* code.coding[ICD11] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[ICD11] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "ICD-11"
+* code.coding[ICD11] ^comment.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[ICD11] ^comment.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Should be replaced by a namespace that points to general ICD-11, not MMS."
 * code.coding[ICD11].system = "http://id.who.int/icd/release/11/mms"
 * code.coding[ICD11].system ^comment = "Kilde for URI: https://build.fhir.org/ig/HL7/UTG/CodeSystem-ICD11MMS.html"
 * code.coding[ICD11].code 1..1
@@ -73,6 +95,10 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 // ICPC-2
 * code.coding[ICPC2] ^short = "ICPC-2"
 * code.coding[ICPC2] ^definition = "ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten."
+* code.coding[ICPC2] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[ICPC2] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "ICPC-2"
+* code.coding[ICPC2] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* code.coding[ICPC2] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "ICPC-2 is the International Classification of Primary Care, for health problems, diagnoses, and other reasons for contact with primary care."
 * code.coding[ICPC2].system = "urn:oid:2.16.578.1.12.4.1.1.7170"
 * code.coding[ICPC2].code 1..1
 * code.coding[ICPC2].code ^short = "Diagnosekode fra kodeverket"
@@ -82,6 +108,8 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 Instance: Diagnose-ICD10
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose ICD-10"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of an ICD-10 diagnosis"
 * subject = Reference(Pasient-Med-FNR)
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
 * clinicalStatus.coding.code = #active
@@ -92,6 +120,8 @@ Description: "Eksempel på diagnose ICD-10"
 Instance: Diagnose-SNOMED-SCT
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose SNOMED CT"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a SNOMED CT diagnosis"
 * subject = Reference(Pasient-Med-FNR)
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
 * clinicalStatus.coding.code = #active
@@ -102,6 +132,8 @@ Description: "Eksempel på diagnose SNOMED CT"
 Instance: Diagnose-ICD10-Allergi
 InstanceOf: Diagnose
 Description: "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a diagnosis with ICD-10 code J30 - allergic rhinitis"
 * subject = Reference(Pasient-Med-DNR)
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
 * clinicalStatus.coding.code = #active

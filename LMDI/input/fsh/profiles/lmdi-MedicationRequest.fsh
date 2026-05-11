@@ -8,20 +8,36 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * ^status = #draft
 * ^date = "2025-09-12"
 * ^publisher = "Folkehelseinstituttet"
+* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^title.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Medication Request"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Medication request - prescribing or other medication ordering"
 
 
 // Extensions for Legemiddelrekvirering
 * extension contains ProsentvisDoseendring named prosentvisDoseendring 0..1
 * extension[prosentvisDoseendring] ^short = "Doseendring i prosent (100% = umodifisert dose)"
 * extension[prosentvisDoseendring] ^definition = "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent."
+* extension[prosentvisDoseendring] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* extension[prosentvisDoseendring] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Dose adjustment in percent (100% = unmodified dose)"
+* extension[prosentvisDoseendring] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* extension[prosentvisDoseendring] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Dose adjustment in percent, compared with the original dosage. Especially relevant for chemotherapy. A normal dose without modifications is 100%. May have values from 0. Unit shall be percent."
 
 * extension contains DelAvBehandlingsregime named delAvBehandlingsregime 0..1
 * extension[delAvBehandlingsregime] ^short = "Del av behandlingsregime"
 * extension[delAvBehandlingsregime] ^definition = "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi."
+* extension[delAvBehandlingsregime] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* extension[delAvBehandlingsregime] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Part of treatment regimen"
+* extension[delAvBehandlingsregime] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* extension[delAvBehandlingsregime] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The name of the course, treatment regimen, or protocol that the medication is part of. Especially relevant for chemotherapy."
 
 * extension contains KliniskStudie named kliniskStudie 0..1
 * extension[kliniskStudie] ^short = "Legemiddel i klinisk studie"
 * extension[kliniskStudie] ^definition = "Angir om legemidlet gis som en del av en klinisk studie."
+* extension[kliniskStudie] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* extension[kliniskStudie] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Medication in clinical trial"
+* extension[kliniskStudie] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* extension[kliniskStudie] ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Indicates whether the medication is given as part of a clinical trial."
 
 
 // Deaktiverte elementer
@@ -43,6 +59,10 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * identifier 0..* MS
 * identifier ^short = "Identifikator for rekvirering"
 * identifier ^definition = "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes"
+* identifier ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* identifier ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Identifier for the medication request"
+* identifier ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* identifier ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Must Support: An identifier that uniquely identifies a medication request shall be provided if one exists."
 
 // Status og intensjon
 * status 1..1 MS
@@ -50,32 +70,52 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * status ^definition = "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer"
 * status from http://hl7.org/fhir/ValueSet/medicationrequest-status
 * status ^comment = "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"
+* status ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* status ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Status of the medication request"
+* status ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* status ^definition.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Must Support: Status is important for following the lifecycle of a medication request and must be supported by all systems."
+* status ^comment.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* status ^comment.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Valid values: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"
 
 * intent 1..1 MS
 * intent ^short = "Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+* intent ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* intent ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The intent or purpose of the medication request: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
 
 // Referanser til andre ressurser
 * medication[x] only Reference(Legemiddel)
 * medication[x] 1..1 MS
 * medication[x] ^short = "Legemidlet som er rekvirert"
+* medication[x] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* medication[x] ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The medication that was requested"
 
 * subject 1..1 MS
 * subject only Reference(Pasient)
 * subject ^short = "Pasienten legemidlet er rekvirert til"
+* subject ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* subject ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The patient the medication was requested for"
 
 * requester 1..1 MS
 * requester only Reference(Helsepersonell)
 * requester ^short = "Helsepersonellet som rekvirerte legemidlet"
+* requester ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* requester ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The healthcare professional who requested the medication"
 
 * reasonReference only Reference(Diagnose)
 * reasonReference ^short = "Indikasjon (diagnose) for legemiddelrekvireringen"
+* reasonReference ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* reasonReference ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Indication (diagnosis) for the medication request"
 
 * priorPrescription only Reference(Legemiddelrekvirering)
 
 * encounter only Reference(Episode)
 * encounter ^short = "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med."
+* encounter ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* encounter ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "The episode (for example the consultation or admission) associated with the medication request."
 
 * courseOfTherapyType ^short = "Type behandlingsforløp (continuous | acute | seasonal)"
+* courseOfTherapyType ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* courseOfTherapyType ^short.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Type of treatment course (continuous | acute | seasonal)"
 
 // Andre elementer
 * reported[x] only boolean
@@ -87,6 +127,8 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 Instance: Rekvirering-Paracetamol
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på legemiddelrekvirering av Paracet"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a medication request for Paracet"
 * identifier.system = "http://example.org/rekvirering-id"
 * identifier.value = "REK123456"
 * status = #active
@@ -99,6 +141,8 @@ Description: "Eksempel på legemiddelrekvirering av Paracet"
 Instance: Rekvirering-Kjemoterapi
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a chemotherapy request with dose adjustment, treatment regimen, and clinical trial"
 * status = #active
 * intent = #order
 * medicationReference = Reference(Legemiddel-FestLegemiddelVirkestoff)
@@ -115,6 +159,8 @@ Description: "Eksempel på kjemoterapirekvirering med doseendring, behandlingsre
 Instance: Rekvirering-Infusjon
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på rekvirering for intravenøs infusjon"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a request for intravenous infusion"
 * extension[kliniskStudie].valueBoolean = false
 * status = #active
 * intent = #original-order
@@ -139,6 +185,8 @@ Description: "Eksempel på rekvirering for intravenøs infusjon"
 Instance: Rekvirering-MedDiagnoseICD10
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a request with an ICD-10 diagnosis as indication (allergic rhinitis, seasonal treatment)"
 * extension[kliniskStudie].valueBoolean = false
 * identifier.system = "http://example.org/rekvirering-id"
 * identifier.value = "13fb2660-f88a-473e-b0a9-a72266dc7137"
@@ -168,6 +216,8 @@ Description: "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (aller
 Instance: Rekvirering-EnteredInError
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of a request marked as entered-in-error due to duplicate treatment"
 * extension[kliniskStudie].valueBoolean = false
 * identifier.system = "http://example.org/rekvirering-id"
 * identifier.value = "13fb2660-f88a-473e-b0a9-a72266dc7137"
@@ -200,6 +250,8 @@ Description: "Eksempel på rekvirering markert som entered-in-error grunnet dupl
 Instance: Rekvirering-Cellegift
 InstanceOf: Legemiddelrekvirering
 Description: "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime"
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[lang].valueCode = #en
+* ^description.extension[http://hl7.org/fhir/StructureDefinition/translation][0].extension[content].valueString = "Example of chemotherapy request (Cisplatin) with percentage dose adjustment and treatment regimen"
 * identifier.system = "http://example.org/rekvirering-id"
 * identifier.value = "46456453321544556324"
 * status = #unknown

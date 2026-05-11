@@ -1,0 +1,27 @@
+{% comment %}
+Tospråklig meny. Detekterer språk fra page.path (en-*-prefix = engelsk).
+Hold menyelementene synkronisert med pages:-blokken i sushi-config.yaml.
+{% endcomment %}
+{% assign _path = page.path %}
+{% assign _prefix = _path | slice: 0, 3 %}
+{% if _prefix == "en-" %}
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="en-index.html">Home</a></li>
+  <li><a href="en-informasjonsmodell.html">Information model</a></li>
+  <li><a href="en-integrasjon.html">Integration</a></li>
+  <li><a href="en-profiler.html">FHIR profiles</a></li>
+  <li><a href="en-nedlastinger.html">Downloads</a></li>
+</ul>
+
+{% else %}
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Hjem</a></li>
+  <li><a href="informasjonsmodell.html">Informasjonsmodell</a></li>
+  <li><a href="integrasjon.html">Integrasjon</a></li>
+  <li><a href="profiler.html">FHIR-profiler</a></li>
+  <li><a href="nedlastinger.html">Nedlastinger</a></li>
+</ul>
+
+{% endif %}
