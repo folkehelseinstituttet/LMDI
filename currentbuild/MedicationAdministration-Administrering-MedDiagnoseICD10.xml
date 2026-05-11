@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-MedDiagnoseICD10"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <identifier>
+    <value value="71dd991f-2662-4a7e-86b6-c6c85c9580d4"/>
+  </identifier>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-FestLegemiddelpakning"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Episode-Sykehus"/>
+  </context>
+  <effectiveDateTime value="2025-06-13T14:48:47+02:00"/>
+  <reasonReference>
+    <reference value="Condition/Diagnose-ICD10"/>
+  </reasonReference>
+  <dosage>
+    <route>
+      <coding>
+        <system value="urn:oid:2.16.578.1.12.4.1.1.7477"/>
+        <code value="53"/>
+        <display value="Oral bruk"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="50"/>
+      <unit value="milligram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

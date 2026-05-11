@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Pasient-Med-FNR"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:2.16.578.1.12.4.1.4.1"/>
+    <value value="12705825562"/>
+  </identifier>
+  <gender value="male"/>
+  <birthDate value="1958-05-12"/>
+  <address>
+    <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-urban-district">
+      <valueCoding>
+        <system value="urn:oid:2.16.578.1.12.4.1.1.3403"/>
+        <code value="030102"/>
+        <display value="Grünerløkka"/>
+      </valueCoding>
+    </extension>
+    <use value="home"/>
+    <type value="physical"/>
+    <district value="Oslo">
+      <extension url="http://hl7.no/fhir/StructureDefinition/no-basis-municipalitycode">
+        <valueCoding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.3402"/>
+          <code value="0301"/>
+          <display value="Oslo"/>
+        </valueCoding>
+      </extension>
+    </district>
+  </address>
+</Patient>
