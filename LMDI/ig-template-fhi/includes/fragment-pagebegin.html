@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
-<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
+{% comment %} Språk-kontekst for <html lang>. Header-dropdown beregner samme is_english i _append.fragment-header.html. {% endcomment %}
+{% assign path_prefix_pb = page.path | slice: 0, 3 %}
+{% assign is_english_pb = false %}
+{% if path_prefix_pb == "en-" %}{% assign is_english_pb = true %}{% endif %}
+<html xml:lang="{% if is_english_pb %}en{% else %}nb{% endif %}" xmlns="http://www.w3.org/1999/xhtml" lang="{% if is_english_pb %}en{% else %}nb{% endif %}">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
@@ -17,6 +21,7 @@
     {% include fragment-css.html %}
 
     <script type="text/javascript" src="{{site.data.info.assets}}assets/js/fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/language-switcher.js" defer="defer"> </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
