@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-SCT> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-SCT"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+           fhir:l <http://www.whocc.no/atc>
+         ] ;
+         fhir:code [ fhir:v "N02BE01" ] ;
+         fhir:display [ fhir:v "Paracetamol" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:32236009 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "32236009" ] ;
+       fhir:display [ fhir:v "paracetamol tab 500 mg" ]
+     ] )
+  ] ; # 
+  fhir:form [
+     fhir:coding ( [
+       a sct:385055001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "tablett" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
