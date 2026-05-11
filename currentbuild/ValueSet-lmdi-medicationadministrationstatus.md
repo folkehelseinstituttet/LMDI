@@ -1,10 +1,10 @@
 # Status for legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -55,6 +55,19 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
   "version" : "1.1.0",
   "name" : "LegemiddeladministreringStatus",
   "title" : "Status for legemiddeladministrering",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medication administration status"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -73,6 +86,19 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
     }]
   }],
   "description" : "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Value set that restricts the status of medication administration to 'completed' or 'entered-in-error'."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

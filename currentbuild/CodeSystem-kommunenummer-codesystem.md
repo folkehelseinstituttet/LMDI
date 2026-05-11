@@ -1,10 +1,10 @@
 # Kommunenummer CodeSystem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -37,7 +37,7 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "status" : "active",
-  "date" : "2026-05-11T08:23:33+00:00",
+  "date" : "2026-05-11T11:19:31+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

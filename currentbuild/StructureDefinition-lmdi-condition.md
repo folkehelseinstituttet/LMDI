@@ -1,10 +1,10 @@
 # Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -47,6 +47,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
   "version" : "1.1.0",
   "name" : "Diagnose",
   "title" : "Diagnose",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Diagnosis"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -65,6 +78,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
     }]
   }],
   "description" : "Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "The diagnosis for which the patient received a medication request or administration."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -132,7 +158,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "id" : "Condition.code",
       "path" : "Condition.code",
       "short" : "Diagnosekode.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
@@ -151,7 +203,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "path" : "Condition.code.coding",
       "sliceName" : "SCT",
       "short" : "SNOMED CT",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT is a systematic collection of clinical concepts that can be used to document and share information related to patient care. Using a common terminology makes it easier to communicate across different parts of the health service."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1"
     },
@@ -171,7 +249,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "path" : "Condition.code.coding",
       "sliceName" : "ICD10",
       "short" : "ICD-10",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-10"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-10: The International Statistical Classification of Diseases and Related Health Problems."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1"
     },
@@ -197,8 +301,34 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "path" : "Condition.code.coding",
       "sliceName" : "ICD11",
       "short" : "ICD-11",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-11"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS).",
       "comment" : "Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Should be replaced by a namespace that points to general ICD-11, not MMS."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1"
     },
@@ -225,7 +355,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "path" : "Condition.code.coding",
       "sliceName" : "ICPC2",
       "short" : "ICPC-2",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICPC-2"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICPC-2 is the International Classification of Primary Care, for health problems, diagnoses, and other reasons for contact with primary care."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1"
     },
@@ -255,6 +411,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "id" : "Condition.subject",
       "path" : "Condition.subject",
       "short" : "Pasienten diagnosen er knyttet til.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The patient the diagnosis is associated with."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]

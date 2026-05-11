@@ -1,13 +1,15 @@
 # Information model - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Home](en-index.md)
+* [Information model](en-informasjonsmodell.md)
+* [Integration](en-integrasjon.md)
+* [FHIR profiles](en-profiler.md)
+* [Downloads](en-nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * **Information model**
 
-> **English translation pending.**This page has not yet been translated. Please refer to the [Norwegian version](informasjonsmodell.md).
+### Information model – Overview
+
+Click the classes to navigate to the linked resources.
 

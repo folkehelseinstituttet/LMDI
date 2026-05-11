@@ -1,10 +1,10 @@
 # LMDI Address Type - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -57,7 +57,7 @@ Tillatt verdi for address.type i LMDI: physical
   "name" : "LmdiAddressType",
   "title" : "LMDI Address Type",
   "status" : "active",
-  "date" : "2026-05-11T08:23:33+00:00",
+  "date" : "2026-05-11T11:19:31+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

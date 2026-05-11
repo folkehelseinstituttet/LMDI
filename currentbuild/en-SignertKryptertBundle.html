@@ -109,25 +109,21 @@
         <div class="container fhi-main-menu-alt__container">
             <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
-                    <!-- menu.xml  -->
+                    
+
+
+
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Hjem</a>
-  </li>
-  <li>
-    <a href="informasjonsmodell.html">Informasjonsmodell</a>
-  </li>
-  <li>
-    <a href="integrasjon.html">Integrasjon</a>
-  </li>
-  <li>
-    <a href="profiler.html">FHIR-profiler</a>
-  </li>
-  <li>
-    <a href="nedlastinger.html">Nedlastinger</a>
-  </li>
+  <li><a href="en-index.html">Home</a></li>
+  <li><a href="en-informasjonsmodell.html">Information model</a></li>
+  <li><a href="en-integrasjon.html">Integration</a></li>
+  <li><a href="en-profiler.html">FHIR profiles</a></li>
+  <li><a href="en-nedlastinger.html">Downloads</a></li>
 </ul>
+
+
+
                 </div>
             </div>
         </div>
@@ -164,14 +160,183 @@
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
-<blockquote>
-  <p><strong>English translation pending.</strong></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#1-create-the-fhir-resource" id="markdown-toc-1-create-the-fhir-resource">1. Create the FHIR resource</a></li>
+  <li><a href="#2-compress-with-gzip" id="markdown-toc-2-compress-with-gzip">2. Compress with GZip</a></li>
+  <li><a href="#3-encrypt-with-aes-gcm-256-bit-key" id="markdown-toc-3-encrypt-with-aes-gcm-256-bit-key">3. Encrypt with AES-GCM (256-bit key)</a></li>
+  <li><a href="#4-encrypt-the-aes-key-with-rsa-medication-registrys-public-key" id="markdown-toc-4-encrypt-the-aes-key-with-rsa-medication-registrys-public-key">4. Encrypt the AES key with RSA (Medication Registry’s public key)</a></li>
+  <li><a href="#5-sign-encrypted-content-senders-private-key" id="markdown-toc-5-sign-encrypted-content-senders-private-key">5. Sign encrypted content (sender’s private key)</a></li>
+  <li><a href="#6-create-and-populate-the-signertkryptertbundle-object" id="markdown-toc-6-create-and-populate-the-signertkryptertbundle-object">6. Create and populate the SignertKryptertBundle object</a></li>
+</ul>
 
-  <p>This page has not yet been translated. Please refer to the <a href="SignertKryptertBundle.html">Norwegian version</a>.</p>
-</blockquote>
+</div>
+<p>When institutions submit data to the Medication Registry, it must be sent in a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>. This is created by compressing the <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>, then encrypting and signing the content.</p>
+
+<p>This page describes how to create a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> for the Medication Registry’s API. Implementation details such as language and libraries are up to you, as long as the result conforms to the specification below.</p>
+
+<p>Example code for generating a SignertKryptertBundle: <a href="en-eksempelkode_cs.html">Example in C#</a></p>
+
+<p><img src="signertkryptertbundle.svg" width="50%" />
+<br clear="all" /></p>
+
+<h3 id="1-create-the-fhir-resource">1. Create the FHIR resource</h3>
+
+<p>First, create a JSON representation of the FHIR resource <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>.</p>
+
+<p>Use standard or third-party FHIR libraries if desired. It is important that the JSON structure is correct for the FHIR standard so that validation in the Medication Registry’s API does not fail. It is recommended to validate the FHIR resource locally before encryption to prevent messages from failing on the server.</p>
+
+<h3 id="2-compress-with-gzip">2. Compress with GZip</h3>
+
+<p>To reduce bandwidth and ensure that the encryption process is efficient, the data must be GZip-compressed.
+The result is a byte array of compressed data. GZip uses the DEFLATE algorithm and is a standardised and well-tested method.</p>
+
+<p>In Java, you can typically use classes from java.util.zip. In .NET, equivalent functionality is available in System.IO.Compression.</p>
+
+<p>The result after GZip compression must be a byte array containing the compressed FHIR JSON.</p>
+
+<h3 id="3-encrypt-with-aes-gcm-256-bit-key">3. Encrypt with AES-GCM (256-bit key)</h3>
+
+<ol>
+  <li><strong>Generate AES key and nonce</strong>
+    <ul>
+      <li>The key must be 256 bits (32 bytes).</li>
+      <li>The <code class="language-plaintext highlighter-rouge">nonce</code> (initialisation vector) must be 96 bits (12 bytes). It must be generated randomly each time an encryption is performed.</li>
+    </ul>
+  </li>
+  <li><strong>Encrypt with AES-GCM</strong>
+    <ul>
+      <li>Encrypt the compressed byte array with AES-GCM. In Java, this is available via AES/GCM/NoPadding, while in .NET it is available via e.g. AesGcm (from .NET 5/6 and later).</li>
+      <li>Note that AES-GCM will generate an authentication tag (typically 128 bits = 16 bytes).</li>
+      <li>From the encryption you get:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">encryptedContent</code> (the cipher text)</li>
+          <li><code class="language-plaintext highlighter-rouge">authenticationTag</code> (used to validate that the content has not been altered)</li>
+        </ul>
+      </li>
+      <li>AES-256-GCM provides both confidentiality (encryption) and integrity (authentication tag) without the need for a separate HMAC.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="4-encrypt-the-aes-key-with-rsa-medication-registrys-public-key">4. Encrypt the AES key with RSA (Medication Registry’s public key)</h3>
+
+<p>The 256-bit AES key from step 3 is encrypted with the Medication Registry’s public RSA key. This is available in the certificates that can be downloaded <a href="en-nedlastinger.html">here</a>.</p>
+
+<p>The algorithm must be RSA OAEP with SHA-256 (RSAEncryptionPadding.OaepSHA256). The result is a byte array <code class="language-plaintext highlighter-rouge">encryptedKey</code>.</p>
+
+<p>The Medication Registry’s public RSA key is obtained from the Medication Registry’s enterprise certificate. The thumbprint of the certificate used must be specified as <code class="language-plaintext highlighter-rouge">encryptionCertificateThumbprint</code> in the <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>.</p>
+
+<h3 id="5-sign-encrypted-content-senders-private-key">5. Sign encrypted content (sender’s private key)</h3>
+
+<p>For the Medication Registry to be certain that the content actually comes from the correct organisation (integrity and authenticity control), the message must be signed:</p>
+
+<ol>
+  <li>Find the sender’s private key
+    <ul>
+      <li>The sender uses their certificate (with the associated private key) for signing.</li>
+      <li>The sender’s certificate also has a unique thumbprint, which must be provided in the message as <code class="language-plaintext highlighter-rouge">signatureCertificateThumbprint</code>.</li>
+    </ul>
+  </li>
+  <li>Create a hash of the encrypted content
+    <ul>
+      <li>Use SHA-256 to create a hash of <code class="language-plaintext highlighter-rouge">encryptedContent</code>.</li>
+    </ul>
+  </li>
+  <li>Sign the hash (RSA-PKCS1-v1.5)
+    <ul>
+      <li>Use the private key of the sender’s certificate for the signature.</li>
+      <li>The result is stored as a byte array in <code class="language-plaintext highlighter-rouge">signature</code>.</li>
+    </ul>
+  </li>
+  <li>Provide the sender’s organisation identifier
+    <ul>
+      <li>This is an OID or other identifier linked to the sender’s certificate.</li>
+      <li>The server will verify that the sender’s certificate (given by <code class="language-plaintext highlighter-rouge">signatureCertificateThumbprint</code>) actually has this organisation identifier.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="6-create-and-populate-the-signertkryptertbundle-object">6. Create and populate the SignertKryptertBundle object</h3>
+
+<p>All fields must be assembled into a JSON object in exactly the order shown below. Binary data is converted to Base64 strings.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>messageId</strong></td>
+      <td>string</td>
+      <td>Unique identifier for the message. Preferably a UUID.</td>
+    </tr>
+    <tr>
+      <td><strong>senderOrganizationIdentifier</strong></td>
+      <td>string</td>
+      <td>Sender’s organisation ID or OID (usually the organisation number) that must match the certificate used for signing.</td>
+    </tr>
+    <tr>
+      <td><strong>messageFormatVersion</strong></td>
+      <td>string</td>
+      <td>Current message format version: <code class="language-plaintext highlighter-rouge">"1.0"</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>rapporteringFra</strong></td>
+      <td>string</td>
+      <td>Start timestamp of the period from which the data was retrieved. Must be in Norwegian local time formatted according to ISO 8601, for example: <code class="language-plaintext highlighter-rouge">2025-01-22T10:30:00Z</code></td>
+    </tr>
+    <tr>
+      <td><strong>rapporteringTil</strong></td>
+      <td>string</td>
+      <td>End timestamp of the period from which the data was retrieved. Must be in Norwegian local time formatted according to ISO 8601.</td>
+    </tr>
+    <tr>
+      <td><strong>encryptedContent</strong></td>
+      <td>string</td>
+      <td>AES-GCM-encrypted content (FHIR resource compressed and encrypted). Provided as a Base64-encoded string.</td>
+    </tr>
+    <tr>
+      <td><strong>encryptionCertificateThumbprint</strong></td>
+      <td>string</td>
+      <td>Thumbprint of the certificate used for encryption.</td>
+    </tr>
+    <tr>
+      <td><strong>encryptedKey</strong></td>
+      <td>string</td>
+      <td>AES key encrypted with the Medication Registry’s public RSA key. Provided as a Base64-encoded string.</td>
+    </tr>
+    <tr>
+      <td><strong>nonce</strong></td>
+      <td>string</td>
+      <td>96-bit nonce (12 bytes) used in AES-GCM encryption. Provided as a Base64-encoded string.</td>
+    </tr>
+    <tr>
+      <td><strong>authenticationTag</strong></td>
+      <td>string</td>
+      <td>128-bit (16 bytes) authentication tag from AES-GCM. Provided as a Base64-encoded string.</td>
+    </tr>
+    <tr>
+      <td><strong>signatureCertificateThumbprint</strong></td>
+      <td>string</td>
+      <td>Thumbprint of the sender’s certificate (with the associated private key used for signing).</td>
+    </tr>
+    <tr>
+      <td><strong>signature</strong></td>
+      <td>string</td>
+      <td>Signature (RSA-PKCS1-v1.5 over SHA-256 hash) of encrypted content. Provided as a Base64-encoded string.</td>
+    </tr>
+    <tr>
+      <td><strong>generatedAt</strong></td>
+      <td>string</td>
+      <td>Timestamp (Norwegian local time) when the message was generated.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -199,7 +364,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 08:23+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 11:19+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

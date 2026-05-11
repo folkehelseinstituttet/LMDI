@@ -1,10 +1,10 @@
 # Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -47,6 +47,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
   "version" : "1.1.0",
   "name" : "Legemiddeladministrering",
   "title" : "Legemiddeladministrering",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medication Administration"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -65,6 +78,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     }]
   }],
   "description" : "Beskriver administrering av legemiddel til pasient på institusjon.\n\nDette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Describes medication administration to a patient in an institution.\n\nThis is the core resource for this implementation guide. It links to the medication that was given, the patient who received the medication, the institution where it happened, the administration time, and the dose with any route of administration."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -122,7 +148,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.status",
       "path" : "MedicationAdministration.status",
       "short" : "Status administrering (completed | entered-in-error)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Administration status (completed | entered-in-error)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Administration status. It should usually be set to 'completed', but 'entered-in-error' MUST be used if the record contains a serious error and shall be deleted."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "binding" : {
         "strength" : "required",
         "valueSet" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"
@@ -132,7 +184,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.category",
       "path" : "MedicationAdministration.category",
       "short" : "Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Category (inpatient | outpatient | self-administered | discharge)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Categorizes the administration context. Use 'community' for self-administration - the patient takes the medication themselves, but it is dispensed by the institution."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "binding" : {
         "strength" : "preferred",
         "valueSet" : "http://hl7.org/fhir/ValueSet/medication-admin-category"
@@ -142,6 +220,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.medication[x]",
       "path" : "MedicationAdministration.medication[x]",
       "short" : "Legemiddel",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Medication"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
@@ -151,7 +242,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.subject",
       "path" : "MedicationAdministration.subject",
       "short" : "Hvem fikk legemidlet (pasient)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Who received the medication (patient)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Det skal alltid være en referanse til pasienten som har blitt administrert legemiddel.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "There shall always be a reference to the patient who received the medication."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
@@ -161,7 +278,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.context",
       "path" : "MedicationAdministration.context",
       "short" : "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The episode (for example the consultation or admission) associated with the medication administration."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Reference to which institutional stay or appointment the patient was in when the medication was administered."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
@@ -184,7 +327,20 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
         "ordered" : false,
         "rules" : "open"
       },
-      "short" : "Tidspunktet eller periode legemidlet ble administrert"
+      "short" : "Tidspunktet eller periode legemidlet ble administrert",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The time or period when the medication was administered"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "MedicationAdministration.effective[x]:effectiveDateTime",
@@ -245,12 +401,38 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
     {
       "id" : "MedicationAdministration.reasonCode",
       "path" : "MedicationAdministration.reasonCode",
-      "short" : "Årsak til utført administrering (Given as Ordered, Emergency, None)"
+      "short" : "Årsak til utført administrering (Given as Ordered, Emergency, None)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Reason for the administration (Given as Ordered, Emergency, None)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "MedicationAdministration.reasonReference",
       "path" : "MedicationAdministration.reasonReference",
       "short" : "Indikasjon (diagnose) for legemiddeladministreringen",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Indication (diagnosis) for the medication administration"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
@@ -260,7 +442,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.request",
       "path" : "MedicationAdministration.request",
       "short" : "Referanse til rekvireringen",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Reference to the request"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Referanse til rekvireringen som denne administreringen er basert på.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Reference to the request on which this administration is based."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"]
@@ -286,8 +494,47 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.dosage.route",
       "path" : "MedicationAdministration.dosage.route",
       "short" : "Administrasjonsvei",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Route of administration"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Route of administration. Restricted to the proposed coding from HL7's SNOMED CT value set and the ePrescription code system Route of Administration (OID=7477)."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "comment" : "Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Route of administration is used to indicate how the medication was given."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "mustSupport" : true
     },
     {
@@ -307,7 +554,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "path" : "MedicationAdministration.dosage.route.coding",
       "sliceName" : "SCT",
       "short" : "SNOMED CT",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Route of administration coded with SNOMED CT, taken from the HL7-proposed value set."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1"
     },
@@ -331,7 +604,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "path" : "MedicationAdministration.dosage.route.coding",
       "sliceName" : "OID7477",
       "short" : "Administrasjonsvei (OID=7477)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Route of administration (OID=7477)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Administrasjonsvei (OID=7477) fra kodeverkssamling Resept.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Route of administration (OID=7477) from the prescription code system collection."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1"
     },
@@ -345,12 +644,38 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.dosage.route.coding:OID7477.code",
       "path" : "MedicationAdministration.dosage.route.coding.code",
       "short" : "Verdi fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Value from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
       "id" : "MedicationAdministration.dosage.route.coding:OID7477.display",
       "path" : "MedicationAdministration.dosage.route.coding.display",
-      "short" : "Beskrivelse av koden (navn) fra kodeverket"
+      "short" : "Beskrivelse av koden (navn) fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Description of the code (name) from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "MedicationAdministration.dosage.route.text",
@@ -361,7 +686,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.dosage.dose",
       "path" : "MedicationAdministration.dosage.dose",
       "short" : "Administrert mengde virkestoff",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Administered amount of substance"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Mengde (dosering) av legemiddelets primære virkestoff.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Amount (dosage) of the medication's primary substance."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {

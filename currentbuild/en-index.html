@@ -109,25 +109,21 @@
         <div class="container fhi-main-menu-alt__container">
             <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
-                    <!-- menu.xml  -->
+                    
+
+
+
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Hjem</a>
-  </li>
-  <li>
-    <a href="informasjonsmodell.html">Informasjonsmodell</a>
-  </li>
-  <li>
-    <a href="integrasjon.html">Integrasjon</a>
-  </li>
-  <li>
-    <a href="profiler.html">FHIR-profiler</a>
-  </li>
-  <li>
-    <a href="nedlastinger.html">Nedlastinger</a>
-  </li>
+  <li><a href="en-index.html">Home</a></li>
+  <li><a href="en-informasjonsmodell.html">Information model</a></li>
+  <li><a href="en-integrasjon.html">Integration</a></li>
+  <li><a href="en-profiler.html">FHIR profiles</a></li>
+  <li><a href="en-nedlastinger.html">Downloads</a></li>
 </ul>
+
+
+
                 </div>
             </div>
         </div>
@@ -167,11 +163,102 @@
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<blockquote>
-  <p><strong>English translation pending.</strong></p>
 
-  <p>This page has not yet been translated. Please refer to the <a href="index.html">Norwegian version</a>.</p>
-</blockquote>
+<h3 id="medication-data-from-institutions-to-the-medication-registry-lmdi">Medication data from institutions to the Medication Registry (LMDI)</h3>
+
+<p>Complete and up-to-date medication data is available for analysis and research, with the aim of improving quality, governance, health surveillance, preparedness, and knowledge management in the health service.</p>
+
+<h4 id="objective">Objective</h4>
+
+<p>Collect medication data at the individual level from outpatient and inpatient settings to the Medication Registry (LMR). As part of this effort, an implementation guide (IG) is being developed based on a common information model and HL7 FHIR (this document). This will be used for submitting data from institutions to LMR using data sharing (secured REST API).</p>
+
+<p>The Medication Registry already contains data on dispensed medications from pharmacies at the individual level. The LMDI project now focuses specifically on extending this with data on administered medications from hospitals and other institutions, which will provide a more complete picture of medication use across the entire health service. This is an important extension that will strengthen the foundation for better patient safety, knowledge production, and health surveillance.</p>
+
+<figure>
+    <img src="lmdi-2.png" width="49%" style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;" />
+    <figcaption style="font-style: italic; font-size: 14px; margin-top: 5px;">
+        Figure: The LMDI project will implement reception of data on administered medications.
+    </figcaption>
+</figure>
+<p><br clear="all" /></p>
+
+<h4 id="no-basis-dependencies">no-basis dependencies</h4>
+
+<p>The LMDI profiles are based on <a href="https://hl7.no/fhir/no-basis/">no-basis</a> – the Norwegian base profiles for FHIR. no-basis provides standardised profiles adapted to Norwegian conditions, including identifiers, addresses, and code systems.</p>
+
+<p>The following LMDI profiles inherit from no-basis:</p>
+<ul>
+  <li><strong>Practitioner</strong> is based on no-basis-Practitioner (HPR number, Norwegian specialties)</li>
+  <li><strong>Organization</strong> is based on no-basis-Organization (organisation number, RESH ID)</li>
+  <li><strong>Patient</strong> is based on no-basis-Patient (national identity number, D-number, Norwegian addresses)</li>
+  <li><strong>Substance</strong> is based on no-basis-Substance (substance in a Norwegian context)</li>
+</ul>
+
+<p>This provides consistent handling of Norwegian identifiers and code systems across the health sector. To use the LMDI profiles, no-basis (version 2.2.0) must be installed as a dependency.</p>
+
+<h4 id="implementation-guide-versions">Implementation guide versions</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.1.0</td>
+      <td>2026-04-13</td>
+      <td><strong>Breaking changes:</strong><br />LokaltLegemiddel uses new URL: <code class="language-plaintext highlighter-rouge">http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</code> (previously <code class="language-plaintext highlighter-rouge">fh.no/lokaltVirkemiddel</code>)<br />Medication must have either a code or a substance<br /><code class="language-plaintext highlighter-rouge">organisatoriskNiva</code> is no longer permitted on Organization<br />Condition: <code class="language-plaintext highlighter-rouge">stage.summary</code> must be populated when <code class="language-plaintext highlighter-rouge">stage</code> is used<br />MedicationAdministration: route of administration must be coded with a <code class="language-plaintext highlighter-rouge">code</code> value<br /><strong>Other changes:</strong><br />IG status set to active<br />New <code class="language-plaintext highlighter-rouge">category</code> field in MedicationAdministration (including <code class="language-plaintext highlighter-rouge">community</code> for self-administration)<br />Clarified that <code class="language-plaintext highlighter-rouge">prosentvisDoseendring</code> 100% = unmodified dose<br /><code class="language-plaintext highlighter-rouge">LegemiddelKoder</code> extended with LMR sequence number, item number, and lokaltLegemiddel<br />Patient: removed redundant address-use invariant; <code class="language-plaintext highlighter-rouge">identifier</code> definition relaxed<br />Consistent naming of example instances; new examples for condition, infusion, entered-in-error, chemotherapy, self-administration, medication without code, and organisational hierarchy</td>
+    </tr>
+    <tr>
+      <td>1.0.8</td>
+      <td>2026-03-10</td>
+      <td>Improved FSH examples: fixed validation errors, added missing fields, new scenario-based Bundle examples (nursing home, prescription, chemotherapy)<br />Substance permitted in LegemiddelregisterBundle<br />Harmonised no-basis version in build scripts<br />Corrected typos and removed outdated comments in profiles</td>
+    </tr>
+    <tr>
+      <td>1.0.7</td>
+      <td>2025-09-30</td>
+      <td>Removed country field from address in Patient and Organization<br />address.type set to physical in Patient (physical addresses only)<br />Changed municipality extension from propertyInformation to municipalitycode in Patient<br />Removed citizenship extension from Patient<br />Changed urban district extension from lmdi-urban-district to no-basis urbanDistrict in Organization</td>
+    </tr>
+    <tr>
+      <td>1.0.6</td>
+      <td>2025-09-12</td>
+      <td>Practitioner, Organization, Patient, and Substance are now based on no-basis<br /></td>
+    </tr>
+    <tr>
+      <td>1.0.5</td>
+      <td>2025-07-28</td>
+      <td>NPR Episode Identifier extension changed to support both string and UUID simultaneously. Extension is now a complex structure with sub-extensions for stringIdentifier and uuidIdentifier.<br />Added LmrLopenummer and FestVarenummer slices on <code class="language-plaintext highlighter-rouge">Medication.code.coding</code></td>
+    </tr>
+    <tr>
+      <td>1.0.4</td>
+      <td>2025-05-30</td>
+      <td>Medication.code can now be a SNOMED CT code.<br /> New Substance profile for the Substance resource.<br />New extension (Must Support) Episode.nprEpisodeIdentifier.<br />New C# example code for authorisation with HelseID.</td>
+    </tr>
+    <tr>
+      <td>1.0.3</td>
+      <td>2025-04-11</td>
+      <td>Removed MedicationRequest.dosageInstruction.patientInstruction and Medication.text from the profile. <br /> New extension: Medication.classification. <br /> Added example code in C# and PowerShell</td>
+    </tr>
+    <tr>
+      <td>1.0.2</td>
+      <td>2025-04-01</td>
+      <td>New extensions added to the MedicationRequest profile: ProsentvisDoseendring, DelAvBehandlingsregime, KliniskStudie</td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>2025-02-04</td>
+      <td>Changed LegemiddelregisterBundle. Bundle type changed from Batch to Transaction</td>
+    </tr>
+    <tr>
+      <td>1.0.0</td>
+      <td>2025-01-15</td>
+      <td>First official version. Ready for testing.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -199,7 +286,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 08:23+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 11:19+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

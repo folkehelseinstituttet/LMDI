@@ -1,10 +1,10 @@
 # Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -47,6 +47,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
   "version" : "1.1.0",
   "name" : "Legemiddelrekvirering",
   "title" : "Legemiddelrekvirering",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medication Request"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -65,6 +78,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
     }]
   }],
   "description" : "Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medication request - prescribing or other medication ordering"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -130,7 +156,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "path" : "MedicationRequest.extension",
       "sliceName" : "prosentvisDoseendring",
       "short" : "Doseendring i prosent (100% = umodifisert dose)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Dose adjustment in percent (100% = unmodified dose)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Dose adjustment in percent, compared with the original dosage. Especially relevant for chemotherapy. A normal dose without modifications is 100%. May have values from 0. Unit shall be percent."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -143,7 +195,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "path" : "MedicationRequest.extension",
       "sliceName" : "delAvBehandlingsregime",
       "short" : "Del av behandlingsregime",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Part of treatment regimen"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The name of the course, treatment regimen, or protocol that the medication is part of. Especially relevant for chemotherapy."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -156,7 +234,33 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "path" : "MedicationRequest.extension",
       "sliceName" : "kliniskStudie",
       "short" : "Legemiddel i klinisk studie",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Medication in clinical trial"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Angir om legemidlet gis som en del av en klinisk studie.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Indicates whether the medication is given as part of a clinical trial."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -168,15 +272,80 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.identifier",
       "path" : "MedicationRequest.identifier",
       "short" : "Identifikator for rekvirering",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Identifier for the medication request"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Must Support: An identifier that uniquely identifies a medication request shall be provided if one exists."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.status",
       "path" : "MedicationRequest.status",
       "short" : "Status for rekvireringen",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Status of the medication request"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "definition" : "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Must Support: Status is important for following the lifecycle of a medication request and must be supported by all systems."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "comment" : "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Valid values: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "mustSupport" : true,
       "binding" : {
         "strength" : "required",
@@ -187,6 +356,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.intent",
       "path" : "MedicationRequest.intent",
       "short" : "Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The intent or purpose of the medication request: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "mustSupport" : true
     },
     {
@@ -200,6 +382,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.medication[x]",
       "path" : "MedicationRequest.medication[x]",
       "short" : "Legemidlet som er rekvirert",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The medication that was requested"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
@@ -210,6 +405,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.subject",
       "path" : "MedicationRequest.subject",
       "short" : "Pasienten legemidlet er rekvirert til",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The patient the medication was requested for"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
@@ -220,6 +428,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.encounter",
       "path" : "MedicationRequest.encounter",
       "short" : "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The episode (for example the consultation or admission) associated with the medication request."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"]
@@ -234,6 +455,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.requester",
       "path" : "MedicationRequest.requester",
       "short" : "Helsepersonellet som rekvirerte legemidlet",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The healthcare professional who requested the medication"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1,
       "type" : [{
         "code" : "Reference",
@@ -260,6 +494,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       "id" : "MedicationRequest.reasonReference",
       "path" : "MedicationRequest.reasonReference",
       "short" : "Indikasjon (diagnose) for legemiddelrekvireringen",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Indication (diagnosis) for the medication request"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"]
@@ -273,7 +520,20 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
     {
       "id" : "MedicationRequest.courseOfTherapyType",
       "path" : "MedicationRequest.courseOfTherapyType",
-      "short" : "Type behandlingsforløp (continuous | acute | seasonal)"
+      "short" : "Type behandlingsforløp (continuous | acute | seasonal)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Type of treatment course (continuous | acute | seasonal)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "MedicationRequest.insurance",

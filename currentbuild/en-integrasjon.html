@@ -109,25 +109,21 @@
         <div class="container fhi-main-menu-alt__container">
             <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
-                    <!-- menu.xml  -->
+                    
+
+
+
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Hjem</a>
-  </li>
-  <li>
-    <a href="informasjonsmodell.html">Informasjonsmodell</a>
-  </li>
-  <li>
-    <a href="integrasjon.html">Integrasjon</a>
-  </li>
-  <li>
-    <a href="profiler.html">FHIR-profiler</a>
-  </li>
-  <li>
-    <a href="nedlastinger.html">Nedlastinger</a>
-  </li>
+  <li><a href="en-index.html">Home</a></li>
+  <li><a href="en-informasjonsmodell.html">Information model</a></li>
+  <li><a href="en-integrasjon.html">Integration</a></li>
+  <li><a href="en-profiler.html">FHIR profiles</a></li>
+  <li><a href="en-nedlastinger.html">Downloads</a></li>
 </ul>
+
+
+
                 </div>
             </div>
         </div>
@@ -164,14 +160,152 @@
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
-<blockquote>
-  <p><strong>English translation pending.</strong></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#establishing-integration-with-the-medication-registry" id="markdown-toc-establishing-integration-with-the-medication-registry">Establishing Integration with the Medication Registry</a></li>
+  <li><a href="#transferring-data-to-the-medication-registry" id="markdown-toc-transferring-data-to-the-medication-registry">Transferring data to the Medication Registry</a></li>
+</ul>
 
-  <p>This page has not yet been translated. Please refer to the <a href="integrasjon.html">Norwegian version</a>.</p>
-</blockquote>
+</div>
+
+<h3 id="establishing-integration-with-the-medication-registry">Establishing Integration with the Medication Registry</h3>
+
+<h4 id="example-code">Example code</h4>
+
+<p>FHI has created example code showing how an integration with the Medication Registry can be developed. The example code is available in both C# and PowerShell, and demonstrates the most important functions for secure data transfer to the registry.</p>
+
+<p>You can find the example code here:</p>
+<ul>
+  <li><a href="en-eksempelkode_cs.html">C# example code</a></li>
+  <li><a href="en-eksempelkode_ps1.html">PowerShell example code</a></li>
+</ul>
+
+<h4 id="ip-address-allowlisting">IP address allowlisting</h4>
+
+<p>To gain access to the API for data transfer, the sender system’s IP address must be registered in LMR’s list of allowlisted addresses. Both individual addresses and address ranges can be allowlisted.
+Allowlisting is only available in the production environment.</p>
+
+<h4 id="certificates">Certificates</h4>
+
+<p>Data transferred to the API must be encrypted and signed (see <a href="en-SignertKryptertBundle.html">Signed and Encrypted Bundle</a>).</p>
+<ul>
+  <li>Signing uses the private key in the sender’s enterprise certificate. The public part of this certificate must be sent to the Medication Registry.</li>
+  <li>Encryption of data uses the public key in the Medication Registry’s enterprise certificate. This can be downloaded <a href="en-nedlastinger.html">here</a>.</li>
+</ul>
+
+<h4 id="maskinporten">Maskinporten</h4>
+
+<p>The API is protected by Maskinporten and requires clients to authenticate with machine-to-machine authentication.</p>
+
+<p>To gain access:</p>
+
+<ol>
+  <li>Register an integration in Digdir’s self-service portal (<code class="language-plaintext highlighter-rouge">https://sjolvbetjening.test.samarbeid.digdir.no/</code>)
+    <ul>
+      <li>Create a client</li>
+      <li>Request access to the scope <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code></li>
+    </ul>
+  </li>
+  <li>Implement OAuth 2.0 Client Credentials flow with JWT bearer token. It is recommended to use the Altinn library: <code class="language-plaintext highlighter-rouge">https://github.com/Altinn/altinn-apiclient-maskinporten</code>
+    <ul>
+      <li>Generate a signing key directly in the self-service portal (PEM format) or create your own using your enterprise certificate.</li>
+      <li>Generate a signed JWT assertion and send it to Maskinporten’s token endpoint.</li>
+      <li>It is important to include the optional claim <code class="language-plaintext highlighter-rouge">Resource</code> in the JWT assertion. This value must be <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak</code>.</li>
+      <li>The <code class="language-plaintext highlighter-rouge">Scope</code> claim must also be added. This value corresponds to the name of the scope in the self-service portal: <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code></li>
+    </ul>
+  </li>
+  <li>Include the received access token in the Authorization header as a Bearer token when calling the API.</li>
+</ol>
+
+<h3 id="transferring-data-to-the-medication-registry">Transferring data to the Medication Registry</h3>
+
+<p>Institutions that are to transfer data to the Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: <a href="en-protokoll.html">Protocol for data transfer</a>.</p>
+
+<p>To build a collection of data to be transferred, a <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a> must be created. This is a specialised FHIR Bundle profile developed for submitting data to the Medication Registry. It is limited to transaction-type bundles and only permits POST operations, ensuring consistent data handling and traceability. The bundle may only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.</p>
+
+<p>When transferring data, a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code> before it is sent to the API. Read more about how to create a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> in <a href="en-SignertKryptertBundle.html">this guide</a>.</p>
+
+<p>URLs for the Medication Registry’s API:</p>
+<ul>
+  <li>TEST environment: <a href="https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1">https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
+  <li>PROD environment: <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">https://fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
+</ul>
+
+<h4 id="test-endpoints">Test endpoints</h4>
+
+<p>For testing the integration, two dedicated validation endpoints are available. These store no data and are only available in the test environment.</p>
+
+<p><strong>Validation of FHIR bundle:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code> – Validates the content of a FHIR bundle against the LMDI specification.
+The endpoint expects to receive an unsigned and unencrypted FHIR bundle in JSON format. Does not require authentication, and the sender does not need to be registered.
+Returns a validation result as <code class="language-plaintext highlighter-rouge">OperationOutcome</code> with status 200 (valid) or 400 (invalid).</li>
+</ul>
+
+<p><strong>Validation of signed and encrypted bundle:</strong></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code> – Validates that signing and encryption have been performed correctly, and that the content of the encrypted FHIR bundle is in accordance with the LMDI specification.
+The endpoint expects to receive a signed and encrypted bundle. The sender must be registered and active. Data is validated but not stored.
+Requires Maskinporten authentication with scope <code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code>.
+Returns status 200 (valid) or 400 (invalid).</li>
+</ul>
+
+<h4 id="handling-responses-from-the-test-endpoints">Handling responses from the test endpoints</h4>
+
+<p>The test endpoints return the following HTTP status codes:</p>
+
+<p><strong>200 OK</strong></p>
+<ul>
+  <li>The message was validated without errors</li>
+  <li>For <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>: The message has been validated but not stored</li>
+  <li>For <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validateLegemiddelregisterBundle</code>: Returns <code class="language-plaintext highlighter-rouge">OperationOutcome</code> confirming that the FHIR bundle is valid</li>
+</ul>
+
+<p><strong>400 Bad Request</strong></p>
+<ul>
+  <li>Validation error in the submitted message</li>
+  <li>Possible causes (both endpoints):
+    <ul>
+      <li>FHIR bundle validation failed (not in accordance with the LMDI specification)</li>
+      <li>Invalid JSON format</li>
+    </ul>
+  </li>
+  <li>Possible causes only for <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>:
+    <ul>
+      <li>Unknown or inactive sender</li>
+      <li>Organisation number in message does not match the registered sender</li>
+      <li>Signature validation failed</li>
+      <li>Decryption failed</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>401 Unauthorized</strong></p>
+<ul>
+  <li>Authentication failed (applies to <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+  <li>Possible causes:
+    <ul>
+      <li>Missing Authorization header or token</li>
+      <li>Expired access token</li>
+      <li>Invalid token signature</li>
+      <li>Invalid issuer or audience</li>
+    </ul>
+  </li>
+  <li>The response includes a <code class="language-plaintext highlighter-rouge">WWW-Authenticate</code> header with an error description</li>
+</ul>
+
+<p><strong>403 Forbidden</strong></p>
+<ul>
+  <li>Authorisation failed (applies to <code class="language-plaintext highlighter-rouge">/fhirmottak/v1/validate</code>)</li>
+  <li>Token is valid, but lacks the required scope (<code class="language-plaintext highlighter-rouge">fhi:lmr/fhirmottak.api</code>)</li>
+  <li>The response includes a <code class="language-plaintext highlighter-rouge">WWW-Authenticate</code> header with an error description</li>
+</ul>
+
+<p><strong>500 Internal Server Error</strong></p>
+<ul>
+  <li>An unexpected error occurred during processing of the message</li>
+  <li>Server error that should be investigated with FHI</li>
+</ul>
 
 
 
@@ -199,7 +333,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 08:23+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 11:19+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

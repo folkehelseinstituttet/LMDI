@@ -109,25 +109,21 @@
         <div class="container fhi-main-menu-alt__container">
             <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
-                    <!-- menu.xml  -->
+                    
+
+
+
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Hjem</a>
-  </li>
-  <li>
-    <a href="informasjonsmodell.html">Informasjonsmodell</a>
-  </li>
-  <li>
-    <a href="integrasjon.html">Integrasjon</a>
-  </li>
-  <li>
-    <a href="profiler.html">FHIR-profiler</a>
-  </li>
-  <li>
-    <a href="nedlastinger.html">Nedlastinger</a>
-  </li>
+  <li><a href="en-index.html">Home</a></li>
+  <li><a href="en-informasjonsmodell.html">Information model</a></li>
+  <li><a href="en-integrasjon.html">Integration</a></li>
+  <li><a href="en-profiler.html">FHIR profiles</a></li>
+  <li><a href="en-nedlastinger.html">Downloads</a></li>
 </ul>
+
+
+
                 </div>
             </div>
         </div>
@@ -167,11 +163,83 @@
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<blockquote>
-  <p><strong>English translation pending.</strong></p>
+<h3 id="fhir-profiles">FHIR profiles</h3>
 
-  <p>This page has not yet been translated. Please refer to the <a href="profiler.html">Norwegian version</a>.</p>
-</blockquote>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <table class="grid">
+    <thead>
+      <tr>
+        <th>Navn</th>
+        <th>Beskrivelse</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-condition.html">Diagnose</a></td>
+        <td>Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
+        <td>Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-practitioner.html">Helsepersonell</a></td>
+        <td>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
+        <td>Beskrivelse av legemiddel.</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
+        <td>Beskriver administrering av legemiddel til pasient på institusjon.
+
+Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a></td>
+        <td>Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper.</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+        <td>Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></td>
+        <td>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.
+
+Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.
+
+Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
+- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
+- organisasjonen på høyre nivå
+     - sykehus, Helseforetak og Regionalt Helseforetak
+     - sykehjem, kommune
+- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-patient.html">Pasient</a></td>
+        <td>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient</td>
+      </tr>
+    
+      <tr>
+        <td><a href="StructureDefinition-lmdi-substance.html">Virkestoff</a></td>
+        <td>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.</td>
+      </tr>
+    
+    </tbody>
+  </table>
+</div>
 
 
 
@@ -199,7 +267,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 08:23+0000">2026-05-11</span>
+                        title="Mon, May 11, 2026 11:19+0000">2026-05-11</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
