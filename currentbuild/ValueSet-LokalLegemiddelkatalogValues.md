@@ -69,7 +69,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }]
   },
   "status" : "active",
-  "date" : "2026-05-11T12:29:55+00:00",
+  "date" : "2026-05-11T13:57:47+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

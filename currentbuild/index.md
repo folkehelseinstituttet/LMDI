@@ -177,17 +177,6 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "translation-sources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "translations"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueString" : "apply-contact"
       },
       {
@@ -604,17 +593,6 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       {
         "url" : "value",
         "valueString" : "en"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "translation-sources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "translations"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1980,6 +1958,87 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         }],
         "nameUrl" : "profiler.html",
         "title" : "FHIR-profiler",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "en-index.html"
+        }],
+        "nameUrl" : "en-index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "en-informasjonsmodell.html"
+        }],
+        "nameUrl" : "en-informasjonsmodell.html",
+        "title" : "Information model",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "en-integrasjon.html"
+        }],
+        "nameUrl" : "en-integrasjon.html",
+        "title" : "Integration",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "en-SignertKryptertBundle.html"
+          }],
+          "nameUrl" : "en-SignertKryptertBundle.html",
+          "title" : "Signed and encrypted Bundle",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "en-protokoll.html"
+          }],
+          "nameUrl" : "en-protokoll.html",
+          "title" : "Protocol",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "en-eksempelkode_cs.html"
+          }],
+          "nameUrl" : "en-eksempelkode_cs.html",
+          "title" : "C# example code",
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "en-eksempelkode_ps1.html"
+          }],
+          "nameUrl" : "en-eksempelkode_ps1.html",
+          "title" : "PowerShell example code",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "en-nedlastinger.html"
+        }],
+        "nameUrl" : "en-nedlastinger.html",
+        "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "en-profiler.html"
+        }],
+        "nameUrl" : "en-profiler.html",
+        "title" : "FHIR profiles",
         "generation" : "markdown"
       }]
     },

@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
     }]
   },
   "status" : "active",
-  "date" : "2026-05-11T12:29:55+00:00",
+  "date" : "2026-05-11T13:57:47+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
