@@ -22,7 +22,14 @@ Hold listen synkronisert ved tillegg/fjerning av narrative sider.
 {% assign basename_match = basename | prepend: "," | append: "," %}
 {% assign translatable_match = translatable | prepend: "," | append: "," %}
 {% assign has_translation = false %}
-{% if translatable_match contains basename_match %}{% assign has_translation = true %}{% endif %}
+{% assign en_href = "" %}
+{% if translatable_match contains basename_match %}
+  {% assign has_translation = true %}
+  {% unless is_english %}{% assign en_href = "en-" | append: basename | append: ".html" %}{% endunless %}
+{% elsif basename contains "StructureDefinition-" or basename contains "Extension-" or basename contains "CodeSystem-" or basename contains "ValueSet-" or basename contains "NamingSystem-" %}
+  {% assign has_translation = true %}
+  {% unless is_english %}{% assign en_href = "en-profiler.html" %}{% endunless %}
+{% endif %}
 
 <header class="fhi-header mb-0">
     <div class="fhi-header__brand">
@@ -53,7 +60,7 @@ Hold listen synkronisert ved tillegg/fjerning av narrative sider.
                 <label for="lang-switcher" class="visually-hidden">Velg språk / Select language</label>
                 <select id="lang-switcher" class="form-select form-select-sm" aria-label="Velg språk">
                     <option value="no" {% unless is_english %}selected="selected"{% endunless %} data-href="{% if is_english %}{{basename}}.html{% endif %}">Norsk</option>
-                    <option value="en" {% if is_english %}selected="selected"{% endif %} {% unless has_translation %}disabled="disabled" title="English version not available for this page yet"{% endunless %} data-href="{% if has_translation %}{% unless is_english %}en-{{basename}}.html{% endunless %}{% endif %}">English</option>
+                    <option value="en" {% if is_english %}selected="selected"{% endif %} {% unless has_translation %}disabled="disabled" title="English version not available for this page yet"{% endunless %} data-href="{{en_href}}">English</option>
                 </select>
             </div>
         </div>
