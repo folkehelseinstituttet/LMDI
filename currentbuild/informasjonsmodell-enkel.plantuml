@@ -1,0 +1,37 @@
+@startuml informasjonemodell-enkel
+
+hide empty members
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+class Diagnose <<Condition>> [[StructureDefinition-lmdi-condition.html Diagnose _blank]]
+class Episode <<Encounter>> [[StructureDefinition-lmdi-encounter.html Episode _blank]]
+class Helsepersonell <<Practitioner>> [[StructureDefinition-lmdi-practitioner.html Helsepersonell _blank]]
+class Legemiddel <<Medication>> [[StructureDefinition-lmdi-medication.html Legemiddel _blank]]
+class Legemiddeladministrering <<MedicationAdministration>> [[StructureDefinition-lmdi-medicationadministration.html Legemiddeladministrering _blank]]
+class Legemiddelrekvirering <<MedicationRequest>> [[StructureDefinition-lmdi-medicationrequest.html Legemiddelrekvirering _blank]]
+class Organisasjon <<Organization>> [[StructureDefinition-lmdi-organization.html Organisasjon _blank]]
+class Pasient <<Patient>> [[StructureDefinition-lmdi-patient.html Pasient _blank]]
+class Virkestoff <<Substance>> [[StructureDefinition-lmdi-substance.html Virkestoff _blank]]
+
+Diagnose "1..1" --> Pasient : "subject"
+Episode "0..1" --> Organisasjon : "serviceProvider"
+Legemiddel "0..*" --> Virkestoff : "ingredient.itemReference"
+Legemiddel "0..*" --> Legemiddel : "ingredient.itemReference"
+Legemiddeladministrering "1..1" --> Legemiddel : "medicationReference"
+Legemiddeladministrering "1..1" --> Pasient : "subject"
+Legemiddeladministrering "0..1" --> Episode : "context"
+Legemiddeladministrering "0..*" --> Diagnose : "reasonReference"
+Legemiddeladministrering "0..1" --> Legemiddelrekvirering : "request"
+Legemiddelrekvirering "1..1" --> Legemiddel : "medicationReference"
+Legemiddelrekvirering "1..1" --> Pasient : "subject"
+Legemiddelrekvirering "0..1" --> Episode : "encounter"
+Legemiddelrekvirering "1..1" --> Helsepersonell : "requester"
+Legemiddelrekvirering "0..*" --> Diagnose : "reasonReference"
+Legemiddelrekvirering "0..1" --> Legemiddelrekvirering : "priorPrescription"
+Organisasjon "0..1" --> Organisasjon : "partOf"
+
+@enduml

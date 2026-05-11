@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-Cellegift"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <identifier>
+    <value value="15634555315"/>
+  </identifier>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="Medication/Lokalt-legemiddel-cellegift"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Episode-Sykehus-2"/>
+  </context>
+  <effectivePeriod>
+    <start value="2026-04-01T12:12:00+02:00"/>
+    <end value="2026-04-01T13:45:00+02:00"/>
+  </effectivePeriod>
+  <request>
+    <reference value="MedicationRequest/Rekvirering-Cellegift"/>
+  </request>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="intravenøs administrasjonsvei"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="1000"/>
+      <unit value="milligram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+    <rateRatio>
+      <numerator>
+        <value value="10"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="min"/>
+      </denominator>
+    </rateRatio>
+  </dosage>
+</MedicationAdministration>

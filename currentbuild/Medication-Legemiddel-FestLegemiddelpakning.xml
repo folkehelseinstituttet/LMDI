@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-FestLegemiddelpakning"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="C01DA14"/>
+        <display value="isosorbide mononitrate"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"/>
+      <code value="ID_40EB7069-EFEC-41C9-8CEF-7D21BD18539C"/>
+      <display value="Monoket retard depottab 50 mg"/>
+    </coding>
+  </code>
+  <form>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+      <code value="25"/>
+      <display value="Depottablett"/>
+    </coding>
+  </form>
+</Medication>
