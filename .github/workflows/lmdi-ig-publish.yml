@@ -10,6 +10,7 @@ on:
 
 env:
   IG_SHORTNAME: LMDI
+  IG_PUBLISHER_VERSION: 2.0.26
 
 jobs:
   publish:
@@ -143,11 +144,11 @@ jobs:
       - name: 📚 Last ned IG Publisher
         shell: bash
         run: |
-          echo "📦 Laster ned nyeste versjon av IG Publisher..."
+          echo "📦 Laster ned pinnet versjon av IG Publisher (${IG_PUBLISHER_VERSION})..."
           mkdir -p "$IG_SHORTNAME/input-cache"
 
           curl -sSL -o "$IG_SHORTNAME/input-cache/publisher.jar" \
-            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+            "https://github.com/HL7/fhir-ig-publisher/releases/download/${IG_PUBLISHER_VERSION}/publisher.jar"
 
           if [ -f "$IG_SHORTNAME/input-cache/publisher.jar" ]; then
             echo "✅ IG Publisher nedlastet: $(ls -lh $IG_SHORTNAME/input-cache/publisher.jar | awk '{print $5}')"

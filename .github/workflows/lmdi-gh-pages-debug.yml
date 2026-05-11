@@ -5,6 +5,7 @@ on:
 
 env:
   IG: LMDI
+  IG_PUBLISHER_VERSION: 2.0.26
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
@@ -126,9 +127,9 @@ jobs:
           
           echo "✅ Snapshot pakke klargjort for Docker"
 
-      # Downloads the newest version of the IG Publisher, this could probable be cached.
+      # Downloads a pinned IG Publisher version to avoid regressions from moving latest builds.
       - name: 📥 Download IG Publisher
-        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/download/${{ env.IG_PUBLISHER_VERSION }}/publisher.jar
 
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher with snapshot injection
