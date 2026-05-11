@@ -192,6 +192,10 @@ jobs:
             echo "❌ IG Publisher mislyktes (exit code: $PUBLISHER_EXIT_CODE)"
             exit $PUBLISHER_EXIT_CODE
           fi
+
+      - name: 🌐 Bygg engelsk dokumentasjonsflate
+        shell: bash
+        run: python3 ../scripts/lag-en-doklag.py --ig-root . --output-dir output
           
       - name: 🚀 Deploy til GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

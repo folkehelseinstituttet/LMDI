@@ -159,6 +159,10 @@ jobs:
               java -jar publisher.jar publisher -ig ${{ env.IG }}/ig.ini -generate
             "
 
+      - name: 🌐 Bygg engelsk dokumentasjonsflate
+        shell: bash
+        run: python3 scripts/lag-en-doklag.py --ig-root LMDI --output-dir LMDI/output
+
       # Kopierer certificates.zip til output
       - name: Copy certificates.zip
         run: |

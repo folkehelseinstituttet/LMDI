@@ -3,7 +3,7 @@
 {% comment %} Språk-kontekst for <html lang>. Header-dropdown beregner samme is_english i _append.fragment-header.html. {% endcomment %}
 {% assign path_prefix_pb = page.path | slice: 0, 3 %}
 {% assign is_english_pb = false %}
-{% if path_prefix_pb == "en-" %}{% assign is_english_pb = true %}{% endif %}
+{% if path_prefix_pb == "en-" or path_prefix_pb == "en/" %}{% assign is_english_pb = true %}{% endif %}
 <html xml:lang="{% if is_english_pb %}en{% else %}nb{% endif %}" xmlns="http://www.w3.org/1999/xhtml" lang="{% if is_english_pb %}en{% else %}nb{% endif %}">
 
 <head>

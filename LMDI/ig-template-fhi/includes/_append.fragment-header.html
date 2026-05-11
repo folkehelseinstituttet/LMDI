@@ -13,9 +13,13 @@ Hold listen synkronisert ved tillegg/fjerning av narrative sider.
 {% assign current_path = page.path %}
 {% assign path_prefix = current_path | slice: 0, 3 %}
 {% assign is_english = false %}
-{% if path_prefix == "en-" %}{% assign is_english = true %}{% endif %}
+{% if path_prefix == "en-" or path_prefix == "en/" %}{% assign is_english = true %}{% endif %}
 {% if is_english %}
-  {% assign basename = current_path | remove_first: "en-" | remove: ".html" %}
+  {% if path_prefix == "en-" %}
+    {% assign basename = current_path | remove_first: "en-" | remove: ".html" %}
+  {% else %}
+    {% assign basename = current_path | remove_first: "en/" | remove: ".html" %}
+  {% endif %}
 {% else %}
   {% assign basename = current_path | remove: ".html" %}
 {% endif %}
@@ -25,10 +29,10 @@ Hold listen synkronisert ved tillegg/fjerning av narrative sider.
 {% assign en_href = "" %}
 {% if translatable_match contains basename_match %}
   {% assign has_translation = true %}
-  {% unless is_english %}{% assign en_href = "en-" | append: basename | append: ".html" %}{% endunless %}
+  {% unless is_english %}{% assign en_href = "en/" | append: basename | append: ".html" %}{% endunless %}
 {% elsif basename contains "StructureDefinition-" or basename contains "Extension-" or basename contains "CodeSystem-" or basename contains "ValueSet-" or basename contains "NamingSystem-" %}
   {% assign has_translation = true %}
-  {% unless is_english %}{% assign en_href = "en-profiler.html" %}{% endunless %}
+  {% unless is_english %}{% assign en_href = "en/" | append: basename | append: ".html" %}{% endunless %}
 {% endif %}
 
 <header class="fhi-header mb-0">
