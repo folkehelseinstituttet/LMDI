@@ -55,8 +55,21 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "version" : "1.1.0",
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Local Medication Catalogue Values"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
-  "date" : "2026-05-11T11:43:47+00:00",
+  "date" : "2026-05-11T11:58:54+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -73,6 +86,19 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }]
   }],
   "description" : "Gyldige verdier for lokal legemiddelkatalog",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Valid values for the local medication catalogue."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

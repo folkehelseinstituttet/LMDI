@@ -16,7 +16,16 @@
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"/>
   <version value="1.1.0"/>
   <name value="LegemiddelClassification"/>
-  <title value="Legemiddel Classification"/>
+  <title value="Legemiddel Classification">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medication Classification"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
   <date value="2025-09-12"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -34,7 +43,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister)."/>
+  <description value="Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification)."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

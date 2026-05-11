@@ -56,8 +56,21 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
   "version" : "1.1.0",
   "name" : "KliniskStudie",
   "title" : "Klinisk studie",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Clinical trial"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
-  "date" : "2026-05-11T11:43:47+00:00",
+  "date" : "2026-05-11T11:58:54+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -74,6 +87,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
     }]
   }],
   "description" : "Angir om legemidlet gis som en del av en klinisk studie.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Indicates whether the medication is given as part of a clinical trial."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

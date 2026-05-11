@@ -55,6 +55,19 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
   "version" : "1.1.0",
   "name" : "ATCValueSet",
   "title" : "ATC Kodesystem ValueSet",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "ATC Code System ValueSet"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -73,6 +86,19 @@ ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemid
     }]
   }],
   "description" : "ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "ValueSet containing codes from the WHO ATC (Anatomical Therapeutic Chemical classification)."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -16,9 +16,18 @@
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime"/>
   <version value="1.1.0"/>
   <name value="DelAvBehandlingsregime"/>
-  <title value="Del av behandlingsregime"/>
+  <title value="Del av behandlingsregime">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Part of treatment regimen"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
-  <date value="2026-05-11T11:43:47+00:00"/>
+  <date value="2026-05-11T11:58:54+00:00"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -34,7 +43,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi."/>
+  <description value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="The name of the regimen, treatment protocol, or course the medication is given as part of. Particularly relevant in chemotherapy."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

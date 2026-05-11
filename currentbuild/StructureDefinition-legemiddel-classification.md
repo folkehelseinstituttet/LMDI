@@ -58,6 +58,19 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
   "version" : "1.1.0",
   "name" : "LegemiddelClassification",
   "title" : "Legemiddel Classification",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medication Classification"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -76,6 +89,19 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
     }]
   }],
   "description" : "Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification)."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

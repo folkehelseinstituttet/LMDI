@@ -8,9 +8,18 @@
   <url value="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use"/>
   <version value="1.1.0"/>
   <name value="LmdiAddressUse"/>
-  <title value="LMDI Address Use"/>
+  <title value="LMDI Address Use">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="LMDI Address Use"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
-  <date value="2026-05-11T11:43:47+00:00"/>
+  <date value="2026-05-11T11:58:54+00:00"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -26,7 +35,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Tillatte verdier for address.use i LMDI: home, temp, old"/>
+  <description value="Tillatte verdier for address.use i LMDI: home, temp, old">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Permitted values for address.use in LMDI: home, temp, old."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

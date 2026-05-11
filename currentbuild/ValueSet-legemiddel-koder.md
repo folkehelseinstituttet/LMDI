@@ -57,8 +57,21 @@ This value set cannot be expanded because of the way it is defined - it has an i
   "version" : "1.1.0",
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Valid medication codes"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
-  "date" : "2026-05-11T11:43:47+00:00",
+  "date" : "2026-05-11T11:58:54+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -75,6 +88,19 @@ This value set cannot be expanded because of the way it is defined - it has an i
     }]
   }],
   "description" : "ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "ValueSet containing codes from SNOMED CT, FEST, LMR sequence number, item number, and local medication catalogue."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

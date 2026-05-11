@@ -16,9 +16,18 @@
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie"/>
   <version value="1.1.0"/>
   <name value="KliniskStudie"/>
-  <title value="Klinisk studie"/>
+  <title value="Klinisk studie">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Clinical trial"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
-  <date value="2026-05-11T11:43:47+00:00"/>
+  <date value="2026-05-11T11:58:54+00:00"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -34,7 +43,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Angir om legemidlet gis som en del av en klinisk studie."/>
+  <description value="Angir om legemidlet gis som en del av en klinisk studie.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Indicates whether the medication is given as part of a clinical trial."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

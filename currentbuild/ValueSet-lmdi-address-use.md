@@ -55,8 +55,21 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "version" : "1.1.0",
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "LMDI Address Use"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
-  "date" : "2026-05-11T11:43:47+00:00",
+  "date" : "2026-05-11T11:58:54+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -73,6 +86,19 @@ Tillatte verdier for address.use i LMDI: home, temp, old
     }]
   }],
   "description" : "Tillatte verdier for address.use i LMDI: home, temp, old",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Permitted values for address.use in LMDI: home, temp, old."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

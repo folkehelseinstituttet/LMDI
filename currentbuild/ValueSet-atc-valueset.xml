@@ -8,7 +8,16 @@
   <url value="http://fhir.no/ValueSet/atc-valueset"/>
   <version value="1.1.0"/>
   <name value="ATCValueSet"/>
-  <title value="ATC Kodesystem ValueSet"/>
+  <title value="ATC Kodesystem ValueSet">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="ATC Code System ValueSet"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
   <date value="2025-09-12"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -26,7 +35,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)"/>
+  <description value="ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="ValueSet containing codes from the WHO ATC (Anatomical Therapeutic Chemical classification)."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
