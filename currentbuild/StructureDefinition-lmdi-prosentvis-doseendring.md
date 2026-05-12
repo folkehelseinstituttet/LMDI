@@ -72,7 +72,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
     }]
   },
   "status" : "active",
-  "date" : "2026-05-12T07:27:06+00:00",
+  "date" : "2026-05-12T08:37:01+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

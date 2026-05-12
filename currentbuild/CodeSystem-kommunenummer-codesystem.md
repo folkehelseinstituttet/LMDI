@@ -37,7 +37,7 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "status" : "active",
-  "date" : "2026-05-12T07:27:06+00:00",
+  "date" : "2026-05-12T08:37:01+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
