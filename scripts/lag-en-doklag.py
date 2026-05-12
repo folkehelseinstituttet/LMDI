@@ -75,6 +75,36 @@ def rewrite_language_switcher(html: str, *, root_href: str) -> str:
     return LANG_SWITCHER_RE.sub(repl, html, count=1)
 
 
+PROFILE_LINKS = {
+    "LegemiddelregisterBundle": "StructureDefinition-lmdi-bundle.html",
+    "Patient": "StructureDefinition-lmdi-patient.html",
+    "Practitioner": "StructureDefinition-lmdi-practitioner.html",
+    "Organization": "StructureDefinition-lmdi-organization.html",
+    "Encounter": "StructureDefinition-lmdi-encounter.html",
+    "Condition": "StructureDefinition-lmdi-condition.html",
+    "Medication": "StructureDefinition-lmdi-medication.html",
+    "MedicationAdministration": "StructureDefinition-lmdi-medicationadministration.html",
+    "MedicationRequest": "StructureDefinition-lmdi-medicationrequest.html",
+    "Substance": "StructureDefinition-lmdi-substance.html",
+    "LegemiddelClassification": "StructureDefinition-legemiddel-classification.html",
+    "DelAvBehandlingsregime": "StructureDefinition-lmdi-del-av-behandlingsregime.html",
+    "KliniskStudie": "StructureDefinition-lmdi-klinisk-studie.html",
+    "NprEpisodeIdentifier": "StructureDefinition-npr-episode-identifier.html",
+    "ProsentvisDoseendring": "StructureDefinition-lmdi-prosentvis-doseendring.html",
+}
+
+
+def inject_profiler_links(html: str) -> str:
+    for label, href in PROFILE_LINKS.items():
+        html = re.sub(
+            rf"(<tr>\s*<td>){re.escape(label)}(</td>)",
+            rf'\1<a href="{href}">{label}</a>\2',
+            html,
+            count=1,
+        )
+    return html
+
+
 def rebased_href(value: str, *, source_is_english: bool, planned_local_names: set[str]) -> str:
     if not value:
         return value
@@ -254,6 +284,8 @@ def build_mirror(
         html = html.replace("src='assets/", "src='../assets/")
         html = html.replace('href="assets/', 'href="../assets/')
         html = html.replace("href='assets/", "href='../assets/")
+        if page.source_is_english and page.target.name == "profiler.html":
+            html = inject_profiler_links(html)
         if not page.source_is_english:
             html = html.replace(
                 '<html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">',
