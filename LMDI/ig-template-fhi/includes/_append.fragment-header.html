@@ -6,10 +6,10 @@
 
 {% comment %}
 Beregn språk-kontekst for header-dropdown.
-Liste over oversettbare sider speiler narrative-sidene i sushi-config.yaml pages:-blokken.
-Hold listen synkronisert ved tillegg/fjerning av narrative sider.
+Tilgjengelighet av engelsk versjon avledes fra site.data.pages — vi vedlikeholder ingen manuell liste.
+Narrative engelske sider rendres som "en-<basename>.html" (rotnivå); engelske artefakter
+ville ligget i "en/"-undertre (en/<basename>.html) hvis IG Publisher genererer dem.
 {% endcomment %}
-{% assign translatable = "index,informasjonsmodell,integrasjon,SignertKryptertBundle,protokoll,eksempelkode_cs,eksempelkode_ps1,nedlastinger,profiler" %}
 {% assign current_path = page.path %}
 {% assign path_prefix = current_path | slice: 0, 3 %}
 {% assign is_english = false %}
@@ -23,16 +23,21 @@ Hold listen synkronisert ved tillegg/fjerning av narrative sider.
 {% else %}
   {% assign basename = current_path | remove: ".html" %}
 {% endif %}
-{% assign basename_match = basename | prepend: "," | append: "," %}
-{% assign translatable_match = translatable | prepend: "," | append: "," %}
+
 {% assign has_translation = false %}
 {% assign en_href = "" %}
-{% if translatable_match contains basename_match %}
+{% if is_english %}
   {% assign has_translation = true %}
-  {% unless is_english %}{% assign en_href = "en/" | append: basename | append: ".html" %}{% endunless %}
-{% elsif basename contains "StructureDefinition-" or basename contains "Extension-" or basename contains "CodeSystem-" or basename contains "ValueSet-" or basename contains "NamingSystem-" %}
-  {% assign has_translation = true %}
-  {% unless is_english %}{% assign en_href = "en/" | append: basename | append: ".html" %}{% endunless %}
+{% else %}
+  {% assign en_narrative_key = "en-" | append: basename | append: ".html" %}
+  {% assign en_artefact_key = "en/" | append: basename | append: ".html" %}
+  {% if site.data.pages[en_narrative_key] %}
+    {% assign has_translation = true %}
+    {% assign en_href = en_narrative_key %}
+  {% elsif site.data.pages[en_artefact_key] %}
+    {% assign has_translation = true %}
+    {% assign en_href = en_artefact_key %}
+  {% endif %}
 {% endif %}
 
 <header class="fhi-header mb-0">
