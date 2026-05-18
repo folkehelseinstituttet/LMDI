@@ -13,6 +13,8 @@ package-lock.json
 npm-debug.log*
 
 # FHIR IG build output (genereres hver gang)
+.ig-build/
+.fhir-snapshot/
 **/fsh-generated/
 **/input-cache/
 **/output/
@@ -39,6 +41,7 @@ desktop.ini
 
 # Claude Code lokale innstillinger
 .claude/settings.local.json
+.codex
 
 # Claude skills (symlink til Fhi.Legemiddelregisteret.wiki/AgentSkills)
 .claude/skills/
@@ -62,6 +65,10 @@ LMDI/Requirements-fromNarrative.json
 # Log filer
 *.log
 *.txt.log
+
+# Python cache
+__pycache__/
+*.py[cod]
 
 # Windows/WSL binærfiler
 *.exe
