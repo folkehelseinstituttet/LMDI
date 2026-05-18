@@ -20,6 +20,19 @@ class MirrorPage:
     source_is_english: bool
 
 
+def _looks_like_profile_identifier(value: str) -> bool:
+    # FHIR-profilnavn brukes som ren tekst i HTML (lenker, breadcrumbs, tabeller) og
+    # skal beholde sin identitet pa engelsk. Heuristikk: ingen mellomrom, og enten
+    # bindestrekseparert (Pasient-Med-FNR) eller CamelCase med minst ett indre
+    # case-skifte (LegemiddelregisterBundle). En-ords navn som "Pasient" eller
+    # "Legemiddel" filtreres ikke ut, siden de ogsa brukes i fri prosa.
+    if not value or " " in value:
+        return False
+    if "-" in value and not value.startswith("-"):
+        return True
+    return any(ch.isupper() for ch in value[1:])
+
+
 def load_replacements(translations_dir: Path) -> list[tuple[str, str]]:
     replacements: list[tuple[str, str]] = []
     seen: set[tuple[str, str]] = set()
@@ -39,6 +52,8 @@ def load_replacements(translations_dir: Path) -> list[tuple[str, str]]:
                 if not isinstance(source, str) or not isinstance(target, str):
                     continue
                 if not source or not target or source == target:
+                    continue
+                if _looks_like_profile_identifier(source):
                     continue
                 key = (source, target)
                 if key in seen:
