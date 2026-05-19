@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the LMDI (Legemiddeldata fra institusjon til Legemiddelregisteret) project - a FHIR R4 implementation guide for medication data transfer from healthcare institutions to the Norwegian Medication Registry. The project develops FHIR profiles, extensions, and documentation using FHIR Shorthand (FSH) and the FHIR IG Publisher.
+This is the LMDI (Legemiddeldata fra institusjon til Legemiddelregisteret) project - a FHIR R4 implementation guide for medication data transfer from healthcare institutions to Legemiddelregisteret (the Norwegian medication registry). The project develops FHIR profiles, extensions, and documentation using FHIR Shorthand (FSH) and the FHIR IG Publisher.
 
 ## Architecture
 

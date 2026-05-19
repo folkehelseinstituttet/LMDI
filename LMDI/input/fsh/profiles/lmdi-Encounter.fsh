@@ -26,7 +26,7 @@ Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i 
 * extension[nprEpisodeIdentifier] ^definition.extension[=].extension[+].url = "lang"
 * extension[nprEpisodeIdentifier] ^definition.extension[=].extension[=].valueCode = #en
 * extension[nprEpisodeIdentifier] ^definition.extension[=].extension[+].url = "content"
-* extension[nprEpisodeIdentifier] ^definition.extension[=].extension[=].valueString = "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). If multiple NPR identifiers are registered locally for the same episode, only one NPR identifier shall be submitted to the Medication Registry (LMR). Choose either the first or the locally preferred identifier. The selected identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
+* extension[nprEpisodeIdentifier] ^definition.extension[=].extension[=].valueString = "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). If multiple NPR identifiers are registered locally for the same episode, only one NPR identifier shall be submitted to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier. The selected identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
 
 * statusHistory 0..0
 * classHistory 0..0

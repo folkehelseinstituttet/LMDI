@@ -7,12 +7,12 @@ Description: "Profil av Bundle for Legemiddelregisteret. Støtter bare transacti
 * ^title.extension[=].extension[+].url = "lang"
 * ^title.extension[=].extension[=].valueCode = #en
 * ^title.extension[=].extension[+].url = "content"
-* ^title.extension[=].extension[=].valueString = "Medication Registry Bundle"
+* ^title.extension[=].extension[=].valueString = "Legemiddelregisteret Bundle"
 * ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "Bundle profile for the Medication Registry. Supports only transaction type and POST operations, with restrictions on allowed resource types."
+* ^description.extension[=].extension[=].valueString = "Bundle profile for Legemiddelregisteret. Supports only transaction type and POST operations, with restrictions on allowed resource types."
 
 // Påkrevde felter
 * identifier 1..1 MS

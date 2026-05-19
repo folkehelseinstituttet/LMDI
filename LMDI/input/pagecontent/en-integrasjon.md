@@ -1,10 +1,10 @@
 
 
-### Establishing Integration with the Medication Registry
+### Establishing Integration with Legemiddelregisteret
 
 #### Example code
 
-FHI has created example code showing how an integration with the Medication Registry can be developed. The example code is available in both C# and PowerShell, and demonstrates the most important functions for secure data transfer to the registry.
+FHI has created example code showing how an integration with Legemiddelregisteret can be developed. The example code is available in both C# and PowerShell, and demonstrates the most important functions for secure data transfer to the registry.
 
 You can find the example code here:
 - [C# example code](en-eksempelkode_cs.html)
@@ -20,8 +20,8 @@ Allowlisting is only available in the production environment.
 #### Certificates
 
 Data transferred to the API must be encrypted and signed (see [Signed and Encrypted Bundle](en-SignertKryptertBundle.html)).
-- Signing uses the private key in the sender's enterprise certificate. The public part of this certificate must be sent to the Medication Registry.
-- Encryption of data uses the public key in the Medication Registry's enterprise certificate. This can be downloaded [here](en-nedlastinger.html).
+- Signing uses the private key in the sender's enterprise certificate. The public part of this certificate must be sent to Legemiddelregisteret.
+- Encryption of data uses the public key in Legemiddelregisteret's enterprise certificate. This can be downloaded [here](en-nedlastinger.html).
 
 
 #### Maskinporten
@@ -41,15 +41,15 @@ To gain access:
 3. Include the received access token in the Authorization header as a Bearer token when calling the API.
 
 
-### Transferring data to the Medication Registry
+### Transferring data to Legemiddelregisteret
 
-Institutions that are to transfer data to the Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: [Protocol for data transfer](en-protokoll.html).
+Institutions that are to transfer data to Legemiddelregisteret must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: [Protocol for data transfer](en-protokoll.html).
 
-To build a collection of data to be transferred, a [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.html) must be created. This is a specialised FHIR Bundle profile developed for submitting data to the Medication Registry. It is limited to transaction-type bundles and only permits POST operations, ensuring consistent data handling and traceability. The bundle may only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.
+To build a collection of data to be transferred, a [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.html) must be created. This is a specialised FHIR Bundle profile developed for submitting data to Legemiddelregisteret. It is limited to transaction-type bundles and only permits POST operations, ensuring consistent data handling and traceability. The bundle may only contain specific resource types relevant to Legemiddelregisteret: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.
 
 When transferring data, a `SignertKryptertBundle` must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based `LegemiddelregisterBundle` before it is sent to the API. Read more about how to create a `SignertKryptertBundle` in [this guide](en-SignertKryptertBundle.html).
 
-URLs for the Medication Registry's API:
+URLs for Legemiddelregisteret's API:
   - TEST environment: [https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1](https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1)
   - PROD environment: [https://fhirmottak.lmr.fhi.no/fhirmottak/v1](https://fhirmottak.lmr.fhi.no/fhirmottak/v1)
 

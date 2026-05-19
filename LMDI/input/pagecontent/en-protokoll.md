@@ -1,9 +1,9 @@
-# Protocol for data transfer to the Medication Registry
+# Protocol for data transfer to Legemiddelregisteret
 
-This protocol describes how institutions (senders) shall integrate with the Medication Registry's FHIR receiver API to transfer data on medication administrations.
+This protocol describes how institutions (senders) shall integrate with Legemiddelregisteret's FHIR receiver API to transfer data on medication administrations.
 
 ## 1. Purpose
-The purpose of this protocol is to ensure daily transfer of medication administration data from healthcare institutions to the Medication Registry in a secure and structured manner.
+The purpose of this protocol is to ensure daily transfer of medication administration data from healthcare institutions to Legemiddelregisteret in a secure and structured manner.
 
 ## 2. Transfer requirements
 
@@ -13,8 +13,8 @@ The purpose of this protocol is to ensure daily transfer of medication administr
 - On first-time transfer, data from an **agreed start date** must be included.
 
 ### 2.2 Technical requirements
-- Data is transferred via the **Medication Registry's FHIR receiver API**.
-- Resources must conform to the Medication Registry's **defined FHIR profiles**.
+- Data is transferred via the **Legemiddelregisteret's FHIR receiver API**.
+- Resources must conform to Legemiddelregisteret's **defined FHIR profiles**.
 - Each transfer must consist of a [signed and encrypted FHIR bundle](en-SignertKryptertBundle.html) to ensure integrity and confidentiality.
 - API access requires authentication via **Maskinporten**.
 
@@ -30,7 +30,7 @@ The purpose of this protocol is to ensure daily transfer of medication administr
 - Errors must be corrected manually by the sender before the resources are resent in a later transfer.
 
 ## 4. Data validation
-- All resources are validated against the Medication Registry's **FHIR profiles**.
+- All resources are validated against Legemiddelregisteret's **FHIR profiles**.
 - The API response provides a **status message** for each transferred resource, including details of any validation errors.
 
 ## 5. Security

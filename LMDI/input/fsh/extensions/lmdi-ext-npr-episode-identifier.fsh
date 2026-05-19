@@ -14,7 +14,7 @@ Description: "Unik identifikator for episoden, som brukt i rapportering til Nors
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to the Medication Registry (LMR). Choose either the first or the locally preferred identifier."
+* ^description.extension[=].extension[=].valueString = "Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier."
 
 * extension contains
     stringIdentifier 0..1 MS and

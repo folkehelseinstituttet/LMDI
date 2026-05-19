@@ -4,8 +4,8 @@ Arbeidsdokument for konsistent oversettelse av LMDI IG. Forankres med kollega f√
 
 | Norsk | Engelsk |
 |---|---|
-| Legemiddeldata fra institusjon til Legemiddelregisteret | Medication data from institutions to the Medication Registry |
-| Legemiddelregisteret (LMR) | Medication Registry (LMR) |
+| Legemiddeldata fra institusjon til Legemiddelregisteret | Medication data from institutions to Legemiddelregisteret |
+| Legemiddelregisteret (LMR) | Legemiddelregisteret (LMR) |
 | Folkehelseinstituttet (FHI) | Norwegian Institute of Public Health (NIPH) |
 | Legemiddel | Medication |
 | Legemiddelrekvirering | Medication request |
@@ -27,6 +27,6 @@ Arbeidsdokument for konsistent oversettelse av LMDI IG. Forankres med kollega f√
 | Innleggelse / Poliklinikk | Inpatient / Outpatient |
 | Sykehjem | Nursing home |
 
-**Egennavn som beholdes uendret:** Maskinporten, HelseID, no-basis, FEST, FHI, LMR, LMDI, HPR, RESH
+**Egennavn som beholdes uendret:** Legemiddelregisteret, Maskinporten, HelseID, no-basis, FEST, FHI, LMR, LMDI, HPR, RESH
 
 **Skal ikke oversettes:** canonical-URLer, profil-IDer, instance-IDer, `code`/`system`-verdier, OID-er, FHIR-elementnavn

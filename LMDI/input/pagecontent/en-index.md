@@ -1,13 +1,13 @@
 
-### Medication data from institutions to the Medication Registry (LMDI)
+### Medication data from institutions to Legemiddelregisteret (LMDI)
 
 Complete and up-to-date medication data is available for analysis and research, with the aim of improving quality, governance, health surveillance, preparedness, and knowledge management in the health service.
 
 #### Objective
 
-Collect medication data at the individual level from outpatient and inpatient settings to the Medication Registry (LMR). As part of this effort, an implementation guide (IG) is being developed based on a common information model and HL7 FHIR (this document). This will be used for submitting data from institutions to LMR using data sharing (secured REST API).
+Collect medication data at the individual level from outpatient and inpatient settings to Legemiddelregisteret (LMR). As part of this effort, an implementation guide (IG) is being developed based on a common information model and HL7 FHIR (this document). This will be used for submitting data from institutions to LMR using data sharing (secured REST API).
 
-The Medication Registry already contains data on dispensed medications from pharmacies at the individual level. The LMDI project now focuses specifically on extending this with data on administered medications from hospitals and other institutions, which will provide a more complete picture of medication use across the entire health service. This is an important extension that will strengthen the foundation for better patient safety, knowledge production, and health surveillance.
+The Legemiddelregisteret already contains data on dispensed medications from pharmacies at the individual level. The LMDI project now focuses specifically on extending this with data on administered medications from hospitals and other institutions, which will provide a more complete picture of medication use across the entire health service. This is an important extension that will strengthen the foundation for better patient safety, knowledge production, and health surveillance.
 
 <figure>
     <img src="lmdi-2.png" width="49%" style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;">
