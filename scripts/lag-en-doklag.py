@@ -9,8 +9,17 @@ from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
 
+try:
+    import markdown as _markdown
+except ImportError as exc:  # pragma: no cover
+    raise SystemExit(
+        "Mangler Python-pakken 'markdown'. Installer med: python -m pip install markdown"
+    ) from exc
+
 
 EXTERNAL_SCHEMES = ("http://", "https://", "//", "mailto:", "tel:", "data:", "javascript:")
+
+TRANSLATION_EXT_URL = "http://hl7.org/fhir/StructureDefinition/translation"
 
 
 @dataclass(frozen=True)
@@ -33,8 +42,23 @@ def _looks_like_profile_identifier(value: str) -> bool:
     return any(ch.isupper() for ch in value[1:])
 
 
-def load_replacements(translations_dir: Path) -> list[tuple[str, str]]:
-    replacements: list[tuple[str, str]] = []
+@dataclass(frozen=True)
+class Replacement:
+    """Ett oversettelsespar med ordgrense-bevisst regex slik at f.eks.
+    'Organisasjon' -> 'Organization' ikke treffer midt i 'Organisasjoner'."""
+    source: str
+    target: str
+    pattern: re.Pattern[str]
+
+
+def _compile_word_boundary(source: str) -> re.Pattern[str]:
+    # Bruk lookarounds som virker uansett om source starter/slutter med ord-tegn
+    # eller tegnsetting (\b er ikke trygt for f.eks. '"OID 8624"').
+    return re.compile(r"(?<!\w)" + re.escape(source) + r"(?!\w)")
+
+
+def load_replacements(translations_dir: Path) -> list[Replacement]:
+    replacements: list[Replacement] = []
     seen: set[tuple[str, str]] = set()
 
     for json_file in sorted(translations_dir.glob("*.json")):
@@ -59,16 +83,116 @@ def load_replacements(translations_dir: Path) -> list[tuple[str, str]]:
                 if key in seen:
                     continue
                 seen.add(key)
-                replacements.append(key)
+                replacements.append(Replacement(source, target, _compile_word_boundary(source)))
 
-    replacements.sort(key=lambda item: (-len(item[0]), item[0], item[1]))
+    # Lengste source først, slik at lange treff bindes før kortere overlappende strenger
+    replacements.sort(key=lambda r: (-len(r.source), r.source, r.target))
     return replacements
 
 
-def apply_replacements(text: str, replacements: list[tuple[str, str]]) -> str:
-    for source, target in replacements:
-        text = text.replace(source, target)
+def apply_replacements(text: str, replacements: list[Replacement]) -> str:
+    for repl in replacements:
+        text = repl.pattern.sub(repl.target, text)
     return text
+
+
+def _extract_translation(extension_holder: dict | None) -> str | None:
+    # Plukker ut engelsk valueString fra et _description/_title-felt med translation-extension
+    if not extension_holder:
+        return None
+    for ext in extension_holder.get("extension", []):
+        if ext.get("url") != TRANSLATION_EXT_URL:
+            continue
+        lang = None
+        content = None
+        for sub in ext.get("extension", []):
+            if sub.get("url") == "lang":
+                lang = sub.get("valueCode")
+            elif sub.get("url") == "content":
+                content = sub.get("valueString")
+        if lang == "en" and isinstance(content, str):
+            return content
+    return None
+
+
+def load_structure_definition_descriptions(resources_dir: Path) -> dict[str, str]:
+    """Returnerer map fra StructureDefinition.id til engelsk description-markdown.
+    IG Publisher 2.2.0 eksporterer ikke StructureDefinition.description i
+    translations-JSON-en, så vi henter den direkte fra fsh-generated/."""
+    result: dict[str, str] = {}
+    if not resources_dir.exists():
+        return result
+
+    for sd_file in sorted(resources_dir.glob("StructureDefinition-*.json")):
+        try:
+            payload = json.loads(sd_file.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+
+        if payload.get("resourceType") != "StructureDefinition":
+            continue
+        sd_id = payload.get("id")
+        if not isinstance(sd_id, str):
+            continue
+
+        english = _extract_translation(payload.get("_description"))
+        if english:
+            result[sd_id] = english
+
+    return result
+
+
+def _preprocess_markdown(text: str) -> str:
+    # IG Publisher (Java commonmark) tolererer bullets uten tom linje før lista,
+    # men Python markdown krever det. Sett inn én tom linje før første bullet i
+    # en serie, slik at lista blir 'tight' (uten <p> inne i <li>).
+    lines = text.split("\n")
+    out: list[str] = []
+    prev_was_bullet = False
+    for line in lines:
+        is_bullet = re.match(r"^\s*- ", line) is not None
+        if is_bullet and not prev_was_bullet and out and out[-1] != "":
+            out.append("")
+        out.append(line)
+        prev_was_bullet = is_bullet
+    return "\n".join(out)
+
+
+def render_description_html(markdown_text: str) -> str:
+    return _markdown.markdown(_preprocess_markdown(markdown_text))
+
+
+# IG Publisher pakker rendret description forskjellig avhengig av SD-type:
+#  - Profile (StructureDefinition på et resource): ytre <p>-wrapper, etterfulgt av
+#    "<!-- insert intro if present -->"-kommentar.
+#  - Extension (StructureDefinition på en extension): ingen ytre wrapper, etterfulgt av
+#    "<p><b>Context of Use</b></p>".
+DESCRIPTION_BLOCK_PROFILE_RE = re.compile(
+    r"(<p>\s*\n)(<p>.+?)(\n</p>\s*\n+\s*<!-- insert intro if present -->)",
+    re.DOTALL,
+)
+DESCRIPTION_BLOCK_EXTENSION_RE = re.compile(
+    r"(</table>\s*\n+\s*)(<p>.+?</p>(?:\s*<ul>.*?</ul>)?)(\s*\n+\s*<p><b>Context of Use</b></p>)",
+    re.DOTALL,
+)
+
+
+def replace_description_block(html: str, english_html: str) -> str | None:
+    """Erstatt rendret norsk description med engelsk HTML. Returnerer ny HTML
+    eller None hvis ingen mønstre matchet."""
+    for pattern in (DESCRIPTION_BLOCK_PROFILE_RE, DESCRIPTION_BLOCK_EXTENSION_RE):
+        def _sub(match: re.Match[str]) -> str:
+            return f"{match.group(1)}{english_html}{match.group(3)}"
+
+        new_html, count = pattern.subn(_sub, html, count=1)
+        if count:
+            return new_html
+    return None
+
+
+# Match StructureDefinition-{id}.html (base-siden, ikke -definitions/-examples/-mappings/-testing
+# eller diverse format-suffixer som .profile.json.html).
+STRUCTURE_DEFINITION_BASE_RE = re.compile(r"^StructureDefinition-(?P<id>[A-Za-z0-9._-]+)\.html$")
 
 
 LANG_SWITCHER_RE = re.compile(
@@ -160,7 +284,7 @@ class MirrorHtmlParser(HTMLParser):
         *,
         source_is_english: bool,
         planned_local_names: set[str],
-        replacements: list[tuple[str, str]],
+        replacements: list[Replacement],
     ) -> None:
         super().__init__(convert_charrefs=False)
         self.source_is_english = source_is_english
@@ -217,7 +341,7 @@ class MirrorHtmlParser(HTMLParser):
                 rendered_attrs.append(attr)
                 continue
 
-            if attr in {"href", "src"}:
+            if attr in {"href", "src"} or (tag == "object" and attr == "data"):
                 value = rebased_href(
                     value,
                     source_is_english=self.source_is_english,
@@ -260,7 +384,8 @@ class MirrorHtmlParser(HTMLParser):
 def build_mirror(
     *,
     output_dir: Path,
-    replacements: list[tuple[str, str]],
+    replacements: list[Replacement],
+    sd_descriptions: dict[str, str],
 ) -> list[MirrorPage]:
     mirror_dir = output_dir / "en"
     if mirror_dir.exists():
@@ -285,8 +410,28 @@ def build_mirror(
 
     planned_local_names = {page.target.name for page in pages}
 
+    # Pre-rendre alle engelske description-blokker som HTML én gang
+    rendered_descriptions = {
+        sd_id: render_description_html(md) for sd_id, md in sd_descriptions.items()
+    }
+
+    description_replaced = 0
     for page in pages:
         html = page.source.read_text(encoding="utf-8")
+
+        # Bytt rendret norsk description med engelsk HTML for base-SD-sider FØR resten
+        # av prosesseringen, slik at vi unngår at substring-erstatninger forsøker å
+        # rote i en allerede engelsk blokk.
+        if not page.source_is_english:
+            sd_match = STRUCTURE_DEFINITION_BASE_RE.match(page.target.name)
+            if sd_match:
+                english_html = rendered_descriptions.get(sd_match.group("id"))
+                if english_html:
+                    replaced = replace_description_block(html, english_html)
+                    if replaced is not None:
+                        html = replaced
+                        description_replaced += 1
+
         parser = MirrorHtmlParser(
             source_is_english=page.source_is_english,
             planned_local_names=planned_local_names,
@@ -312,6 +457,15 @@ def build_mirror(
         page.target.parent.mkdir(parents=True, exist_ok=True)
         page.target.write_text(html, encoding="utf-8")
 
+    expected = len(sd_descriptions)
+    print(f"Erstattet description-blokk pa {description_replaced} av {expected} StructureDefinition-sider")
+    if description_replaced < expected:
+        # Mismatch betyr at en SD-side har en HTML-struktur som verken Profile- eller
+        # Extension-regex matcher — sannsynligvis ny markup fra IG Publisher.
+        print(
+            "ADVARSEL: Noen StructureDefinition-sider mangler engelsk description. "
+            "Sjekk om DESCRIPTION_BLOCK_*_RE i lag-en-doklag.py trenger ny variant."
+        )
     return pages
 
 
@@ -332,6 +486,11 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Sti til oversettelses-json. Default er <ig-root>/translations/en/json.",
     )
+    parser.add_argument(
+        "--resources-dir",
+        default=None,
+        help="Sti til fsh-generated/resources. Default er <ig-root>/fsh-generated/resources.",
+    )
     return parser.parse_args()
 
 
@@ -340,6 +499,7 @@ def main() -> int:
     ig_root = Path(args.ig_root).resolve()
     output_dir = Path(args.output_dir).resolve() if args.output_dir else ig_root / "output"
     translations_dir = Path(args.translations_dir).resolve() if args.translations_dir else ig_root / "translations" / "en" / "json"
+    resources_dir = Path(args.resources_dir).resolve() if args.resources_dir else ig_root / "fsh-generated" / "resources"
 
     if not output_dir.exists():
         raise SystemExit(f"Fant ikke output-mappen: {output_dir}")
@@ -347,10 +507,16 @@ def main() -> int:
         raise SystemExit(f"Fant ikke oversettelses-mappen: {translations_dir}")
 
     replacements = load_replacements(translations_dir)
-    mirrored_pages = build_mirror(output_dir=output_dir, replacements=replacements)
+    sd_descriptions = load_structure_definition_descriptions(resources_dir)
+    mirrored_pages = build_mirror(
+        output_dir=output_dir,
+        replacements=replacements,
+        sd_descriptions=sd_descriptions,
+    )
 
     print(f"Bygget {len(mirrored_pages)} engelske speilsider under {output_dir / 'en'}")
     print(f"Brukte {len(replacements)} oversettelsespar fra {translations_dir}")
+    print(f"Lastet engelsk description for {len(sd_descriptions)} StructureDefinitions fra {resources_dir}")
     return 0
 
 

@@ -30,7 +30,7 @@ set "RESET=%ESC%[0m"
 set "SCRIPT_DIR=%~dp0"
 set "SCRIPT_DIR=%SCRIPT_DIR:~0,-1%"
 
-set "SCRIPT_VERSION=2026-05-18.5"
+set "SCRIPT_VERSION=2026-05-18.6"
 set "IG=LMDI"
 set "IG_DIR=%SCRIPT_DIR%\%IG%"
 set "IG_INI=%IG_DIR%\ig.ini"
@@ -115,6 +115,7 @@ goto MENU
 echo.
 echo %BLUE%Starter lokal IG build uten Docker med ByggIG.bat %SCRIPT_VERSION%...%RESET%
 echo.
+call :START_BUILD_TIMER
 
 call :CHECK_NPM || goto BUILD_FAILED
 call :CHECK_PYTHON || goto BUILD_FAILED
@@ -135,6 +136,7 @@ goto BUILD_SUCCESS
 echo.
 echo %BLUE%Starter workflow-lik IG build i Docker med ByggIG.bat %SCRIPT_VERSION%...%RESET%
 echo.
+call :START_BUILD_TIMER
 
 call :CHECK_DOCKER || goto BUILD_FAILED
 call :CHECK_NPM || goto BUILD_FAILED
@@ -146,6 +148,7 @@ call :BUILD_ENGLISH_DOC_LAYER || goto BUILD_FAILED
 call :COPY_CERTIFICATES || goto BUILD_FAILED
 
 :BUILD_SUCCESS
+call :PRINT_BUILD_TIMING
 echo.
 echo %GREEN%================================================================================
 echo   IG BUILD FULLFØRT
@@ -160,6 +163,7 @@ pause
 goto MENU
 
 :BUILD_FAILED
+call :PRINT_BUILD_TIMING
 echo.
 echo %RED%Build feilet. Sjekk feilmeldinger over.%RESET%
 pause
@@ -346,8 +350,26 @@ if not exist "%SCRIPT_DIR%\scripts\lag-en-doklag.py" (
 )
 
 echo.
+echo %BLUE%Sikrer at Python-pakken 'markdown' er installert...%RESET%
+call :ENSURE_PYTHON_PACKAGE markdown || exit /b 1
+
+echo.
 echo %BLUE%Bygger engelsk dokumentasjonsflate...%RESET%
 call :RUN_PYTHON "%SCRIPT_DIR%\scripts\lag-en-doklag.py" --ig-root "%IG_DIR%" --output-dir "%IG_DIR%\output"
+if errorlevel 1 exit /b 1
+exit /b 0
+
+:ENSURE_PYTHON_PACKAGE
+:: Installerer en pip-pakke hvis den ikke allerede er importerbar.
+:: %1 = pakkenavn (import-navn og pip-navn antas like)
+set "PYPKG=%~1"
+call :RUN_PYTHON -c "import %PYPKG%" >nul 2>&1
+if not errorlevel 1 (
+    echo %GREEN%[OK] Python-pakken %PYPKG% finnes.%RESET%
+    exit /b 0
+)
+echo %YELLOW%Installerer Python-pakken %PYPKG% via pip...%RESET%
+call :RUN_PYTHON -m pip install --user --quiet %PYPKG%
 if errorlevel 1 exit /b 1
 exit /b 0
 
@@ -551,6 +573,23 @@ exit /b 0
 :: ================================================================================
 :: Utility functions
 :: ================================================================================
+:START_BUILD_TIMER
+for /f "usebackq tokens=*" %%t in (`powershell -NoProfile -Command "Get-Date -Format 'yyyy-MM-dd HH:mm:ss'"`) do set "BUILD_STARTED_AT=%%t"
+for /f "usebackq tokens=*" %%t in (`powershell -NoProfile -Command "[DateTimeOffset]::Now.ToUnixTimeSeconds()"`) do set "BUILD_STARTED_EPOCH=%%t"
+echo Starttid: %BUILD_STARTED_AT%
+exit /b 0
+
+:PRINT_BUILD_TIMING
+if "%BUILD_STARTED_EPOCH%"=="" exit /b 0
+for /f "usebackq tokens=*" %%t in (`powershell -NoProfile -Command "Get-Date -Format 'yyyy-MM-dd HH:mm:ss'"`) do set "BUILD_FINISHED_AT=%%t"
+for /f "usebackq tokens=*" %%t in (`powershell -NoProfile -Command "[DateTimeOffset]::Now.ToUnixTimeSeconds() - %BUILD_STARTED_EPOCH%"`) do set "BUILD_DURATION_SECONDS=%%t"
+for /f "usebackq tokens=*" %%t in (`powershell -NoProfile -Command "$s = [int64]%BUILD_DURATION_SECONDS%; [TimeSpan]::FromSeconds($s).ToString('hh\:mm\:ss')"`) do set "BUILD_DURATION=%%t"
+echo.
+echo Starttid: %BUILD_STARTED_AT%
+echo Sluttid:  %BUILD_FINISHED_AT%
+echo Varighet: %BUILD_DURATION%
+exit /b 0
+
 :READ_NOBASIS_VERSION
 set "NO_BASIS_VERSION="
 for /f "usebackq tokens=1,* delims=:" %%a in (`findstr /R /C:"^[	 ]*hl7\.fhir\.no\.basis:" "%SUSHI_CONFIG%"`) do (

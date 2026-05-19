@@ -195,7 +195,9 @@ jobs:
 
       - name: 🌐 Bygg engelsk dokumentasjonsflate
         shell: bash
-        run: python3 ../scripts/lag-en-doklag.py --ig-root . --output-dir output
+        run: |
+          python3 -m pip install --quiet markdown
+          python3 ../scripts/lag-en-doklag.py --ig-root . --output-dir output
           
       - name: 🚀 Deploy til GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
