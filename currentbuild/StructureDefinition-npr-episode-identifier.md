@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-18 | *Computable Name*:NprEpisodeIdentifier |
+| Active as of 2026-05-19 | *Computable Name*:NprEpisodeIdentifier |
 
 Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.
 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
     }]
   },
   "status" : "active",
-  "date" : "2026-05-18T09:58:38+00:00",
+  "date" : "2026-05-19T11:21:23+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -95,7 +95,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       },
       {
         "url" : "content",
-        "valueString" : "Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to the Medication Registry (LMR). Choose either the first or the locally preferred identifier."
+        "valueString" : "Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

@@ -23,7 +23,7 @@ Here you can download various parts of the implementation guide.
 
 ### Certificates
 
-The certificates are in BASE64-encoded .cer format. To be used for encryption of messages to the Medication Registry.
+The certificates are in BASE64-encoded .cer format. To be used for encryption of messages to Legemiddelregisteret.
 
 * [Certificates for the TEST and PRODUCTION environments](certificates.zip) - Used when encrypting messages
 

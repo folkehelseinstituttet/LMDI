@@ -10,9 +10,9 @@
 * [**Integration**](en-integrasjon.md)
 * **Signed and encrypted Bundle**
 
-When institutions submit data to the Medication Registry, it must be sent in a `SignertKryptertBundle`. This is created by compressing the `LegemiddelregisterBundle`, then encrypting and signing the content.
+When institutions submit data to Legemiddelregisteret, it must be sent in a `SignertKryptertBundle`. This is created by compressing the `LegemiddelregisterBundle`, then encrypting and signing the content.
 
-This page describes how to create a `SignertKryptertBundle` for the Medication Registry’s API. Implementation details such as language and libraries are up to you, as long as the result conforms to the specification below.
+This page describes how to create a `SignertKryptertBundle` for Legemiddelregisteret’s API. Implementation details such as language and libraries are up to you, as long as the result conforms to the specification below.
 
 Example code for generating a SignertKryptertBundle: [Example in C#](en-eksempelkode_cs.md)
 
@@ -22,7 +22,7 @@ Example code for generating a SignertKryptertBundle: [Example in C#](en-eksempel
 
 First, create a JSON representation of the FHIR resource `LegemiddelregisterBundle`.
 
-Use standard or third-party FHIR libraries if desired. It is important that the JSON structure is correct for the FHIR standard so that validation in the Medication Registry’s API does not fail. It is recommended to validate the FHIR resource locally before encryption to prevent messages from failing on the server.
+Use standard or third-party FHIR libraries if desired. It is important that the JSON structure is correct for the FHIR standard so that validation in Legemiddelregisteret’s API does not fail. It is recommended to validate the FHIR resource locally before encryption to prevent messages from failing on the server.
 
 ### 2. Compress with GZip
 
@@ -47,17 +47,17 @@ The result after GZip compression must be a byte array containing the compressed
  
 * AES-256-GCM provides both confidentiality (encryption) and integrity (authentication tag) without the need for a separate HMAC.
 
-### 4. Encrypt the AES key with RSA (Medication Registry’s public key)
+### 4. Encrypt the AES key with RSA (Legemiddelregisteret’s public key)
 
-The 256-bit AES key from step 3 is encrypted with the Medication Registry’s public RSA key. This is available in the certificates that can be downloaded [here](en-nedlastinger.md).
+The 256-bit AES key from step 3 is encrypted with Legemiddelregisteret’s public RSA key. This is available in the certificates that can be downloaded [here](en-nedlastinger.md).
 
 The algorithm must be RSA OAEP with SHA-256 (RSAEncryptionPadding.OaepSHA256). The result is a byte array `encryptedKey`.
 
-The Medication Registry’s public RSA key is obtained from the Medication Registry’s enterprise certificate. The thumbprint of the certificate used must be specified as `encryptionCertificateThumbprint` in the `SignertKryptertBundle`.
+The Legemiddelregisteret’s public RSA key is obtained from Legemiddelregisteret’s enterprise certificate. The thumbprint of the certificate used must be specified as `encryptionCertificateThumbprint` in the `SignertKryptertBundle`.
 
 ### 5. Sign encrypted content (sender’s private key)
 
-For the Medication Registry to be certain that the content actually comes from the correct organisation (integrity and authenticity control), the message must be signed:
+For Legemiddelregisteret to be certain that the content actually comes from the correct organisation (integrity and authenticity control), the message must be signed:
 
 1. Find the sender’s private key
 * The sender uses their certificate (with the associated private key) for signing.
@@ -87,7 +87,7 @@ All fields must be assembled into a JSON object in exactly the order shown below
 | **rapporteringTil** | string | End timestamp of the period from which the data was retrieved. Must be in Norwegian local time formatted according to ISO 8601. |
 | **encryptedContent** | string | AES-GCM-encrypted content (FHIR resource compressed and encrypted). Provided as a Base64-encoded string. |
 | **encryptionCertificateThumbprint** | string | Thumbprint of the certificate used for encryption. |
-| **encryptedKey** | string | AES key encrypted with the Medication Registry’s public RSA key. Provided as a Base64-encoded string. |
+| **encryptedKey** | string | AES key encrypted with Legemiddelregisteret’s public RSA key. Provided as a Base64-encoded string. |
 | **nonce** | string | 96-bit nonce (12 bytes) used in AES-GCM encryption. Provided as a Base64-encoded string. |
 | **authenticationTag** | string | 128-bit (16 bytes) authentication tag from AES-GCM. Provided as a Base64-encoded string. |
 | **signatureCertificateThumbprint** | string | Thumbprint of the sender’s certificate (with the associated private key used for signing). |

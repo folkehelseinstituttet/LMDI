@@ -163,7 +163,7 @@
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#protocol-for-data-transfer-to-the-medication-registry" id="markdown-toc-protocol-for-data-transfer-to-the-medication-registry">Protocol for data transfer to the Medication Registry</a>    <ul>
+  <li><a href="#protocol-for-data-transfer-to-legemiddelregisteret" id="markdown-toc-protocol-for-data-transfer-to-legemiddelregisteret">Protocol for data transfer to Legemiddelregisteret</a>    <ul>
       <li><a href="#1-purpose" id="markdown-toc-1-purpose">1. Purpose</a></li>
       <li><a href="#2-transfer-requirements" id="markdown-toc-2-transfer-requirements">2. Transfer requirements</a>        <ul>
           <li><a href="#21-frequency-and-content" id="markdown-toc-21-frequency-and-content">2.1 Frequency and content</a></li>
@@ -182,12 +182,12 @@
 </ul>
 
 </div>
-<h1 id="protocol-for-data-transfer-to-the-medication-registry">Protocol for data transfer to the Medication Registry</h1>
+<h1 id="protocol-for-data-transfer-to-legemiddelregisteret">Protocol for data transfer to Legemiddelregisteret</h1>
 
-<p>This protocol describes how institutions (senders) shall integrate with the Medication Registry’s FHIR receiver API to transfer data on medication administrations.</p>
+<p>This protocol describes how institutions (senders) shall integrate with Legemiddelregisteret’s FHIR receiver API to transfer data on medication administrations.</p>
 
 <h2 id="1-purpose">1. Purpose</h2>
-<p>The purpose of this protocol is to ensure daily transfer of medication administration data from healthcare institutions to the Medication Registry in a secure and structured manner.</p>
+<p>The purpose of this protocol is to ensure daily transfer of medication administration data from healthcare institutions to Legemiddelregisteret in a secure and structured manner.</p>
 
 <h2 id="2-transfer-requirements">2. Transfer requirements</h2>
 
@@ -200,8 +200,8 @@
 
 <h3 id="22-technical-requirements">2.2 Technical requirements</h3>
 <ul>
-  <li>Data is transferred via the <strong>Medication Registry’s FHIR receiver API</strong>.</li>
-  <li>Resources must conform to the Medication Registry’s <strong>defined FHIR profiles</strong>.</li>
+  <li>Data is transferred via the <strong>Legemiddelregisteret’s FHIR receiver API</strong>.</li>
+  <li>Resources must conform to Legemiddelregisteret’s <strong>defined FHIR profiles</strong>.</li>
   <li>Each transfer must consist of a <a href="en-SignertKryptertBundle.html">signed and encrypted FHIR bundle</a> to ensure integrity and confidentiality.</li>
   <li>API access requires authentication via <strong>Maskinporten</strong>.</li>
 </ul>
@@ -223,7 +223,7 @@
 
 <h2 id="4-data-validation">4. Data validation</h2>
 <ul>
-  <li>All resources are validated against the Medication Registry’s <strong>FHIR profiles</strong>.</li>
+  <li>All resources are validated against Legemiddelregisteret’s <strong>FHIR profiles</strong>.</li>
   <li>The API response provides a <strong>status message</strong> for each transferred resource, including details of any validation errors.</li>
 </ul>
 
@@ -260,7 +260,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 18, 2026 09:58+0000">2026-05-18</span>
+                        title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

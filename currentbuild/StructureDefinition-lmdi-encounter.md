@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-18 | *Computable Name*:Episode |
+| Active as of 2026-05-19 | *Computable Name*:Episode |
 
  
 Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -61,7 +61,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
     }]
   },
   "status" : "active",
-  "date" : "2026-05-18T09:58:38+00:00",
+  "date" : "2026-05-19T11:21:23+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -173,7 +173,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
           },
           {
             "url" : "content",
-            "valueString" : "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). If multiple NPR identifiers are registered locally for the same episode, only one NPR identifier shall be submitted to the Medication Registry (LMR). Choose either the first or the locally preferred identifier. The selected identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
+            "valueString" : "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). If multiple NPR identifiers are registered locally for the same episode, only one NPR identifier shall be submitted to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier. The selected identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

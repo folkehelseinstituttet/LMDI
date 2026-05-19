@@ -16,7 +16,7 @@
 * [1. Creating a compressed, encrypted, and signed bundle (`SignertKryptertBundle`)](#1-creating-a-compressed-encrypted-and-signed-bundle-signertkryptertbundle) 
 * [How to use the script:](#how-to-use-the-script)
  
-* [2. Send `SignertKryptertBundle` to the Medication Registry](#2-send-signertkryptertbundle-to-the-medication-registry) 
+* [2. Send `SignertKryptertBundle` to Legemiddelregisteret](#2-send-signertkryptertbundle-to-the-medication-registry) 
 * [How to use the script:](#how-to-use-the-script-1)
 * [Upload.ps1](#uploadps1)
 * [ClientCredentials.ps1](#clientcredentialsps1)
@@ -182,9 +182,9 @@ Write-Host "SignertKryptertBundle has been saved to $OutputFilePath"
 
 ```
 
-#### 2. Send SignertKryptertBundle to the Medication Registry
+#### 2. Send SignertKryptertBundle to Legemiddelregisteret
 
-This example shows how to send the encrypted bundle to the Medication Registry via the API using PowerShell scripts that handle authentication and upload. The solution uses DPoP (Demonstrating Proof-of-Possession) tokens to authenticate with HelseID and secure communication with the Medication Registry’s API.
+This example shows how to send the encrypted bundle to Legemiddelregisteret via the API using PowerShell scripts that handle authentication and upload. The solution uses DPoP (Demonstrating Proof-of-Possession) tokens to authenticate with HelseID and secure communication with Legemiddelregisteret’s API.
 
 The script system consists of the following files:
 

@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-18 | *Computable Name*:LegemiddelregisterBundle |
+| Active as of 2026-05-19 | *Computable Name*:LegemiddelregisterBundle |
 
  
 Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. 
@@ -54,13 +54,13 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
       },
       {
         "url" : "content",
-        "valueString" : "Medication Registry Bundle"
+        "valueString" : "Legemiddelregisteret Bundle"
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
   },
   "status" : "active",
-  "date" : "2026-05-18T09:58:38+00:00",
+  "date" : "2026-05-19T11:21:23+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -85,7 +85,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
       },
       {
         "url" : "content",
-        "valueString" : "Bundle profile for the Medication Registry. Supports only transaction type and POST operations, with restrictions on allowed resource types."
+        "valueString" : "Bundle profile for Legemiddelregisteret. Supports only transaction type and POST operations, with restrictions on allowed resource types."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

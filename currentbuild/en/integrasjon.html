@@ -160,17 +160,17 @@
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#establishing-integration-with-the-medication-registry" id="markdown-toc-establishing-integration-with-the-medication-registry">Establishing Integration with the Medication Registry</a></li>
-  <li><a href="#transferring-data-to-the-medication-registry" id="markdown-toc-transferring-data-to-the-medication-registry">Transferring data to the Medication Registry</a></li>
+  <li><a href="#establishing-integration-with-legemiddelregisteret" id="markdown-toc-establishing-integration-with-legemiddelregisteret">Establishing Integration with Legemiddelregisteret</a></li>
+  <li><a href="#transferring-data-to-legemiddelregisteret" id="markdown-toc-transferring-data-to-legemiddelregisteret">Transferring data to Legemiddelregisteret</a></li>
 </ul>
 
 </div>
 
-<h3 id="establishing-integration-with-the-medication-registry">Establishing Integration with the Medication Registry</h3>
+<h3 id="establishing-integration-with-legemiddelregisteret">Establishing Integration with Legemiddelregisteret</h3>
 
 <h4 id="example-code">Example code</h4>
 
-<p>FHI has created example code showing how an integration with the Medication Registry can be developed. The example code is available in both C# and PowerShell, and demonstrates the most important functions for secure data transfer to the registry.</p>
+<p>FHI has created example code showing how an integration with Legemiddelregisteret can be developed. The example code is available in both C# and PowerShell, and demonstrates the most important functions for secure data transfer to the registry.</p>
 
 <p>You can find the example code here:</p>
 <ul>
@@ -187,8 +187,8 @@ Allowlisting is only available in the production environment.</p>
 
 <p>Data transferred to the API must be encrypted and signed (see <a href="SignertKryptertBundle.html">Signed and Encrypted Bundle</a>).</p>
 <ul>
-  <li>Signing uses the private key in the sender’s enterprise certificate. The public part of this certificate must be sent to the Medication Registry.</li>
-  <li>Encryption of data uses the public key in the Medication Registry’s enterprise certificate. This can be downloaded <a href="nedlastinger.html">here</a>.</li>
+  <li>Signing uses the private key in the sender’s enterprise certificate. The public part of this certificate must be sent to Legemiddelregisteret.</li>
+  <li>Encryption of data uses the public key in Legemiddelregisteret’s enterprise certificate. This can be downloaded <a href="nedlastinger.html">here</a>.</li>
 </ul>
 
 <h4 id="maskinporten">Maskinporten</h4>
@@ -215,15 +215,15 @@ Allowlisting is only available in the production environment.</p>
   <li>Include the received access token in the Authorization header as a Bearer token when calling the API.</li>
 </ol>
 
-<h3 id="transferring-data-to-the-medication-registry">Transferring data to the Medication Registry</h3>
+<h3 id="transferring-data-to-legemiddelregisteret">Transferring data to Legemiddelregisteret</h3>
 
-<p>Institutions that are to transfer data to the Medication Registry must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: <a href="protokoll.html">Protocol for data transfer</a>.</p>
+<p>Institutions that are to transfer data to Legemiddelregisteret must follow the defined protocol. The protocol describes requirements for transfer frequency, data structure, and security. You can find more information here: <a href="protokoll.html">Protocol for data transfer</a>.</p>
 
-<p>To build a collection of data to be transferred, a <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a> must be created. This is a specialised FHIR Bundle profile developed for submitting data to the Medication Registry. It is limited to transaction-type bundles and only permits POST operations, ensuring consistent data handling and traceability. The bundle may only contain specific resource types relevant to the Medication Registry: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.</p>
+<p>To build a collection of data to be transferred, a <a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a> must be created. This is a specialised FHIR Bundle profile developed for submitting data to Legemiddelregisteret. It is limited to transaction-type bundles and only permits POST operations, ensuring consistent data handling and traceability. The bundle may only contain specific resource types relevant to Legemiddelregisteret: Patient, Practitioner, Medication, MedicationAdministration, Condition, Encounter, MedicationRequest, Organization, Substance.</p>
 
 <p>When transferring data, a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> must be created, which ensures both encryption and signing of the content. This process involves compressing, encrypting, and signing a FHIR-based <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code> before it is sent to the API. Read more about how to create a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> in <a href="SignertKryptertBundle.html">this guide</a>.</p>
 
-<p>URLs for the Medication Registry’s API:</p>
+<p>URLs for Legemiddelregisteret’s API:</p>
 <ul>
   <li>TEST environment: <a href="https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1">https://test-fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
   <li>PROD environment: <a href="https://fhirmottak.lmr.fhi.no/fhirmottak/v1">https://fhirmottak.lmr.fhi.no/fhirmottak/v1</a></li>
@@ -328,7 +328,7 @@ Returns status 200 (valid) or 400 (invalid).</li>
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Mon, May 18, 2026 09:58+0000">2026-05-18</span>
+                        4.0.1</a>. Generated <span title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

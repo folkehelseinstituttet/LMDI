@@ -166,15 +166,15 @@
   <li><a href="#1-create-the-fhir-resource" id="markdown-toc-1-create-the-fhir-resource">1. Create the FHIR resource</a></li>
   <li><a href="#2-compress-with-gzip" id="markdown-toc-2-compress-with-gzip">2. Compress with GZip</a></li>
   <li><a href="#3-encrypt-with-aes-gcm-256-bit-key" id="markdown-toc-3-encrypt-with-aes-gcm-256-bit-key">3. Encrypt with AES-GCM (256-bit key)</a></li>
-  <li><a href="#4-encrypt-the-aes-key-with-rsa-medication-registrys-public-key" id="markdown-toc-4-encrypt-the-aes-key-with-rsa-medication-registrys-public-key">4. Encrypt the AES key with RSA (Medication Registry’s public key)</a></li>
+  <li><a href="#4-encrypt-the-aes-key-with-rsa-legemiddelregisterets-public-key" id="markdown-toc-4-encrypt-the-aes-key-with-rsa-legemiddelregisterets-public-key">4. Encrypt the AES key with RSA (Legemiddelregisteret’s public key)</a></li>
   <li><a href="#5-sign-encrypted-content-senders-private-key" id="markdown-toc-5-sign-encrypted-content-senders-private-key">5. Sign encrypted content (sender’s private key)</a></li>
   <li><a href="#6-create-and-populate-the-signertkryptertbundle-object" id="markdown-toc-6-create-and-populate-the-signertkryptertbundle-object">6. Create and populate the SignertKryptertBundle object</a></li>
 </ul>
 
 </div>
-<p>When institutions submit data to the Medication Registry, it must be sent in a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>. This is created by compressing the <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>, then encrypting and signing the content.</p>
+<p>When institutions submit data to Legemiddelregisteret, it must be sent in a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>. This is created by compressing the <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>, then encrypting and signing the content.</p>
 
-<p>This page describes how to create a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> for the Medication Registry’s API. Implementation details such as language and libraries are up to you, as long as the result conforms to the specification below.</p>
+<p>This page describes how to create a <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code> for Legemiddelregisteret’s API. Implementation details such as language and libraries are up to you, as long as the result conforms to the specification below.</p>
 
 <p>Example code for generating a SignertKryptertBundle: <a href="en-eksempelkode_cs.html">Example in C#</a></p>
 
@@ -185,7 +185,7 @@
 
 <p>First, create a JSON representation of the FHIR resource <code class="language-plaintext highlighter-rouge">LegemiddelregisterBundle</code>.</p>
 
-<p>Use standard or third-party FHIR libraries if desired. It is important that the JSON structure is correct for the FHIR standard so that validation in the Medication Registry’s API does not fail. It is recommended to validate the FHIR resource locally before encryption to prevent messages from failing on the server.</p>
+<p>Use standard or third-party FHIR libraries if desired. It is important that the JSON structure is correct for the FHIR standard so that validation in Legemiddelregisteret’s API does not fail. It is recommended to validate the FHIR resource locally before encryption to prevent messages from failing on the server.</p>
 
 <h3 id="2-compress-with-gzip">2. Compress with GZip</h3>
 
@@ -220,17 +220,17 @@ The result is a byte array of compressed data. GZip uses the DEFLATE algorithm a
   </li>
 </ol>
 
-<h3 id="4-encrypt-the-aes-key-with-rsa-medication-registrys-public-key">4. Encrypt the AES key with RSA (Medication Registry’s public key)</h3>
+<h3 id="4-encrypt-the-aes-key-with-rsa-legemiddelregisterets-public-key">4. Encrypt the AES key with RSA (Legemiddelregisteret’s public key)</h3>
 
-<p>The 256-bit AES key from step 3 is encrypted with the Medication Registry’s public RSA key. This is available in the certificates that can be downloaded <a href="en-nedlastinger.html">here</a>.</p>
+<p>The 256-bit AES key from step 3 is encrypted with Legemiddelregisteret’s public RSA key. This is available in the certificates that can be downloaded <a href="en-nedlastinger.html">here</a>.</p>
 
 <p>The algorithm must be RSA OAEP with SHA-256 (RSAEncryptionPadding.OaepSHA256). The result is a byte array <code class="language-plaintext highlighter-rouge">encryptedKey</code>.</p>
 
-<p>The Medication Registry’s public RSA key is obtained from the Medication Registry’s enterprise certificate. The thumbprint of the certificate used must be specified as <code class="language-plaintext highlighter-rouge">encryptionCertificateThumbprint</code> in the <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>.</p>
+<p>The Legemiddelregisteret’s public RSA key is obtained from Legemiddelregisteret’s enterprise certificate. The thumbprint of the certificate used must be specified as <code class="language-plaintext highlighter-rouge">encryptionCertificateThumbprint</code> in the <code class="language-plaintext highlighter-rouge">SignertKryptertBundle</code>.</p>
 
 <h3 id="5-sign-encrypted-content-senders-private-key">5. Sign encrypted content (sender’s private key)</h3>
 
-<p>For the Medication Registry to be certain that the content actually comes from the correct organisation (integrity and authenticity control), the message must be signed:</p>
+<p>For Legemiddelregisteret to be certain that the content actually comes from the correct organisation (integrity and authenticity control), the message must be signed:</p>
 
 <ol>
   <li>Find the sender’s private key
@@ -309,7 +309,7 @@ The result is a byte array of compressed data. GZip uses the DEFLATE algorithm a
     <tr>
       <td><strong>encryptedKey</strong></td>
       <td>string</td>
-      <td>AES key encrypted with the Medication Registry’s public RSA key. Provided as a Base64-encoded string.</td>
+      <td>AES key encrypted with Legemiddelregisteret’s public RSA key. Provided as a Base64-encoded string.</td>
     </tr>
     <tr>
       <td><strong>nonce</strong></td>
@@ -365,7 +365,7 @@ The result is a byte array of compressed data. GZip uses the DEFLATE algorithm a
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 18, 2026 09:58+0000">2026-05-18</span>
+                        title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
