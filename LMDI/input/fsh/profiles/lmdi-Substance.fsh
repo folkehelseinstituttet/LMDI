@@ -2,7 +2,7 @@ Profile: Virkestoff
 Id: lmdi-substance
 Parent: NoBasisSubstance
 Title: "Virkestoff"
-Description: "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis."
+Description: "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance."
 
 * ^status = #draft
 * ^date = "2025-09-12"
@@ -16,7 +16,7 @@ Description: "En tilpasset profil av Substance for å representere virkestoff, b
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "A tailored Substance profile for representing active substances, based on no-basis."
+* ^description.extension[=].extension[=].valueString = "A tailored Substance profile for representing active substances, based on no-basis-Substance."
 
 * text 0..0
 * description 0..0

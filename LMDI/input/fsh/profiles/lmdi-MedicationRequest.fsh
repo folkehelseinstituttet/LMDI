@@ -17,7 +17,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "Medication request - prescribing or other medication ordering"
+* ^description.extension[=].extension[=].valueString = "Medication request – prescription, ordering or other request of medication."
 
 
 // Extensions for Legemiddelrekvirering

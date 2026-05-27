@@ -2,7 +2,7 @@ Profile: Episode
 Parent: Encounter
 Id: lmdi-encounter
 Title: "Episode"
-Description: "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."
+Description: "En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."
 * ^title.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * ^title.extension[=].extension[+].url = "lang"
 * ^title.extension[=].extension[=].valueCode = #en

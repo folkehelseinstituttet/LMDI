@@ -245,7 +245,7 @@
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</source>
+        <source>En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-hl7.fhir.no.lmdi" resname="ImplementationGuide.definition.resource.name">
@@ -581,9 +581,7 @@
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Beskriver administrering av legemiddel til pasient på institusjon.
-
-Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.</source>
+        <source>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-hl7.fhir.no.lmdi" resname="ImplementationGuide.definition.resource.name">
@@ -793,16 +791,7 @@ Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til l
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.
-
-Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.
-
-Det er ønskelig at minimum følgende inngår i &quot;organisasjonshierarkiet&quot;:
-- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
-- organisasjonen på høyre nivå
-     - sykehus, Helseforetak og Regionalt Helseforetak
-     - sykehjem, kommune
-- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)</source>
+        <source>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-hl7.fhir.no.lmdi" resname="ImplementationGuide.definition.resource.name">
@@ -1110,7 +1099,7 @@ Det er ønskelig at minimum følgende inngår i &quot;organisasjonshierarkiet&qu
              <notes>
                <note id="n1">ImplementationGuide.definition.resource.description</note>
              </notes>
-        <source>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.</source>
+        <source>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.</source>
         <target></target>
       </trans-unit>
       <trans-unit id="ImplementationGuide-hl7.fhir.no.lmdi" resname="ImplementationGuide.definition.resource.name">
