@@ -25,7 +25,7 @@ Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
 * Examples for this Profile: [MedicationRequest/Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md), [MedicationRequest/Rekvirering-EnteredInError](MedicationRequest-Rekvirering-EnteredInError.md), [MedicationRequest/Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md), [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)... Show 2 more, [MedicationRequest/Rekvirering-MedDiagnoseICD10](MedicationRequest-Rekvirering-MedDiagnoseICD10.md) and [MedicationRequest/Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationrequest)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-medicationrequest.json)
 
 ### Formal Views of Profile Content
 
@@ -86,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
       },
       {
         "url" : "content",
-        "valueString" : "Medication request - prescribing or other medication ordering"
+        "valueString" : "Medication request – prescription, ordering or other request of medication."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

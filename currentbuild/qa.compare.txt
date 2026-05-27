@@ -1,19 +1,19 @@
 Lmdi : Validation Results
 =========================================
 
-err = 62, warn = 254, info = 94
+err = 62, warn = 254, info = 92
 $--
 Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7.no/fhir/ig/lmdi)
  Build Errors : 23 / 103 / 0
- /github/workspace/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 6 / 17 / 31
+ /github/workspace/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 6 / 17 / 30
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 0 / 3
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-kommunenummer-codesystem : 2 / 2 / 3
  /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10 : 0 / 2 / 1
  /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10-Allergi : 0 / 2 / 1
  /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-SNOMED-SCT : 1 / 1 / 1
- /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehjem : 0 / 1 / 3
- /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehus : 0 / 1 / 3
- /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehus-2 : 0 / 1 / 3
+ /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehjem : 0 / 1 / 2
+ /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehus : 0 / 1 / 2
+ /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehus-2 : 0 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/ImplementationGuide-hl7.fhir.no.lmdi : 4 / 4 / 2
  /github/workspace/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelMerkevare : 0 / 3 / 1
  /github/workspace/LMDI/fsh-generated/resources/Medication-Legemiddel-FestLegemiddelVirkestoff : 1 / 3 / 2
@@ -35,10 +35,10 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
  /github/workspace/LMDI/fsh-generated/resources/MedicationAdministration-Administrering-Oral : 5 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/MedicationAdministration-Administrering-Selvadministrert : 0 / 2 / 1
  /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Cellegift : 1 / 1 / 1
- /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-EnteredInError : 0 / 2 / 4
- /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Infusjon : 1 / 1 / 1
+ /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-EnteredInError : 0 / 2 / 5
+ /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Infusjon : 1 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Kjemoterapi : 0 / 1 / 1
- /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-MedDiagnoseICD10 : 0 / 2 / 3
+ /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-MedDiagnoseICD10 : 0 / 2 / 4
  /github/workspace/LMDI/fsh-generated/resources/MedicationRequest-Rekvirering-Paracetamol : 0 / 1 / 1
  /github/workspace/LMDI/fsh-generated/resources/NamingSystem-lmdi-lokaltLegemiddel : 0 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/NamingSystem-no-basis-fest-legemiddeldose : 0 / 1 / 2
@@ -74,7 +74,7 @@ Generated $--. FHIR version $-- for hl7.fhir.no.lmdi#$-- (canonical = http://hl7
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-prosentvis-doseendring : 0 / 0 / 2
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-lmdi-substance : 0 / 0 / 2
  /github/workspace/LMDI/fsh-generated/resources/StructureDefinition-npr-episode-identifier : 0 / 0 / 2
- /github/workspace/LMDI/fsh-generated/resources/Substance-Virkestoff-Oksykodon : 1 / 1 / 3
+ /github/workspace/LMDI/fsh-generated/resources/Substance-Virkestoff-Oksykodon : 1 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/ValueSet-LokalLegemiddelkatalogValues : 1 / 0 / 2
  /github/workspace/LMDI/fsh-generated/resources/ValueSet-atc-valueset : 2 / 1 / 3
  /github/workspace/LMDI/fsh-generated/resources/ValueSet-kommunenummer-alle : 1 / 1 / 2
@@ -168,7 +168,7 @@ WARNING: /github/workspace/LMDI/output/ValueSet-lmdi-address-type-testing.html#/
 WARNING: /github/workspace/LMDI/output/ValueSet-lmdi-address-use-testing.html#/html/body/script at Line 307, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
 WARNING: /github/workspace/LMDI/output/ValueSet-lmdi-medicationadministrationstatus-testing.html#/html/body/script at Line 307, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed) (also in 4 other files)
 ERROR: /github/workspace/LMDI/output/artifacts.html: The html source does not contain the publish box
-WARNING: /github/workspace/LMDI/output/artifacts.html#/html/body/script at Line 977, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /github/workspace/LMDI/output/artifacts.html#/html/body/script at Line 961, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/eksempelkode_cs.html: The html source does not contain the publish box
 WARNING: /github/workspace/LMDI/output/eksempelkode_cs.html#/html/body/script at Line 504, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/eksempelkode_ps1.html: The html source does not contain the publish box
@@ -190,7 +190,7 @@ ERROR: /github/workspace/LMDI/output/en-nedlastinger.html: The html source does 
 ERROR: en-nedlastinger.html#/html/body/div/div/div/div/div/ul/li/a at Line 185, column 8: The link 'certificates.zip' for "Certificates for the TEST and PRODUCTION environments" cannot be resolved
 WARNING: /github/workspace/LMDI/output/en-nedlastinger.html#/html/body/script at Line 243, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/en-profiler.html: The html source does not contain the publish box
-WARNING: /github/workspace/LMDI/output/en-profiler.html#/html/body/script at Line 323, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /github/workspace/LMDI/output/en-profiler.html#/html/body/script at Line 329, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/en-protokoll.html: The html source does not contain the publish box
 WARNING: /github/workspace/LMDI/output/en-protokoll.html#/html/body/script at Line 292, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/index.html: The html source does not contain the publish box
@@ -203,7 +203,7 @@ ERROR: /github/workspace/LMDI/output/nedlastinger.html: The html source does not
 ERROR: nedlastinger.html#/html/body/div/div/div/div/div/ul/li/a at Line 185, column 8: The link 'certificates.zip' for "Sertifikater for TEST- og PRODUKSJONSMILJØET" cannot be resolved
 WARNING: /github/workspace/LMDI/output/nedlastinger.html#/html/body/script at Line 243, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/profiler.html: The html source does not contain the publish box
-WARNING: /github/workspace/LMDI/output/profiler.html#/html/body/script at Line 299, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
+WARNING: /github/workspace/LMDI/output/profiler.html#/html/body/script at Line 338, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/protokoll.html: The html source does not contain the publish box
 WARNING: /github/workspace/LMDI/output/protokoll.html#/html/body/script at Line 292, column 2: The <script> containing the javascript '{     'breadcrumb': '... is illegal and not allowed on the HL7 ci-build - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 ci-build (if it is justified and needed)
 ERROR: /github/workspace/LMDI/output/toc.html: The html source does not contain the publish box
@@ -226,8 +226,7 @@ WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Or
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/.address[0].district.extension[0].value.ofType(Coding): ValueSet 'https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle' not found
 INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/.address[0].district.extension[0].value.ofType(Coding): The definition for the Code System with URI 'urn:oid:2.16.578.1.12.4.1.1.3402' from 'hl7.fhir.no.lmdi#1.1.0' doesn't provide any codes so the code cannot be validated
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[3].resource/*Organization/Scenario-Sykehjem-Oksykodon-Sykehjem*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[4].resource/*Encounter/Scenario-Sykehjem-Oksykodon-Episode*/.class.display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#SS for language(s) 'no'. The display is 'short stay' which is the default language display
-INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[4].resource/*Encounter/Scenario-Sykehjem-Oksykodon-Episode*/.class: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#SS for language(s) 'no'. The display is 'short stay' which is the default language display
+INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[4].resource/*Encounter/Scenario-Sykehjem-Oksykodon-Episode*/.class: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v3-ActCode|2018-08-12
 WARNING: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[4].resource/*Encounter/Scenario-Sykehjem-Oksykodon-Episode*/: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 ERROR: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[5].resource/*Medication/Scenario-Sykehjem-Oksykodon-Legemiddel*/.extension[0].value.ofType(CodeableConcept).coding[0].display: Wrong Display Name 'Oksykodon' for http://www.whocc.no/atc#N02AA05. Valid display is 'oxycodone' (for the language(s) 'no')
 INFORMATION: Bundle/Bundle-Scenario-Sykehjem-Oksykodon: Bundle.entry[5].resource/*Medication/Scenario-Sykehjem-Oksykodon-Legemiddel*/.extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'ATC Kodesystem ValueSet' (http://fhir.no/ValueSet/atc-valueset|1.1.0), and a coding is recommended to come from this value set (codes = http://www.whocc.no/atc#N02AA05)
@@ -270,16 +269,13 @@ WARNING: Condition/Diagnose-ICD10-Allergi: Condition: Constraint failed: dom-6: 
 ERROR: Condition/Diagnose-SNOMED-SCT: Condition.code.coding[0].display: Wrong Display Name 'Artrose' for http://snomed.info/sct#396275006. There are no valid display names found for language(s) 'no'. Default display is 'Osteoarthritis'
 WARNING: Condition/Diagnose-SNOMED-SCT: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Encounter-Episode-Sykehjem.json ==
-INFORMATION: Encounter/Episode-Sykehjem: Encounter.class.display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#SS for language(s) 'no'. The display is 'short stay' which is the default language display
-INFORMATION: Encounter/Episode-Sykehjem: Encounter.class: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#SS for language(s) 'no'. The display is 'short stay' which is the default language display
+INFORMATION: Encounter/Episode-Sykehjem: Encounter.class: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v3-ActCode|2018-08-12
 WARNING: Encounter/Episode-Sykehjem: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Encounter-Episode-Sykehus.json ==
-INFORMATION: Encounter/Episode-Sykehus: Encounter.class.display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP for language(s) 'no'. The display is 'inpatient encounter' which is the default language display
-INFORMATION: Encounter/Episode-Sykehus: Encounter.class: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP for language(s) 'no'. The display is 'inpatient encounter' which is the default language display
+INFORMATION: Encounter/Episode-Sykehus: Encounter.class: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v3-ActCode|2018-08-12
 WARNING: Encounter/Episode-Sykehus: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Encounter-Episode-Sykehus-2.json ==
-INFORMATION: Encounter/Episode-Sykehus-2: Encounter.class.display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP for language(s) 'no'. The display is 'inpatient encounter' which is the default language display
-INFORMATION: Encounter/Episode-Sykehus-2: Encounter.class: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP for language(s) 'no'. The display is 'inpatient encounter' which is the default language display
+INFORMATION: Encounter/Episode-Sykehus-2: Encounter.class: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/v3-ActCode|2018-08-12
 WARNING: Encounter/Episode-Sykehus-2: Encounter: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.no.lmdi.json ==
 WARNING: /github/workspace/LMDI/fsh-generated/resources/ImplementationGuide-hl7.fhir.no.lmdi: Unknown Parameters: [generate-json=true, generate-xml=false, generate-turtle=false, path-assets=input/assets]
@@ -380,18 +376,21 @@ WARNING: MedicationAdministration/Administrering-Selvadministrert: MedicationAdm
 ERROR: MedicationRequest/Rekvirering-Cellegift: MedicationRequest.dosageInstruction[0].route.coding[0].display: Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'
 WARNING: MedicationRequest/Rekvirering-Cellegift: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/MedicationRequest-Rekvirering-EnteredInError.json ==
-INFORMATION: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.statusReason.coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason#sdupther for language(s) 'no'. The display is 'Duplicate therapy' which is the default language display
-INFORMATION: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.courseOfTherapyType.coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy#seasonal for language(s) 'no'. The display is 'Seasonal' which is the default language display
+INFORMATION: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.statusReason: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason|4.0.1
+INFORMATION: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|4.0.1
+INFORMATION: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.courseOfTherapyType: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy|4.0.1
 WARNING: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.dosageInstruction[0].timing.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7478' could not be found, so the code cannot be validated
 INFORMATION: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest.dosageInstruction[0].timing.code: None of the codings provided are in the value set 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), and a coding is recommended to come from this value set (codes = urn:oid:2.16.578.1.12.4.1.1.7478#5685)
 WARNING: MedicationRequest/Rekvirering-EnteredInError: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/MedicationRequest-Rekvirering-Infusjon.json ==
+INFORMATION: MedicationRequest/Rekvirering-Infusjon: MedicationRequest.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|4.0.1
 ERROR: MedicationRequest/Rekvirering-Infusjon: MedicationRequest.dosageInstruction[0].route.coding[0].display: Wrong Display Name 'intravenøs administrasjonsvei' for http://snomed.info/sct#47625008. There are no valid display names found for language(s) 'no'. Default display is 'Intravenous route'
 WARNING: MedicationRequest/Rekvirering-Infusjon: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/MedicationRequest-Rekvirering-Kjemoterapi.json ==
 WARNING: MedicationRequest/Rekvirering-Kjemoterapi: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/MedicationRequest-Rekvirering-MedDiagnoseICD10.json ==
-INFORMATION: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.courseOfTherapyType.coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy#seasonal for language(s) 'no'. The display is 'Seasonal' which is the default language display
+INFORMATION: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.category[0]: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-category|4.0.1
+INFORMATION: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.courseOfTherapyType: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy|4.0.1
 WARNING: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.dosageInstruction[0].timing.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7478' could not be found, so the code cannot be validated
 INFORMATION: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest.dosageInstruction[0].timing.code: None of the codings provided are in the value set 'TimingAbbreviation' (http://hl7.org/fhir/ValueSet/timing-abbreviation|4.0.1), and a coding is recommended to come from this value set (codes = urn:oid:2.16.578.1.12.4.1.1.7478#5685)
 WARNING: MedicationRequest/Rekvirering-MedDiagnoseICD10: MedicationRequest: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
@@ -540,7 +539,6 @@ INFORMATION: StructureDefinition/lmdi-substance: StructureDefinition.jurisdictio
 == fsh-generated/resources/StructureDefinition-npr-episode-identifier.json ==
 INFORMATION: StructureDefinition/npr-episode-identifier: StructureDefinition.jurisdiction[0].coding[0].display: There are no valid display names found for the code urn:iso:std:iso:3166#NO for language(s) 'no'. The display is 'Norway' which is the default language display
 == fsh-generated/resources/Substance-Virkestoff-Oksykodon.json ==
-INFORMATION: Substance/Virkestoff-Oksykodon: Substance.category[0].coding[0].display: There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/substance-category#drug for language(s) 'no'. The display is 'Drug or Medicament' which is the default language display
 ERROR: Substance/Virkestoff-Oksykodon: Substance.code.coding[0].display: Wrong Display Name 'Oxycodone (substance)' for http://snomed.info/sct#55452001. There are no valid display names found for language(s) 'no'. Default display is 'Oxycodone'
 INFORMATION: Substance/Virkestoff-Oksykodon: Substance.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance|1.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Substance/Virkestoff-Oksykodon: Substance: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)

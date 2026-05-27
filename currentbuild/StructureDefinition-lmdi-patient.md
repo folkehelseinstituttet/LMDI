@@ -25,7 +25,7 @@ Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-b
 * Refer to this Profile: [Diagnose](StructureDefinition-lmdi-condition.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
 * Examples for this Profile: [Patient/Pasient-Med-DNR](Patient-Pasient-Med-DNR.md), [Patient/Pasient-Med-FNR](Patient-Pasient-Med-FNR.md) and [Patient/Pasient-Uten-Personidentifikator](Patient-Pasient-Uten-Personidentifikator.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-patient)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-patient.json)
 
 ### Formal Views of Profile Content
 

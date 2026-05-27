@@ -2220,7 +2220,7 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-encounter" ]
        ] ;
        fhir:name [ fhir:v "Episode" ] ;
-       fhir:description [ fhir:v "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet." ] ;
+       fhir:description [ fhir:v "En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -2740,7 +2740,7 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-medicationadministration" ]
        ] ;
        fhir:name [ fhir:v "Legemiddeladministrering" ] ;
-       fhir:description [ fhir:v "Beskriver administrering av legemiddel til pasient på institusjon.\n\nDette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei." ] ;
+       fhir:description [ fhir:v "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -3057,7 +3057,7 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-organization" ]
        ] ;
        fhir:name [ fhir:v "Organisasjon" ] ;
-       fhir:description [ fhir:v "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.\n\nDet er ønskelig at minimum følgende inngår i \"organisasjonshierarkiet\":\n- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)\n- organisasjonen på høyre nivå\n     - sykehus, Helseforetak og Regionalt Helseforetak\n     - sykehjem, kommune\n- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)" ] ;
+       fhir:description [ fhir:v "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false
@@ -3537,7 +3537,7 @@
          fhir:reference [ fhir:v "StructureDefinition/lmdi-substance" ]
        ] ;
        fhir:name [ fhir:v "Virkestoff" ] ;
-       fhir:description [ fhir:v "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis." ] ;
+       fhir:description [ fhir:v "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance." ] ;
        fhir:example [
          a fhir:Boolean ;
          fhir:v false

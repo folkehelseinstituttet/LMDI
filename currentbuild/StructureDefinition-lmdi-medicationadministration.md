@@ -18,14 +18,13 @@
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddeladministrering |
 
  
-Beskriver administrering av legemiddel til pasient på institusjon. 
-Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei. 
+Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt. 
 
 **Usages:**
 
 * Examples for this Profile: [MedicationAdministration/Administrering-Cellegift](MedicationAdministration-Administrering-Cellegift.md), [MedicationAdministration/Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md), [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md), [MedicationAdministration/Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md)... Show 3 more, [MedicationAdministration/Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md), [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md) and [MedicationAdministration/Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-medicationadministration)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-medicationadministration.json)
 
 ### Formal Views of Profile Content
 
@@ -77,7 +76,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Beskriver administrering av legemiddel til pasient på institusjon.\n\nDette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.",
+  "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -86,7 +85,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       },
       {
         "url" : "content",
-        "valueString" : "Describes medication administration to a patient in an institution.\n\nThis is the core resource for this implementation guide. It links to the medication that was given, the patient who received the medication, the institution where it happened, the administration time, and the dose with any route of administration."
+        "valueString" : "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

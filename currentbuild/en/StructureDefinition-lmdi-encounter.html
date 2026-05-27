@@ -277,7 +277,7 @@
             
             Active
             
-            as of 2026-05-19
+            as of 2026-05-27
             
             
         </td>
@@ -310,7 +310,7 @@
  <li>Refer to this Profile: <a href="StructureDefinition-lmdi-medicationadministration.html">Medication Administration</a> and <a href="StructureDefinition-lmdi-medicationrequest.html">Medication Request</a></li>
  <li>Examples for this Profile: <a href="Encounter-Episode-Sykehjem.html">Encounter/Episode-Sykehjem</a>, <a href="Encounter-Episode-Sykehus-2.html">Encounter/Episode-Sykehus-2</a> and <a href="Encounter-Episode-Sykehus.html">Encounter/Episode-Sykehus</a></li>
 </ul>
-<p>You can also check for <a href="https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-encounter">usages in the FHIR IG Statistics</a></p>
+<p>You can also check for <a href="https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-encounter.json">usages in the FHIR IG Statistics</a></p>
 
   <!-- no uri -->
   <a name="profile"> </a>
@@ -478,7 +478,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Another Encounter this encounter is part of</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e7b16961-96d0-4182-936f-78e76580db29
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 3c316e34-0e8c-44e7-9cc5-637a98a27e44
 document.getElementById('cblmdi-encounterD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-encounterD'), 'binding', document.getElementById('cblmdi-encounterD-binding').checked, document.getElementById('pplmdi-encounterD'));
 document.getElementById('cblmdi-encounterD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -537,13 +537,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">ActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">V3 Value SetActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="af" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="../tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy" /> <a no-external="true" href="../StructureDefinition-lmdi-encounter-definitions.html#Encounter.serviceProvider" title="The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy." data-no-external="true">serviceProvider</a><a name="k-Encounter.serviceProvider"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organization</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Location of the episode</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e7b16961-96d0-4182-936f-78e76580db29
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 3c316e34-0e8c-44e7-9cc5-637a98a27e44
 document.getElementById('cblmdi-encounterK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-encounterK'), 'binding', document.getElementById('cblmdi-encounterK-binding').checked, document.getElementById('pplmdi-encounterK'));
 document.getElementById('cblmdi-encounterK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -611,12 +611,12 @@ filterDesc(document.getElementById('lmdi-encounterK'), 'obligation', document.ge
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -626,12 +626,12 @@ filterDesc(document.getElementById('lmdi-encounterK'), 'obligation', document.ge
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
 </table>
@@ -812,13 +812,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">ActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">V3 Value SetActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ak" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="../tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy" /> <a no-external="true" href="../StructureDefinition-lmdi-encounter-definitions.html#Encounter.serviceProvider" title="The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy." data-no-external="true">serviceProvider</a><a name="s-Encounter.serviceProvider"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organization</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Location of the episode</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e7b16961-96d0-4182-936f-78e76580db29
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 3c316e34-0e8c-44e7-9cc5-637a98a27e44
 document.getElementById('cblmdi-encounterS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-encounterS'), 'binding', document.getElementById('cblmdi-encounterS-binding').checked, document.getElementById('pplmdi-encounterS'));
 document.getElementById('cblmdi-encounterS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -901,12 +901,12 @@ filterDesc(document.getElementById('lmdi-encounterS'), 'obligation', document.ge
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -916,12 +916,12 @@ filterDesc(document.getElementById('lmdi-encounterS'), 'obligation', document.ge
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -976,12 +976,12 @@ filterDesc(document.getElementById('lmdi-encounterS'), 'obligation', document.ge
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="The reason for re-admission of this hospitalization encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v2-0092.html">hl7VS-re-admissionIndicator</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v2/0092/index.html">v2 RE-ADMISSION INDICATOR</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v2-0092" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.9, the version found through the package references">&#x1F4E6;2.9</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -1393,7 +1393,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Another Encounter this encounter is part of</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e7b16961-96d0-4182-936f-78e76580db29
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 3c316e34-0e8c-44e7-9cc5-637a98a27e44
 document.getElementById('cblmdi-encounterDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-encounterDA'), 'binding', document.getElementById('cblmdi-encounterDA-binding').checked, document.getElementById('pplmdi-encounterDA'));
 document.getElementById('cblmdi-encounterDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1451,13 +1451,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">ActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">V3 Value SetActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="af" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="../tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../icon_reference.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Reference to another Resource" class="hierarchy" /> <a no-external="true" href="../StructureDefinition-lmdi-encounter-definitions.html#Encounter.serviceProvider" title="The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy." data-no-external="true">serviceProvider</a><a name="ka-Encounter.serviceProvider"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organization</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Location of the episode</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e7b16961-96d0-4182-936f-78e76580db29
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 3c316e34-0e8c-44e7-9cc5-637a98a27e44
 document.getElementById('cblmdi-encounterKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-encounterKA'), 'binding', document.getElementById('cblmdi-encounterKA-binding').checked, document.getElementById('pplmdi-encounterKA'));
 document.getElementById('cblmdi-encounterKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1525,12 +1525,12 @@ filterDesc(document.getElementById('lmdi-encounterKA'), 'obligation', document.g
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -1540,12 +1540,12 @@ filterDesc(document.getElementById('lmdi-encounterKA'), 'obligation', document.g
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
 </table>
@@ -1726,13 +1726,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: black; null" title="This element is included in summaries">Σ</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
-<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">ActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Classification of patient encounter<br class="binding" /><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html" title="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" class="binding">V3 Value SetActEncounterCode</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#extensible" title="To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." class="binding">extensible</a><span title="null" class="binding">)</span><span title="null" class="binding">: </span><span title="null" class="binding">Classification of the encounter.</span></td></tr>
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ak" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="../tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy" /><img src="../icon_reference.png" alt="." style="background-color: white; background-color: inherit" title="Reference to another Resource" class="hierarchy" /> <a no-external="true" href="../StructureDefinition-lmdi-encounter-definitions.html#Encounter.serviceProvider" title="The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy." data-no-external="true">serviceProvider</a><a name="sa-Encounter.serviceProvider"> </a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organization</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Location of the episode</td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // e7b16961-96d0-4182-936f-78e76580db29
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br /><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit" /> Documentation for this format</a></td></tr><script type="text/javascript">  // 3c316e34-0e8c-44e7-9cc5-637a98a27e44
 document.getElementById('cblmdi-encounterSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-encounterSA'), 'binding', document.getElementById('cblmdi-encounterSA-binding').checked, document.getElementById('pplmdi-encounterSA'));
 document.getElementById('cblmdi-encounterSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1815,12 +1815,12 @@ filterDesc(document.getElementById('lmdi-encounterSA'), 'obligation', document.g
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -1830,12 +1830,12 @@ filterDesc(document.getElementById('lmdi-encounterSA'), 'obligation', document.g
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[extensible]">extensible</a>
     </td>
     <td title="Classification of the encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v3-ActEncounterCode.html">ActEncounterCode</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v3/ActEncounterCode/vs.html">V3 Value SetActEncounterCode</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v3-ActEncounterCode" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2014-03-26, the version found through the package references">&#x1F4E6;2014-03-26</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -1890,12 +1890,12 @@ filterDesc(document.getElementById('lmdi-encounterSA'), 'obligation', document.g
       <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#Enumeration[example]">example</a>
     </td>
     <td title="The reason for re-admission of this hospitalization encounter.">
-      <a style="opacity: 1.0" href="http://terminology.hl7.org/7.1.0/ValueSet-v2-0092.html">hl7VS-re-admissionIndicator</a>
+      <a style="opacity: 1.0" href="http://hl7.org/fhir/R4/v2/0092/index.html">v2 RE-ADMISSION INDICATOR</a>
       <button data-clipboard-text="http://terminology.hl7.org/ValueSet/v2-0092" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to 3.0.0, the version found through the package references">&#x1F4E6;3.0.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to 2.9, the version found through the package references">&#x1F4E6;2.9</td>
     <td>
-      <a href="http://terminology.hl7.org/7.1.0">THO v7.1</a>
+      <a href="https://hl7.org/fhir/R4/">FHIR Std.</a>
     </td>
   </tr>
   <tr>
@@ -2209,7 +2209,7 @@ Summary
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
+                        4.0.1</a>. Generated <span title="Wed, May 27, 2026 10:50+0000">2026-05-27</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

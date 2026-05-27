@@ -64,7 +64,7 @@
      ] )
   ] ) ; # 
   fhir:description [
-     fhir:v "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.\n\nDet er ønskelig at minimum følgende inngår i \"organisasjonshierarkiet\":\n- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)\n- organisasjonen på høyre nivå\n     - sykehus, Helseforetak og Regionalt Helseforetak\n     - sykehjem, kommune\n- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)" ;
+     fhir:v "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization." ;
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [
@@ -82,7 +82,7 @@
          ] ;
          fhir:value [
            a fhir:String ;
-           fhir:v "Organizations in Norwegian health and care services, such as wards, departments, clinics, hospitals, and nursing homes, based on no-basis-Organization.\n\nThis Organization profile is used to describe healthcare institutions and shall represent the organization at the lowest possible level in the organizational hierarchy (for example a department, clinic, or ward). If the organization is part of a larger organization, this shall be represented using the partOf relationship.\n\nIt is desirable that the following are included at minimum in the organizational hierarchy:\n- the organization at the lowest possible level (i.e. ward, unit, department, or similar)\n- the organization at the next level\n     - hospital, Health Trust, and Regional Health Trust\n     - nursing home, municipality\n- at least one organization number from either the Register of Legal Entities (identifier:ENH) or the Register for Units in Specialist Health Services (identifier:RSH)"
+           fhir:v "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization."
          ]
        ] ) ;
        fhir:url [

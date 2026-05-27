@@ -18,23 +18,14 @@
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
-Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization. 
-Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. 
-Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”: 
-* organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
-* organisasjonen på høyre nivå 
-* sykehus, Helseforetak og Regionalt Helseforetak
-* sykehjem, kommune
- 
-* minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)
- 
+Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization. 
 
 **Usages:**
 
 * Refer to this Profile: [Episode](StructureDefinition-lmdi-encounter.md) and [Organisasjon](StructureDefinition-lmdi-organization.md)
 * Examples for this Profile: [Helse Møre og Romsdal HF](Organization-Organisasjon-HF-2.md), [Oslo universitetssykehus HF](Organization-Organisasjon-HF.md), [TRONDHEIM KOMMUNE](Organization-Organisasjon-Kommune.md), [HMR ÅLE SH Kreft og blodsjukdommar sengepost](Organization-Organisasjon-Post.md)... Show 5 more, [Kreft og blodsykdommer sengepost Ålesund](Organization-Organisasjon-Seksjon.md), [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md), [Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk](Organization-Organisasjon-Sykehus-2.md), [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md) and [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Sykehusavdeling.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-organization)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-organization.json)
 
 ### Formal Views of Profile Content
 
@@ -86,7 +77,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.\n\nDet er ønskelig at minimum følgende inngår i \"organisasjonshierarkiet\":\n- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)\n- organisasjonen på høyre nivå\n     - sykehus, Helseforetak og Regionalt Helseforetak\n     - sykehjem, kommune\n- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)",
+  "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -95,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       },
       {
         "url" : "content",
-        "valueString" : "Organizations in Norwegian health and care services, such as wards, departments, clinics, hospitals, and nursing homes, based on no-basis-Organization.\n\nThis Organization profile is used to describe healthcare institutions and shall represent the organization at the lowest possible level in the organizational hierarchy (for example a department, clinic, or ward). If the organization is part of a larger organization, this shall be represented using the partOf relationship.\n\nIt is desirable that the following are included at minimum in the organizational hierarchy:\n- the organization at the lowest possible level (i.e. ward, unit, department, or similar)\n- the organization at the next level\n     - hospital, Health Trust, and Regional Health Trust\n     - nursing home, municipality\n- at least one organization number from either the Register of Legal Entities (identifier:ENH) or the Register for Units in Specialist Health Services (identifier:RSH)"
+        "valueString" : "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

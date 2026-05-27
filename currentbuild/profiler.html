@@ -171,6 +171,7 @@
     <thead>
       <tr>
         <th>Navn</th>
+        <th>FHIR base</th>
         <th>Beskrivelse</th>
       </tr>
     </thead>
@@ -179,68 +180,106 @@
     
       <tr>
         <td><a href="StructureDefinition-lmdi-condition.html">Diagnose</a></td>
+        <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
         <td>Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
-        <td>Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</td>
+        <td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
+        <td>En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-practitioner.html">Helsepersonell</a></td>
+        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Practitioner">NoBasisPractitioner</a></td>
         <td>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
+        <td><a href="http://hl7.org/fhir/R4/medication.html">Medication</a></td>
         <td>Beskrivelse av legemiddel.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
-        <td>Beskriver administrering av legemiddel til pasient på institusjon.
-
-Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.</td>
+        <td><a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a></td>
+        <td>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a></td>
+        <td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td>
         <td>Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+        <td><a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a></td>
         <td>Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></td>
-        <td>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.
-
-Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.
-
-Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
-- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
-- organisasjonen på høyre nivå
-     - sykehus, Helseforetak og Regionalt Helseforetak
-     - sykehjem, kommune
-- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)</td>
+        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Organization">NoBasisOrganization</a></td>
+        <td>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-patient.html">Pasient</a></td>
+        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Patient">NoBasisPatient</a></td>
         <td>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient</td>
       </tr>
     
       <tr>
         <td><a href="StructureDefinition-lmdi-substance.html">Virkestoff</a></td>
-        <td>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.</td>
+        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Substance">NoBasisSubstance</a></td>
+        <td>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.</td>
       </tr>
     
     </tbody>
   </table>
 </div>
+
+<h4 id="extensions">Extensions</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th>Brukes på</th>
+      <th>Beskrivelse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-legemiddel-classification.html">LegemiddelClassification</a></td>
+      <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
+      <td>Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-del-av-behandlingsregime.html">DelAvBehandlingsregime</a></td>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+      <td>Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-klinisk-studie.html">KliniskStudie</a></td>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+      <td>Angir om legemidlet gis som en del av en klinisk studie.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-npr-episode-identifier.html">NprEpisodeIdentifier</a></td>
+      <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
+      <td>Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Støtter både string-basert og UUID-basert representasjon.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-prosentvis-doseendring.html">ProsentvisDoseendring</a></td>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+      <td>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -267,7 +306,7 @@ Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
+                        title="Wed, May 27, 2026 10:50+0000">2026-05-27</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

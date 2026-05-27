@@ -194,7 +194,7 @@
     <tr>
       <td><a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></td>
       <td>Organization</td>
-      <td>The institution or organisational unit responsible for medication administration or prescribing.</td>
+      <td>Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
@@ -214,17 +214,17 @@
     <tr>
       <td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
       <td>MedicationAdministration</td>
-      <td>Describes administration of a medication to a patient in an institutional setting.</td>
+      <td>Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>MedicationRequest</td>
-      <td>Medication request – prescription or other ordering of a medication.</td>
+      <td>Medication request – prescription, ordering or other request of medication.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-lmdi-substance.html">Virkestoff</a></td>
       <td>Substance</td>
-      <td>A customised profile of Substance to represent an active substance, based on no-basis.</td>
+      <td>A customised profile of Substance to represent an active substance, based on no-basis-Substance.</td>
     </tr>
   </tbody>
 </table>
@@ -235,28 +235,34 @@
   <thead>
     <tr>
       <th>Extension</th>
+      <th>Used on</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><a href="StructureDefinition-legemiddel-classification.html">LegemiddelClassification</a></td>
+      <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
       <td>Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification).</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-lmdi-del-av-behandlingsregime.html">DelAvBehandlingsregime</a></td>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>The name of the regimen, treatment protocol, or course the medication is given as part of. Particularly relevant in chemotherapy.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-lmdi-klinisk-studie.html">KliniskStudie</a></td>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>Indicates whether the medication is given as part of a clinical trial.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-npr-episode-identifier.html">NprEpisodeIdentifier</a></td>
+      <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
       <td>Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). Supports both string-based and UUID-based representations.</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-lmdi-prosentvis-doseendring.html">ProsentvisDoseendring</a></td>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>Percentage dose adjustment compared to the original dosage. Particularly relevant in chemotherapy. A normal dose, without modification, is 100%.</td>
     </tr>
   </tbody>
@@ -285,7 +291,7 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
+                        4.0.1</a>. Generated <span title="Wed, May 27, 2026 10:50+0000">2026-05-27</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

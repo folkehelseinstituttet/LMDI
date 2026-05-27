@@ -201,7 +201,7 @@
                   title="StructureDefinition/lmdi-encounter">Episode</a>
             </td>
             <td>
-<p>Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</p>
+<p>En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</p>
 </td>
          </tr>
          <tr>
@@ -228,9 +228,7 @@
                   title="StructureDefinition/lmdi-medicationadministration">Legemiddeladministrering</a>
             </td>
             <td>
-<p>Beskriver administrering av legemiddel til pasient på institusjon.</p>
-
-<p>Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.</p>
+<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
 </td>
          </tr>
          <tr>
@@ -257,21 +255,7 @@
                   title="StructureDefinition/lmdi-organization">Organisasjon</a>
             </td>
             <td>
-<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.</p>
-
-<p>Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.</p>
-
-<p>Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”:</p>
-<ul>
-  <li>organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)</li>
-  <li>organisasjonen på høyre nivå
-    <ul>
-      <li>sykehus, Helseforetak og Regionalt Helseforetak</li>
-      <li>sykehjem, kommune</li>
-    </ul>
-  </li>
-  <li>minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)</li>
-</ul>
+<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</p>
 </td>
          </tr>
          <tr>
@@ -289,7 +273,7 @@
                   title="StructureDefinition/lmdi-substance">Virkestoff</a>
             </td>
             <td>
-<p>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.</p>
+<p>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.</p>
 </td>
          </tr>
       </tbody>
@@ -945,7 +929,7 @@
                     Package hl7.fhir.no.lmdi#1.1.0 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Tue, May 19, 2026 11:21+0000">2026-05-19</span>
+                        title="Wed, May 27, 2026 10:50+0000">2026-05-27</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

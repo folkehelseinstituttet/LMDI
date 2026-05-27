@@ -1124,7 +1124,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/lmdi-encounter"
       },
       "name" : "Episode",
-      "description" : "Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.",
+      "description" : "En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.",
       "exampleBoolean" : false
     },
     {
@@ -1412,7 +1412,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/lmdi-medicationadministration"
       },
       "name" : "Legemiddeladministrering",
-      "description" : "Beskriver administrering av legemiddel til pasient på institusjon.\n\nDette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei.",
+      "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.",
       "exampleBoolean" : false
     },
     {
@@ -1592,7 +1592,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/lmdi-organization"
       },
       "name" : "Organisasjon",
-      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.\n\nDet er ønskelig at minimum følgende inngår i \"organisasjonshierarkiet\":\n- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)\n- organisasjonen på høyre nivå\n     - sykehus, Helseforetak og Regionalt Helseforetak\n     - sykehjem, kommune\n- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)",
+      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.",
       "exampleBoolean" : false
     },
     {
@@ -1856,7 +1856,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/lmdi-substance"
       },
       "name" : "Virkestoff",
-      "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.",
+      "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.",
       "exampleBoolean" : false
     },
     {

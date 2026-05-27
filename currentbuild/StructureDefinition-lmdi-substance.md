@@ -18,14 +18,14 @@
 | Draft as of 2025-09-12 | *Computable Name*:Virkestoff |
 
  
-En tilpasset profil av Substance for å representere virkestoff, basert på no-basis. 
+En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance. 
 
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
 * Examples for this Profile: [Substance/Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-substance)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-substance.json)
 
 ### Formal Views of Profile Content
 
@@ -77,7 +77,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.",
+  "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -86,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
       },
       {
         "url" : "content",
-        "valueString" : "A tailored Substance profile for representing active substances, based on no-basis."
+        "valueString" : "A tailored Substance profile for representing active substances, based on no-basis-Substance."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

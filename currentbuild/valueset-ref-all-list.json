@@ -226,8 +226,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-    "StructureDefinition-lmdi-condition.html" : "Diagnose"
+    "StructureDefinition-lmdi-condition.html" : "Diagnose",
+    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -496,8 +496,8 @@
     "uses" : {
     },
     "StructureDefinition-lmdi-patient.html" : "Pasient",
-    "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
+    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
+    "StructureDefinition-lmdi-organization.html" : "Organisasjon"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -512,8 +512,8 @@
     "uses" : {
     },
     "StructureDefinition-lmdi-patient.html" : "Pasient",
-    "StructureDefinition-lmdi-organization.html" : "Organisasjon",
-    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
+    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
+    "StructureDefinition-lmdi-organization.html" : "Organisasjon"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -527,16 +527,16 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
     "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
     "StructureDefinition-lmdi-patient.html" : "Pasient",
-    "StructureDefinition-lmdi-substance.html" : "Virkestoff",
-    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-    "StructureDefinition-lmdi-encounter.html" : "Episode",
-    "StructureDefinition-lmdi-condition.html" : "Diagnose",
-    "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
     "StructureDefinition-lmdi-medication.html" : "Legemiddel",
-    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell"
+    "StructureDefinition-lmdi-organization.html" : "Organisasjon",
+    "StructureDefinition-lmdi-condition.html" : "Diagnose",
+    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
+    "StructureDefinition-lmdi-substance.html" : "Virkestoff",
+    "StructureDefinition-lmdi-encounter.html" : "Episode",
+    "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -920,14 +920,12 @@
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
-    "version" : "3.0.0",
+    "version" : "2.9",
     "status" : "active",
-    "name" : "Hl7VSReAdmissionIndicator",
-    "title" : "hl7VS-re-admissionIndicator",
-    "description" : "Value Set of codes which are used to specify that a patient is being re-admitted to a healthcare facility from which they were discharged, and indicates the circumstances around such re-admission.",
+    "name" : "v2.0092",
+    "title" : "v2 RE-ADMISSION INDICATOR",
+    "description" : "FHIR Value set/code system definition for HL7 v2 table 0092 ( RE-ADMISSION INDICATOR)",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0092"],
-    "oids" : ["2.16.840.1.113883.21.40"],
-    "sources" : ["2.16.840.1.113883.21.40"],
     "uses" : {
     },
     "StructureDefinition-lmdi-encounter.html" : "Episode"
@@ -946,11 +944,11 @@
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActEncounterCode",
-    "version" : "3.0.0",
+    "version" : "2014-03-26",
     "status" : "active",
-    "name" : "ActEncounterCode",
-    "title" : "ActEncounterCode",
-    "description" : "Domain provides codes that qualify the ActEncounterClass (ENC)",
+    "name" : "v3.ActEncounterCode",
+    "title" : "V3 Value SetActEncounterCode",
+    "description" : " Domain provides codes that qualify the ActEncounterClass (ENC)",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
     "oids" : ["2.16.840.1.113883.1.11.13955"],
     "sources" : ["2.16.840.1.113883.1.11.13955"],
@@ -960,25 +958,23 @@
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActPriority",
-    "version" : "3.0.0",
+    "version" : "2018-08-12",
     "status" : "active",
-    "name" : "ActPriority",
-    "title" : "ActPriority",
-    "description" : "A code or set of codes (e.g., for routine, emergency,) specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.\r\n\r\n*Discussion:* This attribute is used in orders to indicate the ordered priority, and in event documentation it indicates the actual priority used to perform the act. In definition mood it indicates the available priorities.",
+    "name" : "v3.ActPriority",
+    "title" : "v3 Code System ActPriority",
+    "description" : " A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActPriority"],
-    "oids" : ["2.16.840.1.113883.1.11.16866"],
-    "sources" : ["2.16.840.1.113883.1.11.16866"],
     "uses" : {
     },
     "StructureDefinition-lmdi-encounter.html" : "Episode"
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode",
-    "version" : "3.0.0",
+    "version" : "2014-03-26",
     "status" : "active",
-    "name" : "ActSubstanceAdminSubstitutionCode",
-    "title" : "ActSubstanceAdminSubstitutionCode",
-    "description" : "***No description***",
+    "name" : "v3.ActSubstanceAdminSubstitutionCode",
+    "title" : "V3 Value SetActSubstanceAdminSubstitutionCode",
+    "description" : "No Description Provided",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"],
     "oids" : ["2.16.840.1.113883.1.11.16621"],
     "sources" : ["2.16.840.1.113883.1.11.16621"],
@@ -988,11 +984,11 @@
   },
   {
     "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
-    "version" : "3.0.0",
+    "version" : "2014-03-26",
     "status" : "active",
-    "name" : "SubstanceAdminSubstitutionReason",
-    "title" : "SubstanceAdminSubstitutionReason",
-    "description" : "***No description***",
+    "name" : "v3.SubstanceAdminSubstitutionReason",
+    "title" : "V3 Value SetSubstanceAdminSubstitutionReason",
+    "description" : "No Description Provided",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
     "oids" : ["2.16.840.1.113883.1.11.19377"],
     "sources" : ["2.16.840.1.113883.1.11.19377"],

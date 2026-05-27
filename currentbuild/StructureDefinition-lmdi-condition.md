@@ -25,7 +25,7 @@ Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
 * Examples for this Profile: [Condition/Diagnose-ICD10-Allergi](Condition-Diagnose-ICD10-Allergi.md), [Condition/Diagnose-ICD10](Condition-Diagnose-ICD10.md) and [Condition/Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-condition)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-condition.json)
 
 ### Formal Views of Profile Content
 
