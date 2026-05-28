@@ -16,7 +16,7 @@ This page describes how to create a `SignertKryptertBundle` for Legemiddelregist
 
 Example code for generating a SignertKryptertBundle: [Example in C#](en-eksempelkode_cs.md)
 
-![](signertkryptertbundle.svg) 
+![](signertkryptertbundle-en.svg) 
 
 ### 1. Create the FHIR resource
 

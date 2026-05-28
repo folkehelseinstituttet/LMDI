@@ -47,13 +47,13 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Lmdi</h1>
- <p>Generated Wed May 27 10:52:16 UTC 2026, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.0 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+ <p>Generated Thu May 28 13:54:28 UTC 2026, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.0 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v2.2.8</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.no.lmdi, Canonical = http://hl7.no/fhir/ig/lmdi</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: no. 1 of 77 (1%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
- <tr><td><a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">Publication Request</a>:</td><td><ul><li><span title="Not Found">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
+ <tr><td><a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">Publication Request</a>:</td><td><ul><li>Error fetching package-list from http://hl7.no/fhir/ig/lmdi: Connect timed out <img src="icon-error.gif" height="16px" width="16px"/></li>
 <li>This IG has never been published, so the version should start with '0.' or include a patch version e.g. '-ballot' <img src="icon-warning.png" height="16px" width="16px"/></li>
 <li>No publication request found <img src="information.png" height="16px" width="16px"/></li>
 </ul>
@@ -163,7 +163,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 </ul>
 </td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://hl7.no/fhir/ig/lmdi (Problem #1 with package-list.json at http://hl7.no/fhir/ig/lmdi: Not Found)</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://hl7.no/fhir/ig/lmdi (Problem #1 with package-list.json at http://hl7.no/fhir/ig/lmdi: Connect timed out)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
  <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
@@ -451,6 +451,9 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_LMDI_input_images_signertkryptertbundle"><b>/github/workspace/LMDI/input/images/signertkryptertbundle</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_LMDI_input_images_signertkryptertbundle-en"><b>/github/workspace/LMDI/input/images/signertkryptertbundle-en</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_LMDI_input_includes_certificates"><b>/github/workspace/LMDI/input/includes/certificates</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -1019,7 +1022,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle&#8203;.entry[7]&#8203;.resource&#8203;/*MedicationAdministration&#8203;/Scenario-Sykehjem-Oksykodon-Administrering*&#8203;/&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l315&#8203;/c12)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#421521009 for language(s) 'no'. The display is 'Swallow' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l7">log</a>, or see <a href="#vmi155" onClick="document.getElementById('vmi155').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi155" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#421521009 ("Swallow")]"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#421521009 ("Swallow")]"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#421521009"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
@@ -1140,8 +1143,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Condition&#8203;.code&#8203;.coding[0]&#8203;.display (l9&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'Artrose' for http://snomed.info/sct#396275006. There are no valid display names found for language(s) 'no'. Default display is 'Osteoarthritis'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l13">log</a>, or see <a href="#vmi177" onClick="document.getElementById('vmi177').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi177" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#396275006 ("Artrose")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#396275006"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#396275006 ("Artrose")]"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#396275006"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "396275006" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-condition.html">Diagnose</a></td>
@@ -1249,12 +1252,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
@@ -1381,10 +1384,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
@@ -1547,8 +1550,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
@@ -1622,22 +1625,22 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F ("Catapresan øresund inj, oppl 150 mikrog/ml")]"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[5]: "(http://dmp.no/fhir/NamingSystem/lmrLopenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/lmrLopenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[6]: "(http://dmp.no/fhir/NamingSystem/fest-varenummer)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[7]: "(http://fhi.no/fhir/NamingSystem/lokaltLegemiddel)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Validate "[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F ("Catapresan øresund inj, oppl 150 mikrog/ml")]"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Check "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning#ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem not found: http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
@@ -1646,12 +1649,12 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Analysing http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0 for validation purposes
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Parameters: disp-lang=no, generate-narrative, default-to-latest
 0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[0]: "(http://snomed.info/sct)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
-0ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem found: "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[1]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[2]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff)"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"
+1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[3]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelPakning)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: Prepare include[4]: "(http://dmp.no/fhir/NamingSystem/festLegemiddelDose)"
 1ms http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.0: CodeSystem version undefined not found: "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
@@ -1706,10 +1709,10 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Medication&#8203;.form&#8203;.coding[0]&#8203;.display (l32&#8203;/c4)</b></td><td><b>error</b></td><td><b>Wrong Display Name 'tablett' for http://snomed.info/sct#385055001. There are no valid display names found for language(s) 'no'. Default display is 'Tablet'</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l29">log</a>, or see <a href="#vmi229" onClick="document.getElementById('vmi229').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_ERR</span><div id="vmi229" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#385055001 ("tablett")]"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#385055001"
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#385055001 ("tablett")]"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#385055001"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Code "385055001" found in http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201</pre></div></td><td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
    </tr>
    <tr style="background-color: #ffebcc">
@@ -1889,7 +1892,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>MedicationAdministration&#8203;.statusReason[0]&#8203;.coding[0]&#8203;.display (l28&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#182896008 for language(s) 'no'. The display is 'Drug declined by patient - dislikes taste' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l36">log</a>, or see <a href="#vmi242" onClick="document.getElementById('vmi242').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi242" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#182896008 ("Drug declined by patient - dislikes taste")]"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#182896008 ("Drug declined by patient - dislikes taste")]"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#182896008"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
@@ -1975,7 +1978,7 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>MedicationAdministration&#8203;.dosage&#8203;.route&#8203;.coding[0]&#8203;.display (l10&#8203;/c6)</b></td><td><b>information</b></td><td><b>There are no valid display names found for the code http://snomed.info/sct#421521009 for language(s) 'no'. The display is 'Swallow' which is the default language display</b> (from <a href="qa-txservers.html#https://tx.fhir.org/r4">https://tx.fhir.org/r4</a>, see <a href="qa-tx.html#l7">log</a>, or see <a href="#vmi254" onClick="document.getElementById('vmi254').style.display='block'">the servers logic</a>) <span class="code-value code-hidden" style="font-size: 8px; color: navy">NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK</span><div id="vmi254" style="display:none"><br/><pre>0ms tx-op
-0ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#421521009 ("Swallow")]"
+1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Validate "[http://snomed.info/sct#421521009 ("Swallow")]"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: Check "http://snomed.info/sct#421521009"
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: CodeSystem found: http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201 for http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201
 1ms http://snomed.info/sct/vs|http://snomed.info/sct/900000000000207008/version/20250201: check code in (http://snomed.info/sct) at CodeableConcept.coding[0]
@@ -3085,8 +3088,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_includes_certificates"> </a>
-<h2><a href="">input/includes/certificates.zip</a> <span id="svi93" class="toggle" onclick="toggle('vi93')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi93')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_images_signertkryptertbundle-en"> </a>
+<h2><a href="">input/images/signertkryptertbundle-en.svg</a> <span id="svi93" class="toggle" onclick="toggle('vi93')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi93')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi93"></div>
  <table class="grid">
    <tr>
@@ -3094,8 +3097,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_includes_menu"> </a>
-<h2><a href="">input/includes/menu.xml</a> <span id="svi94" class="toggle" onclick="toggle('vi94')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi94')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_includes_certificates"> </a>
+<h2><a href="">input/includes/certificates.zip</a> <span id="svi94" class="toggle" onclick="toggle('vi94')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi94')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi94"></div>
  <table class="grid">
    <tr>
@@ -3103,8 +3106,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_includes_template-sd-summary"> </a>
-<h2><a href="">input/includes/template-sd-summary.xml</a> <span id="svi95" class="toggle" onclick="toggle('vi95')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi95')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_includes_menu"> </a>
+<h2><a href="">input/includes/menu.xml</a> <span id="svi95" class="toggle" onclick="toggle('vi95')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi95')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi95"></div>
  <table class="grid">
    <tr>
@@ -3112,8 +3115,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_SignertKryptertBundle"> </a>
-<h2><a href="">input/pagecontent/SignertKryptertBundle.md</a> <span id="svi96" class="toggle" onclick="toggle('vi96')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi96')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_includes_template-sd-summary"> </a>
+<h2><a href="">input/includes/template-sd-summary.xml</a> <span id="svi96" class="toggle" onclick="toggle('vi96')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi96')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi96"></div>
  <table class="grid">
    <tr>
@@ -3121,8 +3124,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent__glossary-no-en"> </a>
-<h2><a href="">input/pagecontent/_glossary-no-en.md</a> <span id="svi97" class="toggle" onclick="toggle('vi97')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi97')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_SignertKryptertBundle"> </a>
+<h2><a href="">input/pagecontent/SignertKryptertBundle.md</a> <span id="svi97" class="toggle" onclick="toggle('vi97')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi97')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi97"></div>
  <table class="grid">
    <tr>
@@ -3130,8 +3133,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_eksempelkode_cs"> </a>
-<h2><a href="">input/pagecontent/eksempelkode_cs.md</a> <span id="svi98" class="toggle" onclick="toggle('vi98')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi98')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent__glossary-no-en"> </a>
+<h2><a href="">input/pagecontent/_glossary-no-en.md</a> <span id="svi98" class="toggle" onclick="toggle('vi98')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi98')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi98"></div>
  <table class="grid">
    <tr>
@@ -3139,8 +3142,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_eksempelkode_ps1"> </a>
-<h2><a href="">input/pagecontent/eksempelkode_ps1.md</a> <span id="svi99" class="toggle" onclick="toggle('vi99')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi99')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_eksempelkode_cs"> </a>
+<h2><a href="">input/pagecontent/eksempelkode_cs.md</a> <span id="svi99" class="toggle" onclick="toggle('vi99')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi99')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi99"></div>
  <table class="grid">
    <tr>
@@ -3148,8 +3151,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-SignertKryptertBundle"> </a>
-<h2><a href="">input/pagecontent/en-SignertKryptertBundle.md</a> <span id="svi100" class="toggle" onclick="toggle('vi100')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi100')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_eksempelkode_ps1"> </a>
+<h2><a href="">input/pagecontent/eksempelkode_ps1.md</a> <span id="svi100" class="toggle" onclick="toggle('vi100')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi100')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi100"></div>
  <table class="grid">
    <tr>
@@ -3157,8 +3160,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-eksempelkode_cs"> </a>
-<h2><a href="">input/pagecontent/en-eksempelkode_cs.md</a> <span id="svi101" class="toggle" onclick="toggle('vi101')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi101')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-SignertKryptertBundle"> </a>
+<h2><a href="">input/pagecontent/en-SignertKryptertBundle.md</a> <span id="svi101" class="toggle" onclick="toggle('vi101')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi101')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi101"></div>
  <table class="grid">
    <tr>
@@ -3166,8 +3169,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-eksempelkode_ps1"> </a>
-<h2><a href="">input/pagecontent/en-eksempelkode_ps1.md</a> <span id="svi102" class="toggle" onclick="toggle('vi102')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi102')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-eksempelkode_cs"> </a>
+<h2><a href="">input/pagecontent/en-eksempelkode_cs.md</a> <span id="svi102" class="toggle" onclick="toggle('vi102')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi102')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi102"></div>
  <table class="grid">
    <tr>
@@ -3175,8 +3178,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-index"> </a>
-<h2><a href="">input/pagecontent/en-index.md</a> <span id="svi103" class="toggle" onclick="toggle('vi103')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi103')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-eksempelkode_ps1"> </a>
+<h2><a href="">input/pagecontent/en-eksempelkode_ps1.md</a> <span id="svi103" class="toggle" onclick="toggle('vi103')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi103')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi103"></div>
  <table class="grid">
    <tr>
@@ -3184,8 +3187,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-informasjonsmodell"> </a>
-<h2><a href="">input/pagecontent/en-informasjonsmodell.md</a> <span id="svi104" class="toggle" onclick="toggle('vi104')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi104')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-index"> </a>
+<h2><a href="">input/pagecontent/en-index.md</a> <span id="svi104" class="toggle" onclick="toggle('vi104')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi104')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi104"></div>
  <table class="grid">
    <tr>
@@ -3193,8 +3196,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-integrasjon"> </a>
-<h2><a href="">input/pagecontent/en-integrasjon.md</a> <span id="svi105" class="toggle" onclick="toggle('vi105')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi105')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-informasjonsmodell"> </a>
+<h2><a href="">input/pagecontent/en-informasjonsmodell.md</a> <span id="svi105" class="toggle" onclick="toggle('vi105')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi105')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi105"></div>
  <table class="grid">
    <tr>
@@ -3202,8 +3205,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-nedlastinger"> </a>
-<h2><a href="">input/pagecontent/en-nedlastinger.md</a> <span id="svi106" class="toggle" onclick="toggle('vi106')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi106')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-integrasjon"> </a>
+<h2><a href="">input/pagecontent/en-integrasjon.md</a> <span id="svi106" class="toggle" onclick="toggle('vi106')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi106')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi106"></div>
  <table class="grid">
    <tr>
@@ -3211,8 +3214,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-profiler"> </a>
-<h2><a href="">input/pagecontent/en-profiler.md</a> <span id="svi107" class="toggle" onclick="toggle('vi107')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi107')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-nedlastinger"> </a>
+<h2><a href="">input/pagecontent/en-nedlastinger.md</a> <span id="svi107" class="toggle" onclick="toggle('vi107')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi107')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi107"></div>
  <table class="grid">
    <tr>
@@ -3220,8 +3223,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_en-protokoll"> </a>
-<h2><a href="">input/pagecontent/en-protokoll.md</a> <span id="svi108" class="toggle" onclick="toggle('vi108')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi108')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-profiler"> </a>
+<h2><a href="">input/pagecontent/en-profiler.md</a> <span id="svi108" class="toggle" onclick="toggle('vi108')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi108')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi108"></div>
  <table class="grid">
    <tr>
@@ -3229,8 +3232,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_index"> </a>
-<h2><a href="">input/pagecontent/index.md</a> <span id="svi109" class="toggle" onclick="toggle('vi109')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi109')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_en-protokoll"> </a>
+<h2><a href="">input/pagecontent/en-protokoll.md</a> <span id="svi109" class="toggle" onclick="toggle('vi109')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi109')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi109"></div>
  <table class="grid">
    <tr>
@@ -3238,8 +3241,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_informasjonsmodell"> </a>
-<h2><a href="">input/pagecontent/informasjonsmodell.md</a> <span id="svi110" class="toggle" onclick="toggle('vi110')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi110')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_index"> </a>
+<h2><a href="">input/pagecontent/index.md</a> <span id="svi110" class="toggle" onclick="toggle('vi110')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi110')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi110"></div>
  <table class="grid">
    <tr>
@@ -3247,8 +3250,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_integrasjon"> </a>
-<h2><a href="">input/pagecontent/integrasjon.md</a> <span id="svi111" class="toggle" onclick="toggle('vi111')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi111')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_informasjonsmodell"> </a>
+<h2><a href="">input/pagecontent/informasjonsmodell.md</a> <span id="svi111" class="toggle" onclick="toggle('vi111')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi111')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi111"></div>
  <table class="grid">
    <tr>
@@ -3256,8 +3259,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_nedlastinger"> </a>
-<h2><a href="">input/pagecontent/nedlastinger.md</a> <span id="svi112" class="toggle" onclick="toggle('vi112')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi112')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_integrasjon"> </a>
+<h2><a href="">input/pagecontent/integrasjon.md</a> <span id="svi112" class="toggle" onclick="toggle('vi112')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi112')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi112"></div>
  <table class="grid">
    <tr>
@@ -3265,8 +3268,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_profiler"> </a>
-<h2><a href="">input/pagecontent/profiler.md</a> <span id="svi113" class="toggle" onclick="toggle('vi113')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi113')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_nedlastinger"> </a>
+<h2><a href="">input/pagecontent/nedlastinger.md</a> <span id="svi113" class="toggle" onclick="toggle('vi113')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi113')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi113"></div>
  <table class="grid">
    <tr>
@@ -3274,8 +3277,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_protokoll"> </a>
-<h2><a href="">input/pagecontent/protokoll.md</a> <span id="svi114" class="toggle" onclick="toggle('vi114')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi114')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_profiler"> </a>
+<h2><a href="">input/pagecontent/profiler.md</a> <span id="svi114" class="toggle" onclick="toggle('vi114')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi114')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi114"></div>
  <table class="grid">
    <tr>
@@ -3283,8 +3286,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_input_pagecontent_todo"> </a>
-<h2><a href="">input/pagecontent/todo.md</a> <span id="svi115" class="toggle" onclick="toggle('vi115')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi115')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_protokoll"> </a>
+<h2><a href="">input/pagecontent/protokoll.md</a> <span id="svi115" class="toggle" onclick="toggle('vi115')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi115')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi115"></div>
  <table class="grid">
    <tr>
@@ -3292,8 +3295,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_temp_pages__includes_artifacts"> </a>
-<h2><a href="">temp/pages/_includes/artifacts.xml</a> <span id="svi116" class="toggle" onclick="toggle('vi116')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi116')">(0)</span></h2>
+<a name="_github_workspace_LMDI_input_pagecontent_todo"> </a>
+<h2><a href="">input/pagecontent/todo.md</a> <span id="svi116" class="toggle" onclick="toggle('vi116')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi116')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi116"></div>
  <table class="grid">
    <tr>
@@ -3301,8 +3304,8 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_template_config"> </a>
-<h2><a href="">template/config</a> <span id="svi117" class="toggle" onclick="toggle('vi117')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi117')">(0)</span></h2>
+<a name="_github_workspace_LMDI_temp_pages__includes_artifacts"> </a>
+<h2><a href="">temp/pages/_includes/artifacts.xml</a> <span id="svi117" class="toggle" onclick="toggle('vi117')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi117')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi117"></div>
  <table class="grid">
    <tr>
@@ -3310,9 +3313,18 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_LMDI_template_config__config"> </a>
-<h2><a href="">template/config/_config.yml</a> <span id="svi118" class="toggle" onclick="toggle('vi118')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi118')">(0)</span></h2>
+<a name="_github_workspace_LMDI_template_config"> </a>
+<h2><a href="">template/config</a> <span id="svi118" class="toggle" onclick="toggle('vi118')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi118')">(0)</span></h2>
  <div style="border: 1px grey solid; display: none" id="vi118"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_github_workspace_LMDI_template_config__config"> </a>
+<h2><a href="">template/config/_config.yml</a> <span id="svi119" class="toggle" onclick="toggle('vi119')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi119')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi119"></div>
  <table class="grid">
    <tr>
      <td>&check;</td>
