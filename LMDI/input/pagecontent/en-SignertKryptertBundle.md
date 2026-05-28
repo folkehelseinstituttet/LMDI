@@ -4,7 +4,7 @@ This page describes how to create a `SignertKryptertBundle` for Legemiddelregist
 
 Example code for generating a SignertKryptertBundle: [Example in C#](en-eksempelkode_cs.html)
 
-<img src="signertkryptertbundle.svg" width="50%" />
+<img src="signertkryptertbundle-en.svg" width="50%" />
 <br clear="all"/>
 
 
