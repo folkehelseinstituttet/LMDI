@@ -17,9 +17,36 @@
      fhir:v "http://fhir.no/ValueSet/atc-valueset"^^xsd:anyURI ;
      fhir:l <http://fhir.no/ValueSet/atc-valueset>
   ] ; # 
-  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:version [ fhir:v "1.1.1"] ; # 
   fhir:name [ fhir:v "ATCValueSet"] ; # 
-  fhir:title [ fhir:v "ATC Kodesystem ValueSet"] ; # 
+  fhir:title [
+     fhir:v "ATC Kodesystem ValueSet" ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "lang"^^xsd:anyURI ;
+           fhir:l fhir:lang
+         ] ;
+         fhir:value [
+           a fhir:Code ;
+           fhir:v "en"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "content"^^xsd:anyURI ;
+           fhir:l fhir:content
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ATC Code System ValueSet"
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+       ]
+     ] )
+  ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:date [ fhir:v "2025-09-12"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
@@ -36,7 +63,34 @@
        fhir:value [ fhir:v "legemiddelregisteret@fhi.no" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)"] ; # 
+  fhir:description [
+     fhir:v "ValueSet som inneholder koder fra WHO ATC (Anatomisk Terapeutisk Kjemisk legemiddelregister)" ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "lang"^^xsd:anyURI ;
+           fhir:l fhir:lang
+         ] ;
+         fhir:value [
+           a fhir:Code ;
+           fhir:v "en"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "content"^^xsd:anyURI ;
+           fhir:l fhir:content
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet containing codes from the WHO ATC (Anatomical Therapeutic Chemical classification)."
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+       ]
+     ] )
+  ] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [

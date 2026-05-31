@@ -17,9 +17,36 @@
      fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
      fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
   ] ; # 
-  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:version [ fhir:v "1.1.1"] ; # 
   fhir:name [ fhir:v "Legemiddelrekvirering"] ; # 
-  fhir:title [ fhir:v "Legemiddelrekvirering"] ; # 
+  fhir:title [
+     fhir:v "Legemiddelrekvirering" ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "lang"^^xsd:anyURI ;
+           fhir:l fhir:lang
+         ] ;
+         fhir:value [
+           a fhir:Code ;
+           fhir:v "en"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "content"^^xsd:anyURI ;
+           fhir:l fhir:content
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication Request"
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+       ]
+     ] )
+  ] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:date [ fhir:v "2025-09-12"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
@@ -36,7 +63,34 @@
        fhir:value [ fhir:v "legemiddelregisteret@fhi.no" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel"] ; # 
+  fhir:description [
+     fhir:v "Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel" ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "lang"^^xsd:anyURI ;
+           fhir:l fhir:lang
+         ] ;
+         fhir:value [
+           a fhir:Code ;
+           fhir:v "en"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "content"^^xsd:anyURI ;
+           fhir:l fhir:content
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication request – prescription, ordering or other request of medication."
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+       ]
+     ] )
+  ] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [
@@ -476,8 +530,62 @@
        fhir:id [ fhir:v "MedicationRequest.extension:prosentvisDoseendring" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "prosentvisDoseendring" ] ;
-       fhir:short [ fhir:v "Doseendring i prosent (100% = umodifisert dose)" ] ;
-       fhir:definition [ fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent." ] ;
+       fhir:short [
+         fhir:v "Doseendring i prosent (100% = umodifisert dose)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Dose adjustment in percent (100% = unmodified dose)"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Dose adjustment in percent, compared with the original dosage. Especially relevant for chemotherapy. A normal dose without modifications is 100%. May have values from 0. Unit shall be percent."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -523,8 +631,62 @@
        fhir:id [ fhir:v "MedicationRequest.extension:delAvBehandlingsregime" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "delAvBehandlingsregime" ] ;
-       fhir:short [ fhir:v "Del av behandlingsregime" ] ;
-       fhir:definition [ fhir:v "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi." ] ;
+       fhir:short [
+         fhir:v "Del av behandlingsregime" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Part of treatment regimen"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The name of the course, treatment regimen, or protocol that the medication is part of. Especially relevant for chemotherapy."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -570,8 +732,62 @@
        fhir:id [ fhir:v "MedicationRequest.extension:kliniskStudie" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "kliniskStudie" ] ;
-       fhir:short [ fhir:v "Legemiddel i klinisk studie" ] ;
-       fhir:definition [ fhir:v "Angir om legemidlet gis som en del av en klinisk studie." ] ;
+       fhir:short [
+         fhir:v "Legemiddel i klinisk studie" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Medication in clinical trial"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Angir om legemidlet gis som en del av en klinisk studie." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indicates whether the medication is given as part of a clinical trial."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -665,8 +881,62 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.identifier" ] ;
        fhir:path [ fhir:v "MedicationRequest.identifier" ] ;
-       fhir:short [ fhir:v "Identifikator for rekvirering" ] ;
-       fhir:definition [ fhir:v "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes" ] ;
+       fhir:short [
+         fhir:v "Identifikator for rekvirering" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Identifier for the medication request"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must Support: An identifier that uniquely identifies a medication request shall be provided if one exists."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:comment [ fhir:v "This is a business identifier, not a resource identifier." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
@@ -714,9 +984,90 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.status" ] ;
        fhir:path [ fhir:v "MedicationRequest.status" ] ;
-       fhir:short [ fhir:v "Status for rekvireringen" ] ;
-       fhir:definition [ fhir:v "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer" ] ;
-       fhir:comment [ fhir:v "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft" ] ;
+       fhir:short [
+         fhir:v "Status for rekvireringen" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Status of the medication request"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must Support: Status is important for following the lifecycle of a medication request and must be supported by all systems."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:comment [
+         fhir:v "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Valid values: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -825,7 +1176,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.intent" ] ;
        fhir:path [ fhir:v "MedicationRequest.intent" ] ;
-       fhir:short [ fhir:v "Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option" ] ;
+       fhir:short [
+         fhir:v "Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The intent or purpose of the medication request: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "Whether the request is a proposal, plan, or an original order." ] ;
        fhir:comment [ fhir:v "It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.\r\rAn instance-order is an instantiation of a request or order and may be used to populate Medication Administration Record.\r\rThis element is labeled as a modifier because the intent alters when and how the resource is actually applicable." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
@@ -1078,7 +1456,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.medication[x]" ] ;
        fhir:path [ fhir:v "MedicationRequest.medication[x]" ] ;
-       fhir:short [ fhir:v "Legemidlet som er rekvirert" ] ;
+       fhir:short [
+         fhir:v "Legemidlet som er rekvirert" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The medication that was requested"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications." ] ;
        fhir:comment [ fhir:v "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the Medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
@@ -1131,7 +1536,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.subject" ] ;
        fhir:path [ fhir:v "MedicationRequest.subject" ] ;
-       fhir:short [ fhir:v "Pasienten legemidlet er rekvirert til" ] ;
+       fhir:short [
+         fhir:v "Pasienten legemidlet er rekvirert til" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The patient the medication was requested for"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "A link to a resource representing the person or set of individuals to whom the medication will be given." ] ;
        fhir:comment [ fhir:v "The subject on a medication request is mandatory.  For the secondary use case where the actual subject is not provided, there still must be an anonymized subject specified." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
@@ -1187,7 +1619,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.encounter" ] ;
        fhir:path [ fhir:v "MedicationRequest.encounter" ] ;
-       fhir:short [ fhir:v "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med." ] ;
+       fhir:short [
+         fhir:v "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The episode (for example the consultation or admission) associated with the medication request."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "The Encounter during which this [x] was created or to which the creation of this record is tightly associated." ] ;
        fhir:comment [ fhir:v "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.\"    If there is a need to link to episodes of care they will be handled with an extension." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
@@ -1331,7 +1790,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.requester" ] ;
        fhir:path [ fhir:v "MedicationRequest.requester" ] ;
-       fhir:short [ fhir:v "Helsepersonellet som rekvirerte legemidlet" ] ;
+       fhir:short [
+         fhir:v "Helsepersonellet som rekvirerte legemidlet" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The healthcare professional who requested the medication"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "The individual, organization, or device that initiated the request and has responsibility for its activation." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
@@ -1608,7 +2094,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.reasonReference" ] ;
        fhir:path [ fhir:v "MedicationRequest.reasonReference" ] ;
-       fhir:short [ fhir:v "Indikasjon (diagnose) for legemiddelrekvireringen" ] ;
+       fhir:short [
+         fhir:v "Indikasjon (diagnose) for legemiddelrekvireringen" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indication (diagnosis) for the medication request"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "Condition or observation that supports why the medication was ordered." ] ;
        fhir:comment [ fhir:v "This is a reference to a condition or observation that is the reason for the medication order.  If only a code exists, use reasonCode." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
@@ -1820,7 +2333,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.courseOfTherapyType" ] ;
        fhir:path [ fhir:v "MedicationRequest.courseOfTherapyType" ] ;
-       fhir:short [ fhir:v "Type behandlingsforløp (continuous | acute | seasonal)" ] ;
+       fhir:short [
+         fhir:v "Type behandlingsforløp (continuous | acute | seasonal)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Type of treatment course (continuous | acute | seasonal)"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:definition [ fhir:v "The description of the overall patte3rn of the administration of the medication to the patient." ] ;
        fhir:comment [ fhir:v "This attribute should not be confused with the protocol of the medication." ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
@@ -4089,8 +4629,62 @@
        fhir:id [ fhir:v "MedicationRequest.extension:prosentvisDoseendring" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "prosentvisDoseendring" ] ;
-       fhir:short [ fhir:v "Doseendring i prosent (100% = umodifisert dose)" ] ;
-       fhir:definition [ fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent." ] ;
+       fhir:short [
+         fhir:v "Doseendring i prosent (100% = umodifisert dose)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Dose adjustment in percent (100% = unmodified dose)"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Dose adjustment in percent, compared with the original dosage. Especially relevant for chemotherapy. A normal dose without modifications is 100%. May have values from 0. Unit shall be percent."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:type ( [
@@ -4107,8 +4701,62 @@
        fhir:id [ fhir:v "MedicationRequest.extension:delAvBehandlingsregime" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "delAvBehandlingsregime" ] ;
-       fhir:short [ fhir:v "Del av behandlingsregime" ] ;
-       fhir:definition [ fhir:v "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi." ] ;
+       fhir:short [
+         fhir:v "Del av behandlingsregime" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Part of treatment regimen"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The name of the course, treatment regimen, or protocol that the medication is part of. Especially relevant for chemotherapy."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:type ( [
@@ -4125,8 +4773,62 @@
        fhir:id [ fhir:v "MedicationRequest.extension:kliniskStudie" ] ;
        fhir:path [ fhir:v "MedicationRequest.extension" ] ;
        fhir:sliceName [ fhir:v "kliniskStudie" ] ;
-       fhir:short [ fhir:v "Legemiddel i klinisk studie" ] ;
-       fhir:definition [ fhir:v "Angir om legemidlet gis som en del av en klinisk studie." ] ;
+       fhir:short [
+         fhir:v "Legemiddel i klinisk studie" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Medication in clinical trial"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Angir om legemidlet gis som en del av en klinisk studie." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indicates whether the medication is given as part of a clinical trial."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:type ( [
@@ -4142,15 +4844,150 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.identifier" ] ;
        fhir:path [ fhir:v "MedicationRequest.identifier" ] ;
-       fhir:short [ fhir:v "Identifikator for rekvirering" ] ;
-       fhir:definition [ fhir:v "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes" ] ;
+       fhir:short [
+         fhir:v "Identifikator for rekvirering" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Identifier for the medication request"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must Support: An identifier that uniquely identifies a medication request shall be provided if one exists."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:mustSupport [ fhir:v true ]
      ] [
        fhir:id [ fhir:v "MedicationRequest.status" ] ;
        fhir:path [ fhir:v "MedicationRequest.status" ] ;
-       fhir:short [ fhir:v "Status for rekvireringen" ] ;
-       fhir:definition [ fhir:v "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer" ] ;
-       fhir:comment [ fhir:v "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft" ] ;
+       fhir:short [
+         fhir:v "Status for rekvireringen" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Status of the medication request"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must Support: Status is important for following the lifecycle of a medication request and must be supported by all systems."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:comment [
+         fhir:v "Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Valid values: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:mustSupport [ fhir:v true ] ;
        fhir:binding [
          fhir:strength [ fhir:v "required" ] ;
@@ -4162,7 +4999,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.intent" ] ;
        fhir:path [ fhir:v "MedicationRequest.intent" ] ;
-       fhir:short [ fhir:v "Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option" ] ;
+       fhir:short [
+         fhir:v "Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The intent or purpose of the medication request: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:mustSupport [ fhir:v true ]
      ] [
        fhir:id [ fhir:v "MedicationRequest.reported[x]" ] ;
@@ -4176,7 +5040,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.medication[x]" ] ;
        fhir:path [ fhir:v "MedicationRequest.medication[x]" ] ;
-       fhir:short [ fhir:v "Legemidlet som er rekvirert" ] ;
+       fhir:short [
+         fhir:v "Legemidlet som er rekvirert" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The medication that was requested"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:type ( [
          fhir:code [
            fhir:v "Reference"^^xsd:anyURI ;
@@ -4191,7 +5082,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.subject" ] ;
        fhir:path [ fhir:v "MedicationRequest.subject" ] ;
-       fhir:short [ fhir:v "Pasienten legemidlet er rekvirert til" ] ;
+       fhir:short [
+         fhir:v "Pasienten legemidlet er rekvirert til" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The patient the medication was requested for"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:type ( [
          fhir:code [
            fhir:v "Reference"^^xsd:anyURI ;
@@ -4206,7 +5124,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.encounter" ] ;
        fhir:path [ fhir:v "MedicationRequest.encounter" ] ;
-       fhir:short [ fhir:v "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med." ] ;
+       fhir:short [
+         fhir:v "Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The episode (for example the consultation or admission) associated with the medication request."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:type ( [
          fhir:code [
            fhir:v "Reference"^^xsd:anyURI ;
@@ -4224,7 +5169,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.requester" ] ;
        fhir:path [ fhir:v "MedicationRequest.requester" ] ;
-       fhir:short [ fhir:v "Helsepersonellet som rekvirerte legemidlet" ] ;
+       fhir:short [
+         fhir:v "Helsepersonellet som rekvirerte legemidlet" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "The healthcare professional who requested the medication"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:type ( [
          fhir:code [
@@ -4252,7 +5224,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.reasonReference" ] ;
        fhir:path [ fhir:v "MedicationRequest.reasonReference" ] ;
-       fhir:short [ fhir:v "Indikasjon (diagnose) for legemiddelrekvireringen" ] ;
+       fhir:short [
+         fhir:v "Indikasjon (diagnose) for legemiddelrekvireringen" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indication (diagnosis) for the medication request"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:type ( [
          fhir:code [
            fhir:v "Reference"^^xsd:anyURI ;
@@ -4270,7 +5269,34 @@
      ] [
        fhir:id [ fhir:v "MedicationRequest.courseOfTherapyType" ] ;
        fhir:path [ fhir:v "MedicationRequest.courseOfTherapyType" ] ;
-       fhir:short [ fhir:v "Type behandlingsforløp (continuous | acute | seasonal)" ]
+       fhir:short [
+         fhir:v "Type behandlingsforløp (continuous | acute | seasonal)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Type of treatment course (continuous | acute | seasonal)"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ]
      ] [
        fhir:id [ fhir:v "MedicationRequest.insurance" ] ;
        fhir:path [ fhir:v "MedicationRequest.insurance" ] ;

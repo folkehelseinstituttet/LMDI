@@ -1,10 +1,10 @@
-# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Legemiddel Classification - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification **  | *Version*:1.1.1 **  |
 | Active as of 2025-09-12 | *Computable Name*:LegemiddelClassification |
 
 Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).
@@ -32,7 +32,7 @@ This extension may be used on the following element(s):
 * Use this Extension: [Legemiddel](StructureDefinition-lmdi-medication.md)
 * Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [Medication/Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md), [Medication/Legemiddel-FestLegemiddelVirkestoff-2](Medication-Legemiddel-FestLegemiddelVirkestoff-2.md), [Medication/Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md)... Show 7 more, [Medication/Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md), [Medication/Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md), [Medication/Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md), [Medication/Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md), [Medication/Legemiddel-SCT](Medication-Legemiddel-SCT.md), [Medication/Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) and [Medication/Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/legemiddel-classification)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-legemiddel-classification.json)
 
 ### Formal Views of Extension Content
 
@@ -55,9 +55,22 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
   "resourceType" : "StructureDefinition",
   "id" : "legemiddel-classification",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "LegemiddelClassification",
   "title" : "Legemiddel Classification",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medication Classification"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -76,6 +89,19 @@ Other representations of profile: [CSV](StructureDefinition-legemiddel-classific
     }]
   }],
   "description" : "Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification)."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

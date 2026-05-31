@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="active"/>
-  <date value="2026-03-27"/>
+  <date value="2026-05-29"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -788,7 +788,7 @@
         <reference value="StructureDefinition/lmdi-encounter"/>
       </reference>
       <name value="Episode"/>
-      <description value="Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."/>
+      <description value="En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1052,7 +1052,7 @@
         <reference value="StructureDefinition/lmdi-medicationadministration"/>
       </reference>
       <name value="Legemiddeladministrering"/>
-      <description value="Beskriver administrering av legemiddel til pasient på institusjon.&#xA;&#xA;Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei."/>
+      <description value="Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1217,7 +1217,7 @@
         <reference value="StructureDefinition/lmdi-organization"/>
       </reference>
       <name value="Organisasjon"/>
-      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.&#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.&#xA;&#xA;Det er ønskelig at minimum følgende inngår i &quot;organisasjonshierarkiet&quot;:&#xA;- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)&#xA;- organisasjonen på høyre nivå&#xA;     - sykehus, Helseforetak og Regionalt Helseforetak&#xA;     - sykehjem, kommune&#xA;- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)"/>
+      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1459,7 +1459,7 @@
         <reference value="StructureDefinition/lmdi-substance"/>
       </reference>
       <name value="Virkestoff"/>
-      <description value="En tilpasset profil av Substance for å representere virkestoff, basert på no-basis."/>
+      <description value="En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1550,6 +1550,78 @@
         </extension>
         <nameUrl value="profiler.html"/>
         <title value="FHIR-profiler"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="en-index.html"/>
+        </extension>
+        <nameUrl value="en-index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="en-informasjonsmodell.html"/>
+        </extension>
+        <nameUrl value="en-informasjonsmodell.html"/>
+        <title value="Information model"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="en-integrasjon.html"/>
+        </extension>
+        <nameUrl value="en-integrasjon.html"/>
+        <title value="Integration"/>
+        <generation value="markdown"/>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="en-SignertKryptertBundle.html"/>
+          </extension>
+          <nameUrl value="en-SignertKryptertBundle.html"/>
+          <title value="Signed and encrypted Bundle"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="en-protokoll.html"/>
+          </extension>
+          <nameUrl value="en-protokoll.html"/>
+          <title value="Protocol"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="en-eksempelkode_cs.html"/>
+          </extension>
+          <nameUrl value="en-eksempelkode_cs.html"/>
+          <title value="C# example code"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="en-eksempelkode_ps1.html"/>
+          </extension>
+          <nameUrl value="en-eksempelkode_ps1.html"/>
+          <title value="PowerShell example code"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="en-nedlastinger.html"/>
+        </extension>
+        <nameUrl value="en-nedlastinger.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="en-profiler.html"/>
+        </extension>
+        <nameUrl value="en-profiler.html"/>
+        <title value="FHIR profiles"/>
         <generation value="markdown"/>
       </page>
     </page>

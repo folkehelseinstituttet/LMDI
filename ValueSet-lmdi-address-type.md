@@ -1,10 +1,10 @@
-# LMDI Address Type - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# LMDI Address Type - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-11 | *Computable Name*:LmdiAddressType |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type **  | *Version*:1.1.1 **  |
+| Active as of 2026-05-31 | *Computable Name*:LmdiAddressType |
 
  
 Tillatt verdi for address.type i LMDI: physical 
@@ -53,11 +53,24 @@ Tillatt verdi for address.type i LMDI: physical
   "resourceType" : "ValueSet",
   "id" : "lmdi-address-type",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "LmdiAddressType",
   "title" : "LMDI Address Type",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "LMDI Address Type"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
-  "date" : "2026-05-11T08:19:23+00:00",
+  "date" : "2026-05-31T19:08:08+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -74,6 +87,19 @@ Tillatt verdi for address.type i LMDI: physical
     }]
   }],
   "description" : "Tillatt verdi for address.type i LMDI: physical",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Permitted value for address.type in LMDI: physical."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

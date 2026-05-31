@@ -17,11 +17,38 @@
      fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"^^xsd:anyURI ;
      fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle>
   ] ; # 
-  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:version [ fhir:v "1.1.1"] ; # 
   fhir:name [ fhir:v "LegemiddelregisterBundle"] ; # 
-  fhir:title [ fhir:v "LegemiddelregisterBundle"] ; # 
+  fhir:title [
+     fhir:v "LegemiddelregisterBundle" ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "lang"^^xsd:anyURI ;
+           fhir:l fhir:lang
+         ] ;
+         fhir:value [
+           a fhir:Code ;
+           fhir:v "en"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "content"^^xsd:anyURI ;
+           fhir:l fhir:content
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Legemiddelregisteret Bundle"
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+       ]
+     ] )
+  ] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-05-11T08:19:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-05-31T19:08:08+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -36,7 +63,34 @@
        fhir:value [ fhir:v "legemiddelregisteret@fhi.no" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper."] ; # 
+  fhir:description [
+     fhir:v "Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper." ;
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "lang"^^xsd:anyURI ;
+           fhir:l fhir:lang
+         ] ;
+         fhir:value [
+           a fhir:Code ;
+           fhir:v "en"
+         ]
+       ] [
+         fhir:url [
+           fhir:v "content"^^xsd:anyURI ;
+           fhir:l fhir:content
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Bundle profile for Legemiddelregisteret. Supports only transaction type and POST operations, with restrictions on allowed resource types."
+         ]
+       ] ) ;
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+       ]
+     ] )
+  ] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [
@@ -425,8 +479,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.type" ] ;
        fhir:path [ fhir:v "Bundle.type" ] ;
-       fhir:short [ fhir:v "Må være av type transaction" ] ;
-       fhir:definition [ fhir:v "Angir at bundle må være av type transaction" ] ;
+       fhir:short [
+         fhir:v "Må være av type transaction" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must be of type transaction"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Angir at bundle må være av type transaction" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indicates that the bundle must be of type transaction"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:comment [ fhir:v "It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
@@ -783,8 +891,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.entry" ] ;
        fhir:path [ fhir:v "Bundle.entry" ] ;
-       fhir:short [ fhir:v "Innholdselementer i bundle" ] ;
-       fhir:definition [ fhir:v "Inneholder ressursene som skal sendes inn til registeret" ] ;
+       fhir:short [
+         fhir:v "Innholdselementer i bundle" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Content entries in the bundle"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Inneholder ressursene som skal sendes inn til registeret" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Contains the resources to be submitted to the registry"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "*" ] ;
        fhir:base [
@@ -1461,8 +1623,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
-       fhir:short [ fhir:v "Må være POST" ] ;
-       fhir:definition [ fhir:v "Angir at alle forespørsler i bundle må være av type POST" ] ;
+       fhir:short [
+         fhir:v "Må være POST" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must be POST"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Angir at alle forespørsler i bundle må være av type POST" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indicates that all requests in the bundle must be of type POST"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1515,8 +1731,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
-       fhir:short [ fhir:v "URL for requesten (påkrevd, men verdien har ingen betydning)" ] ;
-       fhir:definition [ fhir:v "Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet." ] ;
+       fhir:short [
+         fhir:v "URL for requesten (påkrevd, men verdien har ingen betydning)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "URL for the request (required, but the value has no significance)"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Represents the address for the request. The URL is required by the FHIR specification for transaction bundles, but the actual value has no functional significance in this case."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:comment [ fhir:v "E.g. for a Patient Create, the method would be \"POST\" and the URL would be \"Patient\". For a Patient Update, the method would be PUT and the URL would be \"Patient/[id]\"." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
@@ -2036,8 +2306,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.type" ] ;
        fhir:path [ fhir:v "Bundle.type" ] ;
-       fhir:short [ fhir:v "Må være av type transaction" ] ;
-       fhir:definition [ fhir:v "Angir at bundle må være av type transaction" ] ;
+       fhir:short [
+         fhir:v "Må være av type transaction" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must be of type transaction"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Angir at bundle må være av type transaction" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indicates that the bundle must be of type transaction"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:fixed [
          a fhir:Code ;
          fhir:v "transaction"
@@ -2059,8 +2383,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.entry" ] ;
        fhir:path [ fhir:v "Bundle.entry" ] ;
-       fhir:short [ fhir:v "Innholdselementer i bundle" ] ;
-       fhir:definition [ fhir:v "Inneholder ressursene som skal sendes inn til registeret" ] ;
+       fhir:short [
+         fhir:v "Innholdselementer i bundle" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Content entries in the bundle"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Inneholder ressursene som skal sendes inn til registeret" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Contains the resources to be submitted to the registry"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:mustSupport [ fhir:v true ]
      ] [
@@ -2076,8 +2454,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.method" ] ;
        fhir:path [ fhir:v "Bundle.entry.request.method" ] ;
-       fhir:short [ fhir:v "Må være POST" ] ;
-       fhir:definition [ fhir:v "Angir at alle forespørsler i bundle må være av type POST" ] ;
+       fhir:short [
+         fhir:v "Må være POST" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Must be POST"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Angir at alle forespørsler i bundle må være av type POST" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Indicates that all requests in the bundle must be of type POST"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
        fhir:fixed [
          a fhir:Code ;
          fhir:v "POST"
@@ -2086,8 +2518,62 @@
      ] [
        fhir:id [ fhir:v "Bundle.entry.request.url" ] ;
        fhir:path [ fhir:v "Bundle.entry.request.url" ] ;
-       fhir:short [ fhir:v "URL for requesten (påkrevd, men verdien har ingen betydning)" ] ;
-       fhir:definition [ fhir:v "Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet." ]
+       fhir:short [
+         fhir:v "URL for requesten (påkrevd, men verdien har ingen betydning)" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "URL for the request (required, but the value has no significance)"
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ] ;
+       fhir:definition [
+         fhir:v "Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet." ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [
+               fhir:v "lang"^^xsd:anyURI ;
+               fhir:l fhir:lang
+             ] ;
+             fhir:value [
+               a fhir:Code ;
+               fhir:v "en"
+             ]
+           ] [
+             fhir:url [
+               fhir:v "content"^^xsd:anyURI ;
+               fhir:l fhir:content
+             ] ;
+             fhir:value [
+               a fhir:String ;
+               fhir:v "Represents the address for the request. The URL is required by the FHIR specification for transaction bundles, but the actual value has no functional significance in this case."
+             ]
+           ] ) ;
+           fhir:url [
+             fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ;
+             fhir:l <http://hl7.org/fhir/StructureDefinition/translation>
+           ]
+         ] )
+       ]
      ] )
   ] . # 
 

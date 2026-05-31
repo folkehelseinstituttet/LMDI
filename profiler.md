@@ -1,26 +1,40 @@
-# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * **FHIR-profiler**
 
 ### FHIR-profiler
 
-| | |
-| :--- | :--- |
-| [Diagnose](StructureDefinition-lmdi-condition.md) | Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for. |
-| [Episode](StructureDefinition-lmdi-encounter.md) | Profil for en behandlingsepisode basert på Encounter-ressursen i FHIR. Denne profilen representerer et klinisk møte eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. |
-| [Helsepersonell](StructureDefinition-lmdi-practitioner.md) | Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. |
-| [Legemiddel](StructureDefinition-lmdi-medication.md) | Beskrivelse av legemiddel. |
-| [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei. |
-| [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.md) | Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. |
-| [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel |
-| [Organisasjon](StructureDefinition-lmdi-organization.md) | Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization. Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen. Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet": - organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende) - organisasjonen på høyre nivå - sykehus, Helseforetak og Regionalt Helseforetak - sykehjem, kommune - minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH) |
-| [Pasient](StructureDefinition-lmdi-patient.md) | Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient |
-| [Virkestoff](StructureDefinition-lmdi-substance.md) | En tilpasset profil av Substance for å representere virkestoff, basert på no-basis. |
+Implementasjonsguiden definerer følgende FHIR-profiler og extensions.
+
+#### Kjerneprofiler
+
+| | | |
+| :--- | :--- | :--- |
+| [Diagnose](StructureDefinition-lmdi-condition.md) | Condition | Diagnosen pasienten fikk legemiddelrekvirering eller legemiddeladministrering for. |
+| [Episode](StructureDefinition-lmdi-encounter.md) | Encounter | Klinisk kontakt eller behandlingsopphold, med vekt på organisatorisk tilknytning. |
+| [Helsepersonell](StructureDefinition-lmdi-practitioner.md) | Practitioner | Helsepersonell som har rekvirert legemiddelet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når det finnes. |
+| [Legemiddel](StructureDefinition-lmdi-medication.md) | Medication | Beskrivelse av et legemiddel. |
+| [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | MedicationAdministration | Beskriver administrering av et legemiddel til en pasient i institusjon. Dette er kjerneressursen i implementasjonsguiden. |
+| [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.md) | Bundle | Bundle-profil for Legemiddelregisteret. Støtter kun transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. Bundle kan bare inneholde: Condition, Practitioner, Encounter, Medication, MedicationAdministration, MedicationRequest, Organization, Patient og Substance. |
+| [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | MedicationRequest | Legemiddelrekvirering, resept, forordning eller annen bestilling av legemiddel. |
+| [Organisasjon](StructureDefinition-lmdi-organization.md) | Organization | Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization. |
+| [Pasient](StructureDefinition-lmdi-patient.md) | Patient | Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient. |
+| [Virkestoff](StructureDefinition-lmdi-substance.md) | Substance | Tilpasset Substance-profil for å representere virkestoff, basert på no-basis-Substance. |
+
+#### Extensions
+
+| | | |
+| :--- | :--- | :--- |
+| [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
+| [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Angir om legemidlet gis som en del av en klinisk studie. |
+| [LegemiddelClassification](StructureDefinition-legemiddel-classification.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
+| [NprEpisodeIdentifier](StructureDefinition-npr-episode-identifier.md) | [Episode](StructureDefinition-lmdi-encounter.md) | Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Støtter både string-basert og UUID-basert representasjon. |
+| [ProsentvisDoseendring](StructureDefinition-lmdi-prosentvis-doseendring.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. |
 

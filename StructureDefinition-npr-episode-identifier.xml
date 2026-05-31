@@ -18,11 +18,20 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="NprEpisodeIdentifier"/>
-  <title value="NPR Episode Identifier"/>
+  <title value="NPR Episode Identifier">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="NPR Episode Identifier"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
-  <date value="2026-05-11T08:19:23+00:00"/>
+  <date value="2026-05-31T19:08:08+00:00"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -38,7 +47,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren."/>
+  <description value="Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -178,8 +196,26 @@
     <element id="Extension.extension:stringIdentifier">
       <path value="Extension.extension"/>
       <sliceName value="stringIdentifier"/>
-      <short value="String-representasjon av NPR episodeidentifikatoren"/>
-      <definition value="String-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig."/>
+      <short value="String-representasjon av NPR episodeidentifikatoren">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="String representation of the NPR episode identifier"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="String-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="String representation of the selected NPR episode identifier. Shall be provided if the string representation of the identifier is available."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -335,8 +371,26 @@
     <element id="Extension.extension:uuidIdentifier">
       <path value="Extension.extension"/>
       <sliceName value="uuidIdentifier"/>
-      <short value="UUID-representasjon av NPR episodeidentifikatoren"/>
-      <definition value="UUID-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig."/>
+      <short value="UUID-representasjon av NPR episodeidentifikatoren">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="UUID representation of the NPR episode identifier"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="UUID-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="UUID representation of the selected NPR episode identifier. Shall be provided if the UUID representation of the identifier is available."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -709,8 +763,26 @@
     <element id="Extension.extension:stringIdentifier">
       <path value="Extension.extension"/>
       <sliceName value="stringIdentifier"/>
-      <short value="String-representasjon av NPR episodeidentifikatoren"/>
-      <definition value="String-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig."/>
+      <short value="String-representasjon av NPR episodeidentifikatoren">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="String representation of the NPR episode identifier"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="String-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="String representation of the selected NPR episode identifier. Shall be provided if the string representation of the identifier is available."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>
@@ -733,8 +805,26 @@
     <element id="Extension.extension:uuidIdentifier">
       <path value="Extension.extension"/>
       <sliceName value="uuidIdentifier"/>
-      <short value="UUID-representasjon av NPR episodeidentifikatoren"/>
-      <definition value="UUID-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig."/>
+      <short value="UUID-representasjon av NPR episodeidentifikatoren">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="UUID representation of the NPR episode identifier"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="UUID-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="UUID representation of the selected NPR episode identifier. Shall be provided if the UUID representation of the identifier is available."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <mustSupport value="true"/>

@@ -40,9 +40,18 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Diagnose"/>
-  <title value="Diagnose"/>
+  <title value="Diagnose">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Diagnosis"/>
+      </extension>
+    </extension>
+  </title>
   <status value="draft"/>
   <date value="2025-09-12"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -60,7 +69,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for."/>
+  <description value="Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="The diagnosis for which the patient received a medication request or administration."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -733,8 +751,26 @@
     </element>
     <element id="Condition.code">
       <path value="Condition.code"/>
-      <short value="Diagnosekode."/>
-      <definition value="Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT."/>
+      <short value="Diagnosekode.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."/>
+          </extension>
+        </extension>
+      </definition>
       <requirements value="0..1 to account for primarily narrative only resources."/>
       <alias value="type"/>
       <min value="1"/>
@@ -912,8 +948,26 @@
     <element id="Condition.code.coding:SCT">
       <path value="Condition.code.coding"/>
       <sliceName value="SCT"/>
-      <short value="SNOMED CT"/>
-      <definition value="SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta."/>
+      <short value="SNOMED CT">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT is a systematic collection of clinical concepts that can be used to document and share information related to patient care. Using a common terminology makes it easier to communicate across different parts of the health service."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -1221,8 +1275,26 @@
     <element id="Condition.code.coding:ICD10">
       <path value="Condition.code.coding"/>
       <sliceName value="ICD10"/>
-      <short value="ICD-10"/>
-      <definition value="ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer."/>
+      <short value="ICD-10">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICD-10"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICD-10: The International Statistical Classification of Diseases and Related Health Problems."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -1411,7 +1483,16 @@
     </element>
     <element id="Condition.code.coding:ICD10.code">
       <path value="Condition.code.coding.code"/>
-      <short value="Diagnosekode fra kodeverket"/>
+      <short value="Diagnosekode fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -1452,7 +1533,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Condition.code.coding.display"/>
-      <short value="Beskrivelse av diagnosekode (fra kodeverket)"/>
+      <short value="Beskrivelse av diagnosekode (fra kodeverket)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code description (from the code system)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -1530,9 +1620,27 @@
     <element id="Condition.code.coding:ICD11">
       <path value="Condition.code.coding"/>
       <sliceName value="ICD11"/>
-      <short value="ICD-11"/>
+      <short value="ICD-11">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICD-11"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS)."/>
-      <comment value="Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS."/>
+      <comment value="Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Should be replaced by a namespace that points to general ICD-11, not MMS."/>
+          </extension>
+        </extension>
+      </comment>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
       <max value="1"/>
@@ -1720,7 +1828,16 @@
     </element>
     <element id="Condition.code.coding:ICD11.code">
       <path value="Condition.code.coding.code"/>
-      <short value="Diagnosekode fra kodeverket"/>
+      <short value="Diagnosekode fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -1761,7 +1878,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Condition.code.coding.display"/>
-      <short value="Beskrivelse av diagnosekode (fra kodeverket)"/>
+      <short value="Beskrivelse av diagnosekode (fra kodeverket)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code description (from the code system)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -1839,8 +1965,26 @@
     <element id="Condition.code.coding:ICPC2">
       <path value="Condition.code.coding"/>
       <sliceName value="ICPC2"/>
-      <short value="ICPC-2"/>
-      <definition value="ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten."/>
+      <short value="ICPC-2">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICPC-2"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICPC-2 is the International Classification of Primary Care, for health problems, diagnoses, and other reasons for contact with primary care."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -2029,7 +2173,16 @@
     </element>
     <element id="Condition.code.coding:ICPC2.code">
       <path value="Condition.code.coding.code"/>
-      <short value="Diagnosekode fra kodeverket"/>
+      <short value="Diagnosekode fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -2070,7 +2223,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Condition.code.coding.display"/>
-      <short value="Beskrivelse av diagnosekode (fra kodeverket)"/>
+      <short value="Beskrivelse av diagnosekode (fra kodeverket)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code description (from the code system)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -2235,7 +2397,16 @@
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject"/>
-      <short value="Pasienten diagnosen er knyttet til."/>
+      <short value="Pasienten diagnosen er knyttet til.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The patient the diagnosis is associated with."/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Indicates the patient or group who the condition record is associated with."/>
       <requirements value="Group is typically used for veterinary or public health use cases."/>
       <alias value="patient"/>
@@ -3088,8 +3259,26 @@
     </element>
     <element id="Condition.code">
       <path value="Condition.code"/>
-      <short value="Diagnosekode."/>
-      <definition value="Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT."/>
+      <short value="Diagnosekode.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="1"/>
     </element>
     <element id="Condition.code.coding">
@@ -3105,8 +3294,26 @@
     <element id="Condition.code.coding:SCT">
       <path value="Condition.code.coding"/>
       <sliceName value="SCT"/>
-      <short value="SNOMED CT"/>
-      <definition value="SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta."/>
+      <short value="SNOMED CT">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT is a systematic collection of clinical concepts that can be used to document and share information related to patient care. Using a common terminology makes it easier to communicate across different parts of the health service."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -3122,8 +3329,26 @@
     <element id="Condition.code.coding:ICD10">
       <path value="Condition.code.coding"/>
       <sliceName value="ICD10"/>
-      <short value="ICD-10"/>
-      <definition value="ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer."/>
+      <short value="ICD-10">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICD-10"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICD-10: The International Statistical Classification of Diseases and Related Health Problems."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -3134,19 +3359,55 @@
     </element>
     <element id="Condition.code.coding:ICD10.code">
       <path value="Condition.code.coding.code"/>
-      <short value="Diagnosekode fra kodeverket"/>
+      <short value="Diagnosekode fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="Condition.code.coding:ICD10.display">
       <path value="Condition.code.coding.display"/>
-      <short value="Beskrivelse av diagnosekode (fra kodeverket)"/>
+      <short value="Beskrivelse av diagnosekode (fra kodeverket)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code description (from the code system)"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Condition.code.coding:ICD11">
       <path value="Condition.code.coding"/>
       <sliceName value="ICD11"/>
-      <short value="ICD-11"/>
+      <short value="ICD-11">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICD-11"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS)."/>
-      <comment value="Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS."/>
+      <comment value="Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Should be replaced by a namespace that points to general ICD-11, not MMS."/>
+          </extension>
+        </extension>
+      </comment>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -3158,18 +3419,54 @@
     </element>
     <element id="Condition.code.coding:ICD11.code">
       <path value="Condition.code.coding.code"/>
-      <short value="Diagnosekode fra kodeverket"/>
+      <short value="Diagnosekode fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="Condition.code.coding:ICD11.display">
       <path value="Condition.code.coding.display"/>
-      <short value="Beskrivelse av diagnosekode (fra kodeverket)"/>
+      <short value="Beskrivelse av diagnosekode (fra kodeverket)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code description (from the code system)"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Condition.code.coding:ICPC2">
       <path value="Condition.code.coding"/>
       <sliceName value="ICPC2"/>
-      <short value="ICPC-2"/>
-      <definition value="ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten."/>
+      <short value="ICPC-2">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICPC-2"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ICPC-2 is the International Classification of Primary Care, for health problems, diagnoses, and other reasons for contact with primary care."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -3180,12 +3477,30 @@
     </element>
     <element id="Condition.code.coding:ICPC2.code">
       <path value="Condition.code.coding.code"/>
-      <short value="Diagnosekode fra kodeverket"/>
+      <short value="Diagnosekode fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="Condition.code.coding:ICPC2.display">
       <path value="Condition.code.coding.display"/>
-      <short value="Beskrivelse av diagnosekode (fra kodeverket)"/>
+      <short value="Beskrivelse av diagnosekode (fra kodeverket)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Diagnosis code description (from the code system)"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite"/>
@@ -3193,7 +3508,16 @@
     </element>
     <element id="Condition.subject">
       <path value="Condition.subject"/>
-      <short value="Pasienten diagnosen er knyttet til."/>
+      <short value="Pasienten diagnosen er knyttet til.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The patient the diagnosis is associated with."/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>

@@ -63,9 +63,18 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Legemiddel"/>
-  <title value="Legemiddel"/>
+  <title value="Legemiddel">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medication"/>
+      </extension>
+    </extension>
+  </title>
   <status value="draft"/>
   <date value="2025-09-30"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -83,7 +92,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Beskrivelse av legemiddel."/>
+  <description value="Beskrivelse av legemiddel.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Description of a medication."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -412,9 +430,36 @@
     <element id="Medication.extension:classification">
       <path value="Medication.extension"/>
       <sliceName value="classification"/>
-      <short value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem."/>
-      <definition value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode."/>
-      <comment value="Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO."/>
+      <short value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Classification of the medication using an ATC code from the WHO ATC code system."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Classification of the medication using an ATC code from the WHO ATC code system. A medication normally has only one ATC code."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="This extension is used to specify the medication's classification according to standardized code systems, primarily WHO ATC codes."/>
+          </extension>
+        </extension>
+      </comment>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -524,7 +569,16 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code"/>
-      <short value="Identifikator fra FEST, SNOMED CT eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi."/>
+      <short value="Identifikator fra FEST, SNOMED CT eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifier from FEST, SNOMED CT, or the local medication catalog. If not populated, ingredient shall have a value. If LokaltLegemiddel is populated, ingredient should have a value."/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems."/>
       <comment value="Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: &quot;A coding may be marked as a &quot;userSelected&quot; if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one)."/>
       <min value="0"/>
@@ -690,8 +744,26 @@
     <element id="Medication.code.coding:FestLegemiddeldose">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddeldose"/>
-      <short value="FEST-id for legemiddeldose"/>
-      <definition value="Unik identifikator (legemiddeldose-id) for minste plukkbare enhet av en bestemt merkevare, f.eks. 1 tablett eller 1 ampulle."/>
+      <short value="FEST-id for legemiddeldose">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for medication dose"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator (legemiddeldose-id) for minste plukkbare enhet av en bestemt merkevare, f.eks. 1 tablett eller 1 ampulle.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier (medication dose ID) for the smallest dispensable unit of a specific branded product, for example one tablet or one ampoule."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -921,7 +993,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="NavnFormStyrke fra FEST"/>
+      <short value="NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -999,8 +1080,26 @@
     <element id="Medication.code.coding:FestLmrLopenr">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLmrLopenr"/>
-      <short value="Fest-løpenummer som identifiserer legemiddeldose"/>
-      <definition value="LMR-nummer brukt til å identifisere en endose/minste enhet som kan utleveres; overtatt fra Sykehusapotekenes Legemiddelregister."/>
+      <short value="Fest-løpenummer som identifiserer legemiddeldose">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST sequence number identifying the medication dose"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="LMR-nummer brukt til å identifisere en endose/minste enhet som kan utleveres; overtatt fra Sykehusapotekenes Legemiddelregister.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="LMR number used to identify a single dose or smallest dispensable unit; inherited from the Hospital Pharmacy Medication Register."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -1230,7 +1329,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="NavnFormStyrke fra FEST"/>
+      <short value="NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -1308,8 +1416,26 @@
     <element id="Medication.code.coding:FestLegemiddelMerkevare">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddelMerkevare"/>
-      <short value="FEST-id for LegemiddelMerkevare"/>
-      <definition value="Unik identifikator for en bestemt styrke og legemiddelform av en merkevare (branded product) i FEST."/>
+      <short value="FEST-id for LegemiddelMerkevare">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for branded medication"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator for en bestemt styrke og legemiddelform av en merkevare (branded product) i FEST.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier for a specific strength and form of a branded product in FEST."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -1539,7 +1665,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="Varenavn eller NavnFormStyrke fra FEST"/>
+      <short value="Varenavn eller NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Product name or name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -1617,8 +1752,26 @@
     <element id="Medication.code.coding:FestLegemiddelpakning">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddelpakning"/>
-      <short value="FEST-id for legemiddelpakning"/>
-      <definition value="Unik identifikator for en konkret pakning av en merkevare i katalogen LegemiddelPakningMerkevare."/>
+      <short value="FEST-id for legemiddelpakning">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for medication package"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator for en konkret pakning av en merkevare i katalogen LegemiddelPakningMerkevare.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier for a specific package of a branded product in the LegemiddelPakningMerkevare catalog."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -1848,7 +2001,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="Varenavn eller NavnFormStyrke fra FEST"/>
+      <short value="Varenavn eller NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Product name or name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -1926,8 +2088,26 @@
     <element id="Medication.code.coding:Varenummer">
       <path value="Medication.code.coding"/>
       <sliceName value="Varenummer"/>
-      <short value="Varenummer - Unikt produktnummer for legemiddelpakninger"/>
-      <definition value="Varenummeret for legemiddelpakningen; brukes som unikt produktnummer blant annet i resept- og apotekkjeden."/>
+      <short value="Varenummer - Unikt produktnummer for legemiddelpakninger">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Item number - unique product number for medication packages"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Varenummeret for legemiddelpakningen; brukes som unikt produktnummer blant annet i resept- og apotekkjeden.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The item number for the medication package; used as a unique product number in the prescription and pharmacy chain."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -2157,7 +2337,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="Varenavn eller NavnFormStyrke fra FEST"/>
+      <short value="Varenavn eller NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Product name or name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -2235,8 +2424,26 @@
     <element id="Medication.code.coding:FestLegemiddelVirkestoff">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddelVirkestoff"/>
-      <short value="FEST-id for legemiddel virkestoff"/>
-      <definition value="Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST."/>
+      <short value="FEST-id for legemiddel virkestoff">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for medication substance"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier (LegemiddelVirkestoff_ID) for substance-based prescribing in FEST."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -2466,7 +2673,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="NavnFormStyrke fra FEST"/>
+      <short value="NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -2544,8 +2760,26 @@
     <element id="Medication.code.coding:LokaltLegemiddel">
       <path value="Medication.code.coding"/>
       <sliceName value="LokaltLegemiddel"/>
-      <short value="Legemiddel fra lokal katalog"/>
-      <definition value="Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. "/>
+      <short value="Legemiddel fra lokal katalog">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication from a local catalog"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. ">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Should only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, FHI should agree on how LMR will access the medication catalog to retrieve information about the local medication."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -2734,7 +2968,16 @@
     </element>
     <element id="Medication.code.coding:LokaltLegemiddel.code">
       <path value="Medication.code.coding.code"/>
-      <short value="Identifikator fra lokal legemiddelkatalog/legemiddelregister"/>
+      <short value="Identifikator fra lokal legemiddelkatalog/legemiddelregister">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifier from the local medication catalog or medication register"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -2775,7 +3018,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.code.coding.display"/>
-      <short value="Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"/>
+      <short value="Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Description (for example, product name) for a medication from the local medication catalog or register"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="1"/>
@@ -2853,8 +3105,26 @@
     <element id="Medication.code.coding:SCT">
       <path value="Medication.code.coding"/>
       <sliceName value="SCT"/>
-      <short value="SNOMED CT-kode for legemiddel"/>
-      <definition value="SNOMED CT-kode for legemiddel eller substans, for semantisk klassifisering og gruppering."/>
+      <short value="SNOMED CT-kode for legemiddel">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT code for medication"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="SNOMED CT-kode for legemiddel eller substans, for semantisk klassifisering og gruppering.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT code for medication or substance, used for semantic classification and grouping."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -3043,7 +3313,16 @@
     </element>
     <element id="Medication.code.coding:SCT.code">
       <path value="Medication.code.coding.code"/>
-      <short value="SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."/>
+      <short value="SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001].">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The SNOMED CT code shall be a subtype of 'Medication (product)' [763158003] or 'Substance' [105590001]."/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -3284,7 +3563,16 @@
     </element>
     <element id="Medication.form">
       <path value="Medication.form"/>
-      <short value="Legemiddelform"/>
+      <short value="Legemiddelform">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication form"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Describes the form of the item.  Powder; tablets; capsule."/>
       <comment value="When Medication is referenced from MedicationRequest, this is the ordered form.  When Medication is referenced within MedicationDispense, this is the dispensed form.  When Medication is referenced within MedicationAdministration, this is administered form."/>
       <min value="0"/>
@@ -3410,9 +3698,27 @@
         </discriminator>
         <rules value="closed"/>
       </slicing>
-      <short value="Legemiddelform"/>
+      <short value="Legemiddelform">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication form"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A reference to a code defined by a terminology system."/>
-      <comment value="Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT."/>
+      <comment value="Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Coded medication form. Currently limited to medication form (OID: 7448) and the HL7 SNOMED CT example code set."/>
+          </extension>
+        </extension>
+      </comment>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="1"/>
       <max value="*"/>
@@ -3719,7 +4025,16 @@
     <element id="Medication.form.coding:OID7448">
       <path value="Medication.form.coding"/>
       <sliceName value="OID7448"/>
-      <short value="Kodeverk Legemiddelform (OID:7448) fra FEST"/>
+      <short value="Kodeverk Legemiddelform (OID:7448) fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication form code system (OID:7448) from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A reference to a code defined by a terminology system."/>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
@@ -3909,7 +4224,16 @@
     </element>
     <element id="Medication.form.coding:OID7448.code">
       <path value="Medication.form.coding.code"/>
-      <short value="Verdi fra kodeverket"/>
+      <short value="Verdi fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Value from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -3950,7 +4274,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="Medication.form.coding.display"/>
-      <short value="Beskrivelse av koden (navn) fra kodeverket"/>
+      <short value="Beskrivelse av koden (navn) fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Code description (name) from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -4409,9 +4742,36 @@
     </element>
     <element id="Medication.ingredient">
       <path value="Medication.ingredient"/>
-      <short value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi."/>
-      <definition value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi."/>
-      <comment value="For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."/>
+      <short value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Ingredient(s) in the medication. Shall be populated if code has no value. Should be populated if code.coding[LokaltLegemiddel] has a value."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Ingredient(s) in the medication. Shall be populated if code has no value. Should be populated if code.coding[LokaltLegemiddel] has a value."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="For medications identified with FEST codes (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) or SNOMED CT, ingredient is optional because substance information can be retrieved from those catalogs. For local medications, it is recommended to specify ingredient for better traceability."/>
+          </extension>
+        </extension>
+      </comment>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -4749,7 +5109,16 @@
     </element>
     <element id="Medication.batch">
       <path value="Medication.batch"/>
-      <short value="Batch-nummer for legemiddelet"/>
+      <short value="Batch-nummer for legemiddelet">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Batch number for the medication"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Information that only applies to packages (not products)."/>
       <min value="0"/>
       <max value="1"/>
@@ -4992,9 +5361,36 @@
     <element id="Medication.extension:classification">
       <path value="Medication.extension"/>
       <sliceName value="classification"/>
-      <short value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem."/>
-      <definition value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode."/>
-      <comment value="Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO."/>
+      <short value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Classification of the medication using an ATC code from the WHO ATC code system."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Klassifisering av legemidlet ved bruk av ATC-kode fra WHO ATC kodesystem. Et legemiddel har i utgangspunktet kun én ATC-kode.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Classification of the medication using an ATC code from the WHO ATC code system. A medication normally has only one ATC code."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Denne extension brukes for å angi legemidlets klassifisering i henhold til standardiserte kodesystemer, primært ATC-koder fra WHO.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="This extension is used to specify the medication's classification according to standardized code systems, primarily WHO ATC codes."/>
+          </extension>
+        </extension>
+      </comment>
       <min value="0"/>
       <max value="*"/>
       <type>
@@ -5004,7 +5400,16 @@
     </element>
     <element id="Medication.code">
       <path value="Medication.code"/>
-      <short value="Identifikator fra FEST, SNOMED CT eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi."/>
+      <short value="Identifikator fra FEST, SNOMED CT eller LokalLegemiddelkatalog. Hvis ikke fylt ut, skal ingredient ha verdi. Hvis LokaltLegemiddel er fylt ut bør ingredient ha verdi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifier from FEST, SNOMED CT, or the local medication catalog. If not populated, ingredient shall have a value. If LokaltLegemiddel is populated, ingredient should have a value."/>
+          </extension>
+        </extension>
+      </short>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder"/>
@@ -5023,8 +5428,26 @@
     <element id="Medication.code.coding:FestLegemiddeldose">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddeldose"/>
-      <short value="FEST-id for legemiddeldose"/>
-      <definition value="Unik identifikator (legemiddeldose-id) for minste plukkbare enhet av en bestemt merkevare, f.eks. 1 tablett eller 1 ampulle."/>
+      <short value="FEST-id for legemiddeldose">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for medication dose"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator (legemiddeldose-id) for minste plukkbare enhet av en bestemt merkevare, f.eks. 1 tablett eller 1 ampulle.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier (medication dose ID) for the smallest dispensable unit of a specific branded product, for example one tablet or one ampoule."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5040,13 +5463,40 @@
     </element>
     <element id="Medication.code.coding:FestLegemiddeldose.display">
       <path value="Medication.code.coding.display"/>
-      <short value="NavnFormStyrke fra FEST"/>
+      <short value="NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.code.coding:FestLmrLopenr">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLmrLopenr"/>
-      <short value="Fest-løpenummer som identifiserer legemiddeldose"/>
-      <definition value="LMR-nummer brukt til å identifisere en endose/minste enhet som kan utleveres; overtatt fra Sykehusapotekenes Legemiddelregister."/>
+      <short value="Fest-løpenummer som identifiserer legemiddeldose">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST sequence number identifying the medication dose"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="LMR-nummer brukt til å identifisere en endose/minste enhet som kan utleveres; overtatt fra Sykehusapotekenes Legemiddelregister.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="LMR number used to identify a single dose or smallest dispensable unit; inherited from the Hospital Pharmacy Medication Register."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5062,13 +5512,40 @@
     </element>
     <element id="Medication.code.coding:FestLmrLopenr.display">
       <path value="Medication.code.coding.display"/>
-      <short value="NavnFormStyrke fra FEST"/>
+      <short value="NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.code.coding:FestLegemiddelMerkevare">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddelMerkevare"/>
-      <short value="FEST-id for LegemiddelMerkevare"/>
-      <definition value="Unik identifikator for en bestemt styrke og legemiddelform av en merkevare (branded product) i FEST."/>
+      <short value="FEST-id for LegemiddelMerkevare">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for branded medication"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator for en bestemt styrke og legemiddelform av en merkevare (branded product) i FEST.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier for a specific strength and form of a branded product in FEST."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5084,13 +5561,40 @@
     </element>
     <element id="Medication.code.coding:FestLegemiddelMerkevare.display">
       <path value="Medication.code.coding.display"/>
-      <short value="Varenavn eller NavnFormStyrke fra FEST"/>
+      <short value="Varenavn eller NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Product name or name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.code.coding:FestLegemiddelpakning">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddelpakning"/>
-      <short value="FEST-id for legemiddelpakning"/>
-      <definition value="Unik identifikator for en konkret pakning av en merkevare i katalogen LegemiddelPakningMerkevare."/>
+      <short value="FEST-id for legemiddelpakning">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for medication package"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator for en konkret pakning av en merkevare i katalogen LegemiddelPakningMerkevare.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier for a specific package of a branded product in the LegemiddelPakningMerkevare catalog."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5106,13 +5610,40 @@
     </element>
     <element id="Medication.code.coding:FestLegemiddelpakning.display">
       <path value="Medication.code.coding.display"/>
-      <short value="Varenavn eller NavnFormStyrke fra FEST"/>
+      <short value="Varenavn eller NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Product name or name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.code.coding:Varenummer">
       <path value="Medication.code.coding"/>
       <sliceName value="Varenummer"/>
-      <short value="Varenummer - Unikt produktnummer for legemiddelpakninger"/>
-      <definition value="Varenummeret for legemiddelpakningen; brukes som unikt produktnummer blant annet i resept- og apotekkjeden."/>
+      <short value="Varenummer - Unikt produktnummer for legemiddelpakninger">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Item number - unique product number for medication packages"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Varenummeret for legemiddelpakningen; brukes som unikt produktnummer blant annet i resept- og apotekkjeden.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The item number for the medication package; used as a unique product number in the prescription and pharmacy chain."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5128,13 +5659,40 @@
     </element>
     <element id="Medication.code.coding:Varenummer.display">
       <path value="Medication.code.coding.display"/>
-      <short value="Varenavn eller NavnFormStyrke fra FEST"/>
+      <short value="Varenavn eller NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Product name or name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.code.coding:FestLegemiddelVirkestoff">
       <path value="Medication.code.coding"/>
       <sliceName value="FestLegemiddelVirkestoff"/>
-      <short value="FEST-id for legemiddel virkestoff"/>
-      <definition value="Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST."/>
+      <short value="FEST-id for legemiddel virkestoff">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="FEST ID for medication substance"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Unique identifier (LegemiddelVirkestoff_ID) for substance-based prescribing in FEST."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5150,13 +5708,40 @@
     </element>
     <element id="Medication.code.coding:FestLegemiddelVirkestoff.display">
       <path value="Medication.code.coding.display"/>
-      <short value="NavnFormStyrke fra FEST"/>
+      <short value="NavnFormStyrke fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Name, form, and strength from FEST"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.code.coding:LokaltLegemiddel">
       <path value="Medication.code.coding"/>
       <sliceName value="LokaltLegemiddel"/>
-      <short value="Legemiddel fra lokal katalog"/>
-      <definition value="Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. "/>
+      <short value="Legemiddel fra lokal katalog">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication from a local catalog"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. ">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Should only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, FHI should agree on how LMR will access the medication catalog to retrieve information about the local medication."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5167,19 +5752,55 @@
     </element>
     <element id="Medication.code.coding:LokaltLegemiddel.code">
       <path value="Medication.code.coding.code"/>
-      <short value="Identifikator fra lokal legemiddelkatalog/legemiddelregister"/>
+      <short value="Identifikator fra lokal legemiddelkatalog/legemiddelregister">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifier from the local medication catalog or medication register"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="Medication.code.coding:LokaltLegemiddel.display">
       <path value="Medication.code.coding.display"/>
-      <short value="Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister"/>
+      <short value="Beskrivelse (f.eks. varenavn) for legemiddel fra lokal legemiddelkatalog/legemiddelregister">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Description (for example, product name) for a medication from the local medication catalog or register"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="Medication.code.coding:SCT">
       <path value="Medication.code.coding"/>
       <sliceName value="SCT"/>
-      <short value="SNOMED CT-kode for legemiddel"/>
-      <definition value="SNOMED CT-kode for legemiddel eller substans, for semantisk klassifisering og gruppering."/>
+      <short value="SNOMED CT-kode for legemiddel">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT code for medication"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="SNOMED CT-kode for legemiddel eller substans, for semantisk klassifisering og gruppering.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT code for medication or substance, used for semantic classification and grouping."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5190,7 +5811,16 @@
     </element>
     <element id="Medication.code.coding:SCT.code">
       <path value="Medication.code.coding.code"/>
-      <short value="SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."/>
+      <short value="SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001].">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The SNOMED CT code shall be a subtype of 'Medication (product)' [763158003] or 'Substance' [105590001]."/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="Medication.code.text">
@@ -5203,7 +5833,16 @@
     </element>
     <element id="Medication.form">
       <path value="Medication.form"/>
-      <short value="Legemiddelform"/>
+      <short value="Legemiddelform">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication form"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.form.coding">
       <path value="Medication.form.coding"/>
@@ -5214,8 +5853,26 @@
         </discriminator>
         <rules value="closed"/>
       </slicing>
-      <short value="Legemiddelform"/>
-      <comment value="Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT."/>
+      <short value="Legemiddelform">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication form"/>
+          </extension>
+        </extension>
+      </short>
+      <comment value="Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Coded medication form. Currently limited to medication form (OID: 7448) and the HL7 SNOMED CT example code set."/>
+          </extension>
+        </extension>
+      </comment>
       <min value="1"/>
     </element>
     <element id="Medication.form.coding.system">
@@ -5233,7 +5890,16 @@
     <element id="Medication.form.coding:OID7448">
       <path value="Medication.form.coding"/>
       <sliceName value="OID7448"/>
-      <short value="Kodeverk Legemiddelform (OID:7448) fra FEST"/>
+      <short value="Kodeverk Legemiddelform (OID:7448) fra FEST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication form code system (OID:7448) from FEST"/>
+          </extension>
+        </extension>
+      </short>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -5243,11 +5909,29 @@
     </element>
     <element id="Medication.form.coding:OID7448.code">
       <path value="Medication.form.coding.code"/>
-      <short value="Verdi fra kodeverket"/>
+      <short value="Verdi fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Value from the code system"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.form.coding:OID7448.display">
       <path value="Medication.form.coding.display"/>
-      <short value="Beskrivelse av koden (navn) fra kodeverket"/>
+      <short value="Beskrivelse av koden (navn) fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Code description (name) from the code system"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Medication.form.coding:SCT">
       <path value="Medication.form.coding"/>
@@ -5266,9 +5950,36 @@
     </element>
     <element id="Medication.ingredient">
       <path value="Medication.ingredient"/>
-      <short value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi."/>
-      <definition value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi."/>
-      <comment value="For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet."/>
+      <short value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Ingredient(s) in the medication. Shall be populated if code has no value. Should be populated if code.coding[LokaltLegemiddel] has a value."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Virkestoff(er) som inngår i legemiddelet. Skal fylles ut hvis code ikke har verdi. Bør fylles ut hvis code.coding[LokaltLegemiddel] har verdi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Ingredient(s) in the medication. Shall be populated if code has no value. Should be populated if code.coding[LokaltLegemiddel] has a value."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="For legemidler identifisert med FEST-koder (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) eller SNOMED CT er ingredient valgfritt, da virkestoffinformasjon kan hentes fra disse katalogene. For lokale legemidler anbefales det å oppgi ingredient for bedre sporbarhet.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="For medications identified with FEST codes (FestLegemiddeldose, FestLegemiddelMerkevare, FestLegemiddelpakning, FestLegemiddelVirkestoff, Varenummer) or SNOMED CT, ingredient is optional because substance information can be retrieved from those catalogs. For local medications, it is recommended to specify ingredient for better traceability."/>
+          </extension>
+        </extension>
+      </comment>
     </element>
     <element id="Medication.ingredient.item[x]">
       <path value="Medication.ingredient.item[x]"/>
@@ -5307,7 +6018,16 @@
     </element>
     <element id="Medication.batch">
       <path value="Medication.batch"/>
-      <short value="Batch-nummer for legemiddelet"/>
+      <short value="Batch-nummer for legemiddelet">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Batch number for the medication"/>
+          </extension>
+        </extension>
+      </short>
       <mustSupport value="true"/>
     </element>
   </differential>

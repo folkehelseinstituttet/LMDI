@@ -239,3 +239,23 @@ a:not(.nav-link) {
   font-size: var(--fhi-font-size-3)!important;
   text-align: left!important;
 }
+
+/* Språkvelger i header */
+.fhi-header__brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fhi-header__lang {
+  flex-shrink: 0;
+}
+.fhi-header__lang select {
+  width: auto;
+  min-width: 6rem;
+}
+@media (max-width: 768px) {
+  .fhi-header__brand-container {
+    flex-wrap: wrap;
+  }
+}

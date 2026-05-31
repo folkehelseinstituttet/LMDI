@@ -42,9 +42,18 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Legemiddeladministrering"/>
-  <title value="Legemiddeladministrering"/>
+  <title value="Legemiddeladministrering">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medication Administration"/>
+      </extension>
+    </extension>
+  </title>
   <status value="draft"/>
   <date value="2025-09-12"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -62,7 +71,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Beskriver administrering av legemiddel til pasient på institusjon.&#xA;&#xA;Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, på hvilken institusjon det skjedde, tidspunkt for administrering og dose med eventuell administrasjonsvei."/>
+  <description value="Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -536,8 +554,26 @@
     </element>
     <element id="MedicationAdministration.status">
       <path value="MedicationAdministration.status"/>
-      <short value="Status administrering (completed | entered-in-error)"/>
-      <definition value="Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes."/>
+      <short value="Status administrering (completed | entered-in-error)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Administration status (completed | entered-in-error)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Administration status. It should usually be set to 'completed', but 'entered-in-error' MUST be used if the record contains a serious error and shall be deleted."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid."/>
       <min value="1"/>
       <max value="1"/>
@@ -628,8 +664,26 @@
     </element>
     <element id="MedicationAdministration.category">
       <path value="MedicationAdministration.category"/>
-      <short value="Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)"/>
-      <definition value="Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen."/>
+      <short value="Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Category (inpatient | outpatient | self-administered | discharge)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Categorizes the administration context. Use 'community' for self-administration - the patient takes the medication themselves, but it is dispensed by the institution."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -661,7 +715,16 @@
     </element>
     <element id="MedicationAdministration.medication[x]">
       <path value="MedicationAdministration.medication[x]"/>
-      <short value="Legemiddel"/>
+      <short value="Legemiddel">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications."/>
       <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource."/>
       <min value="1"/>
@@ -704,8 +767,26 @@
     </element>
     <element id="MedicationAdministration.subject">
       <path value="MedicationAdministration.subject"/>
-      <short value="Hvem fikk legemidlet (pasient)"/>
-      <definition value="Det skal alltid være en referanse til pasienten som har blitt administrert legemiddel."/>
+      <short value="Hvem fikk legemidlet (pasient)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Who received the medication (patient)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Det skal alltid være en referanse til pasienten som har blitt administrert legemiddel.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="There shall always be a reference to the patient who received the medication."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -750,8 +831,26 @@
     </element>
     <element id="MedicationAdministration.context">
       <path value="MedicationAdministration.context"/>
-      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med."/>
-      <definition value="Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert."/>
+      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The episode (for example the consultation or admission) associated with the medication administration."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reference to which institutional stay or appointment the patient was in when the medication was administered."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -835,7 +934,16 @@
         <ordered value="false"/>
         <rules value="closed"/>
       </slicing>
-      <short value="Tidspunktet eller periode legemidlet ble administrert"/>
+      <short value="Tidspunktet eller periode legemidlet ble administrert">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The time or period when the medication was administered"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate."/>
       <min value="1"/>
       <max value="1"/>
@@ -1356,7 +1464,16 @@
     </element>
     <element id="MedicationAdministration.reasonCode">
       <path value="MedicationAdministration.reasonCode"/>
-      <short value="Årsak til utført administrering (Given as Ordered, Emergency, None)"/>
+      <short value="Årsak til utført administrering (Given as Ordered, Emergency, None)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reason for the administration (Given as Ordered, Emergency, None)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A code indicating why the medication was given."/>
       <min value="0"/>
       <max value="*"/>
@@ -1401,7 +1518,16 @@
     </element>
     <element id="MedicationAdministration.reasonReference">
       <path value="MedicationAdministration.reasonReference"/>
-      <short value="Indikasjon (diagnose) for legemiddeladministreringen"/>
+      <short value="Indikasjon (diagnose) for legemiddeladministreringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indication (diagnosis) for the medication administration"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Condition or observation that supports why the medication was administered."/>
       <comment value="This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode."/>
       <min value="0"/>
@@ -1444,8 +1570,26 @@
     </element>
     <element id="MedicationAdministration.request">
       <path value="MedicationAdministration.request"/>
-      <short value="Referanse til rekvireringen"/>
-      <definition value="Referanse til rekvireringen som denne administreringen er basert på."/>
+      <short value="Referanse til rekvireringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reference to the request"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Referanse til rekvireringen som denne administreringen er basert på.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reference to the request on which this administration is based."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="This is a reference to the MedicationRequest  where the intent is either order or instance-order.  It should not reference MedicationRequests where the intent is any other value."/>
       <min value="0"/>
       <max value="1"/>
@@ -1767,9 +1911,36 @@
     </element>
     <element id="MedicationAdministration.dosage.route">
       <path value="MedicationAdministration.dosage.route"/>
-      <short value="Administrasjonsvei"/>
-      <definition value="Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept."/>
-      <comment value="Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt."/>
+      <short value="Administrasjonsvei">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration. Restricted to the proposed coding from HL7's SNOMED CT value set and the ePrescription code system Route of Administration (OID=7477)."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration is used to indicate how the medication was given."/>
+          </extension>
+        </extension>
+      </comment>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -1930,8 +2101,26 @@
     <element id="MedicationAdministration.dosage.route.coding:SCT">
       <path value="MedicationAdministration.dosage.route.coding"/>
       <sliceName value="SCT"/>
-      <short value="SNOMED CT"/>
-      <definition value="Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7."/>
+      <short value="SNOMED CT">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration coded with SNOMED CT, taken from the HL7-proposed value set."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -2243,8 +2432,26 @@
     <element id="MedicationAdministration.dosage.route.coding:OID7477">
       <path value="MedicationAdministration.dosage.route.coding"/>
       <sliceName value="OID7477"/>
-      <short value="Administrasjonsvei (OID=7477)"/>
-      <definition value="Administrasjonsvei (OID=7477) fra kodeverkssamling Resept."/>
+      <short value="Administrasjonsvei (OID=7477)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration (OID=7477)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administrasjonsvei (OID=7477) fra kodeverkssamling Resept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration (OID=7477) from the prescription code system collection."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
       <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
       <min value="0"/>
@@ -2433,7 +2640,16 @@
     </element>
     <element id="MedicationAdministration.dosage.route.coding:OID7477.code">
       <path value="MedicationAdministration.dosage.route.coding.code"/>
-      <short value="Verdi fra kodeverket"/>
+      <short value="Verdi fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Value from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)."/>
       <requirements value="Need to refer to a particular code in the system."/>
       <min value="1"/>
@@ -2474,7 +2690,16 @@
         <valueBoolean value="true"/>
       </extension>
       <path value="MedicationAdministration.dosage.route.coding.display"/>
-      <short value="Beskrivelse av koden (navn) fra kodeverket"/>
+      <short value="Beskrivelse av koden (navn) fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Description of the code (name) from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A representation of the meaning of the code in the system, following the rules of the system."/>
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system."/>
       <min value="0"/>
@@ -2635,8 +2860,26 @@
     </element>
     <element id="MedicationAdministration.dosage.dose">
       <path value="MedicationAdministration.dosage.dose"/>
-      <short value="Administrert mengde virkestoff"/>
-      <definition value="Mengde (dosering) av legemiddelets primære virkestoff."/>
+      <short value="Administrert mengde virkestoff">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Administered amount of substance"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Mengde (dosering) av legemiddelets primære virkestoff.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Amount (dosage) of the medication's primary substance."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="If the administration is not instantaneous (rate is present), this can be specified to convey the total amount administered over period of time of a single administration."/>
       <min value="1"/>
       <max value="1"/>
@@ -2796,8 +3039,26 @@
     </element>
     <element id="MedicationAdministration.status">
       <path value="MedicationAdministration.status"/>
-      <short value="Status administrering (completed | entered-in-error)"/>
-      <definition value="Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes."/>
+      <short value="Status administrering (completed | entered-in-error)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Administration status (completed | entered-in-error)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Administration status. It should usually be set to 'completed', but 'entered-in-error' MUST be used if the record contains a serious error and shall be deleted."/>
+          </extension>
+        </extension>
+      </definition>
       <binding>
         <strength value="required"/>
         <valueSet value="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus"/>
@@ -2805,8 +3066,26 @@
     </element>
     <element id="MedicationAdministration.category">
       <path value="MedicationAdministration.category"/>
-      <short value="Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)"/>
-      <definition value="Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen."/>
+      <short value="Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Category (inpatient | outpatient | self-administered | discharge)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kategoriserer administreringskonteksten. Bruk 'community' for selvadministrering — pasienten tar legemidlet selv, men det er utdelt av institusjonen.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Categorizes the administration context. Use 'community' for self-administration - the patient takes the medication themselves, but it is dispensed by the institution."/>
+          </extension>
+        </extension>
+      </definition>
       <binding>
         <strength value="preferred"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/medication-admin-category"/>
@@ -2814,7 +3093,16 @@
     </element>
     <element id="MedicationAdministration.medication[x]">
       <path value="MedicationAdministration.medication[x]"/>
-      <short value="Legemiddel"/>
+      <short value="Legemiddel">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication"/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
@@ -2822,8 +3110,26 @@
     </element>
     <element id="MedicationAdministration.subject">
       <path value="MedicationAdministration.subject"/>
-      <short value="Hvem fikk legemidlet (pasient)"/>
-      <definition value="Det skal alltid være en referanse til pasienten som har blitt administrert legemiddel."/>
+      <short value="Hvem fikk legemidlet (pasient)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Who received the medication (patient)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Det skal alltid være en referanse til pasienten som har blitt administrert legemiddel.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="There shall always be a reference to the patient who received the medication."/>
+          </extension>
+        </extension>
+      </definition>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
@@ -2831,8 +3137,26 @@
     </element>
     <element id="MedicationAdministration.context">
       <path value="MedicationAdministration.context"/>
-      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med."/>
-      <definition value="Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert."/>
+      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble administrert i forbindelse med.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The episode (for example the consultation or admission) associated with the medication administration."/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Referanse til hvilket institusjonsopphold eller avtale pasienten var på da legemiddelet ble administrert.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reference to which institutional stay or appointment the patient was in when the medication was administered."/>
+          </extension>
+        </extension>
+      </definition>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
@@ -2853,7 +3177,16 @@
         <ordered value="false"/>
         <rules value="open"/>
       </slicing>
-      <short value="Tidspunktet eller periode legemidlet ble administrert"/>
+      <short value="Tidspunktet eller periode legemidlet ble administrert">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The time or period when the medication was administered"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="MedicationAdministration.effective[x]:effectiveDateTime">
       <path value="MedicationAdministration.effective[x]"/>
@@ -2908,11 +3241,29 @@
     </element>
     <element id="MedicationAdministration.reasonCode">
       <path value="MedicationAdministration.reasonCode"/>
-      <short value="Årsak til utført administrering (Given as Ordered, Emergency, None)"/>
+      <short value="Årsak til utført administrering (Given as Ordered, Emergency, None)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reason for the administration (Given as Ordered, Emergency, None)"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="MedicationAdministration.reasonReference">
       <path value="MedicationAdministration.reasonReference"/>
-      <short value="Indikasjon (diagnose) for legemiddeladministreringen"/>
+      <short value="Indikasjon (diagnose) for legemiddeladministreringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indication (diagnosis) for the medication administration"/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
@@ -2920,8 +3271,26 @@
     </element>
     <element id="MedicationAdministration.request">
       <path value="MedicationAdministration.request"/>
-      <short value="Referanse til rekvireringen"/>
-      <definition value="Referanse til rekvireringen som denne administreringen er basert på."/>
+      <short value="Referanse til rekvireringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reference to the request"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Referanse til rekvireringen som denne administreringen er basert på.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Reference to the request on which this administration is based."/>
+          </extension>
+        </extension>
+      </definition>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
@@ -2942,9 +3311,36 @@
     </element>
     <element id="MedicationAdministration.dosage.route">
       <path value="MedicationAdministration.dosage.route"/>
-      <short value="Administrasjonsvei"/>
-      <definition value="Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept."/>
-      <comment value="Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt."/>
+      <short value="Administrasjonsvei">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administrasjonsvei. Er begrenset til foreslått koding fra SNOMED CT-verdisettet til HL7 og Volven-kodeverket Administrasjonsvei (OID=7477) fra eResept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration. Restricted to the proposed coding from HL7's SNOMED CT value set and the ePrescription code system Route of Administration (OID=7477)."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Administrasjonsvei benyttes for å angi hvordan legemiddelet ble gitt.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration is used to indicate how the medication was given."/>
+          </extension>
+        </extension>
+      </comment>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationAdministration.dosage.route.coding">
@@ -2961,8 +3357,26 @@
     <element id="MedicationAdministration.dosage.route.coding:SCT">
       <path value="MedicationAdministration.dosage.route.coding"/>
       <sliceName value="SCT"/>
-      <short value="SNOMED CT"/>
-      <definition value="Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7."/>
+      <short value="SNOMED CT">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="SNOMED CT"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administrasjonsvei kodet med SNOMED CT, hentet fra verdisett foreslått av HL7.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration coded with SNOMED CT, taken from the HL7-proposed value set."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -2982,8 +3396,26 @@
     <element id="MedicationAdministration.dosage.route.coding:OID7477">
       <path value="MedicationAdministration.dosage.route.coding"/>
       <sliceName value="OID7477"/>
-      <short value="Administrasjonsvei (OID=7477)"/>
-      <definition value="Administrasjonsvei (OID=7477) fra kodeverkssamling Resept."/>
+      <short value="Administrasjonsvei (OID=7477)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration (OID=7477)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Administrasjonsvei (OID=7477) fra kodeverkssamling Resept.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Route of administration (OID=7477) from the prescription code system collection."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
     </element>
@@ -2994,12 +3426,30 @@
     </element>
     <element id="MedicationAdministration.dosage.route.coding:OID7477.code">
       <path value="MedicationAdministration.dosage.route.coding.code"/>
-      <short value="Verdi fra kodeverket"/>
+      <short value="Verdi fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Value from the code system"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
     </element>
     <element id="MedicationAdministration.dosage.route.coding:OID7477.display">
       <path value="MedicationAdministration.dosage.route.coding.display"/>
-      <short value="Beskrivelse av koden (navn) fra kodeverket"/>
+      <short value="Beskrivelse av koden (navn) fra kodeverket">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Description of the code (name) from the code system"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="MedicationAdministration.dosage.route.text">
       <path value="MedicationAdministration.dosage.route.text"/>
@@ -3007,8 +3457,26 @@
     </element>
     <element id="MedicationAdministration.dosage.dose">
       <path value="MedicationAdministration.dosage.dose"/>
-      <short value="Administrert mengde virkestoff"/>
-      <definition value="Mengde (dosering) av legemiddelets primære virkestoff."/>
+      <short value="Administrert mengde virkestoff">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Administered amount of substance"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Mengde (dosering) av legemiddelets primære virkestoff.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Amount (dosage) of the medication's primary substance."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="1"/>
     </element>
     <element id="MedicationAdministration.dosage.rate[x]">

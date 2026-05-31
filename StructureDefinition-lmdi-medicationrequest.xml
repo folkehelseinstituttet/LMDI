@@ -36,9 +36,18 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Legemiddelrekvirering"/>
-  <title value="Legemiddelrekvirering"/>
+  <title value="Legemiddelrekvirering">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medication Request"/>
+      </extension>
+    </extension>
+  </title>
   <status value="draft"/>
   <date value="2025-09-12"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -56,7 +65,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel"/>
+  <description value="Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medication request – prescription, ordering or other request of medication."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -390,8 +408,26 @@
     <element id="MedicationRequest.extension:prosentvisDoseendring">
       <path value="MedicationRequest.extension"/>
       <sliceName value="prosentvisDoseendring"/>
-      <short value="Doseendring i prosent (100% = umodifisert dose)"/>
-      <definition value="Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent."/>
+      <short value="Doseendring i prosent (100% = umodifisert dose)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Dose adjustment in percent (100% = unmodified dose)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Dose adjustment in percent, compared with the original dosage. Especially relevant for chemotherapy. A normal dose without modifications is 100%. May have values from 0. Unit shall be percent."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -426,8 +462,26 @@
     <element id="MedicationRequest.extension:delAvBehandlingsregime">
       <path value="MedicationRequest.extension"/>
       <sliceName value="delAvBehandlingsregime"/>
-      <short value="Del av behandlingsregime"/>
-      <definition value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi."/>
+      <short value="Del av behandlingsregime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Part of treatment regimen"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The name of the course, treatment regimen, or protocol that the medication is part of. Especially relevant for chemotherapy."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -462,8 +516,26 @@
     <element id="MedicationRequest.extension:kliniskStudie">
       <path value="MedicationRequest.extension"/>
       <sliceName value="kliniskStudie"/>
-      <short value="Legemiddel i klinisk studie"/>
-      <definition value="Angir om legemidlet gis som en del av en klinisk studie."/>
+      <short value="Legemiddel i klinisk studie">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication in clinical trial"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Angir om legemidlet gis som en del av en klinisk studie.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indicates whether the medication is given as part of a clinical trial."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -539,8 +611,26 @@
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier"/>
-      <short value="Identifikator for rekvirering"/>
-      <definition value="Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes"/>
+      <short value="Identifikator for rekvirering">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifier for the medication request"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must Support: An identifier that uniquely identifies a medication request shall be provided if one exists."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="This is a business identifier, not a resource identifier."/>
       <min value="0"/>
       <max value="*"/>
@@ -586,9 +676,36 @@
     </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status"/>
-      <short value="Status for rekvireringen"/>
-      <definition value="Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer"/>
-      <comment value="Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"/>
+      <short value="Status for rekvireringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Status of the medication request"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must Support: Status is important for following the lifecycle of a medication request and must be supported by all systems."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Valid values: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"/>
+          </extension>
+        </extension>
+      </comment>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -676,7 +793,16 @@
     </element>
     <element id="MedicationRequest.intent">
       <path value="MedicationRequest.intent"/>
-      <short value="Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"/>
+      <short value="Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The intent or purpose of the medication request: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Whether the request is a proposal, plan, or an original order."/>
       <comment value="It is expected that the type of requester will be restricted for different stages of a MedicationRequest.  For example, Proposals can be created by a patient, relatedPerson, Practitioner or Device.  Plans can be created by Practitioners, Patients, RelatedPersons and Devices.  Original orders can be created by a Practitioner only.&#xD;&#xD;An instance-order is an instantiation of a request or order and may be used to populate Medication Administration Record.&#xD;&#xD;This element is labeled as a modifier because the intent alters when and how the resource is actually applicable."/>
       <min value="1"/>
@@ -875,7 +1001,16 @@
     </element>
     <element id="MedicationRequest.medication[x]">
       <path value="MedicationRequest.medication[x]"/>
-      <short value="Legemidlet som er rekvirert"/>
+      <short value="Legemidlet som er rekvirert">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The medication that was requested"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications."/>
       <comment value="If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the Medication resource is recommended.  For example, if you require form or lot number or if the medication is compounded or extemporaneously prepared, then you must reference the Medication resource."/>
       <min value="1"/>
@@ -923,7 +1058,16 @@
     </element>
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject"/>
-      <short value="Pasienten legemidlet er rekvirert til"/>
+      <short value="Pasienten legemidlet er rekvirert til">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The patient the medication was requested for"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="A link to a resource representing the person or set of individuals to whom the medication will be given."/>
       <comment value="The subject on a medication request is mandatory.  For the secondary use case where the actual subject is not provided, there still must be an anonymized subject specified."/>
       <min value="1"/>
@@ -975,7 +1119,16 @@
     </element>
     <element id="MedicationRequest.encounter">
       <path value="MedicationRequest.encounter"/>
-      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med."/>
+      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The episode (for example the consultation or admission) associated with the medication request."/>
+          </extension>
+        </extension>
+      </short>
       <definition value="The Encounter during which this [x] was created or to which the creation of this record is tightly associated."/>
       <comment value="This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.&quot;    If there is a need to link to episodes of care they will be handled with an extension."/>
       <min value="0"/>
@@ -1105,7 +1258,16 @@
     </element>
     <element id="MedicationRequest.requester">
       <path value="MedicationRequest.requester"/>
-      <short value="Helsepersonellet som rekvirerte legemidlet"/>
+      <short value="Helsepersonellet som rekvirerte legemidlet">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The healthcare professional who requested the medication"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="The individual, organization, or device that initiated the request and has responsibility for its activation."/>
       <min value="1"/>
       <max value="1"/>
@@ -1319,7 +1481,16 @@
     </element>
     <element id="MedicationRequest.reasonReference">
       <path value="MedicationRequest.reasonReference"/>
-      <short value="Indikasjon (diagnose) for legemiddelrekvireringen"/>
+      <short value="Indikasjon (diagnose) for legemiddelrekvireringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indication (diagnosis) for the medication request"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Condition or observation that supports why the medication was ordered."/>
       <comment value="This is a reference to a condition or observation that is the reason for the medication order.  If only a code exists, use reasonCode."/>
       <min value="0"/>
@@ -1495,7 +1666,16 @@
     </element>
     <element id="MedicationRequest.courseOfTherapyType">
       <path value="MedicationRequest.courseOfTherapyType"/>
-      <short value="Type behandlingsforløp (continuous | acute | seasonal)"/>
+      <short value="Type behandlingsforløp (continuous | acute | seasonal)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Type of treatment course (continuous | acute | seasonal)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="The description of the overall patte3rn of the administration of the medication to the patient."/>
       <comment value="This attribute should not be confused with the protocol of the medication."/>
       <min value="0"/>
@@ -3331,8 +3511,26 @@
     <element id="MedicationRequest.extension:prosentvisDoseendring">
       <path value="MedicationRequest.extension"/>
       <sliceName value="prosentvisDoseendring"/>
-      <short value="Doseendring i prosent (100% = umodifisert dose)"/>
-      <definition value="Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent."/>
+      <short value="Doseendring i prosent (100% = umodifisert dose)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Dose adjustment in percent (100% = unmodified dose)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. Kan ha verdier fra 0. Enhet skal være prosent.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Dose adjustment in percent, compared with the original dosage. Especially relevant for chemotherapy. A normal dose without modifications is 100%. May have values from 0. Unit shall be percent."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -3343,8 +3541,26 @@
     <element id="MedicationRequest.extension:delAvBehandlingsregime">
       <path value="MedicationRequest.extension"/>
       <sliceName value="delAvBehandlingsregime"/>
-      <short value="Del av behandlingsregime"/>
-      <definition value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi."/>
+      <short value="Del av behandlingsregime">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Part of treatment regimen"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The name of the course, treatment regimen, or protocol that the medication is part of. Especially relevant for chemotherapy."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -3355,8 +3571,26 @@
     <element id="MedicationRequest.extension:kliniskStudie">
       <path value="MedicationRequest.extension"/>
       <sliceName value="kliniskStudie"/>
-      <short value="Legemiddel i klinisk studie"/>
-      <definition value="Angir om legemidlet gis som en del av en klinisk studie."/>
+      <short value="Legemiddel i klinisk studie">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Medication in clinical trial"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Angir om legemidlet gis som en del av en klinisk studie.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indicates whether the medication is given as part of a clinical trial."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <type>
@@ -3366,15 +3600,60 @@
     </element>
     <element id="MedicationRequest.identifier">
       <path value="MedicationRequest.identifier"/>
-      <short value="Identifikator for rekvirering"/>
-      <definition value="Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes"/>
+      <short value="Identifikator for rekvirering">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifier for the medication request"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Must Support: En identifikator som unikt identifiserer en rekvirering må oppgis om en slik finnes">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must Support: An identifier that uniquely identifies a medication request shall be provided if one exists."/>
+          </extension>
+        </extension>
+      </definition>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.status">
       <path value="MedicationRequest.status"/>
-      <short value="Status for rekvireringen"/>
-      <definition value="Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer"/>
-      <comment value="Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"/>
+      <short value="Status for rekvireringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Status of the medication request"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Must Support: Status er viktig for å kunne følge livssyklusen til en rekvirering og må støttes av alle systemer">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must Support: Status is important for following the lifecycle of a medication request and must be supported by all systems."/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Gyldige verdier: active | on-hold | cancelled | completed | entered-in-error | stopped | draft">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Valid values: active | on-hold | cancelled | completed | entered-in-error | stopped | draft"/>
+          </extension>
+        </extension>
+      </comment>
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
@@ -3383,7 +3662,16 @@
     </element>
     <element id="MedicationRequest.intent">
       <path value="MedicationRequest.intent"/>
-      <short value="Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"/>
+      <short value="Intensjonen eller hensikten med rekvireringen: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The intent or purpose of the medication request: proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"/>
+          </extension>
+        </extension>
+      </short>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.reported[x]">
@@ -3394,7 +3682,16 @@
     </element>
     <element id="MedicationRequest.medication[x]">
       <path value="MedicationRequest.medication[x]"/>
-      <short value="Legemidlet som er rekvirert"/>
+      <short value="Legemidlet som er rekvirert">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The medication that was requested"/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
@@ -3403,7 +3700,16 @@
     </element>
     <element id="MedicationRequest.subject">
       <path value="MedicationRequest.subject"/>
-      <short value="Pasienten legemidlet er rekvirert til"/>
+      <short value="Pasienten legemidlet er rekvirert til">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The patient the medication was requested for"/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"/>
@@ -3412,7 +3718,16 @@
     </element>
     <element id="MedicationRequest.encounter">
       <path value="MedicationRequest.encounter"/>
-      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med."/>
+      <short value="Episoden (f.eks. konsultasjonen/innleggelsen) som legemidlet ble rekvirert i forbindelse med.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The episode (for example the consultation or admission) associated with the medication request."/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
@@ -3424,7 +3739,16 @@
     </element>
     <element id="MedicationRequest.requester">
       <path value="MedicationRequest.requester"/>
-      <short value="Helsepersonellet som rekvirerte legemidlet"/>
+      <short value="Helsepersonellet som rekvirerte legemidlet">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The healthcare professional who requested the medication"/>
+          </extension>
+        </extension>
+      </short>
       <min value="1"/>
       <type>
         <code value="Reference"/>
@@ -3446,7 +3770,16 @@
     </element>
     <element id="MedicationRequest.reasonReference">
       <path value="MedicationRequest.reasonReference"/>
-      <short value="Indikasjon (diagnose) for legemiddelrekvireringen"/>
+      <short value="Indikasjon (diagnose) for legemiddelrekvireringen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indication (diagnosis) for the medication request"/>
+          </extension>
+        </extension>
+      </short>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
@@ -3458,7 +3791,16 @@
     </element>
     <element id="MedicationRequest.courseOfTherapyType">
       <path value="MedicationRequest.courseOfTherapyType"/>
-      <short value="Type behandlingsforløp (continuous | acute | seasonal)"/>
+      <short value="Type behandlingsforløp (continuous | acute | seasonal)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Type of treatment course (continuous | acute | seasonal)"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="MedicationRequest.insurance">
       <path value="MedicationRequest.insurance"/>

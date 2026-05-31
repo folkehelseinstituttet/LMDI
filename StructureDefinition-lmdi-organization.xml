@@ -37,9 +37,18 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="Organisasjon"/>
-  <title value="Organisasjon"/>
+  <title value="Organisasjon">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Organization"/>
+      </extension>
+    </extension>
+  </title>
   <status value="draft"/>
   <date value="2025-09-30"/>
   <publisher value="Folkehelseinstituttet"/>
@@ -57,7 +66,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.&#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.&#xA;&#xA;Det er ønskelig at minimum følgende inngår i &quot;organisasjonshierarkiet&quot;:&#xA;- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)&#xA;- organisasjonen på høyre nivå&#xA;     - sykehus, Helseforetak og Regionalt Helseforetak&#xA;     - sykehjem, kommune&#xA;- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)"/>
+  <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -483,9 +501,27 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="ID fra Nasjonalt register for enheter i spesialisthelsetjenesten (RESH) eller Organisasjonsnummeret i Enhetsregister"/>
+      <short value="ID fra Nasjonalt register for enheter i spesialisthelsetjenesten (RESH) eller Organisasjonsnummeret i Enhetsregister">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ID from the Register for Units in Specialist Health Services (RESH) or the organization number in the Register of Legal Entities"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-      <comment value="Der aktiviteten har skjedd."/>
+      <comment value="Der aktiviteten har skjedd.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Where the activity took place."/>
+          </extension>
+        </extension>
+      </comment>
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization."/>
       <min value="0"/>
       <max value="*"/>
@@ -545,9 +581,27 @@
     <element id="Organization.identifier:ENH">
       <path value="Organization.identifier"/>
       <sliceName value="ENH"/>
-      <short value="Organisasjonsnummer fra Enhetsregisteret (ENH)"/>
+      <short value="Organisasjonsnummer fra Enhetsregisteret (ENH)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organization number from the Register of Legal Entities (ENH)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-      <comment value="Identifikatorer skal angis på laveste relevante virksomhetsnivå i henhold til SSBs retningslinjer. For kommunale tjenester betyr dette på institusjonsnivå (f.eks sykehjem) der egen organisatorisk enhet er etablert, ikke på overordnet kommunenivå."/>
+      <comment value="Identifikatorer skal angis på laveste relevante virksomhetsnivå i henhold til SSBs retningslinjer. For kommunale tjenester betyr dette på institusjonsnivå (f.eks sykehjem) der egen organisatorisk enhet er etablert, ikke på overordnet kommunenivå.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifiers shall be specified at the lowest relevant organizational level according to Statistics Norway's guidelines. For municipal services, this means at institutional level (for example a nursing home) where a separate organizational unit is established, not at the overarching municipality level."/>
+          </extension>
+        </extension>
+      </comment>
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization."/>
       <alias value="organisasjonsnummer"/>
       <alias value="organization number"/>
@@ -1003,9 +1057,27 @@
     <element id="Organization.identifier:RSH">
       <path value="Organization.identifier"/>
       <sliceName value="RSH"/>
-      <short value="ID fra Register for enheter i spesialisthelsetjenesten (RESH)"/>
+      <short value="ID fra Register for enheter i spesialisthelsetjenesten (RESH)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ID from the Register for Units in Specialist Health Services (RESH)"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
-      <comment value="Det nivået aktiviteten har skjedd på."/>
+      <comment value="Det nivået aktiviteten har skjedd på.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The level at which the activity took place."/>
+          </extension>
+        </extension>
+      </comment>
       <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization."/>
       <min value="0"/>
       <max value="*"/>
@@ -1515,8 +1587,26 @@
         </discriminator>
         <rules value="open"/>
       </slicing>
-      <short value="Organisasjonstype"/>
-      <definition value="Type organisasjon (f.eks. sykehus, avdeling, klinikk)"/>
+      <short value="Organisasjonstype">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organization type"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Type organisasjon (f.eks. sykehus, avdeling, klinikk)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Type of organization (for example hospital, department, clinic)"/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes&#xA;&#xA;When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.&#xA;&#xA;We expect that some jurisdictions will profile this optionality to be a single cardinality."/>
       <requirements value="Need to be able to track the kind of organization that this is - different organization types have different uses."/>
       <min value="0"/>
@@ -2130,8 +2220,26 @@
     <element id="Organization.type:organisatoriskBetegnelse">
       <path value="Organization.type"/>
       <sliceName value="organisatoriskBetegnelse"/>
-      <short value="Organisatorisk betegnelse. Kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624)"/>
-      <definition value="Kode fra kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)"/>
+      <short value="Organisatorisk betegnelse. Kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organizational designation. Code system &quot;Organizational designation&quot; (OID 8624)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kode fra kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Code from the &quot;Organizational designation&quot; code system (OID 8624) describing the type of organizational unit (for example hospital, department, clinic)"/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes&#xA;&#xA;When considering if multiple types are appropriate, you should evaluate if child organizations would be a more appropriate use of the concept, as different types likely are in different sub-areas of the organization. This is most likely to be used where type values have orthogonal values, such as a religious, academic and medical center.&#xA;&#xA;We expect that some jurisdictions will profile this optionality to be a single cardinality."/>
       <requirements value="Need to be able to track the kind of organization that this is - different organization types have different uses."/>
       <min value="0"/>
@@ -2676,9 +2784,36 @@
     </element>
     <element id="Organization.name">
       <path value="Organization.name"/>
-      <short value="Organisasjonsnavn"/>
-      <definition value="Offisielt navn på organisasjonen"/>
-      <comment value="Kan være navn på post, avdelingsnavn, klinikknavn, sykehusnavn eller sykehjemsnavn"/>
+      <short value="Organisasjonsnavn">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organization name"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Offisielt navn på organisasjonen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Official name of the organization"/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Kan være navn på post, avdelingsnavn, klinikknavn, sykehusnavn eller sykehjemsnavn">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Can be the name of a ward, department, clinic, hospital, or nursing home"/>
+          </extension>
+        </extension>
+      </comment>
       <requirements value="Need to use the name as the label of the organization."/>
       <min value="1"/>
       <max value="1"/>
@@ -2826,7 +2961,16 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address"/>
-      <short value="Gjeldende fysisk adresse"/>
+      <short value="Gjeldende fysisk adresse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Current physical address"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world."/>
       <comment value="Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource)."/>
       <requirements value="May need to keep track of the organization's addresses for contacting, billing or reporting requirements."/>
@@ -3014,8 +3158,26 @@
     <element id="Organization.address.extension:urbanDistrict">
       <path value="Organization.address.extension"/>
       <sliceName value="urbanDistrict"/>
-      <short value="Kodet verdi for bydel. Kodeverk &quot;Bydelsnummer&quot; (OID 3403)"/>
-      <definition value="Kodet verdi for bydel. Koder fra kodeverk &quot;Bydelsnummer&quot; (OID 3403) skal benyttes"/>
+      <short value="Kodet verdi for bydel. Kodeverk &quot;Bydelsnummer&quot; (OID 3403)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded value for urban district. Code system &quot;Urban district numbers&quot; (OID 3403)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kodet verdi for bydel. Koder fra kodeverk &quot;Bydelsnummer&quot; (OID 3403) skal benyttes">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded value for urban district. Codes from the code system &quot;Urban district numbers&quot; (OID 3403) shall be used."/>
+          </extension>
+        </extension>
+      </definition>
       <alias value="bydel"/>
       <alias value="urban district"/>
       <min value="0"/>
@@ -3156,7 +3318,16 @@
     </element>
     <element id="Organization.address.type">
       <path value="Organization.address.type"/>
-      <short value="physical"/>
+      <short value="physical">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="physical"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Distinguishes between physical addresses (those you can visit) and mailing addresses (e.g. PO Boxes and care-of addresses). Most addresses are both.&#xD;&#xA;&#xD;&#xA;Mapping of values to other Norwegian CodeSystems is documented in the implementation guide. In general the address used for visiting the person should have use &quot;home&quot; and type &quot;physical&quot; or &quot;both&quot;. The &quot;official&quot; flag can be either true or false."/>
       <comment value="The definition of Address states that &quot;address is intended to describe postal addresses, not physical locations&quot;. However, many applications track whether an address has a dual purpose of being a location that can be visited as well as being a valid delivery destination, and Postal addresses are often used as proxies for physical locations (also see the [Location](http://hl7.org/fhir/R4/location.html#) resource)."/>
       <min value="0"/>
@@ -3358,7 +3529,16 @@
     </element>
     <element id="Organization.address.district">
       <path value="Organization.address.district"/>
-      <short value="Kommune"/>
+      <short value="Kommune">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Municipality"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Name of the county (norwegian &quot;kommune&quot;).&#xD;&#xA;&#xD;&#xA;The name of the administrative area (county)."/>
       <comment value="District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead."/>
       <alias value="County"/>
@@ -3483,8 +3663,26 @@
     <element id="Organization.address.district.extension:municipalitycode">
       <path value="Organization.address.district.extension"/>
       <sliceName value="municipalitycode"/>
-      <short value="Kodet verdi for kommune. Kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402)"/>
-      <definition value="Kodet verdi for kommune. Koder fra kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402) skal benyttes"/>
+      <short value="Kodet verdi for kommune. Kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded municipality value. Code system &quot;Municipality numbers and regional special codes&quot; (OID 3402)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kodet verdi for kommune. Koder fra kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402) skal benyttes">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded municipality value. Codes from the code system &quot;Municipality numbers and regional special codes&quot; (OID 3402) shall be used."/>
+          </extension>
+        </extension>
+      </definition>
       <min value="0"/>
       <max value="1"/>
       <base>
@@ -3547,7 +3745,16 @@
     </element>
     <element id="Organization.address.state">
       <path value="Organization.address.state"/>
-      <short value="Fylkesnavn"/>
+      <short value="Fylkesnavn">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="County name"/>
+          </extension>
+        </extension>
+      </short>
       <definition value="Name of the norwegian &quot;fylke&quot;). If fylkes-number is required &quot;eiendomsinformasjon&quot; should be used with koded kommune-number.&#xD;&#xA;&#xD;&#xA;Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes)."/>
       <comment value="Note that FHIR strings SHALL NOT exceed 1MB in size"/>
       <alias value="Province"/>
@@ -3760,8 +3967,26 @@
     </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf"/>
-      <short value="Organisasjonen er del av (overordnet organisasjon)"/>
-      <definition value="Organisasjonen er del av (overordnet organisasjon)"/>
+      <short value="Organisasjonen er del av (overordnet organisasjon)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The organization is part of (parent organization)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Organisasjonen er del av (overordnet organisasjon)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The organization is part of (parent organization)"/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository."/>
       <requirements value="Need to be able to track the hierarchy of organizations within an organization."/>
       <min value="0"/>
@@ -4253,21 +4478,75 @@
     </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier"/>
-      <short value="ID fra Nasjonalt register for enheter i spesialisthelsetjenesten (RESH) eller Organisasjonsnummeret i Enhetsregister"/>
-      <comment value="Der aktiviteten har skjedd."/>
+      <short value="ID fra Nasjonalt register for enheter i spesialisthelsetjenesten (RESH) eller Organisasjonsnummeret i Enhetsregister">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ID from the Register for Units in Specialist Health Services (RESH) or the organization number in the Register of Legal Entities"/>
+          </extension>
+        </extension>
+      </short>
+      <comment value="Der aktiviteten har skjedd.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Where the activity took place."/>
+          </extension>
+        </extension>
+      </comment>
       <mustSupport value="true"/>
     </element>
     <element id="Organization.identifier:ENH">
       <path value="Organization.identifier"/>
       <sliceName value="ENH"/>
-      <short value="Organisasjonsnummer fra Enhetsregisteret (ENH)"/>
-      <comment value="Identifikatorer skal angis på laveste relevante virksomhetsnivå i henhold til SSBs retningslinjer. For kommunale tjenester betyr dette på institusjonsnivå (f.eks sykehjem) der egen organisatorisk enhet er etablert, ikke på overordnet kommunenivå."/>
+      <short value="Organisasjonsnummer fra Enhetsregisteret (ENH)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organization number from the Register of Legal Entities (ENH)"/>
+          </extension>
+        </extension>
+      </short>
+      <comment value="Identifikatorer skal angis på laveste relevante virksomhetsnivå i henhold til SSBs retningslinjer. For kommunale tjenester betyr dette på institusjonsnivå (f.eks sykehjem) der egen organisatorisk enhet er etablert, ikke på overordnet kommunenivå.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Identifiers shall be specified at the lowest relevant organizational level according to Statistics Norway's guidelines. For municipal services, this means at institutional level (for example a nursing home) where a separate organizational unit is established, not at the overarching municipality level."/>
+          </extension>
+        </extension>
+      </comment>
     </element>
     <element id="Organization.identifier:RSH">
       <path value="Organization.identifier"/>
       <sliceName value="RSH"/>
-      <short value="ID fra Register for enheter i spesialisthelsetjenesten (RESH)"/>
-      <comment value="Det nivået aktiviteten har skjedd på."/>
+      <short value="ID fra Register for enheter i spesialisthelsetjenesten (RESH)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="ID from the Register for Units in Specialist Health Services (RESH)"/>
+          </extension>
+        </extension>
+      </short>
+      <comment value="Det nivået aktiviteten har skjedd på.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The level at which the activity took place."/>
+          </extension>
+        </extension>
+      </comment>
     </element>
     <element id="Organization.active">
       <path value="Organization.active"/>
@@ -4275,8 +4554,26 @@
     </element>
     <element id="Organization.type">
       <path value="Organization.type"/>
-      <short value="Organisasjonstype"/>
-      <definition value="Type organisasjon (f.eks. sykehus, avdeling, klinikk)"/>
+      <short value="Organisasjonstype">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organization type"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Type organisasjon (f.eks. sykehus, avdeling, klinikk)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Type of organization (for example hospital, department, clinic)"/>
+          </extension>
+        </extension>
+      </definition>
     </element>
     <element id="Organization.type:organisatoriskNiva">
       <path value="Organization.type"/>
@@ -4286,14 +4583,59 @@
     <element id="Organization.type:organisatoriskBetegnelse">
       <path value="Organization.type"/>
       <sliceName value="organisatoriskBetegnelse"/>
-      <short value="Organisatorisk betegnelse. Kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624)"/>
-      <definition value="Kode fra kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)"/>
+      <short value="Organisatorisk betegnelse. Kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organizational designation. Code system &quot;Organizational designation&quot; (OID 8624)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kode fra kodeverk &quot;Organisatorisk betegnelse&quot; (OID 8624) som beskriver type organisatorisk enhet (f.eks. sykehus, avdeling, klinikk)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Code from the &quot;Organizational designation&quot; code system (OID 8624) describing the type of organizational unit (for example hospital, department, clinic)"/>
+          </extension>
+        </extension>
+      </definition>
     </element>
     <element id="Organization.name">
       <path value="Organization.name"/>
-      <short value="Organisasjonsnavn"/>
-      <definition value="Offisielt navn på organisasjonen"/>
-      <comment value="Kan være navn på post, avdelingsnavn, klinikknavn, sykehusnavn eller sykehjemsnavn"/>
+      <short value="Organisasjonsnavn">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Organization name"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Offisielt navn på organisasjonen">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Official name of the organization"/>
+          </extension>
+        </extension>
+      </definition>
+      <comment value="Kan være navn på post, avdelingsnavn, klinikknavn, sykehusnavn eller sykehjemsnavn">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Can be the name of a ward, department, clinic, hospital, or nursing home"/>
+          </extension>
+        </extension>
+      </comment>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
@@ -4303,7 +4645,16 @@
     </element>
     <element id="Organization.address">
       <path value="Organization.address"/>
-      <short value="Gjeldende fysisk adresse"/>
+      <short value="Gjeldende fysisk adresse">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Current physical address"/>
+          </extension>
+        </extension>
+      </short>
       <mustSupport value="true"/>
     </element>
     <element id="Organization.address.extension:official">
@@ -4314,8 +4665,26 @@
     <element id="Organization.address.extension:urbanDistrict">
       <path value="Organization.address.extension"/>
       <sliceName value="urbanDistrict"/>
-      <short value="Kodet verdi for bydel. Kodeverk &quot;Bydelsnummer&quot; (OID 3403)"/>
-      <definition value="Kodet verdi for bydel. Koder fra kodeverk &quot;Bydelsnummer&quot; (OID 3403) skal benyttes"/>
+      <short value="Kodet verdi for bydel. Kodeverk &quot;Bydelsnummer&quot; (OID 3403)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded value for urban district. Code system &quot;Urban district numbers&quot; (OID 3403)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kodet verdi for bydel. Koder fra kodeverk &quot;Bydelsnummer&quot; (OID 3403) skal benyttes">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded value for urban district. Codes from the code system &quot;Urban district numbers&quot; (OID 3403) shall be used."/>
+          </extension>
+        </extension>
+      </definition>
     </element>
     <element id="Organization.address.extension:propertyInformation">
       <path value="Organization.address.extension"/>
@@ -4324,7 +4693,16 @@
     </element>
     <element id="Organization.address.type">
       <path value="Organization.address.type"/>
-      <short value="physical"/>
+      <short value="physical">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="physical"/>
+          </extension>
+        </extension>
+      </short>
       <patternCode value="physical"/>
       <binding>
         <strength value="required"/>
@@ -4345,17 +4723,53 @@
     </element>
     <element id="Organization.address.district">
       <path value="Organization.address.district"/>
-      <short value="Kommune"/>
+      <short value="Kommune">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Municipality"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Organization.address.district.extension:municipalitycode">
       <path value="Organization.address.district.extension"/>
       <sliceName value="municipalitycode"/>
-      <short value="Kodet verdi for kommune. Kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402)"/>
-      <definition value="Kodet verdi for kommune. Koder fra kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402) skal benyttes"/>
+      <short value="Kodet verdi for kommune. Kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded municipality value. Code system &quot;Municipality numbers and regional special codes&quot; (OID 3402)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Kodet verdi for kommune. Koder fra kodeverk &quot;Kommunenummer og regionale spesialkoder&quot; (OID 3402) skal benyttes">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Encoded municipality value. Codes from the code system &quot;Municipality numbers and regional special codes&quot; (OID 3402) shall be used."/>
+          </extension>
+        </extension>
+      </definition>
     </element>
     <element id="Organization.address.state">
       <path value="Organization.address.state"/>
-      <short value="Fylkesnavn"/>
+      <short value="Fylkesnavn">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="County name"/>
+          </extension>
+        </extension>
+      </short>
     </element>
     <element id="Organization.address.postalCode">
       <path value="Organization.address.postalCode"/>
@@ -4367,8 +4781,26 @@
     </element>
     <element id="Organization.partOf">
       <path value="Organization.partOf"/>
-      <short value="Organisasjonen er del av (overordnet organisasjon)"/>
-      <definition value="Organisasjonen er del av (overordnet organisasjon)"/>
+      <short value="Organisasjonen er del av (overordnet organisasjon)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The organization is part of (parent organization)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Organisasjonen er del av (overordnet organisasjon)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="The organization is part of (parent organization)"/>
+          </extension>
+        </extension>
+      </definition>
       <type>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
           <valueBoolean value="true"/>

@@ -1,10 +1,10 @@
-# Virkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Virkestoff - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
-*  [Hjem](index.md) 
-*  [Informasjonsmodell](informasjonsmodell.md) 
-*  [Integrasjon](integrasjon.md) 
-*  [FHIR-profiler](profiler.md) 
-*  [Nedlastinger](nedlastinger.md) 
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -14,18 +14,18 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance **  | *Version*:1.1.1 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Virkestoff |
 
  
-En tilpasset profil av Substance for å representere virkestoff, basert på no-basis. 
+En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance. 
 
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md)
 * Examples for this Profile: [Substance/Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md)
 
-You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-substance)
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-substance.json)
 
 ### Formal Views of Profile Content
 
@@ -44,9 +44,22 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-substance",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Virkestoff",
   "title" : "Virkestoff",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Substance"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "draft",
   "date" : "2025-09-12",
   "publisher" : "Folkehelseinstituttet",
@@ -64,7 +77,20 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-substance.csv),
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis.",
+  "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "A tailored Substance profile for representing active substances, based on no-basis-Substance."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

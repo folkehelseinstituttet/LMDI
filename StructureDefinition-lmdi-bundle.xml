@@ -17,11 +17,20 @@
 <tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle"/>
-  <version value="1.1.0"/>
+  <version value="1.1.1"/>
   <name value="LegemiddelregisterBundle"/>
-  <title value="LegemiddelregisterBundle"/>
+  <title value="LegemiddelregisterBundle">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Legemiddelregisteret Bundle"/>
+      </extension>
+    </extension>
+  </title>
   <status value="active"/>
-  <date value="2026-05-11T08:19:23+00:00"/>
+  <date value="2026-05-31T19:08:08+00:00"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -37,7 +46,16 @@
       <value value="legemiddelregisteret@fhi.no"/>
     </telecom>
   </contact>
-  <description value="Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper."/>
+  <description value="Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper.">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="en"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Bundle profile for Legemiddelregisteret. Supports only transaction type and POST operations, with restrictions on allowed resource types."/>
+      </extension>
+    </extension>
+  </description>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -331,8 +349,26 @@
     </element>
     <element id="Bundle.type">
       <path value="Bundle.type"/>
-      <short value="Må være av type transaction"/>
-      <definition value="Angir at bundle må være av type transaction"/>
+      <short value="Må være av type transaction">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must be of type transaction"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Angir at bundle må være av type transaction">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indicates that the bundle must be of type transaction"/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types."/>
       <min value="1"/>
       <max value="1"/>
@@ -617,8 +653,26 @@
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry"/>
-      <short value="Innholdselementer i bundle"/>
-      <definition value="Inneholder ressursene som skal sendes inn til registeret"/>
+      <short value="Innholdselementer i bundle">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Content entries in the bundle"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Inneholder ressursene som skal sendes inn til registeret">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Contains the resources to be submitted to the registry"/>
+          </extension>
+        </extension>
+      </definition>
       <min value="1"/>
       <max value="*"/>
       <base>
@@ -1164,8 +1218,26 @@
     </element>
     <element id="Bundle.entry.request.method">
       <path value="Bundle.entry.request.method"/>
-      <short value="Må være POST"/>
-      <definition value="Angir at alle forespørsler i bundle må være av type POST"/>
+      <short value="Må være POST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must be POST"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Angir at alle forespørsler i bundle må være av type POST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indicates that all requests in the bundle must be of type POST"/>
+          </extension>
+        </extension>
+      </definition>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1199,8 +1271,26 @@
     </element>
     <element id="Bundle.entry.request.url">
       <path value="Bundle.entry.request.url"/>
-      <short value="URL for requesten (påkrevd, men verdien har ingen betydning)"/>
-      <definition value="Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."/>
+      <short value="URL for requesten (påkrevd, men verdien har ingen betydning)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="URL for the request (required, but the value has no significance)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Represents the address for the request. The URL is required by the FHIR specification for transaction bundles, but the actual value has no functional significance in this case."/>
+          </extension>
+        </extension>
+      </definition>
       <comment value="E.g. for a Patient Create, the method would be &quot;POST&quot; and the URL would be &quot;Patient&quot;. For a Patient Update, the method would be PUT and the URL would be &quot;Patient/[id]&quot;."/>
       <min value="1"/>
       <max value="1"/>
@@ -1623,8 +1713,26 @@
     </element>
     <element id="Bundle.type">
       <path value="Bundle.type"/>
-      <short value="Må være av type transaction"/>
-      <definition value="Angir at bundle må være av type transaction"/>
+      <short value="Må være av type transaction">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must be of type transaction"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Angir at bundle må være av type transaction">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indicates that the bundle must be of type transaction"/>
+          </extension>
+        </extension>
+      </definition>
       <fixedCode value="transaction"/>
       <mustSupport value="true"/>
     </element>
@@ -1643,8 +1751,26 @@
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry"/>
-      <short value="Innholdselementer i bundle"/>
-      <definition value="Inneholder ressursene som skal sendes inn til registeret"/>
+      <short value="Innholdselementer i bundle">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Content entries in the bundle"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Inneholder ressursene som skal sendes inn til registeret">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Contains the resources to be submitted to the registry"/>
+          </extension>
+        </extension>
+      </definition>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
@@ -1660,15 +1786,51 @@
     </element>
     <element id="Bundle.entry.request.method">
       <path value="Bundle.entry.request.method"/>
-      <short value="Må være POST"/>
-      <definition value="Angir at alle forespørsler i bundle må være av type POST"/>
+      <short value="Må være POST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Must be POST"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Angir at alle forespørsler i bundle må være av type POST">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Indicates that all requests in the bundle must be of type POST"/>
+          </extension>
+        </extension>
+      </definition>
       <fixedCode value="POST"/>
       <mustSupport value="true"/>
     </element>
     <element id="Bundle.entry.request.url">
       <path value="Bundle.entry.request.url"/>
-      <short value="URL for requesten (påkrevd, men verdien har ingen betydning)"/>
-      <definition value="Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet."/>
+      <short value="URL for requesten (påkrevd, men verdien har ingen betydning)">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="URL for the request (required, but the value has no significance)"/>
+          </extension>
+        </extension>
+      </short>
+      <definition value="Representerer adressen for requesten. URL er påkrevd av FHIR-spesifikasjonen for transaction bundles, men selve verdien har ingen funksjonell betydning i dette tilfellet.">
+        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+          <extension url="lang">
+            <valueCode value="en"/>
+          </extension>
+          <extension url="content">
+            <valueString value="Represents the address for the request. The URL is required by the FHIR specification for transaction bundles, but the actual value has no functional significance in this case."/>
+          </extension>
+        </extension>
+      </definition>
     </element>
   </differential>
 </StructureDefinition>

@@ -4,12 +4,15 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
+
+
+
 <html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.0</title>
+        v1.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -34,6 +37,7 @@
 
 
     <script type="text/javascript" src="assets/js/fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/language-switcher.js" defer="defer"> </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -55,6 +59,17 @@
             <!-- Placeholder for child template header declarations -->
 
 
+
+
+
+
+
+
+
+
+
+
+
 <header class="fhi-header mb-0">
     <div class="fhi-header__brand">
         <div class="container fhi-header__brand-container">
@@ -64,16 +79,24 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.0 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.1 - ci-build
                             
                             
                             
-                            <span title="">NO</span>
+                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
+                                title="Norway" />
                             
                             
                         </span>
                     </span>
                 </div>
+            </div>
+            <div class="fhi-header__lang">
+                <label for="lang-switcher" class="visually-hidden">Velg språk / Select language</label>
+                <select id="lang-switcher" class="form-select form-select-sm" aria-label="Velg språk">
+                    <option value="no" selected="selected" data-href="">Norsk</option>
+                    <option value="en"  data-href="en/StructureDefinition-lmdi-organization.html">English</option>
+                </select>
             </div>
         </div>
     </div>
@@ -88,25 +111,21 @@
         <div class="container fhi-main-menu-alt__container">
             <div class="fhi-main-menu-alt__collapse">
                 <div id="menu">
-                    <!-- menu.xml  -->
+                    
+
+
+
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-  <li>
-    <a href="index.html">Hjem</a>
-  </li>
-  <li>
-    <a href="informasjonsmodell.html">Informasjonsmodell</a>
-  </li>
-  <li>
-    <a href="integrasjon.html">Integrasjon</a>
-  </li>
-  <li>
-    <a href="profiler.html">FHIR-profiler</a>
-  </li>
-  <li>
-    <a href="nedlastinger.html">Nedlastinger</a>
-  </li>
+  <li><a href="index.html">Hjem</a></li>
+  <li><a href="informasjonsmodell.html">Informasjonsmodell</a></li>
+  <li><a href="integrasjon.html">Integrasjon</a></li>
+  <li><a href="profiler.html">FHIR-profiler</a></li>
+  <li><a href="nedlastinger.html">Nedlastinger</a></li>
 </ul>
+
+
+
                 </div>
             </div>
         </div>
@@ -129,7 +148,7 @@
                 <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -251,12 +270,12 @@
                 </span>
         </td>
         <td><i>Version</i>:
-            <span class="copy-text">1.1.0
+            <span class="copy-text">1.1.1
                     <i
                     title="Click to copy versioned URL"
                     class="bi bi-copy btn-copy"
                     role="button"
-                    data-clipboard-text="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization|1.1.0"
+                    data-clipboard-text="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization|1.1.1"
                     ></i>
                 </span>
         </td>
@@ -292,21 +311,7 @@
 
 
 <p>
-<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem, basert på no-basis-Organization.</p>
-
-<p>Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). For organisasjonen som er del av en større organisasjon, skal dette angis ved hjelp av partOf-relasjonen.</p>
-
-<p>Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”:</p>
-<ul>
-  <li>organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)</li>
-  <li>organisasjonen på høyre nivå
-    <ul>
-      <li>sykehus, Helseforetak og Regionalt Helseforetak</li>
-      <li>sykehjem, kommune</li>
-    </ul>
-  </li>
-  <li>minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)</li>
-</ul>
+<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</p>
 
 </p>
 
@@ -322,7 +327,7 @@
  <li>Refer to this Profile: <a href="StructureDefinition-lmdi-encounter.html">Episode</a> and <a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></li>
  <li>Examples for this Profile: <a href="Organization-Organisasjon-HF-2.html">Helse Møre og Romsdal HF</a>, <a href="Organization-Organisasjon-HF.html">Oslo universitetssykehus HF</a>, <a href="Organization-Organisasjon-Kommune.html">TRONDHEIM KOMMUNE</a>, <a href="Organization-Organisasjon-Post.html">HMR ÅLE SH Kreft og blodsjukdommar sengepost</a><span id="rr_ex" onClick="document.getElementById('rr_ex').innerHTML = document.getElementById('rr2_ex').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 5 more</span></span><span id="rr2_ex" style="display: none">, <a href="Organization-Organisasjon-Seksjon.html">Kreft og blodsykdommer sengepost Ålesund</a>, <a href="Organization-Organisasjon-Sykehjem.html">BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM</a>, <a href="Organization-Organisasjon-Sykehus-2.html">Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk</a>, <a href="Organization-Organisasjon-Sykehus.html">OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK</a> and <a href="Organization-Organisasjon-Sykehusavdeling.html">Avdeling for epilepsi, poliklinikk</a></span></li>
 </ul>
-<p>You can also check for <a href="https://packages2.fhir.org/xig/hl7.fhir.no.lmdi|current/StructureDefinition/lmdi-organization">usages in the FHIR IG Statistics</a></p>
+<p>You can also check for <a href="https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-organization.json">usages in the FHIR IG Statistics</a></p>
 
   <!-- no uri -->
   <a name="profile"> </a>
@@ -525,7 +530,7 @@
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Technical endpoints providing access to services operated for the organization</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc8ebbdc-1e9d-4260-8cc4-301964a53ae6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d113f7cc-75de-4418-8942-0449d271caf2
 document.getElementById('cblmdi-organizationD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-organizationD'), 'binding', document.getElementById('cblmdi-organizationD-binding').checked, document.getElementById('pplmdi-organizationD'));
 document.getElementById('cblmdi-organizationD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -567,7 +572,7 @@ filterDesc(document.getElementById('lmdi-organizationD'), 'obligation', document
       <a style="opacity: 0.5" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -752,7 +757,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organisasjon</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Organisasjonen er del av (overordnet organisasjon)<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="SHALL have a contained resource if a local reference is provided" class="constraint">ref-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc8ebbdc-1e9d-4260-8cc4-301964a53ae6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d113f7cc-75de-4418-8942-0449d271caf2
 document.getElementById('cblmdi-organizationK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-organizationK'), 'binding', document.getElementById('cblmdi-organizationK-binding').checked, document.getElementById('pplmdi-organizationK'));
 document.getElementById('cblmdi-organizationK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -869,7 +874,7 @@ filterDesc(document.getElementById('lmdi-organizationK'), 'obligation', document
       <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -1306,7 +1311,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organisasjon</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Organisasjonen er del av (overordnet organisasjon)<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="SHALL have a contained resource if a local reference is provided" class="constraint">ref-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc8ebbdc-1e9d-4260-8cc4-301964a53ae6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d113f7cc-75de-4418-8942-0449d271caf2
 document.getElementById('cblmdi-organizationS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-organizationS'), 'binding', document.getElementById('cblmdi-organizationS-binding').checked, document.getElementById('pplmdi-organizationS'));
 document.getElementById('cblmdi-organizationS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1468,7 +1473,7 @@ filterDesc(document.getElementById('lmdi-organizationS'), 'obligation', document
       <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -1962,7 +1967,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Technical endpoints providing access to services operated for the organization</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc8ebbdc-1e9d-4260-8cc4-301964a53ae6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d113f7cc-75de-4418-8942-0449d271caf2
 document.getElementById('cblmdi-organizationDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-organizationDA'), 'binding', document.getElementById('cblmdi-organizationDA-binding').checked, document.getElementById('pplmdi-organizationDA'));
 document.getElementById('cblmdi-organizationDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2003,7 +2008,7 @@ filterDesc(document.getElementById('lmdi-organizationDA'), 'obligation', documen
       <a style="opacity: 0.5" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -2188,7 +2193,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organisasjon</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Organisasjonen er del av (overordnet organisasjon)<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="SHALL have a contained resource if a local reference is provided" class="constraint">ref-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc8ebbdc-1e9d-4260-8cc4-301964a53ae6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d113f7cc-75de-4418-8942-0449d271caf2
 document.getElementById('cblmdi-organizationKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-organizationKA'), 'binding', document.getElementById('cblmdi-organizationKA-binding').checked, document.getElementById('pplmdi-organizationKA'));
 document.getElementById('cblmdi-organizationKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2305,7 +2310,7 @@ filterDesc(document.getElementById('lmdi-organizationKA'), 'obligation', documen
       <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.1</td>
     <td>This IG</td>
   </tr>
 </table>
@@ -2742,7 +2747,7 @@ Sub-unit of a country with limited sovereignty in a federally organized country.
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-lmdi-organization.html">Organisasjon</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Organisasjonen er del av (overordnet organisasjon)<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="SHALL have a contained resource if a local reference is provided" class="constraint">ref-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // bc8ebbdc-1e9d-4260-8cc4-301964a53ae6
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // d113f7cc-75de-4418-8942-0449d271caf2
 document.getElementById('cblmdi-organizationSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('lmdi-organizationSA'), 'binding', document.getElementById('cblmdi-organizationSA-binding').checked, document.getElementById('pplmdi-organizationSA'));
 document.getElementById('cblmdi-organizationSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2904,7 +2909,7 @@ filterDesc(document.getElementById('lmdi-organizationSA'), 'obligation', documen
       <a style="opacity: 1.0" href="ValueSet-lmdi-address-type.html">LMDI Address Type</a>
       <button data-clipboard-text="http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type" title="Click to copy URL" class="btn-copy"></button>
     </td>
-    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.0</td>
+    <td title="Version is not explicitly stated, which means it is fixed to the version provided in this specification">&#x1F4E6;1.1.1</td>
     <td>This IG</td>
   </tr>
   <tr>
@@ -3265,10 +3270,10 @@ Summary
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.0 based on <a
+                    Package hl7.fhir.no.lmdi#1.1.1 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Mon, May 11, 2026 08:19+0000">2026-05-11</span>
+                        title="Sun, May 31, 2026 19:08+0000">2026-05-31</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
