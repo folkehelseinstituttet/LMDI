@@ -29,7 +29,8 @@ PUBLISHER_DIR="${SCRIPT_DIR}/publisher"
 PUBLISHER_JAR="${PUBLISHER_DIR}/publisher.jar"
 NO_BASIS_VERSION="2.2.0"
 NO_BASIS_FILE="${SCRIPT_DIR}/no-basis-${NO_BASIS_VERSION}.tgz"
-PUBLISHER_URL="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
+PUBLISHER_VERSION="2.2.8"
+PUBLISHER_URL="https://github.com/HL7/fhir-ig-publisher/releases/download/${PUBLISHER_VERSION}/publisher.jar"
 NO_BASIS_URL="https://raw.githubusercontent.com/HL7Norway/resources/main/snapshots/hl7.fhir.no.basis-${NO_BASIS_VERSION}-snapshots.tgz"
 
 # OPTIMALISERING: Bruk alltid Linux filesystem for raskere I/O (2-10x speedup)
@@ -143,7 +144,7 @@ download_publisher() {
         return 0
     fi
     
-    print_color "$YELLOW" "Laster ned siste versjon av IG Publisher..."
+    print_color "$YELLOW" "Laster ned IG Publisher ${PUBLISHER_VERSION}..."
     
     # Opprett publisher directory hvis den ikke finnes
     if [[ ! -d "$PUBLISHER_DIR" ]]; then

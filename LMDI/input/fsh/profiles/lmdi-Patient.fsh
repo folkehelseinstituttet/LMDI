@@ -49,7 +49,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.city 0..0
 * address.text 0..0
 * address.line 0..0
-* address.district ^short = "Municipality"
+* address.district ^short = "Kommune"
 * address.district ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.district ^short.extension[=].extension[+].url = "lang"
 * address.district ^short.extension[=].extension[=].valueCode = #en
@@ -87,7 +87,7 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.use ^definition.extension[=].extension[=].valueCode = #en
 * address.use ^definition.extension[=].extension[+].url = "content"
 * address.use ^definition.extension[=].extension[=].valueString = "Address type limited to home, temp, or old"
-* address.state ^short = "County name"
+* address.state ^short = "Fylkesnavn"
 * address.state ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.state ^short.extension[=].extension[+].url = "lang"
 * address.state ^short.extension[=].extension[=].valueCode = #en
@@ -96,13 +96,13 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 * address.country 0..0
 * address.postalCode 0..0
 
-* address.extension[urbanDistrict] ^short = "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)"
+* address.extension[urbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
 * address.extension[urbanDistrict] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.extension[urbanDistrict] ^short.extension[=].extension[+].url = "lang"
 * address.extension[urbanDistrict] ^short.extension[=].extension[=].valueCode = #en
 * address.extension[urbanDistrict] ^short.extension[=].extension[+].url = "content"
 * address.extension[urbanDistrict] ^short.extension[=].extension[=].valueString = "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)"
-* address.extension[urbanDistrict] ^definition = "Encoded value for urban district. Codes from code system \"Urban district numbers\" (OID 3403) shall be used."
+* address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 * address.extension[urbanDistrict] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.extension[urbanDistrict] ^definition.extension[=].extension[+].url = "lang"
 * address.extension[urbanDistrict] ^definition.extension[=].extension[=].valueCode = #en
@@ -155,37 +155,37 @@ Description: "Pasienten som har fått rekvirert eller administrert legemiddel, b
 
 // Bruker no-basis sine eksisterende slices
 * identifier[FNR] 0..1 MS
-* identifier[FNR] ^short = "National identity number"
+* identifier[FNR] ^short = "Fødselsnummer"
 * identifier[FNR] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * identifier[FNR] ^short.extension[=].extension[+].url = "lang"
 * identifier[FNR] ^short.extension[=].extension[=].valueCode = #en
 * identifier[FNR] ^short.extension[=].extension[+].url = "content"
 * identifier[FNR] ^short.extension[=].extension[=].valueString = "National identity number"
 * identifier[FNR].value 1..1
-* identifier[FNR].value ^short = "National identity number (11 digits)"
+* identifier[FNR].value ^short = "Fødselsnummeret (11 siffer)"
 * identifier[FNR].value ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * identifier[FNR].value ^short.extension[=].extension[+].url = "lang"
 * identifier[FNR].value ^short.extension[=].extension[=].valueCode = #en
 * identifier[FNR].value ^short.extension[=].extension[+].url = "content"
 * identifier[FNR].value ^short.extension[=].extension[=].valueString = "National identity number (11 digits)"
-* identifier[FNR].value ^example[0].label = "National identity number"
+* identifier[FNR].value ^example[0].label = "Fødselsnummer"
 * identifier[FNR].value ^example[0].valueString = "12345678901"
 
 * identifier[DNR] 0..1 MS
-* identifier[DNR] ^short = "D-number"
+* identifier[DNR] ^short = "D-nummer"
 * identifier[DNR] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * identifier[DNR] ^short.extension[=].extension[+].url = "lang"
 * identifier[DNR] ^short.extension[=].extension[=].valueCode = #en
 * identifier[DNR] ^short.extension[=].extension[+].url = "content"
 * identifier[DNR] ^short.extension[=].extension[=].valueString = "D-number"
 * identifier[DNR].value 1..1
-* identifier[DNR].value ^short = "D-number (11 digits)"
+* identifier[DNR].value ^short = "D-nummer (11 siffer)"
 * identifier[DNR].value ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * identifier[DNR].value ^short.extension[=].extension[+].url = "lang"
 * identifier[DNR].value ^short.extension[=].extension[=].valueCode = #en
 * identifier[DNR].value ^short.extension[=].extension[+].url = "content"
 * identifier[DNR].value ^short.extension[=].extension[=].valueString = "D-number (11 digits)"
-* identifier[DNR].value ^example[0].label = "D-number"
+* identifier[DNR].value ^example[0].label = "D-nummer"
 * identifier[DNR].value ^example[0].valueString = "12345678901"
 
 // Skjul no-basis slices som LMDI ikke bruker
@@ -221,4 +221,3 @@ Description: "Eksempel på pasient med D-nummer"
 * identifier[DNR].value = "41667987421"
 * birthDate = "1979-01-01"
 * address.state = "Vestland"
-

@@ -5,6 +5,9 @@ on:
 
 env:
   IG: LMDI
+  # Pinnet IG Publisher-versjon. lag-en-doklag.py er koblet til publisher sin
+  # HTML-markup; hold i synk med ByggIG.bat og de andre workflow-ene.
+  IG_PUBLISHER_VERSION: "2.2.8"
 
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
@@ -126,9 +129,9 @@ jobs:
           
           echo "✅ Snapshot pakke klargjort for Docker"
 
-      # Downloads the newest version of the IG Publisher, this could probable be cached.
+      # Downloads the pinned version of the IG Publisher, this could probable be cached.
       - name: 📥 Download IG Publisher
-        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+        run: wget -q https://github.com/HL7/fhir-ig-publisher/releases/download/${{ env.IG_PUBLISHER_VERSION }}/publisher.jar
 
       # Builds the HTML page for the IG.
       - name: 🏃‍♂️ Run IG Publisher with snapshot injection
@@ -162,8 +165,12 @@ jobs:
       - name: 🌐 Bygg engelsk dokumentasjonsflate
         shell: bash
         run: |
-          python3 -m pip install --quiet markdown
           python3 scripts/lag-en-doklag.py --ig-root LMDI --output-dir LMDI/output
+
+      - name: 🔎 Sjekk engelsk oversettelsesdekning
+        shell: bash
+        run: |
+          python3 scripts/sjekk-oversettelser.py --ig-root LMDI
 
       # Kopierer certificates.zip til output
       - name: Copy certificates.zip

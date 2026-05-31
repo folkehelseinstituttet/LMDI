@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import shutil
@@ -9,17 +10,289 @@ from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
 
-try:
-    import markdown as _markdown
-except ImportError as exc:  # pragma: no cover
-    raise SystemExit(
-        "Mangler Python-pakken 'markdown'. Installer med: python -m pip install markdown"
-    ) from exc
-
 
 EXTERNAL_SCHEMES = ("http://", "https://", "//", "mailto:", "tel:", "data:", "javascript:")
 
 TRANSLATION_EXT_URL = "http://hl7.org/fhir/StructureDefinition/translation"
+MUST_SUPPORT_TOOLTIP_SUFFIX = " (this element must be supported)"
+
+SUPPLEMENTAL_REPLACEMENT_PAIRS = (
+    (
+        "Bundle kan bare inneholde følgende profilerte ressurstyper: Diagnose, Helsepersonell, Episode, Legemiddel, LegemiddelAdministrasjon, Legemiddelrekvirering, Organisasjon, Pasient, Virkestoff",
+        "Bundle may only contain the following profiled resource types: Diagnosis, Healthcare professional, Episode, Medication, Medication Administration, Medication Request, Organization, Patient, Substance",
+    ),
+    (
+        "Legemiddeldata fra institusjon til Legemiddelregisteret",
+        "Medication data from institutions to Legemiddelregisteret",
+    ),
+    (
+        "Denne implementasjongguiden beskriver hvordan institusjoner skal overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret",
+        "This implementation guide describes how institutions shall transfer data on medication use in institutions to Legemiddelregisteret",
+    ),
+    (
+        "Minst én NPR episode identifikator (string eller UUID) må oppgis",
+        "At least one NPR episode identifier (string or UUID) must be provided",
+    ),
+    (
+        "Må inneholde tidspunkt for administrering.",
+        "Must contain the time of administration.",
+    ),
+    (
+        "Organisasjon skal ha minst ENH eller RSH identifier",
+        "Organization shall have at least an ENH or RSH identifier",
+    ),
+    (
+        "Medication skal ha code.coding eller ingredient",
+        "Medication shall have code.coding or ingredient",
+    ),
+    (
+        "Id for angivelse av legemiddel fra lokal legemiddelkatalog",
+        "ID for specifying medication from a local medication catalog",
+    ),
+    (
+        "FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som representerer minste plukkbare enhet, f.eks. 1 ampulle eller 1 tablett.",
+        "FEST ID for dose. Prescription of a specific brand with an ID (LMR number) representing the smallest selectable unit, e.g. 1 ampoule or 1 tablet.",
+    ),
+    (
+        "FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare.",
+        "FEST ID for medication brand. Prescription of a strength and form of a specific brand. As of 2024, prescribing by LegemiddelMerkevare is no longer recommended.",
+    ),
+    (
+        "FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer)",
+        "FEST ID for medication packages. Prescription of a specific package of a brand (item number)",
+    ),
+    (
+        "FEST-id for virkestoff. Benyttes ved virkestoffrekvirering",
+        "FEST ID for active substance. Used for active substance prescribing",
+    ),
+    (
+        "Kilde for URI: https://build.fhir.org/ig/HL7/UTG/CodeSystem-ICD11MMS.html",
+        "Source for URI: https://build.fhir.org/ig/HL7/UTG/CodeSystem-ICD11MMS.html",
+    ),
+    (
+        "Identifikator fra FEST",
+        "Identifier from FEST",
+    ),
+    (
+        "Komplett kodeverk for norske kommunenummer (Volven 3402)",
+        "Complete code system for Norwegian municipality numbers (Volven 3402).",
+    ),
+    (
+        "Kodesystem for norske kommunenummer (Volven 3402)",
+        "Code system for Norwegian municipality numbers (Volven 3402).",
+    ),
+    (
+        "Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient",
+        "The patient who has been prescribed or administered medication, based on no-basis-Patient.",
+    ),
+    (
+        "Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.",
+        "The healthcare professional who prescribed the medication, based on no-basis-Practitioner. HPR number shall be provided when available.",
+    ),
+    (
+        "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.",
+        "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization.",
+    ),
+    (
+        "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.",
+        "A tailored Substance profile for representing active substances, based on no-basis-Substance.",
+    ),
+    (
+        "Verdisett som begrenses status til Legemiddeladministrering til henholdsvis 'Gjennomført' eller 'Feilregistrert'.",
+        "Value set that restricts the status of medication administration to 'completed' or 'entered-in-error'.",
+    ),
+    (
+        "Verdisett som begrenses status til Medication Administration til henholdsvis ‘Gjennomført’ eller ‘Feilregistrert’.",
+        "Value set that restricts the status of medication administration to 'completed' or 'entered-in-error'.",
+    ),
+    (
+        "ATC kode fra WHO ATC kodesystem",
+        "ATC code from the WHO ATC code system",
+    ),
+    (
+        "Metavisionkatalog fra Helse Sør-Øst",
+        "MetaVision catalogue from South-Eastern Norway Regional Health Authority",
+    ),
+    (
+        "Metavisionkatalog fra Helse Nord",
+        "MetaVision catalogue from Northern Norway Regional Health Authority",
+    ),
+    (
+        "Tillatte verdier er home, temp eller old",
+        "Allowed values are home, temp, or old",
+    ),
+    (
+        "Adressetype begrenset til home, temp eller old",
+        "Address type limited to home, temp, or old",
+    ),
+    # Status-display fra medication-admin-status. Finnes ellers bare inni den lange
+    # ValueSet-description-strengen; trengs frittstaende for concept-tabellen.
+    ("Gjennomført", "Completed"),
+    ("Feilregistrert", "Entered in Error"),
+    # Eksempel-beskrivelser fra Instance `Description:` (havner i ImplementationGuide
+    # sin resource.description). Disse kan ikke fa en translation-extension i FSH, sa
+    # de oversettes her. Norsk kilde ma matche IG-json ordrett.
+    (
+        "Eksempel på Helseforetak (Helse Møre og Romsdal HF)",
+        "Example of a health trust (Helse Møre og Romsdal HF)",
+    ),
+    ("Eksempel på Helseforetak", "Example of a health trust"),
+    (
+        "Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring",
+        "Example of chemotherapy administration (Cisplatin) based on a request with percentage dose adjustment",
+    ),
+    (
+        "Eksempel på administrering av legemiddel - infusjon",
+        "Example of medication administration - infusion",
+    ),
+    (
+        "Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon",
+        "Example of medication administration with an ICD-10 diagnosis as indication",
+    ),
+    (
+        "Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon",
+        "Example of medication administration with a SNOMED CT diagnosis as indication",
+    ),
+    (
+        "Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)",
+        "Example of medication administration with status entered-in-error",
+    ),
+    ("Eksempel på administrering av legemiddel", "Example of medication administration"),
+    ("Eksempel på diagnose ICD-10", "Example of an ICD-10 diagnosis"),
+    ("Eksempel på diagnose SNOMED CT", "Example of a SNOMED CT diagnosis"),
+    (
+        "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt",
+        "Example of a diagnosis with ICD-10 code J30 - allergic rhinitis",
+    ),
+    (
+        "Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter",
+        "Example of an episode in the specialist health service with a ward as service provider",
+    ),
+    (
+        "Eksempel på episode i spesialisthelsetjenesten",
+        "Example of an episode in the specialist health service",
+    ),
+    ("Eksempel på episode på sykehjem", "Example of an episode at a nursing home"),
+    (
+        "Eksempel på helsepersonell med HPR-nummer",
+        "Example of a healthcare professional with an HPR number",
+    ),
+    (
+        "Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie",
+        "Example of a chemotherapy request with dose adjustment, treatment regimen and clinical trial",
+    ),
+    (
+        "Eksempel på kommune i primærhelsetjenesten",
+        "Example of a municipality in primary health care",
+    ),
+    (
+        "Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id",
+        "Example of a medication (SmofKabiven) identified by a FEST medication dose id",
+    ),
+    (
+        "Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id",
+        "Example of a medication (cetirizine) identified by a FEST medication substance id",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med FEST legemiddeldose-id",
+        "Example of a medication identified by a FEST medication dose id",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id",
+        "Example of a medication identified by a FEST medication brand id",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med FEST legemiddelpakning-id",
+        "Example of a medication identified by a FEST medication package id",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id",
+        "Example of a medication identified by a FEST medication substance id",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med LMR-løpenummer",
+        "Example of a medication identified by an LMR sequence number",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med SNOMED CT-kode",
+        "Example of a medication identified by a SNOMED CT code",
+    ),
+    (
+        "Eksempel på legemiddel identifisert med varenummer",
+        "Example of a medication identified by an item number",
+    ),
+    (
+        "Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept",
+        "Example of a medication without code — ingredients expressed via Reference and CodeableConcept",
+    ),
+    ("Eksempel på legemiddelrekvirering av Paracet", "Example of a medication request for Paracet"),
+    (
+        "Eksempel på lokalt katalogisert cellegift (Cisplatin)",
+        "Example of locally catalogued chemotherapy (Cisplatin)",
+    ),
+    (
+        "Eksempel på lokalt legemiddel med flere ingredienser",
+        "Example of a local medication with multiple ingredients",
+    ),
+    ("Eksempel på pasient med D-nummer", "Example of a patient with a D number"),
+    (
+        "Eksempel på pasient med fødselsnummer",
+        "Example of a patient with a national identity number",
+    ),
+    (
+        "Eksempel på pasient uten personidentifikator",
+        "Example of a patient without a personal identifier",
+    ),
+    (
+        "Eksempel på post – laveste nivå i organisasjonshierarkiet",
+        "Example of a ward – the lowest level in the organizational hierarchy",
+    ),
+    ("Eksempel på rekvirent uten HPR-nummer", "Example of a requester without an HPR number"),
+    (
+        "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime",
+        "Example of a request for chemotherapy (Cisplatin) with percentage dose adjustment and part of a treatment regimen",
+    ),
+    (
+        "Eksempel på rekvirering for intravenøs infusjon",
+        "Example of a request for intravenous infusion",
+    ),
+    (
+        "Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling",
+        "Example of a request marked as entered-in-error due to duplicate treatment",
+    ),
+    (
+        "Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)",
+        "Example of a request with an ICD-10 diagnosis as indication (allergic rhinitis, seasonal treatment)",
+    ),
+    (
+        "Eksempel på seksjonsnivå i organisasjonshierarkiet",
+        "Example of a section level in the organizational hierarchy",
+    ),
+    (
+        "Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon",
+        "Example of self-administration — the patient takes the medication themselves after dispensing from the institution",
+    ),
+    ("Eksempel på spesialistavdeling", "Example of a specialist department"),
+    (
+        "Eksempel på sykehjem i primærhelsetjenesten",
+        "Example of a nursing home in primary health care",
+    ),
+    (
+        "Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF",
+        "Example of a hospital organization under Helse Møre og Romsdal HF",
+    ),
+    ("Eksempel på sykehusorganisasjon", "Example of a hospital organization"),
+    (
+        "Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline.",
+        "Example of a transaction bundle where the member resources are local bundle instances marked as inline.",
+    ),
+    ("Eksempel på virkestoff - Oksykodon", "Example of a substance - Oxycodone"),
+    # Bundle-eksempelets Title: (resource.name i ImplementationGuide), ikke en Description.
+    (
+        "Oksykodonadministrering i sykehjem med inline ressurskopier",
+        "Oxycodone administration in a nursing home with inline resource copies",
+    ),
+)
 
 
 @dataclass(frozen=True)
@@ -57,33 +330,100 @@ def _compile_word_boundary(source: str) -> re.Pattern[str]:
     return re.compile(r"(?<!\w)" + re.escape(source) + r"(?!\w)")
 
 
-def load_replacements(translations_dir: Path) -> list[Replacement]:
+def _without_final_period(value: str) -> str:
+    return value[:-1] if value.endswith(".") else value
+
+
+def _replacement_variants(source: str, target: str) -> list[tuple[str, str]]:
+    source_without_period = _without_final_period(source)
+    target_without_period = _without_final_period(target)
+    variants = [
+        (source, target),
+        (source_without_period, target_without_period),
+        (
+            source_without_period + MUST_SUPPORT_TOOLTIP_SUFFIX,
+            target_without_period + MUST_SUPPORT_TOOLTIP_SUFFIX,
+        ),
+    ]
+
+    result: list[tuple[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for candidate_source, candidate_target in variants:
+        key = (candidate_source, candidate_target)
+        if not candidate_source or candidate_source == candidate_target or key in seen:
+            continue
+        seen.add(key)
+        result.append(key)
+    return result
+
+
+def _add_replacement(
+    replacements: list[Replacement],
+    seen: set[tuple[str, str]],
+    source: str,
+    target: str,
+) -> None:
+    # IG Publisher rendrer tekstfelter trimmet, mens FSH-kilden kan ha ledende/
+    # avsluttende mellomrom (f.eks. ^definition som slutter pa ". "). Uten trimming
+    # treffer ikke substring-erstatningen den rendrede HTML-en.
+    source = source.strip()
+    target = target.strip()
+    for candidate_source, candidate_target in _replacement_variants(source, target):
+        key = (candidate_source, candidate_target)
+        if key in seen:
+            continue
+        seen.add(key)
+        replacements.append(
+            Replacement(candidate_source, candidate_target, _compile_word_boundary(candidate_source))
+        )
+
+
+def _iter_translation_pairs(node: object) -> list[tuple[str, str]]:
+    pairs: list[tuple[str, str]] = []
+
+    if isinstance(node, dict):
+        for key, value in node.items():
+            if key.startswith("_") and isinstance(value, dict):
+                source = node.get(key[1:])
+                target = _extract_translation(value)
+                if isinstance(source, str) and target:
+                    pairs.append((source, target))
+            elif key.startswith("_") and isinstance(value, list):
+                source_values = node.get(key[1:])
+                if isinstance(source_values, list):
+                    for source, holder in zip(source_values, value):
+                        if isinstance(source, str) and isinstance(holder, dict):
+                            target = _extract_translation(holder)
+                            if target:
+                                pairs.append((source, target))
+
+            pairs.extend(_iter_translation_pairs(value))
+    elif isinstance(node, list):
+        for item in node:
+            pairs.extend(_iter_translation_pairs(item))
+
+    return pairs
+
+
+def load_replacements(resources_dir: Path) -> list[Replacement]:
     replacements: list[Replacement] = []
     seen: set[tuple[str, str]] = set()
 
-    for json_file in sorted(translations_dir.glob("*.json")):
+    for source, target in SUPPLEMENTAL_REPLACEMENT_PAIRS:
+        _add_replacement(replacements, seen, source, target)
+
+    for json_file in sorted(resources_dir.glob("*.json")):
         try:
             payload = json.loads(json_file.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             continue
 
-        for lang in payload.get("languages", []):
-            if lang.get("targetLang") != "en":
+        for source, target in _iter_translation_pairs(payload):
+            if not source or not target or source == target:
                 continue
-            for entry in lang.get("entries", []):
-                source = entry.get("source")
-                target = entry.get("target")
-                if not isinstance(source, str) or not isinstance(target, str):
-                    continue
-                if not source or not target or source == target:
-                    continue
-                if _looks_like_profile_identifier(source):
-                    continue
-                key = (source, target)
-                if key in seen:
-                    continue
-                seen.add(key)
-                replacements.append(Replacement(source, target, _compile_word_boundary(source)))
+            if _looks_like_profile_identifier(source):
+                continue
+            _add_replacement(replacements, seen, source, target)
 
     # Lengste source først, slik at lange treff bindes før kortere overlappende strenger
     replacements.sort(key=lambda r: (-len(r.source), r.source, r.target))
@@ -92,7 +432,8 @@ def load_replacements(translations_dir: Path) -> list[Replacement]:
 
 def apply_replacements(text: str, replacements: list[Replacement]) -> str:
     for repl in replacements:
-        text = repl.pattern.sub(repl.target, text)
+        if repl.source in text:
+            text = repl.pattern.sub(repl.target, text)
     return text
 
 
@@ -116,9 +457,7 @@ def _extract_translation(extension_holder: dict | None) -> str | None:
 
 
 def load_structure_definition_descriptions(resources_dir: Path) -> dict[str, str]:
-    """Returnerer map fra StructureDefinition.id til engelsk description-markdown.
-    IG Publisher 2.2.0 eksporterer ikke StructureDefinition.description i
-    translations-JSON-en, så vi henter den direkte fra fsh-generated/."""
+    """Returnerer map fra StructureDefinition.id til engelsk description-markdown."""
     result: dict[str, str] = {}
     if not resources_dir.exists():
         return result
@@ -142,24 +481,39 @@ def load_structure_definition_descriptions(resources_dir: Path) -> dict[str, str
     return result
 
 
-def _preprocess_markdown(text: str) -> str:
-    # IG Publisher (Java commonmark) tolererer bullets uten tom linje før lista,
-    # men Python markdown krever det. Sett inn én tom linje før første bullet i
-    # en serie, slik at lista blir 'tight' (uten <p> inne i <li>).
-    lines = text.split("\n")
-    out: list[str] = []
-    prev_was_bullet = False
-    for line in lines:
-        is_bullet = re.match(r"^\s*- ", line) is not None
-        if is_bullet and not prev_was_bullet and out and out[-1] != "":
-            out.append("")
-        out.append(line)
-        prev_was_bullet = is_bullet
-    return "\n".join(out)
-
-
 def render_description_html(markdown_text: str) -> str:
-    return _markdown.markdown(_preprocess_markdown(markdown_text))
+    """Rendrer enkel markdown fra FSH description-felter uten ekstern avhengighet."""
+    lines = [line.strip() for line in markdown_text.splitlines()]
+    blocks: list[str] = []
+    paragraph: list[str] = []
+    bullets: list[str] = []
+
+    def flush_paragraph() -> None:
+        if paragraph:
+            blocks.append(f"<p>{html.escape(' '.join(paragraph))}</p>")
+            paragraph.clear()
+
+    def flush_bullets() -> None:
+        if bullets:
+            items = "".join(f"<li>{html.escape(item)}</li>" for item in bullets)
+            blocks.append(f"<ul>{items}</ul>")
+            bullets.clear()
+
+    for line in lines:
+        if not line:
+            flush_paragraph()
+            flush_bullets()
+            continue
+        if line.startswith("- "):
+            flush_paragraph()
+            bullets.append(line[2:].strip())
+        else:
+            flush_bullets()
+            paragraph.append(line)
+
+    flush_paragraph()
+    flush_bullets()
+    return "\n".join(blocks)
 
 
 # IG Publisher pakker rendret description forskjellig avhengig av SD-type:
@@ -440,6 +794,8 @@ def build_mirror(
         parser.feed(html)
         parser.close()
         html = parser.get_html()
+        if not page.source_is_english:
+            html = apply_replacements(html, replacements)
         html = html.replace('src="assets/', 'src="../assets/')
         html = html.replace("src='assets/", "src='../assets/")
         html = html.replace('href="assets/', 'href="../assets/')
@@ -474,17 +830,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--ig-root",
         default="LMDI",
-        help="Sti til IG-roten som inneholder output/ og translations/.",
+        help="Sti til IG-roten som inneholder output/ og fsh-generated/.",
     )
     parser.add_argument(
         "--output-dir",
         default=None,
         help="Sti til IG Publisher output-mappen. Default er <ig-root>/output.",
-    )
-    parser.add_argument(
-        "--translations-dir",
-        default=None,
-        help="Sti til oversettelses-json. Default er <ig-root>/translations/en/json.",
     )
     parser.add_argument(
         "--resources-dir",
@@ -498,15 +849,14 @@ def main() -> int:
     args = parse_args()
     ig_root = Path(args.ig_root).resolve()
     output_dir = Path(args.output_dir).resolve() if args.output_dir else ig_root / "output"
-    translations_dir = Path(args.translations_dir).resolve() if args.translations_dir else ig_root / "translations" / "en" / "json"
     resources_dir = Path(args.resources_dir).resolve() if args.resources_dir else ig_root / "fsh-generated" / "resources"
 
     if not output_dir.exists():
         raise SystemExit(f"Fant ikke output-mappen: {output_dir}")
-    if not translations_dir.exists():
-        raise SystemExit(f"Fant ikke oversettelses-mappen: {translations_dir}")
+    if not resources_dir.exists():
+        raise SystemExit(f"Fant ikke FSH-genererte ressurser: {resources_dir}")
 
-    replacements = load_replacements(translations_dir)
+    replacements = load_replacements(resources_dir)
     sd_descriptions = load_structure_definition_descriptions(resources_dir)
     mirrored_pages = build_mirror(
         output_dir=output_dir,
@@ -515,7 +865,7 @@ def main() -> int:
     )
 
     print(f"Bygget {len(mirrored_pages)} engelske speilsider under {output_dir / 'en'}")
-    print(f"Brukte {len(replacements)} oversettelsespar fra {translations_dir}")
+    print(f"Brukte {len(replacements)} oversettelsespar fra {resources_dir}")
     print(f"Lastet engelsk description for {len(sd_descriptions)} StructureDefinitions fra {resources_dir}")
     return 0
 

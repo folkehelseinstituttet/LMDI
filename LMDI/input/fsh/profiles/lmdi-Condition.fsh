@@ -103,7 +103,17 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10].code 1..1
 * code.coding[ICD10].code ^short = "Diagnosekode fra kodeverket"
+* code.coding[ICD10].code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[ICD10].code ^short.extension[=].extension[+].url = "lang"
+* code.coding[ICD10].code ^short.extension[=].extension[=].valueCode = #en
+* code.coding[ICD10].code ^short.extension[=].extension[+].url = "content"
+* code.coding[ICD10].code ^short.extension[=].extension[=].valueString = "Diagnosis code from the code system"
 * code.coding[ICD10].display ^short = "Beskrivelse av diagnosekode (fra kodeverket)"
+* code.coding[ICD10].display ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[ICD10].display ^short.extension[=].extension[+].url = "lang"
+* code.coding[ICD10].display ^short.extension[=].extension[=].valueCode = #en
+* code.coding[ICD10].display ^short.extension[=].extension[+].url = "content"
+* code.coding[ICD10].display ^short.extension[=].extension[=].valueString = "Diagnosis code description (from the code system)"
 
 // ICD-11
 * code.coding[ICD11] ^short = "ICD-11"
@@ -123,7 +133,17 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICD11].system ^comment = "Kilde for URI: https://build.fhir.org/ig/HL7/UTG/CodeSystem-ICD11MMS.html"
 * code.coding[ICD11].code 1..1
 * code.coding[ICD11].code ^short = "Diagnosekode fra kodeverket"
+* code.coding[ICD11].code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[ICD11].code ^short.extension[=].extension[+].url = "lang"
+* code.coding[ICD11].code ^short.extension[=].extension[=].valueCode = #en
+* code.coding[ICD11].code ^short.extension[=].extension[+].url = "content"
+* code.coding[ICD11].code ^short.extension[=].extension[=].valueString = "Diagnosis code from the code system"
 * code.coding[ICD11].display ^short = "Beskrivelse av diagnosekode (fra kodeverket)"
+* code.coding[ICD11].display ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[ICD11].display ^short.extension[=].extension[+].url = "lang"
+* code.coding[ICD11].display ^short.extension[=].extension[=].valueCode = #en
+* code.coding[ICD11].display ^short.extension[=].extension[+].url = "content"
+* code.coding[ICD11].display ^short.extension[=].extension[=].valueString = "Diagnosis code description (from the code system)"
 
 // ICPC-2
 * code.coding[ICPC2] ^short = "ICPC-2"
@@ -141,7 +161,17 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICPC2].system = "urn:oid:2.16.578.1.12.4.1.1.7170"
 * code.coding[ICPC2].code 1..1
 * code.coding[ICPC2].code ^short = "Diagnosekode fra kodeverket"
+* code.coding[ICPC2].code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[ICPC2].code ^short.extension[=].extension[+].url = "lang"
+* code.coding[ICPC2].code ^short.extension[=].extension[=].valueCode = #en
+* code.coding[ICPC2].code ^short.extension[=].extension[+].url = "content"
+* code.coding[ICPC2].code ^short.extension[=].extension[=].valueString = "Diagnosis code from the code system"
 * code.coding[ICPC2].display ^short = "Beskrivelse av diagnosekode (fra kodeverket)"
+* code.coding[ICPC2].display ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[ICPC2].display ^short.extension[=].extension[+].url = "lang"
+* code.coding[ICPC2].display ^short.extension[=].extension[=].valueCode = #en
+* code.coding[ICPC2].display ^short.extension[=].extension[+].url = "content"
+* code.coding[ICPC2].display ^short.extension[=].extension[=].valueString = "Diagnosis code description (from the code system)"
 
 // EKSEMPLER
 Instance: Diagnose-ICD10

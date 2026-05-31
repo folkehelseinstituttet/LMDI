@@ -158,7 +158,7 @@ Description: "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeli
 * address.type ^short.extension[=].extension[+].url = "content"
 * address.type ^short.extension[=].extension[=].valueString = "physical"
 
-* address.district ^short = "Municipality"
+* address.district ^short = "Kommune"
 * address.district ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.district ^short.extension[=].extension[+].url = "lang"
 * address.district ^short.extension[=].extension[=].valueCode = #en
@@ -178,7 +178,7 @@ Description: "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeli
 * address.district.extension[municipalitycode] ^definition.extension[=].extension[+].url = "content"
 * address.district.extension[municipalitycode] ^definition.extension[=].extension[=].valueString = "Encoded municipality value. Codes from the code system \"Municipality numbers and regional special codes\" (OID 3402) shall be used."
 
-* address.state ^short = "County name"
+* address.state ^short = "Fylkesnavn"
 * address.state ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.state ^short.extension[=].extension[+].url = "lang"
 * address.state ^short.extension[=].extension[=].valueCode = #en
@@ -186,8 +186,8 @@ Description: "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeli
 * address.state ^short.extension[=].extension[=].valueString = "County name"
 * address.country 0..0
 
-* address.extension[urbanDistrict] ^short = "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)"
-* address.extension[urbanDistrict] ^definition = "Encoded value for urban district. Codes from the code system \"Urban district numbers\" (OID 3403) shall be used."
+* address.extension[urbanDistrict] ^short = "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)"
+* address.extension[urbanDistrict] ^definition = "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes"
 * address.extension[urbanDistrict] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * address.extension[urbanDistrict] ^short.extension[=].extension[+].url = "lang"
 * address.extension[urbanDistrict] ^short.extension[=].extension[=].valueCode = #en

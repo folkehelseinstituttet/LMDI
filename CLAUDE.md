@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the LMDI (Legemiddeldata fra institusjon til Legemiddelregisteret) project - a FHIR R4 implementation guide for medication data transfer from healthcare institutions to Legemiddelregisteret (the Norwegian medication registry). The project develops FHIR profiles, extensions, and documentation using FHIR Shorthand (FSH) and the FHIR IG Publisher.
+This is the LMDI (Legemiddeldata fra institusjon til Legemiddelregisteret) project - a FHIR R4 implementation guide for medication data transfer from healthcare institutions to the Norwegian Medication Registry. The project develops FHIR profiles, extensions, and documentation using FHIR Shorthand (FSH) and the FHIR IG Publisher.
 
 ## Architecture
 
@@ -18,6 +18,29 @@ This is the LMDI (Legemiddeldata fra institusjon til Legemiddelregisteret) proje
 - **Documentation**: Norwegian-language documentation in `LMDI/input/pagecontent/`
 - **Templates**: Custom FHI template in `LMDI/ig-template-fhi/`
 - **Generated output**: Published IG content in `LMDI/output/`
+
+## Tospråklighet (engelsk /en/-speiling)
+
+IG-en er norsk. Engelsk versjon lages som en **etterprosessering** av IG Publisher-output,
+ikke via IG Publisher sin innebygde flerspråksmekanisme.
+
+- **Gjeldende mekanisme**: `scripts/lag-en-doklag.py` bygger en speiling under
+  `LMDI/output/en/`. Den henter oversettelsespar fra `_title`/`_description`/`_short`/
+  `_definition`-felter (FHIR `translation`-extension, `lang=en`) i
+  `LMDI/fsh-generated/resources/*.json`, og gjør **ordrett substring-erstatning** av
+  norsk → engelsk i HTML-en. For StructureDefinition-sider byttes hele rendret
+  description-blokk ut særskilt. Kjøres etter en full IG-bygg (output/ må finnes).
+- **Oversettelser defineres i FSH** via `^...extension[...]`-blokker (se f.eks.
+  `lmdi-Patient.fsh`). Det finnes ingen separate oversettelsesfiler.
+- **Utdatert/forlatt mekanisme**: `LMDI/translations/en/{json,xliff}/` var IG Publisher
+  sin offisielle flerspråksmekanisme (alle `target` = null). Den er **revertert** og
+  filene slettes (se de stagede slettingene i arbeidstreet). Ikke bygg videre på dem.
+- **Kjent begrensning**: substring-erstatning krever eksakt treff. IG Publisher dropper
+  siste punktum og legger til "(this element must be supported)" i `mustSupport`-tooltips,
+  så lange `definition`-oversettelser slår ikke alltid inn der.
+- **Revisjon av dekning**: `python3 scripts/sjekk-oversettelser.py` (kun lesende) lister
+  felt som mangler oversettelse, og MS-definisjoner der eksisterende oversettelse ikke
+  anvendes. Eksempel-**dataverdier** (stedsnavn o.l.) er utenfor scope.
 
 ## Development Commands
 
@@ -80,16 +103,16 @@ cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#2.2.
 2. Run `sushi .` to compile FSH to FHIR resources
 3. For full documentation generation, run IG Publisher
 4. Generated content appears in `LMDI/output/`
-5. Etter endringer i FSH-filer: oppdater `lmdi-fhir`-skillen ved å be Claude kjøre prosedyren i § 7 i `.claude/skills/lmdi-fhir/SKILL.md` (f.eks. `/update-lmdi-fhir`)
+5. Etter endringer i FSH-filer: kjør `bash .claude/skills/lmdi-fhir/scripts/sync_references.sh` for å oppdatere skill-snapshoten, og `bash .claude/skills/lmdi-fhir/scripts/validate_skill.sh` for å verifisere konsistens
 
 ## Claude Skills
 
-`.claude/skills/lmdi-fhir/` inneholder en kildebasert ekspert-skill for LMDI IG (FSH-filer, profiler, extensions, valuesets, invariants, transport). SKILL.md og `references/` vedlikeholdes direkte i denne katalogen.
+`.claude/skills/lmdi-fhir/` er en symlink til `Fhi.Legemiddelregisteret.wiki`-repoet (`AgentSkills/lmdi-fhir/`). Skill-filene (SKILL.md, references/, scripts/) versjonsstyres **ikke** i dette repoet.
 
 **Viktig ved arbeid med skill-filer:**
+- Sjekk at skill-filene er oppdatert med siste FSH-endringer før bruk (kjør `sync_references.sh`)
+- Endringer i skill-filer (SKILL.md, references/, scripts/) må pushes til wiki-repoet (`Fhi.Legemiddelregisteret.wiki`)
 - `.claude/skills/` er lagt til i `.gitignore` og trackes ikke her
-- Oppdater skillen etter FSH-endringer via prosedyren i § 7 i `.claude/skills/lmdi-fhir/SKILL.md`
-- Kildegrunnlag er `LMDI/input/fsh/` — ved konflikt er FSH-filene normative
 
 The project follows Norwegian healthcare data standards and integrates with FEST (Norwegian drug database) identifiers.
 

@@ -155,7 +155,17 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[Varenummer].code ^short = "Varenummer"
 * code.coding[FestLegemiddelVirkestoff].code ^short = "Identifikator fra FEST"
 * code.coding[LokaltLegemiddel].code ^short = "Identifikator fra lokal legemiddelkatalog/legemiddelregister"
+* code.coding[LokaltLegemiddel].code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[LokaltLegemiddel].code ^short.extension[=].extension[+].url = "lang"
+* code.coding[LokaltLegemiddel].code ^short.extension[=].extension[=].valueCode = #en
+* code.coding[LokaltLegemiddel].code ^short.extension[=].extension[+].url = "content"
+* code.coding[LokaltLegemiddel].code ^short.extension[=].extension[=].valueString = "Identifier from the local medication catalog or medication register"
 * code.coding[SCT].code ^short = "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001]."
+* code.coding[SCT].code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* code.coding[SCT].code ^short.extension[=].extension[+].url = "lang"
+* code.coding[SCT].code ^short.extension[=].extension[=].valueCode = #en
+* code.coding[SCT].code ^short.extension[=].extension[+].url = "content"
+* code.coding[SCT].code ^short.extension[=].extension[=].valueString = "The SNOMED CT code shall be a subtype of 'Medication (product)' [763158003] or 'Substance' [105590001]."
 
 * code.coding[FestLegemiddeldose].code 1..1
 * code.coding[FestLmrLopenr].code 1..1
@@ -269,7 +279,17 @@ Description: "Beskrivelse av legemiddel."
 * form.coding[SCT] ^short = "SNOMED CT Form Codes"
 * form.coding[OID7448].code 1..1
 * form.coding[OID7448].code ^short = "Verdi fra kodeverket"
+* form.coding[OID7448].code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* form.coding[OID7448].code ^short.extension[=].extension[+].url = "lang"
+* form.coding[OID7448].code ^short.extension[=].extension[=].valueCode = #en
+* form.coding[OID7448].code ^short.extension[=].extension[+].url = "content"
+* form.coding[OID7448].code ^short.extension[=].extension[=].valueString = "Value from the code system"
 * form.coding[OID7448].display ^short = "Beskrivelse av koden (navn) fra kodeverket"
+* form.coding[OID7448].display ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* form.coding[OID7448].display ^short.extension[=].extension[+].url = "lang"
+* form.coding[OID7448].display ^short.extension[=].extension[=].valueCode = #en
+* form.coding[OID7448].display ^short.extension[=].extension[+].url = "content"
+* form.coding[OID7448].display ^short.extension[=].extension[=].valueString = "Code description (name) from the code system"
 * form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
 * form.coding[SCT].system = "http://snomed.info/sct"
 

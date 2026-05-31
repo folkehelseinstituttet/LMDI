@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
-{% comment %} Språk-kontekst for <html lang>. Header-dropdown beregner samme is_english i _append.fragment-header.html. {% endcomment %}
 {% assign path_prefix_pb = page.path | slice: 0, 3 %}
 {% assign is_english_pb = false %}
 {% if path_prefix_pb == "en-" or path_prefix_pb == "en/" %}{% assign is_english_pb = true %}{% endif %}

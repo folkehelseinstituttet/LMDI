@@ -10,6 +10,9 @@ on:
 
 env:
   IG_SHORTNAME: LMDI
+  # Pinnet IG Publisher-versjon. lag-en-doklag.py er koblet til publisher sin
+  # HTML-markup; hold i synk med ByggIG.bat og de andre workflow-ene.
+  IG_PUBLISHER_VERSION: "2.2.8"
 
 jobs:
   publish:
@@ -143,11 +146,11 @@ jobs:
       - name: 📚 Last ned IG Publisher
         shell: bash
         run: |
-          echo "📦 Laster ned nyeste versjon av IG Publisher..."
+          echo "📦 Laster ned IG Publisher $IG_PUBLISHER_VERSION..."
           mkdir -p "$IG_SHORTNAME/input-cache"
 
           curl -sSL -o "$IG_SHORTNAME/input-cache/publisher.jar" \
-            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
+            "https://github.com/HL7/fhir-ig-publisher/releases/download/$IG_PUBLISHER_VERSION/publisher.jar"
 
           if [ -f "$IG_SHORTNAME/input-cache/publisher.jar" ]; then
             echo "✅ IG Publisher nedlastet: $(ls -lh $IG_SHORTNAME/input-cache/publisher.jar | awk '{print $5}')"
@@ -195,9 +198,15 @@ jobs:
 
       - name: 🌐 Bygg engelsk dokumentasjonsflate
         shell: bash
+        working-directory: ${{ env.IG_SHORTNAME }}
         run: |
-          python3 -m pip install --quiet markdown
           python3 ../scripts/lag-en-doklag.py --ig-root . --output-dir output
+
+      - name: 🔎 Sjekk engelsk oversettelsesdekning
+        shell: bash
+        working-directory: ${{ env.IG_SHORTNAME }}
+        run: |
+          python3 ../scripts/sjekk-oversettelser.py --ig-root .
           
       - name: 🚀 Deploy til GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

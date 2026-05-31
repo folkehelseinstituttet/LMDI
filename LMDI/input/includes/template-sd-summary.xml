@@ -3,7 +3,6 @@
     <thead>
       <tr>
         <th>Navn</th>
-        <th>FHIR base</th>
         <th>Beskrivelse</th>
       </tr>
     </thead>
@@ -12,7 +11,6 @@
     {% for item in items %}
       <tr>
         <td><a href="{{ item.path }}">{{ item.name }}</a></td>
-        <td><a href="{{ item.basepath }}">{{ item.basename }}</a></td>
         <td>{{ item.description }}</td>
       </tr>
     {% endfor %}
