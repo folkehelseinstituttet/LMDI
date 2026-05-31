@@ -1,0 +1,563 @@
+# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Diagnose**
+
+## Resource Profile: Diagnose 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.1.1 **  |
+| Draft as of 2025-09-12 | *Computable Name*:Diagnose |
+
+ 
+Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for. 
+
+**Usages:**
+
+* Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
+* Examples for this Profile: [Condition/Diagnose-ICD10-Allergi](Condition-Diagnose-ICD10-Allergi.md), [Condition/Diagnose-ICD10](Condition-Diagnose-ICD10.md) and [Condition/Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-condition.json)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots and how the different presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv), [Excel](StructureDefinition-lmdi-condition.xlsx), [Schematron](StructureDefinition-lmdi-condition.sch) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "lmdi-condition",
+  "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition",
+  "version" : "1.1.1",
+  "name" : "Diagnose",
+  "title" : "Diagnose",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Diagnosis"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "status" : "draft",
+  "date" : "2025-09-12",
+  "publisher" : "Folkehelseinstituttet",
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
+  "description" : "Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "The diagnosis for which the patient received a medication request or administration."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "workflow",
+    "uri" : "http://hl7.org/fhir/workflow",
+    "name" : "Workflow Pattern"
+  },
+  {
+    "identity" : "sct-concept",
+    "uri" : "http://snomed.info/conceptdomain",
+    "name" : "SNOMED CT Concept Domain Binding"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  },
+  {
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  },
+  {
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "sct-attr",
+    "uri" : "http://snomed.org/attributebinding",
+    "name" : "SNOMED CT Attribute Binding"
+  }],
+  "kind" : "resource",
+  "abstract" : false,
+  "type" : "Condition",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Condition",
+      "path" : "Condition"
+    },
+    {
+      "id" : "Condition.text",
+      "path" : "Condition.text",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.category",
+      "path" : "Condition.category",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.severity",
+      "path" : "Condition.severity",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.code",
+      "path" : "Condition.code",
+      "short" : "Diagnosekode.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding",
+      "path" : "Condition.code.coding",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "system"
+        }],
+        "rules" : "closed"
+      }
+    },
+    {
+      "id" : "Condition.code.coding:SCT",
+      "path" : "Condition.code.coding",
+      "sliceName" : "SCT",
+      "short" : "SNOMED CT",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "SNOMED CT er ei systematisk samling av helsefaglege omgrep som kan brukast til å dokumentere og dele opplysningar knytt til pasientbehandlinga. Ved å bruke eit felles omgrepsapparat skal det bli lettare å kommunisere mellom ulike delar av helsetenesta.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "SNOMED CT is a systematic collection of clinical concepts that can be used to document and share information related to patient care. Using a common terminology makes it easier to communicate across different parts of the health service."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Condition.code.coding:SCT.system",
+      "path" : "Condition.code.coding.system",
+      "min" : 1,
+      "patternUri" : "http://snomed.info/sct"
+    },
+    {
+      "id" : "Condition.code.coding:SCT.code",
+      "path" : "Condition.code.coding.code",
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding:ICD10",
+      "path" : "Condition.code.coding",
+      "sliceName" : "ICD10",
+      "short" : "ICD-10",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-10"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-10: The International Statistical Classification of Diseases and Related Health Problems."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Condition.code.coding:ICD10.system",
+      "path" : "Condition.code.coding.system",
+      "min" : 1,
+      "patternUri" : "urn:oid:2.16.578.1.12.4.1.1.7110"
+    },
+    {
+      "id" : "Condition.code.coding:ICD10.code",
+      "path" : "Condition.code.coding.code",
+      "short" : "Diagnosekode fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding:ICD10.display",
+      "path" : "Condition.code.coding.display",
+      "short" : "Beskrivelse av diagnosekode (fra kodeverket)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code description (from the code system)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "Condition.code.coding:ICD11",
+      "path" : "Condition.code.coding",
+      "sliceName" : "ICD11",
+      "short" : "ICD-11",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICD-11"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "International Classification of Diseases, 11th Revision Mortality and Morbidity Statistics (MMS).",
+      "comment" : "Skal erstattes av navnerom som peker på generell ICD-11, ikke MMS.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Should be replaced by a namespace that points to general ICD-11, not MMS."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Condition.code.coding:ICD11.system",
+      "path" : "Condition.code.coding.system",
+      "comment" : "Kilde for URI: https://build.fhir.org/ig/HL7/UTG/CodeSystem-ICD11MMS.html",
+      "min" : 1,
+      "patternUri" : "http://id.who.int/icd/release/11/mms"
+    },
+    {
+      "id" : "Condition.code.coding:ICD11.code",
+      "path" : "Condition.code.coding.code",
+      "short" : "Diagnosekode fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding:ICD11.display",
+      "path" : "Condition.code.coding.display",
+      "short" : "Beskrivelse av diagnosekode (fra kodeverket)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code description (from the code system)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "Condition.code.coding:ICPC2",
+      "path" : "Condition.code.coding",
+      "sliceName" : "ICPC2",
+      "short" : "ICPC-2",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICPC-2"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "ICPC-2 er den internasjonale klassifikasjonen for helseproblemer, diagnoser og andre årsaker til kontakt med primærhelsetjenesten.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "ICPC-2 is the International Classification of Primary Care, for health problems, diagnoses, and other reasons for contact with primary care."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1"
+    },
+    {
+      "id" : "Condition.code.coding:ICPC2.system",
+      "path" : "Condition.code.coding.system",
+      "min" : 1,
+      "patternUri" : "urn:oid:2.16.578.1.12.4.1.1.7170"
+    },
+    {
+      "id" : "Condition.code.coding:ICPC2.code",
+      "path" : "Condition.code.coding.code",
+      "short" : "Diagnosekode fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 1
+    },
+    {
+      "id" : "Condition.code.coding:ICPC2.display",
+      "path" : "Condition.code.coding.display",
+      "short" : "Beskrivelse av diagnosekode (fra kodeverket)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code description (from the code system)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "Condition.bodySite",
+      "path" : "Condition.bodySite",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.subject",
+      "path" : "Condition.subject",
+      "short" : "Pasienten diagnosen er knyttet til.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The patient the diagnosis is associated with."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient"]
+      }]
+    },
+    {
+      "id" : "Condition.encounter",
+      "path" : "Condition.encounter",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.onset[x]",
+      "path" : "Condition.onset[x]",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.abatement[x]",
+      "path" : "Condition.abatement[x]",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.recordedDate",
+      "path" : "Condition.recordedDate",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.recorder",
+      "path" : "Condition.recorder",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.asserter",
+      "path" : "Condition.asserter",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.stage.summary",
+      "path" : "Condition.stage.summary",
+      "min" : 1
+    },
+    {
+      "id" : "Condition.stage.assessment",
+      "path" : "Condition.stage.assessment",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.evidence",
+      "path" : "Condition.evidence",
+      "max" : "0"
+    },
+    {
+      "id" : "Condition.note",
+      "path" : "Condition.note",
+      "max" : "0"
+    }]
+  }
+}
+
+```
