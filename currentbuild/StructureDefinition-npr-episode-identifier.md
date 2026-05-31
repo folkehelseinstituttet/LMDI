@@ -1,4 +1,4 @@
-# NPR Episode Identifier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# NPR Episode Identifier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-28 | *Computable Name*:NprEpisodeIdentifier |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.1.1 **  |
+| Active as of 2026-05-31 | *Computable Name*:NprEpisodeIdentifier |
 
 Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "resourceType" : "StructureDefinition",
   "id" : "npr-episode-identifier",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "_title" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
     }]
   },
   "status" : "active",
-  "date" : "2026-05-28T13:52:12+00:00",
+  "date" : "2026-05-31T18:54:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

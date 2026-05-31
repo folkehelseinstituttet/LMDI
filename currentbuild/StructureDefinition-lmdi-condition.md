@@ -1,4 +1,4 @@
-# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.1.1 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Diagnose |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-condition",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Diagnose",
   "title" : "Diagnose",
   "_title" : {
@@ -289,12 +289,38 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "id" : "Condition.code.coding:ICD10.code",
       "path" : "Condition.code.coding.code",
       "short" : "Diagnosekode fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
       "id" : "Condition.code.coding:ICD10.display",
       "path" : "Condition.code.coding.display",
-      "short" : "Beskrivelse av diagnosekode (fra kodeverket)"
+      "short" : "Beskrivelse av diagnosekode (fra kodeverket)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code description (from the code system)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "Condition.code.coding:ICD11",
@@ -343,12 +369,38 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "id" : "Condition.code.coding:ICD11.code",
       "path" : "Condition.code.coding.code",
       "short" : "Diagnosekode fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
       "id" : "Condition.code.coding:ICD11.display",
       "path" : "Condition.code.coding.display",
-      "short" : "Beskrivelse av diagnosekode (fra kodeverket)"
+      "short" : "Beskrivelse av diagnosekode (fra kodeverket)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code description (from the code system)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "Condition.code.coding:ICPC2",
@@ -395,12 +447,38 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
       "id" : "Condition.code.coding:ICPC2.code",
       "path" : "Condition.code.coding.code",
       "short" : "Diagnosekode fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
       "id" : "Condition.code.coding:ICPC2.display",
       "path" : "Condition.code.coding.display",
-      "short" : "Beskrivelse av diagnosekode (fra kodeverket)"
+      "short" : "Beskrivelse av diagnosekode (fra kodeverket)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Diagnosis code description (from the code system)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "Condition.bodySite",

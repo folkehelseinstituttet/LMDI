@@ -3,13 +3,12 @@
 
 
 
-
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.0</title>
+    <title>Artifacts Summary - Medication data from institutions to Legemiddelregisteret
+        v1.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -67,19 +66,16 @@
 
 
 
-
-
-
 <header class="fhi-header mb-0">
     <div class="fhi-header__brand">
         <div class="container fhi-header__brand-container">
             <div class="fhi-header__brand-content">
                 <a class="fhi-header__logo" href="index.html">
                     <i class="icon-fhi-logo fhi-header__logo-icon"></i>
-                    <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
+                    <span class="visually-hidden">Medication data from institutions to Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.0 - ci-build
+                    <span class="fhi-header__project-name d-inline">Medication data from institutions to Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.1 - ci-build
                             
                             
                             
@@ -183,7 +179,7 @@
                <a href="StructureDefinition-lmdi-condition.html" title="StructureDefinition/lmdi-condition">Diagnosis</a>
             </td>
             <td>
-<p>Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.</p>
+<p>The diagnosis for which the patient received a medication request or administration.</p>
 </td>
          </tr>
          <tr>
@@ -191,7 +187,7 @@
                <a href="StructureDefinition-lmdi-encounter.html" title="StructureDefinition/lmdi-encounter">Episode</a>
             </td>
             <td>
-<p>En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</p>
+<p>Profile for a care episode based on the FHIR Encounter resource. This profile represents a clinical encounter or treatment in health care, with a focus on organizational affiliation.</p>
 </td>
          </tr>
          <tr>
@@ -199,7 +195,7 @@
                <a href="StructureDefinition-lmdi-practitioner.html" title="StructureDefinition/lmdi-practitioner">Healthcare professional</a>
             </td>
             <td>
-<p>Healthcare professional som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.</p>
+<p>Healthcare professional who requested the medication, based on no-basis-Practitioner. The HPR number shall be provided when available.</p>
 </td>
          </tr>
          <tr>
@@ -207,7 +203,7 @@
                <a href="StructureDefinition-lmdi-medication.html" title="StructureDefinition/lmdi-medication">Medication</a>
             </td>
             <td>
-<p>Beskrivelse av legemiddel.</p>
+<p>Description of a medication.</p>
 </td>
          </tr>
          <tr>
@@ -215,7 +211,7 @@
                <a href="StructureDefinition-lmdi-medicationadministration.html" title="StructureDefinition/lmdi-medicationadministration">Medication Administration</a>
             </td>
             <td>
-<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
+<p>Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.</p>
 </td>
          </tr>
          <tr>
@@ -223,7 +219,7 @@
                <a href="StructureDefinition-lmdi-bundle.html" title="StructureDefinition/lmdi-bundle">LegemiddelregisterBundle</a>
             </td>
             <td>
-<p>Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper.</p>
+<p>Bundle profile for Legemiddelregisteret. Supports only transaction type and POST operations, with restrictions on allowed resource types.</p>
 </td>
          </tr>
          <tr>
@@ -231,7 +227,7 @@
                <a href="StructureDefinition-lmdi-medicationrequest.html" title="StructureDefinition/lmdi-medicationrequest">Medication Request</a>
             </td>
             <td>
-<p>Medication Request - ordinering eller annen rekvirering av legemiddel</p>
+<p>Medication request – prescription, ordering or other request of medication</p>
 </td>
          </tr>
          <tr>
@@ -239,7 +235,7 @@
                <a href="StructureDefinition-lmdi-organization.html" title="StructureDefinition/lmdi-organization">Organization</a>
             </td>
             <td>
-<p>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</p>
+<p>Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization.</p>
 </td>
          </tr>
          <tr>
@@ -247,7 +243,7 @@
                <a href="StructureDefinition-lmdi-patient.html" title="StructureDefinition/lmdi-patient">Patient</a>
             </td>
             <td>
-<p>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient</p>
+<p>The patient who has been prescribed or administered medication, based on no-basis-Patient</p>
 </td>
          </tr>
          <tr>
@@ -255,7 +251,7 @@
                <a href="StructureDefinition-lmdi-substance.html" title="StructureDefinition/lmdi-substance">Substance</a>
             </td>
             <td>
-<p>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.</p>
+<p>A tailored Substance profile for representing active substances, based on no-basis-Substance.</p>
 </td>
          </tr>
       </tbody>
@@ -287,7 +283,7 @@
                <a href="StructureDefinition-legemiddel-classification.html" title="StructureDefinition/legemiddel-classification">Medication Classification</a>
             </td>
             <td>
-<p>Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</p>
+<p>Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification).</p>
 </td>
          </tr>
          <tr>
@@ -295,7 +291,7 @@
                <a href="StructureDefinition-npr-episode-identifier.html" title="StructureDefinition/npr-episode-identifier">NPR Episode Identifier</a>
             </td>
             <td>
-<p>Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.</p>
+<p>Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier.</p>
 </td>
          </tr>
          <tr>
@@ -303,7 +299,7 @@
                <a href="StructureDefinition-lmdi-prosentvis-doseendring.html" title="StructureDefinition/lmdi-prosentvis-doseendring">Percentage dose adjustment</a>
             </td>
             <td>
-<p>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.</p>
+<p>Dose adjustment as a percentage, compared to the original dosage. Particularly relevant in chemotherapy. A normal dose, without modification, is 100%.</p>
 </td>
          </tr>
       </tbody>
@@ -319,7 +315,7 @@
                <a href="ValueSet-atc-valueset.html" title="ValueSet/atc-valueset">ATC Code System ValueSet</a>
             </td>
             <td>
-<p>ValueSet containing codes from the WHO ATC (Anatomical Therapeutic Chemical classification).</p>
+<p>ValueSet containing codes from the WHO ATC (Anatomical Therapeutic Chemical classification)</p>
 </td>
          </tr>
          <tr>
@@ -327,15 +323,15 @@
                <a href="ValueSet-legemiddel-koder.html" title="ValueSet/legemiddel-koder">Valid medication codes</a>
             </td>
             <td>
-<p>ValueSet containing codes from SNOMED CT, FEST, LMR sequence number, item number, and local medication catalogue.</p>
+<p>ValueSet containing codes from SNOMED CT, FEST, LMR sequence number, item number, and local medication catalogue</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-kommunenummer-alle.html" title="ValueSet/kommunenummer-alle">Kommunenummer ValueSet</a>
+               <a href="ValueSet-kommunenummer-alle.html" title="ValueSet/kommunenummer-alle">Municipality number ValueSet</a>
             </td>
             <td>
-<p>Komplett kodeverk for norske kommunenummer (Volven 3402)</p>
+<p>Complete code system for Norwegian municipality numbers (Volven 3402)</p>
 </td>
          </tr>
          <tr>
@@ -343,7 +339,7 @@
                <a href="ValueSet-lmdi-address-type.html" title="ValueSet/lmdi-address-type">LMDI Address Type</a>
             </td>
             <td>
-<p>Permitted value for address.type in LMDI: physical.</p>
+<p>Permitted value for address.type in LMDI: physical</p>
 </td>
          </tr>
          <tr>
@@ -351,7 +347,7 @@
                <a href="ValueSet-lmdi-address-use.html" title="ValueSet/lmdi-address-use">LMDI Address Use</a>
             </td>
             <td>
-<p>Permitted values for address.use in LMDI: home, temp, old.</p>
+<p>Permitted values for address.use in LMDI: home, temp, old</p>
 </td>
          </tr>
          <tr>
@@ -359,7 +355,7 @@
                <a href="ValueSet-LokalLegemiddelkatalogValues.html" title="ValueSet/LokalLegemiddelkatalogValues">Local Medication Catalogue Values</a>
             </td>
             <td>
-<p>Valid values for the local medication catalogue.</p>
+<p>Valid values for the local medication catalogue</p>
 </td>
          </tr>
          <tr>
@@ -367,7 +363,7 @@
                <a href="ValueSet-lmdi-medicationadministrationstatus.html" title="ValueSet/lmdi-medicationadministrationstatus">Medication administration status</a>
             </td>
             <td>
-<p>Verdisett som begrenses status til Medication Administration til henholdsvis ‘Gjennomført’ eller ‘Feilregistrert’.</p>
+<p>Verdisett som begrenses status til Medication Administration til henholdsvis ‘Completed’ eller ‘Entered in Error’.</p>
 </td>
          </tr>
       </tbody>
@@ -380,10 +376,10 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-kommunenummer-codesystem.html" title="CodeSystem/kommunenummer-codesystem">Kommunenummer CodeSystem</a>
+               <a href="CodeSystem-kommunenummer-codesystem.html" title="CodeSystem/kommunenummer-codesystem">Municipality number CodeSystem</a>
             </td>
             <td>
-<p>Kodesystem for norske kommunenummer (Volven 3402)</p>
+<p>Code system for Norwegian municipality numbers (Volven 3402)</p>
 </td>
          </tr>
          <tr>
@@ -391,7 +387,7 @@
                <a href="CodeSystem-LokalLegemiddelkatalogCodeSystem.html" title="CodeSystem/LokalLegemiddelkatalogCodeSystem">Local Medication Catalogue Codes</a>
             </td>
             <td>
-<p>Code system for the local medication catalogue.</p>
+<p>Code system for the local medication catalogue</p>
 </td>
          </tr>
       </tbody>
@@ -407,7 +403,7 @@
                <a href="NamingSystem-lmdi-lokaltLegemiddel.html" title="NamingSystem/lmdi-lokaltLegemiddel">lmdi-lokaltLegemiddel</a>
             </td>
             <td>
-<p>Id for angivelse av legemiddel fra lokal legemiddelkatalog</p>
+<p>ID for specifying medication from a local medication catalog</p>
 </td>
          </tr>
          <tr>
@@ -415,7 +411,7 @@
                <a href="NamingSystem-no-basis-fest-legemiddeldose.html" title="NamingSystem/no-basis-fest-legemiddeldose">no-basis-fest-legemiddeldose</a>
             </td>
             <td>
-<p>FEST-id for dose. Rekvirering av en bestemt merkevare med ID (LMR-nummer) som representerer minste plukkbare enhet, f.eks. 1 ampulle eller 1 tablett.</p>
+<p>FEST ID for dose. Prescription of a specific brand with an ID (LMR number) representing the smallest selectable unit, e.g. 1 ampoule or 1 tablet.</p>
 </td>
          </tr>
          <tr>
@@ -423,7 +419,7 @@
                <a href="NamingSystem-no-basis-fest-legemiddelmerkevare.html" title="NamingSystem/no-basis-fest-legemiddelmerkevare">no-basis-fest-legemiddelmerkevare</a>
             </td>
             <td>
-<p>FEST-id for legemiddel merkevare. Rekvirering av en styrke og form av en bestemt merkevare. Pr. 2024 er det ikke lenger ønskelig at det rekvireres på LegemiddelMerkevare.</p>
+<p>FEST ID for medication brand. Prescription of a strength and form of a specific brand. As of 2024, prescribing by LegemiddelMerkevare is no longer recommended.</p>
 </td>
          </tr>
          <tr>
@@ -431,7 +427,7 @@
                <a href="NamingSystem-no-basis-fest-legemiddelpakning.html" title="NamingSystem/no-basis-fest-legemiddelpakning">no-basis-fest-legemiddelpakning</a>
             </td>
             <td>
-<p>FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkevare (varenummer)</p>
+<p>FEST ID for medication packages. Prescription of a specific package of a brand (item number)</p>
 </td>
          </tr>
          <tr>
@@ -439,7 +435,7 @@
                <a href="NamingSystem-no-basis-fest-legemiddelvirkestoff.html" title="NamingSystem/no-basis-fest-legemiddelvirkestoff">no-basis-fest-legemiddelvirkestoff</a>
             </td>
             <td>
-<p>FEST-id for virkestoff. Benyttes ved virkestoffrekvirering</p>
+<p>FEST ID for active substance. Used for active substance prescribing</p>
 </td>
          </tr>
       </tbody>
@@ -455,7 +451,7 @@
                <a href="MedicationAdministration-Administrering-Cellegift.html" title="MedicationAdministration/Administrering-Cellegift">Administrering-Cellegift</a>
             </td>
             <td>
-<p>Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring</p>
+<p>Example of chemotherapy administration (Cisplatin) based on a request with percentage dose adjustment</p>
 </td>
          </tr>
          <tr>
@@ -463,7 +459,7 @@
                <a href="MedicationAdministration-Administrering-EnteredInError.html" title="MedicationAdministration/Administrering-EnteredInError">Administrering-EnteredInError</a>
             </td>
             <td>
-<p>Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error)</p>
+<p>Example of medication administration with status entered-in-error</p>
 </td>
          </tr>
          <tr>
@@ -471,7 +467,7 @@
                <a href="MedicationAdministration-Administrering-Infusjon.html" title="MedicationAdministration/Administrering-Infusjon">Administrering-Infusjon</a>
             </td>
             <td>
-<p>Eksempel på administrering av legemiddel - infusjon</p>
+<p>Example of medication administration - infusion</p>
 </td>
          </tr>
          <tr>
@@ -479,7 +475,7 @@
                <a href="MedicationAdministration-Administrering-MedDiagnoseICD10.html" title="MedicationAdministration/Administrering-MedDiagnoseICD10">Administrering-MedDiagnoseICD10</a>
             </td>
             <td>
-<p>Eksempel på administrering av legemiddel med ICD-10-diagnose som indikasjon</p>
+<p>Example of medication administration with an ICD-10 diagnosis as indication</p>
 </td>
          </tr>
          <tr>
@@ -487,7 +483,7 @@
                <a href="MedicationAdministration-Administrering-MedDiagnoseSCT.html" title="MedicationAdministration/Administrering-MedDiagnoseSCT">Administrering-MedDiagnoseSCT</a>
             </td>
             <td>
-<p>Eksempel på administrering av legemiddel med SNOMED CT-diagnose som indikasjon</p>
+<p>Example of medication administration with a SNOMED CT diagnosis as indication</p>
 </td>
          </tr>
          <tr>
@@ -495,7 +491,7 @@
                <a href="MedicationAdministration-Administrering-Oral.html" title="MedicationAdministration/Administrering-Oral">Administrering-Oral</a>
             </td>
             <td>
-<p>Eksempel på administrering av legemiddel</p>
+<p>Example of medication administration</p>
 </td>
          </tr>
          <tr>
@@ -503,31 +499,31 @@
                <a href="MedicationAdministration-Administrering-Selvadministrert.html" title="MedicationAdministration/Administrering-Selvadministrert">Administrering-Selvadministrert</a>
             </td>
             <td>
-<p>Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon</p>
+<p>Example of self-administration — the patient takes the medication themselves after dispensing from the institution</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-Diagnose-ICD10.html" title="Condition/Diagnosis-ICD10">Diagnosis-ICD10</a>
+               <a href="Condition-Diagnosis-ICD10.html" title="Condition/Diagnosis-ICD10">Diagnosis-ICD10</a>
             </td>
             <td>
-<p>Eksempel på diagnose ICD-10</p>
+<p>Example of an ICD-10 diagnosis</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-Diagnose-ICD10-Allergi.html" title="Condition/Diagnosis-ICD10-Allergi">Diagnosis-ICD10-Allergi</a>
+               <a href="Condition-Diagnosis-ICD10-Allergi.html" title="Condition/Diagnosis-ICD10-Allergi">Diagnosis-ICD10-Allergi</a>
             </td>
             <td>
-<p>Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt</p>
+<p>Example of a diagnosis with ICD-10 code J30 - allergic rhinitis</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Condition-Diagnose-SNOMED-SCT.html" title="Condition/Diagnosis-SNOMED-SCT">Diagnosis-SNOMED-SCT</a>
+               <a href="Condition-Diagnosis-SNOMED-SCT.html" title="Condition/Diagnosis-SNOMED-SCT">Diagnosis-SNOMED-SCT</a>
             </td>
             <td>
-<p>Eksempel på diagnose SNOMED CT</p>
+<p>Example of a SNOMED CT diagnosis</p>
 </td>
          </tr>
          <tr>
@@ -535,7 +531,7 @@
                <a href="Encounter-Episode-Sykehjem.html" title="Encounter/Episode-Sykehjem">Episode-Sykehjem</a>
             </td>
             <td>
-<p>Eksempel på episode på sykehjem</p>
+<p>Example of an episode at a nursing home</p>
 </td>
          </tr>
          <tr>
@@ -543,7 +539,7 @@
                <a href="Encounter-Episode-Sykehus.html" title="Encounter/Episode-Sykehus">Episode-Sykehus</a>
             </td>
             <td>
-<p>Eksempel på episode i spesialisthelsetjenesten</p>
+<p>Example of an episode in the specialist health service</p>
 </td>
          </tr>
          <tr>
@@ -551,111 +547,111 @@
                <a href="Encounter-Episode-Sykehus-2.html" title="Encounter/Episode-Sykehus-2">Episode-Sykehus-2</a>
             </td>
             <td>
-<p>Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter</p>
+<p>Example of an episode in the specialist health service with a ward as service provider</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-Helsepersonell-Med-HPR.html" title="Practitioner/Healthcare professional-Med-HPR">Healthcare professional-Med-HPR</a>
+               <a href="Practitioner-Healthcare professional-Med-HPR.html" title="Practitioner/Healthcare professional-Med-HPR">Healthcare professional-Med-HPR</a>
             </td>
             <td>
-<p>Eksempel på helsepersonell med HPR-nummer</p>
+<p>Example of a healthcare professional with an HPR number</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Practitioner-Helsepersonell-Uten-HPR.html" title="Practitioner/Healthcare professional-Uten-HPR">Healthcare professional-Uten-HPR</a>
+               <a href="Practitioner-Healthcare professional-Uten-HPR.html" title="Practitioner/Healthcare professional-Uten-HPR">Healthcare professional-Uten-HPR</a>
             </td>
             <td>
-<p>Eksempel på rekvirent uten HPR-nummer</p>
+<p>Example of a requester without an HPR number</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-FestLegemiddelMerkevare.html" title="Medication/Medication-FestLegemiddelMerkevare">Medication-FestLegemiddelMerkevare</a>
+               <a href="Medication-Medication-FestLegemiddelMerkevare.html" title="Medication/Medication-FestLegemiddelMerkevare">Medication-FestLegemiddelMerkevare</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id</p>
+<p>Example of a medication identified by a FEST medication brand id</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-FestLegemiddelVirkestoff.html" title="Medication/Medication-FestLegemiddelVirkestoff">Medication-FestLegemiddelVirkestoff</a>
+               <a href="Medication-Medication-FestLegemiddelVirkestoff.html" title="Medication/Medication-FestLegemiddelVirkestoff">Medication-FestLegemiddelVirkestoff</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med FEST legemiddelvirkestoff-id</p>
+<p>Example of a medication identified by a FEST medication substance id</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-FestLegemiddelVirkestoff-2.html" title="Medication/Medication-FestLegemiddelVirkestoff-2">Medication-FestLegemiddelVirkestoff-2</a>
+               <a href="Medication-Medication-FestLegemiddelVirkestoff-2.html" title="Medication/Medication-FestLegemiddelVirkestoff-2">Medication-FestLegemiddelVirkestoff-2</a>
             </td>
             <td>
-<p>Eksempel på legemiddel (cetirizin) identifisert med FEST legemiddelvirkestoff-id</p>
+<p>Example of a medication (cetirizine) identified by a FEST medication substance id</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-FestLegemiddeldose.html" title="Medication/Medication-FestLegemiddeldose">Medication-FestLegemiddeldose</a>
+               <a href="Medication-Medication-FestLegemiddeldose.html" title="Medication/Medication-FestLegemiddeldose">Medication-FestLegemiddeldose</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med FEST legemiddeldose-id</p>
+<p>Example of a medication identified by a FEST medication dose id</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-FestLegemiddelpakning.html" title="Medication/Medication-FestLegemiddelpakning">Medication-FestLegemiddelpakning</a>
+               <a href="Medication-Medication-FestLegemiddelpakning.html" title="Medication/Medication-FestLegemiddelpakning">Medication-FestLegemiddelpakning</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med FEST legemiddelpakning-id</p>
+<p>Example of a medication identified by a FEST medication package id</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-FestLmrLopenr.html" title="Medication/Medication-FestLmrLopenr">Medication-FestLmrLopenr</a>
+               <a href="Medication-Medication-FestLmrLopenr.html" title="Medication/Medication-FestLmrLopenr">Medication-FestLmrLopenr</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med LMR-løpenummer</p>
+<p>Example of a medication identified by an LMR sequence number</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-Legemiddeldose-SmofKabiven.html" title="Medication/Medication-Legemiddeldose-SmofKabiven">Medication-Legemiddeldose-SmofKabiven</a>
+               <a href="Medication-Medication-Legemiddeldose-SmofKabiven.html" title="Medication/Medication-Legemiddeldose-SmofKabiven">Medication-Legemiddeldose-SmofKabiven</a>
             </td>
             <td>
-<p>Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id</p>
+<p>Example of a medication (SmofKabiven) identified by a FEST medication dose id</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.html" title="Medication/Medication-LokaltLegemiddel-FlereIngredienser">Medication-LokaltLegemiddel-FlereIngredienser</a>
+               <a href="Medication-Medication-LokaltLegemiddel-FlereIngredienser.html" title="Medication/Medication-LokaltLegemiddel-FlereIngredienser">Medication-LokaltLegemiddel-FlereIngredienser</a>
             </td>
             <td>
-<p>Eksempel på lokalt legemiddel med flere ingredienser</p>
+<p>Example of a local medication with multiple ingredients</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-SCT.html" title="Medication/Medication-SCT">Medication-SCT</a>
+               <a href="Medication-Medication-SCT.html" title="Medication/Medication-SCT">Medication-SCT</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med SNOMED CT-kode</p>
+<p>Example of a medication identified by a SNOMED CT code</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-UtenCoding.html" title="Medication/Medication-UtenCoding">Medication-UtenCoding</a>
+               <a href="Medication-Medication-UtenCoding.html" title="Medication/Medication-UtenCoding">Medication-UtenCoding</a>
             </td>
             <td>
-<p>Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept</p>
+<p>Example of a medication without code — ingredients expressed via Reference and CodeableConcept</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Medication-Legemiddel-Varenummer.html" title="Medication/Medication-Varenummer">Medication-Varenummer</a>
+               <a href="Medication-Medication-Varenummer.html" title="Medication/Medication-Varenummer">Medication-Varenummer</a>
             </td>
             <td>
-<p>Eksempel på legemiddel identifisert med varenummer</p>
+<p>Example of a medication identified by an item number</p>
 </td>
          </tr>
          <tr>
@@ -663,111 +659,111 @@
                <a href="Medication-Lokalt-legemiddel-cellegift.html" title="Medication/Lokalt-legemiddel-cellegift">Lokalt-legemiddel-cellegift</a>
             </td>
             <td>
-<p>Eksempel på lokalt katalogisert cellegift (Cisplatin)</p>
+<p>Example of locally catalogued chemotherapy (Cisplatin)</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Bundle-Bundle-Scenario-Sykehjem-Oksykodon.html" title="Bundle/Bundle-Scenario-Sykehjem-Oksykodon">Oksykodonadministrering i sykehjem med inline ressurskopier</a>
+               <a href="Bundle-Bundle-Scenario-Sykehjem-Oksykodon.html" title="Bundle/Bundle-Scenario-Sykehjem-Oksykodon">Oxycodone administration in a nursing home with inline resource copies</a>
             </td>
             <td>
-<p>Eksempel på transaction-bundle der medlemsressursene er lokale bundle-instanser merket som inline.</p>
+<p>Example of a transaction bundle where the member resources are local bundle instances marked as inline.</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-HF.html" title="Organization/Organization-HF">Organization-HF</a>
+               <a href="Organization-Organization-HF.html" title="Organization/Organization-HF">Organization-HF</a>
             </td>
             <td>
-<p>Eksempel på Helseforetak</p>
+<p>Example of a health trust</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-HF-2.html" title="Organization/Organization-HF-2">Organization-HF-2</a>
+               <a href="Organization-Organization-HF-2.html" title="Organization/Organization-HF-2">Organization-HF-2</a>
             </td>
             <td>
-<p>Eksempel på Helseforetak (Helse Møre og Romsdal HF)</p>
+<p>Example of a health trust (Helse Møre og Romsdal HF)</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Kommune.html" title="Organization/Organization-Kommune">Organization-Kommune</a>
+               <a href="Organization-Organization-Municipality.html" title="Organization/Organization-Municipality">Organization-Municipality</a>
             </td>
             <td>
-<p>Eksempel på kommune i primærhelsetjenesten</p>
+<p>Example of a municipality in primary health care</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Post.html" title="Organization/Organization-Post">Organization-Post</a>
+               <a href="Organization-Organization-Post.html" title="Organization/Organization-Post">Organization-Post</a>
             </td>
             <td>
-<p>Eksempel på post – laveste nivå i organisasjonshierarkiet</p>
+<p>Example of a ward – the lowest level in the organizational hierarchy</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Seksjon.html" title="Organization/Organization-Seksjon">Organization-Seksjon</a>
+               <a href="Organization-Organization-Seksjon.html" title="Organization/Organization-Seksjon">Organization-Seksjon</a>
             </td>
             <td>
-<p>Eksempel på seksjonsnivå i organisasjonshierarkiet</p>
+<p>Example of a section level in the organizational hierarchy</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Sykehjem.html" title="Organization/Organization-Sykehjem">Organization-Sykehjem</a>
+               <a href="Organization-Organization-Sykehjem.html" title="Organization/Organization-Sykehjem">Organization-Sykehjem</a>
             </td>
             <td>
-<p>Eksempel på sykehjem i primærhelsetjenesten</p>
+<p>Example of a nursing home in primary health care</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Sykehus.html" title="Organization/Organization-Sykehus">Organization-Sykehus</a>
+               <a href="Organization-Organization-Sykehus.html" title="Organization/Organization-Sykehus">Organization-Sykehus</a>
             </td>
             <td>
-<p>Eksempel på sykehusorganisasjon</p>
+<p>Example of a hospital organization</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Sykehus-2.html" title="Organization/Organization-Sykehus-2">Organization-Sykehus-2</a>
+               <a href="Organization-Organization-Sykehus-2.html" title="Organization/Organization-Sykehus-2">Organization-Sykehus-2</a>
             </td>
             <td>
-<p>Eksempel på sykehusorganisasjon under Helse Møre og Romsdal HF</p>
+<p>Example of a hospital organization under Helse Møre og Romsdal HF</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Organization-Organisasjon-Sykehusavdeling.html" title="Organization/Organization-Sykehusavdeling">Organization-Sykehusavdeling</a>
+               <a href="Organization-Organization-Sykehusavdeling.html" title="Organization/Organization-Sykehusavdeling">Organization-Sykehusavdeling</a>
             </td>
             <td>
-<p>Eksempel på spesialistavdeling</p>
+<p>Example of a specialist department</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-Pasient-Med-DNR.html" title="Patient/Patient-Med-DNR">Patient-Med-DNR</a>
+               <a href="Patient-Patient-Med-DNR.html" title="Patient/Patient-Med-DNR">Patient-Med-DNR</a>
             </td>
             <td>
-<p>Eksempel på pasient med D-nummer</p>
+<p>Example of a patient with a D number</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-Pasient-Med-FNR.html" title="Patient/Patient-Med-FNR">Patient-Med-FNR</a>
+               <a href="Patient-Patient-Med-FNR.html" title="Patient/Patient-Med-FNR">Patient-Med-FNR</a>
             </td>
             <td>
-<p>Eksempel på pasient med fødselsnummer</p>
+<p>Example of a patient with a national identity number</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-Pasient-Uten-Personidentifikator.html" title="Patient/Patient-Uten-Personidentifikator">Patient-Uten-Personidentifikator</a>
+               <a href="Patient-Patient-Uten-Personidentifikator.html" title="Patient/Patient-Uten-Personidentifikator">Patient-Uten-Personidentifikator</a>
             </td>
             <td>
-<p>Eksempel på pasient uten personidentifikator</p>
+<p>Example of a patient without a personal identifier</p>
 </td>
          </tr>
          <tr>
@@ -775,7 +771,7 @@
                <a href="MedicationRequest-Rekvirering-Cellegift.html" title="MedicationRequest/Rekvirering-Cellegift">Rekvirering-Cellegift</a>
             </td>
             <td>
-<p>Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis doseendring og del av behandlingsregime</p>
+<p>Example of a request for chemotherapy (Cisplatin) with percentage dose adjustment and part of a treatment regimen</p>
 </td>
          </tr>
          <tr>
@@ -783,7 +779,7 @@
                <a href="MedicationRequest-Rekvirering-EnteredInError.html" title="MedicationRequest/Rekvirering-EnteredInError">Rekvirering-EnteredInError</a>
             </td>
             <td>
-<p>Eksempel på rekvirering markert som entered-in-error grunnet duplisert behandling</p>
+<p>Example of a request marked as entered-in-error due to duplicate treatment</p>
 </td>
          </tr>
          <tr>
@@ -791,7 +787,7 @@
                <a href="MedicationRequest-Rekvirering-Infusjon.html" title="MedicationRequest/Rekvirering-Infusjon">Rekvirering-Infusjon</a>
             </td>
             <td>
-<p>Eksempel på rekvirering for intravenøs infusjon</p>
+<p>Example of a request for intravenous infusion</p>
 </td>
          </tr>
          <tr>
@@ -799,7 +795,7 @@
                <a href="MedicationRequest-Rekvirering-Kjemoterapi.html" title="MedicationRequest/Rekvirering-Kjemoterapi">Rekvirering-Kjemoterapi</a>
             </td>
             <td>
-<p>Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie</p>
+<p>Example of a chemotherapy request with dose adjustment, treatment regimen and clinical trial</p>
 </td>
          </tr>
          <tr>
@@ -807,7 +803,7 @@
                <a href="MedicationRequest-Rekvirering-MedDiagnoseICD10.html" title="MedicationRequest/Rekvirering-MedDiagnoseICD10">Rekvirering-MedDiagnoseICD10</a>
             </td>
             <td>
-<p>Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling)</p>
+<p>Example of a request with an ICD-10 diagnosis as indication (allergic rhinitis, seasonal treatment)</p>
 </td>
          </tr>
          <tr>
@@ -815,15 +811,15 @@
                <a href="MedicationRequest-Rekvirering-Paracetamol.html" title="MedicationRequest/Rekvirering-Paracetamol">Rekvirering-Paracetamol</a>
             </td>
             <td>
-<p>Eksempel på legemiddelrekvirering av Paracet</p>
+<p>Example of a medication request for Paracet</p>
 </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Substance-Virkestoff-Oksykodon.html" title="Substance/Substance-Oksykodon">Substance-Oksykodon</a>
+               <a href="Substance-Substance-Oksykodon.html" title="Substance/Substance-Oksykodon">Substance-Oksykodon</a>
             </td>
             <td>
-<p>Eksempel på virkestoff - Oksykodon</p>
+<p>Example of a substance - Oxycodone</p>
 </td>
          </tr>
       </tbody>
@@ -849,8 +845,8 @@
             <div class="inner-wrapper p-3">
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Thu, May 28, 2026 13:52+0000">2026-05-28</span>
+                    Package hl7.fhir.no.lmdi#1.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span title="Sun, May 31, 2026 18:54+0000">2026-05-31</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

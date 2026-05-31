@@ -1,4 +1,4 @@
-# Pasient - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Pasient - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient **  | *Version*:1.1.1 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Pasient |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-patient",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-patient",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Pasient",
   "title" : "Pasient",
   "_title" : {
@@ -157,7 +157,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "id" : "Patient.identifier:FNR",
       "path" : "Patient.identifier",
       "sliceName" : "FNR",
-      "short" : "National identity number",
+      "short" : "Fødselsnummer",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -177,7 +177,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     {
       "id" : "Patient.identifier:FNR.value",
       "path" : "Patient.identifier.value",
-      "short" : "National identity number (11 digits)",
+      "short" : "Fødselsnummeret (11 siffer)",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -192,7 +192,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
         }]
       },
       "example" : [{
-        "label" : "National identity number",
+        "label" : "Fødselsnummer",
         "valueString" : "12345678901"
       },
       {
@@ -210,7 +210,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "id" : "Patient.identifier:DNR",
       "path" : "Patient.identifier",
       "sliceName" : "DNR",
-      "short" : "D-number",
+      "short" : "D-nummer",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -230,7 +230,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     {
       "id" : "Patient.identifier:DNR.value",
       "path" : "Patient.identifier.value",
-      "short" : "D-number (11 digits)",
+      "short" : "D-nummer (11 siffer)",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -245,7 +245,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
         }]
       },
       "example" : [{
-        "label" : "D-number",
+        "label" : "D-nummer",
         "valueString" : "12345678901"
       }]
     },
@@ -356,7 +356,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
       "id" : "Patient.address.extension:urbanDistrict",
       "path" : "Patient.address.extension",
       "sliceName" : "urbanDistrict",
-      "short" : "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)",
+      "short" : "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -370,7 +370,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Encoded value for urban district. Codes from code system \"Urban district numbers\" (OID 3403) shall be used.",
+      "definition" : "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -482,7 +482,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     {
       "id" : "Patient.address.district",
       "path" : "Patient.address.district",
-      "short" : "Municipality",
+      "short" : "Kommune",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -533,7 +533,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-patient.csv), [
     {
       "id" : "Patient.address.state",
       "path" : "Patient.address.state",
-      "short" : "County name",
+      "short" : "Fylkesnavn",
       "_short" : {
         "extension" : [{
           "extension" : [{

@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -11,8 +11,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.0 **  |
-| Active as of 2026-03-27 | *Computable Name*:Lmdi |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.1 **  |
+| Active as of 2026-05-29 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.1 | 2026-05-29 | Lagt til engelsk oversettelse av implementasjonsguiden. Oversettelsen er laget med KI og foreløpig kun begrenset kvalitetssikret av mennesker. |
 | 1.1.0 | 2026-04-13 | **Breaking changes:**LokaltLegemiddel bruker ny URL:`http://fhi.no/fhir/NamingSystem/lokaltLegemiddel`(tidligere`fh.no/lokaltVirkemiddel`)Legemiddel må ha enten kode eller virkestoff`organisatoriskNiva`er ikke lenger tillatt på OrganisasjonDiagnose:`stage.summary`må fylles ut når`stage`brukesLegemiddeladministrering: administrasjonsvei må være kodet med`code`-verdi**Andre endringer:**IG-status satt til activeNytt`category`-felt i Legemiddeladministrering (bl.a.`community`for selvadministrering)Presisert at`prosentvisDoseendring`100 % = umodifisert dose`LegemiddelKoder`utvidet med LMR-løpenummer, varenummer og lokaltLegemiddelPasient: fjernet overflødig address-use-invariant;`identifier`-definition lempetKonsistent navngivning av eksempelinstanser; nye eksempler for diagnose, infusjon, entered-in-error, cellegift, selvadministrering, legemiddel uten kode og organisasjonshierarki |
 | 1.0.8 | 2026-03-10 | Forbedret FSH-eksempler: fikset valideringsfeil, lagt til manglende felter, nye scenariobaserte Bundle-eksempler (sykehjem, rekvirering, kjemoterapi)Virkestoff tillatt i LegemiddelregisterBundleHarmonisert no-basis-versjon i byggeskriptRettet skrivefeil og fjernet utdaterte kommentarer i profiler |
 | 1.0.7 | 2025-09-30 | Fjernet country-feltet fra adresse i Pasient og Organisasjonaddress.type satt til physical i Pasient (kun fysiske adresser)Endret kommune-extension fra propertyInformation til municipalitycode i PasientFjernet citizenship-extension fra PasientEndret bydel-extension fra lmdi-urban-district til no-basis urbanDistrict i Organisasjon |
@@ -65,11 +66,11 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
-  "date" : "2026-03-27",
+  "date" : "2026-05-29",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -149,28 +150,6 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       {
         "url" : "value",
         "valueString" : "input/assets"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "i18n-default-lang"
-      },
-      {
-        "url" : "value",
-        "valueString" : "no"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "i18n-lang"
-      },
-      {
-        "url" : "value",
-        "valueString" : "en"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -571,28 +550,6 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       {
         "url" : "value",
         "valueString" : "input/assets"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "i18n-default-lang"
-      },
-      {
-        "url" : "value",
-        "valueString" : "no"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "i18n-lang"
-      },
-      {
-        "url" : "value",
-        "valueString" : "en"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

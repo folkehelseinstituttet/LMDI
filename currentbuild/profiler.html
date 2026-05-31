@@ -3,13 +3,12 @@
 
 
 
-
 <html xml:lang="nb" xmlns="http://www.w3.org/1999/xhtml" lang="nb">
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.0</title>
+        v1.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -67,9 +66,6 @@
 
 
 
-
-
-
 <header class="fhi-header mb-0">
     <div class="fhi-header__brand">
         <div class="container fhi-header__brand-container">
@@ -79,7 +75,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.0 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.1 - ci-build
                             
                             
                             
@@ -94,7 +90,7 @@
                 <label for="lang-switcher" class="visually-hidden">Velg språk / Select language</label>
                 <select id="lang-switcher" class="form-select form-select-sm" aria-label="Velg språk">
                     <option value="no" selected="selected" data-href="">Norsk</option>
-                    <option value="en"   data-href="en/profiler.html">English</option>
+                    <option value="en"  data-href="en/profiler.html">English</option>
                 </select>
             </div>
         </div>
@@ -166,81 +162,71 @@
 </div>
 <h3 id="fhir-profiler">FHIR-profiler</h3>
 
-<div xmlns="http://www.w3.org/1999/xhtml">
-  <table class="grid">
-    <thead>
-      <tr>
-        <th>Navn</th>
-        <th>FHIR base</th>
-        <th>Beskrivelse</th>
-      </tr>
-    </thead>
-    <tbody>
-    
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-condition.html">Diagnose</a></td>
-        <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-        <td>Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
-        <td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td>
-        <td>En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-practitioner.html">Helsepersonell</a></td>
-        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Practitioner">NoBasisPractitioner</a></td>
-        <td>Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
-        <td><a href="http://hl7.org/fhir/R4/medication.html">Medication</a></td>
-        <td>Beskrivelse av legemiddel.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
-        <td><a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a></td>
-        <td>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a></td>
-        <td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td>
-        <td>Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
-        <td><a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a></td>
-        <td>Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></td>
-        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Organization">NoBasisOrganization</a></td>
-        <td>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-patient.html">Pasient</a></td>
-        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Patient">NoBasisPatient</a></td>
-        <td>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient</td>
-      </tr>
-    
-      <tr>
-        <td><a href="StructureDefinition-lmdi-substance.html">Virkestoff</a></td>
-        <td><a href="https://simplifier.net/resolve?scope=hl7.fhir.no.basis@2.2.0&amp;canonical=http://hl7.no/fhir/StructureDefinition/no-basis-Substance">NoBasisSubstance</a></td>
-        <td>En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.</td>
-      </tr>
-    
-    </tbody>
-  </table>
-</div>
+<p>Implementasjonsguiden definerer følgende FHIR-profiler og extensions.</p>
+
+<h4 id="kjerneprofiler">Kjerneprofiler</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profil</th>
+      <th>FHIR-base</th>
+      <th>Beskrivelse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-condition.html">Diagnose</a></td>
+      <td>Condition</td>
+      <td>Diagnosen pasienten fikk legemiddelrekvirering eller legemiddeladministrering for.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-encounter.html">Episode</a></td>
+      <td>Encounter</td>
+      <td>Klinisk kontakt eller behandlingsopphold, med vekt på organisatorisk tilknytning.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-practitioner.html">Helsepersonell</a></td>
+      <td>Practitioner</td>
+      <td>Helsepersonell som har rekvirert legemiddelet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når det finnes.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
+      <td>Medication</td>
+      <td>Beskrivelse av et legemiddel.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-medicationadministration.html">Legemiddeladministrering</a></td>
+      <td>MedicationAdministration</td>
+      <td>Beskriver administrering av et legemiddel til en pasient i institusjon. Dette er kjerneressursen i implementasjonsguiden.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-bundle.html">LegemiddelregisterBundle</a></td>
+      <td>Bundle</td>
+      <td>Bundle-profil for Legemiddelregisteret. Støtter kun transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. Bundle kan bare inneholde: Condition, Practitioner, Encounter, Medication, MedicationAdministration, MedicationRequest, Organization, Patient og Substance.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
+      <td>MedicationRequest</td>
+      <td>Legemiddelrekvirering, resept, forordning eller annen bestilling av legemiddel.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-organization.html">Organisasjon</a></td>
+      <td>Organization</td>
+      <td>Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-patient.html">Pasient</a></td>
+      <td>Patient</td>
+      <td>Pasienten som har fått rekvirert eller administrert legemiddel, basert på no-basis-Patient.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-lmdi-substance.html">Virkestoff</a></td>
+      <td>Substance</td>
+      <td>Tilpasset Substance-profil for å representere virkestoff, basert på no-basis-Substance.</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="extensions">Extensions</h4>
 
@@ -254,11 +240,6 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="StructureDefinition-legemiddel-classification.html">LegemiddelClassification</a></td>
-      <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
-      <td>Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-lmdi-del-av-behandlingsregime.html">DelAvBehandlingsregime</a></td>
       <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.</td>
@@ -267,6 +248,11 @@
       <td><a href="StructureDefinition-lmdi-klinisk-studie.html">KliniskStudie</a></td>
       <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>Angir om legemidlet gis som en del av en klinisk studie.</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-legemiddel-classification.html">LegemiddelClassification</a></td>
+      <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
+      <td>Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-npr-episode-identifier.html">NprEpisodeIdentifier</a></td>
@@ -280,6 +266,7 @@
     </tr>
   </tbody>
 </table>
+
 
 
 
@@ -303,10 +290,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.0 based on <a
+                    Package hl7.fhir.no.lmdi#1.1.1 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, May 28, 2026 13:52+0000">2026-05-28</span>
+                        title="Sun, May 31, 2026 18:54+0000">2026-05-31</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

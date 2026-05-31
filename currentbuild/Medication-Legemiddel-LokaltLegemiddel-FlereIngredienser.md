@@ -1,4 +1,4 @@
-# Legemiddel-LokaltLegemiddel-FlereIngredienser - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Legemiddel-LokaltLegemiddel-FlereIngredienser - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

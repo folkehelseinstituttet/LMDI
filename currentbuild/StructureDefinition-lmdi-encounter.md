@@ -1,4 +1,4 @@
-# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-28 | *Computable Name*:Episode |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.1 **  |
+| Active as of 2026-05-31 | *Computable Name*:Episode |
 
  
 En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-encounter",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Episode",
   "title" : "Episode",
   "_title" : {
@@ -61,7 +61,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
     }]
   },
   "status" : "active",
-  "date" : "2026-05-28T13:52:12+00:00",
+  "date" : "2026-05-31T18:54:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

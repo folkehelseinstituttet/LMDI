@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.1 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "_title" : {
@@ -378,7 +378,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "id" : "Organization.address.extension:urbanDistrict",
       "path" : "Organization.address.extension",
       "sliceName" : "urbanDistrict",
-      "short" : "Encoded value for urban district. Code system \"Urban district numbers\" (OID 3403)",
+      "short" : "Kodet verdi for bydel. Kodeverk \"Bydelsnummer\" (OID 3403)",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -392,7 +392,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Encoded value for urban district. Codes from the code system \"Urban district numbers\" (OID 3403) shall be used.",
+      "definition" : "Kodet verdi for bydel. Koder fra kodeverk \"Bydelsnummer\" (OID 3403) skal benyttes",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -454,7 +454,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
     {
       "id" : "Organization.address.district",
       "path" : "Organization.address.district",
-      "short" : "Municipality",
+      "short" : "Kommune",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -505,7 +505,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
     {
       "id" : "Organization.address.state",
       "path" : "Organization.address.state",
-      "short" : "County name",
+      "short" : "Fylkesnavn",
       "_short" : {
         "extension" : [{
           "extension" : [{

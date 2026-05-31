@@ -1,4 +1,4 @@
-# Legemiddel-UtenCoding - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Legemiddel-UtenCoding - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

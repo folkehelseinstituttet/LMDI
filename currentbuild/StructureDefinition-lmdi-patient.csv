@@ -103,7 +103,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Patient.identifier:FNR","Patient.identifier","FNR","","",0,1,"Y","","Y","Identifier {[]} {[]}
-","National identity number","Fødselsnummer for the patient. Fødselsnummer as one of the possible patient identifier, should at least be sent unless there is a reason not to. Reasons for not sending the Fødselsnummer include but are not limited to, research and apps without a contract for processing data.
+","Fødselsnummer","Fødselsnummer for the patient. Fødselsnummer as one of the possible patient identifier, should at least be sent unless there is a reason not to. Reasons for not sending the Fødselsnummer include but are not limited to, research and apps without a contract for processing data.
 
 Multiple FNR can exist for a person. If several FNR is provided the time period that each identifier is valid should be provided. No information about period is required when only one FNR is provided.","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -130,7 +130,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "
 "Patient.identifier:FNR.value","Patient.identifier.value","","Fødselsnummer
 ","",1,1,"","","Y","string {[]} {[]}
-","National identity number (11 digits)","The Norwegian Fødselsnummer","If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"ele-1
+","Fødselsnummeret (11 siffer)","The Norwegian Fødselsnummer","If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Patient.identifier:FNR.period","Patient.identifier.period","","","",0,1,"","","Y","Period {[]} {[]}
@@ -182,7 +182,7 @@ per-1:If present, start SHALL have a lower value than end {start.hasValue().not(
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ref-1:SHALL have a contained resource if a local reference is provided {reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))}"
 "Patient.identifier:DNR","Patient.identifier","DNR","","",0,1,"Y","","Y","Identifier {[]} {[]}
-","D-number","The D-nummer of the patient. (assigned by the norwegian Skatteetaten)","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"ele-1
+","D-nummer","The D-nummer of the patient. (assigned by the norwegian Skatteetaten)","","Patients are almost always assigned specific numerical identifiers.","","","","","","","",,,,,"",,,,"Patient.identifier",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Patient.identifier:DNR.id","Patient.identifier.id","","","",0,1,"","","","string {[]} {[]}
@@ -206,7 +206,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Patient.identifier:DNR.value","Patient.identifier.value","","","",1,1,"","","Y","string {[]} {[]}
-","D-number (11 digits)","The actual Norwegian D-nummer","If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"ele-1
+","D-nummer (11 siffer)","The actual Norwegian D-nummer","If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""123456""/>","","",,,,,"",,,,"Identifier.value",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Patient.identifier:DNR.period","Patient.identifier.period","","","",0,1,"","","Y","Period {[]} {[]}
@@ -355,7 +355,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.address.extension:urbanDistrict","Patient.address.extension","urbanDistrict","bydel
 urban district","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-urban-district]]} {[]}
-","Encoded value for urban district. Code system ""Urban district numbers"" (OID 3403)","Encoded value for urban district. Codes from code system ""Urban district numbers"" (OID 3403) shall be used.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","Kodet verdi for bydel. Kodeverk ""Bydelsnummer"" (OID 3403)","Kodet verdi for bydel. Koder fra kodeverk ""Bydelsnummer"" (OID 3403) skal benyttes","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Patient.address.extension:propertyInformation","Patient.address.extension","propertyInformation","","",0,0,"","","","Extension {[CanonicalType[http://hl7.no/fhir/StructureDefinition/no-basis-propertyinformation]]} {[]}
@@ -389,7 +389,7 @@ The name of the city, town, village or other community or delivery center.","Not
 "
 "Patient.address.district","Patient.address.district","","County
 kommune","",0,1,"","","Y","string {[]} {[]}
-","Municipality","Name of the county (norwegian ""kommune"").
+","Kommune","Name of the county (norwegian ""kommune"").
 
 The name of the administrative area (county).","District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.","","","","","","<valueString xmlns=""http://hl7.org/fhir"" value=""Madison""/>","","",,,,,"",,,,"Address.district",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -410,7 +410,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Primitive value for string","Primitive value for string","","","","","","","","","",1048576,,,,"",,,,"string.value",0,1,"",""
 "Patient.address.state","Patient.address.state","","Province
 Territoryfylke","",0,1,"","","Y","string {[]} {[]}
-","County name","Name of the norwegian ""fylke""). If fylkes-number is required ""eiendomsinformasjon"" should be used with koded kommune-number.
+","Fylkesnavn","Name of the norwegian ""fylke""). If fylkes-number is required ""eiendomsinformasjon"" should be used with koded kommune-number.
 
 Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (i.e. US 2 letter state codes).","Note that FHIR strings SHALL NOT exceed 1MB in size","","","","","","","","",,,,,"",,,,"Address.state",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

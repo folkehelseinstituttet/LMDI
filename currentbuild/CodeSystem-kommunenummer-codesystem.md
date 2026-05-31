@@ -1,4 +1,4 @@
-# Kommunenummer CodeSystem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Kommunenummer CodeSystem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.1.0 **  |
-| Active as of 2026-05-28 | *Computable Name*:KommunenummerCodeSystem |
+| *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.1.1 **  |
+| Active as of 2026-05-31 | *Computable Name*:KommunenummerCodeSystem |
 
  
 Kodesystem for norske kommunenummer (Volven 3402) 
@@ -33,11 +33,24 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "resourceType" : "CodeSystem",
   "id" : "kommunenummer-codesystem",
   "url" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Municipality number CodeSystem"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "status" : "active",
-  "date" : "2026-05-28T13:52:12+00:00",
+  "date" : "2026-05-31T18:54:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -54,6 +67,19 @@ Kodesystem for norske kommunenummer (Volven 3402)
     }]
   }],
   "description" : "Kodesystem for norske kommunenummer (Volven 3402)",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Code system for Norwegian municipality numbers (Volven 3402)."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.0
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.0 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.1 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "_title" : {
@@ -673,6 +673,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.code.coding:LokaltLegemiddel.code",
       "path" : "Medication.code.coding.code",
       "short" : "Identifikator fra lokal legemiddelkatalog/legemiddelregister",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Identifier from the local medication catalog or medication register"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
@@ -739,6 +752,19 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "id" : "Medication.code.coding:SCT.code",
       "path" : "Medication.code.coding.code",
       "short" : "SNOMED CT-koden skal være et underbegrep av 'Legemiddel (product)' [763158003] eller 'Substans (substance)' [105590001].",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The SNOMED CT code shall be a subtype of 'Medication (product)' [763158003] or 'Substance' [105590001]."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
       "min" : 1
     },
     {
@@ -853,12 +879,38 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
     {
       "id" : "Medication.form.coding:OID7448.code",
       "path" : "Medication.form.coding.code",
-      "short" : "Verdi fra kodeverket"
+      "short" : "Verdi fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Value from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "Medication.form.coding:OID7448.display",
       "path" : "Medication.form.coding.display",
-      "short" : "Beskrivelse av koden (navn) fra kodeverket"
+      "short" : "Beskrivelse av koden (navn) fra kodeverket",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Code description (name) from the code system"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "Medication.form.coding:SCT",
