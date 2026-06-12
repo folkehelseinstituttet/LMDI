@@ -14,9 +14,9 @@ Description: "En behandlingsepisode som representerer et klinisk møte, konsulta
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = "Profile for a care episode based on the FHIR Encounter resource. This profile represents a clinical encounter or treatment in health care, with a focus on organizational affiliation."
 
-* extension contains NprEpisodeIdentifier named nprEpisodeIdentifier 0..1 MS
+* extension contains NprEpisodeIdentifier named nprEpisodeIdentifier 0..* MS
 * extension[nprEpisodeIdentifier] ^short = "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR)."
-* extension[nprEpisodeIdentifier] ^definition = "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge."
+* extension[nprEpisodeIdentifier] ^definition = "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge."
 * extension[nprEpisodeIdentifier] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * extension[nprEpisodeIdentifier] ^short.extension[=].extension[+].url = "lang"
 * extension[nprEpisodeIdentifier] ^short.extension[=].extension[=].valueCode = #en
@@ -26,7 +26,7 @@ Description: "En behandlingsepisode som representerer et klinisk møte, konsulta
 * extension[nprEpisodeIdentifier] ^definition.extension[=].extension[+].url = "lang"
 * extension[nprEpisodeIdentifier] ^definition.extension[=].extension[=].valueCode = #en
 * extension[nprEpisodeIdentifier] ^definition.extension[=].extension[+].url = "content"
-* extension[nprEpisodeIdentifier] ^definition.extension[=].extension[=].valueString = "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). If multiple NPR identifiers are registered locally for the same episode, only one NPR identifier shall be submitted to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier. The selected identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
+* extension[nprEpisodeIdentifier] ^definition.extension[=].extension[=].valueString = "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). The identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
 
 * statusHistory 0..0
 * classHistory 0..0
@@ -65,8 +65,9 @@ Description: "Eksempel på episode i spesialisthelsetjenesten"
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 * serviceProvider = Reference(Organisasjon-Sykehusavdeling)
 * identifier.value = "550e8400-e29b-41d4-a716-446655440000"
-* extension[nprEpisodeIdentifier].extension[stringIdentifier].valueString = "NPR987654321"
-* extension[nprEpisodeIdentifier].extension[uuidIdentifier].valueUuid = "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
+* extension[nprEpisodeIdentifier][0].extension[stringIdentifier].valueString = "NPR987654321"
+* extension[nprEpisodeIdentifier][0].extension[uuidIdentifier].valueUuid = "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
+* extension[nprEpisodeIdentifier][1].extension[stringIdentifier].valueString = "NPR123456789"
 
 Instance: Episode-Sykehjem
 InstanceOf: Episode
