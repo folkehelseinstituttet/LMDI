@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-MedDiagnoseICD10> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Rekvirering-MedDiagnoseICD10"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v false
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/rekvirering-id"^^xsd:anyURI ;
+       fhir:l <http://example.org/rekvirering-id>
+     ] ;
+     fhir:value [ fhir:v "13fb2660-f88a-473e-b0a9-a72266dc7137" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "plan"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/medicationrequest-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/medicationrequest-category>
+       ] ;
+       fhir:code [ fhir:v "inpatient" ]
+     ] )
+  ] ) ; # 
+  fhir:reported [
+     a fhir:Boolean ;
+     fhir:v true
+  ] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelVirkestoff-2> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelVirkestoff-2" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-DNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Med-DNR" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Sykehus> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Sykehus" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-04-15"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Practitioner/Helsepersonell-Med-HPR> ;
+     fhir:reference [ fhir:v "Practitioner/Helsepersonell-Med-HPR" ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Condition/Diagnose-ICD10-Allergi> ;
+     fhir:reference [ fhir:v "Condition/Diagnose-ICD10-Allergi" ]
+  ] ) ; # 
+  fhir:courseOfTherapyType [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy>
+       ] ;
+       fhir:code [ fhir:v "seasonal" ] ;
+       fhir:display [ fhir:v "Seasonal" ]
+     ] )
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:code [
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:oid:2.16.578.1.12.4.1.1.7478"^^xsd:anyURI ;
+             fhir:l <urn:oid:2.16.578.1.12.4.1.1.7478>
+           ] ;
+           fhir:code [ fhir:v "5685" ] ;
+           fhir:display [ fhir:v "1 inntil x1" ]
+         ] )
+       ]
+     ] ;
+     fhir:asNeeded [
+       a fhir:Boolean ;
+       fhir:v true
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

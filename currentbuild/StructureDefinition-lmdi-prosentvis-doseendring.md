@@ -1,0 +1,169 @@
+# Prosentvis doseendring - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Prosentvis doseendring**
+
+## Extension: Prosentvis doseendring 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.1.2 **  |
+| Active as of 2026-06-12 | *Computable Name*:ProsentvisDoseendring |
+
+Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.
+
+**Context of Use**
+
+This extension may be used on the following element(s):
+
+* Element ID MedicationRequest
+
+**Usage info**
+
+**Usages:**
+
+* Use this Extension: [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
+* Examples for this Extension: [Bundle/Bundle-Scenario-Sykehjem-Oksykodon](Bundle-Bundle-Scenario-Sykehjem-Oksykodon.md), [MedicationRequest/Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md) and [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-prosentvis-doseendring.json)
+
+### Formal Views of Extension Content
+
+ [Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-doseendring.csv), [Excel](StructureDefinition-lmdi-prosentvis-doseendring.xlsx), [Schematron](StructureDefinition-lmdi-prosentvis-doseendring.sch) 
+
+#### Terminology Bindings
+
+#### Constraints
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "lmdi-prosentvis-doseendring",
+  "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring",
+  "version" : "1.1.2",
+  "name" : "ProsentvisDoseendring",
+  "title" : "Prosentvis doseendring",
+  "_title" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Percentage dose adjustment"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "status" : "active",
+  "date" : "2026-06-12T10:54:08+00:00",
+  "publisher" : "Folkehelseinstituttet",
+  "contact" : [{
+    "name" : "Folkehelseinstituttet",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.fhi.no"
+    }]
+  },
+  {
+    "name" : "Legemiddelregisteret",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "legemiddelregisteret@fhi.no"
+    }]
+  }],
+  "description" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.",
+  "_description" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "en"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Dose adjustment as a percentage, compared to the original dosage. Particularly relevant in chemotherapy. A normal dose, without modification, is 100%."
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "NO",
+      "display" : "Norway"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "complex-type",
+  "abstract" : false,
+  "context" : [{
+    "type" : "element",
+    "expression" : "MedicationRequest"
+  }],
+  "type" : "Extension",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation" : "constraint",
+  "differential" : {
+    "element" : [{
+      "id" : "Extension",
+      "path" : "Extension",
+      "short" : "Prosentvis doseendring",
+      "definition" : "Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%."
+    },
+    {
+      "id" : "Extension.extension",
+      "path" : "Extension.extension",
+      "max" : "0"
+    },
+    {
+      "id" : "Extension.url",
+      "path" : "Extension.url",
+      "fixedUri" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring"
+    },
+    {
+      "id" : "Extension.value[x]",
+      "path" : "Extension.value[x]",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "Extension.value[x].unit",
+      "path" : "Extension.value[x].unit",
+      "patternString" : "%"
+    },
+    {
+      "id" : "Extension.value[x].system",
+      "path" : "Extension.value[x].system",
+      "patternUri" : "http://unitsofmeasure.org"
+    },
+    {
+      "id" : "Extension.value[x].code",
+      "path" : "Extension.value[x].code",
+      "patternCode" : "%"
+    }]
+  }
+}
+
+```
