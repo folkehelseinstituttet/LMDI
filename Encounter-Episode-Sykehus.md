@@ -1,4 +1,4 @@
-# Episode-Sykehus - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Episode-Sykehus - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -31,6 +31,13 @@
     {
       "url" : "uuidIdentifier",
       "valueUuid" : "urn:uuid:550e8400-e29b-41d4-a716-446655440000"
+    }],
+    "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
+  },
+  {
+    "extension" : [{
+      "url" : "stringIdentifier",
+      "valueString" : "NPR123456789"
     }],
     "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"
   }],

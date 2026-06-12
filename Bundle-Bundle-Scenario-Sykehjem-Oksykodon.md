@@ -1,4 +1,4 @@
-# Oksykodonadministrering i sykehjem med inline ressurskopier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Oksykodonadministrering i sykehjem med inline ressurskopier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

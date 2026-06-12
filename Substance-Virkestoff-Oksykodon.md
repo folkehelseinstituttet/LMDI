@@ -1,4 +1,4 @@
-# Virkestoff-Oksykodon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Virkestoff-Oksykodon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

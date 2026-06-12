@@ -1,4 +1,4 @@
-# NPR Episode Identifier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# NPR Episode Identifier - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,10 +14,10 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.1.1 **  |
-| Active as of 2026-05-31 | *Computable Name*:NprEpisodeIdentifier |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.1.2 **  |
+| Active as of 2026-06-12 | *Computable Name*:NprEpisodeIdentifier |
 
-Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.
+Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren.
 
 **Context of Use**
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
   "resourceType" : "StructureDefinition",
   "id" : "npr-episode-identifier",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier",
-  "version" : "1.1.1",
+  "version" : "1.1.2",
   "name" : "NprEpisodeIdentifier",
   "title" : "NPR Episode Identifier",
   "_title" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
     }]
   },
   "status" : "active",
-  "date" : "2026-05-31T19:08:08+00:00",
+  "date" : "2026-06-12T10:49:58+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -86,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.",
+  "description" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -95,7 +95,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       },
       {
         "url" : "content",
-        "valueString" : "Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the selected NPR identifier. If multiple NPR identifiers are registered for the same episode locally, only one NPR identifier shall be provided when submitting to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier."
+        "valueString" : "Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). The extension can carry both string-based and UUID-based representations of the NPR identifier."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -127,7 +127,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
       "id" : "Extension",
       "path" : "Extension",
       "short" : "NPR Episode Identifier",
-      "definition" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.",
+      "definition" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren.",
       "constraint" : [{
         "key" : "npr-episode-at-least-one",
         "severity" : "error",
@@ -154,7 +154,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "String-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig.",
+      "definition" : "String-representasjon av NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -163,7 +163,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
           },
           {
             "url" : "content",
-            "valueString" : "String representation of the selected NPR episode identifier. Shall be provided if the string representation of the identifier is available."
+            "valueString" : "String representation of the NPR episode identifier. Shall be provided if the string representation of the identifier is available."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -208,7 +208,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "UUID-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.",
+      "definition" : "UUID-representasjon av NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -217,7 +217,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
           },
           {
             "url" : "content",
-            "valueString" : "UUID representation of the selected NPR episode identifier. Shall be provided if the UUID representation of the identifier is available."
+            "valueString" : "UUID representation of the NPR episode identifier. Shall be provided if the UUID representation of the identifier is available."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

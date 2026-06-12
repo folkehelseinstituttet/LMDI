@@ -1,4 +1,4 @@
-# Administrering-MedDiagnoseICD10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Administrering-MedDiagnoseICD10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

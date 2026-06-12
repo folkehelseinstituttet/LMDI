@@ -1,4 +1,4 @@
-# Helsepersonell-Uten-HPR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Helsepersonell-Uten-HPR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

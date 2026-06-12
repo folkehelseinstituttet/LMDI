@@ -40,6 +40,21 @@
        fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"^^xsd:anyURI ;
        fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier>
      ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "stringIdentifier"^^xsd:anyURI ;
+         fhir:l fhir:stringIdentifier
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "NPR123456789"
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier>
+     ]
   ] ) ; # 
   fhir:identifier ( [
      fhir:value [ fhir:v "550e8400-e29b-41d4-a716-446655440000" ]

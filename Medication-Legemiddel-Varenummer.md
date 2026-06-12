@@ -1,4 +1,4 @@
-# Legemiddel-Varenummer - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Legemiddel-Varenummer - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

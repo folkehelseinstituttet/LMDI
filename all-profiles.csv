@@ -492,8 +492,8 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"lmdi-encounter","Encounter.extension:nprEpisodeIdentifier","Encounter.extension","nprEpisodeIdentifier","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier]]} {[]}
-","Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR).","Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+"lmdi-encounter","Encounter.extension:nprEpisodeIdentifier","Encounter.extension","nprEpisodeIdentifier","","",0,*,"Y","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier]]} {[]}
+","Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR).","Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}npr-episode-at-least-one:Minst én NPR episode identifikator (string eller UUID) må oppgis {extension('stringIdentifier').exists() or extension('uuidIdentifier').exists()}"
 "lmdi-encounter","Encounter.modifierExtension","Encounter.modifierExtension","","extensions
@@ -3160,7 +3160,7 @@ Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Substance
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "npr-episode-identifier","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","NPR Episode Identifier","Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","NPR Episode Identifier","Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}npr-episode-at-least-one:Minst én NPR episode identifikator (string eller UUID) må oppgis {extension('stringIdentifier').exists() or extension('uuidIdentifier').exists()}"
 "npr-episode-identifier","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
@@ -3171,7 +3171,7 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "npr-episode-identifier","Extension.extension:stringIdentifier","Extension.extension","stringIdentifier","","",0,1,"Y","","","Extension {[]} {[]}
-","String-representasjon av NPR episodeidentifikatoren","String-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","String-representasjon av NPR episodeidentifikatoren","String-representasjon av NPR episodeidentifikatoren. Skal oppgis dersom string-representasjonen av identifikatoren er tilgjengelig.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "npr-episode-identifier","Extension.extension:stringIdentifier.id","Extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -3185,7 +3185,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "npr-episode-identifier","Extension.extension:uuidIdentifier","Extension.extension","uuidIdentifier","","",0,1,"Y","","","Extension {[]} {[]}
-","UUID-representasjon av NPR episodeidentifikatoren","UUID-representasjon av den valgte NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","UUID-representasjon av NPR episodeidentifikatoren","UUID-representasjon av NPR episodeidentifikatoren. Skal oppgis dersom UUID-representasjonen av identifikatoren er tilgjengelig.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "npr-episode-identifier","Extension.extension:uuidIdentifier.id","Extension.extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""

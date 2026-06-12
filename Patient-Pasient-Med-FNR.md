@@ -1,4 +1,4 @@
-# Pasient-Med-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Pasient-Med-FNR - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

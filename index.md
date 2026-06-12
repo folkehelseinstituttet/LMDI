@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -11,8 +11,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.1 **  |
-| Active as of 2026-05-29 | *Computable Name*:Lmdi |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.2 **  |
+| Active as of 2026-06-12 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.2 | 2026-06-12 | Episode: nprEpisodeIdentifier-extensionen kan nå gjentas (0..1 → 0..*), slik at flere NPR-identifikatorer kan oppgis for samme episode. |
 | 1.1.1 | 2026-05-29 | Lagt til engelsk oversettelse av implementasjonsguiden. Oversettelsen er laget med KI og foreløpig kun begrenset kvalitetssikret av mennesker. |
 | 1.1.0 | 2026-04-13 | **Breaking changes:**LokaltLegemiddel bruker ny URL:`http://fhi.no/fhir/NamingSystem/lokaltLegemiddel`(tidligere`fh.no/lokaltVirkemiddel`)Legemiddel må ha enten kode eller virkestoff`organisatoriskNiva`er ikke lenger tillatt på OrganisasjonDiagnose:`stage.summary`må fylles ut når`stage`brukesLegemiddeladministrering: administrasjonsvei må være kodet med`code`-verdi**Andre endringer:**IG-status satt til activeNytt`category`-felt i Legemiddeladministrering (bl.a.`community`for selvadministrering)Presisert at`prosentvisDoseendring`100 % = umodifisert dose`LegemiddelKoder`utvidet med LMR-løpenummer, varenummer og lokaltLegemiddelPasient: fjernet overflødig address-use-invariant;`identifier`-definition lempetKonsistent navngivning av eksempelinstanser; nye eksempler for diagnose, infusjon, entered-in-error, cellegift, selvadministrering, legemiddel uten kode og organisasjonshierarki |
 | 1.0.8 | 2026-03-10 | Forbedret FSH-eksempler: fikset valideringsfeil, lagt til manglende felter, nye scenariobaserte Bundle-eksempler (sykehjem, rekvirering, kjemoterapi)Virkestoff tillatt i LegemiddelregisterBundleHarmonisert no-basis-versjon i byggeskriptRettet skrivefeil og fjernet utdaterte kommentarer i profiler |
@@ -66,11 +67,11 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.1",
+  "version" : "1.1.2",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
-  "date" : "2026-05-29",
+  "date" : "2026-06-12",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -1525,7 +1526,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/npr-episode-identifier"
       },
       "name" : "NPR Episode Identifier",
-      "description" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av den valgte NPR-identifikatoren. Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren.",
+      "description" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren.",
       "exampleBoolean" : false
     },
     {

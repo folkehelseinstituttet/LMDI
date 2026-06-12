@@ -1,4 +1,4 @@
-# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.1
+# Episode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.1 **  |
-| Active as of 2026-05-31 | *Computable Name*:Episode |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.2 **  |
+| Active as of 2026-06-12 | *Computable Name*:Episode |
 
  
 En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-encounter",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter",
-  "version" : "1.1.1",
+  "version" : "1.1.2",
   "name" : "Episode",
   "title" : "Episode",
   "_title" : {
@@ -61,7 +61,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
     }]
   },
   "status" : "active",
-  "date" : "2026-05-31T19:08:08+00:00",
+  "date" : "2026-06-12T10:49:58+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -164,7 +164,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Hvis det er registrert flere NPR-identifiere for samme episode lokalt, skal kun én NPR-identifikator angis ved innsending til Legemiddelregisteret (LMR). Velg enten den første eller den lokalt foretrukne identifikatoren. Den valgte identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge.",
+      "definition" : "Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Identifikatoren skal oppgis med sin string-representasjon og/eller UUID-representasjon, dersom begge er tilgjengelige oppgis begge.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -173,13 +173,13 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
           },
           {
             "url" : "content",
-            "valueString" : "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). If multiple NPR identifiers are registered locally for the same episode, only one NPR identifier shall be submitted to Legemiddelregisteret (LMR). Choose either the first or the locally preferred identifier. The selected identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
+            "valueString" : "Unique identifier for the episode, as used in reporting to the Norwegian Patient Registry (NPR). The identifier shall be provided using its string representation and/or UUID representation; if both are available, provide both."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
       "min" : 0,
-      "max" : "1",
+      "max" : "*",
       "type" : [{
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier"]
