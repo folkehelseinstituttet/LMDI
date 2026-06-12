@@ -103,15 +103,16 @@ cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#2.2.
 2. Run `sushi .` to compile FSH to FHIR resources
 3. For full documentation generation, run IG Publisher
 4. Generated content appears in `LMDI/output/`
-5. Etter endringer i FSH-filer: kjør `bash .claude/skills/lmdi-fhir/scripts/sync_references.sh` for å oppdatere skill-snapshoten, og `bash .claude/skills/lmdi-fhir/scripts/validate_skill.sh` for å verifisere konsistens
+5. Etter endringer i FSH-filer: oppdater lmdi-fhir-skillen etter prosedyren i `.claude/skills/lmdi-fhir/UPDATE.md`
 
 ## Claude Skills
 
-`.claude/skills/lmdi-fhir/` er en symlink til `Fhi.Legemiddelregisteret.wiki`-repoet (`AgentSkills/lmdi-fhir/`). Skill-filene (SKILL.md, references/, scripts/) versjonsstyres **ikke** i dette repoet.
+`.claude/skills/lmdi-fhir/` er en symlink til `Fhi.Legemiddelregisteret.wiki`-repoet (`AgentSkills/lmdi-fhir/`). Skill-filene (SKILL.md, UPDATE.md, references/) versjonsstyres **ikke** i dette repoet.
 
 **Viktig ved arbeid med skill-filer:**
-- Sjekk at skill-filene er oppdatert med siste FSH-endringer før bruk (kjør `sync_references.sh`)
-- Endringer i skill-filer (SKILL.md, references/, scripts/) må pushes til wiki-repoet (`Fhi.Legemiddelregisteret.wiki`)
+- Sjekk at skill-filene er oppdatert med siste FSH-endringer før bruk (se proveniens-tabellen i `UPDATE.md`)
+- Oppdatering av skillen gjøres etter prosedyren i `.claude/skills/lmdi-fhir/UPDATE.md`
+- Endringer i skill-filer må committes og pushes i wiki-repoet (`Fhi.Legemiddelregisteret.wiki`)
 - `.claude/skills/` er lagt til i `.gitignore` og trackes ikke her
 
 The project follows Norwegian healthcare data standards and integrates with FEST (Norwegian drug database) identifiers.
