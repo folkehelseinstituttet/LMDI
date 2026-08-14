@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -11,8 +11,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.2 **  |
-| Active as of 2026-06-12 | *Computable Name*:Lmdi |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.3 **  |
+| Active as of 2026-08-14 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.3 | 2026-08-14 | Legemiddelrekvirering:`requester`er ikke lenger påkrevd (1..1 → 0..1). Feltet er fortsatt Must Support og skal oppgis når rekvirenten er kjent. Endringen gjør ingen tidligere innsending ugyldig, men mottakere kan ikke lenger forutsette at feltet alltid er til stede. |
 | 1.1.2 | 2026-06-12 | Episode: nprEpisodeIdentifier-extensionen kan nå gjentas (0..1 → 0..*), slik at flere NPR-identifikatorer kan oppgis for samme episode. |
 | 1.1.1 | 2026-05-29 | Lagt til engelsk oversettelse av implementasjonsguiden. Oversettelsen er laget med KI og foreløpig kun begrenset kvalitetssikret av mennesker. |
 | 1.1.0 | 2026-04-13 | **Breaking changes:**LokaltLegemiddel bruker ny URL:`http://fhi.no/fhir/NamingSystem/lokaltLegemiddel`(tidligere`fh.no/lokaltVirkemiddel`)Legemiddel må ha enten kode eller virkestoff`organisatoriskNiva`er ikke lenger tillatt på OrganisasjonDiagnose:`stage.summary`må fylles ut når`stage`brukesLegemiddeladministrering: administrasjonsvei må være kodet med`code`-verdi**Andre endringer:**IG-status satt til activeNytt`category`-felt i Legemiddeladministrering (bl.a.`community`for selvadministrering)Presisert at`prosentvisDoseendring`100 % = umodifisert dose`LegemiddelKoder`utvidet med LMR-løpenummer, varenummer og lokaltLegemiddelPasient: fjernet overflødig address-use-invariant;`identifier`-definition lempetKonsistent navngivning av eksempelinstanser; nye eksempler for diagnose, infusjon, entered-in-error, cellegift, selvadministrering, legemiddel uten kode og organisasjonshierarki |
@@ -67,11 +68,11 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.2",
+  "version" : "1.1.3",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
-  "date" : "2026-06-12",
+  "date" : "2026-08-14",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -106,7 +107,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.1.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",

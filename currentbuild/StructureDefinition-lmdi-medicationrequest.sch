@@ -17,7 +17,6 @@
       <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie']) &lt;= 1">extension with URL = 'http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:supportingInformation) &lt;= 0">supportingInformation: maximum cardinality of 'supportingInformation' is 0</sch:assert>
-      <sch:assert test="count(f:requester) &gt;= 1">requester: minimum cardinality of 'requester' is 1</sch:assert>
       <sch:assert test="count(f:performer) &lt;= 0">performer: maximum cardinality of 'performer' is 0</sch:assert>
       <sch:assert test="count(f:performerType) &lt;= 0">performerType: maximum cardinality of 'performerType' is 0</sch:assert>
       <sch:assert test="count(f:recorder) &lt;= 0">recorder: maximum cardinality of 'recorder' is 0</sch:assert>
