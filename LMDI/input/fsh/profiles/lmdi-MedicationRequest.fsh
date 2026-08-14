@@ -143,7 +143,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * subject ^short.extension[=].extension[+].url = "content"
 * subject ^short.extension[=].extension[=].valueString = "The patient the medication was requested for"
 
-* requester 1..1 MS
+* requester 0..1 MS
 * requester only Reference(Helsepersonell)
 * requester ^short = "Helsepersonellet som rekvirerte legemidlet"
 * requester ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
