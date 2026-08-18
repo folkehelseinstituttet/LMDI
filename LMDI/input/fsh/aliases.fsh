@@ -10,6 +10,9 @@ Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-t
 // ATC alias
 Alias: $ATC = http://www.whocc.no/atc
 
+// Kodeverk for kodet mengde ingrediens (R5/R6)
+Alias: $IngrediensStyrkeKoder = http://hl7.org/fhir/CodeSystem/medication-ingredientstrength
+
 // Volven alias
 Alias: $organisatoriskBetegnelse = urn:oid:2.16.578.1.12.4.1.1.8624
 

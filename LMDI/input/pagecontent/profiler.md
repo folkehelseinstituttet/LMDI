@@ -22,6 +22,7 @@ Implementasjonsguiden definerer følgende FHIR-profiler og extensions.
 | Extension | Brukes på | Beskrivelse |
 |-----------|----------|-------------|
 | [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.html) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.html) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
+| [IngrediensStyrke](StructureDefinition-lmdi-ingredient-strength.html) | [Legemiddel](StructureDefinition-lmdi-medication.html) | Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som volum eller mengde virkestoff, eller som kode. Brukes på Legemiddel.ingredient.strength når mengde skal uttrykkes i stedet for styrke. |
 | [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.html) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.html) | Angir om legemidlet gis som en del av en klinisk studie. |
 | [LegemiddelClassification](StructureDefinition-legemiddel-classification.html) | [Legemiddel](StructureDefinition-lmdi-medication.html) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
 | [NprEpisodeIdentifier](StructureDefinition-npr-episode-identifier.html) | [Episode](StructureDefinition-lmdi-encounter.html) | Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Støtter både string-basert og UUID-basert representasjon. |
