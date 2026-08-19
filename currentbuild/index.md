@@ -1332,10 +1332,34 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "Medication"
       }],
       "reference" : {
+        "reference" : "Medication/Legemiddel-MorfinKonsentrat"
+      },
+      "name" : "Legemiddel-MorfinKonsentrat",
+      "description" : "Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
         "reference" : "Medication/Legemiddel-SCT"
       },
       "name" : "Legemiddel-SCT",
       "description" : "Eksempel på legemiddel identifisert med SNOMED CT-kode",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-Smerteblanding"
+      },
+      "name" : "Legemiddel-Smerteblanding",
+      "description" : "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi en ingrediens på, og bruk av mengde (mL) i tillegg til styrke.",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1469,6 +1493,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       "name" : "Lokalt-legemiddel-cellegift",
       "description" : "Eksempel på lokalt katalogisert cellegift (Cisplatin)",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/lmdi-ingredient-strength"
+      },
+      "name" : "Mengde ingrediens",
+      "description" : "Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som kode. Angir enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1817,6 +1853,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       "name" : "Virkestoff",
       "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Substance"
+      }],
+      "reference" : {
+        "reference" : "Substance/Virkestoff-Natriumklorid"
+      },
+      "name" : "Virkestoff-Natriumklorid",
+      "description" : "Eksempel på virkestoff - Natriumklorid",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
     },
     {
       "extension" : [{

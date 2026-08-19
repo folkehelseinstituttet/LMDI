@@ -288,6 +288,14 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-lmdi-ingredient-strength.html" title="StructureDefinition/lmdi-ingredient-strength">Amount of ingredient</a>
+            </td>
+            <td>
+<p>Amount of the ingredient in the requested/administered medication, expressed as a Quantity or as a code. Specifies either the amount of active ingredient in the requested/administered medication (e.g. 100 mg), or the volume of the ingredient used to produce the requested/administered medication (e.g. 10 mL). When volume is used, ingredient.item shall specify the “starting medication” used to produce the requested/administered medication in such a way that the strength of the “starting medication” can be derived. This is necessary to calculate the amount of active ingredient and the strength of the ingredient in the requested/administered medication.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-npr-episode-identifier.html" title="StructureDefinition/npr-episode-identifier">NPR Episode Identifier</a>
             </td>
             <td>
@@ -632,10 +640,26 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Medication-Medication-MorfinKonsentrat.html" title="Medication/Medication-MorfinKonsentrat">Medication-MorfinKonsentrat</a>
+            </td>
+            <td>
+<p>Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Medication-Medication-SCT.html" title="Medication/Medication-SCT">Medication-SCT</a>
             </td>
             <td>
 <p>Example of a medication identified by a SNOMED CT code</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Medication-Smerteblanding.html" title="Medication/Medication-Smerteblanding">Medication-Smerteblanding</a>
+            </td>
+            <td>
+<p>Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi en ingrediens på, og bruk av mengde (mL) i tillegg til styrke.</p>
 </td>
          </tr>
          <tr>
@@ -816,6 +840,14 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Substance-Substance-Natriumklorid.html" title="Substance/Substance-Natriumklorid">Substance-Natriumklorid</a>
+            </td>
+            <td>
+<p>Eksempel på virkestoff - Natriumklorid</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Substance-Substance-Oksykodon.html" title="Substance/Substance-Oksykodon">Substance-Oksykodon</a>
             </td>
             <td>
@@ -846,7 +878,7 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.3 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Fri, Aug 14, 2026 06:56+0000">2026-08-14</span>
+                        4.0.1</a>. Generated <span title="Wed, Aug 19, 2026 13:18+0000">2026-08-19</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

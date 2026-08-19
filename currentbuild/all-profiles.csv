@@ -719,6 +719,21 @@ There may be many levels in the hierachy, and this may only pic specific levels 
 "lmdi-encounter","Encounter.partOf","Encounter.partOf","","","",0,0,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1]]}
 ","Another Encounter this encounter is part of","Another Encounter of which this encounter is a part of (administratively or in time).","This is also used for associating a child's encounter back to the mother's encounter.Refer to the Notes section in the Patient resource for further details.","","","","","","","","",,,,,"",,,,"Encounter.partOf",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
+"lmdi-ingredient-strength","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
+","Mengde ingrediens","Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som kode. Angir enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-ingredient-strength","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"lmdi-ingredient-strength","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-ingredient-strength","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
+","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
+"lmdi-ingredient-strength","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","CodeableConcept {[]} {[]}
+Quantity {[]} {[]}","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,"preferred","Medication Ingredient Strength Codes","http://hl7.org/fhir/ValueSet/medication-ingredientstrength","",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
 "lmdi-klinisk-studie","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
 ","Klinisk studie","Angir om legemidlet gis som en del av en klinisk studie.","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
@@ -1116,7 +1131,23 @@ Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Substance
 ","Active ingredient indicator","Indication of whether this ingredient affects the therapeutic action of the drug.","","True indicates that the ingredient affects the therapeutic action of the drug (i.e. active). False indicates that the ingredient does not affect the therapeutic action of the drug (i.e. inactive).","","","","","","","",,,,,"",,,,"Medication.ingredient.isActive",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "lmdi-medication","Medication.ingredient.strength","Medication.ingredient.strength","","","",0,1,"","","","Ratio {[]} {[]}
-","Quantity of ingredient present","Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.","","","","","","","","","",,,,,"",,,,"Medication.ingredient.strength",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Styrken av ingrediensen i det rekvirerte/administrerte legemidlet.","Styrken av ingrediensen i det rekvirerte/administrerte legemidlet.","","","","","","","","","",,,,,"",,,,"Medication.ingredient.strength",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-medication","Medication.ingredient.strength.id","Medication.ingredient.strength.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"lmdi-medication","Medication.ingredient.strength.extension","Medication.ingredient.strength.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-medication","Medication.ingredient.strength.extension:mengde","Medication.ingredient.strength.extension","mengde","","",0,1,"","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength]]} {[]}
+","Mengde ingrediens i det rekvirerte/administrerte legemidlet.","Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som volum eller mengde virkestoff (Quantity), eller som kode (qs, trace). Brukes i stedet for teller og nevner i strength.","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"lmdi-medication","Medication.ingredient.strength.numerator","Medication.ingredient.strength.numerator","","","",0,1,"","","Y","Quantity {[]} {[]}
+","Numerator value","The value of the numerator.","","","","","","","","","",,,,,"",,,,"Ratio.numerator",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"lmdi-medication","Medication.ingredient.strength.denominator","Medication.ingredient.strength.denominator","","","",0,1,"","","Y","Quantity {[]} {[]}
+","Denominator value","The value of the denominator.","","","","","","","","","",,,,,"",,,,"Ratio.denominator",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "lmdi-medication","Medication.batch","Medication.batch","","","",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Batch-nummer for legemiddelet","Information that only applies to packages (not products).","","","","","","","","","",,,,,"",,,,"Medication.batch",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

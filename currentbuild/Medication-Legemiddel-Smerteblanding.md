@@ -1,0 +1,101 @@
+# Legemiddel-Smerteblanding - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+
+* [Hjem](index.md)
+* [Informasjonsmodell](informasjonsmodell.md)
+* [Integrasjon](integrasjon.md)
+* [FHIR-profiler](profiler.md)
+* [Nedlastinger](nedlastinger.md)
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Legemiddel-Smerteblanding**
+
+## Example Medication: Legemiddel-Smerteblanding
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Medication",
+  "id" : "Legemiddel-Smerteblanding",
+  "meta" : {
+    "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel",
+      "code" : "smerteblanding-morfin-midazolam",
+      "display" : "Smerteblanding morfin 5 mg/ml og midazolam 1 mg/ml"
+    }]
+  },
+  "amount" : {
+    "numerator" : {
+      "value" : 100,
+      "unit" : "milliliter",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mL"
+    },
+    "denominator" : {
+      "value" : 1,
+      "unit" : "pose"
+    }
+  },
+  "ingredient" : [{
+    "itemCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer",
+        "code" : "156660",
+        "display" : "Midazolam Accordpharma inj/inf, oppl 1 mg/ml"
+      }]
+    },
+    "strength" : {
+      "numerator" : {
+        "value" : 1,
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mg"
+      },
+      "denominator" : {
+        "value" : 1,
+        "system" : "http://unitsofmeasure.org",
+        "code" : "mL"
+      }
+    }
+  },
+  {
+    "itemReference" : {
+      "reference" : "Medication/Legemiddel-MorfinKonsentrat"
+    },
+    "strength" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength",
+        "valueQuantity" : {
+          "value" : 12.5,
+          "unit" : "milliliter",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mL"
+        }
+      }]
+    }
+  },
+  {
+    "itemReference" : {
+      "reference" : "Substance/Virkestoff-Natriumklorid"
+    },
+    "strength" : {
+      "extension" : [{
+        "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+            "code" : "qs",
+            "display" : "QS"
+          }]
+        }
+      }]
+    }
+  }]
+}
+
+```

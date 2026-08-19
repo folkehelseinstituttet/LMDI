@@ -19,6 +19,14 @@
       ]
     },
     {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength",
+      "title": "Mengde ingrediens",
+      "types": [
+        "CodeableConcept",
+        "Quantity"
+      ]
+    },
+    {
       "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
       "title": "Klinisk studie",
       "types": [
@@ -186,6 +194,9 @@
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
       "Bundle.entry.resource",
       "MedicationRequest"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength": [
+      "Medication.ingredient.strength"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie": [
       "Bundle.entry.resource",

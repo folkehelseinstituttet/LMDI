@@ -1,0 +1,125 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Smerteblanding> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-Smerteblanding"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"^^xsd:anyURI ;
+         fhir:l <http://fhi.no/fhir/NamingSystem/lokaltLegemiddel>
+       ] ;
+       fhir:code [ fhir:v "smerteblanding-morfin-midazolam" ] ;
+       fhir:display [ fhir:v "Smerteblanding morfin 5 mg/ml og midazolam 1 mg/ml" ]
+     ] )
+  ] ; # 
+  fhir:amount [
+     fhir:numerator [
+       fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "milliliter" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mL" ]
+     ] ;
+     fhir:denominator [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "pose" ]
+     ]
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/fest-varenummer"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/fest-varenummer>
+         ] ;
+         fhir:code [ fhir:v "156660" ] ;
+         fhir:display [ fhir:v "Midazolam Accordpharma inj/inf, oppl 1 mg/ml" ]
+       ] )
+     ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mL" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       a fhir:Reference ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-MorfinKonsentrat> ;
+       fhir:reference [ fhir:v "Medication/Legemiddel-MorfinKonsentrat" ]
+     ] ;
+     fhir:strength [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength>
+         ] ;
+         fhir:value [
+           a fhir:Quantity ;
+           fhir:value [ fhir:v 12.5 ] ;
+           fhir:unit [ fhir:v "milliliter" ] ;
+           fhir:system [
+             fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+             fhir:l <http://unitsofmeasure.org>
+           ] ;
+           fhir:code [ fhir:v "mL" ]
+         ]
+       ] )
+     ]
+  ] [
+     fhir:item [
+       a fhir:Reference ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/Substance/Virkestoff-Natriumklorid> ;
+       fhir:reference [ fhir:v "Substance/Virkestoff-Natriumklorid" ]
+     ] ;
+     fhir:strength [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength"^^xsd:anyURI ;
+           fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength>
+         ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [
+               fhir:v "http://hl7.org/fhir/CodeSystem/medication-ingredientstrength"^^xsd:anyURI ;
+               fhir:l <http://hl7.org/fhir/CodeSystem/medication-ingredientstrength>
+             ] ;
+             fhir:code [ fhir:v "qs" ] ;
+             fhir:display [ fhir:v "QS" ]
+           ] )
+         ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
