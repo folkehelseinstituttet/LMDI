@@ -1,7 +1,12 @@
 name: LMDI-gh-pages-currentbuild
 
+# Publiserer siste bygg til /currentbuild. Kjøres automatisk ved push til main.
+# Roten publiseres separat med LMDI-gh-pages, som startes manuelt.
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   IG: LMDI
