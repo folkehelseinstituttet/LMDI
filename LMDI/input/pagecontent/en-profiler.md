@@ -22,6 +22,7 @@ The LMDI implementation guide defines the following FHIR profiles and extensions
 | Extension | Used on | Description |
 |-----------|---------|-------------|
 | [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.html) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.html) | The name of the regimen, treatment protocol, or course the medication is given as part of. Particularly relevant in chemotherapy. |
+| [IngrediensStyrke](StructureDefinition-lmdi-ingredient-strength.html) | [Legemiddel](StructureDefinition-lmdi-medication.html) | Amount of the ingredient in the requested/administered medication, expressed as a volume or amount of active ingredient, or as a code. Used on Legemiddel.ingredient.strength when an amount is to be expressed instead of a strength. |
 | [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.html) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.html) | Indicates whether the medication is given as part of a clinical trial. |
 | [LegemiddelClassification](StructureDefinition-legemiddel-classification.html) | [Legemiddel](StructureDefinition-lmdi-medication.html) | Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification). |
 | [NprEpisodeIdentifier](StructureDefinition-npr-episode-identifier.html) | [Episode](StructureDefinition-lmdi-encounter.html) | Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). Supports both string-based and UUID-based representations. |

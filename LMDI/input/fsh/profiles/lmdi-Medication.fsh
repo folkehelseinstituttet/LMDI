@@ -324,6 +324,34 @@ Description: "Beskrivelse av legemiddel."
 * ingredient.itemReference only Reference($LMDISubstance or $LMDIMedication)
 * ingredient.itemCodeableConcept from LegemiddelKoder (preferred)
 
+* ingredient.strength ^short = "Styrken av ingrediensen i det rekvirerte/administrerte legemidlet."
+* ingredient.strength ^definition = "Styrken av ingrediensen i det rekvirerte/administrerte legemidlet."
+* ingredient.strength ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ingredient.strength ^short.extension[=].extension[+].url = "lang"
+* ingredient.strength ^short.extension[=].extension[=].valueCode = #en
+* ingredient.strength ^short.extension[=].extension[+].url = "content"
+* ingredient.strength ^short.extension[=].extension[=].valueString = "The strength of the ingredient in the requested/administered medication."
+* ingredient.strength ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ingredient.strength ^definition.extension[=].extension[+].url = "lang"
+* ingredient.strength ^definition.extension[=].extension[=].valueCode = #en
+* ingredient.strength ^definition.extension[=].extension[+].url = "content"
+* ingredient.strength ^definition.extension[=].extension[=].valueString = "The strength of the ingredient in the requested/administered medication."
+
+// Mengde uttrykkes som extension fordi strength i R4 er en ren Ratio. Se lmdi-ingredient-strength.
+* ingredient.strength.extension contains IngrediensStyrke named mengde 0..1
+* ingredient.strength.extension[mengde] ^short = "Mengde ingrediens i det rekvirerte/administrerte legemidlet."
+* ingredient.strength.extension[mengde] ^definition = "Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som volum eller mengde virkestoff (Quantity), eller som kode (qs, trace). Brukes i stedet for teller og nevner i strength."
+* ingredient.strength.extension[mengde] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ingredient.strength.extension[mengde] ^short.extension[=].extension[+].url = "lang"
+* ingredient.strength.extension[mengde] ^short.extension[=].extension[=].valueCode = #en
+* ingredient.strength.extension[mengde] ^short.extension[=].extension[+].url = "content"
+* ingredient.strength.extension[mengde] ^short.extension[=].extension[=].valueString = "Amount of the ingredient in the requested/administered medication."
+* ingredient.strength.extension[mengde] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* ingredient.strength.extension[mengde] ^definition.extension[=].extension[+].url = "lang"
+* ingredient.strength.extension[mengde] ^definition.extension[=].extension[=].valueCode = #en
+* ingredient.strength.extension[mengde] ^definition.extension[=].extension[+].url = "content"
+* ingredient.strength.extension[mengde] ^definition.extension[=].extension[=].valueString = "Amount of the ingredient in the requested/administered medication, expressed as a volume or amount of active ingredient (Quantity), or as a code (qs, trace). Used instead of numerator and denominator in strength."
+
 
 // EKSEMPLER
 Instance: Legemiddel-FestLegemiddelVirkestoff
@@ -486,6 +514,49 @@ Description: "Eksempel på lokalt katalogisert cellegift (Cisplatin)"
 * amount.numerator.code = #mg
 * amount.denominator.value = 1
 * amount.denominator.unit = "pose"
+
+Instance: Legemiddel-MorfinKonsentrat
+InstanceOf: Legemiddel
+Description: "Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST."
+* extension[classification].valueCodeableConcept = $ATC#N02AA01 "Morfin"
+* code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+* code.coding[FestLegemiddelMerkevare].code = #ID_1767DDFA-C248-4814-8EE8-A0C6D09E11BF
+* code.coding[FestLegemiddelMerkevare].display = "Morfin NAF inj, oppl 40 mg/ml"
+
+Instance: Legemiddel-Smerteblanding
+InstanceOf: Legemiddel
+Description: "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi en ingrediens på, og bruk av mengde (mL) i tillegg til styrke."
+* code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+* code.coding[LokaltLegemiddel].code = #smerteblanding-morfin-midazolam
+* code.coding[LokaltLegemiddel].display = "Smerteblanding morfin 5 mg/ml og midazolam 1 mg/ml"
+// Totalvolum for blandingen. Nødvendig for å kunne utlede styrken til ingredienser som er
+// angitt med volum i stedet for styrke.
+* amount.numerator.value = 100
+* amount.numerator.unit = "milliliter"
+* amount.numerator.system = "http://unitsofmeasure.org"
+* amount.numerator.code = #mL
+* amount.denominator.value = 1
+* amount.denominator.unit = "pose"
+// Ingrediens angitt med FEST-id (itemCodeableConcept) og styrke i blandingen som Ratio
+* ingredient[0].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
+* ingredient[0].itemCodeableConcept.coding.code = #156660
+* ingredient[0].itemCodeableConcept.coding.display = "Midazolam Accordpharma inj/inf, oppl 1 mg/ml"
+* ingredient[0].strength.numerator.value = 1
+* ingredient[0].strength.numerator.system = "http://unitsofmeasure.org"
+* ingredient[0].strength.numerator.code = #mg
+* ingredient[0].strength.denominator.value = 1
+* ingredient[0].strength.denominator.system = "http://unitsofmeasure.org"
+* ingredient[0].strength.denominator.code = #mL
+// Ingrediens angitt som referanse til Legemiddel (utgangslegemidlet), med mengde som volum.
+// 12,5 mL x 40 mg/ml = 500 mg morfin i 100 mL, altså 5 mg/ml i blandingen.
+* ingredient[1].itemReference = Reference(Legemiddel-MorfinKonsentrat)
+* ingredient[1].strength.extension[mengde].valueQuantity.value = 12.5
+* ingredient[1].strength.extension[mengde].valueQuantity.unit = "milliliter"
+* ingredient[1].strength.extension[mengde].valueQuantity.system = "http://unitsofmeasure.org"
+* ingredient[1].strength.extension[mengde].valueQuantity.code = #mL
+// Ingrediens angitt som referanse til Virkestoff, med kodet mengde. qs = fylles opp til 100 mL.
+* ingredient[2].itemReference = Reference(Virkestoff-Natriumklorid)
+* ingredient[2].strength.extension[mengde].valueCodeableConcept = $IngrediensStyrkeKoder#qs "QS"
 
 // Invarianter
 Invariant: lmdi-medication-code-or-ingredient
