@@ -537,10 +537,12 @@ Description: "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin
 * amount.numerator.code = #mL
 * amount.denominator.value = 1
 * amount.denominator.unit = "pose"
-// Ingrediens angitt med FEST-id (itemCodeableConcept) og styrke i blandingen som Ratio
+// Ingrediens angitt med FEST-id (itemCodeableConcept) og styrke i blandingen som Ratio.
+// 20 mL x 5 mg/ml = 100 mg midazolam i 100 mL, altså 1 mg/ml i blandingen.
+// Volumene går opp: 20 mL midazolam + 12,5 mL morfinkonsentrat + 67,5 mL saltvann = 100 mL.
 * ingredient[0].itemCodeableConcept.coding.system = "http://dmp.no/fhir/NamingSystem/fest-varenummer"
-* ingredient[0].itemCodeableConcept.coding.code = #156660
-* ingredient[0].itemCodeableConcept.coding.display = "Midazolam Accordpharma inj/inf, oppl 1 mg/ml"
+* ingredient[0].itemCodeableConcept.coding.code = #525858
+* ingredient[0].itemCodeableConcept.coding.display = "Midazolam Accord inj/inf, oppl 5 mg/ml"
 * ingredient[0].strength.numerator.value = 1
 * ingredient[0].strength.numerator.system = "http://unitsofmeasure.org"
 * ingredient[0].strength.numerator.code = #mg
