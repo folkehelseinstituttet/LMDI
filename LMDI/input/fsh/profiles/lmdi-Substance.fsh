@@ -33,13 +33,3 @@ Description: "Eksempel på virkestoff - Oksykodon"
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/substance-category"
 * category.coding.code = #drug
 * category.coding.display = "Drug or Medicament"
-
-Instance: Virkestoff-Natriumklorid
-InstanceOf: Virkestoff
-Description: "Eksempel på virkestoff - Natriumklorid"
-* code.coding.system = "http://snomed.info/sct"
-* code.coding.code = #387390002
-* code.coding.display = "Sodium chloride (substance)"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/substance-category"
-* category.coding.code = #drug
-* category.coding.display = "Drug or Medicament"
