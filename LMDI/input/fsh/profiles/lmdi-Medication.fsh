@@ -523,9 +523,17 @@ Description: "Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerk
 * code.coding[FestLegemiddelMerkevare].code = #ID_1767DDFA-C248-4814-8EE8-A0C6D09E11BF
 * code.coding[FestLegemiddelMerkevare].display = "Morfin NAF inj, oppl 40 mg/ml"
 
+Instance: Legemiddel-NatriumkloridBBraun
+InstanceOf: Legemiddel
+Description: "Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet."
+* extension[classification].valueCodeableConcept = $ATC#V07AB "Oppløsnings- og fortynningsvæsker, inkl. skyllemidler"
+* code.coding[FestLegemiddelMerkevare].system = "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"
+* code.coding[FestLegemiddelMerkevare].code = #ID_42240226-8225-468C-AB0A-9FD27AA67D44
+* code.coding[FestLegemiddelMerkevare].display = "Natriumklorid B. Braun oppl væske til parenteral bruk 9 mg/ml"
+
 Instance: Legemiddel-Smerteblanding
 InstanceOf: Legemiddel
-Description: "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi en ingrediens på, og bruk av mengde (mL) i tillegg til styrke."
+Description: "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi strength på: Ratio, Quantity (mL) og CodeableConcept (qs)."
 * code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
 * code.coding[LokaltLegemiddel].code = #smerteblanding-morfin-midazolam
 * code.coding[LokaltLegemiddel].display = "Smerteblanding morfin 5 mg/ml og midazolam 1 mg/ml"
@@ -556,8 +564,8 @@ Description: "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin
 * ingredient[1].strength.extension[mengde].valueQuantity.unit = "milliliter"
 * ingredient[1].strength.extension[mengde].valueQuantity.system = "http://unitsofmeasure.org"
 * ingredient[1].strength.extension[mengde].valueQuantity.code = #mL
-// Ingrediens angitt som referanse til Virkestoff, med kodet mengde. qs = fylles opp til 100 mL.
-* ingredient[2].itemReference = Reference(Virkestoff-Natriumklorid)
+// Ingrediens angitt som referanse til Legemiddel, med kodet mengde. qs = fylles opp til 100 mL.
+* ingredient[2].itemReference = Reference(Legemiddel-NatriumkloridBBraun)
 * ingredient[2].strength.extension[mengde].valueCodeableConcept = $IngrediensStyrkeKoder#qs "QS"
 
 // Invarianter
