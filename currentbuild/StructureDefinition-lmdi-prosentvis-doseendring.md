@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring **  | *Version*:1.1.3 **  |
-| Active as of 2026-08-19 | *Computable Name*:ProsentvisDoseendring |
+| Active as of 2026-08-20 | *Computable Name*:ProsentvisDoseendring |
 
 Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.
 
@@ -72,7 +72,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-prosentvis-dose
     }]
   },
   "status" : "active",
-  "date" : "2026-08-19T19:38:06+00:00",
+  "date" : "2026-08-20T07:53:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

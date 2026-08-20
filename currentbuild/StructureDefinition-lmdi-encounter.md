@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter **  | *Version*:1.1.3 **  |
-| Active as of 2026-08-19 | *Computable Name*:Episode |
+| Active as of 2026-08-20 | *Computable Name*:Episode |
 
  
 En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. 
@@ -61,7 +61,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-encounter.csv),
     }]
   },
   "status" : "active",
-  "date" : "2026-08-19T19:38:06+00:00",
+  "date" : "2026-08-20T07:53:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

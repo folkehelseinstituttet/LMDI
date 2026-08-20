@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.1.3 **  |
-| Active as of 2026-08-19 | *Computable Name*:LegemiddelKoder |
+| Active as of 2026-08-20 | *Computable Name*:LegemiddelKoder |
 
  
 ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog 
@@ -71,7 +71,7 @@ No Expansion for this valueset (Unknown Code System)
     }]
   },
   "status" : "active",
-  "date" : "2026-08-19T19:38:06+00:00",
+  "date" : "2026-08-20T07:53:34+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

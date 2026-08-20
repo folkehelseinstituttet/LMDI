@@ -46,8 +46,8 @@
     "itemCodeableConcept" : {
       "coding" : [{
         "system" : "http://dmp.no/fhir/NamingSystem/fest-varenummer",
-        "code" : "156660",
-        "display" : "Midazolam Accordpharma inj/inf, oppl 1 mg/ml"
+        "code" : "525858",
+        "display" : "Midazolam Accord inj/inf, oppl 5 mg/ml"
       }]
     },
     "strength" : {
