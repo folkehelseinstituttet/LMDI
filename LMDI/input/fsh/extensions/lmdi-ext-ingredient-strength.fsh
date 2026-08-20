@@ -30,7 +30,7 @@ Amount of the ingredient in the requested/administered medication, expressed as 
 
 For Quantity: Either the amount of active ingredient in the requested/administered medication (e.g. 100 mg), or the volume of the ingredient used to produce the requested/administered medication (e.g. 10 mL). When volume is used, ingredient.item shall specify the “starting medication” used to produce the requested/administered medication in such a way that the strength of the “starting medication” can be derived. This is necessary to calculate the amount of active ingredient and the strength of the ingredient in the requested/administered medication.
 
-For CodeableConcept: A coded value specifying the amount of the ingredient, e.g. qs or trace. For example from the code system "Angi at bestanddel i legemiddelblanding ikke har eksakt mengde" (OID 7502) or "Medication-ingredientstrength" http://hl7.org/fhir/CodeSystem/medication-ingredientstrength
+For CodeableConcept: A coded value specifying the amount of the ingredient, e.g. qs or trace. For example from the Norwegian code system for components of a medication mixture without an exact amount (OID 7502), or "Medication-ingredientstrength" http://hl7.org/fhir/CodeSystem/medication-ingredientstrength
 """
 * value[x] only CodeableConcept or Quantity
 // Kodeverk anbefales i comment framfor binding: value[x] har to tillatte typer, så det finnes
