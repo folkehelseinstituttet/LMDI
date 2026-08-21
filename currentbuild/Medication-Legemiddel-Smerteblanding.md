@@ -81,7 +81,7 @@
   },
   {
     "itemReference" : {
-      "reference" : "Substance/Virkestoff-Natriumklorid"
+      "reference" : "Medication/Legemiddel-NatriumkloridBBraun"
     },
     "strength" : {
       "extension" : [{

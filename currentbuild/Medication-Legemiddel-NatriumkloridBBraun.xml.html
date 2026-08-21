@@ -1,5 +1,3 @@
-<!-- layouts\layout-changehistory.html -->
-<!-- get modelType -->
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -11,7 +9,7 @@
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title> - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title>Legemiddel-NatriumkloridBBraun - XML Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.1.3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -94,7 +92,7 @@
                 <label for="lang-switcher" class="visually-hidden">Velg språk / Select language</label>
                 <select id="lang-switcher" class="form-select form-select-sm" aria-label="Velg språk">
                     <option value="no" selected="selected" data-href="">Norsk</option>
-                    <option value="en"  data-href="en/Substance-Virkestoff-Natriumklorid.change.history.html">English</option>
+                    <option value="en"  data-href="en/Medication-Legemiddel-NatriumkloridBBraun.xml.html">English</option>
                 </select>
             </div>
         </div>
@@ -134,7 +132,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-NatriumkloridBBraun</b></li>
                 
             </ul>
         </div> <!-- /container -->
@@ -146,10 +144,9 @@
             <div class="row">
                 <div class="inner-wrapper">
 
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
-<div style="counter-reset: section 10" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Legemiddeldata fra institusjon til Legemiddelregisteret - Local Development build (v1.1.3) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.no/fhir/ig/lmdi/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
-  
 
 
 
@@ -162,7 +159,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.html">
+        href="Medication-Legemiddel-NatriumkloridBBraun.html">
         Narrative Content
     </a>
 </li>
@@ -172,9 +169,9 @@
 
         
         
-        <li class="nav-item ">
-    <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.xml.html">
+        <li class="nav-item active">
+    <a class="nav-link active"
+        href="#">
         XML
     </a>
 </li>
@@ -185,7 +182,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.json.html">
+        href="Medication-Legemiddel-NatriumkloridBBraun.json.html">
         JSON
     </a>
 </li>
@@ -196,7 +193,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.ttl.html">
+        href="Medication-Legemiddel-NatriumkloridBBraun.ttl.html">
         TTL
     </a>
 </li>
@@ -208,14 +205,55 @@
 </div>
 
 
-  <a name="root"> </a>
-  <h2 id="root">: Substance/Virkestoff-Natriumklorid - Change History</h2>
-  <p>History of changes for Virkestoff-Natriumklorid .</p>
+<a name="root"> </a>
 
+
+<h2 id="root">: Legemiddel-NatriumkloridBBraun - XML Representation</h2>
+
+
+<p><a href="Medication-Legemiddel-NatriumkloridBBraun.xml" no-download="true">Raw xml</a> | <a href="Medication-Legemiddel-NatriumkloridBBraun.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
   
 
-</div>
 
+
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R4/medication.html#Medication">Medication</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Medication.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;Legemiddel-NatriumkloridBBraun&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Medication.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Medication.meta">meta</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Medication.extension">extension</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://www.whocc.no/atc&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;V07AB&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Oppløsnings- og fortynningsvæsker, inkl. skyllemidler&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">valueCodeableConcept</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Medication.extension">extension</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;ID_42240226-8225-468C-AB0A-9FD27AA67D44&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Natriumklorid B. Braun oppl væske til parenteral bruk 9 mg/ml&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/medication.html#Medication">Medication</a>&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
 </div> <!-- /inner-wrapper -->
 </div> <!-- /row -->
 </div> <!-- /container -->
@@ -224,8 +262,6 @@
 <script type="text/javascript" src="assets/js/jquery.js"> </script>
 <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-<script type="text/javascript" src="assets/js/tabs.js"> </script>
 
 <script type="text/javascript" src="assets/js/window-hash.js"> </script>
 <a name="bottom"> </a>
@@ -240,7 +276,7 @@
                     Package hl7.fhir.no.lmdi#1.1.3 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, Aug 20, 2026 07:53+0000">2026-08-20</span>
+                        title="Fri, Aug 21, 2026 06:55+0000">2026-08-21</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -271,7 +307,7 @@
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": ""
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-NatriumkloridBBraun</b></li>"
   }
 </script>
 <script type="text/javascript">

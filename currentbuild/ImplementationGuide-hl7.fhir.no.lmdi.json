@@ -1283,6 +1283,18 @@
         "valueString" : "Medication"
       }],
       "reference" : {
+        "reference" : "Medication/Legemiddel-NatriumkloridBBraun"
+      },
+      "name" : "Legemiddel-NatriumkloridBBraun",
+      "description" : "Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
         "reference" : "Medication/Legemiddel-SCT"
       },
       "name" : "Legemiddel-SCT",
@@ -1298,7 +1310,7 @@
         "reference" : "Medication/Legemiddel-Smerteblanding"
       },
       "name" : "Legemiddel-Smerteblanding",
-      "description" : "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi en ingrediens på, og bruk av mengde (mL) i tillegg til styrke.",
+      "description" : "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi strength på: Ratio, Quantity (mL) og CodeableConcept (qs).",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1442,7 +1454,7 @@
         "reference" : "StructureDefinition/lmdi-ingredient-strength"
       },
       "name" : "Mengde ingrediens",
-      "description" : "Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som kode. Angir enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.",
+      "description" : "Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.\n\nVed Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.\n\nVed CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk \"Angi at bestanddel i legemiddelblanding ikke har eksakt mengde\" (OID 7502) eller \"Medication-ingredientstrength\" http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
       "exampleBoolean" : false
     },
     {
@@ -1792,18 +1804,6 @@
       "name" : "Virkestoff",
       "description" : "En tilpasset profil av Substance for å representere virkestoff, basert på no-basis-Substance.",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Substance"
-      }],
-      "reference" : {
-        "reference" : "Substance/Virkestoff-Natriumklorid"
-      },
-      "name" : "Virkestoff-Natriumklorid",
-      "description" : "Eksempel på virkestoff - Natriumklorid",
-      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance"
     },
     {
       "extension" : [{

@@ -9,7 +9,7 @@
 
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <title>Virkestoff-Natriumklorid - TTL Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
+    <title>Legemiddel-NatriumkloridBBraun - TTL Representation - Legemiddeldata fra institusjon til Legemiddelregisteret
         v1.1.3</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,7 +92,7 @@
                 <label for="lang-switcher" class="visually-hidden">Velg språk / Select language</label>
                 <select id="lang-switcher" class="form-select form-select-sm" aria-label="Velg språk">
                     <option value="no" selected="selected" data-href="">Norsk</option>
-                    <option value="en"  data-href="en/Substance-Virkestoff-Natriumklorid.ttl.html">English</option>
+                    <option value="en"  data-href="en/Medication-Legemiddel-NatriumkloridBBraun.ttl.html">English</option>
                 </select>
             </div>
         </div>
@@ -132,7 +132,7 @@
     <div id="segment-breadcrumb" class="segment"> <!-- segment-breadcrumb -->
         <div class="container p-0"> <!-- container -->
             <ul class="breadcrumb p-2 mb-1">
-                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Virkestoff-Natriumklorid</b></li>
+                <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-NatriumkloridBBraun</b></li>
                 
             </ul>
         </div> <!-- /container -->
@@ -159,7 +159,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.html">
+        href="Medication-Legemiddel-NatriumkloridBBraun.html">
         Narrative Content
     </a>
 </li>
@@ -171,7 +171,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.xml.html">
+        href="Medication-Legemiddel-NatriumkloridBBraun.xml.html">
         XML
     </a>
 </li>
@@ -182,7 +182,7 @@
         
         <li class="nav-item ">
     <a class="nav-link "
-        href="Substance-Virkestoff-Natriumklorid.json.html">
+        href="Medication-Legemiddel-NatriumkloridBBraun.json.html">
         JSON
     </a>
 </li>
@@ -208,10 +208,10 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Virkestoff-Natriumklorid - TTL Representation</h2>
+<h2 id="root">: Legemiddel-NatriumkloridBBraun - TTL Representation</h2>
 
 
-<p><a href="Substance-Virkestoff-Natriumklorid.ttl" no-download="true">Raw ttl</a> | <a href="Substance-Virkestoff-Natriumklorid.ttl" download>Download</a></p>
+<p><a href="Medication-Legemiddel-NatriumkloridBBraun.ttl" no-download="true">Raw ttl</a> | <a href="Medication-Legemiddel-NatriumkloridBBraun.ttl" download>Download</a></p>
 
   <!-- insert intro if present -->
   
@@ -223,35 +223,38 @@
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-@prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Substance ;
+ a fhir:Medication ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Substance.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Virkestoff-Natriumklorid&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Substance.meta">fhir:meta</a> [
+  <a href="http://hl7.org/fhir/R4/resource.html#Medication.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;Legemiddel-NatriumkloridBBraun&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Medication.meta">fhir:meta</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-substance&gt;     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication&gt;     ] )
   ] ; # 
-  <a href="http://hl7.org/fhir/R4/substance.html#Substance.category">fhir:category</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Medication.extension">fhir:extension</a> ( [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification&gt;     ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">a</a> fhir:CodeableConcept ;
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/substance-category&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/substance-category&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;drug&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Drug or Medicament&quot; ]     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://www.whocc.no/atc&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://www.whocc.no/atc&gt;         ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;V07AB&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Oppløsnings- og fortynningsvæsker, inkl. skyllemidler&quot; ]       ] )     ]
   ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/substance.html#Substance.code">fhir:code</a> [
+  <a href="http://hl7.org/fhir/R4/medication.html#Medication.code">fhir:code</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-a sct:387390002 ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;387390002&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Sodium chloride (substance)&quot; ]     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;ID_42240226-8225-468C-AB0A-9FD27AA67D44&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Natriumklorid B. Braun oppl væske til parenteral bruk 9 mg/ml&quot; ]     ] )
   ] . # 
 
 </code></pre>
@@ -286,7 +289,7 @@ a sct:387390002 ;
                     Package hl7.fhir.no.lmdi#1.1.3 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Thu, Aug 20, 2026 07:53+0000">2026-08-20</span>
+                        title="Fri, Aug 21, 2026 06:55+0000">2026-08-21</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -317,7 +320,7 @@ a sct:387390002 ;
 <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
 <script id="page-data" type="application/json">
   {
-    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Virkestoff-Natriumklorid</b></li>"
+    "breadcrumb": "<li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Legemiddel-NatriumkloridBBraun</b></li>"
   }
 </script>
 <script type="text/javascript">
