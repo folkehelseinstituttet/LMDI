@@ -1,4 +1,4 @@
-# LMDI Address Use - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# LMDI Address Use - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use **  | *Version*:1.1.2 **  |
-| Active as of 2026-06-12 | *Computable Name*:LmdiAddressUse |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use **  | *Version*:1.1.4 **  |
+| Active as of 2026-08-24 | *Computable Name*:LmdiAddressUse |
 
  
 Tillatte verdier for address.use i LMDI: home, temp, old 
@@ -52,7 +52,7 @@ Tillatte verdier for address.use i LMDI: home, temp, old
   "resourceType" : "ValueSet",
   "id" : "lmdi-address-use",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use",
-  "version" : "1.1.2",
+  "version" : "1.1.4",
   "name" : "LmdiAddressUse",
   "title" : "LMDI Address Use",
   "_title" : {
@@ -69,7 +69,7 @@ Tillatte verdier for address.use i LMDI: home, temp, old
     }]
   },
   "status" : "active",
-  "date" : "2026-06-12T10:49:58+00:00",
+  "date" : "2026-08-24T07:53:37+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

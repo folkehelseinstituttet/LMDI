@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"no\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"no\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.no.lmdi</b></p><a name=\"hl7.fhir.no.lmdi\"> </a><a name=\"hchl7.fhir.no.lmdi\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: no</p></div><h2>Lmdi</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi</pre><div><p>Denne implementasjongguiden beskriver hvordan institusjoner skal overføre data om legemiddelbruk i institusjoner til Legemiddelregisteret</p>\n</div></div>"
   },
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.2",
+  "version" : "1.1.4",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
-  "date" : "2026-06-12",
+  "date" : "2026-08-21",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -46,7 +46,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.1.0"
+    "version" : "7.3.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",
@@ -1271,10 +1271,46 @@
         "valueString" : "Medication"
       }],
       "reference" : {
+        "reference" : "Medication/Legemiddel-MorfinKonsentrat"
+      },
+      "name" : "Legemiddel-MorfinKonsentrat",
+      "description" : "Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-NatriumkloridBBraun"
+      },
+      "name" : "Legemiddel-NatriumkloridBBraun",
+      "description" : "Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet.",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
         "reference" : "Medication/Legemiddel-SCT"
       },
       "name" : "Legemiddel-SCT",
       "description" : "Eksempel på legemiddel identifisert med SNOMED CT-kode",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      }],
+      "reference" : {
+        "reference" : "Medication/Legemiddel-Smerteblanding"
+      },
+      "name" : "Legemiddel-Smerteblanding",
+      "description" : "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi strength på: Ratio, Quantity (mL) og CodeableConcept (qs).",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
     },
     {
@@ -1408,6 +1444,18 @@
       "name" : "Lokalt-legemiddel-cellegift",
       "description" : "Eksempel på lokalt katalogisert cellegift (Cisplatin)",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/lmdi-ingredient-strength"
+      },
+      "name" : "Mengde ingrediens",
+      "description" : "Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.\n\nVed Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.\n\nVed CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk \"Angi at bestanddel i legemiddelblanding ikke har eksakt mengde\" (OID 7502) eller \"Medication-ingredientstrength\" http://hl7.org/fhir/CodeSystem/medication-ingredientstrength",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{

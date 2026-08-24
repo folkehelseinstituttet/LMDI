@@ -1,4 +1,4 @@
-# Protocol - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# Protocol - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)

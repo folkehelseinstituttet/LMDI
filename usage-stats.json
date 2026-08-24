@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -16,6 +16,14 @@
       "title": "Del av behandlingsregime",
       "types": [
         "string"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength",
+      "title": "Mengde ingrediens",
+      "types": [
+        "CodeableConcept",
+        "Quantity"
       ]
     },
     {
@@ -186,6 +194,9 @@
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
       "Bundle.entry.resource",
       "MedicationRequest"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength": [
+      "Medication.ingredient.strength"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie": [
       "Bundle.entry.resource",

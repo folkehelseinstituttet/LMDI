@@ -1,4 +1,4 @@
-# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -37,6 +37,7 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [Del av behandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
 | [Klinisk studie](StructureDefinition-lmdi-klinisk-studie.md) | Angir om legemidlet gis som en del av en klinisk studie. |
 | [Legemiddel Classification](StructureDefinition-legemiddel-classification.md) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
+| [Mengde ingrediens](StructureDefinition-lmdi-ingredient-strength.md) | Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.Ved Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.Ved CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk “Angi at bestanddel i legemiddelblanding ikke har eksakt mengde” (OID 7502) eller “Medication-ingredientstrength” http://hl7.org/fhir/CodeSystem/medication-ingredientstrength |
 | [NPR Episode Identifier](StructureDefinition-npr-episode-identifier.md) | Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren. |
 | [Prosentvis doseendring](StructureDefinition-lmdi-prosentvis-doseendring.md) | Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. |
 
@@ -104,7 +105,10 @@ These are example instances that show what data produced and consumed by systems
 | [Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md) | Eksempel på legemiddel identifisert med LMR-løpenummer |
 | [Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md) | Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id |
 | [Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
+| [Legemiddel-MorfinKonsentrat](Medication-Legemiddel-MorfinKonsentrat.md) | Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST. |
+| [Legemiddel-NatriumkloridBBraun](Medication-Legemiddel-NatriumkloridBBraun.md) | Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet. |
 | [Legemiddel-SCT](Medication-Legemiddel-SCT.md) | Eksempel på legemiddel identifisert med SNOMED CT-kode |
+| [Legemiddel-Smerteblanding](Medication-Legemiddel-Smerteblanding.md) | Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi strength på: Ratio, Quantity (mL) og CodeableConcept (qs). |
 | [Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md) | Eksempel på legemiddel uten code — ingredienser uttrykt via Reference og CodeableConcept |
 | [Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) | Eksempel på legemiddel identifisert med varenummer |
 | [Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md) | Eksempel på lokalt katalogisert cellegift (Cisplatin) |

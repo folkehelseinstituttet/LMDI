@@ -1,4 +1,4 @@
-# PowerShell example code - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# PowerShell example code - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)

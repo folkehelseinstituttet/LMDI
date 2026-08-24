@@ -18,11 +18,11 @@
      fhir:v "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"^^xsd:anyURI ;
      fhir:l <http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi>
   ] ; # 
-  fhir:version [ fhir:v "1.1.2"] ; # 
+  fhir:version [ fhir:v "1.1.4"] ; # 
   fhir:name [ fhir:v "Lmdi"] ; # 
   fhir:title [ fhir:v "Legemiddeldata fra institusjon til Legemiddelregisteret"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-06-12"^^xsd:date] ; # 
+  fhir:date [ fhir:v "2026-08-21"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -68,7 +68,7 @@
        fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.1.0" ]
+     fhir:version [ fhir:v "7.3.0" ]
   ] [
      fhir:id [ fhir:v "hl7_fhir_uv_extensions_r4" ] ;
      fhir:uri [
@@ -2574,11 +2574,77 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-MorfinKonsentrat> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-MorfinKonsentrat" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-MorfinKonsentrat" ] ;
+       fhir:description [ fhir:v "Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-NatriumkloridBBraun> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-NatriumkloridBBraun" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-NatriumkloridBBraun" ] ;
+       fhir:description [ fhir:v "Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet." ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-SCT> ;
          fhir:reference [ fhir:v "Medication/Legemiddel-SCT" ]
        ] ;
        fhir:name [ fhir:v "Legemiddel-SCT" ] ;
        fhir:description [ fhir:v "Eksempel på legemiddel identifisert med SNOMED CT-kode" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Smerteblanding> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-Smerteblanding" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-Smerteblanding" ] ;
+       fhir:description [ fhir:v "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi strength på: Ratio, Quantity (mL) og CodeableConcept (qs)." ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
@@ -2817,6 +2883,27 @@
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
          fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength> ;
+         fhir:reference [ fhir:v "StructureDefinition/lmdi-ingredient-strength" ]
+       ] ;
+       fhir:name [ fhir:v "Mengde ingrediens" ] ;
+       fhir:description [ fhir:v "Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.\n\nVed Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.\n\nVed CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk \"Angi at bestanddel i legemiddelblanding ikke har eksakt mengde\" (OID 7502) eller \"Medication-ingredientstrength\" http://hl7.org/fhir/CodeSystem/medication-ingredientstrength" ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
        ]
      ] [
        fhir:extension ( [

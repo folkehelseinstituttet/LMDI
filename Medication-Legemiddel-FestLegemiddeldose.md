@@ -1,4 +1,4 @@
-# Legemiddel-FestLegemiddeldose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# Legemiddel-FestLegemiddeldose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

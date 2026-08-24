@@ -8,7 +8,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.2</title>
+        v1.1.4</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -75,12 +75,11 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.2 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.4 - ci-build
                             
                             
                             
-                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
-                                title="Norway" />
+                            Norway
                             
                             
                         </span>
@@ -306,6 +305,19 @@
             </td>
             <td>
 <p>Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-lmdi-ingredient-strength.html"
+                  title="StructureDefinition/lmdi-ingredient-strength">Mengde ingrediens</a>
+            </td>
+            <td>
+<p>Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.</p>
+
+<p>Ved Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.</p>
+
+<p>Ved CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk “Angi at bestanddel i legemiddelblanding ikke har eksakt mengde” (OID 7502) eller “Medication-ingredientstrength” http://hl7.org/fhir/CodeSystem/medication-ingredientstrength</p>
 </td>
          </tr>
          <tr>
@@ -688,10 +700,37 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Medication-Legemiddel-MorfinKonsentrat.html"
+                  title="Medication/Legemiddel-MorfinKonsentrat">Legemiddel-MorfinKonsentrat</a>
+            </td>
+            <td>
+<p>Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-NatriumkloridBBraun.html"
+                  title="Medication/Legemiddel-NatriumkloridBBraun">Legemiddel-NatriumkloridBBraun</a>
+            </td>
+            <td>
+<p>Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Medication-Legemiddel-SCT.html" title="Medication/Legemiddel-SCT">Legemiddel-SCT</a>
             </td>
             <td>
 <p>Eksempel på legemiddel identifisert med SNOMED CT-kode</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-Legemiddel-Smerteblanding.html"
+                  title="Medication/Legemiddel-Smerteblanding">Legemiddel-Smerteblanding</a>
+            </td>
+            <td>
+<p>Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin 5 mg/ml og midazolam 1 mg/ml. Viser de tre måtene å angi strength på: Ratio, Quantity (mL) og CodeableConcept (qs).</p>
 </td>
          </tr>
          <tr>
@@ -923,10 +962,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.2 based on <a
+                    Package hl7.fhir.no.lmdi#1.1.4 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Jun 12, 2026 10:49+0000">2026-06-12</span>
+                        title="Mon, Aug 24, 2026 07:53+0000">2026-08-24</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -8,7 +8,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>FHIR profiles - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.2</title>
+        v1.1.4</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -75,12 +75,11 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.2 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.4 - ci-build
                             
                             
                             
-                            <img alt="Norway flag" src="assets/images/nor.svg" height="16"
-                                title="Norway" />
+                            Norway
                             
                             
                         </span>
@@ -246,6 +245,11 @@
       <td>The name of the regimen, treatment protocol, or course the medication is given as part of. Particularly relevant in chemotherapy.</td>
     </tr>
     <tr>
+      <td><a href="StructureDefinition-lmdi-ingredient-strength.html">IngrediensStyrke</a></td>
+      <td><a href="StructureDefinition-lmdi-medication.html">Legemiddel</a></td>
+      <td>Amount of the ingredient in the requested/administered medication, expressed as a volume or amount of active ingredient, or as a code. Used on Legemiddel.ingredient.strength when an amount is to be expressed instead of a strength.</td>
+    </tr>
+    <tr>
       <td><a href="StructureDefinition-lmdi-klinisk-studie.html">KliniskStudie</a></td>
       <td><a href="StructureDefinition-lmdi-medicationrequest.html">Legemiddelrekvirering</a></td>
       <td>Indicates whether the medication is given as part of a clinical trial.</td>
@@ -291,10 +295,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.2 based on <a
+                    Package hl7.fhir.no.lmdi#1.1.4 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Jun 12, 2026 10:49+0000">2026-06-12</span>
+                        title="Mon, Aug 24, 2026 07:53+0000">2026-08-24</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

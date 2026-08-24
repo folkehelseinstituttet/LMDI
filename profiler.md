@@ -1,4 +1,4 @@
-# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.2
+# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -33,6 +33,7 @@ Implementasjonsguiden definerer følgende FHIR-profiler og extensions.
 | | | |
 | :--- | :--- | :--- |
 | [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
+| [IngrediensStyrke](StructureDefinition-lmdi-ingredient-strength.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som volum eller mengde virkestoff, eller som kode. Brukes på Legemiddel.ingredient.strength når mengde skal uttrykkes i stedet for styrke. |
 | [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Angir om legemidlet gis som en del av en klinisk studie. |
 | [LegemiddelClassification](StructureDefinition-legemiddel-classification.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
 | [NprEpisodeIdentifier](StructureDefinition-npr-episode-identifier.md) | [Episode](StructureDefinition-lmdi-encounter.md) | Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Støtter både string-basert og UUID-basert representasjon. |
