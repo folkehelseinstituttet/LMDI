@@ -1,4 +1,4 @@
-# Home - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+# Home - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)
@@ -39,6 +39,7 @@ This provides consistent handling of Norwegian identifiers and code systems acro
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.4 | 2026-08-21 | New extension Amount of ingredient on`Medication.ingredient.strength`, providing the R5/R6 variants Quantity and CodeableConcept in R4. |
 | 1.1.3 | 2026-08-14 | MedicationRequest:`requester`is no longer mandatory (1..1 → 0..1). The field is still Must Support and shall be provided when the requester is known. |
 | 1.1.2 | 2026-06-12 | Episode: the nprEpisodeIdentifier extension can now be repeated (0..1 → 0..*), allowing multiple NPR identifiers to be provided for the same episode. |
 | 1.1.1 | 2026-05-29 | Added an English translation of the implementation guide. The translation was produced using AI and has so far undergone only limited human quality assurance. |

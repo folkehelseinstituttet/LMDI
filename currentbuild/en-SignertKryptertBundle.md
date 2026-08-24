@@ -1,4 +1,4 @@
-# Signed and encrypted Bundle - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+# Signed and encrypted Bundle - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)

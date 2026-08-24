@@ -1,4 +1,4 @@
-# Legemiddel-FestLmrLopenr - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+# Legemiddel-FestLmrLopenr - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

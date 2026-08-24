@@ -1,4 +1,4 @@
-# Information model - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+# Information model - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)

@@ -1,4 +1,4 @@
-# Organisasjon-Sykehus-2 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+# Organisasjon-Sykehus-2 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

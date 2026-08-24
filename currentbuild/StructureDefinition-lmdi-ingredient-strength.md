@@ -1,4 +1,4 @@
-# Mengde ingrediens - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.3
+# Mengde ingrediens - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength **  | *Version*:1.1.3 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength **  | *Version*:1.1.4 **  |
 | Draft as of 2026-08-18 | *Computable Name*:IngrediensStyrke |
 
 Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.
@@ -57,7 +57,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-ingredient-stre
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-ingredient-strength",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength",
-  "version" : "1.1.3",
+  "version" : "1.1.4",
   "name" : "IngrediensStyrke",
   "title" : "Mengde ingrediens",
   "_title" : {
