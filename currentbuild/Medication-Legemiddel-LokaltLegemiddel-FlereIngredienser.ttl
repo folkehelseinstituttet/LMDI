@@ -1,0 +1,151 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-LokaltLegemiddel-FlereIngredienser"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"^^xsd:anyURI ;
+         fhir:l <http://fhi.no/fhir/NamingSystem/lokaltLegemiddel>
+       ] ;
+       fhir:code [ fhir:v "lokal-ketamin-haloperidol-klonidin-midazolam" ] ;
+       fhir:display [ fhir:v "Lokalt legemiddel med ketamin, haloperidol, klonidin og midazolam" ]
+     ] )
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare>
+         ] ;
+         fhir:code [ fhir:v "ID_28C1C9F5-0D9C-4F5F-9823-A0BC8643CFE9" ] ;
+         fhir:display [ fhir:v "Ketamin Abcur inj, oppl 10 mg/ml" ]
+       ] )
+     ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v "2"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mL" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare>
+         ] ;
+         fhir:code [ fhir:v "ID_5B77F59F-8C66-4C5F-80F7-1EB54FB5E66C" ] ;
+         fhir:display [ fhir:v "Haldol inj, oppl 5 mg/ml" ]
+       ] )
+     ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v 0.5 ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mL" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelPakning"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelPakning>
+         ] ;
+         fhir:code [ fhir:v "ID_F19264C9-4802-4AE7-93FB-4A1D26D18A8F" ] ;
+         fhir:display [ fhir:v "Catapresan øresund inj, oppl 150 mikrog/ml" ]
+       ] )
+     ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v 1.5 ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "ug" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mL" ]
+       ]
+     ]
+  ] [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/fest-varenummer"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/fest-varenummer>
+         ] ;
+         fhir:code [ fhir:v "156660" ] ;
+         fhir:display [ fhir:v "Midazolam Accordpharma inj/inf, oppl 1 mg/ml" ]
+       ] )
+     ] ;
+     fhir:strength [
+       fhir:numerator [
+         fhir:value [ fhir:v 0.2 ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mL" ]
+       ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

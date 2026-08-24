@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-UtenCoding> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-UtenCoding"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:ingredient ( [
+     fhir:item [
+       a fhir:Reference ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Legemiddeldose-SmofKabiven> ;
+       fhir:reference [ fhir:v "Medication/Legemiddel-Legemiddeldose-SmofKabiven" ]
+     ]
+  ] [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelDose>
+         ] ;
+         fhir:code [ fhir:v "ID_3BDBA6F5-AE18-4A03-949A-A10BE4C085D0" ] ;
+         fhir:display [ fhir:v "Soluvit pulv til inf væske oppl" ]
+       ] )
+     ]
+  ] [
+     fhir:item [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"^^xsd:anyURI ;
+           fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelDose>
+         ] ;
+         fhir:code [ fhir:v "ID_4440528A-4654-4C34-A36B-B85251A5410F" ] ;
+         fhir:display [ fhir:v "Vitalipid Infant kons til inf emul" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

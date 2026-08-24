@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-Smerteblanding"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <code>
+    <coding>
+      <system value="http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"/>
+      <code value="smerteblanding-morfin-midazolam"/>
+      <display value="Smerteblanding morfin 5 mg/ml og midazolam 1 mg/ml"/>
+    </coding>
+  </code>
+  <amount>
+    <numerator>
+      <value value="100"/>
+      <unit value="milliliter"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mL"/>
+    </numerator>
+    <denominator>
+      <value value="1"/>
+      <unit value="pose"/>
+    </denominator>
+  </amount>
+  <ingredient>
+    <itemCodeableConcept>
+      <coding>
+        <system value="http://dmp.no/fhir/NamingSystem/fest-varenummer"/>
+        <code value="525858"/>
+        <display value="Midazolam Accord inj/inf, oppl 5 mg/ml"/>
+      </coding>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mL"/>
+      </denominator>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemReference>
+      <reference value="Medication/Legemiddel-MorfinKonsentrat"/>
+    </itemReference>
+    <strength>
+      <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength">
+        <valueQuantity>
+          <value value="12.5"/>
+          <unit value="milliliter"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mL"/>
+        </valueQuantity>
+      </extension>
+    </strength>
+  </ingredient>
+  <ingredient>
+    <itemReference>
+      <reference value="Medication/Legemiddel-NatriumkloridBBraun"/>
+    </itemReference>
+    <strength>
+      <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-ingredient-strength">
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/medication-ingredientstrength"/>
+            <code value="qs"/>
+            <display value="QS"/>
+          </coding>
+        </valueCodeableConcept>
+      </extension>
+    </strength>
+  </ingredient>
+</Medication>

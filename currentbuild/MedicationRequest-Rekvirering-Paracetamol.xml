@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Rekvirering-Paracetamol"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+  </meta>
+  <identifier>
+    <system value="http://example.org/rekvirering-id"/>
+    <value value="REK123456"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-FestLegemiddelMerkevare"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <authoredOn value="2025-01-27"/>
+  <requester>
+    <reference value="Practitioner/Helsepersonell-Med-HPR"/>
+  </requester>
+</MedicationRequest>

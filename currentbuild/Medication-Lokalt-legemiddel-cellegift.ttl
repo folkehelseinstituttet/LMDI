@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Lokalt-legemiddel-cellegift> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Lokalt-legemiddel-cellegift"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+           fhir:l <http://www.whocc.no/atc>
+         ] ;
+         fhir:code [ fhir:v "L01XA01" ] ;
+         fhir:display [ fhir:v "Cisplatin" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"^^xsd:anyURI ;
+         fhir:l <http://fhi.no/fhir/NamingSystem/lokaltLegemiddel>
+       ] ;
+       fhir:code [ fhir:v "Cisplatin" ] ;
+       fhir:display [ fhir:v "Cisplatin" ]
+     ] )
+  ] ; # 
+  fhir:amount [
+     fhir:numerator [
+       fhir:value [ fhir:v "1025"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "milligram" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ] ;
+     fhir:denominator [
+       fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "pose" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

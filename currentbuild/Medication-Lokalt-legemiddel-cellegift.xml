@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Lokalt-legemiddel-cellegift"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="L01XA01"/>
+        <display value="Cisplatin"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"/>
+      <code value="Cisplatin"/>
+      <display value="Cisplatin"/>
+    </coding>
+  </code>
+  <amount>
+    <numerator>
+      <value value="1025"/>
+      <unit value="milligram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </numerator>
+    <denominator>
+      <value value="1"/>
+      <unit value="pose"/>
+    </denominator>
+  </amount>
+</Medication>
