@@ -38,9 +38,11 @@ pilotering og innføring hos institusjonene.
 
 | Versjon | Dato | Kort beskrivelse |
 |---------|------|------------------|
+| 1.1.4 | 2026-08-21 | Ny extension Mengde ingrediens på Legemiddel.ingredient.strength |
 | 1.1.3 | 2026-08-14 | Gjort `requester` frivillig i Legemiddelrekvirering, men fortsatt Must Support |
+| 1.1.2 | 2026-06-12 | Flere NPR-identifikatorer tillatt per episode |
 | 1.1.1 | 2026-05-29 | Lagt til engelsk oversettelse av IG-en (laget med KI, foreløpig begrenset kvalitetssikret) |
-| 1.1.0 | 2026-03-27 | Rettet NamingSystem-URL fra fh.no til fhi.no; rettet skrivefeil lokaltVirkemiddel til lokaltLegemiddel |
+| 1.1.0 | 2026-04-13 | Rettet NamingSystem-URL fra fh.no til fhi.no; rettet skrivefeil lokaltVirkemiddel til lokaltLegemiddel |
 | 1.0.8 | 2026-03-10 | Forbedret FSH-eksempler, nye Bundle-eksempler, Virkestoff tillatt i LegemiddelregisterBundle |
 | 1.0.7 | 2025-09-30 | Oppdateringer av adresser og extensions i Pasient og Organisasjon |
 | 1.0.6 | 2025-09-12 | Helsepersonell, Organisasjon, Pasient og Virkestoff basert på no-basis |
