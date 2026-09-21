@@ -112,8 +112,8 @@ cp -r ./node_modules/hl7.fhir.no.basis/* ~/.fhir/packages/hl7.fhir.no.basis#2.2.
 **Viktig ved arbeid med skill-filer:**
 - Sjekk at skill-filene er oppdatert med siste FSH-endringer før bruk (se proveniens-tabellen i `UPDATE.md`)
 - Oppdatering av skillen gjøres etter prosedyren i `C:\dev\Fhi.Lmr.AI\skills\lmdi-fhir\UPDATE.md`
-- Endringer i skill-filer må committes og pushes i `Fhi.Lmr.AI`
-- `.claude/skills/` er lagt til i `.gitignore` og trackes ikke her. Symlinken `.claude/skills/lmdi-fhir` peker fortsatt på den utgåtte plasseringen i `Fhi.Legemiddelregisteret.wiki` og virker ikke — bruk stien over.
+- Endringer i skill-filer må committes og pushes i `Fhi.Lmr.AI`. Push til `main` trigger `azure-pipelines.yml`, som speiler til GitHub (`FHIDev/Fhi.Legemiddelregisteret.AI`) — kilden marketplacen `fhi-lmr` leser fra. Etter speiling må begge lag hentes lokalt: `claude plugin marketplace update fhi-lmr` og `claude plugin update lmr@fhi-lmr` (marketplace-navnet må være med), deretter restart.
+- `.claude/skills/` er gitignorert og tom. Skillen kommer fra `lmr`-pluginen, ikke fra en lokal symlink — ikke legg noe der.
 
 The project follows Norwegian healthcare data standards and integrates with FEST (Norwegian drug database) identifiers.
 
