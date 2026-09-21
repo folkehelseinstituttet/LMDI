@@ -12,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for Lmdi</h1>
- <p>Generated Mon Aug 24 09:55:15 UTC 2026, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.4 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>))</p>
+ <p>Generated Mon Sep 21 08:10:46 UTC 2026, FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.4 (canonical = <a href="http://hl7.no/fhir/ig/lmdi">http://hl7.no/fhir/ig/lmdi</a> (<a href="http://hl7.no/fhir/ig/lmdi/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -69,6 +69,27 @@
     <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction--0|4.0.1</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:ietf:bcp:47</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/languages|4.0.1</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>[urn:ietf:bcp:47]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
@@ -188,6 +209,20 @@
     <td>[http://fhi.no/fhir/NamingSystem/lokaltLegemiddel]: authoritative = , candidates=</td>
   </tr>
   <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8628</td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:ietf:bcp:47</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/languages|4.0.1</td>
+    <td>urn:ietf:bcp:47</td>
+    <td>[urn:ietf:bcp:47]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
@@ -200,6 +235,34 @@
     <td>null</td>
     <td>urn:oid:2.16.578.1.12.4.1.1.3403</td>
     <td>[urn:oid:2.16.578.1.12.4.1.1.3403]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -216,18 +279,11 @@
     <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
+    <td>Use primary server for http://unitsofmeasure.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:c23c23ef-821a-4737-9ab6-0b3098d49f1d</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -237,11 +293,151 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>urn:uuid:26736e13-ffe3-4dba-affe-97376aa9194e</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7110</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7110]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7110</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7110]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7110</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7110]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7110</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7110]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
     <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7448]: authoritative = , candidates=</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -265,11 +461,25 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -279,11 +489,18 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare]: authoritative = , candidates=</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -293,11 +510,25 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelPakning]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -307,18 +538,18 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/fest-varenummer</td>
+    <td>[http://dmp.no/fhir/NamingSystem/fest-varenummer]: authoritative = , candidates=</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
+    <td>Fallback: primary server</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
-    <td>http://snomed.info/sct</td>
-    <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/fest-varenummer</td>
+    <td>[http://dmp.no/fhir/NamingSystem/fest-varenummer]: authoritative = , candidates=</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -391,11 +622,39 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelDose]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelDose]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td>http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder|1.1.4</td>
     <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelDose]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</td>
+    <td>[http://dmp.no/fhir/NamingSystem/festLegemiddelDose]: authoritative = , candidates=</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -421,9 +680,16 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:68248d27-d255-4ee4-9ec2-00f40f4a836e</td>
+    <td>urn:uuid:537e131a-4385-40c6-82df-721847e343e0</td>
     <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -431,6 +697,34 @@
     <td>null</td>
     <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7477</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7477]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7477</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7477]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/units-of-time|4.0.1</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>System not handled by any servers. Using primary server</td>
@@ -447,11 +741,88 @@
     <td>[urn:oid:2.16.578.1.12.4.1.1.7478]: authoritative = , candidates=</td>
   </tr>
   <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7478</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7478]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7478</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.7478]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>[urn:oid:2.16.578.1.12.4.1.1.8624]: authoritative = , candidates=</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
     <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/CodeSystem/medication-admin-status</td>
+    <td>[http://hl7.org/fhir/CodeSystem/medication-admin-status]: authoritative = http://tx.fhir.org/r4, candidates=</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -482,6 +853,20 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for urn:iso:std:iso:3166</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction--0|4.0.1</td>
+    <td>urn:iso:std:iso:3166</td>
+    <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
@@ -496,9 +881,34 @@
     <td>[http://snomed.info/sct]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
 </table>
+<p>
+  <b>Errors</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>URL</b>
+    </td>
+    <td>
+      <b>Message</b>
+    </td>
+  </tr>
+  <tr>
+    <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td style="background-color: #ffe3e3">
+      <span title="https://tx.fhir.org/r4/CodeSystem?_format=json&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm">Error resolving CodeSystem http://unstats.un.org/unsd/methods/m49/m49.htm: Error parsing response message from https://tx.fhir.org/r4: JsonNull</span>
+    </td>
+  </tr>
+  <tr>
+    <td>urn:ietf:bcp:47</td>
+    <td style="background-color: #ffe3e3">
+      <span title="https://tx.fhir.org/r4/CodeSystem?_format=json&amp;url=urn%3Aietf%3Abcp%3A47">Error resolving CodeSystem urn:ietf:bcp:47: Error parsing response message from https://tx.fhir.org/r4: JsonNull</span>
+    </td>
+  </tr>
+</table>
 <h2>Primary Server: https://tx.fhir.org/r4</h2>
 <a href="https://tx.fhir.org/r4"></a>
-<p>Use Count: 38. Code Systems used: </p>
+<p>Use Count: 115. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -517,31 +927,31 @@
   <tr>
     <td>http://dmp.no/fhir/NamingSystem/fest-varenummer</td>
     <td>0</td>
-    <td>2</td>
+    <td>3</td>
     <td></td>
   </tr>
   <tr>
     <td>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</td>
     <td>0</td>
-    <td>1</td>
+    <td>3</td>
     <td></td>
   </tr>
   <tr>
     <td>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</td>
     <td>0</td>
-    <td>1</td>
+    <td>3</td>
     <td></td>
   </tr>
   <tr>
     <td>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</td>
     <td>0</td>
-    <td>1</td>
+    <td>2</td>
     <td></td>
   </tr>
   <tr>
     <td>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</td>
     <td>0</td>
-    <td>1</td>
+    <td>2</td>
     <td></td>
   </tr>
   <tr>
@@ -552,6 +962,12 @@
   </tr>
   <tr>
     <td>http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://hl7.org/fhir/CodeSystem/medication-admin-status</td>
     <td>0</td>
     <td>1</td>
     <td></td>
@@ -585,15 +1001,63 @@
     <td></td>
   </tr>
   <tr>
-    <td>urn:oid:2.16.578.1.12.4.1.1.7478</td>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7110</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7448</td>
+    <td>0</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7477</td>
     <td>0</td>
     <td>1</td>
     <td></td>
   </tr>
+  <tr>
+    <td>urn:oid:2.16.578.1.12.4.1.1.7478</td>
+    <td>0</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>urn:oid:2.16.578.1.12.4.1.1.8624</td>
+    <td>0</td>
+    <td>4</td>
+    <td></td>
+  </tr>
 </table>
+<p>ValueSets fetched:</p>
+<ul>
+  <li>http://dmp.no/fhir/NamingSystem/fest-varenummer</li>
+  <li>http://dmp.no/fhir/NamingSystem/festLegemiddelDose</li>
+  <li>http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare</li>
+  <li>http://dmp.no/fhir/NamingSystem/festLegemiddelPakning</li>
+  <li>http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff</li>
+  <li>http://dmp.no/fhir/NamingSystem/lmrLopenummer</li>
+  <li>http://fhi.no/fhir/NamingSystem/lokaltLegemiddel</li>
+  <li>http://fhir.org/packages/hl7.fhir.no.basis/ImplementationGuide/hl7.fhir.no.basis</li>
+  <li>http://hl7.no/fhir/ig/lmdi/urn:iso:std:iso:3166</li>
+  <li>http://hl7.no/fhir/ig/lmdi/urn:oid:2.16.578.1.12.4.1.1.7426</li>
+  <li>http://hl7.no/fhir/ig/lmdi/urn:oid:2.16.578.1.12.4.1.1.7704</li>
+  <li>http://hl7.no/fhir/ig/lmdi/urn:oid:2.16.578.1.12.4.1.1.8624</li>
+  <li>http://hl7.no/fhir/ig/lmdi/urn:oid:2.16.578.1.12.4.1.1.9060</li>
+  <li>https://register.geonorge.no/subregister/sosi-kodelister/kartverket/kommunenummer-alle</li>
+  <li>urn:iso:std:iso:3166</li>
+  <li>urn:oid:2.16.578.1.12.4.1.1.3403</li>
+  <li>urn:oid:2.16.578.1.12.4.1.1.7426</li>
+  <li>urn:oid:2.16.578.1.12.4.1.1.7704</li>
+  <li>urn:oid:2.16.578.1.12.4.1.1.8624</li>
+  <li>urn:oid:2.16.578.1.12.4.1.1.8628</li>
+  <li>urn:oid:2.16.578.1.12.4.1.1.9060</li>
+</ul>
 <h2>Server: https://tx.fhir.org/r4</h2>
 <a href="https://tx.fhir.org/r4"></a>
-<p>Use Count: 2. Code Systems used: </p>
+<p>Use Count: 26. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
