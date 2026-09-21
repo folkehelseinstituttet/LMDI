@@ -271,8 +271,8 @@ user content","",0,*,"","","","Extension {[]} {[]}
 ","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
 "Medication.form.coding","Medication.form.coding","","","",1,*,"","","Y","Coding {[]} {[]}
-","Legemiddelform","A reference to a code defined by a terminology system.","Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"","value:system}
-","",,"closed","CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Legemiddelform","A reference to a code defined by a terminology system.","Kodet legemiddelform. Legemiddelform (OID: 7448) fra FEST og SNOMED CT er definert som slices. Andre kodesystemer er tillatt.","Allows for alternative encodings within a code system, and translations to other code systems.","","","","","","","",,,,,"","value:system}
+","",,"open","CodeableConcept.coding",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","union(., ./translation)","C*E.1-8, C*E.10-22"
 "Medication.form.coding.id","Medication.form.coding.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"

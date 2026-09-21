@@ -1,4 +1,4 @@
-# Downloads - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Downloads - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)

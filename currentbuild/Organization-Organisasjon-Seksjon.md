@@ -1,4 +1,4 @@
-# Organisasjon-Seksjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Organisasjon-Seksjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

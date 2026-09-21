@@ -1,4 +1,4 @@
-# LegemiddelregisterBundle - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# LegemiddelregisterBundle - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle **  | *Version*:1.1.4 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle **  | *Version*:1.1.5 **  |
 | Active as of 2026-09-21 | *Computable Name*:LegemiddelregisterBundle |
 
  
@@ -43,7 +43,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-bundle",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-bundle",
-  "version" : "1.1.4",
+  "version" : "1.1.5",
   "name" : "LegemiddelregisterBundle",
   "title" : "LegemiddelregisterBundle",
   "_title" : {
@@ -60,7 +60,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-bundle.csv), [E
     }]
   },
   "status" : "active",
-  "date" : "2026-09-21T06:14:41+00:00",
+  "date" : "2026-09-21T06:15:47+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

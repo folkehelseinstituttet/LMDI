@@ -1,4 +1,4 @@
-# Legemiddel-FestLegemiddelMerkevare - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Legemiddel-FestLegemiddelMerkevare - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

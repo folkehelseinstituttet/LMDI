@@ -1,4 +1,4 @@
-# Lokal Legemiddelkatalog Values - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Lokal Legemiddelkatalog Values - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues **  | *Version*:1.1.4 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues **  | *Version*:1.1.5 **  |
 | Active as of 2026-09-21 | *Computable Name*:LokalLegemiddelkatalogValues |
 
  
@@ -52,7 +52,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
   "resourceType" : "ValueSet",
   "id" : "LokalLegemiddelkatalogValues",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
-  "version" : "1.1.4",
+  "version" : "1.1.5",
   "name" : "LokalLegemiddelkatalogValues",
   "title" : "Lokal Legemiddelkatalog Values",
   "_title" : {
@@ -69,7 +69,7 @@ This value set is not used here; it may be used elsewhere (e.g. specifications a
     }]
   },
   "status" : "active",
-  "date" : "2026-09-21T06:14:41+00:00",
+  "date" : "2026-09-21T06:15:47+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
