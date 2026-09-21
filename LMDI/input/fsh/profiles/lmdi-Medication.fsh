@@ -256,10 +256,10 @@ Description: "Beskrivelse av legemiddel."
 * form.coding.display MS
 * form.coding ^slicing.discriminator.type = #value
 * form.coding ^slicing.discriminator.path = "system"
-* form.coding ^slicing.rules = #closed
+* form.coding ^slicing.rules = #open
 * form.coding contains OID7448 0..1 and SCT 0..1
 * form.coding ^short = "Legemiddelform"
-* form.coding ^comment = "Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT."
+* form.coding ^comment = "Kodet legemiddelform. Legemiddelform (OID: 7448) fra FEST og SNOMED CT er definert som slices. Andre kodesystemer er tillatt."
 * form.coding ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * form.coding ^short.extension[=].extension[+].url = "lang"
 * form.coding ^short.extension[=].extension[=].valueCode = #en
@@ -269,7 +269,7 @@ Description: "Beskrivelse av legemiddel."
 * form.coding ^comment.extension[=].extension[+].url = "lang"
 * form.coding ^comment.extension[=].extension[=].valueCode = #en
 * form.coding ^comment.extension[=].extension[+].url = "content"
-* form.coding ^comment.extension[=].extension[=].valueString = "Coded medication form. Currently limited to medication form (OID: 7448) and the HL7 SNOMED CT example code set."
+* form.coding ^comment.extension[=].extension[=].valueString = "Coded medication form. Medication form (OID: 7448) from FEST and SNOMED CT are defined as slices. Other code systems are permitted."
 * form.coding[OID7448] ^short = "Kodeverk Legemiddelform (OID:7448) fra FEST"
 * form.coding[OID7448] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * form.coding[OID7448] ^short.extension[=].extension[+].url = "lang"

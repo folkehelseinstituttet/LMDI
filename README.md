@@ -38,6 +38,7 @@ pilotering og innføring hos institusjonene.
 
 | Versjon | Dato | Kort beskrivelse |
 |---------|------|------------------|
+| 1.1.5 | 2026-09-21 | Åpnet slicingen på Legemiddel.form.coding; andre kodesystemer for legemiddelform er nå tillatt |
 | 1.1.4 | 2026-08-21 | Ny extension Mengde ingrediens på Legemiddel.ingredient.strength |
 | 1.1.3 | 2026-08-14 | Gjort `requester` frivillig i Legemiddelrekvirering, men fortsatt Must Support |
 | 1.1.2 | 2026-06-12 | Flere NPR-identifikatorer tillatt per episode |

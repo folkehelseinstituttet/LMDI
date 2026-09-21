@@ -33,6 +33,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | Versjon | Dato | Beskrivelse |
 |---------|------|-------------|
+| 1.1.5 | 2026-09-21 | Legemiddel: slicingen på `form.coding` er endret fra closed til open. Legemiddelform (OID 7448) og SNOMED CT er fortsatt definerte slices, men andre kodesystemer for legemiddelform er nå tillatt. |
 | 1.1.4 | 2026-08-21 | Ny extension Mengde ingrediens på `Medication.ingredient.strength`, som gir R5/R6-variantene Quantity og CodeableConcept i R4. |
 | 1.1.3 | 2026-08-14 | Legemiddelrekvirering: `requester` er ikke lenger påkrevd (1..1 → 0..1). Feltet er fortsatt Must Support og skal oppgis når rekvirenten er kjent. |
 | 1.1.2 | 2026-06-12 | Episode: nprEpisodeIdentifier-extensionen kan nå gjentas (0..1 → 0..*), slik at flere NPR-identifikatorer kan oppgis for samme episode. |
