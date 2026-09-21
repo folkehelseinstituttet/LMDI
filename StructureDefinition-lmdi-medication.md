@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.4 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.5 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.1.4",
+  "version" : "1.1.5",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "_title" : {
@@ -803,7 +803,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           "type" : "value",
           "path" : "system"
         }],
-        "rules" : "closed"
+        "rules" : "open"
       },
       "short" : "Legemiddelform",
       "_short" : {
@@ -819,7 +819,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "comment" : "Kodet legemiddelform. Inntil videre begrenset til Legemiddelform (OID: 7448) og kodesetteksempel fra HL7 basert på SNOMED CT.",
+      "comment" : "Kodet legemiddelform. Legemiddelform (OID: 7448) fra FEST og SNOMED CT er definert som slices. Andre kodesystemer er tillatt.",
       "_comment" : {
         "extension" : [{
           "extension" : [{
@@ -828,7 +828,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           },
           {
             "url" : "content",
-            "valueString" : "Coded medication form. Currently limited to medication form (OID: 7448) and the HL7 SNOMED CT example code set."
+            "valueString" : "Coded medication form. Medication form (OID: 7448) from FEST and SNOMED CT are defined as slices. Other code systems are permitted."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

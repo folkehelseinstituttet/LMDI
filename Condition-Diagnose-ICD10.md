@@ -1,4 +1,4 @@
-# Diagnose-ICD10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Diagnose-ICD10 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

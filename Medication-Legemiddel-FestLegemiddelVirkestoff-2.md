@@ -1,4 +1,4 @@
-# Legemiddel-FestLegemiddelVirkestoff-2 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.4
+# Legemiddel-FestLegemiddelVirkestoff-2 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
