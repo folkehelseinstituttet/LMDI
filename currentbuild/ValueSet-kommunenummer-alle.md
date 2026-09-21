@@ -71,7 +71,7 @@ No Expansion for this valueset (Unknown Code System)
     }]
   },
   "status" : "active",
-  "date" : "2026-09-21T06:15:47+00:00",
+  "date" : "2026-09-21T06:25:19+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
