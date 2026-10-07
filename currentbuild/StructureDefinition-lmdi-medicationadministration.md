@@ -1,4 +1,4 @@
-# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.1.6 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.1.7 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddeladministrering |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationadministration",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration",
-  "version" : "1.1.6",
+  "version" : "1.1.7",
   "name" : "Legemiddeladministrering",
   "title" : "Legemiddeladministrering",
   "_title" : {

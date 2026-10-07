@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.6 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.7 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.1.6",
+  "version" : "1.1.7",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "_title" : {

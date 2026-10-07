@@ -8,7 +8,7 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.1.6"/>
+  <version value="1.1.7"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="active"/>
@@ -767,6 +767,17 @@
       </reference>
       <name value="Diagnose-ICD10-Allergi"/>
       <description value="Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/Diagnose-ICD10-Multippel"/>
+      </reference>
+      <name value="Diagnose-ICD10-Multippel"/>
+      <description value="Eksempel på diagnose med flere ICD-10-koder (multippel koding)"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"/>
     </resource>
     <resource>

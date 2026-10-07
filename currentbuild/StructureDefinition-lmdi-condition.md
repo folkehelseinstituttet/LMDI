@@ -1,4 +1,4 @@
-# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Diagnose - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.1.6 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition **  | *Version*:1.1.7 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Diagnose |
 
  
@@ -23,7 +23,7 @@ Diagnosen som pasienten har fått rekvirert eller administrert legemiddelet for.
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Condition/Diagnose-ICD10-Allergi](Condition-Diagnose-ICD10-Allergi.md), [Condition/Diagnose-ICD10](Condition-Diagnose-ICD10.md) and [Condition/Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md)
+* Examples for this Profile: [Condition/Diagnose-ICD10-Allergi](Condition-Diagnose-ICD10-Allergi.md), [Condition/Diagnose-ICD10-Multippel](Condition-Diagnose-ICD10-Multippel.md), [Condition/Diagnose-ICD10](Condition-Diagnose-ICD10.md) and [Condition/Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-condition.json)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-condition",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition",
-  "version" : "1.1.6",
+  "version" : "1.1.7",
   "name" : "Diagnose",
   "title" : "Diagnose",
   "_title" : {
@@ -171,7 +171,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT.",
+      "definition" : "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT. Flere koder tillatt for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten).",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -180,7 +180,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
           },
           {
             "url" : "content",
-            "valueString" : "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."
+            "valueString" : "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used. Multiple codes are allowed to support multiple coding according to the Norwegian Directorate of Health's coding guidelines (specialist health services)."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
@@ -262,7 +262,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer.",
+      "definition" : "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer. Flere koder tillatt for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten).",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -271,13 +271,13 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-condition.csv),
           },
           {
             "url" : "content",
-            "valueString" : "ICD-10: The International Statistical Classification of Diseases and Related Health Problems."
+            "valueString" : "ICD-10: The International Statistical Classification of Diseases and Related Health Problems. Multiple codes are allowed to support multiple coding according to the Norwegian Directorate of Health's coding guidelines (specialist health services)."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
       "min" : 0,
-      "max" : "1"
+      "max" : "*"
     },
     {
       "id" : "Condition.code.coding:ICD10.system",

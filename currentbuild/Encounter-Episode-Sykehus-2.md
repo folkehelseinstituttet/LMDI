@@ -1,4 +1,4 @@
-# Episode-Sykehus-2 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Episode-Sykehus-2 - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

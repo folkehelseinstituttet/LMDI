@@ -1,4 +1,4 @@
-# Rekvirering-Kjemoterapi - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Rekvirering-Kjemoterapi - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

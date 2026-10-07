@@ -1,4 +1,4 @@
-# ATC Kodesystem ValueSet - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# ATC Kodesystem ValueSet - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://fhir.no/ValueSet/atc-valueset **  | *Version*:1.1.6 **  |
+| *Official URL*:http://fhir.no/ValueSet/atc-valueset **  | *Version*:1.1.7 **  |
 | Active as of 2025-09-12 | *Computable Name*:ATCValueSet |
 
  
@@ -54,7 +54,7 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "atc-valueset",
   "url" : "http://fhir.no/ValueSet/atc-valueset",
-  "version" : "1.1.6",
+  "version" : "1.1.7",
   "name" : "ATCValueSet",
   "title" : "ATC Kodesystem ValueSet",
   "_title" : {

@@ -1,4 +1,4 @@
-# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -91,6 +91,7 @@ These are example instances that show what data produced and consumed by systems
 | [Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md) | Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon |
 | [Diagnose-ICD10](Condition-Diagnose-ICD10.md) | Eksempel på diagnose ICD-10 |
 | [Diagnose-ICD10-Allergi](Condition-Diagnose-ICD10-Allergi.md) | Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt |
+| [Diagnose-ICD10-Multippel](Condition-Diagnose-ICD10-Multippel.md) | Eksempel på diagnose med flere ICD-10-koder (multippel koding) |
 | [Diagnose-SNOMED-SCT](Condition-Diagnose-SNOMED-SCT.md) | Eksempel på diagnose SNOMED CT |
 | [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |

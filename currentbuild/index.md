@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -11,7 +11,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.6 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.7 **  |
 | Active as of 2026-10-07 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.7 | 2026-10-07 | Diagnose: slicen`ICD10`på`code.coding`er endret fra 0..1 til 0..*, for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten). Nytt eksempel med flere ICD-10-koder. |
 | 1.1.6 | 2026-10-07 | Legemiddeladministrering: presisert tekst for`identifier`og`status`, og at korrigering og annullering rapporteres på nytt med samme identifikator (`entered-in-error`ved annullering). |
 | 1.1.5 | 2026-09-21 | Legemiddel: slicingen på`form.coding`er endret fra closed til open. Legemiddelform (OID 7448) og SNOMED CT er fortsatt definerte slices, men andre kodesystemer for legemiddelform er nå tillatt. |
 | 1.1.4 | 2026-08-21 | Ny extension Mengde ingrediens på`Medication.ingredient.strength`, som gir R5/R6-variantene Quantity og CodeableConcept i R4. |
@@ -71,7 +72,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.6",
+  "version" : "1.1.7",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
@@ -1063,6 +1064,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       },
       "name" : "Diagnose-ICD10-Allergi",
       "description" : "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/Diagnose-ICD10-Multippel"
+      },
+      "name" : "Diagnose-ICD10-Multippel",
+      "description" : "Eksempel på diagnose med flere ICD-10-koder (multippel koding)",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
     },
     {

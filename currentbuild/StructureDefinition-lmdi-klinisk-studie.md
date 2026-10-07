@@ -1,4 +1,4 @@
-# Klinisk studie - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.6
+# Klinisk studie - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie **  | *Version*:1.1.6 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie **  | *Version*:1.1.7 **  |
 | Active as of 2026-10-07 | *Computable Name*:KliniskStudie |
 
 Angir om legemidlet gis som en del av en klinisk studie.
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-klinisk-studie",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie",
-  "version" : "1.1.6",
+  "version" : "1.1.7",
   "name" : "KliniskStudie",
   "title" : "Klinisk studie",
   "_title" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
     }]
   },
   "status" : "active",
-  "date" : "2026-10-07T08:53:26+00:00",
+  "date" : "2026-10-07T09:44:04+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
