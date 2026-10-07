@@ -11,11 +11,19 @@ env:
   # HTML-markup; hold i synk med ByggIG.bat og de andre workflow-ene.
   IG_PUBLISHER_VERSION: "2.2.8"
 
+# Én publisering om gangen mot gh-pages-grenen (currentbuild og rot deler gruppe).
+concurrency:
+  group: lmdi-gh-pages-deploy
+  cancel-in-progress: false
+
 # The following jobs are equal for all IGs and can be moved to a common composite-action if 'uses'-support is added, see:
 # https://github.com/actions/runner/blob/main/docs/adrs/1144-composite-actions.md
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # IG Publisher venter på tx.fhir.org (offentlig, delt) og kan henge i timevis når den er treg.
+    # Normal byggetid er ca. 30 min.
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -35,7 +43,12 @@ jobs:
         with:
           path: |
             ${{ env.IG }}/input-cache
-          key: ig-publisher-input-cache           
+          # Nøkler er uforanderlige i actions/cache: en fast nøkkel lagres bare én gang.
+          # run_id gir ny lagring hver kjøring; restore-keys henter siste (inkl. txcache).
+          key: ig-publisher-input-cache-${{ github.run_id }}
+          restore-keys: |
+            ig-publisher-input-cache-
+            ig-publisher-input-cache
       
       - name: 🔎 Les no-basis-versjon fra sushi-config.yaml
         id: nobasis
@@ -148,7 +161,7 @@ jobs:
             -e IG="${{ env.IG }}" \
             -e NO_BASIS_VERSION="${{ env.NO_BASIS_VERSION }}" \
             --workdir /github/workspace \
-            hl7fhir/ig-publisher-base:latest \
+            hl7fhir/ig-publisher-base@sha256:245d363857d76dfb58145a9a1dcd2f138809d2eccf739e285d55439771bc8baf \
             bash -c "
               echo 'Docker container started'
               echo 'Checking for snapshot in container:'
