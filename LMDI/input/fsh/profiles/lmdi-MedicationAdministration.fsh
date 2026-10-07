@@ -2,7 +2,9 @@ Profile: Legemiddeladministrering
 Parent: MedicationAdministration
 Id: lmdi-medicationadministration
 Title: "Legemiddeladministrering"
-Description: """Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt."""
+Description: """Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.
+
+Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error."""
 
 * ^status = #draft
 * ^date = "2025-09-12"
@@ -16,7 +18,7 @@ Description: """Beskriver administrering av legemiddel til pasient på institusj
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given."
+* ^description.extension[=].extension[=].valueString = "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.\n\nIf information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used."
 
 // Core Elements
 * subject only Reference(Pasient)
@@ -41,19 +43,44 @@ Description: """Beskriver administrering av legemiddel til pasient på institusj
 * medication[x] ^short.extension[=].extension[+].url = "content"
 * medication[x] ^short.extension[=].extension[=].valueString = "Medication"
 
+* identifier ^short = "Identifikator som entydig identifiserer legemiddeladministreringen over tid."
+* identifier ^definition = "Identifikator som entydig identifiserer legemiddeladministreringen over tid. Identifikatoren skal beholdes dersom en tidligere rapportert administrering korrigeres/endres eller annulleres/slettes og rapporteres på nytt."
+* identifier ^comment = "Avsender skal benytte samme identifikator ved ny rapportering av en tidligere innsendt administrering. En korrigering/endring skal ikke rapporteres som en ny administrering med ny identifikator. identifier.system bør identifisere avsenders identifikatorområde slik at identifikatoren er entydig på tvers av avsendere."
+* identifier ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^short.extension[=].extension[+].url = "lang"
+* identifier ^short.extension[=].extension[=].valueCode = #en
+* identifier ^short.extension[=].extension[+].url = "content"
+* identifier ^short.extension[=].extension[=].valueString = "Identifier that uniquely identifies the medication administration over time."
+* identifier ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^definition.extension[=].extension[+].url = "lang"
+* identifier ^definition.extension[=].extension[=].valueCode = #en
+* identifier ^definition.extension[=].extension[+].url = "content"
+* identifier ^definition.extension[=].extension[=].valueString = "Identifier that uniquely identifies the medication administration over time. The identifier shall be retained if a previously reported administration is corrected/amended or cancelled/deleted and reported again."
+* identifier ^comment.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* identifier ^comment.extension[=].extension[+].url = "lang"
+* identifier ^comment.extension[=].extension[=].valueCode = #en
+* identifier ^comment.extension[=].extension[+].url = "content"
+* identifier ^comment.extension[=].extension[=].valueString = "The sender shall use the same identifier when re-reporting a previously submitted administration. A correction/amendment shall not be reported as a new administration with a new identifier. identifier.system should identify the sender's identifier namespace so that the identifier is unique across senders."
+
 * status from LegemiddeladministreringStatus
-* status ^short = "Status administrering (completed | entered-in-error)"
-* status ^definition = "Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes."
+* status ^short = "Status for legemiddeladministreringen (completed | entered-in-error)"
+* status ^definition = "Angir om legemiddeladministreringen er utført eller om en tidligere registrert administrering er feilregistrert. completed brukes for en utført administrering. entered-in-error brukes når en tidligere rapportert administrering skal annulleres/slettes fordi registreringen ikke representerer en gyldig administrering."
+* status ^comment = "Ved korrigering/endring av opplysninger om en tidligere rapportert administrering skal ressursen rapporteres på nytt med samme identifikator og korrigerte opplysninger. Ved annullering/sletting skal den rapporteres på nytt med samme identifikator og status entered-in-error. En tidligere rapportert administrering skal ikke annulleres/slettes ved bare å utelate den fra senere innsendinger."
 * status ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * status ^short.extension[=].extension[+].url = "lang"
 * status ^short.extension[=].extension[=].valueCode = #en
 * status ^short.extension[=].extension[+].url = "content"
-* status ^short.extension[=].extension[=].valueString = "Administration status (completed | entered-in-error)"
+* status ^short.extension[=].extension[=].valueString = "Status of the medication administration (completed | entered-in-error)"
 * status ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * status ^definition.extension[=].extension[+].url = "lang"
 * status ^definition.extension[=].extension[=].valueCode = #en
 * status ^definition.extension[=].extension[+].url = "content"
-* status ^definition.extension[=].extension[=].valueString = "Administration status. It should usually be set to 'completed', but 'entered-in-error' MUST be used if the record contains a serious error and shall be deleted."
+* status ^definition.extension[=].extension[=].valueString = "Indicates whether the medication administration has been carried out or whether a previously registered administration was entered in error. completed is used for an administration that has been carried out. entered-in-error is used when a previously reported administration is to be cancelled/deleted because the record does not represent a valid administration."
+* status ^comment.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* status ^comment.extension[=].extension[+].url = "lang"
+* status ^comment.extension[=].extension[=].valueCode = #en
+* status ^comment.extension[=].extension[+].url = "content"
+* status ^comment.extension[=].extension[=].valueString = "When information about a previously reported administration is corrected/amended, the resource shall be reported again with the same identifier and the corrected information. On cancellation/deletion it shall be reported again with the same identifier and status entered-in-error. A previously reported administration shall not be cancelled/deleted merely by omitting it from later submissions."
 
 // Timing Elements
 * effective[x] ^short = "Tidspunktet eller periode legemidlet ble administrert"
