@@ -38,6 +38,7 @@ pilotering og innføring hos institusjonene.
 
 | Versjon | Dato | Kort beskrivelse |
 |---------|------|------------------|
+| 1.1.6 | 2026-10-07 | Presisert identifier og status for Legemiddeladministrering; korrigering/annullering rapporteres på nytt med samme identifikator |
 | 1.1.5 | 2026-09-21 | Åpnet slicingen på Legemiddel.form.coding; andre kodesystemer for legemiddelform er nå tillatt |
 | 1.1.4 | 2026-08-21 | Ny extension Mengde ingrediens på Legemiddel.ingredient.strength |
 | 1.1.3 | 2026-08-14 | Gjort `requester` frivillig i Legemiddelrekvirering, men fortsatt Must Support |

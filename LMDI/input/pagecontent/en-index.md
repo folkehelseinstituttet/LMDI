@@ -33,6 +33,7 @@ This provides consistent handling of Norwegian identifiers and code systems acro
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 1.1.6 | 2026-10-07 | Medication administration: clarified text for `identifier` and `status`, and that corrections and cancellations are reported again with the same identifier (`entered-in-error` on cancellation). |
 | 1.1.5 | 2026-09-21 | Medication: the slicing on `form.coding` is changed from closed to open. Medication form (OID 7448) and SNOMED CT remain defined slices, but other code systems for medication form are now permitted. |
 | 1.1.4 | 2026-08-21 | New extension Amount of ingredient on `Medication.ingredient.strength`, providing the R5/R6 variants Quantity and CodeableConcept in R4. |
 | 1.1.3 | 2026-08-14 | MedicationRequest: `requester` is no longer mandatory (1..1 → 0..1). The field is still Must Support and shall be provided when the requester is known. |
