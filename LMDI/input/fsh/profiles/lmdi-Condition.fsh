@@ -48,7 +48,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 // Diagnosekoding - hovedregler
 * code 1..1
 * code ^short = "Diagnosekode."
-* code ^definition = "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT."
+* code ^definition = "Diagnosekode. Det er mulig å bruke ICD-10, ICD-11, ICPC-2 og SNOMED CT. Flere koder tillatt for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten)."
 * code ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * code ^short.extension[=].extension[+].url = "lang"
 * code ^short.extension[=].extension[=].valueCode = #en
@@ -58,7 +58,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code ^definition.extension[=].extension[+].url = "lang"
 * code ^definition.extension[=].extension[=].valueCode = #en
 * code ^definition.extension[=].extension[+].url = "content"
-* code ^definition.extension[=].extension[=].valueString = "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used."
+* code ^definition.extension[=].extension[=].valueString = "Diagnosis code. ICD-10, ICD-11, ICPC-2, and SNOMED CT can be used. Multiple codes are allowed to support multiple coding according to the Norwegian Directorate of Health's coding guidelines (specialist health services)."
 
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "system"
@@ -67,7 +67,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 // Diagnosekoding - kodesystemer
 * code.coding contains
     SCT 0..1 and
-    ICD10 0..1 and
+    ICD10 0..* and
     ICD11 0..1 and
     ICPC2 0..1
 
@@ -89,7 +89,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 
 // ICD-10
 * code.coding[ICD10] ^short = "ICD-10"
-* code.coding[ICD10] ^definition = "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer."
+* code.coding[ICD10] ^definition = "ICD-10: Den internasjonale statistiske klassifikasjonen av sykdommer og beslektede helseproblemer. Flere koder tillatt for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten)."
 * code.coding[ICD10] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * code.coding[ICD10] ^short.extension[=].extension[+].url = "lang"
 * code.coding[ICD10] ^short.extension[=].extension[=].valueCode = #en
@@ -99,7 +99,7 @@ Description: "Diagnosen som pasienten har fått rekvirert eller administrert leg
 * code.coding[ICD10] ^definition.extension[=].extension[+].url = "lang"
 * code.coding[ICD10] ^definition.extension[=].extension[=].valueCode = #en
 * code.coding[ICD10] ^definition.extension[=].extension[+].url = "content"
-* code.coding[ICD10] ^definition.extension[=].extension[=].valueString = "ICD-10: The International Statistical Classification of Diseases and Related Health Problems."
+* code.coding[ICD10] ^definition.extension[=].extension[=].valueString = "ICD-10: The International Statistical Classification of Diseases and Related Health Problems. Multiple codes are allowed to support multiple coding according to the Norwegian Directorate of Health's coding guidelines (specialist health services)."
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10].code 1..1
 * code.coding[ICD10].code ^short = "Diagnosekode fra kodeverket"
@@ -203,3 +203,16 @@ Description: "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt"
 * code.coding[ICD10].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
 * code.coding[ICD10] = #J30
 * code.coding[ICD10].display = "Vasomotorisk og allergisk rhinitt"
+
+Instance: Diagnose-ICD10-Multippel
+InstanceOf: Diagnose
+Description: "Eksempel på diagnose med flere ICD-10-koder (multippel koding)"
+* subject = Reference(Pasient-Med-FNR)
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
+* clinicalStatus.coding.code = #active
+* code.coding[ICD10][0].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
+* code.coding[ICD10][0] = #I20
+* code.coding[ICD10][0].display = "Angina pectoris"
+* code.coding[ICD10][1].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
+* code.coding[ICD10][1] = #J30
+* code.coding[ICD10][1].display = "Vasomotorisk og allergisk rhinitt"
