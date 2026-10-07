@@ -1,0 +1,109 @@
+@startuml
+
+hide empty members
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+class Diagnose <<Condition>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-condition.html Diagnose _blank]] {
+    clinicalStatus : CodeableConcept [0..1]
+    code : CodeableConcept [1..1]
+    identifier : Identifier [0..*]
+    stage : BackboneElement [0..*]
+    verificationStatus : CodeableConcept [0..1]
+}
+class Episode <<Encounter>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-encounter.html Episode _blank]] {
+    class : Coding [1..1]
+    extension[nprEpisodeIdentifier] : Extension [0..*]
+    identifier : Identifier [0..*]
+    status : code [1..1]
+}
+class Legemiddel <<Medication>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-medication.html Legemiddel _blank]] {
+    amount : Ratio [0..1]
+    batch : BackboneElement [0..1]
+    code : CodeableConcept [0..1]
+    form : CodeableConcept [0..1]
+    identifier : Identifier [0..*]
+    ingredient : BackboneElement [0..*]
+    status : code [0..1]
+}
+class Legemiddeladministrering <<MedicationAdministration>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-medicationadministration.html Legemiddeladministrering _blank]] {
+    category : CodeableConcept [0..1]
+    dosage : BackboneElement [0..1]
+    effective[x] : dateTime | Period [1..1]
+    identifier : Identifier [0..*]
+    instantiates : uri [0..*]
+    reasonCode : CodeableConcept [0..*]
+    status : code [1..1]
+    statusReason : CodeableConcept [0..*]
+}
+class Legemiddelrekvirering <<MedicationRequest>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-medicationrequest.html Legemiddelrekvirering _blank]] {
+    authoredOn : dateTime [0..1]
+    category : CodeableConcept [0..*]
+    courseOfTherapyType : CodeableConcept [0..1]
+    doNotPerform : boolean [0..1]
+    dosageInstruction : Dosage [0..*]
+    extension[delAvBehandlingsregime] : string [0..1]
+    extension[kliniskStudie] : boolean [0..1]
+    extension[prosentvisDoseendring] : Quantity [0..1]
+    groupIdentifier : Identifier [0..1]
+    identifier : Identifier [0..*]
+    instantiatesCanonical : canonical [0..*]
+    instantiatesUri : uri [0..*]
+    intent : code [1..1]
+    priority : code [0..1]
+    reasonCode : CodeableConcept [0..*]
+    reported[x] : boolean [0..1]
+    status : code [1..1]
+    statusReason : CodeableConcept [0..1]
+    substitution : BackboneElement [0..1]
+}
+class Organisasjon <<Organization>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-organization.html Organisasjon _blank]] {
+    address : Address [0..*]
+    alias : string [0..*]
+    identifier : Identifier [0..*]
+    identifier[ENH] : Identifier [0..*]
+    identifier[RSH] : Identifier [0..*]
+    name : string [1..1]
+    type : CodeableConcept [0..*]
+}
+class Pasient <<Patient>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-patient.html Pasient _blank]] {
+    address : Address [0..*]
+    birthDate : date [0..1]
+    gender : code [0..1]
+    identifier : Identifier [0..*]
+    identifier[DNR] : Identifier [0..1]
+    identifier[FNR] : Identifier [0..1]
+}
+class Helsepersonell <<Practitioner>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-practitioner.html Helsepersonell _blank]] {
+    identifier : Identifier [0..*]
+    identifier[HPR] : Identifier [0..1]
+}
+class Virkestoff <<Substance>> [[https://folkehelseinstituttet.github.io/LMDI/StructureDefinition-lmdi-substance.html Virkestoff _blank]] {
+    category : CodeableConcept [1..1]
+    code : CodeableConcept [1..1]
+    identifier : Identifier [0..*]
+    instance : BackboneElement [0..*]
+    status : code [0..1]
+}
+
+Diagnose --> Pasient : "1..1\nsubject"
+Episode --> Organisasjon : "0..1\nserviceProvider"
+Legemiddel --> Virkestoff : "0..*\ningredient.item"
+Legemiddel --> Legemiddel : "0..*\ningredient.item"
+Legemiddeladministrering --> Legemiddel : "1..1\nmedication"
+Legemiddeladministrering --> Pasient : "1..1\nsubject"
+Legemiddeladministrering --> Episode : "0..1\ncontext"
+Legemiddeladministrering --> Diagnose : "0..*\nreasonReference"
+Legemiddeladministrering --> Legemiddelrekvirering : "0..1\nrequest"
+Legemiddelrekvirering --> Legemiddel : "1..1\nmedication"
+Legemiddelrekvirering --> Pasient : "1..1\nsubject"
+Legemiddelrekvirering --> Episode : "0..1\nencounter"
+Legemiddelrekvirering --> Helsepersonell : "0..1\nrequester"
+Legemiddelrekvirering --> Diagnose : "0..*\nreasonReference"
+Legemiddelrekvirering --> Legemiddelrekvirering : "0..1\npriorPrescription"
+Organisasjon --> Organisasjon : "0..1\npartOf"
+
+@enduml
