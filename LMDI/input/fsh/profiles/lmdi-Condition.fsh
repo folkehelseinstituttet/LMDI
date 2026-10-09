@@ -206,13 +206,16 @@ Description: "Eksempel på diagnose med ICD-10-kode J30 - allergisk rhinitt"
 
 Instance: Diagnose-ICD10-Multippel
 InstanceOf: Diagnose
-Description: "Eksempel på diagnose med flere ICD-10-koder (multippel koding)"
+Description: "Eksempel på diagnose med SNOMED CT og flere ICD-10-koder (multippel koding)"
 * subject = Reference(Pasient-Med-FNR)
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
 * clinicalStatus.coding.code = #active
+* code.coding[SCT].system = "http://snomed.info/sct"
+* code.coding[SCT] = #735599007
+* code.coding[SCT].display = "Rheumatoid arthritis with erosion of joint (disorder)"
 * code.coding[ICD10][0].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
-* code.coding[ICD10][0] = #I20
-* code.coding[ICD10][0].display = "Angina pectoris"
+* code.coding[ICD10][0] = #M06.99
+* code.coding[ICD10][0].display = "Uspesifisert revmatoid artritt i uspesifisert lokalisasjon"
 * code.coding[ICD10][1].system = "urn:oid:2.16.578.1.12.4.1.1.7110"
-* code.coding[ICD10][1] = #J30
-* code.coding[ICD10][1].display = "Vasomotorisk og allergisk rhinitt"
+* code.coding[ICD10][1] = #M24.19
+* code.coding[ICD10][1].display = "Andre lidelser i leddbrusk;uspes lokalis"
