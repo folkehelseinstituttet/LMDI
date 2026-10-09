@@ -1,7 +1,7 @@
 {
   "codeSystems" : [{
     "url" : "http://fhir.no/ValueSet/atc-valueset",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "active",
     "name" : "ATCValueSet",
     "title" : "ATC Kodesystem ValueSet",
@@ -13,7 +13,7 @@
   },
   {
     "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/LokalLegemiddelkatalogValues",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "active",
     "name" : "LokalLegemiddelkatalogValues",
     "title" : "Lokal Legemiddelkatalog Values",
@@ -22,7 +22,7 @@
   },
   {
     "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "active",
     "name" : "KommunenummerValueSet",
     "title" : "Kommunenummer ValueSet",
@@ -31,7 +31,7 @@
   },
   {
     "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "active",
     "name" : "LegemiddelKoder",
     "title" : "Gyldige legemiddelkoder",
@@ -50,7 +50,7 @@
   },
   {
     "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "active",
     "name" : "LmdiAddressType",
     "title" : "LMDI Address Type",
@@ -63,7 +63,7 @@
   },
   {
     "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-use",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "active",
     "name" : "LmdiAddressUse",
     "title" : "LMDI Address Use",
@@ -75,7 +75,7 @@
   },
   {
     "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
-    "version" : "1.1.5",
+    "version" : "1.1.7",
     "status" : "draft",
     "name" : "LegemiddeladministreringStatus",
     "title" : "Status for legemiddeladministrering",
@@ -226,8 +226,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.161"],
     "uses" : {
     },
-    "StructureDefinition-lmdi-condition.html" : "Diagnose",
-    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering"
+    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
+    "StructureDefinition-lmdi-condition.html" : "Diagnose"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -527,14 +527,14 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-lmdi-patient.html" : "Pasient",
-    "StructureDefinition-lmdi-condition.html" : "Diagnose",
     "StructureDefinition-lmdi-encounter.html" : "Episode",
-    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
-    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
-    "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
-    "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+    "StructureDefinition-lmdi-patient.html" : "Pasient",
     "StructureDefinition-lmdi-substance.html" : "Virkestoff",
+    "StructureDefinition-lmdi-medicationrequest.html" : "Legemiddelrekvirering",
+    "StructureDefinition-lmdi-medicationadministration.html" : "Legemiddeladministrering",
+    "StructureDefinition-lmdi-bundle.html" : "LegemiddelregisterBundle",
+    "StructureDefinition-lmdi-condition.html" : "Diagnose",
+    "StructureDefinition-lmdi-practitioner.html" : "Helsepersonell",
     "StructureDefinition-lmdi-medication.html" : "Legemiddel",
     "StructureDefinition-lmdi-organization.html" : "Organisasjon"
   },

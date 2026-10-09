@@ -1,4 +1,4 @@
-# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
+# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,11 +14,12 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.1.5 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.1.7 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddeladministrering |
 
  
 Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt. 
+Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error. 
 
 **Usages:**
 
@@ -43,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationadministration",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration",
-  "version" : "1.1.5",
+  "version" : "1.1.7",
   "name" : "Legemiddeladministrering",
   "title" : "Legemiddeladministrering",
   "_title" : {
@@ -76,7 +77,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.",
+  "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.\n\nDersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -85,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       },
       {
         "url" : "content",
-        "valueString" : "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given."
+        "valueString" : "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.\n\nIf information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -139,14 +140,9 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "max" : "0"
     },
     {
-      "id" : "MedicationAdministration.partOf",
-      "path" : "MedicationAdministration.partOf",
-      "max" : "0"
-    },
-    {
-      "id" : "MedicationAdministration.status",
-      "path" : "MedicationAdministration.status",
-      "short" : "Status administrering (completed | entered-in-error)",
+      "id" : "MedicationAdministration.identifier",
+      "path" : "MedicationAdministration.identifier",
+      "short" : "Identifikator som entydig identifiserer legemiddeladministreringen over tid.",
       "_short" : {
         "extension" : [{
           "extension" : [{
@@ -155,12 +151,12 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
           },
           {
             "url" : "content",
-            "valueString" : "Administration status (completed | entered-in-error)"
+            "valueString" : "Identifier that uniquely identifies the medication administration over time."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Status administrering. Skal vanligvis settes til 'Gjennomført' (completed), men 'Feilregistrert' (entered-in-error) MÅ benyttes hvis registreringen inneholder en alvorlig feil og skal slettes.",
+      "definition" : "Identifikator som entydig identifiserer legemiddeladministreringen over tid. Identifikatoren skal beholdes dersom en tidligere rapportert administrering korrigeres/endres eller annulleres/slettes og rapporteres på nytt.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -169,7 +165,72 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
           },
           {
             "url" : "content",
-            "valueString" : "Administration status. It should usually be set to 'completed', but 'entered-in-error' MUST be used if the record contains a serious error and shall be deleted."
+            "valueString" : "Identifier that uniquely identifies the medication administration over time. The identifier shall be retained if a previously reported administration is corrected/amended or cancelled/deleted and reported again."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "Avsender skal benytte samme identifikator ved ny rapportering av en tidligere innsendt administrering. En korrigering/endring skal ikke rapporteres som en ny administrering med ny identifikator. identifier.system bør identifisere avsenders identifikatorområde slik at identifikatoren er entydig på tvers av avsendere.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The sender shall use the same identifier when re-reporting a previously submitted administration. A correction/amendment shall not be reported as a new administration with a new identifier. identifier.system should identify the sender's identifier namespace so that the identifier is unique across senders."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
+    },
+    {
+      "id" : "MedicationAdministration.partOf",
+      "path" : "MedicationAdministration.partOf",
+      "max" : "0"
+    },
+    {
+      "id" : "MedicationAdministration.status",
+      "path" : "MedicationAdministration.status",
+      "short" : "Status for legemiddeladministreringen (completed | entered-in-error)",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Status of the medication administration (completed | entered-in-error)"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Angir om legemiddeladministreringen er utført eller om en tidligere registrert administrering er feilregistrert. completed brukes for en utført administrering. entered-in-error brukes når en tidligere rapportert administrering skal annulleres/slettes fordi registreringen ikke representerer en gyldig administrering.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Indicates whether the medication administration has been carried out or whether a previously registered administration was entered in error. completed is used for an administration that has been carried out. entered-in-error is used when a previously reported administration is to be cancelled/deleted because the record does not represent a valid administration."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "comment" : "Ved korrigering/endring av opplysninger om en tidligere rapportert administrering skal ressursen rapporteres på nytt med samme identifikator (identifier) og korrigerte opplysninger. Ved annullering/sletting skal den rapporteres på nytt med samme identifikator (identifier) og status entered-in-error. En tidligere rapportert administrering skal ikke annulleres/slettes ved bare å utelate den fra senere innsendinger.",
+      "_comment" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "When information about a previously reported administration is corrected/amended, the resource shall be reported again with the same identifier and the corrected information. On cancellation/deletion it shall be reported again with the same identifier and status entered-in-error. A previously reported administration shall not be cancelled/deleted merely by omitting it from later submissions."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

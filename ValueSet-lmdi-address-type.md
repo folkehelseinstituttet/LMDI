@@ -1,4 +1,4 @@
-# LMDI Address Type - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
+# LMDI Address Type - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type **  | *Version*:1.1.5 **  |
-| Active as of 2026-09-21 | *Computable Name*:LmdiAddressType |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type **  | *Version*:1.1.7 **  |
+| Active as of 2026-10-09 | *Computable Name*:LmdiAddressType |
 
  
 Tillatt verdi for address.type i LMDI: physical 
@@ -53,7 +53,7 @@ Tillatt verdi for address.type i LMDI: physical
   "resourceType" : "ValueSet",
   "id" : "lmdi-address-type",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-address-type",
-  "version" : "1.1.5",
+  "version" : "1.1.7",
   "name" : "LmdiAddressType",
   "title" : "LMDI Address Type",
   "_title" : {
@@ -70,7 +70,7 @@ Tillatt verdi for address.type i LMDI: physical
     }]
   },
   "status" : "active",
-  "date" : "2026-09-21T09:39:56+00:00",
+  "date" : "2026-10-09T09:40:46+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

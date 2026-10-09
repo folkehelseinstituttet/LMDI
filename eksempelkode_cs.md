@@ -1,4 +1,4 @@
-# C# eksempelkode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.5
+# C# eksempelkode - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
