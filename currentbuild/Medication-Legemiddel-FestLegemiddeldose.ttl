@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddeldose> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-FestLegemiddeldose"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+           fhir:l <http://www.whocc.no/atc>
+         ] ;
+         fhir:code [ fhir:v "A10AB05" ] ;
+         fhir:display [ fhir:v "insulin aspart" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"^^xsd:anyURI ;
+         fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelDose>
+       ] ;
+       fhir:code [ fhir:v "ID_0008D107-4F34-470F-83CA-541F6E9FA3C4" ] ;
+       fhir:display [ fhir:v "NovoRapid Flexpen inj, oppl 100 E/ml" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

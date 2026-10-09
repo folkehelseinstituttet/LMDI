@@ -1,0 +1,32 @@
+@startuml
+
+skinparam Shadowing false
+
+title "Eksempel på enkel flyt 2"
+header "Legemiddeldata fra institusjon til LMR"
+footer "Folkehelseinstituttet"
+
+participant "Klient / fagystem" as K #lightgreen
+boundary "LMR FHIR API" as A #yellow
+
+alt Registrere Pasient
+K -> A : Søk på Pasient (f.eks. FNR)
+A -> K : Returnér svar på søk (1..*  ID = positivt)
+
+
+else Hvis ikke
+K <-- A : Retunér svar på søk (0 ID = negativt)
+
+K -> A : Skriv Pasient
+
+create Pasient
+A -> Pasient: opprettPasient()
+
+A -> K : Returnér ID
+
+end
+
+K -> A : Hent Pasient (ID)
+A -> K : Returnér Pasient
+
+@enduml
