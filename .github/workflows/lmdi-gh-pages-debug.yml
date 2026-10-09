@@ -2,7 +2,7 @@ name: LMDI-gh-pages-currentbuild
 
 # Publiserer siste bygg til /currentbuild. Kjøres automatisk ved push til main.
 # Bygger uten terminologiserver (-tx n/a): kodevalidering mot tx.fhir.org tok ca. 28 av 30
-# minutter og kunne henge i timevis. Full validering gjøres i rot-bygget (LMDI-gh-pages).
+# minutter og kunne henge i timevis. Det samme gjelder rot-bygget (LMDI-gh-pages).
 # Roten publiseres separat med LMDI-gh-pages, som startes manuelt.
 on:
   workflow_dispatch:
