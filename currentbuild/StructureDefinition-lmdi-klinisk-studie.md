@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie **  | *Version*:1.1.7 **  |
-| Active as of 2026-10-07 | *Computable Name*:KliniskStudie |
+| Active as of 2026-10-09 | *Computable Name*:KliniskStudie |
 
 Angir om legemidlet gis som en del av en klinisk studie.
 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-klinisk-studie.
     }]
   },
   "status" : "active",
-  "date" : "2026-10-07T09:44:04+00:00",
+  "date" : "2026-10-09T08:26:09+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

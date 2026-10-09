@@ -221,7 +221,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "comment" : "Ved korrigering/endring av opplysninger om en tidligere rapportert administrering skal ressursen rapporteres på nytt med samme identifikator og korrigerte opplysninger. Ved annullering/sletting skal den rapporteres på nytt med samme identifikator og status entered-in-error. En tidligere rapportert administrering skal ikke annulleres/slettes ved bare å utelate den fra senere innsendinger.",
+      "comment" : "Ved korrigering/endring av opplysninger om en tidligere rapportert administrering skal ressursen rapporteres på nytt med samme identifikator (identifier) og korrigerte opplysninger. Ved annullering/sletting skal den rapporteres på nytt med samme identifikator (identifier) og status entered-in-error. En tidligere rapportert administrering skal ikke annulleres/slettes ved bare å utelate den fra senere innsendinger.",
       "_comment" : {
         "extension" : [{
           "extension" : [{

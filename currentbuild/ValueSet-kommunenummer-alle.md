@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/kommunenummer-alle **  | *Version*:1.1.7 **  |
-| Active as of 2026-10-07 | *Computable Name*:KommunenummerValueSet |
+| Active as of 2026-10-09 | *Computable Name*:KommunenummerValueSet |
 
  
 Komplett kodeverk for norske kommunenummer (Volven 3402) 
@@ -71,7 +71,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
     }]
   },
   "status" : "active",
-  "date" : "2026-10-07T09:44:04+00:00",
+  "date" : "2026-10-09T08:26:09+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

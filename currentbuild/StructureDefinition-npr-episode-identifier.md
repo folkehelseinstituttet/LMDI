@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier **  | *Version*:1.1.7 **  |
-| Active as of 2026-10-07 | *Computable Name*:NprEpisodeIdentifier |
+| Active as of 2026-10-09 | *Computable Name*:NprEpisodeIdentifier |
 
 Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren.
 
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
     }]
   },
   "status" : "active",
-  "date" : "2026-10-07T09:44:04+00:00",
+  "date" : "2026-10-09T08:26:09+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
