@@ -216,6 +216,7 @@
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
@@ -237,16 +238,22 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/condition.html#Condition.code">fhir:code</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
+a sct:735599007 ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct&gt;       ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;735599007&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Rheumatoid arthritis with erosion of joint (disorder)&quot; ]     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:2.16.578.1.12.4.1.1.7110&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:2.16.578.1.12.4.1.1.7110&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;I20&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Angina pectoris&quot; ]     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;M06.99&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Uspesifisert revmatoid artritt i uspesifisert lokalisasjon&quot; ]     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;urn:oid:2.16.578.1.12.4.1.1.7110&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;urn:oid:2.16.578.1.12.4.1.1.7110&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;J30&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Vasomotorisk og allergisk rhinitt&quot; ]     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;M24.19&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Andre lidelser i leddbrusk;uspes lokalis&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">fhir:subject</a> [
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:l</a> fhir:Patient/Patient-Med-FNR ;
@@ -282,7 +289,7 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Fri, Oct 9, 2026 09:40+0000">2026-10-09</span>
+                        4.0.1</a>. Generated <span title="Fri, Oct 9, 2026 10:49+0000">2026-10-09</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

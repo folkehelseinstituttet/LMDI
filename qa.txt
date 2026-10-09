@@ -1,16 +1,16 @@
 Lmdi : Validation Results
 =========================================
 
-err = 51, warn = 1130, info = 58
+err = 51, warn = 1128, info = 58
 IG Publisher Version: 2.2.8 Out of date - current version is 3.0.0
-Generated Fri Oct 09 09:42:01 UTC 2026. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.7 (canonical = http://hl7.no/fhir/ig/lmdi)
+Generated Fri Oct 09 10:51:57 UTC 2026. FHIR version 4.0.1 for hl7.fhir.no.lmdi#1.1.7 (canonical = http://hl7.no/fhir/ig/lmdi)
  Build Errors : 23 / 108 / 0
  /github/workspace/LMDI/fsh-generated/resources/Bundle-Bundle-Scenario-Sykehjem-Oksykodon : 2 / 20 / 22
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-LokalLegemiddelkatalogCodeSystem : 2 / 5 / 2
  /github/workspace/LMDI/fsh-generated/resources/CodeSystem-kommunenummer-codesystem : 2 / 7 / 2
  /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10 : 0 / 2 / 1
  /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10-Allergi : 0 / 2 / 1
- /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10-Multippel : 0 / 3 / 1
+ /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-ICD10-Multippel : 0 / 1 / 1
  /github/workspace/LMDI/fsh-generated/resources/Condition-Diagnose-SNOMED-SCT : 0 / 1 / 1
  /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehjem : 0 / 1 / 2
  /github/workspace/LMDI/fsh-generated/resources/Encounter-Episode-Sykehus : 0 / 1 / 2
@@ -275,8 +275,6 @@ WARNING: Condition/Diagnose-ICD10: Condition: Constraint failed: dom-6: 'A resou
 WARNING: Condition/Diagnose-ICD10-Allergi: Condition.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated
 WARNING: Condition/Diagnose-ICD10-Allergi: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Condition-Diagnose-ICD10-Multippel.json ==
-WARNING: Condition/Diagnose-ICD10-Multippel: Condition.code.coding[0].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated
-WARNING: Condition/Diagnose-ICD10-Multippel: Condition.code.coding[1].system: A definition for CodeSystem 'urn:oid:2.16.578.1.12.4.1.1.7110' could not be found, so the code cannot be validated
 WARNING: Condition/Diagnose-ICD10-Multippel: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 == fsh-generated/resources/Condition-Diagnose-SNOMED-SCT.json ==
 WARNING: Condition/Diagnose-SNOMED-SCT: Condition: Constraint failed: dom-6: 'A resource should have narrative for robust management (text.`div`.exists())' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)

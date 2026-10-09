@@ -1075,7 +1075,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "Condition/Diagnose-ICD10-Multippel"
       },
       "name" : "Diagnose-ICD10-Multippel",
-      "description" : "Eksempel på diagnose med flere ICD-10-koder (multippel koding)",
+      "description" : "Eksempel på diagnose med SNOMED CT og flere ICD-10-koder (multippel koding)",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-condition"
     },
     {

@@ -50,7 +50,7 @@ Kodesystem for norske kommunenummer (Volven 3402)
     }]
   },
   "status" : "active",
-  "date" : "2026-10-09T09:40:46+00:00",
+  "date" : "2026-10-09T10:49:44+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
