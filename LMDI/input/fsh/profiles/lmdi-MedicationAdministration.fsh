@@ -65,7 +65,7 @@ Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres 
 * status from LegemiddeladministreringStatus
 * status ^short = "Status for legemiddeladministreringen (completed | entered-in-error)"
 * status ^definition = "Angir om legemiddeladministreringen er utført eller om en tidligere registrert administrering er feilregistrert. completed brukes for en utført administrering. entered-in-error brukes når en tidligere rapportert administrering skal annulleres/slettes fordi registreringen ikke representerer en gyldig administrering."
-* status ^comment = "Ved korrigering/endring av opplysninger om en tidligere rapportert administrering skal ressursen rapporteres på nytt med samme identifikator og korrigerte opplysninger. Ved annullering/sletting skal den rapporteres på nytt med samme identifikator og status entered-in-error. En tidligere rapportert administrering skal ikke annulleres/slettes ved bare å utelate den fra senere innsendinger."
+* status ^comment = "Ved korrigering/endring av opplysninger om en tidligere rapportert administrering skal ressursen rapporteres på nytt med samme identifikator (identifier) og korrigerte opplysninger. Ved annullering/sletting skal den rapporteres på nytt med samme identifikator (identifier) og status entered-in-error. En tidligere rapportert administrering skal ikke annulleres/slettes ved bare å utelate den fra senere innsendinger."
 * status ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * status ^short.extension[=].extension[+].url = "lang"
 * status ^short.extension[=].extension[=].valueCode = #en
