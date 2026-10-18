@@ -142,7 +142,8 @@ echo %GREEN%SUSHI OK!%RESET%
 echo.
 echo %BLUE%Kjører IG Publisher...%RESET%
 echo Dette kan ta flere minutter...
-java %JAVA_OPTS% -jar "%PUBLISHER_JAR%" publisher -ig ig.ini -no-sushi
+:: Bygger uten terminologiserver (-tx n/a), som i workflowene: tx.fhir.org kan henge i timevis.
+java %JAVA_OPTS% -jar "%PUBLISHER_JAR%" publisher -ig ig.ini -no-sushi -tx n/a
 if %errorlevel% neq 0 (
     echo %RED%IG Publisher feilet!%RESET%
     goto BUILD_FAILED
