@@ -33,6 +33,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | Versjon | Dato | Beskrivelse |
 |---------|------|-------------|
+| 1.1.8 | 2026-10-18 | Nye extensions Administrert ved (Legemiddeladministrering) og Rekvirert ved (Legemiddelrekvirering), med referanse til organisasjonen der administreringen/rekvireringen ble utført, for tilfeller der episoden gjelder hele innleggelsen. Presisert `Episode.serviceProvider`. Nye eksempler. |
 | 1.1.7 | 2026-10-07 | Diagnose: slicen `ICD10` på `code.coding` er endret fra 0..1 til 0..*, for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten). Nytt eksempel med flere ICD-10-koder. |
 | 1.1.6 | 2026-10-07 | Legemiddeladministrering: presisert tekst for `identifier` og `status`, og at korrigering og annullering rapporteres på nytt med samme identifikator (`entered-in-error` ved annullering). |
 | 1.1.5 | 2026-09-21 | Legemiddel: slicingen på `form.coding` er endret fra closed til open. Legemiddelform (OID 7448) og SNOMED CT er fortsatt definerte slices, men andre kodesystemer for legemiddelform er nå tillatt. |

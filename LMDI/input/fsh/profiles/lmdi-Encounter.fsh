@@ -56,6 +56,12 @@ Description: "En behandlingsepisode som representerer et klinisk møte, konsulta
 * serviceProvider ^short.extension[=].extension[=].valueCode = #en
 * serviceProvider ^short.extension[=].extension[+].url = "content"
 * serviceProvider ^short.extension[=].extension[=].valueString = "Location of the episode"
+* serviceProvider ^definition = "Organisasjonen episoden fant sted ved. Hvis episoden gjelder hele innleggelsen og ikke gjenspeiler pasientens forflytninger mellom avdelinger, kan organisasjonen for den enkelte administreringen eller rekvireringen angis med administrertVed i Legemiddeladministrering og rekvirertVed i Legemiddelrekvirering."
+* serviceProvider ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* serviceProvider ^definition.extension[=].extension[+].url = "lang"
+* serviceProvider ^definition.extension[=].extension[=].valueCode = #en
+* serviceProvider ^definition.extension[=].extension[+].url = "content"
+* serviceProvider ^definition.extension[=].extension[=].valueString = "The organization where the episode took place. If the episode covers the entire admission and does not reflect the patient's transfers between departments, the organization for the individual administration or request can be specified with administrertVed in Medication Administration and rekvirertVed in Medication Request."
 
 // EKSEMPLER
 Instance: Episode-Sykehus
@@ -82,3 +88,10 @@ Description: "Eksempel på episode i spesialisthelsetjenesten med post som tjene
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 * serviceProvider = Reference(Organisasjon-Post)
+
+Instance: Episode-Sykehus-Innleggelse
+InstanceOf: Episode
+Description: "Eksempel på episode som gjelder hele innleggelsen, med sykehuset som tjenesteyter"
+* status = #finished
+* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
+* serviceProvider = Reference(Organisasjon-Sykehus-2)

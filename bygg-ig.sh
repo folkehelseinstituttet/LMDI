@@ -302,7 +302,8 @@ run_publisher() {
     
     start_time=$(date +%s)
     
-    java $JAVA_OPTS -jar "$PUBLISHER_JAR" publisher -ig ig.ini -no-sushi -watch-mode off -debug false
+    # Bygger uten terminologiserver (-tx n/a), som i workflowene: tx.fhir.org kan henge i timevis.
+    java $JAVA_OPTS -jar "$PUBLISHER_JAR" publisher -ig ig.ini -no-sushi -tx n/a -watch-mode off -debug false
     
     local exit_code=$?
     end_time=$(date +%s)
