@@ -63,6 +63,20 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * extension[kliniskStudie] ^definition.extension[=].extension[+].url = "content"
 * extension[kliniskStudie] ^definition.extension[=].extension[=].valueString = "Indicates whether the medication is given as part of a clinical trial."
 
+* extension contains RekvirertVed named rekvirertVed 0..1 MS
+* extension[rekvirertVed] ^short = "Stedet (organisasjonen) rekvireringen ble utført"
+* extension[rekvirertVed] ^definition = "Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen."
+* extension[rekvirertVed] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* extension[rekvirertVed] ^short.extension[=].extension[+].url = "lang"
+* extension[rekvirertVed] ^short.extension[=].extension[=].valueCode = #en
+* extension[rekvirertVed] ^short.extension[=].extension[+].url = "content"
+* extension[rekvirertVed] ^short.extension[=].extension[=].valueString = "The place (organization) where the request was made"
+* extension[rekvirertVed] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* extension[rekvirertVed] ^definition.extension[=].extension[+].url = "lang"
+* extension[rekvirertVed] ^definition.extension[=].extension[=].valueCode = #en
+* extension[rekvirertVed] ^definition.extension[=].extension[+].url = "content"
+* extension[rekvirertVed] ^definition.extension[=].extension[=].valueString = "The request also references an episode, which in turn may reference an organization. Requested at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+
 
 // Deaktiverte elementer
 * text 0..0
@@ -328,3 +342,23 @@ Description: "Eksempel på rekvirering av cellegift (Cisplatin) med prosentvis d
 * dosageInstruction.doseAndRate.rateQuantity.system = "http://unitsofmeasure.org"
 * dosageInstruction.doseAndRate.rateQuantity.code = #mg/min
 * dosageInstruction.doseAndRate.rateQuantity.unit = "milligram per minute"
+
+Instance: Rekvirering-RekvirertVed
+InstanceOf: Legemiddelrekvirering
+Description: "Eksempel på rekvirering der episoden gjelder hele innleggelsen, og posten rekvireringen ble utført ved er angitt i rekvirertVed"
+* extension[rekvirertVed].valueReference = Reference(Organisasjon-Post)
+* identifier.system = "http://example.org/rekvirering-id"
+* identifier.value = "8a4e6d2c-1b3f-4c5a-9e7d-0f2b4a6c8e13"
+* status = #active
+* intent = #order
+* category.coding.system = "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+* category.coding.code = #inpatient
+* medicationReference = Reference(Legemiddel-FestLegemiddelpakning)
+* subject = Reference(Pasient-Med-FNR)
+* encounter = Reference(Episode-Sykehus-Innleggelse)
+* authoredOn = "2025-06-14"
+* requester = Reference(Helsepersonell-Med-HPR)
+* dosageInstruction.doseAndRate.doseQuantity.value = 50
+* dosageInstruction.doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
+* dosageInstruction.doseAndRate.doseQuantity.code = #mg
+* dosageInstruction.doseAndRate.doseQuantity.unit = "mg"

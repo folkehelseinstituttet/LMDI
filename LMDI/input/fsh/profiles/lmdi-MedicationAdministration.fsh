@@ -2,7 +2,7 @@ Profile: Legemiddeladministrering
 Parent: MedicationAdministration
 Id: lmdi-medicationadministration
 Title: "Legemiddeladministrering"
-Description: """Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.
+Description: """Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.
 
 Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error."""
 
@@ -18,7 +18,7 @@ Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres 
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.\n\nIf information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used."
+* ^description.extension[=].extension[=].valueString = "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the organization where the administration was performed (administrertVed, when the episode covers the entire admission), the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.\n\nIf information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used."
 
 // Core Elements
 * subject only Reference(Pasient)
@@ -112,6 +112,20 @@ Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres 
 * context ^definition.extension[=].extension[=].valueCode = #en
 * context ^definition.extension[=].extension[+].url = "content"
 * context ^definition.extension[=].extension[=].valueString = "Reference to which institutional stay or appointment the patient was in when the medication was administered."
+
+* extension contains AdministrertVed named administrertVed 0..1 MS
+* extension[administrertVed] ^short = "Stedet (organisasjonen) administreringen ble utført"
+* extension[administrertVed] ^definition = "Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen."
+* extension[administrertVed] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* extension[administrertVed] ^short.extension[=].extension[+].url = "lang"
+* extension[administrertVed] ^short.extension[=].extension[=].valueCode = #en
+* extension[administrertVed] ^short.extension[=].extension[+].url = "content"
+* extension[administrertVed] ^short.extension[=].extension[=].valueString = "The place (organization) where the administration was performed"
+* extension[administrertVed] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* extension[administrertVed] ^definition.extension[=].extension[+].url = "lang"
+* extension[administrertVed] ^definition.extension[=].extension[=].valueCode = #en
+* extension[administrertVed] ^definition.extension[=].extension[+].url = "content"
+* extension[administrertVed] ^definition.extension[=].extension[=].valueString = "The administration also references an episode, which in turn may reference an organization. Administered at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
 
 * category from http://hl7.org/fhir/ValueSet/medication-admin-category (preferred)
 * category ^short = "Kategori (inneliggende | poliklinisk | selvadministrert | utskrivelse)"
@@ -425,3 +439,22 @@ Description: "Eksempel på administrering av cellegift (Cisplatin) basert på re
 * dosage.rateRatio.denominator.value = 1
 * dosage.rateRatio.denominator.system = "http://unitsofmeasure.org"
 * dosage.rateRatio.denominator.code = #min
+
+Instance: Administrering-AdministrertVed
+InstanceOf: Legemiddeladministrering
+Description: "Eksempel på administrering der episoden gjelder hele innleggelsen, og posten administreringen ble utført ved er angitt i administrertVed"
+* status = #completed
+* identifier.value = "3f2b8c1e-9d47-4a6b-8e15-2c7d9a0f4b61"
+* medicationReference = Reference(Legemiddel-FestLegemiddelpakning)
+* subject = Reference(Pasient-Med-FNR)
+* context = Reference(Episode-Sykehus-Innleggelse)
+* extension[administrertVed].valueReference = Reference(Organisasjon-Post)
+* request = Reference(Rekvirering-RekvirertVed)
+* effectiveDateTime = "2025-06-14T08:15:00+02:00"
+* dosage.route.coding[OID7477].system = "urn:oid:2.16.578.1.12.4.1.1.7477"
+* dosage.route.coding[OID7477].code = #53
+* dosage.route.coding[OID7477].display = "Oral bruk"
+* dosage.dose.value = 50
+* dosage.dose.unit = "milligram"
+* dosage.dose.system = "http://unitsofmeasure.org"
+* dosage.dose.code = #mg
