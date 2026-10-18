@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Rekvirering-Cellegift"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring">
+    <valueQuantity>
+      <value value="50"/>
+      <unit value="%"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="%"/>
+    </valueQuantity>
+  </extension>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime">
+    <valueString value="B102 Gastro, ECX, Epirubicin, Cisplatin, Xeloda"/>
+  </extension>
+  <identifier>
+    <system value="http://example.org/rekvirering-id"/>
+    <value value="46456453321544556324"/>
+  </identifier>
+  <status value="unknown"/>
+  <intent value="original-order"/>
+  <medicationReference>
+    <reference value="Medication/Lokalt-legemiddel-cellegift"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <authoredOn value="2026-03-28"/>
+  <requester>
+    <reference value="Practitioner/Helsepersonell-Uten-HPR"/>
+  </requester>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <count value="5"/>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="mo"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="intravenøs administrasjonsvei"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1025"/>
+        <unit value="milligram"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+      <rateQuantity>
+        <value value="12"/>
+        <unit value="milligram per minute"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg/min"/>
+      </rateQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

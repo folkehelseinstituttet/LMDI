@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Rekvirering-EnteredInError"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie">
+    <valueBoolean value="false"/>
+  </extension>
+  <identifier>
+    <system value="http://example.org/rekvirering-id"/>
+    <value value="13fb2660-f88a-473e-b0a9-a72266dc7137"/>
+  </identifier>
+  <status value="entered-in-error"/>
+  <statusReason>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"/>
+      <code value="sdupther"/>
+      <display value="Duplicate therapy"/>
+    </coding>
+  </statusReason>
+  <intent value="plan"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+      <code value="inpatient"/>
+    </coding>
+  </category>
+  <reportedBoolean value="true"/>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-FestLegemiddelVirkestoff-2"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-DNR"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Episode-Sykehus"/>
+  </encounter>
+  <authoredOn value="2025-04-15"/>
+  <requester>
+    <reference value="Practitioner/Helsepersonell-Med-HPR"/>
+  </requester>
+  <reasonReference>
+    <reference value="Condition/Diagnose-ICD10-Allergi"/>
+  </reasonReference>
+  <courseOfTherapyType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"/>
+      <code value="seasonal"/>
+      <display value="Seasonal"/>
+    </coding>
+  </courseOfTherapyType>
+  <dosageInstruction>
+    <timing>
+      <code>
+        <coding>
+          <system value="urn:oid:2.16.578.1.12.4.1.1.7478"/>
+          <code value="5685"/>
+          <display value="1 inntil x1"/>
+        </coding>
+      </code>
+    </timing>
+    <asNeededBoolean value="true"/>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="15"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

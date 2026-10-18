@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-NatriumkloridBBraun"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="V07AB"/>
+        <display value="Oppløsnings- og fortynningsvæsker, inkl. skyllemidler"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelMerkevare"/>
+      <code value="ID_42240226-8225-468C-AB0A-9FD27AA67D44"/>
+      <display value="Natriumklorid B. Braun oppl væske til parenteral bruk 9 mg/ml"/>
+    </coding>
+  </code>
+</Medication>

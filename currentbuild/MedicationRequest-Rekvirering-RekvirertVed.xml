@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Rekvirering-RekvirertVed"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved">
+    <valueReference>
+      <reference value="Organization/Organisasjon-Post"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="http://example.org/rekvirering-id"/>
+    <value value="8a4e6d2c-1b3f-4c5a-9e7d-0f2b4a6c8e13"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+      <code value="inpatient"/>
+    </coding>
+  </category>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-FestLegemiddelpakning"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Episode-Sykehus-Innleggelse"/>
+  </encounter>
+  <authoredOn value="2025-06-14"/>
+  <requester>
+    <reference value="Practitioner/Helsepersonell-Med-HPR"/>
+  </requester>
+  <dosageInstruction>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="50"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

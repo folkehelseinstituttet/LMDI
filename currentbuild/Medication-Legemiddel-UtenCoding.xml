@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-UtenCoding"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <ingredient>
+    <itemReference>
+      <reference value="Medication/Legemiddel-Legemiddeldose-SmofKabiven"/>
+    </itemReference>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <coding>
+        <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
+        <code value="ID_3BDBA6F5-AE18-4A03-949A-A10BE4C085D0"/>
+        <display value="Soluvit pulv til inf væske oppl"/>
+      </coding>
+    </itemCodeableConcept>
+  </ingredient>
+  <ingredient>
+    <itemCodeableConcept>
+      <coding>
+        <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
+        <code value="ID_4440528A-4654-4C34-A36B-B85251A5410F"/>
+        <display value="Vitalipid Infant kons til inf emul"/>
+      </coding>
+    </itemCodeableConcept>
+  </ingredient>
+</Medication>
