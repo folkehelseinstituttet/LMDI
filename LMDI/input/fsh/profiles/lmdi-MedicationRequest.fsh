@@ -75,7 +75,7 @@ Description: "Legemiddelrekvirering - ordinering eller annen rekvirering av lege
 * extension[rekvirertVed] ^definition.extension[=].extension[+].url = "lang"
 * extension[rekvirertVed] ^definition.extension[=].extension[=].valueCode = #en
 * extension[rekvirertVed] ^definition.extension[=].extension[+].url = "content"
-* extension[rekvirertVed] ^definition.extension[=].extension[=].valueString = "The request also references an episode, which in turn may reference an organization. Requested at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+* extension[rekvirertVed] ^definition.extension[=].extension[=].valueString = "The request also references an episode, which in turn may reference an organization. Requested at (RekvirertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
 
 
 // Deaktiverte elementer
