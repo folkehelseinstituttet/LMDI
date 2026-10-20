@@ -1,4 +1,4 @@
-# Pasient-Uten-Personidentifikator - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Pasient-Uten-Personidentifikator - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

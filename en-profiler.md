@@ -1,4 +1,4 @@
-# FHIR profiles - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# FHIR profiles - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)
@@ -32,10 +32,12 @@ The LMDI implementation guide defines the following FHIR profiles and extensions
 
 | | | |
 | :--- | :--- | :--- |
+| [AdministrertVed](StructureDefinition-lmdi-administrert-ved.md) | [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | The place (organization) where the administration was performed. Used if the episode reflects the entire admission and does not reflect the patient’s transfers between departments. |
 | [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | The name of the regimen, treatment protocol, or course the medication is given as part of. Particularly relevant in chemotherapy. |
 | [IngrediensStyrke](StructureDefinition-lmdi-ingredient-strength.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Amount of the ingredient in the requested/administered medication, expressed as a volume or amount of active ingredient, or as a code. Used on Legemiddel.ingredient.strength when an amount is to be expressed instead of a strength. |
 | [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Indicates whether the medication is given as part of a clinical trial. |
 | [LegemiddelClassification](StructureDefinition-legemiddel-classification.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Classification of medications, primarily using ATC codes (Anatomical Therapeutic Chemical classification). |
 | [NprEpisodeIdentifier](StructureDefinition-npr-episode-identifier.md) | [Episode](StructureDefinition-lmdi-encounter.md) | Unique identifier for the episode as used in reporting to the Norwegian Patient Registry (NPR). Supports both string-based and UUID-based representations. |
 | [ProsentvisDoseendring](StructureDefinition-lmdi-prosentvis-doseendring.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Percentage dose adjustment compared to the original dosage. Particularly relevant in chemotherapy. A normal dose, without modification, is 100%. |
+| [RekvirertVed](StructureDefinition-lmdi-rekvirert-ved.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | The place (organization) where the request was made. Used if the episode reflects the entire admission and does not reflect the patient’s transfers between departments. |
 

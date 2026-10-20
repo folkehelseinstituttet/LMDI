@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -9,6 +9,13 @@
       "title": "Legemiddel Classification",
       "types": [
         "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved",
+      "title": "Administrert ved",
+      "types": [
+        "Reference"
       ]
     },
     {
@@ -45,6 +52,13 @@
         "string",
         "uri",
         "code"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved",
+      "title": "Rekvirert ved",
+      "types": [
+        "Reference"
       ]
     },
     {
@@ -191,6 +205,9 @@
       "Bundle.entry.resource",
       "Medication"
     ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved": [
+      "MedicationAdministration"
+    ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
       "Bundle.entry.resource",
       "MedicationRequest"
@@ -204,6 +221,9 @@
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-prosentvis-doseendring": [
       "Bundle.entry.resource",
+      "MedicationRequest"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved": [
       "MedicationRequest"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/npr-episode-identifier": [

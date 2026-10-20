@@ -1,4 +1,4 @@
-# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,16 +14,16 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.1.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration **  | *Version*:1.1.8 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddeladministrering |
 
  
-Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt. 
+Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt. 
 Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error. 
 
 **Usages:**
 
-* Examples for this Profile: [MedicationAdministration/Administrering-Cellegift](MedicationAdministration-Administrering-Cellegift.md), [MedicationAdministration/Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md), [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md), [MedicationAdministration/Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md)... Show 3 more, [MedicationAdministration/Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md), [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md) and [MedicationAdministration/Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md)
+* Examples for this Profile: [MedicationAdministration/Administrering-AdministrertVed](MedicationAdministration-Administrering-AdministrertVed.md), [MedicationAdministration/Administrering-Cellegift](MedicationAdministration-Administrering-Cellegift.md), [MedicationAdministration/Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md), [MedicationAdministration/Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md)... Show 4 more, [MedicationAdministration/Administrering-MedDiagnoseICD10](MedicationAdministration-Administrering-MedDiagnoseICD10.md), [MedicationAdministration/Administrering-MedDiagnoseSCT](MedicationAdministration-Administrering-MedDiagnoseSCT.md), [MedicationAdministration/Administrering-Oral](MedicationAdministration-Administrering-Oral.md) and [MedicationAdministration/Administrering-Selvadministrert](MedicationAdministration-Administrering-Selvadministrert.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-medicationadministration.json)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationadministration",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration",
-  "version" : "1.1.7",
+  "version" : "1.1.8",
   "name" : "Legemiddeladministrering",
   "title" : "Legemiddeladministrering",
   "_title" : {
@@ -77,7 +77,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.\n\nDersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.",
+  "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.\n\nDersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -86,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       },
       {
         "url" : "content",
-        "valueString" : "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where it occurred, the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.\n\nIf information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used."
+        "valueString" : "Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where the episode occurred, the organization where the administration was performed (administrertVed, when the episode covers the entire admission), the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.\n\nIf information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -138,6 +138,58 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationadmin
       "id" : "MedicationAdministration.text",
       "path" : "MedicationAdministration.text",
       "max" : "0"
+    },
+    {
+      "id" : "MedicationAdministration.extension",
+      "path" : "MedicationAdministration.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "MedicationAdministration.extension:administrertVed",
+      "path" : "MedicationAdministration.extension",
+      "sliceName" : "administrertVed",
+      "short" : "Stedet (organisasjonen) administreringen ble utført",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The place (organization) where the administration was performed"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The administration also references an episode, which in turn may reference an organization. Administered at (AdministrertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "MedicationAdministration.identifier",

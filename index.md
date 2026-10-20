@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -11,8 +11,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.7 **  |
-| Active as of 2026-10-07 | *Computable Name*:Lmdi |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.8 **  |
+| Active as of 2026-10-18 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.8 | 2026-10-18 | Nye extensions Administrert ved (Legemiddeladministrering) og Rekvirert ved (Legemiddelrekvirering), med referanse til organisasjonen der administreringen/rekvireringen ble utført, for tilfeller der episoden gjelder hele innleggelsen. Presisert`Episode.serviceProvider`. Nye eksempler. |
 | 1.1.7 | 2026-10-07 | Diagnose: slicen`ICD10`på`code.coding`er endret fra 0..1 til 0..*, for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten). Nytt eksempel med flere ICD-10-koder. |
 | 1.1.6 | 2026-10-07 | Legemiddeladministrering: presisert tekst for`identifier`og`status`, og at korrigering og annullering rapporteres på nytt med samme identifikator (`entered-in-error`ved annullering). |
 | 1.1.5 | 2026-09-21 | Legemiddel: slicingen på`form.coding`er endret fra closed til open. Legemiddelform (OID 7448) og SNOMED CT er fortsatt definerte slices, men andre kodesystemer for legemiddelform er nå tillatt. |
@@ -72,11 +73,11 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.7",
+  "version" : "1.1.8",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
-  "date" : "2026-10-07",
+  "date" : "2026-10-18",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -928,6 +929,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "valueString" : "MedicationAdministration"
       }],
       "reference" : {
+        "reference" : "MedicationAdministration/Administrering-AdministrertVed"
+      },
+      "name" : "Administrering-AdministrertVed",
+      "description" : "Eksempel på administrering der episoden gjelder hele innleggelsen, og posten administreringen ble utført ved er angitt i administrertVed",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationAdministration"
+      }],
+      "reference" : {
         "reference" : "MedicationAdministration/Administrering-Cellegift"
       },
       "name" : "Administrering-Cellegift",
@@ -1005,6 +1018,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       "name" : "Administrering-Selvadministrert",
       "description" : "Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/lmdi-administrert-ved"
+      },
+      "name" : "Administrert ved",
+      "description" : "Stedet (organisasjonen) administreringen ble utført. Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1136,6 +1161,18 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       },
       "name" : "Episode-Sykehus-2",
       "description" : "Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Episode-Sykehus-Innleggelse"
+      },
+      "name" : "Episode-Sykehus-Innleggelse",
+      "description" : "Eksempel på episode som gjelder hele innleggelsen, med sykehuset som tjenesteyter",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"
     },
     {
@@ -1423,7 +1460,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/lmdi-medicationadministration"
       },
       "name" : "Legemiddeladministrering",
-      "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.\n\nDersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.",
+      "description" : "Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.\n\nDersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.",
       "exampleBoolean" : false
     },
     {
@@ -1857,6 +1894,30 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       "name" : "Rekvirering-Paracetamol",
       "description" : "Eksempel på legemiddelrekvirering av Paracet",
       "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Rekvirering-RekvirertVed"
+      },
+      "name" : "Rekvirering-RekvirertVed",
+      "description" : "Eksempel på rekvirering der episoden gjelder hele innleggelsen, og posten rekvireringen ble utført ved er angitt i rekvirertVed",
+      "exampleCanonical" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/lmdi-rekvirert-ved"
+      },
+      "name" : "Rekvirert ved",
+      "description" : "Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{

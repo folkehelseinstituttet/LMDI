@@ -1,4 +1,4 @@
-# Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Legemiddelrekvirering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest **  | *Version*:1.1.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest **  | *Version*:1.1.8 **  |
 | Draft as of 2025-09-12 | *Computable Name*:Legemiddelrekvirering |
 
  
@@ -23,7 +23,7 @@ Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel
 **Usages:**
 
 * Refer to this Profile: [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [MedicationRequest/Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md), [MedicationRequest/Rekvirering-EnteredInError](MedicationRequest-Rekvirering-EnteredInError.md), [MedicationRequest/Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md), [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)... Show 2 more, [MedicationRequest/Rekvirering-MedDiagnoseICD10](MedicationRequest-Rekvirering-MedDiagnoseICD10.md) and [MedicationRequest/Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md)
+* Examples for this Profile: [MedicationRequest/Rekvirering-Cellegift](MedicationRequest-Rekvirering-Cellegift.md), [MedicationRequest/Rekvirering-EnteredInError](MedicationRequest-Rekvirering-EnteredInError.md), [MedicationRequest/Rekvirering-Infusjon](MedicationRequest-Rekvirering-Infusjon.md), [MedicationRequest/Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md)... Show 3 more, [MedicationRequest/Rekvirering-MedDiagnoseICD10](MedicationRequest-Rekvirering-MedDiagnoseICD10.md), [MedicationRequest/Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md) and [MedicationRequest/Rekvirering-RekvirertVed](MedicationRequest-Rekvirering-RekvirertVed.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-medicationrequest.json)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medicationrequest",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest",
-  "version" : "1.1.7",
+  "version" : "1.1.8",
   "name" : "Legemiddelrekvirering",
   "title" : "Legemiddelrekvirering",
   "_title" : {
@@ -267,6 +267,46 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-klinisk-studie"]
       }]
+    },
+    {
+      "id" : "MedicationRequest.extension:rekvirertVed",
+      "path" : "MedicationRequest.extension",
+      "sliceName" : "rekvirertVed",
+      "short" : "Stedet (organisasjonen) rekvireringen ble utført",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The place (organization) where the request was made"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "The request also references an episode, which in turn may reference an organization. Requested at (RekvirertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "MedicationRequest.identifier",

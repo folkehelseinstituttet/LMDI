@@ -8,7 +8,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Home - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.7</title>
+        v1.1.8</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -75,7 +75,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.7 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.8 - ci-build
                             
                             
                             
@@ -202,6 +202,11 @@
   </thead>
   <tbody>
     <tr>
+      <td>1.1.8</td>
+      <td>2026-10-18</td>
+      <td>New extensions Administered at (Medication.Administration.AdministrertVed) and Requested at (Medication.Request.RekvirertVed), referencing the organization where the administration/request was performed, for cases where the episode covers the entire admission. Clarified <code class="language-plaintext highlighter-rouge">Episode.serviceProvider</code>. New examples.</td>
+    </tr>
+    <tr>
       <td>1.1.7</td>
       <td>2026-10-07</td>
       <td>Diagnosis: the <code class="language-plaintext highlighter-rouge">ICD10</code> slice on <code class="language-plaintext highlighter-rouge">code.coding</code> is changed from 0..1 to 0..*, to support multiple coding according to the Norwegian Directorate of Health’s coding guidelines (specialist health services). New example with multiple ICD-10 codes.</td>
@@ -311,8 +316,8 @@
             <div class="inner-wrapper p-3">
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.7 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Fri, Oct 9, 2026 10:49+0000">2026-10-09</span>
+                    Package hl7.fhir.no.lmdi#1.1.8 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span title="Tue, Oct 20, 2026 08:59+0000">2026-10-20</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

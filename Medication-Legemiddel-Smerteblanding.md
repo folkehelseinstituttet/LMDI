@@ -1,4 +1,4 @@
-# Legemiddel-Smerteblanding - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Legemiddel-Smerteblanding - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

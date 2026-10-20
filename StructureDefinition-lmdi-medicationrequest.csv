@@ -37,6 +37,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Legemiddel i klinisk studie","Angir om legemidlet gis som en del av en klinisk studie.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"MedicationRequest.extension:rekvirertVed","MedicationRequest.extension","rekvirertVed","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved]]} {[]}
+","Stedet (organisasjonen) rekvireringen ble utført","Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "MedicationRequest.modifierExtension","MedicationRequest.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.

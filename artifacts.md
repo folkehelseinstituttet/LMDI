@@ -1,4 +1,4 @@
-# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -21,7 +21,7 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [Episode](StructureDefinition-lmdi-encounter.md) | En behandlingsepisode som representerer et klinisk møte, konsultasjon, innleggelse eller en behandling i helsevesenet, med fokus på organisatorisk tilhørighet. |
 | [Helsepersonell](StructureDefinition-lmdi-practitioner.md) | Helsepersonell som har rekvirert legemidlet, basert på no-basis-Practitioner. HPR-nummer skal oppgis når tilgjengelig. |
 | [Legemiddel](StructureDefinition-lmdi-medication.md) | Beskrivelse av legemiddel. |
-| [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error. |
+| [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error. |
 | [LegemiddelregisterBundle](StructureDefinition-lmdi-bundle.md) | Profil av Bundle for Legemiddelregisteret. Støtter bare transaction-type og POST-operasjoner, med begrensninger på tillatte ressurstyper. |
 | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Legemiddelrekvirering - ordinering eller annen rekvirering av legemiddel |
 | [Organisasjon](StructureDefinition-lmdi-organization.md) | Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization. |
@@ -34,12 +34,14 @@ These define constraints on FHIR data types for systems conforming to this imple
 
 | | |
 | :--- | :--- |
+| [Administrert ved](StructureDefinition-lmdi-administrert-ved.md) | Stedet (organisasjonen) administreringen ble utført. Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen. |
 | [Del av behandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
 | [Klinisk studie](StructureDefinition-lmdi-klinisk-studie.md) | Angir om legemidlet gis som en del av en klinisk studie. |
 | [Legemiddel Classification](StructureDefinition-legemiddel-classification.md) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
 | [Mengde ingrediens](StructureDefinition-lmdi-ingredient-strength.md) | Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som Quantity eller som CodeableConcept.Ved Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.Ved CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk “Angi at bestanddel i legemiddelblanding ikke har eksakt mengde” (OID 7502) eller “Medication-ingredientstrength” http://hl7.org/fhir/CodeSystem/medication-ingredientstrength |
 | [NPR Episode Identifier](StructureDefinition-npr-episode-identifier.md) | Unik identifikator for episoden, som brukt i rapportering til Norsk pasientregister (NPR). Extensionen kan bære både string-basert og UUID-basert representasjon av NPR-identifikatoren. |
 | [Prosentvis doseendring](StructureDefinition-lmdi-prosentvis-doseendring.md) | Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%. |
+| [Rekvirert ved](StructureDefinition-lmdi-rekvirert-ved.md) | Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen. |
 
 ### Terminology: Value Sets 
 
@@ -82,6 +84,7 @@ These are example instances that show what data produced and consumed by systems
 
 | | |
 | :--- | :--- |
+| [Administrering-AdministrertVed](MedicationAdministration-Administrering-AdministrertVed.md) | Eksempel på administrering der episoden gjelder hele innleggelsen, og posten administreringen ble utført ved er angitt i administrertVed |
 | [Administrering-Cellegift](MedicationAdministration-Administrering-Cellegift.md) | Eksempel på administrering av cellegift (Cisplatin) basert på rekvirering med prosentvis doseendring |
 | [Administrering-EnteredInError](MedicationAdministration-Administrering-EnteredInError.md) | Eksempel på administrering av legemiddel med status feilregistrert (entered-in-error) |
 | [Administrering-Infusjon](MedicationAdministration-Administrering-Infusjon.md) | Eksempel på administrering av legemiddel - infusjon |
@@ -96,6 +99,7 @@ These are example instances that show what data produced and consumed by systems
 | [Episode-Sykehjem](Encounter-Episode-Sykehjem.md) | Eksempel på episode på sykehjem |
 | [Episode-Sykehus](Encounter-Episode-Sykehus.md) | Eksempel på episode i spesialisthelsetjenesten |
 | [Episode-Sykehus-2](Encounter-Episode-Sykehus-2.md) | Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter |
+| [Episode-Sykehus-Innleggelse](Encounter-Episode-Sykehus-Innleggelse.md) | Eksempel på episode som gjelder hele innleggelsen, med sykehuset som tjenesteyter |
 | [Helsepersonell-Med-HPR](Practitioner-Helsepersonell-Med-HPR.md) | Eksempel på helsepersonell med HPR-nummer |
 | [Helsepersonell-Uten-HPR](Practitioner-Helsepersonell-Uten-HPR.md) | Eksempel på rekvirent uten HPR-nummer |
 | [Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md) | Eksempel på legemiddel identifisert med FEST legemiddelmerkevare-id |
@@ -132,5 +136,6 @@ These are example instances that show what data produced and consumed by systems
 | [Rekvirering-Kjemoterapi](MedicationRequest-Rekvirering-Kjemoterapi.md) | Eksempel på kjemoterapirekvirering med doseendring, behandlingsregime og klinisk studie |
 | [Rekvirering-MedDiagnoseICD10](MedicationRequest-Rekvirering-MedDiagnoseICD10.md) | Eksempel på rekvirering med ICD-10-diagnose som indikasjon (allergisk rhinitt, sesongbehandling) |
 | [Rekvirering-Paracetamol](MedicationRequest-Rekvirering-Paracetamol.md) | Eksempel på legemiddelrekvirering av Paracet |
+| [Rekvirering-RekvirertVed](MedicationRequest-Rekvirering-RekvirertVed.md) | Eksempel på rekvirering der episoden gjelder hele innleggelsen, og posten rekvireringen ble utført ved er angitt i rekvirertVed |
 | [Virkestoff-Oksykodon](Substance-Virkestoff-Oksykodon.md) | Eksempel på virkestoff - Oksykodon |
 

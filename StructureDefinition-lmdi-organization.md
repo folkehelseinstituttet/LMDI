@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.7 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.8 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
@@ -22,7 +22,7 @@ Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, s
 
 **Usages:**
 
-* Refer to this Profile: [Episode](StructureDefinition-lmdi-encounter.md) and [Organisasjon](StructureDefinition-lmdi-organization.md)
+* Refer to this Profile: [Administrert ved](StructureDefinition-lmdi-administrert-ved.md), [Episode](StructureDefinition-lmdi-encounter.md), [Organisasjon](StructureDefinition-lmdi-organization.md) and [Rekvirert ved](StructureDefinition-lmdi-rekvirert-ved.md)
 * Examples for this Profile: [Helse Møre og Romsdal HF](Organization-Organisasjon-HF-2.md), [Oslo universitetssykehus HF](Organization-Organisasjon-HF.md), [TRONDHEIM KOMMUNE](Organization-Organisasjon-Kommune.md), [HMR ÅLE SH Kreft og blodsjukdommar sengepost](Organization-Organisasjon-Post.md)... Show 5 more, [Kreft og blodsykdommer sengepost Ålesund](Organization-Organisasjon-Seksjon.md), [BYNESET OG NYPANTUNET HELSE- OG VELFERDSSENTER SYKEHJEM](Organization-Organisasjon-Sykehjem.md), [Helse Møre og Romsdal HF Ålesund sjukehus - Somatikk](Organization-Organisasjon-Sykehus-2.md), [OSLO UNIVERSITETSSYKEHUS HF SPESIALSYKEHUSET FOR EPILEPSI SSE - SOMATIKK](Organization-Organisasjon-Sykehus.md) and [Avdeling for epilepsi, poliklinikk](Organization-Organisasjon-Sykehusavdeling.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-organization.json)
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.1.7",
+  "version" : "1.1.8",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "_title" : {

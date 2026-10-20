@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.1.7"/>
+  <version value="1.1.8"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="active"/>
-  <date value="2026-10-07"/>
+  <date value="2026-10-18"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -642,6 +642,17 @@
         <valueString value="MedicationAdministration"/>
       </extension>
       <reference>
+        <reference value="MedicationAdministration/Administrering-AdministrertVed"/>
+      </reference>
+      <name value="Administrering-AdministrertVed"/>
+      <description value="Eksempel på administrering der episoden gjelder hele innleggelsen, og posten administreringen ble utført ved er angitt i administrertVed"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
         <reference value="MedicationAdministration/Administrering-Cellegift"/>
       </reference>
       <name value="Administrering-Cellegift"/>
@@ -713,6 +724,17 @@
       <name value="Administrering-Selvadministrert"/>
       <description value="Eksempel på selvadministrering — pasienten tar legemidlet selv etter utdeling fra institusjon"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/lmdi-administrert-ved"/>
+      </reference>
+      <name value="Administrert ved"/>
+      <description value="Stedet (organisasjonen) administreringen ble utført. Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -833,6 +855,17 @@
       </reference>
       <name value="Episode-Sykehus-2"/>
       <description value="Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/Episode-Sykehus-Innleggelse"/>
+      </reference>
+      <name value="Episode-Sykehus-Innleggelse"/>
+      <description value="Eksempel på episode som gjelder hele innleggelsen, med sykehuset som tjenesteyter"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-encounter"/>
     </resource>
     <resource>
@@ -1096,7 +1129,7 @@
         <reference value="StructureDefinition/lmdi-medicationadministration"/>
       </reference>
       <name value="Legemiddeladministrering"/>
-      <description value="Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.&#xA;&#xA;Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error."/>
+      <description value="Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.&#xA;&#xA;Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1494,6 +1527,28 @@
       <name value="Rekvirering-Paracetamol"/>
       <description value="Eksempel på legemiddelrekvirering av Paracet"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/Rekvirering-RekvirertVed"/>
+      </reference>
+      <name value="Rekvirering-RekvirertVed"/>
+      <description value="Eksempel på rekvirering der episoden gjelder hele innleggelsen, og posten rekvireringen ble utført ved er angitt i rekvirertVed"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/lmdi-rekvirert-ved"/>
+      </reference>
+      <name value="Rekvirert ved"/>
+      <description value="Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

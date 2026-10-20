@@ -1,4 +1,4 @@
-# Kommunenummer CodeSystem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Kommunenummer CodeSystem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.1.7 **  |
-| Active as of 2026-10-09 | *Computable Name*:KommunenummerCodeSystem |
+| *Official URL*:urn:oid:2.16.578.1.12.4.1.1.3402 **  | *Version*:1.1.8 **  |
+| Active as of 2026-10-20 | *Computable Name*:KommunenummerCodeSystem |
 
  
 Kodesystem for norske kommunenummer (Volven 3402) 
@@ -33,7 +33,7 @@ Kodesystem for norske kommunenummer (Volven 3402)
   "resourceType" : "CodeSystem",
   "id" : "kommunenummer-codesystem",
   "url" : "urn:oid:2.16.578.1.12.4.1.1.3402",
-  "version" : "1.1.7",
+  "version" : "1.1.8",
   "name" : "KommunenummerCodeSystem",
   "title" : "Kommunenummer CodeSystem",
   "_title" : {
@@ -50,7 +50,7 @@ Kodesystem for norske kommunenummer (Volven 3402)
     }]
   },
   "status" : "active",
-  "date" : "2026-10-09T10:49:44+00:00",
+  "date" : "2026-10-20T08:59:23+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

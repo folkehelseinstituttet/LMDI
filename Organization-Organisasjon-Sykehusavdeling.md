@@ -1,4 +1,4 @@
-# Organisasjon-Sykehusavdeling - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Organisasjon-Sykehusavdeling - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

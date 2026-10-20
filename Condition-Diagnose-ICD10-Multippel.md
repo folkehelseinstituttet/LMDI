@@ -1,4 +1,4 @@
-# Diagnose-ICD10-Multippel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Diagnose-ICD10-Multippel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

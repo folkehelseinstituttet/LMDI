@@ -8,7 +8,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret
-        v1.1.7</title>
+        v1.1.8</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -75,7 +75,7 @@
                     <span class="visually-hidden">Legemiddeldata fra institusjon til Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.7 - ci-build
+                    <span class="fhi-header__project-name d-inline">Legemiddeldata fra institusjon til Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.8 - ci-build
                             
                             
                             
@@ -224,7 +224,7 @@
                   title="StructureDefinition/lmdi-medicationadministration">Legemiddeladministrering</a>
             </td>
             <td>
-<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
+<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
 
 <p>Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.</p>
 </td>
@@ -284,6 +284,15 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-lmdi-administrert-ved.html"
+                  title="StructureDefinition/lmdi-administrert-ved">Administrert ved</a>
+            </td>
+            <td>
+<p>Stedet (organisasjonen) administreringen ble utført. Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-lmdi-del-av-behandlingsregime.html"
                   title="StructureDefinition/lmdi-del-av-behandlingsregime">Del av behandlingsregime</a>
             </td>
@@ -338,6 +347,15 @@
             </td>
             <td>
 <p>Doseendring i prosent, sammenlignet med opprinnelig dosering. Spesielt relevant ved kjemoterapi. En normal dose, uten modifiseringer, er 100%.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-lmdi-rekvirert-ved.html"
+                  title="StructureDefinition/lmdi-rekvirert-ved">Rekvirert ved</a>
+            </td>
+            <td>
+<p>Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.</p>
 </td>
          </tr>
       </tbody>
@@ -497,6 +515,15 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationAdministration-Administrering-AdministrertVed.html"
+                  title="MedicationAdministration/Administrering-AdministrertVed">Administrering-AdministrertVed</a>
+            </td>
+            <td>
+<p>Eksempel på administrering der episoden gjelder hele innleggelsen, og posten administreringen ble utført ved er angitt i administrertVed</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="MedicationAdministration-Administrering-Cellegift.html"
                   title="MedicationAdministration/Administrering-Cellegift">Administrering-Cellegift</a>
             </td>
@@ -617,6 +644,15 @@
             </td>
             <td>
 <p>Eksempel på episode i spesialisthelsetjenesten med post som tjenesteyter</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-Episode-Sykehus-Innleggelse.html"
+                  title="Encounter/Episode-Sykehus-Innleggelse">Episode-Sykehus-Innleggelse</a>
+            </td>
+            <td>
+<p>Eksempel på episode som gjelder hele innleggelsen, med sykehuset som tjenesteyter</p>
 </td>
          </tr>
          <tr>
@@ -942,6 +978,15 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="MedicationRequest-Rekvirering-RekvirertVed.html"
+                  title="MedicationRequest/Rekvirering-RekvirertVed">Rekvirering-RekvirertVed</a>
+            </td>
+            <td>
+<p>Eksempel på rekvirering der episoden gjelder hele innleggelsen, og posten rekvireringen ble utført ved er angitt i rekvirertVed</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Substance-Virkestoff-Oksykodon.html"
                   title="Substance/Virkestoff-Oksykodon">Virkestoff-Oksykodon</a>
             </td>
@@ -973,10 +1018,10 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)"
                         href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.7 based on <a
+                    Package hl7.fhir.no.lmdi#1.1.8 based on <a
                         style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
                         4.0.1</a>. Generated <span
-                        title="Fri, Oct 9, 2026 10:49+0000">2026-10-09</span>
+                        title="Tue, Oct 20, 2026 08:59+0000">2026-10-20</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

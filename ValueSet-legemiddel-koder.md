@@ -1,4 +1,4 @@
-# Gyldige legemiddelkoder - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.7
+# Gyldige legemiddelkoder - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.1.7 **  |
-| Active as of 2026-10-09 | *Computable Name*:LegemiddelKoder |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder **  | *Version*:1.1.8 **  |
+| Active as of 2026-10-20 | *Computable Name*:LegemiddelKoder |
 
  
 ValueSet som inneholder koder fra SNOMED CT, FEST, LMR-nummer, varenummer og lokal legemiddelkatalog 
@@ -54,7 +54,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
   "resourceType" : "ValueSet",
   "id" : "legemiddel-koder",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/legemiddel-koder",
-  "version" : "1.1.7",
+  "version" : "1.1.8",
   "name" : "LegemiddelKoder",
   "title" : "Gyldige legemiddelkoder",
   "_title" : {
@@ -71,7 +71,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
     }]
   },
   "status" : "active",
-  "date" : "2026-10-09T10:49:44+00:00",
+  "date" : "2026-10-20T08:59:23+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
