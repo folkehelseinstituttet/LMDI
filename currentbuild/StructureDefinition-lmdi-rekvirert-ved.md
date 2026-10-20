@@ -15,7 +15,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved **  | *Version*:1.1.8 **  |
-| Active as of 2026-10-18 | *Computable Name*:RekvirertVed |
+| Active as of 2026-10-20 | *Computable Name*:RekvirertVed |
 
 Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.
 
@@ -64,13 +64,13 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-rekvirert-ved.c
       },
       {
         "url" : "content",
-        "valueString" : "Requested at"
+        "valueString" : "Requested at (RekvirertVed)"
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
   },
   "status" : "active",
-  "date" : "2026-10-18T20:50:47+00:00",
+  "date" : "2026-10-20T08:54:51+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -95,7 +95,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-rekvirert-ved.c
       },
       {
         "url" : "content",
-        "valueString" : "The place (organization) where the request was made. The request also references an episode, which in turn may reference an organization. Requested at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+        "valueString" : "The place (organization) where the request was made. The request also references an episode, which in turn may reference an organization. Requested at (RekvirertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]

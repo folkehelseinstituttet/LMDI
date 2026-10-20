@@ -295,7 +295,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medicationreque
           },
           {
             "url" : "content",
-            "valueString" : "The request also references an episode, which in turn may reference an organization. Requested at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+            "valueString" : "The request also references an episode, which in turn may reference an organization. Requested at (RekvirertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

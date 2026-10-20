@@ -211,7 +211,7 @@
                <a href="StructureDefinition-lmdi-medicationadministration.html" title="StructureDefinition/lmdi-medicationadministration">Medication Administration</a>
             </td>
             <td>
-<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon det skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
+<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
 
 <p>Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.</p>
 </td>
@@ -266,10 +266,10 @@
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-lmdi-administrert-ved.html" title="StructureDefinition/lmdi-administrert-ved">Administered at</a>
+               <a href="StructureDefinition-lmdi-administrert-ved.html" title="StructureDefinition/lmdi-administrert-ved">Administered at (AdministrertVed)</a>
             </td>
             <td>
-<p>The place (organization) where the administration was performed. The administration also references an episode, which in turn may reference an organization. Administered at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission.</p>
+<p>The place (organization) where the administration was performed. The administration also references an episode, which in turn may reference an organization. Administered at (AdministrertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission.</p>
 </td>
          </tr>
          <tr>
@@ -326,10 +326,10 @@
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-lmdi-rekvirert-ved.html" title="StructureDefinition/lmdi-rekvirert-ved">Requested at</a>
+               <a href="StructureDefinition-lmdi-rekvirert-ved.html" title="StructureDefinition/lmdi-rekvirert-ved">Requested at (RekvirertVed)</a>
             </td>
             <td>
-<p>The place (organization) where the request was made. The request also references an episode, which in turn may reference an organization. Requested at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission.</p>
+<p>The place (organization) where the request was made. The request also references an episode, which in turn may reference an organization. Requested at (RekvirertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission.</p>
 </td>
          </tr>
       </tbody>
@@ -932,7 +932,7 @@
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
                     Package hl7.fhir.no.lmdi#1.1.8 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Sun, Oct 18, 2026 20:50+0000">2026-10-18</span>
+                        4.0.1</a>. Generated <span title="Tue, Oct 20, 2026 08:54+0000">2026-10-20</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
