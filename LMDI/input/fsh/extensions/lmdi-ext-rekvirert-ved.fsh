@@ -8,10 +8,10 @@ Description: "Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen r
 * ^title.extension[=].extension[+].url = "lang"
 * ^title.extension[=].extension[=].valueCode = #en
 * ^title.extension[=].extension[+].url = "content"
-* ^title.extension[=].extension[=].valueString = "Requested at"
+* ^title.extension[=].extension[=].valueString = "Requested at (RekvirertVed)"
 * ^description.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "The place (organization) where the request was made. The request also references an episode, which in turn may reference an organization. Requested at is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
+* ^description.extension[=].extension[=].valueString = "The place (organization) where the request was made. The request also references an episode, which in turn may reference an organization. Requested at (RekvirertVed) is used if the episode reflects the entire admission, i.e. in cases where the episode does not reflect the patient's transfers (e.g. between different departments) during the admission."
 * value[x] only Reference(Organisasjon)
