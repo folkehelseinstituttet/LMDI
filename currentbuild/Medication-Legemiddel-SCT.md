@@ -1,4 +1,4 @@
-# Legemiddel-SCT - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Legemiddel-SCT - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

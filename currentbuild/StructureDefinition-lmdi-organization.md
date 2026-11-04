@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.9 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.1.8",
+  "version" : "1.1.9",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "_title" : {
@@ -116,14 +116,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "differential" : {
     "element" : [{
       "id" : "Organization",
-      "path" : "Organization",
-      "constraint" : [{
-        "key" : "lmdi-org-identifier",
-        "severity" : "error",
-        "human" : "Organisasjon skal ha minst ENH eller RSH identifier",
-        "expression" : "identifier.where(system='urn:oid:2.16.578.1.12.4.1.4.101' or system='urn:oid:2.16.578.1.12.4.1.4.102').exists()",
-        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-      }]
+      "path" : "Organization"
     },
     {
       "id" : "Organization.text",
