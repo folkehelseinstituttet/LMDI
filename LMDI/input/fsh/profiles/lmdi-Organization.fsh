@@ -3,7 +3,18 @@ Profile: Organisasjon
 Parent: NoBasisOrganization
 Id: lmdi-organization
 Title: "Organisasjon"
-Description: "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization."
+Description: """
+Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.
+
+Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). Hvis organisasjonen er en del av en større organisasjon, skal den overordnede organisasjonen angis med `partOf`. Organisasjonshierarkiet bygges ved at hver organisasjon peker på sin overordnede organisasjon med `partOf`, helt opp til øverste nivå (helseforetak, regionalt helseforetak eller kommune).
+
+Det er ønskelig at minimum følgende inngår i "organisasjonshierarkiet":
+- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
+- organisasjonen på høyere nivå
+     - sykehus, Helseforetak og Regionalt Helseforetak
+     - sykehjem, kommune
+- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)
+"""
 * ^status = #draft
 * ^date = "2025-09-30"
 * ^publisher = "Folkehelseinstituttet"
@@ -16,7 +27,17 @@ Description: "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeli
 * ^description.extension[=].extension[+].url = "lang"
 * ^description.extension[=].extension[=].valueCode = #en
 * ^description.extension[=].extension[+].url = "content"
-* ^description.extension[=].extension[=].valueString = "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization."
+* ^description.extension[=].extension[=].valueString = """Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization.
+
+This Organization profile is used to describe healthcare institutions and shall represent the organization at the lowest possible level in the organizational hierarchy (for example a department, clinic, or ward). If the organization is part of a larger organization, the parent organization shall be specified using `partOf`. The organizational hierarchy is built by each organization referencing its parent organization using `partOf`, up to the top level (Health Trust, Regional Health Trust or municipality).
+
+It is desirable that the following are included at minimum in the organizational hierarchy:
+- the organization at the lowest possible level (i.e. ward, unit, department, or similar)
+- the organization at the next level
+     - hospital, Health Trust, and Regional Health Trust
+     - nursing home, municipality
+- at least one organization number from either the Register of Legal Entities (identifier:ENH) or the Register for Units in Specialist Health Services (identifier:RSH)
+"""
 
 // Sikkerhetsinvariant: minst ENH eller RSH identifier
 * obeys lmdi-org-identifier
