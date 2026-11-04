@@ -1,4 +1,4 @@
-# Rekvirert ved - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Rekvirert ved - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved **  | *Version*:1.1.8 **  |
-| Active as of 2026-10-20 | *Computable Name*:RekvirertVed |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved **  | *Version*:1.1.9 **  |
+| Active as of 2026-11-04 | *Computable Name*:RekvirertVed |
 
 Stedet (organisasjonen) rekvireringen ble utført. Rekvireringen refererer også til en episode, som igjen kan referere til en organisasjon. Rekvirert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-rekvirert-ved.c
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-rekvirert-ved",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved",
-  "version" : "1.1.8",
+  "version" : "1.1.9",
   "name" : "RekvirertVed",
   "title" : "Rekvirert ved",
   "_title" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-rekvirert-ved.c
     }]
   },
   "status" : "active",
-  "date" : "2026-10-20T08:59:23+00:00",
+  "date" : "2026-11-04T16:55:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

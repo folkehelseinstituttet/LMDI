@@ -1,4 +1,4 @@
-# Home - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Home - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)
@@ -39,6 +39,7 @@ This provides consistent handling of Norwegian identifiers and code systems acro
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.9 | 2026-11-04 | Organization: removed the requirement that the organization shall have an ENH or RSH identifier (invariant lmdi-org-identifier). The identifiers are still supported but not required. |
 | 1.1.8 | 2026-10-18 | New extensions Administered at (Medication.Administration.AdministrertVed) and Requested at (Medication.Request.RekvirertVed), referencing the organization where the administration/request was performed, for cases where the episode covers the entire admission. Clarified`Episode.serviceProvider`. New examples. |
 | 1.1.7 | 2026-10-07 | Diagnosis: the`ICD10`slice on`code.coding`is changed from 0..1 to 0..*, to support multiple coding according to the Norwegian Directorate of Health’s coding guidelines (specialist health services). New example with multiple ICD-10 codes. |
 | 1.1.6 | 2026-10-07 | Medication administration: clarified text for`identifier`and`status`, and that corrections and cancellations are reported again with the same identifier (`entered-in-error`on cancellation). |

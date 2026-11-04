@@ -1,4 +1,4 @@
-# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Organisasjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,11 +14,20 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.8 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization **  | *Version*:1.1.9 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Organisasjon |
 
  
 Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization. 
+Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). Hvis organisasjonen er en del av en større organisasjon, skal den overordnede organisasjonen angis med `partOf`. Organisasjonshierarkiet bygges ved at hver organisasjon peker på sin overordnede organisasjon med `partOf`, helt opp til øverste nivå (helseforetak, regionalt helseforetak eller kommune). 
+Det er ønskelig at minimum følgende inngår i “organisasjonshierarkiet”: 
+* organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
+* organisasjonen på høyere nivå 
+* sykehus, Helseforetak og Regionalt Helseforetak
+* sykehjem, kommune
+ 
+* minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)
+ 
 
 **Usages:**
 
@@ -44,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-organization",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization",
-  "version" : "1.1.8",
+  "version" : "1.1.9",
   "name" : "Organisasjon",
   "title" : "Organisasjon",
   "_title" : {
@@ -77,7 +86,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       "value" : "legemiddelregisteret@fhi.no"
     }]
   }],
-  "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.",
+  "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). Hvis organisasjonen er en del av en større organisasjon, skal den overordnede organisasjonen angis med `partOf`. Organisasjonshierarkiet bygges ved at hver organisasjon peker på sin overordnede organisasjon med `partOf`, helt opp til øverste nivå (helseforetak, regionalt helseforetak eller kommune).\n\nDet er ønskelig at minimum følgende inngår i \"organisasjonshierarkiet\":\n- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)\n- organisasjonen på høyere nivå\n     - sykehus, Helseforetak og Regionalt Helseforetak\n     - sykehjem, kommune\n- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)",
   "_description" : {
     "extension" : [{
       "extension" : [{
@@ -86,7 +95,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
       },
       {
         "url" : "content",
-        "valueString" : "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization."
+        "valueString" : "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization.\n\nThis Organization profile is used to describe healthcare institutions and shall represent the organization at the lowest possible level in the organizational hierarchy (for example a department, clinic, or ward). If the organization is part of a larger organization, the parent organization shall be specified using `partOf`. The organizational hierarchy is built by each organization referencing its parent organization using `partOf`, up to the top level (Health Trust, Regional Health Trust or municipality).\n\nIt is desirable that the following are included at minimum in the organizational hierarchy:\n- the organization at the lowest possible level (i.e. ward, unit, department, or similar)\n- the organization at the next level\n     - hospital, Health Trust, and Regional Health Trust\n     - nursing home, municipality\n- at least one organization number from either the Register of Legal Entities (identifier:ENH) or the Register for Units in Specialist Health Services (identifier:RSH)"
       }],
       "url" : "http://hl7.org/fhir/StructureDefinition/translation"
     }]
@@ -107,14 +116,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-organization.cs
   "differential" : {
     "element" : [{
       "id" : "Organization",
-      "path" : "Organization",
-      "constraint" : [{
-        "key" : "lmdi-org-identifier",
-        "severity" : "error",
-        "human" : "Organisasjon skal ha minst ENH eller RSH identifier",
-        "expression" : "identifier.where(system='urn:oid:2.16.578.1.12.4.1.4.101' or system='urn:oid:2.16.578.1.12.4.1.4.102').exists()",
-        "source" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization"
-      }]
+      "path" : "Organization"
     },
     {
       "id" : "Organization.text",

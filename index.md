@@ -1,4 +1,4 @@
-# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Hjem - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -11,8 +11,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.8 **  |
-| Active as of 2026-10-18 | *Computable Name*:Lmdi |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi **  | *Version*:1.1.9 **  |
+| Active as of 2026-11-04 | *Computable Name*:Lmdi |
 
 ### Legemiddeldata fra institusjon til Legemiddelregisteret (LMDI)
 
@@ -44,6 +44,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | | | |
 | :--- | :--- | :--- |
+| 1.1.9 | 2026-11-04 | Organisasjon: fjernet kravet om at organisasjonen skal ha ENH- eller RSH-identifier (invariant lmdi-org-identifier). Identifikatorene er fortsatt støttet, men ikke påkrevd. |
 | 1.1.8 | 2026-10-18 | Nye extensions Administrert ved (Legemiddeladministrering) og Rekvirert ved (Legemiddelrekvirering), med referanse til organisasjonen der administreringen/rekvireringen ble utført, for tilfeller der episoden gjelder hele innleggelsen. Presisert`Episode.serviceProvider`. Nye eksempler. |
 | 1.1.7 | 2026-10-07 | Diagnose: slicen`ICD10`på`code.coding`er endret fra 0..1 til 0..*, for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten). Nytt eksempel med flere ICD-10-koder. |
 | 1.1.6 | 2026-10-07 | Legemiddeladministrering: presisert tekst for`identifier`og`status`, og at korrigering og annullering rapporteres på nytt med samme identifikator (`entered-in-error`ved annullering). |
@@ -73,11 +74,11 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
   "id" : "hl7.fhir.no.lmdi",
   "language" : "no",
   "url" : "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi",
-  "version" : "1.1.8",
+  "version" : "1.1.9",
   "name" : "Lmdi",
   "title" : "Legemiddeldata fra institusjon til Legemiddelregisteret",
   "status" : "active",
-  "date" : "2026-10-18",
+  "date" : "2026-11-04",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
@@ -112,7 +113,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.4.0"
+    "version" : "7.5.0"
   },
   {
     "id" : "hl7_fhir_uv_extensions_r4",
@@ -1652,7 +1653,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
         "reference" : "StructureDefinition/lmdi-organization"
       },
       "name" : "Organisasjon",
-      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.",
+      "description" : "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.\n\nDenne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). Hvis organisasjonen er en del av en større organisasjon, skal den overordnede organisasjonen angis med `partOf`. Organisasjonshierarkiet bygges ved at hver organisasjon peker på sin overordnede organisasjon med `partOf`, helt opp til øverste nivå (helseforetak, regionalt helseforetak eller kommune).\n\nDet er ønskelig at minimum følgende inngår i \"organisasjonshierarkiet\":\n- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)\n- organisasjonen på høyere nivå\n     - sykehus, Helseforetak og Regionalt Helseforetak\n     - sykehjem, kommune\n- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)",
       "exampleBoolean" : false
     },
     {

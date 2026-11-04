@@ -1,4 +1,4 @@
-# Del av behandlingsregime - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.8
+# Del av behandlingsregime - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime **  | *Version*:1.1.8 **  |
-| Active as of 2026-10-20 | *Computable Name*:DelAvBehandlingsregime |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime **  | *Version*:1.1.9 **  |
+| Active as of 2026-11-04 | *Computable Name*:DelAvBehandlingsregime |
 
 Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi.
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-del-av-behandlingsregime",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime",
-  "version" : "1.1.8",
+  "version" : "1.1.9",
   "name" : "DelAvBehandlingsregime",
   "title" : "Del av behandlingsregime",
   "_title" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-del-av-behandli
     }]
   },
   "status" : "active",
-  "date" : "2026-10-20T08:59:23+00:00",
+  "date" : "2026-11-04T16:55:49+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

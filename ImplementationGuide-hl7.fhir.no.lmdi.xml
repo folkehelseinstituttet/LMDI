@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.1.8"/>
+  <version value="1.1.9"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="active"/>
-  <date value="2026-10-18"/>
+  <date value="2026-11-04"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -45,7 +45,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.4.0"/>
+    <version value="7.5.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_extensions_r4">
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
@@ -1305,7 +1305,7 @@
         <reference value="StructureDefinition/lmdi-organization"/>
       </reference>
       <name value="Organisasjon"/>
-      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization."/>
+      <description value="Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeling, klinikk, sykehus og sykehjem. Basert på no-basis-Organization.&#xA;&#xA;Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). Hvis organisasjonen er en del av en større organisasjon, skal den overordnede organisasjonen angis med `partOf`. Organisasjonshierarkiet bygges ved at hver organisasjon peker på sin overordnede organisasjon med `partOf`, helt opp til øverste nivå (helseforetak, regionalt helseforetak eller kommune).&#xA;&#xA;Det er ønskelig at minimum følgende inngår i &quot;organisasjonshierarkiet&quot;:&#xA;- organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)&#xA;- organisasjonen på høyere nivå&#xA;     - sykehus, Helseforetak og Regionalt Helseforetak&#xA;     - sykehjem, kommune&#xA;- minst ett organisasjonsnummer fra enten Enhetsregisteret (identifier:ENH) eller Register for enheter i spesialisthelsetjenesten (identifier:RSH)"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
