@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="Administrering-AdministrertVed"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved">
+    <valueReference>
+      <reference value="Organization/Organisasjon-Post"/>
+    </valueReference>
+  </extension>
+  <identifier>
+    <value value="3f2b8c1e-9d47-4a6b-8e15-2c7d9a0f4b61"/>
+  </identifier>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="Medication/Legemiddel-FestLegemiddelpakning"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/Pasient-Med-FNR"/>
+  </subject>
+  <context>
+    <reference value="Encounter/Episode-Sykehus-Innleggelse"/>
+  </context>
+  <effectiveDateTime value="2025-06-14T08:15:00+02:00"/>
+  <request>
+    <reference value="MedicationRequest/Rekvirering-RekvirertVed"/>
+  </request>
+  <dosage>
+    <route>
+      <coding>
+        <system value="urn:oid:2.16.578.1.12.4.1.1.7477"/>
+        <code value="53"/>
+        <display value="Oral bruk"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="50"/>
+      <unit value="milligram"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>
