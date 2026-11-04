@@ -240,22 +240,22 @@ a:not(.nav-link) {
   text-align: left!important;
 }
 
-/* Versjonstabellen på forsiden: full bredde med fast kolonnebredde, slik at beskrivelsen brytes */
-#versjoner-av-implementasjonsguiden + table {
+/* Versjonstabellen på forsiden (norsk og engelsk): full bredde med fast kolonnebredde, slik at beskrivelsen brytes */
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table {
   width: 100%;
   table-layout: fixed;
 }
-#versjoner-av-implementasjonsguiden + table th:nth-child(1) {
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table th:nth-child(1) {
   width: 5.5rem;
 }
-#versjoner-av-implementasjonsguiden + table th:nth-child(2) {
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table th:nth-child(2) {
   width: 8rem;
 }
-#versjoner-av-implementasjonsguiden + table td {
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table td {
   vertical-align: top;
   overflow-wrap: anywhere;
 }
-#versjoner-av-implementasjonsguiden + table td:nth-child(2) {
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table td:nth-child(2) {
   white-space: nowrap;
 }
 
