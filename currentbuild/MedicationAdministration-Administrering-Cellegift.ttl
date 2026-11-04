@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Cellegift> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Administrering-Cellegift"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "15634555315" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Lokalt-legemiddel-cellegift> ;
+     fhir:reference [ fhir:v "Medication/Lokalt-legemiddel-cellegift" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-FNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Med-FNR" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Sykehus-2> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Sykehus-2" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2026-04-01T12:12:00+02:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2026-04-01T13:45:00+02:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:request [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-Cellegift> ;
+     fhir:reference [ fhir:v "MedicationRequest/Rekvirering-Cellegift" ]
+  ] ; # 
+  fhir:dosage [
+     fhir:route [
+       fhir:coding ( [
+         a sct:47625008 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "47625008" ] ;
+         fhir:display [ fhir:v "intravenøs administrasjonsvei" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "1000"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "milligram" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ] ;
+     fhir:rate [
+       a fhir:Ratio ;
+       fhir:numerator [
+         fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ] ;
+       fhir:denominator [
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "min" ]
+       ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

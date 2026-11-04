@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-FestLegemiddeldose"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="A10AB05"/>
+        <display value="insulin aspart"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelDose"/>
+      <code value="ID_0008D107-4F34-470F-83CA-541F6E9FA3C4"/>
+      <display value="NovoRapid Flexpen inj, oppl 100 E/ml"/>
+    </coding>
+  </code>
+</Medication>

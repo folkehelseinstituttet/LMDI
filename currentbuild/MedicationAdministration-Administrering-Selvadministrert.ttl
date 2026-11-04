@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationAdministration/Administrering-Selvadministrert> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Administrering-Selvadministrert"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationadministration>
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/medication-admin-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/medication-admin-category>
+       ] ;
+       fhir:code [ fhir:v "community" ] ;
+       fhir:display [ fhir:v "Community" ]
+     ] )
+  ] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-Varenummer> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-Varenummer" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-FNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Med-FNR" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Sykehus> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Sykehus" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2025-08-14T10:00:00+02:00"^^xsd:dateTime
+  ] ; # 
+  fhir:dosage [
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "urn:oid:2.16.578.1.12.4.1.1.7477"^^xsd:anyURI ;
+           fhir:l <urn:oid:2.16.578.1.12.4.1.1.7477>
+         ] ;
+         fhir:code [ fhir:v "53" ] ;
+         fhir:display [ fhir:v "Oral bruk" ]
+       ] )
+     ] ;
+     fhir:dose [
+       fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "milligram" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

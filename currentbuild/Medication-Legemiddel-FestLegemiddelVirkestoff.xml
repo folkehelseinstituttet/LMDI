@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="Legemiddel-FestLegemiddelVirkestoff"/>
+  <meta>
+    <profile value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+  </meta>
+  <extension url="http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://www.whocc.no/atc"/>
+        <code value="N02AA05"/>
+        <display value="Oksykodon"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <code>
+    <coding>
+      <system value="http://dmp.no/fhir/NamingSystem/festLegemiddelVirkestoff"/>
+      <code value="ID_128B21F2-34CE-4FEF-81CA-AD3BD9A5690E"/>
+      <display value="Oksykodon mikst oppl 1 mg/ml"/>
+    </coding>
+  </code>
+  <form>
+    <coding>
+      <system value="urn:oid:2.16.578.1.12.4.1.1.7448"/>
+      <code value="842"/>
+      <display value="Mikstur, oppløsning"/>
+    </coding>
+  </form>
+</Medication>
