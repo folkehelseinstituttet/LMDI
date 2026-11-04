@@ -146,7 +146,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "release"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -546,7 +546,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "release"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

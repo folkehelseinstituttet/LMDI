@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-npr-episode-identifi
     }]
   },
   "status" : "active",
-  "date" : "2026-11-04T17:20:33+00:00",
+  "date" : "2026-11-04T18:09:43+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",
