@@ -240,6 +240,25 @@ a:not(.nav-link) {
   text-align: left!important;
 }
 
+/* Versjonstabellen på forsiden: full bredde med fast kolonnebredde, slik at beskrivelsen brytes */
+#versjoner-av-implementasjonsguiden + table {
+  width: 100%;
+  table-layout: fixed;
+}
+#versjoner-av-implementasjonsguiden + table th:nth-child(1) {
+  width: 5.5rem;
+}
+#versjoner-av-implementasjonsguiden + table th:nth-child(2) {
+  width: 8rem;
+}
+#versjoner-av-implementasjonsguiden + table td {
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+#versjoner-av-implementasjonsguiden + table td:nth-child(2) {
+  white-space: nowrap;
+}
+
 /* Språkvelger i header */
 .fhi-header__brand-container {
   display: flex;
