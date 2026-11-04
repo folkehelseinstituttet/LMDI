@@ -38,10 +38,6 @@ SUPPLEMENTAL_REPLACEMENT_PAIRS = (
         "Must contain the time of administration.",
     ),
     (
-        "Organisasjon skal ha minst ENH eller RSH identifier",
-        "Organization shall have at least an ENH or RSH identifier",
-    ),
-    (
         "Medication skal ha code.coding eller ingredient",
         "Medication shall have code.coding or ingredient",
     ),
