@@ -243,6 +243,7 @@ a:not(.nav-link) {
 /* Versjonstabellen på forsiden (norsk og engelsk): full bredde med fast kolonnebredde, slik at beskrivelsen brytes */
 :is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table {
   width: 100%;
+  max-width: 52rem;
   table-layout: fixed;
 }
 :is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table th:nth-child(1) {
