@@ -18,9 +18,6 @@ Description: "Organisasjoner i norsk helse- og omsorgstjeneste, som post, avdeli
 * ^description.extension[=].extension[+].url = "content"
 * ^description.extension[=].extension[=].valueString = "Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization."
 
-// Sikkerhetsinvariant: minst ENH eller RSH identifier
-* obeys lmdi-org-identifier
-
 // Deaktiverte felter
 * text 0..0
 * active 0..0
@@ -286,9 +283,3 @@ Description: "Eksempel på post – laveste nivå i organisasjonshierarkiet"
 * name = "HMR ÅLE SH Kreft og blodsjukdommar sengepost"
 * type[organisatoriskBetegnelse].coding = $organisatoriskBetegnelse#08 "Post"
 * partOf = Reference(Organisasjon-Seksjon)
-
-// Invariant definisjon
-Invariant: lmdi-org-identifier
-Description: "Organisasjon skal ha minst ENH eller RSH identifier"
-Severity: #error
-Expression: "identifier.where(system='urn:oid:2.16.578.1.12.4.1.4.101' or system='urn:oid:2.16.578.1.12.4.1.4.102').exists()"
