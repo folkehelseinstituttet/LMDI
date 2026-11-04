@@ -71,7 +71,7 @@ No Expansion for this valueset (not supported by Publication Tooling)
     }]
   },
   "status" : "active",
-  "date" : "2026-11-04T16:55:49+00:00",
+  "date" : "2026-11-04T17:20:33+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

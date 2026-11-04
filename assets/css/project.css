@@ -240,6 +240,26 @@ a:not(.nav-link) {
   text-align: left!important;
 }
 
+/* Versjonstabellen på forsiden (norsk og engelsk): full bredde med fast kolonnebredde, slik at beskrivelsen brytes */
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table {
+  width: 100%;
+  max-width: 52rem;
+  table-layout: fixed;
+}
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table th:nth-child(1) {
+  width: 5.5rem;
+}
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table th:nth-child(2) {
+  width: 8rem;
+}
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table td {
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+:is(#versjoner-av-implementasjonsguiden, #implementation-guide-versions) + table td:nth-child(2) {
+  white-space: nowrap;
+}
+
 /* Språkvelger i header */
 .fhi-header__brand-container {
   display: flex;
