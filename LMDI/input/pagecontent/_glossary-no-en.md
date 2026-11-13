@@ -27,6 +27,7 @@ Arbeidsdokument for konsistent oversettelse av LMDI IG. Forankres med kollega f√
 | Innleggelse / Poliklinikk | Inpatient / Outpatient |
 | Administrert ved | Administered at |
 | Rekvirert ved | Requested at |
+| Assosiert legemiddel | Associated medication |
 | Sykehjem | Nursing home |
 
 **Egennavn som beholdes uendret:** Legemiddelregisteret, Maskinporten, HelseID, no-basis, FEST, FHI, LMR, LMDI, HPR, RESH

@@ -33,6 +33,7 @@ This provides consistent handling of Norwegian identifiers and code systems acro
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 1.1.10 | 2026-11-13 | New extension Associated medication on Medication, for more specifically identified medications that can be selected when administering a local medication. Clarified the definition of LokaltLegemiddel. |
 | 1.1.9 | 2026-11-04 | Organization: removed the requirement that the organization shall have an ENH or RSH identifier (invariant lmdi-org-identifier). The identifiers are still supported but not required. |
 | 1.1.8 | 2026-10-18 | New extensions Administered at (Medication.Administration.AdministrertVed) and Requested at (Medication.Request.RekvirertVed), referencing the organization where the administration/request was performed, for cases where the episode covers the entire admission. Clarified `Episode.serviceProvider`. New examples. |
 | 1.1.7 | 2026-10-07 | Diagnosis: the `ICD10` slice on `code.coding` is changed from 0..1 to 0..*, to support multiple coding according to the Norwegian Directorate of Health's coding guidelines (specialist health services). New example with multiple ICD-10 codes. |
