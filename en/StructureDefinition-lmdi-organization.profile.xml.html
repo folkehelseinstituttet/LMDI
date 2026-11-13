@@ -16,7 +16,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Organization - XML Representation - Medication data from institutions to Legemiddelregisteret
-        v1.1.9</title>
+        v1.1.10</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -83,7 +83,7 @@
                     <span class="visually-hidden">Medication data from institutions to Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Medication data from institutions to Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.9 - release
+                    <span class="fhi-header__project-name d-inline">Medication data from institutions to Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.10 - release
                             
                             
                             
@@ -148,7 +148,7 @@
                 <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Medication data from institutions to Legemiddelregisteret - Local Development build (v1.1.9) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.no/fhir/ig/lmdi/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Medication data from institutions to Legemiddelregisteret - Local Development build (v1.1.10) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.no/fhir/ig/lmdi/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -308,7 +308,7 @@
   &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#StructureDefinition.text">text</a>&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">url</a>
        <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-organization&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1.1.9&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1.1.10&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization&quot;&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Element#string.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/translation&quot;&gt;
@@ -340,7 +340,7 @@
   &lt;<a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.description">description</a>
                <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Organizations in the Norwegian health and care service, such as ward, department, clinic, hospital and nursing home. Based on no-basis-Organization.
 
-Denne profilen av Organization benyttes for å beskrive helseinstitusjoner og skal representere organisasjonen på lavest mulig nivå i organisasjonshierarkiet (f.eks. en avdeling eller klinikk eller post). Hvis organisasjonen er en del av en større organisasjon, skal den overordnede organisasjonen angis med `partOf`. Organisasjonshierarkiet bygges ved at hver organisasjon peker på sin overordnede organisasjon med `partOf`, helt opp til øverste nivå (helseforetak, regionalt helseforetak eller kommune).
+This Organization profile is used to describe healthcare institutions and shall represent the organization at the lowest possible level in the organizational hierarchy (for example a department, clinic, or ward). If the organization is part of a larger organization, the parent organization shall be specified using `partOf`. The organizational hierarchy is built by each organization referencing its parent organization using `partOf`, up to the top level (Health Trust, Regional Health Trust or municipality).
 
 Det er ønskelig at minimum følgende inngår i &amp;quot;organisasjonshierarkiet&amp;quot;:
 - organisasjonen på lavest mulig nivå (dvs. post, enhet, avdeling eller lignende)
@@ -5632,8 +5632,8 @@ no-basis don't use this element to reference endpoints registered in the Norwegi
             <div class="inner-wrapper p-3">
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Wed, Nov 4, 2026 18:09+0000">2026-11-04</span>
+                    Package hl7.fhir.no.lmdi#1.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span title="Fri, Nov 13, 2026 15:17+0000">2026-11-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

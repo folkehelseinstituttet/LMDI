@@ -1,4 +1,4 @@
-# Lokalt-legemiddel-cellegift - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# Lokalt-legemiddel-cellegift - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

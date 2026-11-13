@@ -1,4 +1,4 @@
-# Administrert ved - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# Administrert ved - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,8 +14,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved **  | *Version*:1.1.9 **  |
-| Active as of 2026-11-04 | *Computable Name*:AdministrertVed |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved **  | *Version*:1.1.10 **  |
+| Active as of 2026-11-13 | *Computable Name*:AdministrertVed |
 
 Stedet (organisasjonen) administreringen ble utført. Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen.
 
@@ -53,7 +53,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-administrert-ve
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-administrert-ved",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved",
-  "version" : "1.1.9",
+  "version" : "1.1.10",
   "name" : "AdministrertVed",
   "title" : "Administrert ved",
   "_title" : {
@@ -70,7 +70,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-administrert-ve
     }]
   },
   "status" : "active",
-  "date" : "2026-11-04T18:09:43+00:00",
+  "date" : "2026-11-13T15:17:16+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

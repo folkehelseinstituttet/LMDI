@@ -1,4 +1,4 @@
-# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# Legemiddel - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.9 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication **  | *Version*:1.1.10 **  |
 | Draft as of 2025-09-30 | *Computable Name*:Legemiddel |
 
  
@@ -23,7 +23,7 @@ Beskrivelse av legemiddel.
 **Usages:**
 
 * Refer to this Profile: [Legemiddel](StructureDefinition-lmdi-medication.md), [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) and [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md)
-* Examples for this Profile: [Medication/Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md), [Medication/Legemiddel-FestLegemiddelVirkestoff-2](Medication-Legemiddel-FestLegemiddelVirkestoff-2.md), [Medication/Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md), [Medication/Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md)... Show 11 more, [Medication/Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md), [Medication/Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md), [Medication/Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md), [Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md), [Medication/Legemiddel-MorfinKonsentrat](Medication-Legemiddel-MorfinKonsentrat.md), [Medication/Legemiddel-NatriumkloridBBraun](Medication-Legemiddel-NatriumkloridBBraun.md), [Medication/Legemiddel-SCT](Medication-Legemiddel-SCT.md), [Medication/Legemiddel-Smerteblanding](Medication-Legemiddel-Smerteblanding.md), [Medication/Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md), [Medication/Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) and [Medication/Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md)
+* Examples for this Profile: [Medication/Legemiddel-FestLegemiddelMerkevare](Medication-Legemiddel-FestLegemiddelMerkevare.md), [Medication/Legemiddel-FestLegemiddelVirkestoff-2](Medication-Legemiddel-FestLegemiddelVirkestoff-2.md), [Medication/Legemiddel-FestLegemiddelVirkestoff](Medication-Legemiddel-FestLegemiddelVirkestoff.md), [Medication/Legemiddel-FestLegemiddeldose](Medication-Legemiddel-FestLegemiddeldose.md)... Show 12 more, [Medication/Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md), [Medication/Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md), [Medication/Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md), [Medication/Legemiddel-LokaltLegemiddel-AssosiertLegemiddel](Medication-Legemiddel-LokaltLegemiddel-AssosiertLegemiddel.md), [Medication/Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md), [Medication/Legemiddel-MorfinKonsentrat](Medication-Legemiddel-MorfinKonsentrat.md), [Medication/Legemiddel-NatriumkloridBBraun](Medication-Legemiddel-NatriumkloridBBraun.md), [Medication/Legemiddel-SCT](Medication-Legemiddel-SCT.md), [Medication/Legemiddel-Smerteblanding](Medication-Legemiddel-Smerteblanding.md), [Medication/Legemiddel-UtenCoding](Medication-Legemiddel-UtenCoding.md), [Medication/Legemiddel-Varenummer](Medication-Legemiddel-Varenummer.md) and [Medication/Lokalt-legemiddel-cellegift](Medication-Lokalt-legemiddel-cellegift.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/hl7.fhir.no.lmdi|current/StructureDefinition/StructureDefinition-lmdi-medication.json)
 
@@ -44,7 +44,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
   "resourceType" : "StructureDefinition",
   "id" : "lmdi-medication",
   "url" : "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication",
-  "version" : "1.1.9",
+  "version" : "1.1.10",
   "name" : "Legemiddel",
   "title" : "Legemiddel",
   "_title" : {
@@ -203,6 +203,45 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
       "type" : [{
         "code" : "Extension",
         "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"]
+      }]
+    },
+    {
+      "id" : "Medication.extension:assosiertLegemiddel",
+      "path" : "Medication.extension",
+      "sliceName" : "assosiertLegemiddel",
+      "short" : "Angir mer spesifikt identifiserte legemidler (f.eks. med FestId eller Varenummer) som kan velges ved administrering av et overordnet eller generisk definert lokalt legemiddel.",
+      "_short" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Specifies more specifically identified medications (e.g. by FEST ID or item number) that can be selected when administering a local medication defined at a higher or generic level."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "definition" : "Benyttes når et lokalt legemiddel er definert på et overordnet eller generisk nivå, for å angi hvilke mer spesifikt identifiserte legemidler som kan velges ved administrering.\n\nDe assosierte legemidlene er basert på koblinger i avsendersystemets lokale legemiddelkatalog eller legemiddelregister, og kan identifiseres med FEST-ID, varenummer eller SNOMED CT-kode.\n\nExtensionen beskriver hvilke legemidler som er tilgjengelige som valgalternativer ved administrering av det overordnede legemidlet, ikke hvilket legemiddel som faktisk er administrert.",
+      "_definition" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "en"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Used when a local medication is defined at a higher or generic level, to specify which more specifically identified medications can be selected at administration.\n\nThe associated medications are based on links in the sending system's local medication catalog or medication register, and can be identified by FEST ID, item number or SNOMED CT code.\n\nThe extension describes which medications are available as alternatives when administering the higher-level medication, not which medication was actually administered."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel"]
       }]
     },
     {
@@ -646,7 +685,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. ",
+      "definition" : "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan FHI skal få tilgang til nødvendig informasjon om det lokale legemiddelet, som informasjon om virkestoff og styrke. Dette kan bl.a. skje gjennom ingredient og/eller assosiertLegemiddel.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -655,7 +694,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           },
           {
             "url" : "content",
-            "valueString" : "Should only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, FHI should agree on how LMR will access the medication catalog to retrieve information about the local medication."
+            "valueString" : "Shall only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, it shall be agreed with FHI how FHI will get access to the necessary information about the local medication, such as information about active ingredient and strength. This can be done, among other ways, through ingredient and/or assosiertLegemiddel."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]

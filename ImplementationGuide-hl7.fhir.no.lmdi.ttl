@@ -18,11 +18,11 @@
      fhir:v "http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"^^xsd:anyURI ;
      fhir:l <http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi>
   ] ; # 
-  fhir:version [ fhir:v "1.1.9"] ; # 
+  fhir:version [ fhir:v "1.1.10"] ; # 
   fhir:name [ fhir:v "Lmdi"] ; # 
   fhir:title [ fhir:v "Legemiddeldata fra institusjon til Legemiddelregisteret"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-11-04"^^xsd:date] ; # 
+  fhir:date [ fhir:v "2026-11-13"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Folkehelseinstituttet"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Folkehelseinstituttet" ] ;
@@ -2030,6 +2030,27 @@
          ] ;
          fhir:value [
            a fhir:String ;
+           fhir:v "StructureDefinition:extension"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel> ;
+         fhir:reference [ fhir:v "StructureDefinition/lmdi-assosiert-legemiddel" ]
+       ] ;
+       fhir:name [ fhir:v "Assosiert legemiddel" ] ;
+       fhir:description [ fhir:v "Angir mer spesifikt identifiserte legemidler (f.eks. med FestId eller Varenummer) som kan velges ved administrering av et overordnet eller generisk definert lokalt legemiddel." ] ;
+       fhir:example [
+         a fhir:Boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
            fhir:v "ValueSet"
          ]
        ] ) ;
@@ -2622,6 +2643,28 @@
        ] ;
        fhir:name [ fhir:v "Legemiddel-Legemiddeldose-SmofKabiven" ] ;
        fhir:description [ fhir:v "Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id" ] ;
+       fhir:example [
+         a fhir:Canonical ;
+         fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+         fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Medication"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-LokaltLegemiddel-AssosiertLegemiddel> ;
+         fhir:reference [ fhir:v "Medication/Legemiddel-LokaltLegemiddel-AssosiertLegemiddel" ]
+       ] ;
+       fhir:name [ fhir:v "Legemiddel-LokaltLegemiddel-AssosiertLegemiddel" ] ;
+       fhir:description [ fhir:v "Eksempel på lokalt legemiddel definert på generisk nivå, med to assosierte legemidler som kan velges ved administrering" ] ;
        fhir:example [
          a fhir:Canonical ;
          fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;

@@ -1,4 +1,4 @@
-# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# FHIR-profiler - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -33,6 +33,7 @@ Implementasjonsguiden definerer følgende FHIR-profiler og extensions.
 | | | |
 | :--- | :--- | :--- |
 | [AdministrertVed](StructureDefinition-lmdi-administrert-ved.md) | [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | Stedet (organisasjonen) administreringen ble utført. Benyttes hvis episoden reflekterer hele innleggelsen og ikke gjenspeiler pasientens forflytninger mellom avdelinger. |
+| [AssosiertLegemiddel](StructureDefinition-lmdi-assosiert-legemiddel.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Angir mer spesifikt identifiserte legemidler (f.eks. med FestId eller Varenummer) som kan velges ved administrering av et overordnet eller generisk definert lokalt legemiddel. |
 | [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
 | [IngrediensStyrke](StructureDefinition-lmdi-ingredient-strength.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Mengde ingrediens i det rekvirerte/administrerte legemidlet, angitt som volum eller mengde virkestoff, eller som kode. Brukes på Legemiddel.ingredient.strength når mengde skal uttrykkes i stedet for styrke. |
 | [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Angir om legemidlet gis som en del av en klinisk studie. |

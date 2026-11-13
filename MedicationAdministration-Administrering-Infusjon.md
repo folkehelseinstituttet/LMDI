@@ -1,4 +1,4 @@
-# Administrering-Infusjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# Administrering-Infusjon - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)

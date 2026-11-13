@@ -1,4 +1,4 @@
-# Status for legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# Status for legemiddeladministrering - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus **  | *Version*:1.1.9 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus **  | *Version*:1.1.10 **  |
 | Draft as of 2025-09-12 | *Computable Name*:LegemiddeladministreringStatus |
 
  
@@ -52,7 +52,7 @@ Verdisett som begrenses status til Legemiddeladministrering til henholdsvis ‘G
   "resourceType" : "ValueSet",
   "id" : "lmdi-medicationadministrationstatus",
   "url" : "http://hl7.no/fhir/ig/lmdi/ValueSet/lmdi-medicationadministrationstatus",
-  "version" : "1.1.9",
+  "version" : "1.1.10",
   "name" : "LegemiddeladministreringStatus",
   "title" : "Status for legemiddeladministrering",
   "_title" : {

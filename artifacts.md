@@ -1,4 +1,4 @@
-# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# Artifacts Summary - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -41,6 +41,7 @@ These define constraints on FHIR data types for systems conforming to this imple
 | | |
 | :--- | :--- |
 | [Administrert ved](StructureDefinition-lmdi-administrert-ved.md) | Stedet (organisasjonen) administreringen ble utført. Administreringen refererer også til en episode, som igjen kan referere til en organisasjon. Administrert ved benyttes hvis episoden reflekterer hele innleggelsen, dvs. i tilfeller der episoden ikke gjenspeiler pasientens forflytninger (f.eks. mellom ulike avdelinger) under innleggelsen. |
+| [Assosiert legemiddel](StructureDefinition-lmdi-assosiert-legemiddel.md) | Angir mer spesifikt identifiserte legemidler (f.eks. med FestId eller Varenummer) som kan velges ved administrering av et overordnet eller generisk definert lokalt legemiddel. |
 | [Del av behandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | Navnet på kuren, behandlingsregimet eller protokollen legemidlet gis som en del av. Spesielt relevant ved kjemoterapi. |
 | [Klinisk studie](StructureDefinition-lmdi-klinisk-studie.md) | Angir om legemidlet gis som en del av en klinisk studie. |
 | [Legemiddel Classification](StructureDefinition-legemiddel-classification.md) | Klassifisering av legemidler, primært med ATC-koder (Anatomisk Terapeutisk Kjemisk legemiddelregister). |
@@ -115,6 +116,7 @@ These are example instances that show what data produced and consumed by systems
 | [Legemiddel-FestLegemiddelpakning](Medication-Legemiddel-FestLegemiddelpakning.md) | Eksempel på legemiddel identifisert med FEST legemiddelpakning-id |
 | [Legemiddel-FestLmrLopenr](Medication-Legemiddel-FestLmrLopenr.md) | Eksempel på legemiddel identifisert med LMR-løpenummer |
 | [Legemiddel-Legemiddeldose-SmofKabiven](Medication-Legemiddel-Legemiddeldose-SmofKabiven.md) | Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id |
+| [Legemiddel-LokaltLegemiddel-AssosiertLegemiddel](Medication-Legemiddel-LokaltLegemiddel-AssosiertLegemiddel.md) | Eksempel på lokalt legemiddel definert på generisk nivå, med to assosierte legemidler som kan velges ved administrering |
 | [Legemiddel-LokaltLegemiddel-FlereIngredienser](Medication-Legemiddel-LokaltLegemiddel-FlereIngredienser.md) | Eksempel på lokalt legemiddel med flere ingredienser |
 | [Legemiddel-MorfinKonsentrat](Medication-Legemiddel-MorfinKonsentrat.md) | Eksempel på morfinkonsentrat identifisert med FEST legemiddelmerkevare-id. Brukes som utgangslegemiddel i smerteblandingen, slik at styrken i blandingen kan utledes fra FEST. |
 | [Legemiddel-NatriumkloridBBraun](Medication-Legemiddel-NatriumkloridBBraun.md) | Eksempel på sterilt saltvann identifisert med FEST legemiddelmerkevare-id. Brukes til å fylle opp smerteblandingen til totalvolumet. |

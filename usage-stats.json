@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.no.lmdi",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "fhirVersion": "4.0.1",
   "jurisdiction": "NO",
   "extensions": [
@@ -16,6 +16,20 @@
       "title": "Administrert ved",
       "types": [
         "Reference"
+      ]
+    },
+    {
+      "url": "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel",
+      "title": "Assosiert legemiddel",
+      "types": [
+        "Coding",
+        "string",
+        "Extension",
+        "uri",
+        "string",
+        "code",
+        "string",
+        "boolean"
       ]
     },
     {
@@ -207,6 +221,9 @@
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-administrert-ved": [
       "MedicationAdministration"
+    ],
+    "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel": [
+      "Medication"
     ],
     "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-del-av-behandlingsregime": [
       "Bundle.entry.resource",

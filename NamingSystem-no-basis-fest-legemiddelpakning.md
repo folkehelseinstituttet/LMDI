@@ -1,4 +1,4 @@
-# no-basis-fest-legemiddelpakning - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# no-basis-fest-legemiddelpakning - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Hjem](index.md)
 * [Informasjonsmodell](informasjonsmodell.md)
@@ -14,7 +14,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning **  | *Version*:1.1.9 **  |
+| *Official URL*:http://hl7.no/fhir/ig/lmdi/NamingSystem/no-basis-fest-legemiddelpakning **  | *Version*:1.1.10 **  |
 | Draft as of 2024-06-10 | *Computable Name*:festLegemiddelPakning |
 
  
@@ -34,7 +34,7 @@ FEST-id for legemiddelpakninger. Rekvirering av en bestemt pakning av en merkeva
   },
   {
     "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version",
-    "valueString" : "1.1.9"
+    "valueString" : "1.1.10"
   }],
   "name" : "festLegemiddelPakning",
   "status" : "draft",

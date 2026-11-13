@@ -8,7 +8,7 @@
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <title>Artifacts Summary - Medication data from institutions to Legemiddelregisteret
-        v1.1.9</title>
+        v1.1.10</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="http://hl7.org/fhir" />
@@ -75,7 +75,7 @@
                     <span class="visually-hidden">Medication data from institutions to Legemiddelregisteret</span>
                 </a>
                 <div class="fhi-header__project">
-                    <span class="fhi-header__project-name d-inline">Medication data from institutions to Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.9 - release
+                    <span class="fhi-header__project-name d-inline">Medication data from institutions to Legemiddelregisteret<span style="display:inline;" class="tagline"> &mdash; 1.1.10 - release
                             
                             
                             
@@ -211,9 +211,9 @@
                <a href="StructureDefinition-lmdi-medicationadministration.html" title="StructureDefinition/lmdi-medicationadministration">Medication Administration</a>
             </td>
             <td>
-<p>Beskriver administrering av legemiddel til pasient på institusjon. Dette er kjerneressursen for denne implementasjonsguiden. Den peker videre til legemiddelet som ble gitt, pasienten som har fått administrert legemiddel, episoden administreringen skjedde i løpet av (som igjen peker på hvilken institusjon episoden skjedde ved), organisasjonen administreringen ble utført ved (administrertVed, når episoden gjelder hele innleggelsen), rekvireringen administreringen var basert på og årsaken (diagnosen) til at legemidlet ble gitt.</p>
+<p>Describes the administration of a medicinal product to a patient in an institution. This is the core resource for this implementation guide. It references the medicinal product that was administered, the patient who received the administration, the episode during which the administration took place, which in turn references the institution where the episode occurred, the organization where the administration was performed (administrertVed, when the episode covers the entire admission), the prescription/order on which the administration was based, and the reason, diagnosis, for which the medicinal product was given.</p>
 
-<p>Dersom opplysninger om en tidligere rapportert administrering korrigeres/endres eller administreringen annulleres/slettes, skal administreringen rapporteres på nytt med samme identifikator (identifier). Ved annullering/sletting brukes status entered-in-error.</p>
+<p>If information about a previously reported administration is corrected/amended, or the administration is cancelled/deleted, the administration shall be reported again with the same identifier. On cancellation/deletion, status entered-in-error is used.</p>
 </td>
          </tr>
          <tr>
@@ -288,6 +288,14 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="StructureDefinition-lmdi-assosiert-legemiddel.html" title="StructureDefinition/lmdi-assosiert-legemiddel">Associated medication</a>
+            </td>
+            <td>
+<p>Specifies more specifically identified medications (e.g. by FEST ID or item number) that can be selected when administering a local medication defined at a higher or generic level.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="StructureDefinition-lmdi-del-av-behandlingsregime.html" title="StructureDefinition/lmdi-del-av-behandlingsregime">Part of treatment regimen</a>
             </td>
             <td>
@@ -315,9 +323,9 @@
                <a href="StructureDefinition-lmdi-ingredient-strength.html" title="StructureDefinition/lmdi-ingredient-strength">Amount of ingredient</a>
             </td>
             <td>
-<p>Amount of the ingredient in the requested/administered medication, angitt som Quantity eller som CodeableConcept.</p>
+<p>Amount of the ingredient in the requested/administered medication, expressed as a Quantity or as a CodeableConcept.</p>
 
-<p>Ved Quantity: Enten mengden virkestoff av ingrediensen i det rekvirerte/administrerte legemidlet (f.eks. 100 mg) eller hvilket volum av ingrediensen som er brukt for å produsere det rekvirerte/administrerte legemidlet (f.eks. 10 mL). Når volum benyttes skal ingredient.item angi «utgangslegemidlet» som ble brukt for å produsere det rekvirerte/administrerte legemidlet på en slik måte at «utgangslegemidlets» styrke kan utledes. Dette er nødvendig for å kunne beregne mengde virkestoff og styrke av ingrediensen i det rekvirerte/administrerte legemidlet.</p>
+<p>For Quantity: Either the amount of active ingredient in the requested/administered medication (e.g. 100 mg), or the volume of the ingredient used to produce the requested/administered medication (e.g. 10 mL). When volume is used, ingredient.item shall specify the “starting medication” used to produce the requested/administered medication in such a way that the strength of the “starting medication” can be derived. This is necessary to calculate the amount of active ingredient and the strength of the ingredient in the requested/administered medication.</p>
 
 <p>Ved CodeableConcept: Kodet verdi som angir mengden ingrediens, f.eks. qs eller trace. F.eks. fra kodeverk “Angi at bestanddel i legemiddelblanding ikke har eksakt mengde” (OID 7502) eller “Medication-ingredientstrength” http://hl7.org/fhir/CodeSystem/medication-ingredientstrength</p>
 </td>
@@ -692,6 +700,14 @@
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="Medication-Medication-LokaltLegemiddel-AssosiertLegemiddel.html" title="Medication/Medication-LokaltLegemiddel-AssosiertLegemiddel">Medication-LokaltLegemiddel-AssosiertLegemiddel</a>
+            </td>
+            <td>
+<p>Eksempel på lokalt legemiddel definert på generisk nivå, med to assosierte legemidler som kan velges ved administrering</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Medication-Medication-LokaltLegemiddel-FlereIngredienser.html" title="Medication/Medication-LokaltLegemiddel-FlereIngredienser">Medication-LokaltLegemiddel-FlereIngredienser</a>
             </td>
             <td>
@@ -945,8 +961,8 @@
             <div class="inner-wrapper p-3">
                 <p class="m-0">
                     IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.fhi.no">Folkehelseinstituttet</a>.
-                    Package hl7.fhir.no.lmdi#1.1.9 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
-                        4.0.1</a>. Generated <span title="Wed, Nov 4, 2026 18:09+0000">2026-11-04</span>
+                    Package hl7.fhir.no.lmdi#1.1.10 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR
+                        4.0.1</a>. Generated <span title="Fri, Nov 13, 2026 15:17+0000">2026-11-13</span>
                     <br />
                     <span style="color: var(--footer-highlight-text-color)">
                                   Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

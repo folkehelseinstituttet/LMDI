@@ -1,4 +1,4 @@
-# FHIR profiles - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.9
+# FHIR profiles - Legemiddeldata fra institusjon til Legemiddelregisteret v1.1.10
 
 * [Home](en-index.md)
 * [Information model](en-informasjonsmodell.md)
@@ -33,6 +33,7 @@ The LMDI implementation guide defines the following FHIR profiles and extensions
 | | | |
 | :--- | :--- | :--- |
 | [AdministrertVed](StructureDefinition-lmdi-administrert-ved.md) | [Legemiddeladministrering](StructureDefinition-lmdi-medicationadministration.md) | The place (organization) where the administration was performed. Used if the episode reflects the entire admission and does not reflect the patient’s transfers between departments. |
+| [AssosiertLegemiddel](StructureDefinition-lmdi-assosiert-legemiddel.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Specifies more specifically identified medications (e.g. by FEST ID or item number) that can be selected when administering a local medication defined at a higher or generic level. |
 | [DelAvBehandlingsregime](StructureDefinition-lmdi-del-av-behandlingsregime.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | The name of the regimen, treatment protocol, or course the medication is given as part of. Particularly relevant in chemotherapy. |
 | [IngrediensStyrke](StructureDefinition-lmdi-ingredient-strength.md) | [Legemiddel](StructureDefinition-lmdi-medication.md) | Amount of the ingredient in the requested/administered medication, expressed as a volume or amount of active ingredient, or as a code. Used on Legemiddel.ingredient.strength when an amount is to be expressed instead of a strength. |
 | [KliniskStudie](StructureDefinition-lmdi-klinisk-studie.md) | [Legemiddelrekvirering](StructureDefinition-lmdi-medicationrequest.md) | Indicates whether the medication is given as part of a clinical trial. |

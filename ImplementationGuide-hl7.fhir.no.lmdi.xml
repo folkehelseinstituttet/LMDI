@@ -8,11 +8,11 @@
 </div></div>
   </text>
   <url value="http://hl7.no/fhir/ig/lmdi/ImplementationGuide/hl7.fhir.no.lmdi"/>
-  <version value="1.1.9"/>
+  <version value="1.1.10"/>
   <name value="Lmdi"/>
   <title value="Legemiddeldata fra institusjon til Legemiddelregisteret"/>
   <status value="active"/>
-  <date value="2026-11-04"/>
+  <date value="2026-11-13"/>
   <publisher value="Folkehelseinstituttet"/>
   <contact>
     <name value="Folkehelseinstituttet"/>
@@ -738,6 +738,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/lmdi-assosiert-legemiddel"/>
+      </reference>
+      <name value="Assosiert legemiddel"/>
+      <description value="Angir mer spesifikt identifiserte legemidler (f.eks. med FestId eller Varenummer) som kan velges ved administrering av et overordnet eller generisk definert lokalt legemiddel."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -1042,6 +1053,17 @@
       </reference>
       <name value="Legemiddel-Legemiddeldose-SmofKabiven"/>
       <description value="Eksempel på legemiddel (SmofKabiven) identifisert med FEST legemiddeldose-id"/>
+      <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/Legemiddel-LokaltLegemiddel-AssosiertLegemiddel"/>
+      </reference>
+      <name value="Legemiddel-LokaltLegemiddel-AssosiertLegemiddel"/>
+      <description value="Eksempel på lokalt legemiddel definert på generisk nivå, med to assosierte legemidler som kan velges ved administrering"/>
       <exampleCanonical value="http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"/>
     </resource>
     <resource>
