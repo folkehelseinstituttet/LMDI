@@ -70,7 +70,7 @@ Tillatt verdi for address.type i LMDI: physical
     }]
   },
   "status" : "active",
-  "date" : "2026-11-13T13:48:22+00:00",
+  "date" : "2026-11-13T15:08:25+00:00",
   "publisher" : "Folkehelseinstituttet",
   "contact" : [{
     "name" : "Folkehelseinstituttet",

@@ -685,7 +685,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
       },
-      "definition" : "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan FHI skal få tilgang til nødvendig informasjon om det lokale legemiddelet, for eksempel virkestoff og styrke. Dette kan skje gjennom ingredient og/eller assosiertLegemiddel.",
+      "definition" : "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan FHI skal få tilgang til nødvendig informasjon om det lokale legemiddelet, som informasjon om virkestoff og styrke. Dette kan bl.a. skje gjennom ingredient og/eller assosiertLegemiddel.",
       "_definition" : {
         "extension" : [{
           "extension" : [{
@@ -694,7 +694,7 @@ Other representations of profile: [CSV](StructureDefinition-lmdi-medication.csv)
           },
           {
             "url" : "content",
-            "valueString" : "Should only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, FHI should agree on how FHI will access the necessary information about the local medication, for instance active ingredient and strength. This can be achieved through ingredient and/or assosiertLegemiddel."
+            "valueString" : "Shall only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, it shall be agreed with FHI how FHI will get access to the necessary information about the local medication, such as information about active ingredient and strength. This can be done, among other ways, through ingredient and/or assosiertLegemiddel."
           }],
           "url" : "http://hl7.org/fhir/StructureDefinition/translation"
         }]
