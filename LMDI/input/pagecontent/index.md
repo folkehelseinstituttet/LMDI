@@ -33,6 +33,7 @@ Dette gir en konsistent håndtering av norske identifikatorer og kodeverk på tv
 
 | Versjon | Dato | Beskrivelse |
 |---------|------|-------------|
+| 1.1.10 | 2026-11-13 | Ny extension Assosiert legemiddel på Legemiddel, for mer spesifikt identifiserte legemidler som kan velges ved administrering av et lokalt legemiddel. Presisert definisjon på LokaltLegemiddel. |
 | 1.1.9 | 2026-11-04 | Organisasjon: fjernet kravet om at organisasjonen skal ha ENH- eller RSH-identifier (invariant lmdi-org-identifier). Identifikatorene er fortsatt støttet, men ikke påkrevd. |
 | 1.1.8 | 2026-10-18 | Nye extensions Administrert ved (Legemiddeladministrering) og Rekvirert ved (Legemiddelrekvirering), med referanse til organisasjonen der administreringen/rekvireringen ble utført, for tilfeller der episoden gjelder hele innleggelsen. Presisert `Episode.serviceProvider`. Nye eksempler. |
 | 1.1.7 | 2026-10-07 | Diagnose: slicen `ICD10` på `code.coding` er endret fra 0..1 til 0..*, for å støtte multippel koding jf. Helsedirektoratets kodeveiledning (spesialisthelsetjenesten). Nytt eksempel med flere ICD-10-koder. |

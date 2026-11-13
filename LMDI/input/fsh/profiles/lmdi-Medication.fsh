@@ -115,7 +115,7 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[FestLegemiddelpakning] ^definition = "Unik identifikator for en konkret pakning av en merkevare i katalogen LegemiddelPakningMerkevare."
 * code.coding[Varenummer]    ^definition = "Varenummeret for legemiddelpakningen; brukes som unikt produktnummer blant annet i resept- og apotekkjeden."
 * code.coding[FestLegemiddelVirkestoff]    ^definition = "Unik identifikator (LegemiddelVirkestoff_ID) for rekvirering på virkestoffnivå i FEST."
-* code.coding[LokaltLegemiddel]  ^definition = "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan LMR skal få tilgang til legemiddelkatalogen for å hente informasjon om det lokale legemidlet. "
+* code.coding[LokaltLegemiddel]  ^definition = "Skal kun benyttes for legemidler fra lokal legemiddelkatalog/legemiddelregister. Hvis LokaltLegemiddel benyttes skal det avtales med FHI hvordan FHI skal få tilgang til nødvendig informasjon om det lokale legemiddelet, for eksempel virkestoff og styrke. Dette kan skje gjennom ingredient og/eller assosiertLegemiddel."
 * code.coding[SCT]               ^definition = "SNOMED CT-kode for legemiddel eller substans, for semantisk klassifisering og gruppering."
 * code.coding[FestLegemiddelMerkevare]     ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * code.coding[FestLegemiddelMerkevare]     ^definition.extension[=].extension[+].url = "lang"
@@ -141,7 +141,7 @@ Description: "Beskrivelse av legemiddel."
 * code.coding[LokaltLegemiddel]  ^definition.extension[=].extension[+].url = "lang"
 * code.coding[LokaltLegemiddel]  ^definition.extension[=].extension[=].valueCode = #en
 * code.coding[LokaltLegemiddel]  ^definition.extension[=].extension[+].url = "content"
-* code.coding[LokaltLegemiddel]  ^definition.extension[=].extension[=].valueString = "Should only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, FHI should agree on how LMR will access the medication catalog to retrieve information about the local medication."
+* code.coding[LokaltLegemiddel]  ^definition.extension[=].extension[=].valueString = "Should only be used for medications from a local medication catalog or medication register. If LokaltLegemiddel is used, FHI should agree on how FHI will access the necessary information about the local medication, for instance active ingredient and strength. This can be achieved through ingredient and/or assosiertLegemiddel."
 * code.coding[SCT]               ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
 * code.coding[SCT]               ^definition.extension[=].extension[+].url = "lang"
 * code.coding[SCT]               ^definition.extension[=].extension[=].valueCode = #en
@@ -242,6 +242,20 @@ Description: "Beskrivelse av legemiddel."
 * extension[classification] ^comment.extension[=].extension[=].valueCode = #en
 * extension[classification] ^comment.extension[=].extension[+].url = "content"
 * extension[classification] ^comment.extension[=].extension[=].valueString = "This extension is used to specify the medication's classification according to standardized code systems, primarily WHO ATC codes."
+
+* extension contains AssosiertLegemiddel named assosiertLegemiddel 0..*
+* extension[assosiertLegemiddel] ^short = "Angir mer spesifikt identifiserte legemidler (f.eks. med FestId eller Varenummer) som kan velges ved administrering av et overordnet eller generisk definert lokalt legemiddel."
+* extension[assosiertLegemiddel] ^definition = "Benyttes når et lokalt legemiddel er definert på et overordnet eller generisk nivå, for å angi hvilke mer spesifikt identifiserte legemidler som kan velges ved administrering.\n\nDe assosierte legemidlene er basert på koblinger i avsendersystemets lokale legemiddelkatalog eller legemiddelregister, og kan identifiseres med FEST-ID, varenummer eller SNOMED CT-kode.\n\nExtensionen beskriver hvilke legemidler som er tilgjengelige som valgalternativer ved administrering av det overordnede legemidlet, ikke hvilket legemiddel som faktisk er administrert."
+* extension[assosiertLegemiddel] ^short.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* extension[assosiertLegemiddel] ^short.extension[=].extension[+].url = "lang"
+* extension[assosiertLegemiddel] ^short.extension[=].extension[=].valueCode = #en
+* extension[assosiertLegemiddel] ^short.extension[=].extension[+].url = "content"
+* extension[assosiertLegemiddel] ^short.extension[=].extension[=].valueString = "Specifies more specifically identified medications (e.g. by FEST ID or item number) that can be selected when administering a local medication defined at a higher or generic level."
+* extension[assosiertLegemiddel] ^definition.extension[+].url = "http://hl7.org/fhir/StructureDefinition/translation"
+* extension[assosiertLegemiddel] ^definition.extension[=].extension[+].url = "lang"
+* extension[assosiertLegemiddel] ^definition.extension[=].extension[=].valueCode = #en
+* extension[assosiertLegemiddel] ^definition.extension[=].extension[+].url = "content"
+* extension[assosiertLegemiddel] ^definition.extension[=].extension[=].valueString = "Used when a local medication is defined at a higher or generic level, to specify which more specifically identified medications can be selected at administration.\n\nThe associated medications are based on links in the sending system's local medication catalog or medication register, and can be identified by FEST ID, item number or SNOMED CT code.\n\nThe extension describes which medications are available as alternatives when administering the higher-level medication, not which medication was actually administered."
 
 * form.text 0..0
 * form ^short = "Legemiddelform"
@@ -567,6 +581,26 @@ Description: "Eksempel på lokalt tilberedt smerteblanding på 100 mL med morfin
 // Ingrediens angitt som referanse til Legemiddel, med kodet mengde. qs = fylles opp til 100 mL.
 * ingredient[2].itemReference = Reference(Legemiddel-NatriumkloridBBraun)
 * ingredient[2].strength.extension[mengde].valueCodeableConcept = $IngrediensStyrkeKoder#qs "QS"
+
+Instance: Legemiddel-LokaltLegemiddel-AssosiertLegemiddel
+InstanceOf: Legemiddel
+Description: "Eksempel på lokalt legemiddel definert på generisk nivå, med to assosierte legemidler som kan velges ved administrering"
+* extension[classification].valueCodeableConcept = $ATC#N01BB09 "Ropivakain"
+// Den lokale koden er oppdiktet.
+* code.coding[LokaltLegemiddel].system = "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"
+* code.coding[LokaltLegemiddel].code = #ropivakain-2mg-ml-inf
+* code.coding[LokaltLegemiddel].display = "Ropivakain 2mg/ml Infusjonsvæske"
+* form.coding[OID7448].system = "urn:oid:2.16.578.1.12.4.1.1.7448"
+* form.coding[OID7448].code = #858
+* form.coding[OID7448].display = "Infusjonsvæske, oppløsning"
+// De to legemiddeldosene har samme visningsnavn i FEST og skiller seg på volum:
+// den første er 100 ml, den andre 200 ml.
+* extension[assosiertLegemiddel][0].valueCoding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* extension[assosiertLegemiddel][0].valueCoding.code = #ID_FC282E2E-26ED-45C7-AF00-86936EFD26B4
+* extension[assosiertLegemiddel][0].valueCoding.display = "Ropivacain Fresenius Kabi inf, oppl 2 mg/ml"
+* extension[assosiertLegemiddel][1].valueCoding.system = "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"
+* extension[assosiertLegemiddel][1].valueCoding.code = #ID_869E02D4-F1C5-4892-B5A6-109D5FC3E485
+* extension[assosiertLegemiddel][1].valueCoding.display = "Ropivacain Fresenius Kabi inf, oppl 2 mg/ml"
 
 // Invarianter
 Invariant: lmdi-medication-code-or-ingredient

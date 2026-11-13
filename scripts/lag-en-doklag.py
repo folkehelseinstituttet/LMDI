@@ -42,6 +42,10 @@ SUPPLEMENTAL_REPLACEMENT_PAIRS = (
         "Medication shall have code.coding or ingredient",
     ),
     (
+        "Assosiert legemiddel skal være angitt med FEST-id (legemiddeldose, merkevare eller pakning), LMR-løpenummer, varenummer eller SNOMED CT-kode.",
+        "Associated medication shall be specified with a FEST ID (medication dose, branded medication or package), LMR sequence number, item number or SNOMED CT code.",
+    ),
+    (
         "Id for angivelse av legemiddel fra lokal legemiddelkatalog",
         "ID for specifying medication from a local medication catalog",
     ),
@@ -330,6 +334,10 @@ def _without_final_period(value: str) -> str:
     return value[:-1] if value.endswith(".") else value
 
 
+def _split_paragraphs(value: str) -> list[str]:
+    return [part.strip() for part in re.split(r"\n\s*\n", value) if part.strip()]
+
+
 def _replacement_variants(source: str, target: str) -> list[tuple[str, str]]:
     source_without_period = _without_final_period(source)
     target_without_period = _without_final_period(target)
@@ -364,14 +372,23 @@ def _add_replacement(
     # treffer ikke substring-erstatningen den rendrede HTML-en.
     source = source.strip()
     target = target.strip()
-    for candidate_source, candidate_target in _replacement_variants(source, target):
-        key = (candidate_source, candidate_target)
-        if key in seen:
-            continue
-        seen.add(key)
-        replacements.append(
-            Replacement(candidate_source, candidate_target, _compile_word_boundary(candidate_source))
-        )
+    pairs = [(source, target)]
+    # IG Publisher rendrer tekst med blanke linjer som separate <p>-avsnitt, slik at hele
+    # strengen aldri finnes sammenhengende i HTML-en. Legg derfor til ett par per avsnitt
+    # når norsk og engelsk tekst har like mange avsnitt.
+    source_paragraphs = _split_paragraphs(source)
+    target_paragraphs = _split_paragraphs(target)
+    if len(source_paragraphs) > 1 and len(source_paragraphs) == len(target_paragraphs):
+        pairs.extend(zip(source_paragraphs, target_paragraphs))
+    for pair_source, pair_target in pairs:
+        for candidate_source, candidate_target in _replacement_variants(pair_source, pair_target):
+            key = (candidate_source, candidate_target)
+            if key in seen:
+                continue
+            seen.add(key)
+            replacements.append(
+                Replacement(candidate_source, candidate_target, _compile_word_boundary(candidate_source))
+            )
 
 
 def _iter_translation_pairs(node: object) -> list[tuple[str, str]]:
