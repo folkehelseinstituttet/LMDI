@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-LokaltLegemiddel-AssosiertLegemiddel> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Legemiddel-LokaltLegemiddel-AssosiertLegemiddel"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medication>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/legemiddel-classification>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ;
+           fhir:l <http://www.whocc.no/atc>
+         ] ;
+         fhir:code [ fhir:v "N01BB09" ] ;
+         fhir:display [ fhir:v "Ropivakain" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel>
+     ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [
+         fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"^^xsd:anyURI ;
+         fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelDose>
+       ] ;
+       fhir:code [ fhir:v "ID_FC282E2E-26ED-45C7-AF00-86936EFD26B4" ] ;
+       fhir:display [ fhir:v "Ropivacain Fresenius Kabi inf, oppl 2 mg/ml" ]
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-assosiert-legemiddel>
+     ] ;
+     fhir:value [
+       a fhir:Coding ;
+       fhir:system [
+         fhir:v "http://dmp.no/fhir/NamingSystem/festLegemiddelDose"^^xsd:anyURI ;
+         fhir:l <http://dmp.no/fhir/NamingSystem/festLegemiddelDose>
+       ] ;
+       fhir:code [ fhir:v "ID_869E02D4-F1C5-4892-B5A6-109D5FC3E485" ] ;
+       fhir:display [ fhir:v "Ropivacain Fresenius Kabi inf, oppl 2 mg/ml" ]
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://fhi.no/fhir/NamingSystem/lokaltLegemiddel"^^xsd:anyURI ;
+         fhir:l <http://fhi.no/fhir/NamingSystem/lokaltLegemiddel>
+       ] ;
+       fhir:code [ fhir:v "ropivakain-2mg-ml-inf" ] ;
+       fhir:display [ fhir:v "Ropivakain 2mg/ml Infusjonsvæske" ]
+     ] )
+  ] ; # 
+  fhir:form [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:oid:2.16.578.1.12.4.1.1.7448"^^xsd:anyURI ;
+         fhir:l <urn:oid:2.16.578.1.12.4.1.1.7448>
+       ] ;
+       fhir:code [ fhir:v "858" ] ;
+       fhir:display [ fhir:v "Infusjonsvæske, oppløsning" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.no/fhir/ig/lmdi/MedicationRequest/Rekvirering-RekvirertVed> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Rekvirering-RekvirertVed"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved"^^xsd:anyURI ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/StructureDefinition/lmdi-rekvirert-ved>
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <http://hl7.no/fhir/ig/lmdi/Organization/Organisasjon-Post> ;
+       fhir:reference [ fhir:v "Organization/Organisasjon-Post" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/rekvirering-id"^^xsd:anyURI ;
+       fhir:l <http://example.org/rekvirering-id>
+     ] ;
+     fhir:value [ fhir:v "8a4e6d2c-1b3f-4c5a-9e7d-0f2b4a6c8e13" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/medicationrequest-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/medicationrequest-category>
+       ] ;
+       fhir:code [ fhir:v "inpatient" ]
+     ] )
+  ] ) ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Medication/Legemiddel-FestLegemiddelpakning> ;
+     fhir:reference [ fhir:v "Medication/Legemiddel-FestLegemiddelpakning" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Patient/Pasient-Med-FNR> ;
+     fhir:reference [ fhir:v "Patient/Pasient-Med-FNR" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Encounter/Episode-Sykehus-Innleggelse> ;
+     fhir:reference [ fhir:v "Encounter/Episode-Sykehus-Innleggelse" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-06-14"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:l <http://hl7.no/fhir/ig/lmdi/Practitioner/Helsepersonell-Med-HPR> ;
+     fhir:reference [ fhir:v "Practitioner/Helsepersonell-Med-HPR" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "50"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
